@@ -27,7 +27,7 @@ Import the APEX application ```f2510.sql```
 If you want to fork the project and use your own Sass, I suggest you take a look at this: https://github.com/vincentmorneau/apex-gulpfile-sass
 
 ##Install
-```npm install```
+```npm install```  
 ```bower install materialize```
 
 ##Run
