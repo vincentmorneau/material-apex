@@ -1,5 +1,5 @@
 #apex-material-design
-This a preview for an eventual APEX 5 Material Design Theme. It is strongly influenced by http://materializecss.com/
+This a preview for an eventual APEX 5 Material Design Theme.
 
 Here's a demo: https://apexea.oracle.com/pls/apex/f?p=2510
 
@@ -60,3 +60,7 @@ If you want to fork the project and use your own Sass, I suggest you take a look
 	+ SideNav
 	+ Tabs
 	+ Transition
+
+It is strongly influenced by http://materializecss.com/  
+
+I am leaning toward a full release along with APEX 5 RC.
