@@ -5,7 +5,7 @@
   "description": "Material Design for APEX",
   "repository": {
     "type": "git",
-    "url": "git://github.com/vincentmorneau/apex-material-design.git"
+    "url": "git://github.com/vincentmorneau/apex-material-design-preview.git"
   },
   "scripts": {
     "start": "gulp"
