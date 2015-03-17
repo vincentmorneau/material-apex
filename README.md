@@ -1,5 +1,5 @@
 #apex-material-design
-This a preview for an eventual APEX 5 Material Design Theme.
+This a preview for an upcoming APEX 5 Material Design Theme.
 
 Here's a demo: https://apexea.oracle.com/pls/apex/f?p=2510
 
