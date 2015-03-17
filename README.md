@@ -5,8 +5,6 @@ Here's a demo: https://apexea.oracle.com/pls/apex/f?p=2510
 
 The application is included in this repo.
 
-See http://vmorneau.me/apex-material-design-preview/ for more info.
-
 #Features
 - CSS
 	+ Colors
@@ -35,9 +33,9 @@ If you want to fork the project and use your own Sass, I suggest you take a look
 ##Run
 ```npm start```
 
-...
-...
-...
+...  
+...  
+...  
 
 ###Coming in the next version:
 - CSS
