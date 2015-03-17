@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+// Required files for overwrites
+@import "components/prefixer";
+@import "components/mixins";
+@import "components/color";
+
+// Custom APEX variables
+@import "apex_variables";
+
+// Original materialized CSS files
+@import "materialize";
+
+// Custom APEX styles
+@import "apex_global";
+@import "apex_cards";
+@import "apex_code";
+@import "apex_collapsible";
+@import "apex_demo";
+@import "apex_icons";
+@import "apex_nav";
+@import "apex_promo";
+@import "apex_sidenav";
+@import "apex_typography";

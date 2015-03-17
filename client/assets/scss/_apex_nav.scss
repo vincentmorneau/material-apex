@@ -1,0 +1,28 @@
+nav .nav-wrapper i {
+	font-size: 2rem!important;
+}
+
+@media #{$medium-and-up} {
+  	nav .nav-wrapper i {
+		font-size: 2.7rem!important;
+	}
+}
+
+.drag-target {
+	top:$navbar-height-mobile;
+}
+
+
+@media #{$medium-and-up} {
+  	.drag-target {
+		top:$navbar-height;
+	}
+
+	.section.scrollspy {
+		padding-top:$navbar-height;
+	}
+}
+
+.navbar-fixed {
+	margin-bottom: -20px;
+}

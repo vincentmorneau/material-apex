@@ -1,0 +1,27 @@
+.h1 .header {
+	@extend h1;
+}
+
+.h2 .header {
+	@extend h2;
+}
+
+.h3 .header {
+	@extend h3;
+}
+
+.h4 .header {
+	@extend h4;
+}
+
+.h5 .header {
+	@extend h5;
+}
+
+.h6 .header {
+	@extend h6;
+}
+
+.big-label {
+	font-size:2rem;
+}

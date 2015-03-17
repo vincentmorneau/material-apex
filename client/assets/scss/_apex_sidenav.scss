@@ -1,0 +1,21 @@
+ul.side-nav {
+	overflow-y: auto;
+
+	li {
+		line-height: 44px;
+
+		i {
+			margin-right: 1rem;
+		  	font-size: 1.5rem;
+		}
+	}
+
+	a {
+		padding: 0 15px;
+	}
+
+	.collapsible {
+		border: none;
+		box-shadow: none;
+	}
+}

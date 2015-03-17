@@ -1,0 +1,21 @@
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: #f5f2f0;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  color: black;
+  font-family: 'Inconsolata', Monaco, Consolas, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.4;
+  tab-size: 4;
+  hyphens: none;
+}

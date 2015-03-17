@@ -1,0 +1,69 @@
+body {
+	background: #ececec;
+}
+
+header {
+	margin-bottom: -20px;
+}
+
+footer {
+	margin-top: -20px;
+}
+
+ul {
+	margin: 0;
+}
+
+ul.table-of-contents {
+	margin-top: 0;
+	padding-top: 48px;
+}
+
+.main-container main {
+	@extend .container;
+}
+
+i {
+	&.left-l {
+		float: left;
+		margin-right: 0;
+
+		@media #{$large-and-up} {
+			margin-right: 15px; 
+		} 
+	} 
+
+	&.right-l {
+		float: right;
+		margin-left: 0; 
+		
+		@media #{$large-and-up} {
+			margin-left: 15px; 
+		} 
+	}
+}
+
+.header {
+	color: $primary-color;
+}
+
+#menu-trigger {
+	display:initial!important;
+	padding-left: 15px;
+}
+
+.ui-datepicker-trigger {
+	display:none!important;
+}
+
+.hide {
+	display:none!important;
+}
+
+.no-page-footer-margin footer.page-footer {
+	margin-top: -20px!important;
+}
+
+.materialbox-caption {
+	top:0;
+}

@@ -1,0 +1,29 @@
+.icon-container {
+	.icon-preview {
+		height: 120px;
+		text-align: center;
+	}
+
+  	i {
+		font-size: 3em;
+		display: block;
+		margin-bottom: 10px;
+	}
+}
+
+.dynamic-color {
+	.red, .pink, .purple, .deep-purple, .indigo, .blue, .light-blue, .cyan, .teal, .green, .light-green, .lime, .yellow, .amber, .orange, .deep-orange, .brown, .grey, .blue-grey {
+		height: 55px;
+		width: 100%;
+		padding: 0 15px;
+		line-height: 55px;
+		font-weight: 500;
+		font-size: 12px;
+		display: block;
+		box-sizing: border-box;
+	}
+}
+
+.dynamic-color .darken-1, .dynamic-color .darken-2, .dynamic-color .darken-3, .dynamic-color .darken-4 {
+	color: #fff;
+}
