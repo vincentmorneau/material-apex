@@ -1,7 +1,9 @@
 #apex-material-design
-This a preview for an upcoming APEX 5 Material Design Theme.
+> Update March 27 2015: I just changed the path to the new https://apexea.oracle.com site. Beta is coming soon!
 
-Here's a demo: https://apexea.oracle.com/pls/apex/f?p=2510
+This is a preview for an upcoming APEX 5 Material Design Theme.
+
+Here's a demo: https://apex.oracle.com/pls/apex/f?p=10385:
 
 The application is included in this repo.
 
@@ -21,7 +23,7 @@ The application is included in this repo.
 	+ Parallax
 
 #Automatic Install
-Import the APEX application ```f2510.sql```
+Import the APEX application ```f10385.sql```
 
 #Manual Install
 If you want to fork the project and use your own Sass, I suggest you take a look at this: https://github.com/vincentmorneau/apex-gulpfile-sass
