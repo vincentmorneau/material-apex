@@ -1,9 +1,12 @@
+/*** Background ***/
+$background-color: #ececec;
+
 /*** Colors ***/
 $primary-color: color("cyan", "base") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$secondary-color: color("red", "base") !default;
+$secondary-color: color("red", "lighten-1") !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 $link-color: color("light-blue", "darken-1") !default;
@@ -98,6 +101,8 @@ $navbar-height-mobile: 56px !default;
 
 /*** SideNav ***/
 
+/*** Modal ***/
+$modal-background-color: #fafafa;
 
 
 /*** Tabs ***/

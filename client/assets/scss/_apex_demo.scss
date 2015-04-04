@@ -12,7 +12,7 @@
 }
 
 .dynamic-color {
-	.red, .pink, .purple, .deep-purple, .indigo, .blue, .light-blue, .cyan, .teal, .green, .light-green, .lime, .yellow, .amber, .orange, .deep-orange, .brown, .grey, .blue-grey {
+	.red, .pink, .purple, .deep-purple, .indigo, .blue, .light-blue, .cyan, .teal, .green, .light-green, .lime, .yellow, .amber, .orange, .deep-orange, .brown, .grey, .blue-grey, .black, .white, .transparent {
 		height: 55px;
 		width: 100%;
 		padding: 0 15px;
@@ -22,8 +22,12 @@
 		display: block;
 		box-sizing: border-box;
 	}
+
+	.darken-1, .darken-2, .darken-3, .darken-4 {
+		color: #fff;
+	}
 }
 
-.dynamic-color .darken-1, .dynamic-color .darken-2, .dynamic-color .darken-3, .dynamic-color .darken-4 {
-	color: #fff;
+.icon-demo {
+  	line-height: 50px;
 }

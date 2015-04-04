@@ -22,6 +22,14 @@
 	@extend h6;
 }
 
+.hide-title .header {
+	@extend .hide;
+}
+
 .big-label {
-	font-size:2rem;
+	font-size:1.5rem;
+}
+
+.flow-text-region p {
+	@extend .flow-text;
 }

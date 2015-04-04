@@ -1,11 +1,11 @@
 {
-  "name": "vmorneau-materialize",
+  "name": "material-apex",
   "author": "Vincent Morneau",
-  "version": "0.0.1",
-  "description": "Material Design for APEX",
+  "version": "0.5.0",
+  "description": "Material Design Theme for Oracle APEX",
   "repository": {
     "type": "git",
-    "url": "git://github.com/vincentmorneau/apex-material-design-preview.git"
+    "url": "git://github.com/vincentmorneau/material-apex.git"
   },
   "scripts": {
     "start": "gulp"

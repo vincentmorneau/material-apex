@@ -1,68 +1,39 @@
-#apex-material-design
-> Update March 27 2015: I just changed the path to the new https://apexea.oracle.com site. Beta is coming soon!
+#Material APEX - Beta
+This is a full featured Material Design Theme for APEX 5.
 
-This is a preview for an upcoming APEX 5 Material Design Theme.
+Here's a demo: https://apex.oracle.com/pls/apex/f?p=12192
 
-Here's a demo: https://apex.oracle.com/pls/apex/f?p=10385:
+The APEX application export is included in this repo.
 
-The application is included in this repo.
+---
 
-#Features
-- CSS
-	+ Colors
-	+ Shadow
-	+ Table
-- Components
-	+ Buttons
-	+ Cards
-	+ Collections
-	+ Forms
-	+ Icons
-- JavaScript
-	+ Dropdown
-	+ Parallax
+##Automatic Install
+- Import the APEX application ```12192.sql``` in your workspace.
 
-#Automatic Install
-Import the APEX application ```f10385.sql```
+---
 
-#Manual Install
-If you want to fork the project and use your own Sass, I suggest you take a look at this: https://github.com/vincentmorneau/apex-gulpfile-sass
+##Manual Install
+- Fork the project on Github
+- `npm install`
+- `bower install materialize`
+- `npm start`
 
-##Install
-```npm install```  
-```bower install materialize```
+You can now use your own Sass (I suggest you take a look at this: https://github.com/vincentmorneau/apex-gulpfile-sass)
 
-##Run
-```npm start```
+---
 
-...  
-...  
-...  
+##Beta Testing
+If you find bugs, you can fill an issue through Github, send me a tweet or an email and I'll try to fix them as fast as possible!
 
-###Coming in the next version:
-- CSS
-	+ Grid
-	+ Helpers
-	+ Media
-	+ Sass
-	+ Typography
-- Components
-	+ Badges
-	+ Footer
-	+ Navbar
-	+ Pagination
-	+ Preloader
-- JavaScript
-	+ Collapsible
-	+ Dialogs
-	+ Modals
-	+ Pushpin
-	+ ScrollFire
-	+ Scrollspy
-	+ SideNav
-	+ Tabs
-	+ Transition
+---
 
 It is strongly influenced by http://materializecss.com/  
 
-I am leaning toward a full release along with APEX 5 RC.
+I am leaning toward a full release shortly after APEX 5.0 is available for public download. 
+
+It will have:
+
+- Better documentation
+- More features
+- Bugs fixes found in the Beta
+- A "showcase" section with adapted applications.
