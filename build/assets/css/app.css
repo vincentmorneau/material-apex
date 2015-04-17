@@ -9465,9 +9465,6 @@ i.right-l {
 .hide, .hide-title .header {
   display: none !important; }
 
-.no-page-footer-margin footer.page-footer {
-  margin-top: -20px !important; }
-
 .materialbox-caption {
   top: 0; }
 

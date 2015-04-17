@@ -84,5 +84,6 @@ $(function() {
         $(this).closest("div").siblings("textarea").attr("length",$(this).next().text());
     });
     $('textarea').characterCounter();
+    $("i[class='']").remove();
 });
 //# sourceMappingURL=app.js.map
