@@ -8,8 +8,41 @@
       height: 100%;
     }
 
+    &.bottom-sheet {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: block;
+    }
+
     .modal-content {
         padding-top: 0;
+    }
+}
+
+.region.modal {
+    /* display: block;
+    width: 100%;
+    max-height: 100%;
+    box-shadow:none;
+
+    &.modal-fixed-footer {
+      height: 100%;
+    }*/
+
+    &.bottom-sheet {
+          top: auto;
+          bottom: -100%;
+          width: 100%;
+
+          .modal-footer {
+                display:none;
+          }
+    }
+
+    .modal-content {
+        padding-top: 24px;
     }
 }
 
@@ -44,6 +77,7 @@ body {
         .ui-dialog-title {
             @extend h4;
             margin-top: 0;
+            width: 80%;
         }
 
         .ui-dialog-titlebar-close {

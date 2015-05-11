@@ -2,14 +2,6 @@ body {
 	background: $background-color;
 }
 
-header {
-	margin-bottom: -20px;
-}
-
-footer {
-	margin-top: -20px;
-}
-
 ul {
 	margin: 0;
 }
@@ -62,4 +54,21 @@ i {
 
 .materialbox-caption {
 	top:0;
+}
+
+//.section {
+//  	padding-top: 4rem;
+//}
+
+/*
+Sticky Footer
+*/
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+	flex: 1 0 auto;
 }

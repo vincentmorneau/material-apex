@@ -1,0 +1,42 @@
+.report-pagination [role="presentation"]{
+	display: block;
+}
+
+td.pagination {
+	padding: 0;
+}
+
+@mixin pagination-block {	
+    font-size: 1.2rem;
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    border-radius: 2px;
+    text-align: center;
+	line-height: 1.8rem;
+}
+
+.pagination {
+
+	.instructiontext {
+		b {
+			@include pagination-block;
+
+		    color: #fff;
+
+		    background-color: $primary-color;
+		}
+
+		a {			
+			@include pagination-block;
+
+			color: #444;
+		}
+	}
+
+  	i {
+		font-size: 2rem;
+		line-height: 1.8rem;
+    }
+}

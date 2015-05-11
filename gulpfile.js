@@ -59,7 +59,22 @@ gulp.task('js', function() {
     gulp.src(paths.materialize + 'dist/js/materialize.min.js')
         .pipe(gulp.dest(paths.build + assets.js));
 
-    return gulp.src(paths.client + assets.js + files.js)
+    gulp.src(paths.client + assets.js + 'apex-init.js')
+        .pipe(plugins.plumber())
+        .pipe(plugins.jshint())
+        .pipe(plugins.jshint.reporter('jshint-stylish'))
+        .pipe(plugins.sourcemaps.init())
+        .pipe(plugins.concat('apex-init.js'))
+        .pipe(plugins.size(sizeOptions))
+        .pipe(plugins.sourcemaps.write(paths.sourcemaps))
+        .pipe(gulp.dest(paths.build + assets.js))
+        .pipe(plugins.uglify()).on('error', function(e) {})
+        .pipe(plugins.rename(renameOptions))
+        .pipe(plugins.size(sizeOptions))
+        .pipe(gulp.dest(paths.build + assets.js));
+
+    return gulp.src([paths.client + assets.js + files.js
+                    ,'!' + paths.client + assets.js + 'apex-init.js'])
         .pipe(plugins.plumber())
         .pipe(plugins.jshint())
         .pipe(plugins.jshint.reporter('jshint-stylish'))

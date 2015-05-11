@@ -19,3 +19,15 @@ label.active.display-only {
 .input-field label {
 	left:0;
 }
+
+.item-no-label label {
+	display: none!important;
+}
+
+.item-image-responsive img {
+	@extend .responsive-img;
+}
+
+.item-image-circle img {
+	@extend .circle;
+}

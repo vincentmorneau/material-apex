@@ -6,6 +6,37 @@ Here's a demo: https://apex.oracle.com/pls/apex/f?p=12192
 The APEX application export is included in this repo.
 
 ##Changelog
+####0.7.0 Beta 3
+- **New Modal Style: Bottom Sheet** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:34)
+    - Modals can now be regions as well as pages
+- **New Media components in the CSS section** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:13)
+    - Responsive Images
+    - Circular Images
+    - Responsive Video (iframes and HTML5 videos)
+- **New Template Options Helpers across every template** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:12)
+    - Automatic vertical align (using flexbox)
+    - Text alignment
+    - Floats
+    - Responsive content hiding
+    - Truncating text
+- **New Javascript Tabs for switching content** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:39)
+- **New Pagination Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:29)
+- Important Javascript performance enhancements
+- Dropdown Fixes
+- Fixed an issue where Textarea wasn't loaded properly
+- Fixed an issue where label appears over checkboxes and radio buttons
+- Fixed an issue in the Sidebar where text was overflowing
+- Updated viewport meta to optimize mobile
+- Enhanced notification UI
+- Enhanced login page
+- Better Flexbox support
+- Renamed label templates to item templates
+- Better footer structure
+- Added #FAVICONS# support
+- **Added Tabular Form support**
+- CSS clean-up
+
+
 ####0.6.0 Beta 2
 **This release focuses on stability enhancements, performance and bug fixes.**
 
@@ -57,5 +88,5 @@ Next version will have:
 
 - Better documentation
 - More features
-- Bugs fixes found in Beta 2
+- Bugs fixes
 - A "showcase" section with adapted applications.
