@@ -1,24 +1,29 @@
 /************
 Materialize Initialization
 ************/
-$(function() {
-    /* Collapsible */
-    $(".collapsible.accordion").collapsible({accordion : true});
-    $(".collapsible.expandable").collapsible({accordion : false});
-
-    /* Forms */
-    $('.button-collapse').sideNav();
+function formInit() {
     $('.datepicker,.u-TF-item--datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
         selectYears: 25 // Creates a dropdown of 15 years to control year
     });
-
-    /* Select */
+    
     $('select').not('.disabled').material_select();
+}
+
+function materialInit() {
+    /* Collapsible */
+    $(".collapsible.accordion").collapsible({accordion : true});
+    $(".collapsible.expandable").collapsible({accordion : false});
+
+    /* SideNav */
+    $('.button-collapse').sideNav();
+    
+    /* Forms */
+    formInit();
 
     /* Scrollspy & Pushpin */
     if ($('.table-of-contents').length > 0) {
-    	$('.table-of-contents').pushpin({top:0, offset:64});
+        $('.table-of-contents').pushpin({top:0, offset:64});
     }
     $('.scrollspy').scrollSpy();
 
@@ -37,7 +42,18 @@ $(function() {
     /* Tooltips */
     $("[data-tooltip][data-tooltip!='']").tooltip();
 
-    /* Textarea Character Counter */
-    $('textarea').characterCounter();
+    /* Tabular Form */
+    if (typeof apex.widget.tabular != 'undefined') { 
+        var addRowOld = apex.widget.tabular.addRow;
+        apex.widget.tabular.addRow = function(){
+            addRowOld();
+            formInit();
+            $(".select-wrapper .select-wrapper").siblings().remove().end().unwrap();
+        };
+    }
+}
+
+$(function() {
+    materialInit();
 });
 //# sourceMappingURL=app.js.map

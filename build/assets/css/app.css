@@ -3629,10 +3629,10 @@ ul {
 .clearfix {
   clear: both; }
 
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .a-IRR-button, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView, .a-IRR-detail-row, .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination, .btn-floating, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button, .dropdown-content, .collapsible, .side-nav {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
-.z-depth-1-half, .btn:hover, .btn-large:hover, .a-IRR-button:hover, .btn-floating:hover {
+.z-depth-1-half, .btn:hover, .btn-large:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button:hover, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView:hover, .a-IRR-detail-row:hover, .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination:hover, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination:hover, .btn-floating:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button:hover {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 
 .z-depth-2 {
@@ -3641,7 +3641,7 @@ ul {
 .z-depth-3 {
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
 
-.z-depth-4, .modal {
+.z-depth-4, .modal, .a-IRR-dialog {
   box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21); }
 
 .z-depth-5 {
@@ -7044,7 +7044,7 @@ small {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
-  .toast .btn, .toast .btn-large, .toast .a-IRR-button, .toast .btn-flat {
+  .toast .btn, .toast .btn-large, .toast .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search .toast button, .toast .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options .toast button, .toast .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView, .a-IRR-toolbar .toast .a-IRR-button.a-IRR-button--reportView, .toast .a-IRR-detail-row, .toast .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination, .a-IRR-pagination-item:first-child .toast .a-IRR-button.a-IRR-button--pagination, .toast .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination, .a-IRR-pagination-item:last-child .toast .a-IRR-button.a-IRR-button--pagination, .toast .btn-flat, .toast .a-IRR-dialog .ui-button, .a-IRR-dialog .toast .ui-button {
     margin: 0;
     margin-left: 3rem; }
   .toast.rounded {
@@ -7129,7 +7129,7 @@ small {
   transform-origin: 50% 10%;
   will-change: transform, opacity; }
 
-.btn, .btn-large, .a-IRR-button, .btn-flat {
+.btn, .btn-large, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView, .a-IRR-detail-row, .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination, .btn-flat, .a-IRR-dialog .ui-button {
   border: none;
   border-radius: 2px;
   display: inline-block;
@@ -7141,22 +7141,22 @@ small {
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent; }
 
-.btn.disabled, .disabled.btn-large, .disabled.a-IRR-button, .btn-floating.disabled, .btn-large.disabled, .btn:disabled, .btn-large:disabled, .a-IRR-button:disabled, .btn-large:disabled, .btn-floating:disabled {
+.btn.disabled, .disabled.btn-large, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button.disabled, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button.disabled, .a-IRR-toolbar .disabled.a-IRR-button.a-IRR-button--reportView, .disabled.a-IRR-detail-row, .a-IRR-pagination-item:first-child .disabled.a-IRR-button.a-IRR-button--pagination, .a-IRR-pagination-item:last-child .disabled.a-IRR-button.a-IRR-button--pagination, .btn-floating.disabled, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button.disabled, .btn-large.disabled, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button.disabled, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button.disabled, .a-IRR-toolbar .disabled.a-IRR-button.a-IRR-button--reportView, .btn:disabled, .btn-large:disabled, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button:disabled, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button:disabled, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView:disabled, .a-IRR-detail-row:disabled, .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination:disabled, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination:disabled, .btn-large:disabled, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button:disabled, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button:disabled, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView:disabled, .btn-floating:disabled, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button:disabled {
   background-color: #DFDFDF;
   box-shadow: none;
   color: #9F9F9F;
   cursor: default; }
-  .btn.disabled *, .disabled.btn-large *, .disabled.a-IRR-button *, .btn-floating.disabled *, .btn-large.disabled *, .btn:disabled *, .btn-large:disabled *, .a-IRR-button:disabled *, .btn-large:disabled *, .btn-floating:disabled * {
+  .btn.disabled *, .disabled.btn-large *, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button.disabled *, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button.disabled *, .a-IRR-toolbar .disabled.a-IRR-button.a-IRR-button--reportView *, .disabled.a-IRR-detail-row *, .a-IRR-pagination-item:first-child .disabled.a-IRR-button.a-IRR-button--pagination *, .a-IRR-pagination-item:last-child .disabled.a-IRR-button.a-IRR-button--pagination *, .btn-floating.disabled *, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button.disabled *, .btn-large.disabled *, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button.disabled *, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button.disabled *, .a-IRR-toolbar .disabled.a-IRR-button.a-IRR-button--reportView *, .btn:disabled *, .btn-large:disabled *, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button:disabled *, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button:disabled *, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView:disabled *, .a-IRR-detail-row:disabled *, .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination:disabled *, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination:disabled *, .btn-large:disabled *, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button:disabled *, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button:disabled *, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView:disabled *, .btn-floating:disabled *, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button:disabled * {
     pointer-events: none; }
-  .btn.disabled:hover, .disabled.btn-large:hover, .disabled.a-IRR-button:hover, .btn-floating.disabled:hover, .btn-large.disabled:hover, .btn:disabled:hover, .btn-large:disabled:hover, .a-IRR-button:disabled:hover, .btn-large:disabled:hover, .btn-floating:disabled:hover {
+  .btn.disabled:hover, .disabled.btn-large:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button.disabled:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button.disabled:hover, .a-IRR-toolbar .disabled.a-IRR-button.a-IRR-button--reportView:hover, .disabled.a-IRR-detail-row:hover, .a-IRR-pagination-item:first-child .disabled.a-IRR-button.a-IRR-button--pagination:hover, .a-IRR-pagination-item:last-child .disabled.a-IRR-button.a-IRR-button--pagination:hover, .btn-floating.disabled:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button.disabled:hover, .btn-large.disabled:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button.disabled:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button.disabled:hover, .a-IRR-toolbar .disabled.a-IRR-button.a-IRR-button--reportView:hover, .btn:disabled:hover, .btn-large:disabled:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button:disabled:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button:disabled:hover, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView:disabled:hover, .a-IRR-detail-row:disabled:hover, .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination:disabled:hover, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination:disabled:hover, .btn-large:disabled:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button:disabled:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button:disabled:hover, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView:disabled:hover, .btn-floating:disabled:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button:disabled:hover {
     background-color: #DFDFDF;
     color: #9F9F9F; }
 
-.btn i, .btn-large i, .a-IRR-button i, .btn-floating i, .btn-large i, .btn-flat i {
+.btn i, .btn-large i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button i, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView i, .a-IRR-detail-row i, .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination i, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination i, .btn-floating i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button i, .btn-large i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button i, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView i, .btn-flat i, .a-IRR-dialog .ui-button i {
   font-size: 1.3rem;
   line-height: inherit; }
 
-.btn, .btn-large, .a-IRR-button {
+.btn, .btn-large, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView, .a-IRR-detail-row, .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination {
   text-decoration: none;
   color: #FFF;
   background-color: #EF5350;
@@ -7165,10 +7165,10 @@ small {
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
   cursor: pointer; }
-  .btn:hover, .btn-large:hover, .a-IRR-button:hover {
+  .btn:hover, .btn-large:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button:hover, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView:hover, .a-IRR-detail-row:hover, .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination:hover, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination:hover {
     background-color: #f16a67; }
 
-.btn-floating {
+.btn-floating, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button {
   display: inline-block;
   color: #FFF;
   position: relative;
@@ -7184,22 +7184,22 @@ small {
           transition: .3s;
   cursor: pointer;
   vertical-align: middle; }
-  .btn-floating i {
+  .btn-floating i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button i {
     width: inherit;
     display: inline-block;
     text-align: center;
     color: #FFF;
     font-size: 1.6rem;
     line-height: 37px; }
-  .btn-floating:before {
+  .btn-floating:before, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button:before {
     border-radius: 0; }
-  .btn-floating.btn-large {
+  .btn-floating.btn-large, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button.btn-floating, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search .a-IRR-controlGroup.a-IRR-controlGroup--views button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views .a-IRR-controlGroup.a-IRR-controlGroup--search button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button.btn-floating, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options .a-IRR-controlGroup.a-IRR-controlGroup--views button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views .a-IRR-controlGroup.a-IRR-controlGroup--options button, .a-IRR-toolbar .btn-floating.a-IRR-button.a-IRR-button--reportView, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button.a-IRR-button.a-IRR-button--reportView, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button.btn-large {
     width: 55.5px;
     height: 55.5px; }
-    .btn-floating.btn-large i {
+    .btn-floating.btn-large i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button.btn-floating i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search .a-IRR-controlGroup.a-IRR-controlGroup--views button i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views .a-IRR-controlGroup.a-IRR-controlGroup--search button i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button.btn-floating i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options .a-IRR-controlGroup.a-IRR-controlGroup--views button i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views .a-IRR-controlGroup.a-IRR-controlGroup--options button i, .a-IRR-toolbar .btn-floating.a-IRR-button.a-IRR-button--reportView i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button.a-IRR-button.a-IRR-button--reportView i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button.btn-large i {
       line-height: 55.5px; }
 
-button.btn-floating {
+button.btn-floating, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button {
   border: none; }
 
 .fixed-action-btn {
@@ -7220,19 +7220,19 @@ button.btn-floating {
     .fixed-action-btn ul a.btn-floating {
       opacity: 0; }
 
-.btn-flat {
+.btn-flat, .a-IRR-dialog .ui-button {
   box-shadow: none;
   background-color: transparent;
   color: #343434;
   cursor: pointer; }
-  .btn-flat.disabled {
+  .btn-flat.disabled, .a-IRR-dialog .disabled.ui-button {
     color: #b3b3b3;
     cursor: default; }
 
-.btn-large {
+.btn-large, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView {
   height: 54px;
   line-height: 56px; }
-  .btn-large i {
+  .btn-large i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button i, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button i, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView i {
     font-size: 1.6rem; }
 
 .dropdown-content {
@@ -7352,7 +7352,7 @@ button.btn-floating {
 a.waves-effect .waves-ripple {
   z-index: -1; }
 
-.modal {
+.modal, .a-IRR-dialog {
   display: none;
   position: fixed;
   left: 0;
@@ -7370,19 +7370,19 @@ a.waves-effect .waves-ripple {
   transform: translate(0);
   will-change: top, opacity; }
   @media only screen and (max-width : 992px) {
-    .modal {
+    .modal, .a-IRR-dialog {
       width: 80%; } }
-  .modal h1, .modal .h1 .header, .h1 .modal .header, .modal h2, .modal .h2 .header, .h2 .modal .header, .modal h3, .modal .h3 .header, .h3 .modal .header, .modal h4, .modal body .ui-dialog .ui-dialog-title, body .ui-dialog .modal .ui-dialog-title, .modal .h4 .header, .h4 .modal .header {
+  .modal h1, .a-IRR-dialog h1, .modal .h1 .header, .h1 .modal .header, .a-IRR-dialog .h1 .header, .h1 .a-IRR-dialog .header, .modal h2, .a-IRR-dialog h2, .modal .h2 .header, .h2 .modal .header, .a-IRR-dialog .h2 .header, .h2 .a-IRR-dialog .header, .modal h3, .a-IRR-dialog h3, .modal .h3 .header, .h3 .modal .header, .a-IRR-dialog .h3 .header, .h3 .a-IRR-dialog .header, .modal h4, .a-IRR-dialog h4, .modal body .ui-dialog .ui-dialog-title, body .ui-dialog .modal .ui-dialog-title, .a-IRR-dialog body .ui-dialog .ui-dialog-title, body .ui-dialog .a-IRR-dialog .ui-dialog-title, .modal .h4 .header, .h4 .modal .header, .a-IRR-dialog .h4 .header, .h4 .a-IRR-dialog .header {
     margin-top: 0; }
-  .modal .modal-content {
+  .modal .modal-content, .a-IRR-dialog .modal-content {
     padding: 24px; }
-  .modal .modal-footer {
+  .modal .modal-footer, .a-IRR-dialog .modal-footer {
     border-radius: 0 0 2px 2px;
     background-color: #fafafa;
     padding: 4px 6px;
     height: 56px;
     width: 100%; }
-    .modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .a-IRR-button, .modal .modal-footer .btn-flat {
+    .modal .modal-footer .btn, .a-IRR-dialog .modal-footer .btn, .modal .modal-footer .btn-large, .a-IRR-dialog .modal-footer .btn-large, .modal .modal-footer .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search .modal .modal-footer button, .a-IRR-dialog .modal-footer .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search .a-IRR-dialog .modal-footer button, .modal .modal-footer .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options .modal .modal-footer button, .a-IRR-dialog .modal-footer .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options .a-IRR-dialog .modal-footer button, .modal .modal-footer .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView, .a-IRR-toolbar .modal .modal-footer .a-IRR-button.a-IRR-button--reportView, .a-IRR-dialog .modal-footer .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView, .a-IRR-toolbar .a-IRR-dialog .modal-footer .a-IRR-button.a-IRR-button--reportView, .modal .modal-footer .a-IRR-detail-row, .a-IRR-dialog .modal-footer .a-IRR-detail-row, .modal .modal-footer .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination, .a-IRR-pagination-item:first-child .modal .modal-footer .a-IRR-button.a-IRR-button--pagination, .a-IRR-dialog .modal-footer .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination, .a-IRR-pagination-item:first-child .a-IRR-dialog .modal-footer .a-IRR-button.a-IRR-button--pagination, .modal .modal-footer .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination, .a-IRR-pagination-item:last-child .modal .modal-footer .a-IRR-button.a-IRR-button--pagination, .a-IRR-dialog .modal-footer .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination, .a-IRR-pagination-item:last-child .a-IRR-dialog .modal-footer .a-IRR-button.a-IRR-button--pagination, .modal .modal-footer .btn-flat, .a-IRR-dialog .modal-footer .btn-flat, .modal .modal-footer .a-IRR-dialog .ui-button, .a-IRR-dialog .modal-footer .ui-button {
       float: right;
       margin: 6px 0; }
 
@@ -7399,21 +7399,21 @@ a.waves-effect .waves-ripple {
   display: none;
   will-change: opacity; }
 
-.modal.modal-fixed-footer {
+.modal.modal-fixed-footer, .modal-fixed-footer.a-IRR-dialog {
   padding: 0;
   height: 70%; }
-  .modal.modal-fixed-footer .modal-content {
+  .modal.modal-fixed-footer .modal-content, .modal-fixed-footer.a-IRR-dialog .modal-content {
     position: fixed;
     max-height: 100%;
     padding-bottom: 64px;
     width: 100%;
     overflow-y: auto; }
-  .modal.modal-fixed-footer .modal-footer {
+  .modal.modal-fixed-footer .modal-footer, .modal-fixed-footer.a-IRR-dialog .modal-footer {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     position: fixed;
     bottom: 0; }
 
-.modal.bottom-sheet {
+.modal.bottom-sheet, .bottom-sheet.a-IRR-dialog {
   top: auto;
   bottom: -100%;
   margin: 0;
@@ -8057,7 +8057,7 @@ select:disabled {
   .file-field input.file-path {
     margin-left: 100px;
     width: calc(100% - 100px); }
-  .file-field .btn, .file-field .btn-large, .file-field .a-IRR-button {
+  .file-field .btn, .file-field .btn-large, .file-field .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search .file-field button, .file-field .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options .file-field button, .file-field .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView, .a-IRR-toolbar .file-field .a-IRR-button.a-IRR-button--reportView, .file-field .a-IRR-detail-row, .file-field .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination, .a-IRR-pagination-item:first-child .file-field .a-IRR-button.a-IRR-button--pagination, .file-field .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination, .a-IRR-pagination-item:last-child .file-field .a-IRR-button.a-IRR-button--pagination {
     position: absolute;
     top: 0;
     left: 0;
@@ -9441,7 +9441,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .picker--time .picker__box {
     margin-bottom: 5em; } }
 
-.btn, .btn-large, .a-IRR-button {
+.btn, .btn-large, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView, .a-IRR-detail-row, .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination {
   margin-bottom: 1em; }
 
 body {
@@ -9576,52 +9576,280 @@ label.active.display-only {
 .item-no-label label {
   display: none !important; }
 
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: block; }
+
+:focus {
+  outline: none; }
+
 .padding-right-15 {
   padding-right: 15px; }
 
+i.sm-md {
+  font-size: 3rem; }
 i.xlarge {
   font-size: 8rem; }
 i.promo {
   color: #00bcd4; }
 
+.a-IRR-toolbar {
+  position: static;
+  background-color: transparent;
+  padding: 0;
+  border-bottom: none; }
+  .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView {
+    padding: 0 0.8rem;
+    background-color: #9e9e9e; }
+    .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button:active, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button:focus, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button:visited, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button:active, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button:focus, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button:visited, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button:hover, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView:active, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView:focus, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView:visited, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView:hover {
+      background-color: #c4c4c4;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+  .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button {
+    margin: 0 0.5rem;
+    background-color: #9e9e9e; }
+    .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button:active, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button:focus, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button:visited, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--views button:hover {
+      background-color: #c4c4c4;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+  .a-IRR-toolbar .a-IRR-controls .a-Icon {
+    vertical-align: middle;
+    display: inline-block;
+    width: 20px;
+    height: 26px;
+    line-height: 26px; }
+
+.a-IRR-header {
+  border-left: none; }
+
+.a-IRR-header {
+  background-color: transparent; }
+
+.a-IRR-table td {
+  padding: 15px 5px; }
+
+@media only screen and (min-width : 601px) {
+  .a-IRR-container {
+    padding: 20px;
+    display: block;
+    margin: .5rem 0 1rem;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); } }
+
+.a-IRR {
+  border: none;
+  background-color: transparent; }
+
+.a-IRR-table td {
+  border-left: none; }
+
+.input-field .a-IRR-search-field {
+  margin-left: 1rem; }
+
+.a-IRR-paginationWrap {
+  padding: 20px 0px 0px 0px; }
+
+.a-IRR .a-Icon:before {
+  font-size: 1.3rem; }
+
+.a-Button {
+  font-size: inherit; }
+
+@media only screen and (max-width : 600px) {
+  .t-fht-tbody .a-IRR-table, .a-IRR-dialogTable.table-responsive {
+    margin-top: 0 !important; }
+    .t-fht-tbody .a-IRR-table tr:first-child, .a-IRR-dialogTable.table-responsive tr:first-child {
+      display: none; }
+  .a-IRR-dialogContent--highlight table table tr:nth-child(2) {
+    display: none; }
+  .t-fht-thead {
+    display: none; }
+  table.table-responsive.a-IRR-table tr {
+    position: relative;
+    padding-bottom: 4.5rem; }
+  table.table-responsive.a-IRR-table td {
+    border-bottom: 1px solid #F0F0F0;
+    border-top: none; }
+  table.table-responsive.a-IRR-table td:first-child {
+    border-bottom: none;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+  table.table-responsive.a-IRR-table td:last-child {
+    border-bottom: 1px solid #F0F0F0; }
+  .t-fht-wrapper div:not(.t-fht-tbody) {
+    display: none !important; }
+  .a-IRR-paginationWrap--bottom {
+    border-top: none; }
+  table.table-responsive.a-IRR-table .a-IRR-header-tr {
+    display: none; }
+  table.table-responsive.a-IRR-table .a-IRR-header-tr--group {
+    padding-bottom: initial; }
+  table.table-responsive.a-IRR-table .a-IRR-header.a-IRR-header--group {
+    border-top: none;
+    border-bottom: none; } }
+
+.a-IRR-searchButtonContainer, .a-IRR-button--actions, .a-IRR-button--colSearch {
+  display: none; }
+
+.a-Icon.icon-menu-drop-down {
+  display: none; }
+
+.a-IRR-actions {
+  float: right !important; }
+
+.a-IRR-controlGroup--options {
+  width: 25%; }
+
+.a-IRR-controlGroup--search {
+  width: 75%; }
+
+.a-IRR-searchFieldContainer {
+  width: calc(100% - 50px); }
+
+.a-IRR-search {
+  width: 100%;
+  margin-right: 0; }
+
+.a-IRR-table tr:hover td {
+  background-color: transparent; }
+
+.a-IRR-detail-row {
+  text-align: center;
+  margin-bottom: 0;
+  margin-right: 0.2em;
+  padding: 0 0.5rem; }
+  .a-IRR-detail-row:active, .a-IRR-detail-row:focus, .a-IRR-detail-row:visited, .a-IRR-detail-row:hover {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+
+.a-IRR-dialogTable td, .a-IRR-dialogTable th {
+  vertical-align: middle; }
+
+.a-IRR-dialog .ui-widget-content {
+  background: none; }
+@media only screen and (max-width : 600px) {
+  .a-IRR-dialog {
+    width: 90% !important; } }
+@media only screen and (min-width : 601px) and (max-width : 992px) {
+  .a-IRR-dialog {
+    width: 80% !important; } }
+@media only screen and (min-width : 993px) {
+  .a-IRR-dialog {
+    width: 60% !important; } }
+.a-IRR-dialog .ui-button {
+  background: none;
+  padding: 0 0.8rem; }
+.a-IRR-dialog select {
+  display: block;
+  width: initial; }
+.a-IRR-dialog .ajax_shuttle select {
+  width: 100%;
+  height: 10rem; }
+.a-IRR-dialog .lov_colorpicker input {
+  width: initial; }
+.a-IRR-dialog .a-IRR-dialogContent--highlight .itemlink {
+  display: none; }
+.a-IRR-dialog [title="Expression"], .a-IRR-dialog input[type=text] {
+  height: 4rem;
+  width: 60%; }
+.a-IRR-dialog .a-IRR-dialogTable td, .a-IRR-dialog .a-IRR-dialogTable th {
+  padding-right: 20px; }
+@media only screen and (max-width: 600px) {
+  .a-IRR-dialog .a-IRR-dialogTable.table-responsive select {
+    width: 60%;
+    display: inline-block; }
+  .a-IRR-dialog .a-IRR-dialogTable.table-responsive td:before {
+    line-height: 50px; } }
+.a-IRR-dialog .lov_colorpicker .a-Icon.icon-up-chevron {
+  vertical-align: middle; }
+
+.ui-widget-content {
+  background: #ececec 50% 50% repeat-x; }
+
+.a-IRR-pagination-label {
+  padding: 10px; }
+
+.a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination {
+  background-color: #9e9e9e;
+  padding: 9px 5px 8px 4px; }
+  .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination:active, .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination:focus, .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination:visited, .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination:hover, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination:active, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination:focus, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination:visited, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination:hover {
+    background-color: #c4c4c4;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+
+label.a-IRR-controlsCheckboxLabel {
+  border: none;
+  box-shadow: none;
+  padding-left: 25px;
+  background-color: transparent; }
+
+.a-IRR-controlsCheckboxLabel:before {
+  opacity: 1; }
+
+.a-IRR-controlsCheckboxLabel:active {
+  background-color: transparent; }
+
+.a-MediaBlock-graphic {
+  display: none; }
+
+.a-IRR-button--reportView .a-Icon {
+  vertical-align: middle;
+  line-height: 20px;
+  height: 20px; }
+
+.a-IRR-controls-cell--label {
+  width: 200px; }
+
+.a-IRR-reportSummaryContainer {
+  padding-top: 10px; }
+
+.a-IRR-controlGroup.a-IRR-controlGroup--views {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 13px; }
+
+.a-IRR-sortWidget-search > .a-IRR-sortWidget-searchField, .a-IRR-sortWidget-search > .a-IRR-sortWidget-searchField[type=text] {
+  width: calc(100% - 40px); }
+
+.a-IRR-singleRow-value {
+  background-color: #FCFCFC; }
+
 .materialbox-caption {
   line-height: 30px;
   padding: 5% 15%; }
 
-.modal {
+.modal, .a-IRR-dialog {
   display: block;
   width: 100%;
   max-height: 100%;
   box-shadow: none; }
-  .modal.modal-fixed-footer {
+  .modal.modal-fixed-footer, .modal-fixed-footer.a-IRR-dialog {
     height: 100%; }
-  .modal.bottom-sheet {
+    .modal.modal-fixed-footer .modal-footer, .modal-fixed-footer.a-IRR-dialog .modal-footer {
+      text-align: right; }
+      .modal.modal-fixed-footer .modal-footer a, .modal-fixed-footer.a-IRR-dialog .modal-footer a {
+        float: none; }
+  .modal.bottom-sheet, .bottom-sheet.a-IRR-dialog {
     top: auto;
     bottom: 0;
     left: 0;
     width: 100%;
     display: block; }
-  .modal .modal-content {
+  .modal .modal-content, .a-IRR-dialog .modal-content {
     padding-top: 0; }
 
-.region.modal {
-  /* display: block;
-    width: 100%;
-    max-height: 100%;
-    box-shadow:none;
+.region.modal.bottom-sheet, .region.bottom-sheet.a-IRR-dialog {
+  top: auto;
+  bottom: -100%;
+  width: 100%; }
+  .region.modal.bottom-sheet .modal-footer, .region.bottom-sheet.a-IRR-dialog .modal-footer {
+    display: none; }
+.region.modal .modal-content, .region.a-IRR-dialog .modal-content {
+  padding-top: 24px; }
 
-    &.modal-fixed-footer {
-      height: 100%;
-    }*/ }
-  .region.modal.bottom-sheet {
-    top: auto;
-    bottom: -100%;
-    width: 100%; }
-    .region.modal.bottom-sheet .modal-footer {
-      display: none; }
-  .region.modal .modal-content {
-    padding-top: 24px; }
-
+body .ui-front, body .ui-widget-overlay {
+  z-index: 999; }
 body .ui-dialog {
   border-width: 0;
   border-radius: 2px;
@@ -9754,6 +9982,27 @@ ul.side-nav {
   ul.side-nav .collapsible {
     border: none;
     box-shadow: none; }
+
+@media only screen and (max-width : 600px) {
+  table.table-responsive thead {
+    display: none; }
+  table.table-responsive tr {
+    padding: 5px;
+    display: block;
+    margin: .5rem 0 1rem;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+  table.table-responsive td {
+    display: block;
+    text-align: right;
+    border-bottom: 1px dotted #ccc; }
+  table.table-responsive td:last-child {
+    border-bottom: 0; }
+  table.table-responsive td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold; } }
 
 .big-label {
   font-size: 1.5rem; }

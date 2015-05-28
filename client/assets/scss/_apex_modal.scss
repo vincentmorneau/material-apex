@@ -6,6 +6,14 @@
 
     &.modal-fixed-footer {
       height: 100%;
+
+        .modal-footer {
+            text-align:right;
+
+            a {
+                float: none;
+            }
+        }
     }
 
     &.bottom-sheet {
@@ -22,15 +30,6 @@
 }
 
 .region.modal {
-    /* display: block;
-    width: 100%;
-    max-height: 100%;
-    box-shadow:none;
-
-    &.modal-fixed-footer {
-      height: 100%;
-    }*/
-
     &.bottom-sheet {
           top: auto;
           bottom: -100%;
@@ -47,6 +46,10 @@
 }
 
 body {
+    .ui-front, .ui-widget-overlay {
+        z-index: 999;
+    }
+
     .ui-dialog {
         border-width: 0;
         border-radius: 2px;
@@ -114,3 +117,4 @@ body {
         }
     }    
 }
+

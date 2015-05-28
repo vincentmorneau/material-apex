@@ -6,7 +6,14 @@ Here's a demo: https://apex.oracle.com/pls/apex/f?p=12192
 The APEX application export is included in this repo.
 
 ##Changelog
-####0.7.0 Beta 3
+####0.7.5
+- **New Interactive Report Support** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:62)
+- **Enhanced Tabular Form Support** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:61)
+- **Reports Responsive Styles**: See Style 2 [(view)](https://apex.oracle.com/pls/apex/f?p=12192:16)
+- Fixed issues with checkboxes and radio buttons
+- Better HTML markup for reports
+
+####0.7.0
 - **New Modal Style: Bottom Sheet** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:34)
     - Modals can now be regions as well as pages
 - **New Media components in the CSS section** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:13)
@@ -35,34 +42,6 @@ The APEX application export is included in this repo.
 - Added #FAVICONS# support
 - **Added Tabular Form support**
 - CSS clean-up
-
-
-####0.6.0 Beta 2
-**This release focuses on stability enhancements, performance and bug fixes.**
-
-- Now uses Lists for navigation bar and navigation menu
-- Removed Navbar and Sidenav regions on page 0
-    - Now uses User Interface settings
-- Fixed Bug where the theme couldn't import into other apps
-    - Added empty Breadcrumb Template
-    - Added empty Legacy Calendar Template
-- Date Picker enhancements on mobile
-- Removed external dependency jQuery
-- Now uses Google's CDN for jQuery
-- Restructured the whole Scrollspy internal layout engine
-- Added Shadow Template Options on buttons
-- Added Background Color, Background Modifier and Text Color Template Options on Buttons
-- Added Shadow example on the Button page 
-- Fixed Button height issue with no icons
-- Fixed Flow Text issue
-- Removed unnecessary Template Option on page template
-- Reworked documentation for
-    - SideNav
-    - Sidebar
-    - Parallax
-
-####0.5.0 Beta 1
-- Initial Beta Release
 
 ##Automatic Install
 - Import the APEX application ```12192.sql``` in your workspace.

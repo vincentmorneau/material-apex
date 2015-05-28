@@ -31,3 +31,14 @@ label.active.display-only {
 .item-image-circle img {
 	@extend .circle;
 }
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+:focus {
+	outline:none;
+}

@@ -11,6 +11,9 @@ $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 $link-color: color("light-blue", "darken-1") !default;
 
+$ir-specific-color: color("grey", "base") !default;
+$ir-specific-color-light: lighten($ir-specific-color, 15%) !default;
+
 /*** Badges ***/
 $badge-bg-color: $secondary-color;
 

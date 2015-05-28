@@ -1,0 +1,30 @@
+@media #{$small-and-down} {
+    table.table-responsive thead {
+        display: none;
+    }
+
+    table.table-responsive tr {
+        padding: 5px;
+        display: block;
+        margin: .5rem 0 1rem;
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+    }
+
+    table.table-responsive td {
+        display: block;
+        text-align: right;
+        border-bottom: 1px dotted #ccc;
+    }
+
+    table.table-responsive td:last-child {
+        border-bottom: 0;
+    }
+
+    table.table-responsive td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+    }
+}

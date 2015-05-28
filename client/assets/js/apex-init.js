@@ -1,7 +1,44 @@
 /************
 APEX Initialization
 ************/
-$(function() {
+$.fn.ignore = function(sel){
+  return this.clone().find(sel||">*").remove().end();
+};
+
+function irComponentsInit() {    
+    $("[id*='_column_filter'], .a-IRR-dialogContent--highlight table table")
+        .addClass("table-responsive")
+        .find("td")
+        .each(function( index ) {
+            $(this).attr("data-label",$(this).closest('table').find('.a-IRR-dialogTable-header').eq($(this).index()).text());
+        });
+
+    $("[id*='_chart_type'] input[type='radio'], [id*='_default_type'] input[type='radio']").each(function(){
+        $(this).after("<label for='" + $(this).attr("id") + "'></label>").parent().removeAttr("nowrap");
+    });
+}
+
+function irInit() {
+    if (!$('.a-IRR-table').hasClass("table-responsive")) {
+        $(".a-IRR-search-field")
+            .attr("placeholder","Search")
+            .parent().addClass("input-field");
+
+        $(".a-IRR-button--actions").html('<i class="mdi-navigation-more-vert"></i>').show();
+        $(".a-IRR-button--colSearch").html('<i class="mdi-action-search"></i>').show();
+
+        $('.a-IRR-table').addClass("table-responsive");
+
+        $( ".a-IRR-table td" ).each(function( index ) {
+            $(this).attr("data-label",$(this).closest('table').find('th').not(".a-IRR-header--group").eq($(this).index()).find("a").ignore("span").text());
+        });
+
+        $(".a-IRR-header:not(.a-IRR-header--group)").closest("tr").addClass("a-IRR-header-tr");
+        $(".a-IRR-header.a-IRR-header--group").closest("tr").addClass("a-IRR-header-tr--group");
+    }
+}
+
+function apexInit() {    
     /* Grid - Handling s12 default override */
     $(".col.s12").each(function(){
         if ($(this).is(".s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10,.s11")) {
@@ -30,8 +67,8 @@ $(function() {
 
     /* Fix for label issue with many components. Need to have label after component. */
     $( ".input-field i, .u-TF-item--checkbox" ).each(function() {
-	  	$( this ).after( $(this).siblings("label") );
-	});
+        $( this ).after( $(this).siblings("label") );
+    });
 
     /* Display only & read only */ 
     $(".display_only, fieldset.checkbox_group, fieldset.radio_group")
@@ -40,14 +77,15 @@ $(function() {
         .closest('.input-field')
         .removeClass('input-field');
 
-    /* Fix for fieldset issue. Put content after fieldset and remove fieldset */
-    $( "fieldset" ).each(function() {
-	  	$( this ).siblings("input").after( $(this).html() );
-	  	$( this ).remove();
-	});
-
-    $("[id*='CHAR_COUNTER']").each(function(){
+    /* Textarea */
+    $("[id*='_CHAR_COUNTER']").each(function(){
         $(this).closest("div").siblings("textarea").attr("length",$(this).next().text());
+    });
+
+    $("[id*='_CHAR_COUNT']").remove();
+
+    $( "fieldset.textarea" ).each(function() {
+        $( this).prepend($(this).siblings());
     });
 
     $('textarea').addClass('materialize-textarea');
@@ -65,4 +103,18 @@ $(function() {
 
     /* Icons */
     $("i[class='']").remove();
+}
+
+$(function() {
+    apexInit();
+
+    irInit();
+
+    $( ".a-IRR-container" ).parent().on( "apexafterrefresh", function() {
+        irInit();
+    });
+
+    $(document).ajaxSuccess(function() {
+        irComponentsInit();
+    });
 });
