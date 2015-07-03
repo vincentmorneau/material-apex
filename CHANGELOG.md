@@ -1,7 +1,7 @@
 ##Changelog
 ####0.8.0
 - **Theme Roller Support**, primary and secondary colors are now choosable from the theme roller!
-- **New easier grid layout system**  [(view)](https://apex.oracle.com/pls/apex/f?p=MATERIAL:11)
+- **New easier grid layout system**  [(view)](https://apex.oracle.com/pls/apex/f?p=12192:11)
 - **New Date Picker**. We let go of the "pickadate.js" plugin for better compabilitiby.
 - The hamburger menu is now selectable as a component on page 0. Can be controled for conditions or authorization schemes.
 - Now uses Official Google Icon web font
@@ -18,27 +18,27 @@
 - More...
 
 ####0.7.5
-- **New Interactive Report Support** [(view)](https://apex.oracle.com/pls/apex/f?p=MATERIAL:62)
-- **Enhanced Tabular Form Support** [(view)](https://apex.oracle.com/pls/apex/f?p=MATERIAL:61)
-- **Reports Responsive Styles**: See Style 2 [(view)](https://apex.oracle.com/pls/apex/f?p=MATERIAL:16)
+- **New Interactive Report Support** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:62)
+- **Enhanced Tabular Form Support** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:61)
+- **Reports Responsive Styles**: See Style 2 [(view)](https://apex.oracle.com/pls/apex/f?p=12192:16)
 - Fixed issues with checkboxes and radio buttons
 - Better HTML markup for reports
 
 ####0.7.0
-- **New Modal Style: Bottom Sheet** [(view)](https://apex.oracle.com/pls/apex/f?p=MATERIAL:34)
+- **New Modal Style: Bottom Sheet** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:34)
     - Modals can now be regions as well as pages
-- **New Media components in the CSS section** [(view)](https://apex.oracle.com/pls/apex/f?p=MATERIAL:13)
+- **New Media components in the CSS section** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:13)
     - Responsive Images
     - Circular Images
     - Responsive Video (iframes and HTML5 videos)
-- **New Template Options Helpers across every template** [(view)](https://apex.oracle.com/pls/apex/f?p=MATERIAL:12)
+- **New Template Options Helpers across every template** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:12)
     - Automatic vertical align (using flexbox)
     - Text alignment
     - Floats
     - Responsive content hiding
     - Truncating text
-- **New Javascript Tabs for switching content** [(view)](https://apex.oracle.com/pls/apex/f?p=MATERIAL:39)
-- **New Pagination Component** [(view)](https://apex.oracle.com/pls/apex/f?p=MATERIAL:29)
+- **New Javascript Tabs for switching content** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:39)
+- **New Pagination Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:29)
 - Important Javascript performance enhancements
 - Dropdown Fixes
 - Fixed an issue where Textarea wasn't loaded properly

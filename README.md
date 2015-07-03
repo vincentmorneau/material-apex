@@ -8,8 +8,8 @@ The APEX application export is included in this repo.
 ##Changelog
 ####0.8.0
 - **Theme Roller Support**, primary and secondary colors are now choosable from the theme roller!
-- **New easier grid layout system**  [(view)](https://apex.oracle.com/pls/apex/f?p=MATERIAL:11)
-- **New Date Picker**. We let go of the "pickadate.js" plugin for better compabilitiby. [(view)](https://apex.oracle.com/pls/apex/f?p=MATERIAL:25)
+- **New easier grid layout system**  [(view)](https://apex.oracle.com/pls/apex/f?p=12192:11)
+- **New Date Picker**. We let go of the "pickadate.js" plugin for better compabilitiby. [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
 - The hamburger menu is now selectable as a component on page 0. Can be controled for conditions or authorization schemes.
 - Now uses Official Google Icon web font
 - Added template option for button regarding icon float 
@@ -25,9 +25,9 @@ The APEX application export is included in this repo.
 - More...
 
 ####0.7.5
-- **New Interactive Report Support** [(view)](https://apex.oracle.com/pls/apex/f?p=MATERIAL:62)
-- **Enhanced Tabular Form Support** [(view)](https://apex.oracle.com/pls/apex/f?p=MATERIAL:61)
-- **Reports Responsive Styles**: See Style 2 [(view)](https://apex.oracle.com/pls/apex/f?p=MATERIAL:16)
+- **New Interactive Report Support** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:62)
+- **Enhanced Tabular Form Support** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:61)
+- **Reports Responsive Styles**: See Style 2 [(view)](https://apex.oracle.com/pls/apex/f?p=12192:16)
 - Fixed issues with checkboxes and radio buttons
 - Better HTML markup for reports
 
