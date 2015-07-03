@@ -1,7 +1,7 @@
 #Material APEX - Beta
 This is a full featured Material Design Theme for APEX 5.
 
-Here's a demo: https://apex.oracle.com/pls/apex/f?p=MATERIAL
+Here's a demo: https://apex.oracle.com/pls/apex/f?p=12192
 
 The APEX application export is included in this repo.
 
