@@ -118,3 +118,8 @@ body {
     }    
 }
 
+@media #{$small-and-down} {
+    body .ui-dialog {
+        width: 90%!important;
+    }
+}

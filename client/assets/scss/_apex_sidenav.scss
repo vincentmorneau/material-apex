@@ -1,17 +1,22 @@
+$sidenav-height: 44px;
+
 ul.side-nav {
     z-index: 1002;
 
 	li {
-		line-height: 44px;
+		line-height: $sidenav-height;
 
 		i {
 			margin-right: 1rem;
 		  	font-size: 1.5rem;
+	  	  	float: left;
+		  	line-height: $sidenav-height;
+		  	height: $sidenav-height;
 		}
 
 		a {
-			line-height: 44px;
-			height: 44px;
+			line-height: $sidenav-height;
+			height: $sidenav-height;
 		}
 	}
 
@@ -23,4 +28,8 @@ ul.side-nav {
 		border: none;
 		box-shadow: none;
 	}
+}
+
+#sidenav-overlay {
+  	z-index: 998;
 }

@@ -23,6 +23,10 @@ nav .nav-wrapper i {
 	}
 }
 
-.center-logo .brand-logo {
+.page-center-logo .brand-logo {
 	@extend .center;
+}
+
+.page-navbar-fixed #app-navbar {
+	@extend .navbar-fixed;
 }

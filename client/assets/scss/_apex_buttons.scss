@@ -1,3 +1,11 @@
 .btn {
 	margin-bottom: 1em;
 }
+
+.icon-float-left i {
+	@extend .left;
+}
+
+.icon-float-right i {
+	@extend .right;
+}

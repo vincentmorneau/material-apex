@@ -2,7 +2,7 @@
 APEX Initialization
 ************/
 $.fn.ignore = function(sel){
-  return this.clone().find(sel||">*").remove().end();
+    return this.clone().find(sel||">*").remove().end();
 };
 
 function irComponentsInit() {    
@@ -24,8 +24,8 @@ function irInit() {
             .attr("placeholder","Search")
             .parent().addClass("input-field");
 
-        $(".a-IRR-button--actions").html('<i class="mdi-navigation-more-vert"></i>').show();
-        $(".a-IRR-button--colSearch").html('<i class="mdi-action-search"></i>').show();
+        $(".a-IRR-button--actions").html('<i class="material-icons">more_vert</i>').show();
+        $(".a-IRR-button--colSearch").html('<i class="material-icons">search</i>').show();
 
         $('.a-IRR-table').addClass("table-responsive");
 
@@ -50,6 +50,7 @@ function apexInit() {
     $(".fixed-action-btn").siblings(".btn-floating, .btn, .btn-large, .btn-flat").addBack().wrapAll("<div class='fixed-action-btn' style='bottom: 45px; right: 24px;'>");
     $(".fixed-action-btn").siblings(".btn-floating, .btn, .btn-large, .btn-flat").wrapAll("<ul>").wrap("<li>");
     $("a.fixed-action-btn").removeClass("fixed-action-btn");
+    $(".fixed-action-btn .btn, .fixed-action-btn .btn-flat").addClass("btn-floating").removeClass("btn btn-flat");
 
     // Vertical Alignment
     $(".valign-wrapper>.row").addClass("valign-wrapper");
