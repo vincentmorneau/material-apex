@@ -16,8 +16,16 @@ label.active.display-only {
 	display: block;
 }
 
-.input-field label {
-	left:0;
+.input-field {
+    margin-top: 1.5rem;
+
+	label {
+		left:0;
+
+		&.active {
+    		transform: translateY(-190%);
+		}
+	}
 }
 
 .item-no-label label {
@@ -41,4 +49,22 @@ fieldset {
 
 :focus {
 	outline:none;
+}
+
+/*
+Autocomplete
+*/
+div.ac_results {
+	ul {
+		@extend .collection;
+		border: none;
+
+		li {
+			@extend .collection-item;
+
+			&.ac_over {
+				@extend .active;
+			}
+		}
+	}
 }

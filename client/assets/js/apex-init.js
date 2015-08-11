@@ -46,6 +46,9 @@ function apexInit() {
         }
     });
 
+    /* Fixed Menu */
+    //$(".side-nav.fixed").parents("body").addClass("side-nav-fixed");
+
     /* Fixed Action Button */
     $(".fixed-action-btn").siblings(".btn-floating, .btn, .btn-large, .btn-flat").addBack().wrapAll("<div class='fixed-action-btn' style='bottom: 45px; right: 24px;'>");
     $(".fixed-action-btn").siblings(".btn-floating, .btn, .btn-large, .btn-flat").wrapAll("<ul>").wrap("<li>");

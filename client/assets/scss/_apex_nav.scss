@@ -23,10 +23,36 @@ nav .nav-wrapper i {
 	}
 }
 
+
+.page-navbar-fixed #app-navbar {
+	@extend .navbar-fixed;
+}
+
 .page-center-logo .brand-logo {
 	@extend .center;
 }
 
-.page-navbar-fixed #app-navbar {
-	@extend .navbar-fixed;
+
+.navbar-list a {
+	display: inline-block;
+	padding: 0 15px;
+    height: $navbar-height-mobile;
+    line-height: $navbar-height-mobile;
+
+    i {
+	    height: $navbar-height-mobile;
+	    line-height: $navbar-height-mobile;
+	}
+}
+
+@media #{$medium-and-up} {
+	.navbar-list a {
+	    height: $navbar-height;
+	    line-height: $navbar-height;
+
+	    i {
+		    height: $navbar-height;
+		    line-height: $navbar-height;
+		}
+	}
 }

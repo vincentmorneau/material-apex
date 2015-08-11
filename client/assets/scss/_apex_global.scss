@@ -4,11 +4,11 @@ body {
 
 ul {
 	margin: 0;
-}
 
-ul.table-of-contents {
-	margin-top: 0;
-	padding-top: 48px;
+	&.table-of-contents {
+		margin-top: 0;
+		padding-top: 48px;
+	}
 }
 
 .main-container main {
@@ -45,11 +45,7 @@ i {
 }
 
 .ui-datepicker-trigger {
-	display:none!important;
-}
-
-.hide {
-	display:none!important;
+	@extend .hide;
 }
 
 .materialbox-caption {
@@ -67,4 +63,25 @@ form {
 
 main {
 	flex: 1 0 auto;
+}
+
+/*
+Popup LOV
+*/
+body.uPopUpLOV div.uActionBar {
+    height: initial;
+
+    input[type=text] {
+    	width: 100%;
+    }
+}
+
+/* 
+Alignments
+*/
+.center-align p.header {
+	text-align: center;
+}
+.right-align p.header {
+	text-align: right;
 }

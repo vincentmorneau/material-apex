@@ -1,7 +1,7 @@
 /************
 Materialize Initialization
 ************/
-function formInit() {
+function selectInit() {
     /*$('.material-apex-datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
         selectYears: 25 // Creates a dropdown of 15 years to control year
@@ -19,7 +19,7 @@ function materialInit() {
     $('.button-collapse').sideNav();
     
     /* Forms */
-    formInit();
+    selectInit();
 
     /* Scrollspy & Pushpin */
     if ($('.table-of-contents').length > 0) {
@@ -55,4 +55,8 @@ function materialInit() {
 
 $(function() {
     materialInit();
+
+    apex.jQuery('select').on('apexafterrefresh', function(){ 
+        selectInit();
+    });
 });

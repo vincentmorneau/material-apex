@@ -6,6 +6,16 @@ Here's a demo: https://apex.oracle.com/pls/apex/f?p=12192
 The APEX application export is included in this repo.
 
 ##Changelog
+####0.8.1
+- Content is now offset when sidebar is fixed
+- Fixed navigation bar icons alignment on mobile
+- Select list is now aligned properly with text fields
+- Autocomplete item now has a material design look and feel
+- Cascading LOVs are now supported
+- Popup LOV in Tabular Forms are now supported
+- Login Screen has a new template called "Page - Clean"
+- Region titles are now aligned according to the specified template option 
+
 ####0.8.0
 - **Theme Roller Support**, primary and secondary colors are now choosable from the theme roller!
 - **New easier grid layout system**  [(view)](https://apex.oracle.com/pls/apex/f?p=12192:11)
@@ -23,13 +33,6 @@ The APEX application export is included in this repo.
 - Fixed Modal Fixed Footer
 - Fixed Sidenav height
 - More...
-
-####0.7.5
-- **New Interactive Report Support** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:62)
-- **Enhanced Tabular Form Support** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:61)
-- **Reports Responsive Styles**: See Style 2 [(view)](https://apex.oracle.com/pls/apex/f?p=12192:16)
-- Fixed issues with checkboxes and radio buttons
-- Better HTML markup for reports
 
 ##Automatic Install
 - Import the APEX application ```12192.sql``` in your workspace.
