@@ -1,4 +1,21 @@
 ##Changelog
+####0.8.2
+- **Removed Bower dependency. Using npm now.**
+- **Added chips.** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:18)
+- **RTL Support** (Right to Left) with a new Theme Style.
+- **Added support for multi level menus in navigation bar.**
+- Now possible to have 2 FAB (fixed action button) on the same page.
+- More Theme Roller attributes.
+- Modal bottom sheet's height is now configurable with Theme Roller.
+- Tabs labels are more responsive and configurable.
+- Badges in reports and dropdowns are now editable.
+- Fixed an issue where collection reports always prints header.
+- Fixed an display issue with tabs.
+- Enhanced toast rendering with large values.
+- Enhanced some of the templates stability.
+- Better responsiveness on the navigation bar.
+- More...
+
 ####0.8.1
 - Content is now offset when sidebar is fixed
 - Fixed navigation bar icons alignment on mobile

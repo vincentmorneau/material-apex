@@ -50,8 +50,10 @@ function apexInit() {
     //$(".side-nav.fixed").parents("body").addClass("side-nav-fixed");
 
     /* Fixed Action Button */
-    $(".fixed-action-btn").siblings(".btn-floating, .btn, .btn-large, .btn-flat").addBack().wrapAll("<div class='fixed-action-btn' style='bottom: 45px; right: 24px;'>");
-    $(".fixed-action-btn").siblings(".btn-floating, .btn, .btn-large, .btn-flat").wrapAll("<ul>").wrap("<li>");
+    $(".fixed-action-btn.fab-left").siblings(".btn-floating, .btn, .btn-large, .btn-flat").addBack().wrapAll("<div class='fixed-action-btn fab-left'>");
+    $(".fixed-action-btn.fab-right").siblings(".btn-floating, .btn, .btn-large, .btn-flat").addBack().wrapAll("<div class='fixed-action-btn fab-right'>");
+    $(".fixed-action-btn.fab-left").siblings(".btn-floating, .btn, .btn-large, .btn-flat").wrapAll("<ul>").wrap("<li>");
+    $(".fixed-action-btn.fab-right").siblings(".btn-floating, .btn, .btn-large, .btn-flat").wrapAll("<ul>").wrap("<li>");
     $("a.fixed-action-btn").removeClass("fixed-action-btn");
     $(".fixed-action-btn .btn, .fixed-action-btn .btn-flat").addClass("btn-floating").removeClass("btn btn-flat");
 

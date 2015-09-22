@@ -2,6 +2,10 @@ body {
 	background: $background-color;
 }
 
+.section {
+    text-align: left;
+}
+
 ul {
 	margin: 0;
 
@@ -84,4 +88,11 @@ Alignments
 }
 .right-align p.header {
 	text-align: right;
+}
+
+/*
+Badges
+*/
+span.badge.new:after {
+    content: "";
 }

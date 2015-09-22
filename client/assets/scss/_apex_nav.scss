@@ -33,20 +33,18 @@ nav .nav-wrapper i {
 }
 
 
-.navbar-list a {
-	display: inline-block;
-	padding: 0 15px;
+.navbar-list li {
     height: $navbar-height-mobile;
     line-height: $navbar-height-mobile;
-
+    
     i {
-	    height: $navbar-height-mobile;
-	    line-height: $navbar-height-mobile;
-	}
+        height: $navbar-height-mobile;
+        line-height: $navbar-height-mobile;
+    }
 }
 
 @media #{$medium-and-up} {
-	.navbar-list a {
+	.navbar-list li {
 	    height: $navbar-height;
 	    line-height: $navbar-height;
 

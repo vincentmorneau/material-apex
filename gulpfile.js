@@ -1,4 +1,4 @@
-// Material Design Gulpfile
+// Material APEX Gulpfile
 // - - - - - - - - - - - - - - -
 // This file processes all of the assets in the "client" folder
 // and outputs the finished files in the "build" folder.
@@ -16,7 +16,7 @@ var paths = {
         client: 'client/',
         build: 'build/',
         sourcemaps: './',
-        materialize: 'bower_components/materialize/'
+        materialize: 'node_modules/materialize-css/'
     },
     assets = {
         js: 'assets/js/',
@@ -50,11 +50,11 @@ var paths = {
 // 3. TASKS
 // - - - - - - - - - - - - - - -
 // Cleans the build directory
-gulp.task('clean', function(cb) {
-    del([paths.build], cb);
+gulp.task('clean', function() {
+    return del([paths.build]);
 });
 
-// Compiles the JavaScript (error handling via plumber)
+// Compiles the JavaScript
 gulp.task('js', function() {
     gulp.src(paths.materialize + 'dist/js/materialize.min.js')
         .pipe(gulp.dest(paths.build + assets.js));
@@ -90,11 +90,11 @@ gulp.task('js', function() {
 });
 
 // Cleans the build css directory before re-creating the css
-gulp.task('clean-css', function(cb) {
-    del([paths.build + assets.css], cb);
+gulp.task('clean-css', function() {
+    return del([paths.build + assets.css]);
 });
 
-// Compiles scss and minifies css
+// Compiles scss to css
 gulp.task('scss', function() {
     return gulp.src(paths.client + assets.scss + files.scss)
         .pipe(plugins.plumber())
@@ -106,7 +106,15 @@ gulp.task('scss', function() {
         .pipe(gulp.dest(paths.build + assets.css));
 });
 
-// Compiles scss and minifies css
+// RTL
+gulp.task('rtl', function() {
+    return gulp.src(paths.build + assets.css + files.css)
+        .pipe(plugins.rtlcss())
+        .pipe(plugins.rename({ suffix: '-rtl' }))
+        .pipe(gulp.dest(paths.build + assets.css));
+});
+
+// Minifies css
 gulp.task('css', function() {
     return gulp.src(paths.build + assets.css + files.css)
         .pipe(plugins.plumber())
@@ -118,7 +126,7 @@ gulp.task('css', function() {
 
 // Default task: builds your app
 gulp.task('style', function() {
-    runSequence('clean-css', 'scss', 'css', function() {});
+    runSequence('clean-css', 'scss', 'rtl', 'css', function() {});
 });
 
 // Optimizes img files
@@ -150,7 +158,7 @@ gulp.task('watch', function() {
 
 // Default task: builds your app
 gulp.task('default', function() {
-    runSequence('clean', ['js', 'style', 'img', 'vendor', 'font', 'watch'], function() {
+    runSequence('clean' , ['js', 'style', 'img', 'vendor', 'font', 'watch'], function() {
         console.log("Successfully built.");
     });
 });

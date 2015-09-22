@@ -3,6 +3,12 @@ $sidenav-height: 44px;
 ul.side-nav {
     z-index: 1002;
 
+	// Right Align
+	&.right-aligned {
+		right: initial;
+		left: initial;
+	}
+		
 	li {
 		line-height: $sidenav-height;
 

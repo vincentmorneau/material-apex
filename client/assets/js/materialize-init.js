@@ -16,7 +16,9 @@ function materialInit() {
     $(".collapsible.expandable").collapsible({accordion : false});
 
     /* SideNav */
-    $('.button-collapse').sideNav();
+    $('.button-collapse').sideNav({
+      edge: $(".side-nav").data("direction").trim()
+    });
     
     /* Forms */
     selectInit();
