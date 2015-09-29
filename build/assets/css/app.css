@@ -10225,6 +10225,9 @@ td .ui-state-hover {
   line-height: 1.5rem;
   height: initial; }
 
+/*
+Date Pickers
+*/
 .picker__select--month,
 .picker__select--year {
   padding: 0; }
@@ -10234,6 +10237,9 @@ td .ui-state-hover {
   .picker__select--year {
     margin-top: 0; } }
 
+/*
+Inputs
+*/
 label.active.display-only {
   margin-bottom: 10px;
   display: block; }

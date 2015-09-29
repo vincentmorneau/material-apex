@@ -9817,7 +9817,6 @@ td .ui-state-hover {
 .dropdown-content li > a, .dropdown-content li > span {
   line-height: 1.5rem;
   height: initial; }
-
 .picker__select--month,
 .picker__select--year {
   padding: 0; }
@@ -9826,7 +9825,6 @@ td .ui-state-hover {
   .picker__select--month,
   .picker__select--year {
     margin-top: 0; } }
-
 label.active.display-only {
   margin-bottom: 10px;
   display: block; }

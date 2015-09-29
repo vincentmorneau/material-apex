@@ -1,3 +1,6 @@
+/*
+Date Pickers
+*/
 // This is a fix for the wrong margin and padding in default.date.scss
 .picker__select--month,
 .picker__select--year {
@@ -11,6 +14,9 @@
 	}
 }
 
+/*
+Inputs
+*/
 label.active.display-only {
 	margin-bottom: 10px;
 	display: block;

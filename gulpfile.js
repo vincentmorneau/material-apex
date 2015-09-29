@@ -22,15 +22,15 @@ var paths = {
         js: 'assets/js/',
         css: 'assets/css/',
         scss: 'assets/scss/',
+        lib: 'assets/lib/',
         img: 'assets/img/',
-        vendor: 'assets/vendor/',
-        font: 'assets/font/',
+        font: 'assets/font/'
     },
     files = {
         js: '**/*.js',
         css: '**/*.css',
         scss: '**/*.scss',
-        all: '**/*.*',
+        all: '**/*.*'
     },
     sizeOptions = {
         showFiles: true
@@ -129,17 +129,16 @@ gulp.task('style', function() {
     runSequence('clean-css', 'scss', 'rtl', 'css', function() {});
 });
 
-// Optimizes img files
-gulp.task('img', function() {
-    return gulp.src(paths.client + assets.img + files.all)
-        .pipe(plugins.imagemin())
-        .pipe(gulp.dest(paths.build + assets.img));
+// Copies lib files as is
+gulp.task('lib', function() {
+    return gulp.src(paths.client + assets.lib + files.all)
+        .pipe(gulp.dest(paths.build + assets.lib));
 });
 
-// Copies vendor files as is
-gulp.task('vendor', function() {
-    return gulp.src(paths.client + assets.vendor + files.all)
-        .pipe(gulp.dest(paths.build + assets.vendor));
+// Copies img files as is
+gulp.task('img', function() {
+    return gulp.src(paths.client + assets.img + files.all)
+        .pipe(gulp.dest(paths.build + assets.img));
 });
 
 // Copies font files as is
@@ -152,13 +151,12 @@ gulp.task('font', function() {
 gulp.task('watch', function() {
     gulp.watch(paths.client + assets.js + files.js, ['js']);
     gulp.watch(paths.client + assets.scss + files.scss, ['style']);
-    gulp.watch(paths.client + assets.img + files.all, ['img']);
-    gulp.watch(paths.client + assets.vendor + files.all, ['vendor']);
+    gulp.watch(paths.client + assets.lib + files.all, ['lib']);
 });
 
 // Default task: builds your app
 gulp.task('default', function() {
-    runSequence('clean' , ['js', 'style', 'img', 'vendor', 'font', 'watch'], function() {
+    runSequence('clean' , ['js', 'style', 'lib', 'img', 'font', 'watch'], function() {
         console.log("Successfully built.");
     });
 });

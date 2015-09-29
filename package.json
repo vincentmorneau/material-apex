@@ -1,7 +1,7 @@
 {
   "name": "material-apex",
   "author": "Vincent Morneau",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Material Design Theme for APEX 5.x.x",
   "license":"MIT",
   "repository": {
@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "gulp": "3.9.x",
+    "gulp-sass": "2.0.x",
     "gulp-util": "3.0.x",
     "gulp-plumber": "1.0.x",
     "gulp-concat": "2.6.x",
@@ -22,10 +23,8 @@
     "gulp-rename": "1.2.x",
     "gulp-size": "2.0.x",
     "gulp-sourcemaps":"1.5.x",
-    "gulp-sass": "2.0.x",
     "gulp-minify-css": "1.2.x",
     "gulp-autoprefixer": "3.0.x",
-    "gulp-imagemin": "2.3.x",
     "gulp-load-plugins": "~1.0.0-rc.1",
     "del": "2.0.x",
     "run-sequence": "1.1.x",

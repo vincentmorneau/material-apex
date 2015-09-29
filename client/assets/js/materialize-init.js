@@ -16,9 +16,11 @@ function materialInit() {
     $(".collapsible.expandable").collapsible({accordion : false});
 
     /* SideNav */
-    $('.button-collapse').sideNav({
-      edge: $(".side-nav").data("direction").trim()
-    });
+    if ($('.button-collapse').length > 0) {
+        $('.button-collapse').sideNav({
+        edge: $(".side-nav").data("direction").trim()
+        });
+    }
     
     /* Forms */
     selectInit();

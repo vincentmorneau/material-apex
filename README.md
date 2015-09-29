@@ -6,6 +6,10 @@ Here's a demo: https://apex.oracle.com/pls/apex/f?p=12192
 The APEX application export is included in this repo.
 
 ##Changelog
+####0.8.3
+- Fixed modal close
+- Fixed file input layout
+
 ####0.8.2
 - **Removed Bower dependency. Using npm now.**
 - **Added chips.** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:18)
