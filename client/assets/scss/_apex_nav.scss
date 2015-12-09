@@ -1,3 +1,15 @@
+.page-navbar-fixed .top-nav-wrapper {
+    @extend .navbar-fixed;
+}
+
+nav.top-nav {
+    z-index: 998;
+}
+
+nav ul a {
+    display: inline-block;
+}
+
 nav .nav-wrapper i {
 	font-size: 2rem!important;
 }
@@ -12,7 +24,6 @@ nav .nav-wrapper i {
 	top:$navbar-height-mobile;
 }
 
-
 @media #{$medium-and-up} {
   	.drag-target {
 		top:$navbar-height;
@@ -23,20 +34,14 @@ nav .nav-wrapper i {
 	}
 }
 
-
-.page-navbar-fixed #app-navbar {
-	@extend .navbar-fixed;
-}
-
 .page-center-logo .brand-logo {
 	@extend .center;
 }
 
-
 .navbar-list li {
     height: $navbar-height-mobile;
     line-height: $navbar-height-mobile;
-    
+
     i {
         height: $navbar-height-mobile;
         line-height: $navbar-height-mobile;

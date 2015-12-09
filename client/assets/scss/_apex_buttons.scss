@@ -1,7 +1,9 @@
+// General
 .btn {
 	margin-bottom: 1em;
 }
 
+// Icons
 .icon-float-left i {
 	@extend .left;
 }
@@ -10,30 +12,50 @@
 	@extend .right;
 }
 
-/*
-FAB
-*/
+// Buttons alignment
+.buttons-left  .section-buttons {
+    text-align: left;
+}
+.buttons-center  .section-buttons {
+    text-align: center;
+}
+.buttons-right  .section-buttons {
+    text-align: right;
+}
+
+// FAB (Fixed Action Button)
 .fixed-action-btn {
     bottom: 45px;
     left: initial;
     right: initial;
-    
+
     &.fab-left {
         left: 25px;
     }
-    
+
     &.fab-right {
         right: 25px;
     }
-    
+
+    &.fab-absolute {
+        position: absolute;
+        right: 0;
+    }
+
+    &.horizontal ul li {
+        margin: 5px 0 0 0;
+    }
+
     ul {
         bottom: 80px;
-        left: initial;
-        right: initial;
-        
+
         a.btn-floating {
             opacity: 0;
             margin: 5px 10px;
         }
     }
+}
+
+.fab-relative {
+    position: relative;
 }

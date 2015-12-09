@@ -8,7 +8,7 @@ ul.side-nav {
 		right: initial;
 		left: initial;
 	}
-		
+
 	li {
 		line-height: $sidenav-height;
 
@@ -40,6 +40,10 @@ ul.side-nav {
   	z-index: 998;
 }
 
+.drag-target {
+    z-index: 999;
+}
+
 /*
 Sidebar Fixed
 */
@@ -62,7 +66,7 @@ body.side-nav-fixed {
   	nav {
 	    width: calc(100% - 240px);
 	}
-	  	
+
   	#menu-trigger {
   		display: none!important;
   	}
@@ -75,7 +79,7 @@ body.side-nav-fixed {
 	  	nav {
 		    width: 100%;
 		}
-	  	
+
 	  	#menu-trigger {
 	  		display: block!important;
 	  	}

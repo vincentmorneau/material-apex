@@ -4,6 +4,14 @@ body {
 
 .section {
     text-align: left;
+
+    &.right-align {
+        text-align: right;
+    }
+
+    &.center-align {
+        text-align: center;
+    }
 }
 
 ul {
@@ -25,17 +33,17 @@ i {
 		margin-right: 0;
 
 		@media #{$large-and-up} {
-			margin-right: 15px; 
-		} 
-	} 
+			margin-right: 15px;
+		}
+	}
 
 	&.right-l {
 		float: right;
-		margin-left: 0; 
-		
+		margin-left: 0;
+
 		@media #{$large-and-up} {
-			margin-left: 15px; 
-		} 
+			margin-left: 15px;
+		}
 	}
 }
 
@@ -44,7 +52,7 @@ i {
 }
 
 #menu-trigger {
-	display:initial!important;
+	display:block!important;
 	padding-left: 15px;
 }
 
@@ -80,7 +88,7 @@ body.uPopUpLOV div.uActionBar {
     }
 }
 
-/* 
+/*
 Alignments
 */
 .center-align p.header {

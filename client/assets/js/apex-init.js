@@ -5,7 +5,7 @@ $.fn.ignore = function(sel){
     return this.clone().find(sel||">*").remove().end();
 };
 
-function irComponentsInit() {    
+function irComponentsInit() {
     $("[id*='_column_filter'], .a-IRR-dialogContent--highlight table table")
         .addClass("table-responsive")
         .find("td")
@@ -38,24 +38,29 @@ function irInit() {
     }
 }
 
-function apexInit() {    
-    /* Grid - Handling s12 default override */
+function apexInit() {
+    // Grid - Handling s12 default override
     $(".col.s12").each(function(){
         if ($(this).is(".s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10,.s11")) {
             $(this).removeClass("s12");
         }
     });
 
-    /* Fixed Menu */
-    //$(".side-nav.fixed").parents("body").addClass("side-nav-fixed");
-
     /* Fixed Action Button */
-    $(".fixed-action-btn.fab-left").siblings(".btn-floating, .btn, .btn-large, .btn-flat").addBack().wrapAll("<div class='fixed-action-btn fab-left'>");
-    $(".fixed-action-btn.fab-right").siblings(".btn-floating, .btn, .btn-large, .btn-flat").addBack().wrapAll("<div class='fixed-action-btn fab-right'>");
-    $(".fixed-action-btn.fab-left").siblings(".btn-floating, .btn, .btn-large, .btn-flat").wrapAll("<ul>").wrap("<li>");
-    $(".fixed-action-btn.fab-right").siblings(".btn-floating, .btn, .btn-large, .btn-flat").wrapAll("<ul>").wrap("<li>");
-    $("a.fixed-action-btn").removeClass("fixed-action-btn");
-    $(".fixed-action-btn .btn, .fixed-action-btn .btn-flat").addClass("btn-floating").removeClass("btn btn-flat");
+    $("a.fixed-action-btn").each(function(){
+        var position = "";
+        if ($(this).hasClass("fab-right")) position += "fab-right ";
+        if ($(this).hasClass("fab-left")) position += "fab-left ";
+        if ($(this).hasClass("fab-absolute")) position += "fab-absolute ";
+        if ($(this).hasClass("horizontal")) position += "horizontal ";
+        if ($(this).hasClass("click-to-toggle")) position += "click-to-toggle ";
+
+        $(this).siblings(".btn, .btn-flat").addClass("btn-floating").removeClass("btn btn-flat");
+        $(this).siblings(".btn-floating").addBack().wrapAll("<div class='fixed-action-btn " + position + "'>");
+        $(this).siblings(".btn-floating").wrapAll("<ul>").wrap("<li>");
+        $(this).removeClass("fixed-action-btn horizontal click-to-toggle fab-right fab-left fab-absolute");
+    });
+    $("div.fab-absolute").parent().addClass("fab-relative");
 
     // Vertical Alignment
     $(".valign-wrapper>.row").addClass("valign-wrapper");
@@ -76,7 +81,7 @@ function apexInit() {
         $( this ).after( $(this).siblings("label") );
     });
 
-    /* Display only & read only */ 
+    /* Display only & read only */
     $(".display_only, fieldset.checkbox_group, fieldset.radio_group")
         .siblings("label")
         .addClass("active display-only")

@@ -6,36 +6,30 @@ Here's a demo: https://apex.oracle.com/pls/apex/f?p=12192
 The APEX application export is included in this repo.
 
 ##Changelog
-####0.8.3
-- Fixed modal close
-- Fixed file input layout
+####0.9.0
+- **NEW:** Transitions [(view)](https://apex.oracle.com/pls/apex/f?p=12192:43)
+- **NEW:** Scrollfire [(view)](https://apex.oracle.com/pls/apex/f?p=12192:44)
+- **NEW:** Breadcrumbs [(view)](https://apex.oracle.com/pls/apex/f?p=12192:42)
+- **NEW:** Multi Select [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
+- **NEW:** Fixed Action Buttons [(view)](https://apex.oracle.com/pls/apex/f?p=12192:21)
+    - Horizontal FAB
+    - Click to toggle FAB
+    - Within it's container FAB
+    - FAB now has it's own template
+- Material APEX now has 3 Dynamic Action Items
+    - Toasts
+    - Staggered List
+    - Fade In Image
+- Tabs are now scrollable
+- Added a wave effect to the Sidenav parent elements
+- Fixed a bug where the IR column headers wouldn't appear under a tab
+- Image item now has it's own template
+- Enhanced some template option intuitiveness
+- Fixed some IE bugs all over...
+- More bugs fixes...
+- Enhanced the Gulpfile
 
-####0.8.2
-- **Removed Bower dependency. Using npm now.**
-- **Added chips.** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:18)
-- **RTL Support** (Right to Left) with a new Theme Style.
-- **Added support for multi level menus in navigation bar.**
-- Now possible to have 2 FAB (fixed action button) on the same page.
-- More Theme Roller attributes.
-- Modal bottom sheet's height is now configurable with Theme Roller.
-- Tabs labels are more responsive and configurable.
-- Badges in reports and dropdowns are now editable.
-- Fixed an issue where collection reports always prints header.
-- Fixed an display issue with tabs.
-- Enhanced toast rendering with large values.
-- Enhanced some of the templates stability.
-- Better responsiveness on the navigation bar.
-- More...
-
-####0.8.1
-- Content is now offset when sidebar is fixed
-- Fixed navigation bar icons alignment on mobile
-- Select list is now aligned properly with text fields
-- Autocomplete item now has a material design look and feel
-- Cascading LOVs are now supported
-- Popup LOV in Tabular Forms are now supported
-- Login Screen has a new template called "Page - Clean"
-- Region titles are now aligned according to the specified template option 
+See `CHANGELOG.md` for more details.
 
 ##Automatic Install
 - Import the APEX application ```12192.sql``` in your workspace.

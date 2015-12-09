@@ -8,7 +8,9 @@
 var gulp = require('gulp'),
     plugins = require('gulp-load-plugins')(),
     del = require('del'),
-    runSequence = require('run-sequence');
+    runSequence = require('run-sequence'),
+    config = require('./config.json');
+
 
 // 2. SETTINGS VARIABLES
 // - - - - - - - - - - - - - - -
@@ -50,11 +52,11 @@ var paths = {
 // 3. TASKS
 // - - - - - - - - - - - - - - -
 // Cleans the build directory
-gulp.task('clean', function() {
+gulp.task('clean-build', function() {
     return del([paths.build]);
 });
 
-// Compiles the JavaScript
+// Javascript handling
 gulp.task('js', function() {
     gulp.src(paths.materialize + 'dist/js/materialize.min.js')
         .pipe(gulp.dest(paths.build + assets.js));
@@ -89,12 +91,7 @@ gulp.task('js', function() {
         .pipe(gulp.dest(paths.build + assets.js));
 });
 
-// Cleans the build css directory before re-creating the css
-gulp.task('clean-css', function() {
-    return del([paths.build + assets.css]);
-});
-
-// Compiles scss to css
+// Compiles scss, adds autoprefixer and sourcemaps
 gulp.task('scss', function() {
     return gulp.src(paths.client + assets.scss + files.scss)
         .pipe(plugins.plumber())
@@ -103,20 +100,29 @@ gulp.task('scss', function() {
         .pipe(plugins.autoprefixer())
         .pipe(plugins.size(sizeOptions))
         .pipe(plugins.sourcemaps.write(paths.sourcemaps))
-        .pipe(gulp.dest(paths.build + assets.css));
+        .pipe(gulp.dest(paths.client + assets.css));
 });
 
-// RTL
-gulp.task('rtl', function() {
-    return gulp.src(paths.build + assets.css + files.css)
-        .pipe(plugins.rtlcss())
-        .pipe(plugins.rename({ suffix: '-rtl' }))
-        .pipe(gulp.dest(paths.build + assets.css));
-});
-
-// Minifies css
+// CSS handling
 gulp.task('css', function() {
-    return gulp.src(paths.build + assets.css + files.css)
+    // copy un-minified css and map file to dist folder
+    gulp.src(paths.client + assets.css + files.all)
+        .pipe(gulp.dest(paths.build + assets.css));
+
+    // RTL support
+    gulp.src(paths.client + assets.css + files.css)
+        .pipe(plugins.plumber())
+        .pipe(plugins.rtlcss())
+        .pipe(plugins.rename({ suffix: '.rtl' }))
+        .pipe(plugins.size(sizeOptions))
+        .pipe(gulp.dest(paths.build + assets.css))
+        .pipe(plugins.minifyCss())
+        .pipe(plugins.rename(renameOptions))
+        .pipe(plugins.size(sizeOptions))
+        .pipe(gulp.dest(paths.build + assets.css));
+
+    // Minifies CSS
+    return gulp.src(paths.client + assets.css + files.css)
         .pipe(plugins.plumber())
         .pipe(plugins.minifyCss())
         .pipe(plugins.rename(renameOptions))
@@ -124,15 +130,9 @@ gulp.task('css', function() {
         .pipe(gulp.dest(paths.build + assets.css));
 });
 
-// Default task: builds your app
-gulp.task('style', function() {
-    runSequence('clean-css', 'scss', 'rtl', 'css', function() {});
-});
-
-// Copies lib files as is
-gulp.task('lib', function() {
-    return gulp.src(paths.client + assets.lib + files.all)
-        .pipe(gulp.dest(paths.build + assets.lib));
+// Sequentially run tasks 'scss' and 'css'
+gulp.task('scss-css', function() {
+    runSequence('scss', 'css', function() {});
 });
 
 // Copies img files as is
@@ -147,16 +147,41 @@ gulp.task('font', function() {
         .pipe(gulp.dest(paths.build + assets.font));
 });
 
+// Copies lib files as is
+gulp.task('lib', function() {
+    return gulp.src(paths.client + assets.lib + files.all)
+        .pipe(gulp.dest(paths.build + assets.lib));
+});
+
 // Watch for changes and recompiles
 gulp.task('watch', function() {
     gulp.watch(paths.client + assets.js + files.js, ['js']);
-    gulp.watch(paths.client + assets.scss + files.scss, ['style']);
+
+    // sass support
+    if (config.enableSass) {
+        gulp.watch(paths.client + assets.scss + files.scss, ['scss-css']);
+    } else {
+        gulp.watch(paths.client + assets.css + files.css, ['css']);
+    }
+
+    gulp.watch(paths.client + assets.img + files.all, ['img']);
     gulp.watch(paths.client + assets.lib + files.all, ['lib']);
 });
 
 // Default task: builds your app
 gulp.task('default', function() {
-    runSequence('clean' , ['js', 'style', 'lib', 'img', 'font', 'watch'], function() {
-        console.log("Successfully built.");
+    // default task order
+    var tasks = ['js', 'img', 'lib', 'font'];
+
+    // sass support
+    if (config.enableSass) {
+        tasks.unshift('scss-css');
+    } else {
+        tasks.unshift('css');
+    }
+
+    // run tasks
+    runSequence('clean-build', 'watch', tasks, function() {
+        console.log("Successfully built!");
     });
 });

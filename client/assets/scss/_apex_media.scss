@@ -1,3 +1,7 @@
 .video-container video {
 	@extend .responsive-video;
 }
+
+.valign-wrapper {
+    margin-bottom:0;
+}

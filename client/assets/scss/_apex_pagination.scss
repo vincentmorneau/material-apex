@@ -6,7 +6,7 @@ td.pagination {
 	padding: 0;
 }
 
-@mixin pagination-block {	
+@mixin pagination-block {
     font-size: 1.2rem;
     float: left;
     width: 30px;
@@ -28,7 +28,7 @@ td.pagination {
 		    background-color: $primary-color;
 		}
 
-		a {			
+		a {
 			@include pagination-block;
 
 			color: #444;
@@ -38,5 +38,11 @@ td.pagination {
   	i {
 		font-size: 2rem;
 		line-height: 1.8rem;
+    }
+}
+
+@media #{$medium-and-down} {
+    .pagination {
+        width: inherit;
     }
 }

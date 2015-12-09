@@ -46,6 +46,10 @@ label.active.display-only {
 	@extend .circle;
 }
 
+.item-fade-in img {
+    @extend .fade-in;
+}
+
 fieldset {
     border: 0;
     margin: 0;

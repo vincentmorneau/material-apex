@@ -1,3 +1,35 @@
-ul.tabs ~ div.row {
+// Fix for Regions under Tabs
+ul.tabs ~ div.row, .hide-tab-scrollbar ~ div.row {
     margin-bottom: 0;
+
+    .section {
+        padding-top:0;
+    }
+}
+
+// White sections
+.section.white p.header {
+    padding: 0 20px;
+}
+
+@media #{$medium-and-up} {
+    .section.white .a-IRR-container {
+        box-shadow: none;
+    }
+
+    .t-fht-thead {
+        width:inherit!important;
+    }
+}
+
+@media #{$small-and-down} {
+    .section.white {
+        .a-IRR-container {
+            padding: 20px;
+        }
+
+        table.table-responsive tr {
+            box-shadow: none;
+        }
+    }
 }

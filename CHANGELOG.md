@@ -1,4 +1,27 @@
 ##Changelog
+####0.9.0
+- **NEW:** Transitions [(view)](https://apex.oracle.com/pls/apex/f?p=12192:43)
+- **NEW:** Scrollfire [(view)](https://apex.oracle.com/pls/apex/f?p=12192:44)
+- **NEW:** Breadcrumbs [(view)](https://apex.oracle.com/pls/apex/f?p=12192:42)
+- **NEW:** Multi Select [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
+- **NEW:** Fixed Action Buttons [(view)](https://apex.oracle.com/pls/apex/f?p=12192:21)
+    - Horizontal FAB
+    - Click to toggle FAB
+    - Within it's container FAB
+    - FAB now has it's own template
+- Material APEX now has 3 Dynamic Action Items
+    - Toasts
+    - Staggered List
+    - Fade In Image
+- Tabs are now scrollable
+- Added a wave effect to the Sidenav parent elements
+- Fixed a bug where the IR column headers wouldn't appear under a tab
+- Image item now has it's own template
+- Enhanced some template option intuitiveness
+- Fixed some IE bugs all over...
+- More bugs fixes...
+- Enhanced the Gulpfile
+
 ####0.8.3
 - Fixed modal close
 - Fixed file input layout
@@ -36,7 +59,7 @@
 - **New Date Picker**. We let go of the "pickadate.js" plugin for better compabilitiby.
 - The hamburger menu is now selectable as a component on page 0. Can be controled for conditions or authorization schemes.
 - Now uses Official Google Icon web font
-- Added template option for button regarding icon float 
+- Added template option for button regarding icon float
 - Modal now prevents scrolling
 - Removed the #APPLICATION_NAME# substitution string. Now uses the default #LOGO# substitution string
 - Reworked on the Grid Documentation
@@ -101,7 +124,7 @@
 - Restructured the whole Scrollspy internal layout engine
 - Added Shadow Template Options on buttons
 - Added Background Color, Background Modifier and Text Color Template Options on Buttons
-- Added Shadow example on the Button page 
+- Added Shadow example on the Button page
 - Fixed Button height issue with no icons
 - Fixed Flow Text issue
 - Removed unnecessary Template Option on page template

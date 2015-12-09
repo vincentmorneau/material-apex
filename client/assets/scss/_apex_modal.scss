@@ -1,3 +1,7 @@
+body.body-modal {
+    background-color: $modal-background-color;
+}
+
 .modal {
     display: block;
     width: 100%;
@@ -61,7 +65,7 @@ body {
         outline: 0;
         box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
         box-sizing: content-box;
-        
+
         background-color: $modal-background-color;
         max-height: 100%;
         overflow-y: auto;
@@ -115,7 +119,7 @@ body {
             display: block;
             opacity: 0.5;
         }
-    }    
+    }
 }
 
 @media #{$small-and-down} {
