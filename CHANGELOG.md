@@ -22,6 +22,11 @@
 - More bugs fixes...
 - Enhanced the Gulpfile
 
+**Upgrading from 0.8.3 and below**
+0.9.0 introduces some `template` and `template option` changes across buttons and regions. Some of the defaults values have changed. You may need to re-apply the default values to some of your buttons and regions.
+- `Fixed Action Button` is not a template option anymore. It has it's own button template now.
+- `Float` is not a template option anymore. This can be achieved using the `Region alignment` template option now.
+
 ####0.8.3
 - Fixed modal close
 - Fixed file input layout
