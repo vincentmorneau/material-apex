@@ -82,5 +82,19 @@ div.ac_results {
 /* Popup LOV */
 .ma-popuplov label {
     transform: translateY(-190%);
-    font-size: .8rem;
+    font-size: 0.8rem;
+}
+
+/* Validation */
+.input-field {
+    br {
+        display: none;
+    }
+
+    span.errTxt {
+        color: #EF5350;
+        font-size: 0.8rem;
+        position: absolute;
+        top: 3.5rem;
+   }
 }
