@@ -63,7 +63,7 @@ function materialInit() {
         var addRowOld = apex.widget.tabular.addRow;
         apex.widget.tabular.addRow = function(){
             addRowOld();
-            formInit();
+            selectInit();
             $(".select-wrapper .select-wrapper").siblings().remove().end().unwrap();
         };
     }
