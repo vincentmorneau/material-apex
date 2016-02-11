@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git://github.com/vincentmorneau/material-apex.git"
   },
-  "devDependencies": {
+  "dependencies": {
     "materialize-css": "0.97.5"
   }
 }
