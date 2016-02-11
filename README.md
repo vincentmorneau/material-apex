@@ -1,4 +1,7 @@
 # Material APEX
+[![Build Status](https://travis-ci.org/vincentmorneau/material-apex.svg?branch=master)](https://travis-ci.org/vincentmorneau/material-apex)
+[![Dependency Status](https://david-dm.org/vincentmorneau/material-apex.svg)](https://david-dm.org/vincentmorneau/material-apex)
+
 This is a Material Design Theme for Oracle APEX 5.
 
 [See demo](https://apex.oracle.com/pls/apex/f?p=12192)
