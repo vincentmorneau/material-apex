@@ -13,11 +13,15 @@ Thanks to [Insum Solutions](http://insum.ca/) for sponsoring this project.
 See [`CHANGELOG.md`](CHANGELOG.md) for details.
 
 ## Install
-- **Option 1) Application Import**
+- **Option 1) Application Import** - *Best for new application*
     - Import the APEX application [demo-app.sql](apex/demo-app.sql) in your workspace.
-- **Option 2) Theme Import**
+- **Option 2) Theme Import** - *Best for upgrading existing application*
     - Import the Theme [theme-export.sql](apex/theme-export.sql) in your existing application.
-- **Option 3) Manual compile**
+    - Configure Application Substitution Strings
+        - `PATH`: `#THEME_IMAGES#`
+    - Configure Page 0
+        - See [documentation](docs/page-0.md)
+- **Option 3) Manual compile** - *Best for customizing the theme*
     - See [documentation](docs/manual-install.md)
 
 ---
