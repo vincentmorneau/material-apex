@@ -1,4 +1,4 @@
-input.a-D3ColorPicker-control {  
+input.a-D3ColorPicker-control {
 	height: initial;
 	width: initial;
 
@@ -14,4 +14,44 @@ input.a-D3ColorPicker-control {
 .utr--main select {
 	display: initial;
     height: initial;
+}
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    background-color: initial;
+    border: initial;
+    border-bottom: initial;
+    border-radius: initial;
+    outline: initial;
+    height: initial;
+    width: initial;
+    font-size: initial;
+    margin: initial;
+    padding: initial;
+    box-shadow: initial;
+    box-sizing: initial;
+    -webkit-transition: initial;
+    transition: initial;
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: right;
+    transition: width 0.15s linear;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    padding: 1px 5px;
+    border: solid 1px #505050;
+    background-color: #202020;
+    color: #EEE !important;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    margin-top: 0px;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: initial;
+    box-shadow: initial;
 }

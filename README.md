@@ -9,20 +9,16 @@ This is a Material Design Theme for Oracle APEX 5.
 ## Project Sponsors
 Thanks to [Insum Solutions](http://insum.ca/) for sponsoring this project.
 
-## Changelog
-See [`CHANGELOG.md`](CHANGELOG.md) for details.
-
 ## Install
 - **Option 1) Application Import** - *Best for new application*
     - Import the APEX application [demo-app.sql](apex/demo-app.sql) in your workspace.
 - **Option 2) Theme Import** - *Best for upgrading existing application*
-    - Import the Theme [theme-export.sql](apex/theme-export.sql) in your existing application.
-    - Configure Application Substitution Strings
-        - `PATH`: `#THEME_IMAGES#`
-    - Configure Page 0
-        - See [documentation](docs/page-0.md)
+    - [See documentation](docs/theme-import.md)
 - **Option 3) Manual compile** - *Best for customizing the theme*
-    - See [documentation](docs/manual-install.md)
+    - [See documentation](docs/manual-install.md)
+
+## Changelog
+[See `CHANGELOG.md`](CHANGELOG.md) for details.
 
 ---
 
