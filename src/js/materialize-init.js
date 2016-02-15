@@ -28,8 +28,9 @@ function materialInit() {
 
     /* SideNav */
     if ($('.button-collapse').length > 0) {
+        var edgeDirection = $( "link[href*='app.rtl']").length > 0 ? 'right' : 'left';
         $('.button-collapse').sideNav({
-        edge: $(".side-nav").data("direction").trim()
+        edge: edgeDirection
         });
     }
 
