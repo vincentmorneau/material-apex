@@ -1,5 +1,16 @@
-##Changelog
-####0.9.0
+## Changelog
+#### v0.9.1
+- Now provides three download options.
+- Better styling for inline validation messages.
+- Using a new engine for building the project.
+- Bug fixes
+    - Collapsible triggers
+    - Usage of APEX popup LOV now works
+    - Tabular Form select list now works
+    - Overflow on large LOV's on modal screens
+    - Notification box position doesn't overflow on Scrollspy anymore
+
+#### v0.9.0
 - **NEW:** Transitions [(view)](https://apex.oracle.com/pls/apex/f?p=12192:43)
 - **NEW:** Scrollfire [(view)](https://apex.oracle.com/pls/apex/f?p=12192:44)
 - **NEW:** Breadcrumbs [(view)](https://apex.oracle.com/pls/apex/f?p=12192:42)
@@ -27,11 +38,11 @@
 - `Fixed Action Button` is not a template option anymore. It has it's own button template now.
 - `Float` is not a template option anymore. This can be achieved using the `Region alignment` template option now.
 
-####0.8.3
+#### v0.8.3
 - Fixed modal close
 - Fixed file input layout
 
-####0.8.2
+#### v0.8.2
 - **Removed Bower dependency. Using npm now.**
 - **Added chips.** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:18)
 - **RTL Support** (Right to Left) with a new Theme Style.
@@ -48,7 +59,7 @@
 - Better responsiveness on the navigation bar.
 - More...
 
-####0.8.1
+#### v0.8.1
 - Content is now offset when sidebar is fixed
 - Fixed navigation bar icons alignment on mobile
 - Select list is now aligned properly with text fields
@@ -58,7 +69,7 @@
 - Login Screen has a new template called "Page - Clean"
 - Region titles are now aligned according to the specified template option
 
-####0.8.0
+#### v0.8.0
 - **Theme Roller Support**, primary and secondary colors are now choosable from the theme roller!
 - **New easier grid layout system**  [(view)](https://apex.oracle.com/pls/apex/f?p=12192:11)
 - **New Date Picker**. We let go of the "pickadate.js" plugin for better compabilitiby.
@@ -76,14 +87,14 @@
 - Fixed Sidenav height
 - More...
 
-####0.7.5
+#### v0.7.5
 - **New Interactive Report Support** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:62)
 - **Enhanced Tabular Form Support** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:61)
 - **Reports Responsive Styles**: See Style 2 [(view)](https://apex.oracle.com/pls/apex/f?p=12192:16)
 - Fixed issues with checkboxes and radio buttons
 - Better HTML markup for reports
 
-####0.7.0
+#### v0.7.0
 - **New Modal Style: Bottom Sheet** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:34)
     - Modals can now be regions as well as pages
 - **New Media components in the CSS section** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:13)
@@ -114,7 +125,7 @@
 - CSS clean-up
 
 
-####0.6.0
+#### v0.6.0
 **This release focuses on stability enhancements, performance and bug fixes.**
 
 - Now uses Lists for navigation bar and navigation menu
@@ -138,5 +149,5 @@
     - Sidebar
     - Parallax
 
-####0.5.0
+#### v0.5.0
 - Initial Beta Release

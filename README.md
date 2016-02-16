@@ -18,7 +18,18 @@ Thanks to [Insum Solutions](http://insum.ca/) for sponsoring this project.
     - [See documentation](docs/manual-install.md)
 
 ## Changelog
-[See `CHANGELOG.md`](CHANGELOG.md) for details.
+#### v0.9.1
+- Now provides three download options.
+- Better styling for inline validation messages.
+- Using a new engine for building the project.
+- Bug fixes
+    - Collapsible triggers
+    - Usage of APEX popup LOV now works
+    - Tabular Form select list now works
+    - Overflow on large LOV's on modal screens
+    - Notification box position doesn't overflow on Scrollspy anymore
+
+[See CHANGELOG.md](CHANGELOG.md) for more details.
 
 ---
 
