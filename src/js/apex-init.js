@@ -5,6 +5,13 @@ $.fn.ignore = function(sel){
     return this.clone().find(sel||">*").remove().end();
 };
 
+function componentsInit() {
+    /* Fix for label issue with many components. Need to have label after component. */
+    $( ".input-field i, .u-TF-item--checkbox" ).each(function() {
+        $( this ).after( $(this).siblings("label") );
+    });
+}
+
 function irComponentsInit() {
     $("[id*='_column_filter'], .a-IRR-dialogContent--highlight table table")
         .addClass("table-responsive")
@@ -76,11 +83,6 @@ function apexInit() {
         $( this ).prepend($(this).parent().siblings(".header").text());
     });
 
-    /* Fix for label issue with many components. Need to have label after component. */
-    $( ".input-field i, .u-TF-item--checkbox" ).each(function() {
-        $( this ).after( $(this).siblings("label") );
-    });
-
     /* Display only & read only */
     $(".display_only, fieldset.checkbox_group, fieldset.radio_group")
         .siblings("label")
@@ -102,7 +104,7 @@ function apexInit() {
     $('textarea').addClass('materialize-textarea');
 
     /* Popup LOV */
-    $("fieldset.lov").parent().addClass("ma-popuplov"); 
+    $("fieldset.lov").parent().addClass("ma-popuplov");
 
     /* Media */
     $(".apex-materialbox img").addClass("materialboxed responsive-img").each(function() {
@@ -123,12 +125,15 @@ $(function() {
     apexInit();
 
     irInit();
+    componentsInit();
 
     $( ".a-IRR-container" ).parent().on( "apexafterrefresh", function() {
         irInit();
+        componentsInit();
     });
 
     $(document).ajaxSuccess(function() {
         irComponentsInit();
+        componentsInit();
     });
 });
