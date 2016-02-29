@@ -80,9 +80,15 @@ div.ac_results {
 }
 
 /* Popup LOV */
-.ma-popuplov label {
-    transform: translateY(-190%);
-    font-size: 0.8rem;
+.ma-popuplov {
+    label {
+        transform: translateY(-190%);
+        font-size: 0.8rem;
+    }
+
+    .prefix ~ fieldset {
+        margin-left: 3rem;
+    }
 }
 
 /* Validation */
