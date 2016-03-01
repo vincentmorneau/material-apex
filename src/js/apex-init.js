@@ -7,8 +7,13 @@ $.fn.ignore = function(sel){
 
 function componentsInit() {
     /* Fix for label issue with many components. Need to have label after component. */
-    $( ".input-field i, .u-TF-item--checkbox" ).each(function() {
-        $( this ).after( $(this).siblings("label") );
+    $(".input-field label").each(function() {
+        $(this).appendTo($(this).parent());
+    });
+
+    /* Fix for label issue with many components. Need to have label after component. */
+    $(".u-TF-item--checkbox").each(function() {
+        $(this).after($(this).siblings("label"));
     });
 }
 
@@ -119,6 +124,20 @@ function apexInit() {
 
     /* Icons */
     $("i[class='']").remove();
+
+    /* Search Bar */
+    $(".search-activate").click(function(){
+       $(".main-nav-wrapper").toggleClass("hide");
+       $(".search-nav-wrapper").toggleClass("hide");
+       $("#P0_SEARCH").focus();
+    });
+
+    $("#P0_SEARCH")
+        .attr("type", "search")
+        .blur(function (){
+           $(".main-nav-wrapper").toggleClass("hide");
+           $(".search-nav-wrapper").toggleClass("hide");
+       });
 }
 
 $(function() {
