@@ -1,0 +1,66 @@
+{{#row_template_before_rows}}
+<table id="report_#REGION_STATIC_ID#" class="#COMPONENT_CSS_CLASSES#" #REPORT_ATTRIBUTES#>
+{{/row_template_before_rows}}
+
+{{#before_column_heading}}
+<thead>
+<tr>
+{{/before_column_heading}}
+
+    {{#column_heading_template}}
+    <th data-field="#COLUMN_HEADER_NAME#" #ALIGNMENT# #COLUMN_WIDTH# id="#COLUMN_HEADER_NAME#">#COLUMN_HEADER#</th>
+    {{/column_heading_template}}
+
+{{#after_column_heading}}
+</tr>
+</thead>
+<tbody>
+{{/after_column_heading}}
+
+    {{#row_template_before_first}}
+    <tr>
+    {{/row_template_before_first}}
+
+        {{#row_template1}}
+        <td headers="#COLUMN_HEADER_NAME#" data-label="#COLUMN_HEADER#" #ALIGNMENT#>#COLUMN_VALUE#</td>
+        {{/row_template1}}
+        {{#row_template_condition1}}{{/row_template_condition1}}
+        {{#row_template_display_cond1}}{{/row_template_display_cond1}}
+        {{#row_template2}}{{/row_template2}}
+        {{#row_template_condition2}}{{/row_template_condition2}}
+        {{#row_template_display_cond2}}{{/row_template_display_cond2}}
+        {{#row_template3}}{{/row_template3}}
+        {{#row_template_condition3}}{{/row_template_condition3}}
+        {{#row_template_display_cond3}}{{/row_template_display_cond3}}
+        {{#row_template4}}{{/row_template4}}
+        {{#row_template_condition4}}{{/row_template_condition4}}
+        {{#row_template_display_cond4}}{{/row_template_display_cond4}}
+
+    {{#row_template_after_last}}
+    </tr>
+    {{/row_template_after_last}}
+
+{{#row_template_after_rows}}
+</tbody>
+</table>
+<tfoot class="right">
+    <div>#EXTERNAL_LINK##CSV_LINK#</div>
+    <div class="report-pagination">#PAGINATION#</div>
+</tfoot>
+{{/row_template_after_rows}}
+
+{{#pagination_template}}
+<span class="instructiontext">#TEXT#</span>
+{{/pagination_template}}
+{{#next_page_template}}
+<a href="#LINK#"><i class="material-icons">navigate_next</i></a>
+{{/next_page_template}}
+{{#previous_page_template}}
+<a href="#LINK#"><i class="material-icons">navigate_before</i></a>
+{{/previous_page_template}}
+{{#next_set_template}}
+<a href="#LINK#"><i class="material-icons">skip_next</i></a>
+{{/next_set_template}}
+{{#previous_set_template}}
+<a href="#LINK#"><i class="material-icons">skip_previous</i></a>
+{{/previous_set_template}}

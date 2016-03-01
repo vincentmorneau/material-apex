@@ -1,0 +1,20 @@
+{{#before_first}}
+<nav class="nav-breadcrumbs #COMPONENT_CSS_CLASSES#">
+    <div class="nav-wrapper row">
+        <div class="col s12">
+{{/before_first}}
+    {{#current_page_option}}
+    <a href="#LINK#" class="breadcrumb">#NAME#</a>
+    {{/current_page_option}}
+    {{#non_current_page_option}}
+    <a href="#LINK#" class="breadcrumb">#NAME#</a>
+    {{/non_current_page_option}}
+    {{#menu_link_attributes}}{{/menu_link_attributes}}
+    {{#between_levels}}{{/between_levels}}
+{{#after_last}}
+</div>
+</div>
+</nav>
+{{/after_last}}
+
+{{#max_levels}}{{/max_levels}}

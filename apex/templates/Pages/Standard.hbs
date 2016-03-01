@@ -1,0 +1,131 @@
+{{#inline_css}}{{/inline_css}}
+
+{{#header_template}}
+<!DOCTYPE html>
+<head>
+    <title>#TITLE#</title>
+    #FAVICONS#
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="author" content="Vincent Morneau">
+    <meta name="description" content="Material Design Theme for APEX">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Mandatory APEX CSS -->
+    #HEAD#
+    #APEX_CSS#
+
+    <!-- Material APEX CSS -->
+    #THEME_CSS#
+    #THEME_STYLE_CSS#
+    #TEMPLATE_CSS#
+
+    <!-- Additionnal CSS -->
+    #APPLICATION_CSS#
+    #PAGE_CSS#
+
+</head>
+<body class="#PAGE_CSS_CLASSES#" #ONLOAD#>
+{{/header_template}}
+
+{{#box}}
+#FORM_OPEN#
+
+<!-- Item Container -->
+#REGION_POSITION_01#
+
+<!-- Navbar & Sidenav -->
+<header>
+    <div class="top-nav-wrapper">
+        <nav class="top-nav">
+            <div class="nav-wrapper">
+                #REGION_POSITION_02#
+                <a href="&HOME_URL." class="brand-logo hide-on-small-only">#LOGO#</a>
+                #NAVIGATION_BAR#
+            </div>
+        </nav>
+    </div>
+    <!-- Breadcrumbs -->
+    #REGION_POSITION_03#
+    #SIDE_GLOBAL_NAVIGATION_LIST#
+</header>
+
+
+<!-- Content -->
+<main>
+
+    <div class="row">
+        <div class="&P0_BODY_COLUMN_CLASSES.">
+            #GLOBAL_NOTIFICATION#
+            #SUCCESS_MESSAGE#
+            #NOTIFICATION_MESSAGE#
+            #BODY#
+        </div>
+
+        <!-- Scrollspy -->
+        #REGION_POSITION_04#
+    </div>
+
+    <!-- Modals -->
+    #REGION_POSITION_06#
+
+</main>
+
+<!-- Footer -->
+<footer class="page-footer">
+    #REGION_POSITION_08#
+</footer>
+
+#FORM_CLOSE#
+{{/box}}
+
+{{#footer_template}}
+<!-- Mandatory APEX JS -->
+#DEVELOPER_TOOLBAR#
+#APEX_JAVASCRIPT#
+
+<!-- Material APEX JS -->
+#THEME_JAVASCRIPT#
+#TEMPLATE_JAVASCRIPT#
+
+<!-- Additionnal CSS -->
+#APPLICATION_JAVASCRIPT#
+#PAGE_JAVASCRIPT#
+
+<!-- Generated Code -->
+#GENERATED_CSS#
+#GENERATED_JAVASCRIPT#
+</body>
+</html>
+{{/footer_template}}
+
+{{#success_message}}
+<div class="row">
+    <div class="col s12">
+        <div class="card-panel green lighten-2 white-text">#SUCCESS_MESSAGE#</div>
+    </div>
+</div>
+{{/success_message}}
+{{#message}}
+<div class="row">
+    <div class="col s12">
+        <div class="card-panel red lighten-2 white-text">#MESSAGE#</div>
+    </div>
+</div>
+{{/message}}
+
+{{#grid_template}}
+#ROWS#
+{{/grid_template}}
+{{#grid_row_template}}
+<div class="row">
+    #COLUMNS#
+</div>
+{{/grid_row_template}}
+{{#grid_column_template}}
+<div class="col s12 m#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>
+    #CONTENT#
+</div>
+{{/grid_column_template}}

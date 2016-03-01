@@ -5,12 +5,24 @@ body {
 .section {
     text-align: left;
 
+    p {
+        text-align: left;
+    }
+
     &.right-align {
         text-align: right;
+
+        p {
+            text-align: right;
+        }
     }
 
     &.center-align {
         text-align: center;
+
+        p {
+            text-align: center;
+        }
     }
 }
 
