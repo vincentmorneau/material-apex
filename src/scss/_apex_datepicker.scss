@@ -1,7 +1,3 @@
-// {
-// 	font-size: 90%;
-// }
-
 .ui-widget {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 	background: $primary-color;
@@ -125,4 +121,13 @@ td .ui-state-hover {
 
 .ui-datepicker select option {
 	color: #222;
+}
+
+.ui-datepicker-trigger:focus {
+    background-color: initial;
+}
+
+/* Tabular Form */
+input.hasDatepicker {
+    width: calc(100% - 32px);
 }

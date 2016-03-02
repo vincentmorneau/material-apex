@@ -2,11 +2,6 @@
 Materialize Initialization
 ************/
 function selectInit() {
-    /*$('.material-apex-datepicker').pickadate({
-        selectMonths: true, // Creates a dropdown to control month
-        selectYears: 25 // Creates a dropdown of 15 years to control year
-    });*/
-
     $('select').not('.disabled').material_select();
 }
 
@@ -33,9 +28,6 @@ function materialInit() {
         edge: edgeDirection
         });
     }
-
-    /* Forms */
-    selectInit();
 
     /* Scrollspy & Pushpin */
     var pushpinOffset = ($(".nav-breadcrumbs").length === 0 ? 64 : 128);
@@ -65,15 +57,21 @@ function materialInit() {
         apex.widget.tabular.addRow = function(){
             addRowOld();
             selectInit();
+            componentsInit();
             $(".select-wrapper .select-wrapper").siblings().remove().end().unwrap();
         };
     }
 }
 
 $(function() {
+    selectInit();
     materialInit();
 
     apex.jQuery('select').on('apexafterrefresh', function(){
+        selectInit();
+    });
+
+    $(document).ajaxSuccess(function() {
         selectInit();
     });
 });

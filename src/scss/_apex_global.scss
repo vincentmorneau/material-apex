@@ -2,27 +2,19 @@ body {
 	background: $background-color;
 }
 
+form p {
+    text-align: inherit;
+}
+
 .section {
     text-align: left;
 
-    p {
-        text-align: left;
-    }
-
     &.right-align {
         text-align: right;
-
-        p {
-            text-align: right;
-        }
     }
 
     &.center-align {
         text-align: center;
-
-        p {
-            text-align: center;
-        }
     }
 }
 
@@ -66,10 +58,6 @@ i {
 #menu-trigger {
 	display:block!important;
 	padding-left: 15px;
-}
-
-.ui-datepicker-trigger {
-	@extend .hide;
 }
 
 .materialbox-caption {
@@ -120,4 +108,10 @@ span.badge.new:after {
 /* Notifications */
 .htmldbStdErr a {
     color: inherit;
+}
+
+/* Parallax */
+.parallax-container {
+    height: initial;
+    min-height: 400px;
 }
