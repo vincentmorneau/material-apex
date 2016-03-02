@@ -1,4 +1,16 @@
 ## Changelog
+#### v0.9.2
+- New features:
+    - Global Search in navigation bar [(view)](https://apex.oracle.com/pls/apex/f?p=12192:1)
+    - Support for Popup LOV [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
+    - New download option: [Barebone application](apex/barebone-app.sql). Contains the theme and page 0.
+- Bug fixes:
+    - Tabular form select fix
+    - Tabular form date pickers fix
+    - Tabular form checkboxes fix
+    - Parallax height is not fixed anymore
+    - Parallax content is now usable
+    
 #### v0.9.1
 - Now provides three download options.
 - Better styling for inline validation messages.

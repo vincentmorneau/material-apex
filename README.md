@@ -18,16 +18,17 @@ Thanks to [Insum Solutions](http://insum.ca/) for sponsoring this project.
     - [See documentation](docs/manual-install.md)
 
 ## Changelog
-#### v0.9.1
-- Now provides three download options.
-- Better styling for inline validation messages.
-- Using a new engine for building the project.
-- Bug fixes
-    - Collapsible triggers
-    - Usage of APEX popup LOV now works
-    - Tabular Form select list now works
-    - Overflow on large LOV's on modal screens
-    - Notification box position doesn't overflow on Scrollspy anymore
+#### v0.9.2
+- New features:
+    - Global Search in navigation bar [(view)](https://apex.oracle.com/pls/apex/f?p=12192:1)
+    - Support for Popup LOV [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
+    - New download option: [Barebone application](apex/barebone-app.sql). Contains the theme and page 0.
+- Bug fixes:
+    - Tabular form select fix
+    - Tabular form date pickers fix
+    - Tabular form checkboxes fix
+    - Parallax height is not fixed anymore
+    - Parallax content is now usable
 
 [See CHANGELOG.md](CHANGELOG.md) for more details.
 
