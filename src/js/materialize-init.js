@@ -2,7 +2,7 @@
 Materialize Initialization
 ************/
 function selectInit() {
-    $('select').not('.disabled').material_select();
+    $('form select').not('.disabled').material_select();
 }
 
 function materialInit() {
