@@ -14,7 +14,7 @@ PATH | `#THEME_IMAGES#`
 #### Configure Page 0
 ##### Region
 Name | Type | Position | Template | Source
---- | ---
+--- | --- | --- | --- | ---
 {item container} | Static Content | Item Container | *None* |
 {footer} | Static Content | Footer | Footer
 {hamburger menu} | Static Content | Hamburger Menu | *None* | See below
@@ -24,7 +24,7 @@ Name | Type | Position | Template | Source
 
 ##### Items
 Name | Type | Region | Source Type | Source Body
---- | ---
+--- | --- | --- | --- | ---
 P0_BODY_COLUMN_CLASSES | Hidden | {item container} | PL/SQL Function Body | See below
 ```plsql
 DECLARE
@@ -48,7 +48,7 @@ END;
 
 ##### Lists
 Name | Type | List | Position | Template | Condition Type | Condition Query
---- | ---
+--- | --- | --- | --- | --- | --- | ---
 {scrollspy} | List | Scrollspy | Scrollspy | *None* | Rows returned | See below
 ```sql
 SELECT 1
@@ -63,7 +63,7 @@ AND	apr.region_template_options like '%:' || ato.css_classes || ':%'
 
 ##### Shared Components - List
 Name | Query Source Type | Query
---- | ---
+--- | --- | ---
 Scrollspy | SQL Query | See below
 ```sql
 SELECT null
