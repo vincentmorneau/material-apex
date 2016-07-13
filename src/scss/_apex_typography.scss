@@ -1,35 +1,39 @@
-.h1 .header {
+.h1 > .ma-region-title {
 	@extend h1;
 }
 
-.h2 .header {
+.h2 > .ma-region-title {
 	@extend h2;
 }
 
-.h3 .header {
+.h3 > .ma-region-title {
 	@extend h3;
 }
 
-.h4 .header {
+.h4 > .ma-region-title {
 	@extend h4;
 }
 
-.h5 .header {
+.h5 > .ma-region-title {
 	@extend h5;
 }
 
-.h6 .header {
+.h6 > .ma-region-title {
 	@extend h6;
 }
 
-.hide-title .header {
-	@extend .hide;
+.ma-region.hide-title > .ma-region-title {
+    @include hide();
 }
 
 .big-label {
-	font-size:1.5rem;
+	font-size: 1.5rem;
 }
 
 .flow-text-region p {
 	@extend .flow-text;
+}
+
+.text-nowrap {
+    white-space: nowrap;
 }

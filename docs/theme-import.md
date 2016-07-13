@@ -27,23 +27,24 @@ Name | Type | Region | Source Type | Source Body
 --- | --- | --- | --- | ---
 P0_BODY_COLUMN_CLASSES | Hidden | {item container} | PL/SQL Function Body | See below
 ```plsql
-DECLARE
+declare
     l_exists number;
-BEGIN
-    SELECT distinct 1
-    INTO l_exists
-    FROM apex_application_page_regions apr
-    JOIN apex_appl_template_options ato
-    ON ato.region_template_id	= apr.template_id
-    WHERE apr.application_id 		= :APP_ID
-    AND apr.page_id 			= :APP_PAGE_ID
-    AND	ato.name 				= 'SCROLLSPY'
-    AND	apr.region_template_options like '%:' || ato.css_classes || ':%';
+begin
+    select distinct 1
+    into l_exists
+    from apex_application_page_regions apr
+    join apex_appl_template_options ato
+    on ato.region_template_id	= apr.template_id
+    where apr.application_id 		= :APP_ID
+    and apr.page_id 			= :APP_PAGE_ID
+    and	ato.name 				= 'SCROLLSPY'
+    and	apr.region_template_options like '%:' || ato.css_classes || ':%';
 
     return 'col s12 m9 l10';
-EXCEPTION WHEN no_data_found THEN
-    return null;
-END;
+exception
+    when no_data_found then
+        return null;
+end;
 ```
 
 ##### Lists
@@ -51,14 +52,14 @@ Name | Type | List | Position | Template | Condition Type | Condition Query
 --- | --- | --- | --- | --- | --- | ---
 {scrollspy} | List | Scrollspy | Scrollspy | *None* | Rows returned | See below
 ```sql
-SELECT 1
-FROM apex_application_page_regions apr
-JOIN apex_appl_template_options ato
-ON ato.region_template_id = apr.template_id
-WHERE apr.application_id = :APP_ID
-AND	apr.page_id = :APP_PAGE_ID
-AND	ato.name = 'SCROLLSPY'
-AND	apr.region_template_options like '%:' || ato.css_classes || ':%'
+select 1
+from apex_application_page_regions apr
+join apex_appl_template_options ato
+on ato.region_template_id = apr.template_id
+where apr.application_id = :APP_ID
+and	apr.page_id = :APP_PAGE_ID
+and	ato.name = 'SCROLLSPY'
+and	apr.region_template_options like '%:' || ato.css_classes || ':%'
 ```
 
 ##### Shared Components - List
@@ -66,15 +67,15 @@ Name | Query Source Type | Query
 --- | --- | ---
 Scrollspy | SQL Query | See below
 ```sql
-SELECT null
+select null
 	,apr.region_name
     ,'#' || nvl(apr.static_id, 'R' || apr.region_id) r
-FROM apex_application_page_regions apr
-JOIN apex_appl_template_options ato
-ON ato.region_template_id	= apr.template_id
-WHERE apr.application_id 		= :APP_ID
-AND apr.page_id 			= :APP_PAGE_ID
-AND ato.name 				= 'SCROLLSPY'
-AND	apr.region_template_options like '%:' || ato.css_classes || ':%'
-ORDER BY apr.display_sequence
+from apex_application_page_regions apr
+join apex_appl_template_options ato
+on ato.region_template_id	= apr.template_id
+where apr.application_id 		= :APP_ID
+and apr.page_id 			= :APP_PAGE_ID
+and ato.name 				= 'SCROLLSPY'
+and	apr.region_template_options like '%:' || ato.css_classes || ':%'
+order by apr.display_sequence
 ```

@@ -1,0 +1,53 @@
+{{#row_template_before_rows}}{{/row_template_before_rows}}
+
+    {{#before_column_heading}}{{/before_column_heading}}
+
+        {{#column_heading_template}}{{/column_heading_template}}
+
+    {{#after_column_heading}}{{/after_column_heading}}
+
+    {{#row_template_before_first}}{{/row_template_before_first}}
+
+        {{#row_template1}}
+        <div class="chip">
+            #IMAGE#
+            #TEXT#
+            <i class="material-icons">close</i>
+        </div>
+        {{/row_template1}}
+        {{#row_template_condition1}}:IND_CLOSABLE is not null AND :IMAGE is not null{{/row_template_condition1}}
+        {{#row_template_display_cond1}}NOT_CONDITIONAL{{/row_template_display_cond1}}
+        {{#row_template2}}
+        <div class="chip">
+            #IMAGE#
+            #TEXT#
+        </div>
+        {{/row_template2}}
+        {{#row_template_condition2}}:IMAGE is not null{{/row_template_condition2}}
+        {{#row_template_display_cond2}}NOT_CONDITIONAL{{/row_template_display_cond2}}
+        {{#row_template3}}
+        <div class="chip">
+            #TEXT#
+            <i class="material-icons">close</i>
+        </div>
+        {{/row_template3}}
+        {{#row_template_condition3}}:IND_CLOSABLE is not null{{/row_template_condition3}}
+        {{#row_template_display_cond3}}NOT_CONDITIONAL{{/row_template_display_cond3}}
+        {{#row_template4}}
+        <div class="chip">
+            #TEXT#
+        </div>
+        {{/row_template4}}
+        {{#row_template_condition4}}{{/row_template_condition4}}
+        {{#row_template_display_cond4}}{{/row_template_display_cond4}}
+
+    {{#row_template_after_last}}
+    {{/row_template_after_last}}
+
+{{#row_template_after_rows}}{{/row_template_after_rows}}
+
+{{#pagination_template}}{{/pagination_template}}
+{{#next_page_template}}{{/next_page_template}}
+{{#previous_page_template}}{{/previous_page_template}}
+{{#next_set_template}}{{/next_set_template}}
+{{#previous_set_template}}{{/previous_set_template}}

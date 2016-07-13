@@ -1,27 +1,24 @@
 /*
 {
-  "translate": true,
-  "groups":[
-  {
-    "name": "Global Colors",
-    "common": true,
-    "sequence": 1
-  },
-  {
-    "name": "Modals",
-    "common": false,
-    "sequence": 2
-  }
-  ]
+    "translate": true,
+    "groups": [{
+        "name": "Global Colors",
+        "common": true,
+        "sequence": 1
+    }, {
+        "name": "Modals",
+        "common": false,
+        "sequence": 2
+    }]
 }
 */
 
 /*
 {
-  "var" : "@g_primary_color",
-  "name" : "Primary Color",
-  "type" : "color",
-  "group": "Global Colors"
+    "var": "@g_primary_color",
+    "name": "Primary Color",
+    "type": "color",
+    "group": "Global Colors"
 }
 */
 @g_primary_color: #00BCD4;
@@ -47,15 +44,15 @@ nav
 }
 
 blockquote {
-    border-left: 5px solid @g_primary_color; 
+    border-left: 5px solid @g_primary_color;
 }
 
 /*
 {
-  "var" : "@g_secondary_color",
-  "name" : "Secondary Color",
-  "type" : "color",
-  "group": "Global Colors"
+    "var" : "@g_secondary_color",
+    "name" : "Secondary Color",
+    "type" : "color",
+    "group": "Global Colors"
 }
 */
 @g_secondary_color: #EF5350;
@@ -82,10 +79,10 @@ blockquote {
     color: @g_secondary_color;
 }
 
-input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) 
+input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly])
 {
     border-bottom: 1px solid @g_secondary_color;
-    box-shadow: 0 1px 0 0 @g_secondary_color; 
+    box-shadow: 0 1px 0 0 @g_secondary_color;
 }
 
 [type="radio"]:checked + label:after
@@ -96,7 +93,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     border: 2px solid @g_secondary_color;
 }
 
-[type="checkbox"]:checked + label:before 
+[type="checkbox"]:checked + label:before
 {
     border-right: 2px solid @g_secondary_color;
     border-bottom: 2px solid @g_secondary_color;
@@ -108,15 +105,15 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 }
 
 .btn:hover, .btn-large:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--search button:hover, .a-IRR-toolbar .a-IRR-controlGroup.a-IRR-controlGroup--options button:hover, .a-IRR-toolbar .a-IRR-button.a-IRR-button--reportView:hover, .a-IRR-detail-row:hover, .a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination:hover, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination:hover {
-    background-color: lighten(@g_secondary_color, 5%); 
+    background-color: lighten(@g_secondary_color, 5%);
 }
 
 /*
 {
-  "var" : "@g_modal_title_color",
-  "name" : "Modal Title Color",
-  "type" : "color",
-  "group": "Modals"
+    "var" : "@g_modal_title_color",
+    "name" : "Modal Title Color",
+    "type" : "color",
+    "group": "Modals"
 }
 */
 @g_modal_title_color: @g_primary_color;
@@ -127,16 +124,16 @@ body .ui-dialog .ui-dialog-title, .modal.bottom-sheet .modal-title {
 
 /*
 {
-  "var" : "@g_modal_bottom_sheet_height",
-  "name" : "Modal Bottom Sheet Max Height",
-  "type" : "number",
-  "units": "%",
-  "range": {
-    "min": 10,
-    "max": 90,
-    "increment": 1
-  },
-  "group": "Modals"
+    "var": "@g_modal_bottom_sheet_height",
+    "name": "Modal Bottom Sheet Max Height",
+    "type": "number",
+    "units": "%",
+    "range": {
+        "min": 10,
+        "max": 90,
+        "increment": 1
+    },
+    "group": "Modals"
 }
 */
 @g_modal_bottom_sheet_height: 45%;

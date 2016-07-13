@@ -1,0 +1,42 @@
+{{#row_template_before_rows}}
+<ul id="#REGION_STATIC_ID#_report" class="staggered-list">
+{{/row_template_before_rows}}
+
+    {{#before_column_heading}}{{/before_column_heading}}
+
+        {{#column_heading_template}}{{/column_heading_template}}
+
+    {{#after_column_heading}}{{/after_column_heading}}
+
+    {{#row_template_before_first}}{{/row_template_before_first}}
+
+        {{#row_template1}}
+        <li>
+            <h4><a href="#LINK#">#TITLE#</a></h4>
+            <p>#DESCRIPTION#</p>
+        </li>
+        {{/row_template1}}
+        {{#row_template_condition1}}{{/row_template_condition1}}
+        {{#row_template_display_cond1}}{{/row_template_display_cond1}}
+        {{#row_template2}}{{/row_template2}}
+        {{#row_template_condition2}}{{/row_template_condition2}}
+        {{#row_template_display_cond2}}{{/row_template_display_cond2}}
+        {{#row_template3}}{{/row_template3}}
+        {{#row_template_condition3}}{{/row_template_condition3}}
+        {{#row_template_display_cond3}}{{/row_template_display_cond3}}
+        {{#row_template4}}{{/row_template4}}
+        {{#row_template_condition4}}{{/row_template_condition4}}
+        {{#row_template_display_cond4}}{{/row_template_display_cond4}}
+
+    {{#row_template_after_last}}
+    {{/row_template_after_last}}
+
+{{#row_template_after_rows}}
+</ul>
+{{/row_template_after_rows}}
+
+{{#pagination_template}}{{/pagination_template}}
+{{#next_page_template}}{{/next_page_template}}
+{{#previous_page_template}}{{/previous_page_template}}
+{{#next_set_template}}{{/next_set_template}}
+{{#previous_set_template}}{{/previous_set_template}}

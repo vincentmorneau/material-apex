@@ -1,0 +1,58 @@
+{{#row_template_before_rows}}
+<div class="row">
+{{/row_template_before_rows}}
+
+    {{#before_column_heading}}{{/before_column_heading}}
+
+        {{#column_heading_template}}{{/column_heading_template}}
+
+    {{#after_column_heading}}{{/after_column_heading}}
+
+    {{#row_template_before_first}}{{/row_template_before_first}}
+
+        {{#row_template1}}
+        <div class="#COLUMN_CSS_CLASSES#">
+            <div class="card">
+                <div class="card-image activator waves-effect waves-block waves-light">
+                    #IMG#
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">#TITLE# <i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-action">
+                    <p>
+                        <a href="#BTN_LINK_1#">#BTN_LABEL_1#</a>
+                        <a href="#BTN_LINK_2#">#BTN_LABEL_2#</a>
+                    </p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">#TITLE# <i class="material-icons right">close</i></span>
+                  #CONTENT#
+                </div>
+            </div>
+        </div>
+        {{/row_template1}}
+        {{#row_template_condition1}}{{/row_template_condition1}}
+        {{#row_template_display_cond1}}{{/row_template_display_cond1}}
+        {{#row_template2}}{{/row_template2}}
+        {{#row_template_condition2}}{{/row_template_condition2}}
+        {{#row_template_display_cond2}}{{/row_template_display_cond2}}
+        {{#row_template3}}{{/row_template3}}
+        {{#row_template_condition3}}{{/row_template_condition3}}
+        {{#row_template_display_cond3}}{{/row_template_display_cond3}}
+        {{#row_template4}}{{/row_template4}}
+        {{#row_template_condition4}}{{/row_template_condition4}}
+        {{#row_template_display_cond4}}{{/row_template_display_cond4}}
+
+    {{#row_template_after_last}}
+    {{/row_template_after_last}}
+
+{{#row_template_after_rows}}
+</div>
+{{/row_template_after_rows}}
+
+{{#pagination_template}}{{/pagination_template}}
+{{#next_page_template}}{{/next_page_template}}
+{{#previous_page_template}}{{/previous_page_template}}
+{{#next_set_template}}{{/next_set_template}}
+{{#previous_set_template}}{{/previous_set_template}}

@@ -138,6 +138,14 @@ function apexInit() {
            $(".main-nav-wrapper").toggleClass("hide");
            $(".search-nav-wrapper").toggleClass("hide");
        });
+
+    $(".toast-close").click(function(){
+        $(this).closest("#toast-container").remove();
+    });
+
+     $(".panel-close").click(function(){
+         $(this).closest(".card-panel").remove();
+     });
 }
 
 $(function() {

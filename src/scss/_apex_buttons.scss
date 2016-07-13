@@ -12,17 +12,6 @@
 	@extend .right;
 }
 
-// Buttons alignment
-.buttons-left  .section-buttons {
-    text-align: left;
-}
-.buttons-center  .section-buttons {
-    text-align: center;
-}
-.buttons-right  .section-buttons {
-    text-align: right;
-}
-
 // FAB (Fixed Action Button)
 .fixed-action-btn {
     bottom: 45px;

@@ -34,7 +34,7 @@ label.active.display-only {
 	}
 }
 
-.item-no-label label {
+.item-no-label > label {
 	display: none!important;
 }
 
@@ -80,6 +80,14 @@ div.ac_results {
 }
 
 /* Popup LOV */
+body.uPopUpLOV div.uActionBar {
+    height: initial;
+
+    input[type=text] {
+    	width: 100%;
+    }
+}
+
 .ma-popuplov {
     label {
         transform: translateY(-190%);

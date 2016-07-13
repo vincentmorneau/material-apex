@@ -1,3 +1,7 @@
+// temporary fix for search bar
+.nav-wrapper, .nav-wrapper form, .nav-wrapper form .input-field{ height: 100%; }
+// end temporary fix for search bar
+
 .page-navbar-fixed .top-nav-wrapper {
     @extend .navbar-fixed;
 }
