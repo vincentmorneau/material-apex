@@ -8,25 +8,45 @@
 {{/inline_css}}
 
 {{#list_template_before_rows}}
-<ul class="right navbar-list">
+<ul id="#LIST_ID#" class="right navbar-list #COMPONENT_CSS_CLASSES#">
 {{/list_template_before_rows}}
     {{#list_template_current}}
-    <li><a href="#LINK#" class="#A03#">#A01#<span class="hide-on-med-and-down">#TEXT#</span></a></li>
+    <li class="active">
+        <a id="#LIST_ITEM_ID#" href="#LINK#" class="#A01#">
+            <i class="material-icons right-l">#ICON_CSS_CLASSES#</i>
+            <span class="hide-on-med-and-down">#TEXT#</span>
+        </a>
+    </li>
     {{/list_template_current}}
     {{#list_template_noncurrent}}
-    <li><a href="#LINK#" class="#A03#">#A01#<span class="hide-on-med-and-down">#TEXT#</span></a></li>
+    <li>
+        <a id="#LIST_ITEM_ID#" href="#LINK#" class="#A01#">
+            <i class="material-icons right-l">#ICON_CSS_CLASSES#</i>
+            <span class="hide-on-med-and-down">#TEXT#</span>
+        </a>
+    </li>
     {{/list_template_noncurrent}}
     {{#item_template_curr_w_child}}
-    <li><a class="dropdown-button #A03#" href="#LINK#" data-activates="#A02#"><span class="hide-on-med-and-down">#TEXT#</span><i class="mdi-navigation-arrow-drop-down right-l"></i></a></li>
+    <li class="active">
+        <a id="#LIST_ITEM_ID#" class="dropdown-button #A01#" href="#LINK#" data-activates="#LIST_ITEM_ID#-menu">
+            <span class="hide-on-med-and-down">#TEXT#</span>
+            <i class="mdi-navigation-arrow-drop-down right-l"></i>
+        </a>
+    </li>
     {{/item_template_curr_w_child}}
     {{#item_template_noncurr_w_child}}
-    <li><a class="dropdown-button #A03#" href="#LINK#" data-activates="#A02#"><span class="hide-on-med-and-down">#TEXT#</span><i class="mdi-navigation-arrow-drop-down right-l"></i></a></li>
+    <li>
+        <a id="#LIST_ITEM_ID#" class="dropdown-button #A01#" href="#LINK#" data-activates="#LIST_ITEM_ID#-menu">
+            <span class="hide-on-med-and-down">#TEXT#</span>
+            <i class="mdi-navigation-arrow-drop-down right-l"></i>
+        </a>
+    </li>
     {{/item_template_noncurr_w_child}}
     {{#between_items}}
     {{/between_items}}
 
     {{#before_sub_list}}
-    <ul id="#A02#" class="dropdown-content">
+    <ul id="#PARENT_LIST_ITEM_ID#-menu" class="dropdown-content">
     {{/before_sub_list}}
         {{#sub_list_item_current}}
         <li><a href="#LINK#">#TEXT#</a></li>
@@ -49,9 +69,9 @@
 </ul>
 {{/list_template_after_rows}}
 
-{{#a01_label}}Icon{{/a01_label}}
-{{#a02_label}}Data Activate{{/a02_label}}
-{{#a03_label}}Link CSS Classes{{/a03_label}}
+{{#a01_label}}Button CSS Classes{{/a01_label}}
+{{#a02_label}}{{/a02_label}}
+{{#a03_label}}{{/a03_label}}
 {{#a04_label}}{{/a04_label}}
 {{#a05_label}}{{/a05_label}}
 {{#a06_label}}{{/a06_label}}

@@ -1,4 +1,11 @@
 .dropdown-content li > a, .dropdown-content li > span {
-    line-height: 1.5rem;
-    height: initial;
+    line-height: ($navbar-height-mobile / 2);
+    height: $navbar-height-mobile;
+}
+
+@media #{$medium-and-up} {
+    .dropdown-content li > a, .dropdown-content li > span {
+        line-height: ($navbar-height / 2);
+        height: $navbar-height;
+    }
 }

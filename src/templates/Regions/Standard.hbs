@@ -23,12 +23,90 @@
 {{#sub_plug_header_entry_template}}{{/sub_plug_header_entry_template}}
 {{#sub_plug_template}}{{/sub_plug_template}}
 
+{{#template_option_groups}}
+[
+    {
+        "name": "TITLE_SIZE",
+        "display_name": "Title Size",
+        "display_sequence": 0,
+        "help_text": "",
+        "null_text": "",
+        "is_advanced": "N",
+        "template_options": [
+            {
+                "name": "H1",
+                "display_name": "H1",
+                "display_sequence": 1,
+                "css_classes": "h1",
+                "help_text": ""
+            },
+            {
+                "name": "H2",
+                "display_name": "H2",
+                "display_sequence": 2,
+                "css_classes": "h2",
+                "help_text": ""
+            },
+            {
+                "name": "H3",
+                "display_name": "H3",
+                "display_sequence": 3,
+                "css_classes": "h3",
+                "help_text": ""
+            },
+            {
+                "name": "H4",
+                "display_name": "H4",
+                "display_sequence": 4,
+                "css_classes": "h4",
+                "help_text": ""
+            },
+            {
+                "name": "H5",
+                "display_name": "H5",
+                "display_sequence": 5,
+                "css_classes": "h5",
+                "help_text": ""
+            },
+            {
+                "name": "H6",
+                "display_name": "H6",
+                "display_sequence": 5,
+                "css_classes": "h6",
+                "help_text": ""
+            },
+            {
+                "name": "HIDDEN",
+                "display_name": "Hidden",
+                "display_sequence": 0,
+                "css_classes": "hide-title",
+                "help_text": ""
+            }
+        ]
+    }
+]
+{{/template_option_groups}}
+
 {{#template_options}}
 [
     {
+        "name": "CONTAINER",
+        "display_name": "Container",
+        "display_sequence": 1,
+        "css_classes": "container",
+        "help_text": ""
+    },
+    {
+        "name": "MATERIALBOX",
+        "display_name": "Materialbox",
+        "display_sequence": 2,
+        "css_classes": "apex-materialbox",
+        "help_text": ""
+    },
+    {
         "name": "SCROLLSPY",
         "display_name": "Scrollspy",
-        "display_sequence": 1,
+        "display_sequence": 3,
         "css_classes": "scrollspy",
         "help_text": ""
     }

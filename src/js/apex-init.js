@@ -33,7 +33,7 @@ function irComponentsInit() {
 function irInit() {
     if (!$('.a-IRR-table').hasClass("table-responsive")) {
         $(".a-IRR-search-field")
-            .attr("placeholder","Search")
+            .attr("placeholder", $(".a-IRR-sortWidget-searchLabel span").text())
             .parent().addClass("input-field");
 
         $(".a-IRR-button--actions").html('<i class="material-icons">more_vert</i>').show();
@@ -126,7 +126,7 @@ function apexInit() {
     $("i[class='']").remove();
 
     /* Search Bar */
-    $(".search-activate").click(function(){
+    $(".top-nav li a i:contains('search')").parent().click(function(){
        $(".main-nav-wrapper").toggleClass("hide");
        $(".search-nav-wrapper").toggleClass("hide");
        $("#P0_SEARCH").focus();
