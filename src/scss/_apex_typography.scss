@@ -1,3 +1,4 @@
+/* Region title size */
 .h1 > .ma-region-title {
 	@extend h1;
 }
@@ -36,4 +37,91 @@
 
 .text-nowrap {
     white-space: nowrap;
+}
+
+/* Region title text color */
+/* Default */
+// .ma-region-title {
+// 	color: $primary-color;
+// }
+
+/* Overrides */
+.ma-region-title-amber-text .ma-region-title {
+    @extend .amber-text;
+}
+
+.ma-region-title-blue-grey-text .ma-region-title {
+    @extend .blue-grey-text;
+}
+
+.ma-region-title-blue-text .ma-region-title {
+    @extend .blue-text;
+}
+
+.ma-region-title-brown-text .ma-region-title {
+    @extend .brown-text;
+}
+
+.ma-region-title-cyan-text .ma-region-title {
+    @extend .cyan-text;
+}
+
+.ma-region-title-deep-orange-text .ma-region-title {
+    @extend .deep-orange-text;
+}
+
+.ma-region-title-deep-purple-text .ma-region-title {
+    @extend .deep-purple-text;
+}
+
+.ma-region-title-green-text .ma-region-title {
+    @extend .green-text;
+}
+
+.ma-region-title-grey-text .ma-region-title {
+    @extend .grey-text;
+}
+
+.ma-region-title-indigo-text .ma-region-title {
+    @extend .indigo-text;
+}
+
+.ma-region-title-light-blue-text .ma-region-title {
+    @extend .light-blue-text;
+}
+
+.ma-region-title-light-green-text .ma-region-title {
+    @extend .light-green-text;
+}
+
+.ma-region-title-lime-text .ma-region-title {
+    @extend .lime-text;
+}
+
+.ma-region-title-orange-text .ma-region-title {
+    @extend .orange-text;
+}
+
+.ma-region-title-pink-text .ma-region-title {
+    @extend .pink-text;
+}
+
+.ma-region-title-purple-text .ma-region-title {
+    @extend .purple-text;
+}
+
+.ma-region-title-red-text .ma-region-title {
+    @extend .red-text;
+}
+
+.ma-region-title-teal-text .ma-region-title {
+    @extend .teal-text;
+}
+
+.ma-region-title-white-text .ma-region-title {
+    @extend .white-text;
+}
+
+.ma-region-title-yellow-text .ma-region-title {
+    @extend .yellow-text;
 }
