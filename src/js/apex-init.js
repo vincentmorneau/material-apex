@@ -89,7 +89,14 @@ function apexInit() {
     });
 
     /* Display only & read only */
-    $(".display_only, fieldset.checkbox_group, fieldset.radio_group")
+    $(".display_only")
+        .siblings("label")
+        .addClass("active display-only")
+        .closest('.input-field')
+        .addClass('display-only-container');
+
+    /* Fieldset */
+    $("fieldset.checkbox_group, fieldset.radio_group")
         .siblings("label")
         .addClass("active display-only")
         .closest('.input-field')

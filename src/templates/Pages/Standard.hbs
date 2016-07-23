@@ -57,25 +57,27 @@
 
 <!-- Content -->
 <main>
-
     <div class="row">
         <div class="&P0_BODY_COLUMN_CLASSES.">
             #NOTIFICATION_MESSAGE#
             #BODY#
         </div>
-
         <!-- Scrollspy -->
         #REGION_POSITION_04#
     </div>
-
     <!-- Modals -->
     #REGION_POSITION_06#
-
 </main>
 
 <!-- Footer -->
 <footer class="page-footer">
-    #REGION_POSITION_08#
+    <!-- Footer Top -->
+    #REGION_POSITION_07#
+
+    <!-- Footer Bottom -->
+    <div class="footer-copyright">
+        #REGION_POSITION_08#
+    </div>
 </footer>
 
 #GLOBAL_NOTIFICATION#
@@ -144,7 +146,9 @@
 {{/error_page_template}}
 
 {{#grid_template}}
-#ROWS#
+<div class="container">
+    #ROWS#
+</div>
 {{/grid_template}}
 {{#grid_row_template}}
 <div class="row">

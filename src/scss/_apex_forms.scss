@@ -17,11 +17,6 @@ Date Pickers
 /*
 Inputs
 */
-label.active.display-only {
-	margin-bottom: 10px;
-	display: block;
-}
-
 .input-field {
     margin-top: 1.5rem;
 
@@ -111,4 +106,22 @@ body.uPopUpLOV div.uActionBar {
         position: absolute;
         top: 3.5rem;
    }
+}
+
+/* display only */
+label.active.display-only {
+	margin-bottom: 10px;
+	display: block;
+}
+
+.input-field .prefix ~ .display_only {
+   margin-left: 3rem;
+}
+
+.display-only-container {
+    margin-top: 3rem;
+}
+
+.input-field.display-only-container .prefix {
+    font-size: 24px;
 }
