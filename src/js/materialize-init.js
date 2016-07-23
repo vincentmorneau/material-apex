@@ -30,11 +30,12 @@ function materialInit() {
     }
 
     /* Scrollspy & Pushpin */
-    var pushpinOffset = ($(".nav-breadcrumbs").length === 0 ? 64 : 128);
-    if ($('.table-of-contents').length > 0) {
-        $('.table-of-contents').pushpin({top:0, offset:pushpinOffset});
+    if ($('.apex-rds').length > 0) {
+        $(".ma-body-column-css-classes").addClass("col s12 m9 l10");
+
+        var pushpinOffset = ($(".nav-breadcrumbs").length === 0 ? 64 : 128);
+        $('.apex-rds').pushpin({top:0, offset:pushpinOffset});
     }
-    $('.scrollspy').scrollSpy();
 
     /* Parallax */
     $('.parallax').parallax();

@@ -58,7 +58,7 @@
 <!-- Content -->
 <main>
     <div class="row">
-        <div class="&P0_BODY_COLUMN_CLASSES.">
+        <div class="ma-body-column-css-classes">
             #NOTIFICATION_MESSAGE#
             #BODY#
         </div>
@@ -71,12 +71,16 @@
 
 <!-- Footer -->
 <footer class="page-footer">
-    <!-- Footer Top -->
-    #REGION_POSITION_07#
+    <div class="container">
+        <!-- Footer Top -->
+        #REGION_POSITION_07#
+    </div>
 
     <!-- Footer Bottom -->
     <div class="footer-copyright">
-        #REGION_POSITION_08#
+        <div class="container">
+            #REGION_POSITION_08#
+        </div>
     </div>
 </footer>
 
@@ -146,9 +150,7 @@
 {{/error_page_template}}
 
 {{#grid_template}}
-<div class="container">
-    #ROWS#
-</div>
+#ROWS#
 {{/grid_template}}
 {{#grid_row_template}}
 <div class="row">
