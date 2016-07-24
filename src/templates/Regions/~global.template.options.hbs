@@ -100,53 +100,66 @@
         "help_text": "",
         "null_text": "",
         "is_advanced": "Y",
-        "template_options": [{
-                "name": "R_HIDDEN_FOR_TABLET_AND_ABOVE",
-                "display_name": "Hidden for Medium and Above",
+        "template_options": [
+            {
+                "name": "R_HIDDEN_ALL_DEVICES",
+                "display_name": "Hidden for All Devices",
                 "display_sequence": 1,
-                "css_classes": "hide-on-med-and-up",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "R_HIDDEN_FOR_DESKTOP_ONLY",
-                "display_name": "Hidden for Large Only",
-                "display_sequence": 2,
-                "css_classes": "hide-on-large-only",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "R_HIDDEN_FOR_SMALL_AND_LARGE",
-                "display_name": "Hidden for Small and Large",
-                "display_sequence": 3,
-                "css_classes": "hide-on-small-only hide-on-large-only",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "R_HIDDEN_FOR_TABLET_AND_BELOW",
-                "display_name": "Hidden for Medium and Below",
-                "display_sequence": 4,
-                "css_classes": "hide-on-med-and-down",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "REGION_HIDDEN_FOR_TABLET_ONLY",
-                "display_name": "Hidden for Medium Only",
-                "display_sequence": 5,
-                "css_classes": "hide-on-med-only",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "REGION_HIDDEN_FOR_ALL_DEVICES",
-                "display_name": "Hidden for all Devices",
-                "display_sequence": 6,
                 "css_classes": "hide",
                 "help_text": "",
                 "is_advanced": ""
-            }, {
-                "name": "REGION_HIDDEN_FOR_MOBILE_ONLY",
+            },
+
+            {
+                "name": "R_HIDDEN_SMALL_ONLY",
                 "display_name": "Hidden for Small Only",
-                "display_sequence": 7,
+                "display_sequence": 2,
                 "css_classes": "hide-on-small-only",
+                "help_text": "",
+                "is_advanced": ""
+            },
+
+            {
+                "name": "R_HIDDEN_MEDIUM_ONLY",
+                "display_name": "Hidden for Medium Only",
+                "display_sequence": 3,
+                "css_classes": "hide-on-med-only",
+                "help_text": "",
+                "is_advanced": ""
+            },
+
+            {
+                "name": "R_HIDDEN_LARGE_ONLY",
+                "display_name": "Hidden for Large Only",
+                "display_sequence": 4,
+                "css_classes": "hide-on-large-only",
+                "help_text": "",
+                "is_advanced": ""
+            },
+
+            {
+                "name": "R_HIDDEN_MEDIUM_AND_BELOW",
+                "display_name": "Hidden for Medium and Below",
+                "display_sequence": 5,
+                "css_classes": "hide-on-med-and-down",
+                "help_text": "",
+                "is_advanced": ""
+            },
+
+            {
+                "name": "R_HIDDEN_MEDIUM_AND_ABOVE",
+                "display_name": "Hidden for Medium and Above",
+                "display_sequence": 6,
+                "css_classes": "hide-on-med-and-up",
+                "help_text": "",
+                "is_advanced": ""
+            },
+
+            {
+                "name": "R_HIDDEN_SMALL_AND_LARGE",
+                "display_name": "Hidden for Small and Large",
+                "display_sequence": 7,
+                "css_classes": "hide-on-small-only hide-on-large-only",
                 "help_text": "",
                 "is_advanced": ""
             }
@@ -833,23 +846,6 @@
                 "is_advanced": ""
             }
         ]
-    },
-    {
-        "name": "ENABLE_SCROLLFIRE",
-        "display_name": "Enable ScrollFire",
-        "display_sequence": 2,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "Y",
-        "template_options": [{
-                "name": "ENABLE_SCROLLFIRE",
-                "display_name": "Yes",
-                "display_sequence": 1,
-                "css_classes": "enable-scrollfire",
-                "help_text": "Use the component \"HTML Attributes\" and add those attributes: \n offset=\"500\" \n callback=\"apex.event.trigger(document, 'fadeInImage');\"",
-                "is_advanced": ""
-            }
-        ]
     }
 ]
 {{/template_option_groups}}
@@ -858,7 +854,7 @@
 [
     {
         "name": "FLOW_TEXT",
-        "display_name": "Flow Text",
+        "display_name": "Responsive Text",
         "display_sequence": 6,
         "css_classes": "flow-text-region",
         "help_text": "",
@@ -867,7 +863,7 @@
 
     {
         "name": "TRUNCATE_TEXT_OVERFLOW",
-        "display_name": "Truncate Text Overflow",
+        "display_name": "Truncate Text",
         "display_sequence": 7,
         "css_classes": "truncate",
         "help_text": "",
@@ -889,6 +885,15 @@
         "display_sequence": 1,
         "css_classes": "container",
         "help_text": ""
+    },
+
+    {
+        "name": "ENABLE_SCROLLFIRE",
+        "display_name": "Enable Scrollfire",
+        "display_sequence": 1,
+        "css_classes": "enable-scrollfire",
+        "help_text": "Use the component \"HTML Attributes\" and add those attributes: \n offset=\"500\" \n callback=\"apex.event.trigger(document, 'fadeInImage');\"",
+        "is_advanced": "Y"
     }
 ]
 {{/template_options}}

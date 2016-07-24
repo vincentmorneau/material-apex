@@ -40,3 +40,44 @@
 {{#previous_page_template}}{{/previous_page_template}}
 {{#next_set_template}}{{/next_set_template}}
 {{#previous_set_template}}{{/previous_set_template}}
+
+{{#template_option_groups}}
+[
+    {
+        "name": "COLLAPSIBLE_BEHAVIOR",
+        "display_name": "Collapsible Behavior",
+        "display_sequence": 1,
+        "help_text": "",
+        "null_text": "",
+        "is_advanced": "N",
+        "template_options": [
+            {
+                "name": "ACCORDION",
+                "display_name": "Accordion",
+                "display_sequence": 1,
+                "css_classes": "accordion",
+                "help_text": ""
+            },
+            {
+                "name": "EXPANDABLE",
+                "display_name": "Expandable",
+                "display_sequence": 2,
+                "css_classes": "expandable",
+                "help_text": ""
+            }
+        ]
+    }
+]
+{{/template_option_groups}}
+
+{{#template_options}}
+[
+    {
+        "name": "POPOUT",
+        "display_name": "Popout",
+        "display_sequence": 1,
+        "css_classes": "popout",
+        "help_text": ""
+    }
+]
+{{/template_options}}

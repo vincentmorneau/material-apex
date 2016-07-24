@@ -64,3 +64,60 @@
 {{#previous_set_template}}
 <a href="#LINK#"><i class="material-icons">skip_previous</i></a>
 {{/previous_set_template}}
+
+{{#template_option_groups}}
+[
+    {
+        "name": "RESPONSIVE_BEHAVIOR",
+        "display_name": "Responsive Behavior",
+        "display_sequence": 1,
+        "help_text": "",
+        "null_text": "",
+        "is_advanced": "N",
+        "template_options": [
+            {
+                "name": "RESPONSIVE",
+                "display_name": "Style 1",
+                "display_sequence": 1,
+                "css_classes": "responsive-table",
+                "help_text": ""
+            },
+            {
+                "name": "STYLE_2",
+                "display_name": "Style 2",
+                "display_sequence": 2,
+                "css_classes": "table-responsive",
+                "help_text": ""
+            }
+        ]
+    }
+]
+{{/template_option_groups}}
+
+{{#template_options}}
+[
+    {
+        "name": "BORDERLESS",
+        "display_name": "Borderless",
+        "display_sequence": 1,
+        "css_classes": "borderless",
+        "help_text": ""
+    },
+
+    {
+        "name": "STRIPED",
+        "display_name": "Striped",
+        "display_sequence": 2,
+        "css_classes": "striped",
+        "help_text": ""
+    },
+
+    {
+        "name": "HOVERABLE",
+        "display_name": "Hoverable",
+        "display_sequence": 3,
+        "css_classes": "highlight",
+        "help_text": ""
+    }
+]
+{{/template_options}}

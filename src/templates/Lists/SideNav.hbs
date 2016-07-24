@@ -11,16 +11,29 @@
  <ul id="app-sidenav" class="side-nav" data-direction="#COMPONENT_CSS_CLASSES#">
 {{/list_template_before_rows}}
     {{#list_template_current}}
-    <li class="active"><a href="#LINK#" class="truncate">#A01##TEXT#</a></li>
+    <li class="active">
+        <a href="#LINK#" class="truncate">
+            <i class="material-icons right-l">#ICON_CSS_CLASSES#</i>
+            #TEXT#
+        </a>
+    </li>
     {{/list_template_current}}
     {{#list_template_noncurrent}}
-    <li><a href="#LINK#" class="truncate">#A01##TEXT#</a></li>
+    <li>
+        <a href="#LINK#" class="truncate">
+            <i class="material-icons right-l">#ICON_CSS_CLASSES#</i>
+            #TEXT#
+        </a>
+    </li>
     {{/list_template_noncurrent}}
     {{#item_template_curr_w_child}}
     <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
             <li>
-                <a class="collapsible-header active truncate waves-effect">#A01##TEXT#</a>
+                <a class="collapsible-header active truncate waves-effect">
+                    <i class="material-icons right-l">#ICON_CSS_CLASSES#</i>
+                    #TEXT#
+                </a>
             </li>
         </ul>
     </li>
@@ -29,7 +42,10 @@
     <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
             <li>
-                <a class="collapsible-header truncate waves-effect">#A01##TEXT#</a>
+                <a class="collapsible-header truncate waves-effect">
+                    <i class="material-icons right-l">#ICON_CSS_CLASSES#</i>
+                    #TEXT#
+                </a>
             </li>
         </ul>
     </li>
@@ -42,25 +58,39 @@
     <ul>
     {{/before_sub_list}}
         {{#sub_list_item_current}}
-        <li class="active"><a href="#LINK#" class="truncate">#TEXT#</a></li>
+        <li class="active">
+            <a href="#LINK#" class="truncate">
+                #TEXT#
+            </a>
+        </li>
         {{/sub_list_item_current}}
         {{#sub_template_curr_w_child}}
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
                 <li>
-                    <a class="collapsible-header active truncate waves-effect">#A01##TEXT#</a>
+                    <a class="collapsible-header active truncate waves-effect">
+                        <i class="material-icons right-l">#ICON_CSS_CLASSES#</i>
+                        #TEXT#
+                    </a>
                 </li>
             </ul>
         </li>
         {{/sub_template_curr_w_child}}
         {{#sub_list_item_noncurrent}}
-        <li><a href="#LINK#" class="truncate">#TEXT#</a></li>
+        <li>
+            <a href="#LINK#" class="truncate">
+                #TEXT#
+            </a>
+        </li>
         {{/sub_list_item_noncurrent}}
         {{#sub_template_noncurr_w_child}}
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
                 <li>
-                    <a class="collapsible-header truncate waves-effect">#A01##TEXT#</a>
+                    <a class="collapsible-header truncate waves-effect">
+                        <i class="material-icons right-l">#ICON_CSS_CLASSES#</i>
+                        #TEXT#
+                    </a>
                 </li>
             </ul>
         </li>
@@ -79,7 +109,7 @@
 </ul>
 {{/list_template_after_rows}}
 
-{{#a01_label}}Icon Tag{{/a01_label}}
+{{#a01_label}}{{/a01_label}}
 {{#a02_label}}{{/a02_label}}
 {{#a03_label}}{{/a03_label}}
 {{#a04_label}}{{/a04_label}}

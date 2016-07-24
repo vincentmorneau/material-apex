@@ -6,3 +6,64 @@
 {{/template}}
 
 {{#hot_template}}{{/hot_template}}
+
+{{#template_option_groups}}
+[
+    {
+        "name": "POSITION",
+        "display_name": "Position",
+        "display_sequence": 1,
+        "help_text": "",
+        "null_text": "",
+        "is_advanced": "N",
+        "template_options": [
+            {
+                "name": "INSIDE_THE_PARENT",
+                "display_name": "Inside the Parent",
+                "display_sequence": 3,
+                "css_classes": "fab-absolute",
+                "help_text": "",
+                "is_advanced": ""
+            },
+
+            {
+                "name": "LEFT",
+                "display_name": "Fixed - Bottom Left",
+                "display_sequence": 2,
+                "css_classes": "fab-left",
+                "help_text": "",
+                "is_advanced": ""
+            },
+
+            {
+                "name": "RIGHT",
+                "display_name": "Fixed - Bottom Right",
+                "display_sequence": 1,
+                "css_classes": "fab-right",
+                "help_text": "",
+                "is_advanced": ""
+            }
+        ]
+    }
+]
+{{/template_option_groups}}
+
+{{#template_options}}
+[
+    {
+        "name": "FAB_HORIZONTAL",
+        "display_name": "Horizontal",
+        "display_sequence": 1,
+        "css_classes": "horizontal",
+        "help_text": ""
+    },
+
+    {
+        "name": "CLICK_TO_TOGGLE",
+        "display_name": "Click to Toggle",
+        "display_sequence": 2,
+        "css_classes": "click-to-toggle",
+        "help_text": ""
+    }
+]
+{{/template_options}}
