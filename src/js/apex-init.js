@@ -147,12 +147,26 @@ function apexInit() {
            $(".search-nav-wrapper").toggleClass("hide");
        });
 
-    $(".toast-close").click(function(){
-        $(this).closest("#toast-container").remove();
+    $(".ma-toast-close").click(function(){
+        $(this).closest(".toast").remove();
     });
 
      $(".panel-close").click(function(){
          $(this).closest(".card-panel").remove();
+     });
+
+     $( "body" ).on( "apexafterclosedialog", function(e, data) {
+         if (data.successMessage.text) {
+             $('#toast-container').append('<div class="ma-success-message toast velocity-animating green lighten-2">' +
+                '<div class="ma-success-message-content white-text">' + data.successMessage.text + '</div>' +
+                '<i class="ma-toast-close material-icons right">close</i>' +
+                '</div>');
+
+            // relaunch close event
+             $(".ma-toast-close").click(function(){
+                 $(this).closest(".toast").remove();
+             });
+         }
      });
 }
 

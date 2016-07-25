@@ -84,7 +84,9 @@
 </footer>
 
 #GLOBAL_NOTIFICATION#
-#SUCCESS_MESSAGE#
+<div id="toast-container">
+    #SUCCESS_MESSAGE#
+</div>
 
 #FORM_CLOSE#
 {{/box}}
@@ -110,11 +112,9 @@
 {{/footer_template}}
 
 {{#success_message}}
-<div id="toast-container">
-    <div class="toast velocity-animating green lighten-2">
-        #SUCCESS_MESSAGE#
-        <i class="toast-close material-icons right">close</i>
-    </div>
+<div class="toast velocity-animating green lighten-2">
+    #SUCCESS_MESSAGE#
+    <i class="ma-toast-close material-icons right">close</i>
 </div>
 {{/success_message}}
 {{#message}}
