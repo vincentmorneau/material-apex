@@ -25,7 +25,7 @@
     #APPLICATION_CSS#
     #PAGE_CSS#
 </head>
-<body class="body-modal #PAGE_CSS_CLASSES#" #ONLOAD#>
+<body id="#PAGE_STATIC_ID#" class="body-modal #PAGE_CSS_CLASSES#" #ONLOAD#>
 {{/header_template}}
 
 {{#box}}
@@ -37,18 +37,19 @@
 <div class="modal #PAGE_CSS_CLASSES#">
     <div class="modal-content">
         <div class="row">
-            <div class="&P0_BODY_COLUMN_CLASSES.">
+            <div class="ma-body-column-css-classes">
                 #GLOBAL_NOTIFICATION#
                 #SUCCESS_MESSAGE#
                 #NOTIFICATION_MESSAGE#
                 #BODY#
             </div>
-            <!-- Scrollspy -->
+
+            <!-- Region Display Selector -->
             #REGION_POSITION_04#
         </div>
     </div>
     <div class="modal-footer">
-        #REGION_POSITION_07#
+        #REGION_POSITION_06#
     </div>
 </div>
 

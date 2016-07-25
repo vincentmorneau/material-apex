@@ -1,5 +1,8 @@
 {{#row_template_before_rows}}
-<a class="btn dropdown-button" href="#!" data-activates="#REGION_STATIC_ID#-report"><i class="material-icons right">arrow_drop_down</i></a>
+<a class="btn dropdown-button" href="#!" data-activates="#REGION_STATIC_ID#-report">
+    #REGION_TITLE#
+    <i class="material-icons right">arrow_drop_down</i>
+</a>
 <ul id="#REGION_STATIC_ID#-report" class="dropdown-content #COMPONENT_CSS_CLASSES#">
 {{/row_template_before_rows}}
 
@@ -12,12 +15,22 @@
     {{#row_template_before_first}}{{/row_template_before_first}}
 
         {{#row_template1}}
-        <li><a href="#TARGET#">#DISPLAY#<span class="new badge">#BADGE#</span></a></li>
+        <li>
+            <a href="#TARGET#">
+                #DISPLAY#
+                <span class="new badge">#BADGE#</span>
+            </a>
+        </li>
         {{/row_template1}}
         {{#row_template_condition1}}:NEW_BADGE is not null{{/row_template_condition1}}
         {{#row_template_display_cond1}}NOT_CONDITIONAL{{/row_template_display_cond1}}
         {{#row_template2}}
-        <li><a href="#TARGET#">#DISPLAY#<span class="badge">#BADGE#</span></a></li>
+        <li>
+            <a href="#TARGET#">
+                #DISPLAY#
+                <span class="badge">#BADGE#</span>
+            </a>
+        </li>
         {{/row_template2}}
         {{#row_template_condition2}}{{/row_template_condition2}}
         {{#row_template_display_cond2}}{{/row_template_display_cond2}}

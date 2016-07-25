@@ -65,15 +65,7 @@ nav .nav-wrapper i {
 }
 
 /* Scrollspy */
-.apex-rds-container {
-    @extend .col;
-    @extend .hide-on-small-only;
-    @extend .m3;
-    @extend .l2;
-}
-
 .apex-rds {
-    @extend .section;
     @extend .table-of-contents;
 }
 

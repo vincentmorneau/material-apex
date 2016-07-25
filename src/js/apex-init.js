@@ -17,20 +17,7 @@ function componentsInit() {
     });
 }
 
-function irComponentsInit() {
-    $("[id*='_column_filter'], .a-IRR-dialogContent--highlight table table")
-        .addClass("table-responsive")
-        .find("td")
-        .each(function( index ) {
-            $(this).attr("data-label",$(this).closest('table').find('.a-IRR-dialogTable-header').eq($(this).index()).text());
-        });
-
-    $("[id*='_chart_type'] input[type='radio'], [id*='_default_type'] input[type='radio']").each(function(){
-        $(this).after("<label for='" + $(this).attr("id") + "'></label>").parent().removeAttr("nowrap");
-    });
-}
-
-function irInit() {
+function initIR() {
     if (!$('.a-IRR-table').hasClass("table-responsive")) {
         $(".a-IRR-search-field")
             .attr("placeholder", $(".a-IRR-sortWidget-searchLabel span").text())
@@ -42,12 +29,31 @@ function irInit() {
         $('.a-IRR-table').addClass("table-responsive");
 
         $( ".a-IRR-table td" ).each(function( index ) {
-            $(this).attr("data-label",$(this).closest('table').find('th').not(".a-IRR-header--group").eq($(this).index()).find("a").ignore("span").text());
+            $(this)
+                .attr("data-label",
+                    $(this).closest('table')
+                    .find('th')
+                    .not(".a-IRR-header--group")
+                    .eq($(this).index())
+                    .find("a")
+                    .ignore("span")
+                    .text());
         });
 
         $(".a-IRR-header:not(.a-IRR-header--group)").closest("tr").addClass("a-IRR-header-tr");
         $(".a-IRR-header.a-IRR-header--group").closest("tr").addClass("a-IRR-header-tr--group");
     }
+
+    $("[id*='_column_filter'], .a-IRR-dialogContent--highlight table table")
+        .addClass("table-responsive")
+        .find("td")
+        .each(function( index ) {
+            $(this).attr("data-label",$(this).closest('table').find('.a-IRR-dialogTable-header').eq($(this).index()).text());
+        });
+
+    $("[id*='_chart_type'] input[type='radio'], [id*='_default_type'] input[type='radio']").each(function(){
+        $(this).after("<label for='" + $(this).attr("id") + "'></label>").parent().removeAttr("nowrap");
+    });
 }
 
 function apexInit() {
@@ -82,11 +88,6 @@ function apexInit() {
 
     /* Parallax */
     $(".parallax-container").closest(".col").removeClass().closest(".row").removeClass();
-
-    /* Dropdown */
-    $( ".dropdown-button" ).each(function() {
-        $( this ).prepend($(this).parent().siblings(".header").text());
-    });
 
     /* Display only & read only */
     $(".display_only")
@@ -158,16 +159,16 @@ function apexInit() {
 $(function() {
     apexInit();
 
-    irInit();
+    initIR();
     componentsInit();
 
     $( ".a-IRR-container" ).parent().on( "apexafterrefresh", function() {
-        irInit();
+        initIR();
         componentsInit();
     });
 
     $(document).ajaxSuccess(function() {
-        irComponentsInit();
+        initIR();
         componentsInit();
     });
 });

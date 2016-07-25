@@ -24,6 +24,11 @@ Thanks to [Insum Solutions](http://insum.ca/) for sponsoring this project.
 ## Changelog
 [See complete changelog](CHANGELOG.md).
 
+### v0.9.3 Notice
+- The [demo application](https://apex.oracle.com/pls/apex/f?p=12192) documentation was made with screenshots several months ago. (Very bad idea I now realize...)
+- That documentation is out-of-sync with the current development
+- The next release will focus on making a dynamic documentation for better consistency across future releases
+
 ## Project Team
 - [Vincent Morneau](https://twitter.com/vincentmorneau)
 

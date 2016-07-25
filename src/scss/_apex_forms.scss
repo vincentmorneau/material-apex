@@ -120,6 +120,10 @@ label.active.display-only {
 
 .display-only-container {
     margin-top: 3rem;
+
+    &.item-no-label {
+        margin-top: 0;
+    }
 }
 
 .input-field.display-only-container .prefix {

@@ -1,8 +1,3 @@
-// temporary fix to avoid Chrome 50 bug
-// https://github.com/Dogfalo/materialize/issues/3161
-#P0_SEARCH_CONTAINER { height: 100%; }
-// end temporary fix
-
 body {
 	background: $background-color;
 }

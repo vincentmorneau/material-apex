@@ -1,24 +1,35 @@
 {{#row_template_before_rows}}
 <ul class="collection #COMPONENT_CSS_CLASSES#">
+    <li class="collection-header">
+        <h4>#REGION_TITLE#</h4>
+    </li>
 {{/row_template_before_rows}}
 
     {{#before_column_heading}}{{/before_column_heading}}
 
-        {{#column_heading_template}}
-        <h4>#COLUMN_HEADER#</h4>
-        {{/column_heading_template}}
+        {{#column_heading_template}}{{/column_heading_template}}
 
     {{#after_column_heading}}{{/after_column_heading}}
 
     {{#row_template_before_first}}{{/row_template_before_first}}
 
         {{#row_template1}}
-        <li class="collection-item"><a href="#TARGET#">#DISPLAY#<span class="new badge">#BADGE#</span></a></li>
+        <li class="collection-item">
+            <a href="#TARGET#">
+                #DISPLAY#
+                <span class="new badge">#BADGE#</span>
+            </a>
+        </li>
         {{/row_template1}}
         {{#row_template_condition1}}:NEW_BADGE is not null{{/row_template_condition1}}
         {{#row_template_display_cond1}}NOT_CONDITIONAL{{/row_template_display_cond1}}
         {{#row_template2}}
-        <li class="collection-item"><a href="#TARGET#">#DISPLAY#<span class="badge">#BADGE#</span></a></li>
+        <li class="collection-item">
+            <a href="#TARGET#">
+                #DISPLAY#
+                <span class="badge">#BADGE#</span>
+            </a>
+        </li>
         {{/row_template2}}
         {{#row_template_condition2}}{{/row_template_condition2}}
         {{#row_template_display_cond2}}{{/row_template_display_cond2}}

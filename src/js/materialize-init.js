@@ -24,14 +24,16 @@ function materialInit() {
     /* SideNav */
     if ($('.button-collapse').length > 0) {
         var edgeDirection = $( "link[href*='app.rtl']").length > 0 ? 'right' : 'left';
+
         $('.button-collapse').sideNav({
-        edge: edgeDirection
+            edge: edgeDirection
         });
     }
 
     /* Scrollspy & Pushpin */
     if ($('.apex-rds').length > 0) {
         $(".ma-body-column-css-classes").addClass("col s12 m9 l10");
+        $(".apex-rds-container").addClass("col hide-on-small-only m3 l2");
 
         var pushpinOffset = ($(".nav-breadcrumbs").length === 0 ? 64 : 128);
         $('.apex-rds').pushpin({top:0, offset:pushpinOffset});
@@ -51,6 +53,9 @@ function materialInit() {
 
     /* Tooltips */
     $("[data-tooltip][data-tooltip!='']").tooltip();
+
+    /* Tabs */
+    $('ul.tabs').tabs();
 
     /* Tabular Form */
     if (typeof apex.widget.tabular != 'undefined') {
