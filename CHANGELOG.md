@@ -1,4 +1,26 @@
 ## Changelog
+#### v0.9.3
+- New features
+    - Supports APEX Region Display Selector
+    - New error page design
+    - New sucess message rendering
+    - Adds lots of template options
+- Enhancements
+    - Better rendering of read only and display only fields
+    - IR labels are now translated
+    - Navbar has an active state for current pages
+    - Now possible to close success messages
+    - Better sequencing of template options
+    - Footer is no longer hardcoded
+- Bug fixes
+    - Fixed rendering of checkboxes with no labels
+    - Fixed recursive hiding of sub regions
+    - Fixed duplicated date icon
+    - Fixed menu search bar
+    - Fixed icon substitution strings in all list templates
+    - Fixed HOME_LINK
+    - Removed hardcoded favicon
+
 #### v0.9.2
 - New features:
     - Global Search in navigation bar [(view)](https://apex.oracle.com/pls/apex/f?p=12192:1)
@@ -10,7 +32,7 @@
     - Tabular form checkboxes fix
     - Parallax height is not fixed anymore
     - Parallax content is now usable
-    
+
 #### v0.9.1
 - Now provides three download options.
 - Better styling for inline validation messages.
