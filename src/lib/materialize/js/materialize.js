@@ -2029,7 +2029,7 @@ $(document).ready(function(){
         }
         else {
           // Insert as text;
-          toast.innerHTML = html; 
+          toast.innerHTML = html;
         }
         // Bind hammer
         var hammerHandler = new Hammer(toast, {prevent_default: false});
@@ -2996,7 +2996,7 @@ $(document).ready(function(){
     /**************************
      * Auto complete plugin  *
      *************************/
-    $.fn.autocomplete = function (options) {
+    $.fn.autocomplete2 = function (options) {
       // Defaults
       var defaults = {
         data: {}

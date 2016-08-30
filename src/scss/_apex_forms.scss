@@ -60,17 +60,33 @@ fieldset {
 Autocomplete
 */
 div.ac_results {
+    border: none;
+    overflow: visible;;
+
 	ul {
-		@extend .collection;
-		border: none;
+		@extend .autocomplete-content;
+		@extend .dropdown-content;
 
-		li {
-			@extend .collection-item;
+        li {
+            font-size: 16px;
+            color: $primary-color;
+            display: block;
+            line-height: 22px;
+            padding: 14px 16px;
 
-			&.ac_over {
-				@extend .active;
-			}
-		}
+            &.ac_odd {
+                background-color: initial;
+            }
+
+            &.ac_over {
+                background-color: #eee;
+            }
+
+            strong {
+                font-weight: 500;
+                color: #444;
+            }
+        }
 	}
 }
 
