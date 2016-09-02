@@ -57,6 +57,10 @@ function materialInit() {
     /* Tabs */
     $('ul.tabs').tabs();
 
+    /* Carousels */
+    $('.carousel.carousel-slider').carousel({full_width: true});
+    $('.carousel:not(.carousel-slider)').carousel();
+
     /* Tabular Form */
     if (typeof apex.widget.tabular != 'undefined') {
         var addRowOld = apex.widget.tabular.addRow;

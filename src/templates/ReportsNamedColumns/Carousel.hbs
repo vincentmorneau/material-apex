@@ -1,6 +1,5 @@
 {{#row_template_before_rows}}
-<div id="#REGION_STATIC_ID#_report" class="slider #COMPONENT_CSS_CLASSES#">
-<ul class="slides">
+<div id="#REGION_STATIC_ID#" class="ma-region carousel #COMPONENT_CSS_CLASSES#">
 {{/row_template_before_rows}}
 
     {{#before_column_heading}}{{/before_column_heading}}
@@ -12,13 +11,7 @@
     {{#row_template_before_first}}{{/row_template_before_first}}
 
         {{#row_template1}}
-        <li>
-            #IMG#
-            <div class="caption">
-                <h3>#TITLE#</h3>
-                <h5>#DESCRIPTION#</h5>
-            </div>
-        </li>
+        <a class="carousel-item" href="#LINK#">#IMG#</a>
         {{/row_template1}}
         {{#row_template_condition1}}{{/row_template_condition1}}
         {{#row_template_display_cond1}}{{/row_template_display_cond1}}
@@ -36,7 +29,6 @@
     {{/row_template_after_last}}
 
 {{#row_template_after_rows}}
-</ul>
 </div>
 {{/row_template_after_rows}}
 
@@ -49,11 +41,11 @@
 {{#template_options}}
 [
     {
-        "name": "SLIDER_FULLSCREEN",
-        "display_name": "Fullscreen",
+        "name": "CAROUSEL_SLIDER",
+        "display_name": "Full Width Carousel",
         "display_sequence": 1,
-        "css_classes": "fullscreen",
-        "help_text": "",
+        "css_classes": "carousel-slider",
+        "help_text": "Our carousel has a full width option that makes it into a simple and elegant image carousel",
         "is_advanced": ""
     }
 ]

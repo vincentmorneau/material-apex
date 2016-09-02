@@ -1,0 +1,25 @@
+{{#template}}
+<div id="#REGION_STATIC_ID#" class="ma-region carousel #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
+    #BODY#
+    #SUB_REGIONS#
+</div>
+{{/template}}
+
+{{#sub_plug_header_template}}{{/sub_plug_header_template}}
+{{#sub_plug_header_entry_template}}{{/sub_plug_header_entry_template}}
+{{#sub_plug_template}}
+<div class="carousel-item">#SUB_REGION#</div>
+{{/sub_plug_template}}
+
+{{#template_options}}
+[
+    {
+        "name": "CAROUSEL_SLIDER",
+        "display_name": "Full Width Carousel",
+        "display_sequence": 1,
+        "css_classes": "carousel-slider",
+        "help_text": "Our carousel has a full width option that makes it into a simple and elegant image carousel",
+        "is_advanced": ""
+    }
+]
+{{/template_options}}

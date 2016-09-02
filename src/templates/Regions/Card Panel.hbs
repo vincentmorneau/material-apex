@@ -1,6 +1,16 @@
 {{#template}}
 <div id="#REGION_STATIC_ID#" class="ma-region card-panel #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
-    #BODY#
+    <div class="ma-region-buttons top">
+        #EDIT##EXPAND##CREATE##NEXT##PREVIOUS#
+    </div>
+
+    <div class="ma-region-body">
+        #BODY#
+    </div>
+
+    <div class="ma-region-buttons bottom">
+        #CLOSE##COPY##DELETE##CHANGE##HELP##CREATE2#
+    </div>
 </div>
 {{/template}}
 

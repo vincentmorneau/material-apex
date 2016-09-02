@@ -8,3 +8,7 @@ dist
 logs
 *.log
 npm-debug.log*
+
+# Others
+.atom-build-oracle.json
+app.export.sql
