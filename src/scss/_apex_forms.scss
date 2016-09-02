@@ -1,4 +1,20 @@
 /*
+Colors
+*/
+.ma-colored-field {
+    label {
+        // we are enforcing this color so it should overwrite the :focus value
+        color: inherit!important;
+    }
+
+    input {
+        // we are enforcing this color so it should overwrite the :focus value
+        border-color: inherit!important;
+        box-shadow: inherit!important;
+    }
+}
+
+/*
 Date Pickers
 */
 // This is a fix for the wrong margin and padding in default.date.scss
