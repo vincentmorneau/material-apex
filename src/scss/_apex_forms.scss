@@ -1,4 +1,11 @@
 /*
+Global
+*/
+.ma-field-container {
+    position: relative;
+}
+
+/*
 Colors
 */
 .ma-colored-field {
@@ -127,17 +134,21 @@ body.uPopUpLOV div.uActionBar {
 }
 
 /* Validation */
+span.ma-error-message {
+    color: #EF5350;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 0;
+}
+
 .input-field {
     br {
         display: none;
     }
 
-    span.errTxt {
-        color: #EF5350;
-        font-size: 0.8rem;
-        position: absolute;
+    span.ma-error-message {
         top: 3.5rem;
-   }
+    }
 }
 
 /* display only */

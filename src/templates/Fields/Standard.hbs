@@ -1,5 +1,5 @@
 {{#before_label_and_item}}
-<div id="#CURRENT_ITEM_NAME#_CONTAINER" class="input-field #ITEM_CSS_CLASSES#">
+<div id="#CURRENT_ITEM_NAME#_CONTAINER" class="ma-field-container input-field #ITEM_CSS_CLASSES#">
 {{/before_label_and_item}}
     {{#before_label}}
     <label for="#CURRENT_ITEM_NAME#" id="#LABEL_ID#" data-tooltip="#CURRENT_ITEM_HELP_TEXT#">
@@ -9,6 +9,7 @@
     {{/after_label}}
 
     {{#before_item}}
+    #ERROR_TEMPLATE#
     {{/before_item}}
     {{#after_item}}
     {{/after_item}}
@@ -18,7 +19,10 @@
 
 {{#on_error_before_label}}{{/on_error_before_label}}
 {{#on_error_after_label}}{{/on_error_after_label}}
-{{#error_template}}{{/error_template}}
+{{#error_template}}
+<br>
+<span class="ma-error-message">#ERROR_MESSAGE#</span>
+{{/error_template}}
 {{#help_template}}{{/help_template}}
 
 {{#template_options}}
