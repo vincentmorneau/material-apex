@@ -23,7 +23,7 @@
 	@extend h6;
 }
 
-.ma-region.hide-title > .ma-region-title {
+.ma-region.hide-title > .ma-region-title, .ma-region.hide-title .card-content > .ma-region-title {
     @include hide();
 }
 
@@ -124,4 +124,9 @@
 
 .ma-region-title-yellow-text .ma-region-title {
     @extend .yellow-text;
+}
+
+/* Truncate */
+.truncate > .ma-region-body {
+    @extend .truncate;
 }

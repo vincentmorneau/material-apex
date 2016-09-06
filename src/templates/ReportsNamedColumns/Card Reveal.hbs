@@ -1,5 +1,5 @@
 {{#row_template_before_rows}}
-<div class="row">
+<div class="row #COMPONENT_CSS_CLASSES#">
 {{/row_template_before_rows}}
 
     {{#before_column_heading}}{{/before_column_heading}}
@@ -11,23 +11,28 @@
     {{#row_template_before_first}}{{/row_template_before_first}}
 
         {{#row_template1}}
-        <div class="#COLUMN_CSS_CLASSES#">
+        <div class="ma-card-col col s12">
             <div class="card">
                 <div class="card-image activator waves-effect waves-block waves-light">
                     #IMG#
                 </div>
+
                 <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">#TITLE# <i class="material-icons right">more_vert</i></span>
+                    <span class="card-title activator grey-text text-darken-4">
+                        #TITLE# <i class="material-icons right">more_vert</i>
+                    </span>
                 </div>
+
                 <div class="card-action">
-                    <p>
-                        <a href="#BTN_LINK_1#">#BTN_LABEL_1#</a>
-                        <a href="#BTN_LINK_2#">#BTN_LABEL_2#</a>
-                    </p>
+                    <a href="#BTN_LINK_1#">#BTN_LABEL_1#</a>
+                    <a href="#BTN_LINK_2#">#BTN_LABEL_2#</a>
                 </div>
+
                 <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">#TITLE# <i class="material-icons right">close</i></span>
-                  #CONTENT#
+                    <span class="card-title grey-text text-darken-4">
+                        #TITLE# <i class="material-icons right">close</i>
+                    </span>
+                    #CONTENT#
                 </div>
             </div>
         </div>
@@ -56,3 +61,59 @@
 {{#previous_page_template}}{{/previous_page_template}}
 {{#next_set_template}}{{/next_set_template}}
 {{#previous_set_template}}{{/previous_set_template}}
+
+{{#template_option_groups}}
+[
+    {
+        "name": "CARD_COLUMNS",
+        "display_name": "Number of columns",
+        "display_sequence": 1,
+        "help_text": "",
+        "null_text": "",
+        "is_advanced": "N",
+        "template_options": [
+            {
+                "name": "CARD_COL1",
+                "display_name": "1 Column",
+                "display_sequence": 1,
+                "css_classes": "ma-card-col-1",
+                "help_text": ""
+            },
+            {
+                "name": "CARD_COL2",
+                "display_name": "2 Columns",
+                "display_sequence": 2,
+                "css_classes": "ma-card-col-2",
+                "help_text": ""
+            },
+            {
+                "name": "CARD_COL3",
+                "display_name": "3 Columns",
+                "display_sequence": 3,
+                "css_classes": "ma-card-col-3",
+                "help_text": ""
+            },
+            {
+                "name": "CARD_COL4",
+                "display_name": "4 Columns",
+                "display_sequence": 4,
+                "css_classes": "ma-card-col-4",
+                "help_text": ""
+            }
+        ]
+    }
+]
+{{/template_option_groups}}
+
+{{#template_options}}
+[
+    {
+        "name": "CARD_STICKY",
+        "display_name": "Buttons Always Visible",
+        "display_sequence": 1,
+        "css_classes": "ma-sticky-action",
+        "help_text": "Make your card buttons always visible.",
+        "is_advanced": ""
+    }
+]
+{{/template_options}}

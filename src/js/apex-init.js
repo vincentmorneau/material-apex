@@ -168,6 +168,12 @@ function apexInit() {
              });
          }
      });
+
+     $('.card-action, .card-content')
+        .filter(function() {
+            return $.trim($(this).text()) === '' && $(this).children().length == 0
+        })
+        .remove();
 }
 
 $(function() {

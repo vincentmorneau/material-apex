@@ -1,0 +1,20 @@
+.row .col {
+    min-height: 0;
+}
+
+// not necessary
+// .ma-card-col-1 .ma-card-col {
+//     @extend .m12;
+// }
+
+.ma-card-col-2 .ma-card-col {
+    @extend .m6;
+}
+
+.ma-card-col-3 .ma-card-col {
+    @extend .m4;
+}
+
+.ma-card-col-4 .ma-card-col {
+    @extend .m3;
+}
