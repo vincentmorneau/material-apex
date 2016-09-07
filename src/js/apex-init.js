@@ -64,20 +64,36 @@ function apexInit() {
         }
     });
 
+    // deletes empty html partsof a card
+    // this is used to simplify region templates
+    $('.card-action, .card-content, span.badge, i.material-icons, .ma-button-label')
+        .filter(function() {
+            return $.trim($(this).text()) === '' && $(this).children().length === 0;
+        })
+        .remove();
+
     /* Fixed Action Button */
     $("a.fixed-action-btn").each(function() {
         var position = "";
-        if ($(this).hasClass("fab-right")) position += "fab-right ";
-        if ($(this).hasClass("fab-left")) position += "fab-left ";
-        if ($(this).hasClass("fab-absolute")) position += "fab-absolute ";
-        if ($(this).hasClass("horizontal")) position += "horizontal ";
-        if ($(this).hasClass("click-to-toggle")) position += "click-to-toggle ";
+        var fab = $(this);
+        if (fab.hasClass("fab-right")) position += "fab-right ";
+        if (fab.hasClass("fab-left")) position += "fab-left ";
+        if (fab.hasClass("fab-absolute")) position += "fab-absolute ";
+        if (fab.hasClass("horizontal")) position += "horizontal ";
+        if (fab.hasClass("click-to-toggle")) position += "click-to-toggle ";
 
-        $(this).siblings(".btn, .btn-flat").addClass("btn-floating").removeClass("btn btn-flat");
-        $(this).siblings(".btn-floating").addBack().wrapAll("<div class='fixed-action-btn " + position + "'>");
-        $(this).siblings(".btn-floating").wrapAll("<ul>").wrap("<li>");
-        $(this).removeClass("fixed-action-btn horizontal click-to-toggle fab-right fab-left fab-absolute");
+        fab.siblings(".btn, .btn-flat").addClass("btn-floating").removeClass("btn btn-flat");
+        fab.siblings(".btn-floating").addBack().wrapAll("<div class='fixed-action-btn " + position + "'>");
+        fab.siblings(".btn-floating").wrapAll("<ul>").wrap("<li>");
+        fab.removeClass("fixed-action-btn horizontal click-to-toggle fab-right fab-left fab-absolute");
     });
+
+    $(".fixed-action-btn ul li a.btn-floating").each(function() {
+        $(this)
+            .attr("data-tooltip", $(this).find(".ma-button-label").text())
+            .attr("data-position", "left");
+    });
+
     $("div.fab-absolute").parent().addClass("fab-relative");
 
     // Vertical Alignment
@@ -171,14 +187,6 @@ function apexInit() {
             });
         }
     });
-
-    // deletes empty html partsof a card
-    // this is used to simplify region templates
-    $('.card-action, .card-content, span.badge, i.material-icons')
-        .filter(function() {
-            return $.trim($(this).text()) === '' && $(this).children().length === 0;
-        })
-        .remove();
 }
 
 $(function() {
