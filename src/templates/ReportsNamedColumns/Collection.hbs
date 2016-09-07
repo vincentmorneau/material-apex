@@ -1,0 +1,84 @@
+{{#row_template_before_rows}}
+<ul class="collection #COMPONENT_CSS_CLASSES#">
+    <li class="collection-header">
+        <h4>#REGION_TITLE#</h4>
+    </li>
+{{/row_template_before_rows}}
+
+    {{#before_column_heading}}{{/before_column_heading}}
+
+        {{#column_heading_template}}{{/column_heading_template}}
+
+    {{#after_column_heading}}{{/after_column_heading}}
+
+    {{#row_template_before_first}}{{/row_template_before_first}}
+
+        {{#row_template1}}
+        <li class="collection-item">
+            <a href="#LINK#">#TEXT#</a>
+            <span class="new badge">#BADGE#</span>
+            <a href="#SECONDARY_LINK#" class="secondary-content">
+                <i class="material-icons">#SECONDARY_ICON#</i>
+            </a>
+        </li>
+        {{/row_template1}}
+        {{#row_template_condition1}}:NEW_BADGE is not null and :LINK is not null{{/row_template_condition1}}
+        {{#row_template_display_cond1}}NOT_CONDITIONAL{{/row_template_display_cond1}}
+        {{#row_template2}}
+        <li class="collection-item">
+            #TEXT#
+            <span class="new badge">#BADGE#</span>
+            <a href="#SECONDARY_LINK#" class="secondary-content">
+                <i class="material-icons">#SECONDARY_ICON#</i>
+            </a>
+        </li>
+        {{/row_template2}}
+        {{#row_template_condition2}}:NEW_BADGE is not null and :LINK is null{{/row_template_condition2}}
+        {{#row_template_display_cond2}}NOT_CONDITIONAL{{/row_template_display_cond2}}
+        {{#row_template3}}
+        <li class="collection-item">
+            <a href="#LINK#">#TEXT#</a>
+            <span class="badge">#BADGE#</span>
+            <a href="#SECONDARY_LINK#" class="secondary-content">
+                <i class="material-icons">#SECONDARY_ICON#</i>
+            </a>
+        </li>
+        {{/row_template3}}
+        {{#row_template_condition3}}:NEW_BADGE is null and :LINK is not null{{/row_template_condition3}}
+        {{#row_template_display_cond3}}NOT_CONDITIONAL{{/row_template_display_cond3}}
+        {{#row_template4}}
+        <li class="collection-item">
+            #TEXT#
+            <span class="badge">#BADGE#</span>
+            <a href="#SECONDARY_LINK#" class="secondary-content">
+                <i class="material-icons">#SECONDARY_ICON#</i>
+            </a>
+        </li>
+        {{/row_template4}}
+        {{#row_template_condition4}}{{/row_template_condition4}}
+        {{#row_template_display_cond4}}{{/row_template_display_cond4}}
+
+    {{#row_template_after_last}}
+    {{/row_template_after_last}}
+
+{{#row_template_after_rows}}
+</ul>
+{{/row_template_after_rows}}
+
+{{#pagination_template}}{{/pagination_template}}
+{{#next_page_template}}{{/next_page_template}}
+{{#previous_page_template}}{{/previous_page_template}}
+{{#next_set_template}}{{/next_set_template}}
+{{#previous_set_template}}{{/previous_set_template}}
+
+{{#template_options}}
+[
+    {
+        "name": "WITH_HEADER",
+        "display_name": "With Header",
+        "display_sequence": 1,
+        "css_classes": "with-header",
+        "help_text": ""
+    }
+]
+{{/template_options}}

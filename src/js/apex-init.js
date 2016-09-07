@@ -1,8 +1,8 @@
 /************
 APEX Initialization
 ************/
-$.fn.ignore = function(sel){
-    return this.clone().find(sel||">*").remove().end();
+$.fn.ignore = function(sel) {
+    return this.clone().find(sel || ">*").remove().end();
 };
 
 function componentsInit() {
@@ -28,7 +28,7 @@ function initIR() {
 
         $('.a-IRR-table').addClass("table-responsive");
 
-        $( ".a-IRR-table td" ).each(function( index ) {
+        $(".a-IRR-table td").each(function(index) {
             $(this)
                 .attr("data-label",
                     $(this).closest('table')
@@ -47,25 +47,25 @@ function initIR() {
     $("[id*='_column_filter'], .a-IRR-dialogContent--highlight table table")
         .addClass("table-responsive")
         .find("td")
-        .each(function( index ) {
-            $(this).attr("data-label",$(this).closest('table').find('.a-IRR-dialogTable-header').eq($(this).index()).text());
+        .each(function(index) {
+            $(this).attr("data-label", $(this).closest('table').find('.a-IRR-dialogTable-header').eq($(this).index()).text());
         });
 
-    $("[id*='_chart_type'] input[type='radio'], [id*='_default_type'] input[type='radio']").each(function(){
+    $("[id*='_chart_type'] input[type='radio'], [id*='_default_type'] input[type='radio']").each(function() {
         $(this).after("<label for='" + $(this).attr("id") + "'></label>").parent().removeAttr("nowrap");
     });
 }
 
 function apexInit() {
     // Grid - Handling s12 default override
-    $(".col.s12").each(function(){
+    $(".col.s12").each(function() {
         if ($(this).is(".s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10,.s11")) {
             $(this).removeClass("s12");
         }
     });
 
     /* Fixed Action Button */
-    $("a.fixed-action-btn").each(function(){
+    $("a.fixed-action-btn").each(function() {
         var position = "";
         if ($(this).hasClass("fab-right")) position += "fab-right ";
         if ($(this).hasClass("fab-left")) position += "fab-left ";
@@ -104,14 +104,14 @@ function apexInit() {
         .removeClass('input-field');
 
     /* Textarea */
-    $("[id*='_CHAR_COUNTER']").each(function(){
-        $(this).closest("div").siblings("textarea").attr("length",$(this).next().text());
+    $("[id*='_CHAR_COUNTER']").each(function() {
+        $(this).closest("div").siblings("textarea").attr("length", $(this).next().text());
     });
 
     $("[id*='_CHAR_COUNT']").remove();
 
-    $( "fieldset.textarea" ).each(function() {
-        $( this).prepend($(this).siblings());
+    $("fieldset.textarea").each(function() {
+        $(this).prepend($(this).siblings());
     });
 
     $('textarea').addClass('materialize-textarea');
@@ -119,59 +119,64 @@ function apexInit() {
     /* Popup LOV */
     $("fieldset.lov").parent().addClass("ma-popuplov");
 
-    /* Media */
+    // Media
     $(".apex-materialbox img").addClass("materialboxed responsive-img").each(function() {
-        $(this).attr("data-caption",$(this).parent().attr("data-caption"));
+        $(this).attr("data-caption", $(this).parent().attr("data-caption"));
         $(this).parent().removeAttr("data-caption");
     });
 
-    /* Tooltips */
-    $( "[data-tooltip][data-tooltip!='']" ).each(function() {
-        $( this ).siblings("i").attr( "data-tooltip", $(this).attr("data-tooltip") );
+    // Tooltips
+    $("[data-tooltip][data-tooltip!='']").each(function() {
+        $(this).siblings("i").attr("data-tooltip", $(this).attr("data-tooltip"));
     });
 
-    /* Icons */
+    // Icons
     $("i[class='']").remove();
 
-    /* Search Bar */
-    $(".top-nav li a i:contains('search')").parent().click(function(){
-       $(".main-nav-wrapper").toggleClass("hide");
-       $(".search-nav-wrapper").toggleClass("hide");
-       $("#P0_SEARCH").focus();
+    // Search Bar
+    $(".top-nav li a i:contains('search')").parent().click(function() {
+        $(".main-nav-wrapper").toggleClass("hide");
+        $(".search-nav-wrapper").toggleClass("hide");
+        $("#P0_SEARCH").focus();
     });
 
     $("#P0_SEARCH")
         .attr("type", "search")
-        .blur(function (){
-           $(".main-nav-wrapper").toggleClass("hide");
-           $(".search-nav-wrapper").toggleClass("hide");
-       });
+        .blur(function() {
+            $(".main-nav-wrapper").toggleClass("hide");
+            $(".search-nav-wrapper").toggleClass("hide");
+        });
 
-    $(".ma-toast-close").click(function(){
+    //  closes a toast
+    $(".ma-toast-close").click(function() {
         $(this).closest(".toast").remove();
     });
 
-     $(".panel-close").click(function(){
-         $(this).closest(".card-panel").remove();
-     });
+    //  closes a panel
+    $(".panel-close").click(function() {
+        $(this).closest(".card-panel").remove();
+    });
 
-     $( "body" ).on( "apexafterclosedialog", function(e, data) {
-         if (data.successMessage.text) {
-             $('#toast-container').append('<div class="ma-success-message toast velocity-animating green lighten-2">' +
+    // this is for displaying a success message when a modal page closes
+    $("body").on("apexafterclosedialog", function(e, data) {
+        if (data.successMessage.text) {
+            $('#toast-container').append('<div class="ma-success-message toast velocity-animating green lighten-2">' +
                 '<div class="ma-success-message-content white-text">' + data.successMessage.text + '</div>' +
                 '<i class="ma-toast-close material-icons right">close</i>' +
                 '</div>');
 
             // relaunch close event
-             $(".ma-toast-close").click(function(){
-                 $(this).closest(".toast").remove();
-             });
-         }
-     });
+            $(".ma-toast-close").click(function() {
+                $(this).closest(".toast").remove();
+            });
+        }
+    });
 
-     $('.card-action, .card-content')
+    // deletes empty html partsof a card
+    // this is used to simplify region templates
+    $('.card-action, .card-content, span.badge, i.material-icons')
         .filter(function() {
-            return $.trim($(this).text()) === '' && $(this).children().length == 0
+            return $.trim($(this).text()) === '' && $(this).children().length === 0;
         })
         .remove();
 }
@@ -182,7 +187,7 @@ $(function() {
     initIR();
     componentsInit();
 
-    $( ".a-IRR-container" ).parent().on( "apexafterrefresh", function() {
+    $(".a-IRR-container").parent().on("apexafterrefresh", function() {
         initIR();
         componentsInit();
     });
