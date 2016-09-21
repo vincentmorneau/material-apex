@@ -1,0 +1,20 @@
+{{#template}}
+<div id="#REGION_STATIC_ID#" class="ma-region #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
+    #SUB_REGION_HEADERS#
+    #SUB_REGIONS#
+</div>
+{{/template}}
+
+{{#sub_plug_header_template}}
+<ul class="tabs">
+#ENTRIES#
+</ul>
+{{/sub_plug_header_template}}
+{{#sub_plug_header_entry_template}}
+<li class="tab"><a href="#tab-#SUB_REGION_ID#">#SUB_REGION_TITLE#</a></li>
+{{/sub_plug_header_entry_template}}
+{{#sub_plug_template}}
+<div id="tab-#SUB_REGION_ID#">
+#SUB_REGION#
+</div>
+{{/sub_plug_template}}

@@ -173,6 +173,10 @@ function apexInit() {
         $(this).closest(".card-panel").remove();
     });
 
+    // checkboxes and radio alternate look 
+    $(".ma-alternate-look input[type='checkbox']").addClass("filled-in");
+    $(".ma-alternate-look input[type='radio']").addClass("with-gap");
+
     // this is for displaying a success message when a modal page closes
     $("body").on("apexafterclosedialog", function(e, data) {
         if (data.successMessage.text) {
