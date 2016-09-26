@@ -5,7 +5,7 @@
 - https://twitter.com/vincentmorneau/status/707650168129265664
 - https://community.oracle.com/message/13733156
 
-#### Import the Theme [theme-export.sql](../apex/theme-export.sql) in your existing application.  
+#### Import the file `theme-export.sql` from the [latest release](https://github.com/vincentmorneau/material-apex/releases/latest) in your existing application.  
 1. Create theme
 2. From export
 3. Select `theme-export.sql`

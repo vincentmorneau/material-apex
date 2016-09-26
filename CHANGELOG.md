@@ -1,9 +1,26 @@
 ## Changelog
+#### v0.9.4
+- New features
+    - **Horizontal Cards** [(view)]()
+    - **Carousel Component** [(view)]()
+    - Fixed Action Button can now display text on hover
+- Enhancements
+    - **Completely new dynamic documentation**
+    - Autocomplete input greatly enhanced
+    - Slider greatly enhanced
+    - Inputs can now be colored via template options
+    - Card templates are much easier to use (Regions & Reports)
+    - Collection templates are much easier to use (Lists & Reports)
+    - Tabs component is now usable through a Region template instead of a List template
+    - Merged other Region, Report and List templates
+- Bug fixes
+    - Fixed inline validation message on some input fields
+
 #### v0.9.3
 - New features
     - Supports APEX Region Display Selector
     - New error page design
-    - New sucess message rendering
+    - New success message rendering
     - Adds lots of template options
 - Enhancements
     - Better rendering of read only and display only fields
@@ -25,7 +42,7 @@
 - New features:
     - Global Search in navigation bar [(view)](https://apex.oracle.com/pls/apex/f?p=12192:1)
     - Support for Popup LOV [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
-    - New download option: [Barebone application](apex/barebone-app.sql). Contains the theme and page 0.
+    - New download option: Empty application. Contains the theme and page 0.
 - Bug fixes:
     - Tabular form select fix
     - Tabular form date pickers fix
