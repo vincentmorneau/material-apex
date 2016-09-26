@@ -1,8 +1,8 @@
 ## Changelog
 #### v0.9.4
 - New features
-    - **Horizontal Cards** [(view)]()
-    - **Carousel Component** [(view)]()
+    - **Horizontal Cards** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:22)
+    - **Carousel Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:45)
     - Fixed Action Button can now display text on hover
 - Enhancements
     - **Completely new dynamic documentation**
