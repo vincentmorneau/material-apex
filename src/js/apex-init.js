@@ -197,6 +197,31 @@ materialAPEX.initial = {
                 });
             }
         });
+
+        /* showSpinner */
+        if (typeof apex.util.showSpinner === "function") {
+            var showSpinnerOld = apex.util.showSpinner;
+            apex.util.showSpinner = function(container, options){
+                var opt = options || {};
+                var newSpinner = showSpinnerOld(container, options);
+
+                var spinnerLayer = function(layerColor) {
+                    return '<div class="spinner-layer spinner-' + layerColor + '"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div>';
+                };
+
+                var layers = (opt.color ?
+                    spinnerLayer(opt.color + "-only") :
+                    spinnerLayer("blue") +
+                    spinnerLayer("red") +
+                    spinnerLayer("yellow") +
+                    spinnerLayer("green")
+                );
+
+                $(".u-Processing").append('<div class="preloader-wrapper ' + opt.size + ' active">' + layers + '</div>');
+
+                return newSpinner;
+            };
+        }
     }
 };
 

@@ -1,0 +1,8 @@
+.u-Processing {
+    padding: 0;
+    background-color: transparent;
+}
+
+.u-Processing-spinner {
+    @include hide();
+}
