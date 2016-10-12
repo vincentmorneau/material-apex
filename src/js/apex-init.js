@@ -13,18 +13,11 @@ var materialAPEX = materialAPEX || {};
 materialAPEX.items = {
     init: function () {
         /* Fix for label issue with many components. Need to have label after component. */
-        // $(".input-field label").each(function() {
-        //     $(this).appendTo($(this).parent());
-        // });
         $(".input-field label").parent().append(function() {
             return $(this).find("label");
         });
 
         /* Fix for label issue with many components. Need to have label after component. */
-
-        // $(".u-TF-item--checkbox").each(function() {
-        //     $(this).after($(this).siblings("label"));
-        // });
         $(".u-TF-item--checkbox").after(function(){
             return $(this).siblings("label");
         });
@@ -75,11 +68,6 @@ materialAPEX.ir = {
 materialAPEX.initial = {
     init: function() {
         // Grid - Handling s12 default override
-        // $(".col.s12").each(function() {
-        //     if ($(this).is(".s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10,.s11")) {
-        //         $(this).removeClass("s12");
-        //     }
-        // });
         $(".s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10,.s11").removeClass("s12");
 
         // deletes empty html partsof a card
@@ -144,9 +132,6 @@ materialAPEX.initial = {
 
         $("[id*='_CHAR_COUNT']").remove();
 
-        // $("fieldset.textarea").each(function() {
-        //     $(this).prepend($(this).siblings());
-        // });
         $("fieldset.textarea").prepend(function() {
             return $(this).siblings();
         });
