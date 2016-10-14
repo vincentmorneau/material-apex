@@ -7,6 +7,7 @@ body.body-modal {
     width: 100%;
     max-height: 100%;
     box-shadow:none;
+    background-color: $modal-background-color;
 
     &.modal-fixed-footer {
       height: 100%;
@@ -30,6 +31,10 @@ body.body-modal {
 
     .modal-content {
         padding-top: 0;
+    }
+
+    .modal-footer {
+        background-color: $modal-background-footer;
     }
 }
 
@@ -76,7 +81,7 @@ body {
 
         .ui-dialog-titlebar {
             padding: 24px 24px 0px 24px;
-            background-color: $modal-background-color;
+            background-color: $modal-background-header;
             background-image: none;
             border: none;
         }

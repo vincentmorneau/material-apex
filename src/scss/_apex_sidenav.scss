@@ -2,6 +2,7 @@ $sidenav-height: 44px;
 
 ul.side-nav {
     z-index: 1002;
+    height: 100%;
 
 	// Right Align
 	&.right-aligned {
@@ -33,6 +34,14 @@ ul.side-nav {
 	.collapsible {
 		border: none;
 		box-shadow: none;
+
+        .collapsible-header {
+        	min-height: inherit;
+        }
+
+        .collapsible-body {
+            background-color: $sidenav-bg-color;
+        }
 	}
 }
 
