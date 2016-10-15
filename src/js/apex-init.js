@@ -13,8 +13,11 @@ var materialAPEX = materialAPEX || {};
 materialAPEX.items = {
     init: function () {
         /* Fix for label issue with many components. Need to have label after component. */
-        $(".input-field label").parent().append(function() {
-            return $(this).find("label");
+        // $(".input-field > label, .input-field fieldset > label").parent().append(function() {
+        //     return $(this).find("label");
+        // });
+        $(".input-field > label, .input-field fieldset > label").each(function() {
+            $(this).appendTo($(this).parent());
         });
 
         /* Fix for label issue with many components. Need to have label after component. */
@@ -178,6 +181,9 @@ materialAPEX.initial = {
         $(".panel-close").click(function() {
             $(this).closest(".card-panel").remove();
         });
+
+        //  switches
+        $(".switch").parent().addClass("switch-fix");
 
         // checkboxes and radio alternate look
         $(".ma-alternate-look input[type='checkbox']").addClass("filled-in");

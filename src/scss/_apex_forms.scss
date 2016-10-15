@@ -172,3 +172,21 @@ label.active.display-only {
 .input-field.display-only-container .prefix {
     font-size: 24px;
 }
+
+/* Switches */
+.switch {
+    margin-top: -0.8rem;
+}
+
+.switch-fix {
+    top: -0.8rem;
+}
+
+.input-field .switch+label {
+    margin-top: -1.8rem;
+}
+
+/* Ranges */
+.input-field .range-field+label {
+    top: -.8rem;
+}
