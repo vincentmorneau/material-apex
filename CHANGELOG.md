@@ -2,7 +2,7 @@
 #### v0.9.5
 - New features
     - **Switch Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
-    - **Range Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:45)
+    - **Range Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
     - **Loading Indicator Dynamic Action** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:28)
     - **Over 80 New Theme Roller Attributes**
 - Enhancements
