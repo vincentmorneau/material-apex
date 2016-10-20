@@ -15,7 +15,7 @@ ul {
 	}
 }
 
-.main-container main {
+.main-container .ma-main-container {
 	@extend .container;
 }
 
@@ -55,7 +55,7 @@ form {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+}
 
 main {
 	flex: 1 0 auto;

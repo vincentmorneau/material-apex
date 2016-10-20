@@ -1,8 +1,9 @@
 $sidenav-height: 44px;
 
-ul.side-nav {
+.side-nav {
     z-index: 1002;
     height: 100%;
+    width: $sidenav-width;
 
 	// Right Align
 	&.right-aligned {
@@ -56,41 +57,46 @@ ul.side-nav {
 /*
 Sidebar Fixed
 */
-body.side-nav-fixed {
-	ul.side-nav {
-		@extend .side-nav.fixed;
-    	z-index: 999;
-	}
+.side-nav-fixed {
+    .side-nav {
+        @extend .fixed;
+        z-index: 999!important;
+    }
 
 	@media #{$large-and-up} {
-		ul.side-nav {
+        #menu-trigger {
+            display: none!important;
+        }
+
+		.side-nav {
     		left:0!important;
+            transform: translateX(0)!important;
 		}
+
+    	header, main, footer {
+        	padding-left: $sidenav-width;
+      	}
+
+     	.top-nav {
+            width: calc(100% - #{$sidenav-width});
+        }
+
+        .container, .ma-main-container {
+            width: 85%;
+        }
 	}
-
-	header, main, footer {
-    	padding-left: 240px;
-  	}
-
-  	nav {
-	    width: calc(100% - 240px);
-	}
-
-  	#menu-trigger {
-  		display: none!important;
-  	}
 
   	@media #{$medium-and-down} {
+        #menu-trigger {
+            display: block!important;
+        }
+
     	header, main, footer {
       		padding-left: 0;
     	}
 
-	  	nav {
+	  	.top-nav {
 		    width: 100%;
 		}
-
-	  	#menu-trigger {
-	  		display: block!important;
-	  	}
   	}
 }

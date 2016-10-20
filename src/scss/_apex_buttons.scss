@@ -10,8 +10,9 @@
 // FAB (Fixed Action Button)
 .fixed-action-btn {
     bottom: 45px;
-    left: initial;
-    right: initial;
+    // left: initial;
+    // right: initial;
+    z-index: 997;
 
     &.fab-left {
         left: 25px;
