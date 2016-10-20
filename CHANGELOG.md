@@ -1,4 +1,17 @@
 ## Changelog
+#### v0.9.5
+- New features
+    - **Switch Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
+    - **Range Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:45)
+    - **Loading Indicator Dynamic Action** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:28)
+    - **Over 80 New Theme Roller Attributes**
+- Enhancements
+    - Responsive Text Template Options for Display Only Items
+    - JavaScript performance enhancements
+    - Preloader region is now a plugin
+    - Code Region is now a plugin
+- Demo Application menu was restructured completely
+
 #### v0.9.4
 - New features
     - **Horizontal Cards** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:22)
