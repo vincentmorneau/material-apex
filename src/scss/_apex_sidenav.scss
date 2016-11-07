@@ -81,7 +81,7 @@ Sidebar Fixed
             width: calc(100% - #{$sidenav-width});
         }
 
-        .container, .ma-main-container {
+        .container, &.main-container .ma-main-container {
             width: 85%;
         }
 	}
