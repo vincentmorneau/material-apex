@@ -128,6 +128,12 @@ materialAPEX.initial = {
             .closest('.input-field')
             .removeClass('input-field');
 
+        $("fieldset.checkbox_group input").each(function(){
+            if (!$(this).next().is("label")) {
+                $(this).after("<label for='" + this.id + "'></label>");
+            }
+        });
+
         /* Textarea */
         $("[id*='_CHAR_COUNTER']").each(function() {
             $(this).closest("div").siblings("textarea").attr("length", $(this).next().text());
