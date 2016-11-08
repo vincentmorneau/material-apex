@@ -8,7 +8,7 @@ Global
 /*
 Colors
 */
-.ma-colored-field {
+.ma-colored-field, .ma-colored-region {
     label {
         // we are enforcing this color so it should overwrite the :focus value
         color: inherit!important;
