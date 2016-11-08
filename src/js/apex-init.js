@@ -117,18 +117,16 @@ materialAPEX.initial = {
         /* Display only & read only */
         $(".display_only")
             .siblings("label")
-            .addClass("active display-only")
-            .closest('.input-field')
-            .addClass('display-only-container');
+            .addClass("active");
 
         /* Fieldset */
         $("fieldset.checkbox_group, fieldset.radio_group")
             .siblings("label")
-            .addClass("active display-only")
+            .addClass("active label-block")
             .closest('.input-field')
             .removeClass('input-field');
 
-        $("fieldset.checkbox_group input").each(function(){
+        $("fieldset.checkbox_group input, fieldset.radio_group input").each(function(){
             if (!$(this).next().is("label")) {
                 $(this).after("<label for='" + this.id + "'></label>");
             }
@@ -187,9 +185,6 @@ materialAPEX.initial = {
         $(".panel-close").click(function() {
             $(this).closest(".card-panel").remove();
         });
-
-        //  switches
-        $(".switch").parent().addClass("switch-fix");
 
         // checkboxes and radio alternate look
         $(".ma-alternate-look input[type='checkbox']").addClass("filled-in");

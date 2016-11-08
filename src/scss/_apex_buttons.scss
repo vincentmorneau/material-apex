@@ -7,7 +7,7 @@
 	@extend .right;
 }
 
-// FAB (Fixed Action Button)
+// Fixed Action Button
 .fixed-action-btn {
     bottom: 45px;
     z-index: 997;
@@ -42,4 +42,10 @@
 
 .fab-relative {
     position: relative;
+}
+
+/* Inline button
+This is to give space as if there was a label */
+.ma-btn-inline {
+    margin-top: 2rem;
 }

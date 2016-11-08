@@ -52,10 +52,6 @@ Inputs
 	}
 }
 
-.item-no-label > label {
-	display: none!important;
-}
-
 .item-image-responsive img {
 	@extend .responsive-img;
 }
@@ -151,44 +147,32 @@ span.ma-error-message {
     }
 }
 
-/* display only */
-label.active.display-only {
-	margin-bottom: 10px;
-	display: block;
-}
-
+/* Display Only */
 .input-field .prefix ~ .display_only {
    margin-left: 3rem;
 }
 
-.display-only-container {
-    margin-top: 3rem;
-
-    &.item-no-label {
-        margin-top: 0;
-    }
-}
-
-.input-field.display-only-container .prefix {
-    font-size: 24px;
+/* No Label */
+.item-no-label > label {
+	visibility: hidden!important;
 }
 
 /* Switches */
-.switch {
-    margin-top: -0.8rem;
+.switch label {
+    position: relative;
 }
 
-.switch-fix {
-    top: -0.8rem;
-}
-
-.input-field .switch+label {
-    margin-top: -1.8rem;
+.input-field .switch + label {
+    font-size: 0.8rem;
+    -webkit-transform: translateY(-190%);
+    transform: translateY(-190%);
 }
 
 /* Ranges */
-.input-field .range-field+label {
-    top: -.8rem;
+.input-field .range-field + label {
+    font-size: 0.8rem;
+    -webkit-transform: translateY(-190%);
+    transform: translateY(-190%);
 }
 
 /* Text Size */
@@ -227,4 +211,9 @@ label.active.display-only {
             text-align:inherit;
         }
     }
+}
+
+/* Fieldset Labels */
+.label-block {
+    display: block;
 }
