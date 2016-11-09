@@ -1,20 +1,22 @@
 {{#template}}
-<div id="#REGION_STATIC_ID#" class="ma-region card #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
-    <div class="ma-region-buttons top">
-        #EDIT##EXPAND##CREATE##NEXT##PREVIOUS#
-    </div>
-
-    <div class="ma-region-body card-content">
-        <div class="ma-region-title card-title">
-            #TITLE#
+<div id="#REGION_STATIC_ID#" class="ma-region #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
+    <div class="card">
+        <div class="ma-region-buttons top">
+            #EDIT##EXPAND##CREATE##NEXT##PREVIOUS#
         </div>
 
-        #BODY#
-        #SUB_REGIONS#
-    </div>
+        <div class="ma-region-body card-content">
+            <div class="ma-region-title card-title">
+                #TITLE#
+            </div>
 
-    <div class="ma-region-buttons bottom card-action">
-        #CLOSE##COPY##DELETE##CHANGE##HELP##CREATE2#
+            #BODY#
+            #SUB_REGIONS#
+        </div>
+
+        <div class="ma-region-buttons bottom card-action">
+            #CLOSE##COPY##DELETE##CHANGE##HELP##CREATE2#
+        </div>
     </div>
 </div>
 {{/template}}

@@ -1,47 +1,50 @@
-/* Region title size */
-.h1 > .ma-region-title, .input-field.h1 {
+/* Text Size */
+.ma-text-size-responsive .display_only {
+    @extend .flow-text;
+}
+
+.h1 > .ma-region-title, .ma-text-size-h1 .display_only {
 	font-size: $h1-fontsize;
     font-weight: 300;
 }
 
-.h2 > .ma-region-title, .input-field.h2 {
+.h2 > .ma-region-title, .ma-text-size-h2 .display_only {
 	font-size: $h2-fontsize;
     font-weight: 300;
 }
 
-.h3 > .ma-region-title, .input-field.h3 {
+.h3 > .ma-region-title, .ma-text-size-h3 .display_only {
 	font-size: $h3-fontsize;
     font-weight: 300;
 }
 
-.h4 > .ma-region-title, .input-field.h4 {
+.h4 > .ma-region-title, .ma-text-size-h4 .display_only {
 	font-size: $h4-fontsize;
     font-weight: 300;
 }
 
-.h5 > .ma-region-title, .input-field.h5 {
+.h5 > .ma-region-title, .ma-text-size-h5 .display_only {
 	font-size: $h5-fontsize;
     font-weight: 300;
 }
 
-.h6 > .ma-region-title, .input-field.h6 {
+.h6 > .ma-region-title, .ma-text-size-h6 .display_only {
 	font-size: $h6-fontsize;
     font-weight: 300;
 }
 
-.ma-region.hide-title > .ma-region-title, .ma-region.hide-title .card-content > .ma-region-title {
+// Titles
+.ma-region.hide-title > .ma-region-title
+, .ma-region.hide-title > .card > .card-content > .ma-region-title {
     @include hide();
 }
 
-.big-label {
-	font-size: 1.5rem;
-}
-
+// Nowrap
 .text-nowrap {
     white-space: nowrap;
 }
 
-/* Overrides */
+/* Text Color */
 .ma-region-title-amber-text .ma-region-title {
     @extend .amber-text;
 }
@@ -120,9 +123,4 @@
 
 .ma-region-title-yellow-text .ma-region-title {
     @extend .yellow-text;
-}
-
-/* Truncate */
-.truncate > .ma-region-body {
-    @extend .truncate;
 }

@@ -175,35 +175,6 @@ span.ma-error-message {
     transform: translateY(-190%);
 }
 
-/* Text Size */
-.ma-text-size-responsive .display_only {
-    @extend .flow-text;
-}
-
-.ma-text-size-h1 .display_only {
-    @extend .h1;
-}
-
-.ma-text-size-h2 .display_only {
-    @extend .h2;
-}
-
-.ma-text-size-h3 .display_only {
-    @extend .h3;
-}
-
-.ma-text-size-h4 .display_only {
-    @extend .h4;
-}
-
-.ma-text-size-h5 .display_only {
-    @extend .h5;
-}
-
-.ma-text-size-h6 .display_only {
-    @extend .h6;
-}
-
 /* Text Alignment */
 .ma-field-container {
     &.left-align, &.center-align, &.right-align {

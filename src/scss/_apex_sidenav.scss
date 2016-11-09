@@ -64,7 +64,7 @@ Sidebar Fixed
     }
 
 	@media #{$large-and-up} {
-        #menu-trigger {
+        #app-sidenav-trigger {
             display: none!important;
         }
 
@@ -87,7 +87,7 @@ Sidebar Fixed
 	}
 
   	@media #{$medium-and-down} {
-        #menu-trigger {
+        #app-sidenav-trigger {
             display: block!important;
         }
 

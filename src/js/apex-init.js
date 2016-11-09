@@ -13,9 +13,6 @@ var materialAPEX = materialAPEX || {};
 materialAPEX.items = {
     init: function () {
         /* Fix for label issue with many components. Need to have label after component. */
-        // $(".input-field > label, .input-field fieldset > label").parent().append(function() {
-        //     return $(this).find("label");
-        // });
         $(".input-field > label, .input-field fieldset > label").each(function() {
             $(this).appendTo($(this).parent());
         });
@@ -70,6 +67,11 @@ materialAPEX.ir = {
 
 materialAPEX.initial = {
     init: function() {
+        // App Menu
+        if (document.getElementById('app-sidenav')) {
+            $("#app-sidenav-trigger").removeClass("hide");
+        }
+
         // Grid - Handling s12 default override
         $(".s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10,.s11").removeClass("s12");
 

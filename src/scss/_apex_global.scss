@@ -39,9 +39,12 @@ i {
 	}
 }
 
-#menu-trigger {
-	display:block!important;
-	padding-left: 15px;
+#app-sidenav-trigger {
+    display: block!important;
+
+    &.hide {
+    	display: none!important;
+    }
 }
 
 .materialbox-caption {
