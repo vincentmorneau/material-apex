@@ -100,6 +100,16 @@ Alignments
     &.ma-region-buttons-right .ma-region-buttons {
     	text-align: right;
     }
+
+    [align='left'] {
+        text-align: left;
+    }
+    [align='center'] {
+        text-align: center;
+    }
+    [align='right'] {
+        text-align: right;
+    }
 }
 
 /*
