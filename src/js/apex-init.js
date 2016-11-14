@@ -10,6 +10,18 @@ $.fn.ignore = function(selector) {
 **/
 var materialAPEX = materialAPEX || {};
 
+materialAPEX.wizard = {
+    init: function() {
+        var classSelector =  ".ma-wizard";
+
+        // finds the current step and flags all previous ones to complete
+        $(classSelector)
+            .find(classSelector + "-step.is-active")
+            .prevAll(classSelector + "-step")
+            .addClass("is-complete");
+    }
+};
+
 materialAPEX.items = {
     init: function () {
         /* Fix for label issue with many components. Need to have label after component. */
