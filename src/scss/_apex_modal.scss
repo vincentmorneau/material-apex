@@ -35,6 +35,10 @@ body.body-modal {
 
     .modal-footer {
         background-color: $modal-background-footer;
+
+        td, th {
+            padding: 0;
+        }
     }
 }
 
