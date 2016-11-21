@@ -207,7 +207,7 @@ materialAPEX.initial = {
         // this is for displaying a success message when a modal page closes
         $("body").on("apexafterclosedialog", function(e, data) {
             if (data.successMessage.text) {
-                $('#toast-container').append('<div class="ma-success-message toast velocity-animating green lighten-2">' +
+                $('#toast-container').append('<div class="ma-success-message toast velocity-animating green lighten-2 white-text">' +
                     '<div class="ma-success-message-content white-text">' + data.successMessage.text + '</div>' +
                     '<i class="ma-toast-close material-icons right">close</i>' +
                     '</div>');

@@ -35,7 +35,7 @@
 <!-- Item Container -->
 #REGION_POSITION_01#
 
-<div class="container">
+<div class="ma-main-container m-t-3">
     #GLOBAL_NOTIFICATION#
     #SUCCESS_MESSAGE#
     #NOTIFICATION_MESSAGE#
@@ -75,11 +75,18 @@
 </div>
 {{/success_message}}
 {{#message}}
-<div class="row">
+<div class="row m-b-0">
     <div class="col s12">
-        <div class="card-panel red lighten-2 white-text">
-            <i class="panel-close material-icons right">close</i>
-            #MESSAGE#
+        <div class="ma-alert card-panel yellow lighten-4 grey-text text-darken-1">
+            <div class="ma-alert-icon p-r-1">
+                <i class="material-icons">warning</i>
+            </div>
+            <div class="ma-alert-content">
+                #MESSAGE#
+            </div>
+            <div class="ma-alert-close p-l-1">
+                <i class="panel-close material-icons">close</i>
+            </div>
         </div>
     </div>
 </div>
@@ -87,21 +94,21 @@
 
 {{#error_page_template}}
 <div class="row m-t-3">
-  <div class="col s12 m8 offset-m2">
-    <div class="card">
-      <div class="card-image center">
-        <i class="material-icons xlarge red-text m-t-1">error</i>
-      </div>
-      <div class="card-content">
-        <p>#MESSAGE#</p>
-        <p>#ADDITIONAL_INFO#</p>
-        <p>#TECHNICAL_INFO#</p>
-      </div>
-      <div class="card-action">
-        <a href="#BACK_LINK#">#OK#</a>
-      </div>
+    <div class="col s12 m8 offset-m2">
+        <div class="card">
+            <div class="card-image center">
+                <i class="material-icons xlarge red-text text-lighten-1 m-t-1">error</i>
+            </div>
+            <div class="card-content grey-text">
+                <p>#MESSAGE#</p>
+                <p>#ADDITIONAL_INFO#</p>
+                <p>#TECHNICAL_INFO#</p>
+            </div>
+            <div class="card-action">
+                <a href="#BACK_LINK#" class="btn-flat waves-effect waves-light">#OK#</a>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 {{/error_page_template}}
 
@@ -118,3 +125,15 @@
     #CONTENT#
 </div>
 {{/grid_column_template}}
+
+{{#template_options}}
+[
+    {
+        "name": "CONTAINER",
+        "display_name": "Container",
+        "display_sequence": 1,
+        "css_classes": "main-container",
+        "help_text": ""
+    }
+]
+{{/template_options}}

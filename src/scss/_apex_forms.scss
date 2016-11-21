@@ -147,6 +147,10 @@ span.ma-error-message {
     }
 }
 
+.input-field .prefix ~ label {
+    width: auto;
+}
+
 /* Display Only */
 .input-field .prefix ~ .display_only {
    margin-left: 3rem;

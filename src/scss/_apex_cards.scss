@@ -13,3 +13,7 @@
 .ma-sticky-action .card {
     @extend .sticky-action;
 }
+
+.ma-region-bg-color > .card {
+    background-color: inherit;
+}
