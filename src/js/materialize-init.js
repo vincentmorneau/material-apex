@@ -9,6 +9,47 @@ materialAPEX.select = {
     }
 };
 
+materialAPEX.datepicker = {
+    init: function () {
+        $('.hasDatepicker')
+            // .attr("type", "date")
+            .each(function(){
+            // replace jquery datepicker formats with pickadate.js formats
+            var format = $(this).datepicker('option', 'dateFormat')
+                            .replace("dd", "dd")
+                            .replace("d", "d")
+                            .replace("oo", "dd")
+                            .replace("o", "dd")
+                            .replace("DD", "dddd")
+                            .replace("D", "ddd")
+                            .replace("mm", "mm")
+                            .replace("m", "m")
+                            .replace("MM", "mmmm")
+                            .replace("M", "mmm")
+                            .replace("yy", "yyyy")
+                            .replace("y", "yy")
+                            ;
+
+            // default date is not working for now
+            // var defaultDate = $(this).datepicker('option', 'defaultDate');
+
+            $(this).pickadate({
+                selectMonths: $(this).datepicker('option', 'changeMonth'), // Creates a dropdown to control month
+                selectYears: $(this).datepicker('option', 'yearRange'), // Creates a dropdown of years to control year
+                format: format,
+                min: $(this).datepicker('option', 'minDate') || undefined,
+                max: $(this).datepicker('option', 'maxDate') || undefined,
+                onClose: function () {
+                    $(document.activeElement).blur();
+                }
+            });
+        });
+
+        $('.hasDatepicker')
+            .datepicker( "destroy" );
+    }
+};
+
 materialAPEX.materialize = {
     init: function () {
         /* Collapsible */
@@ -81,13 +122,16 @@ materialAPEX.materialize = {
 
 $(function() {
     materialAPEX.select.init();
+    materialAPEX.datepicker.init();
     materialAPEX.materialize.init();
 
     apex.jQuery('select').on('apexafterrefresh', function(){
         materialAPEX.select.init();
+        materialAPEX.datepicker.init();
     });
 
     $(document).ajaxSuccess(function() {
         materialAPEX.select.init();
+        materialAPEX.datepicker.init();
     });
 });

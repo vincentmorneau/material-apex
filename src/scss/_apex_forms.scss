@@ -24,17 +24,22 @@ Colors
 /*
 Date Pickers
 */
-// This is a fix for the wrong margin and padding in default.date.scss
-.picker__select--month,
-.picker__select--year {
-  	padding: 0;
-}
+// ::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+// ::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+// ::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+//     color: transparent;
+// }
 
-@media (min-width: 24.5em) {
-	.picker__select--month,
-	.picker__select--year {
-		margin-top: 0;
-	}
+.u-TF-item--datepicker, .datepicker {
+    cursor: pointer;
+
+    // &::after {
+    //     font-family: "Material Icons";
+    //     content: "today";
+    //     position: absolute;
+    //     right: 0;
+    //     font-size: 2rem;
+    // }
 }
 
 /*
