@@ -87,8 +87,7 @@ materialAPEX.initial = {
         // Grid - Handling s12 default override
         $(".s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10,.s11").removeClass("s12");
 
-        // deletes empty html partsof a card
-        // this is used to simplify region templates
+        // deletes empty html tags
         $('.card-action, .card-content, span.badge, i.material-icons, .ma-button-label')
             .filter(function() {
                 return $.trim($(this).text()) === '' && $(this).children().length === 0;
@@ -96,7 +95,7 @@ materialAPEX.initial = {
             .remove();
 
         /* Fixed Action Button */
-        $("a.fixed-action-btn").each(function() {
+        $(".fixed-action-btn").each(function() {
             var position = "";
             var fab = $(this);
             if (fab.hasClass("fab-right")) position += "fab-right ";
@@ -111,7 +110,7 @@ materialAPEX.initial = {
             fab.removeClass("fixed-action-btn horizontal click-to-toggle fab-right fab-left fab-absolute");
         });
 
-        $(".fixed-action-btn ul li a.btn-floating").each(function() {
+        $(".fixed-action-btn ul li .btn-floating").each(function() {
             $(this)
                 .attr("data-tooltip", $(this).find(".ma-button-label").text())
                 .attr("data-position", "left");
