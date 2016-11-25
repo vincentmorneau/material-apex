@@ -1,3 +1,8 @@
 .collection:not(.with-header) .collection-header {
     display: none;
 }
+
+.collection span.badge {
+    max-width: 60%;
+    display: inline-block;
+}
