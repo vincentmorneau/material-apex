@@ -94,6 +94,11 @@ materialAPEX.initial = {
             })
             .remove();
 
+        // Font Awesome Support with Material Icons HTML markup
+        $(".material-icons:contains('fa-')").each(function(index) {
+            $(this).attr("class", $(this).text()).text('');
+        });
+
         /* Fixed Action Button */
         $(".fixed-action-btn").each(function() {
             var position = "";
