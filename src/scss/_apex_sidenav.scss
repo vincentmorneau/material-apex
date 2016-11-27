@@ -1,7 +1,15 @@
 $sidenav-height: 44px;
 
+#sidenav-overlay {
+  	z-index: 999;
+}
+
+.drag-target {
+  	z-index: 1000;
+}
+
 .side-nav {
-    z-index: 1002;
+    z-index: 1000;
     height: 100%;
     width: $sidenav-width;
 
@@ -11,47 +19,15 @@ $sidenav-height: 44px;
 		left: initial;
 	}
 
-	li {
-		line-height: $sidenav-height;
-
-		i {
-			margin-right: 1rem;
-		  	font-size: 1.5rem;
-	  	  	float: left;
-		  	line-height: $sidenav-height;
-		  	height: $sidenav-height;
-		}
-
-		a {
-			line-height: $sidenav-height;
-			height: $sidenav-height;
-		}
-	}
-
 	a {
-		padding: 0 15px;
+		padding: 0 16px;
 	}
 
 	.collapsible {
-		border: none;
-		box-shadow: none;
-
-        .collapsible-header {
-        	min-height: inherit;
-        }
-
         .collapsible-body {
             background-color: $sidenav-bg-color;
         }
 	}
-}
-
-#sidenav-overlay {
-  	z-index: 998;
-}
-
-.drag-target {
-    z-index: 999;
 }
 
 /*
@@ -60,7 +36,6 @@ Sidebar Fixed
 .side-nav-fixed {
     .side-nav {
         @extend .fixed;
-        z-index: 999!important;
     }
 
 	@media #{$large-and-up} {
@@ -68,18 +43,19 @@ Sidebar Fixed
             display: none!important;
         }
 
+        .top-nav-wrapper {
+            z-index: 1001;
+        }
+
 		.side-nav {
-    		left:0!important;
             transform: translateX(0)!important;
+            top: $navbar-height;
+            height: calc(100% - #{$navbar-height});
 		}
 
-    	header, main, footer {
+    	/*header,*/ main, footer {
         	padding-left: $sidenav-width;
       	}
-
-     	.top-nav {
-            width: calc(100% - #{$sidenav-width});
-        }
 
         .container, &.main-container .ma-main-container {
             width: 85%;
@@ -91,12 +67,8 @@ Sidebar Fixed
             display: block!important;
         }
 
-    	header, main, footer {
+    	/*header,*/ main, footer {
       		padding-left: 0;
     	}
-
-	  	.top-nav {
-		    width: 100%;
-		}
   	}
 }

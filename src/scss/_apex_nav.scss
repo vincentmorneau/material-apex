@@ -6,9 +6,9 @@
     @extend .navbar-fixed;
 }
 
-nav.top-nav {
+/*.top-nav {
     z-index: 998;
-}
+}*/
 
 nav ul a {
     display: inline-block;
@@ -69,6 +69,7 @@ nav .nav-wrapper i {
     @extend .table-of-contents;
 }
 
+/* Region Display Selector */
 .apex-rds-selected a {
     font-weight: 500;
     padding-left: 18px;
