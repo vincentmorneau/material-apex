@@ -223,6 +223,11 @@ materialAPEX.initial = {
             }
         });
 
+        // overwrites apex.theme.defaultStickyTop to help with the region display selector
+        apex.theme.defaultStickyTop = function() {
+            return $("header").height();
+        }
+
         /* showSpinner */
         if (typeof apex.util.showSpinner === "function") {
             var showSpinnerOld = apex.util.showSpinner;

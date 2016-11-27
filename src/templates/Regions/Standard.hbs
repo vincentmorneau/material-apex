@@ -1,12 +1,20 @@
 {{#template}}
 <div id="#REGION_STATIC_ID#" class="ma-region section clearfix #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
-    <p class="ma-region-title">
-        <i class="material-icons">#ICON_CSS_CLASSES#</i>
-        #TITLE#
-    </p>
+    <div class="ma-region-header">
+        <div class="ma-region-buttons ma-region-buttons-left">
+            #PREVIOUS#
+        </div>
+        <div class="ma-region-title">
+            <i class="material-icons">#ICON_CSS_CLASSES#</i>
+            #TITLE#
+        </div>
+        <div class="ma-region-buttons ma-region-buttons-right">
+            #NEXT#
+        </div>
+    </div>
 
     <div class="ma-region-buttons top">
-        #EDIT##EXPAND##CREATE##NEXT##PREVIOUS#
+        #EDIT##EXPAND##CREATE#
     </div>
 
     <div class="ma-region-body">

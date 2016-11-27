@@ -114,6 +114,7 @@ materialAPEX.materialize = {
                 addRowOld();
                 materialAPEX.items.init();
                 materialAPEX.select.init();
+                materialAPEX.datepicker.init();
                 $(".select-wrapper .select-wrapper").siblings().remove().end().unwrap();
             };
         }
@@ -122,12 +123,10 @@ materialAPEX.materialize = {
 
 $(function() {
     materialAPEX.select.init();
-    materialAPEX.datepicker.init();
     materialAPEX.materialize.init();
 
-    apex.jQuery('select').on('apexafterrefresh', function(){
+    $('select').on('apexafterrefresh', function(){
         materialAPEX.select.init();
-        materialAPEX.datepicker.init();
     });
 
     $(document).ajaxSuccess(function() {

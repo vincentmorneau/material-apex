@@ -15,10 +15,16 @@ ul {
 	}
 }
 
+/*
+* Main Container Handler
+*/
 .main-container .ma-main-container {
 	@extend .container;
 }
 
+/*
+* Fix for menu icons
+*/
 i {
 	&.left-l {
 		float: left;
@@ -39,6 +45,9 @@ i {
 	}
 }
 
+/*
+* Hamburger Menu
+*/
 #app-sidenav-trigger {
     display: block!important;
 
@@ -47,12 +56,15 @@ i {
     }
 }
 
+/*
+* Materialbox
+*/
 .materialbox-caption {
 	top:0;
 }
 
 /*
-Sticky Footer
+* Sticky Footer
 */
 form {
     display: flex;
@@ -100,12 +112,15 @@ Alignments
 	text-align: right;
 }
 
+
 [align='left'] {
     text-align: left;
 }
+
 [align='center'] {
     text-align: center;
 }
+
 [align='right'] {
     text-align: right;
 }
@@ -117,11 +132,6 @@ span.badge.new:after {
     content: "";
 }
 
-/* Notifications */
-// .htmldbStdErr a {
-//     color: inherit;
-// }
-
 /* Parallax */
 .parallax-container {
     height: initial;
@@ -131,4 +141,32 @@ span.badge.new:after {
 /* Blockquote */
 blockquote {
     padding: 1rem;
+}
+
+/*
+* Buttons container
+*/
+.ma-region-header {
+    display: table;
+
+    .ma-region-title {
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .ma-region-buttons {
+        width: 0;
+        display: table-cell;
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+
+    .ma-region-buttons-left button:last-child {
+        margin-right: 1rem;
+    }
+
+    .ma-region-buttons-right button:first-child {
+        margin-left: 1rem;
+    }
 }
