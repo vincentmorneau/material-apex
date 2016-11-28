@@ -1,7 +1,7 @@
 {
     "name": "material-apex",
     "author": "Vincent Morneau",
-    "version": "0.9.5",
+    "version": "0.9.6",
     "description": "Material Design Theme for Oracle APEX 5",
     "link": "https://apex.oracle.com/pls/apex/f?p=12192",
     "license": "MIT",
@@ -10,6 +10,6 @@
         "url": "git://github.com/vincentmorneau/material-apex.git"
     },
     "dependencies": {
-        "materialize-css": "0.97.7"
+        "materialize-css": "0.97.8"
     }
 }

@@ -108,11 +108,12 @@ materialAPEX.initial = {
             if (fab.hasClass("fab-absolute")) position += "fab-absolute ";
             if (fab.hasClass("horizontal")) position += "horizontal ";
             if (fab.hasClass("click-to-toggle")) position += "click-to-toggle ";
+            if (fab.hasClass("toolbar")) position += "toolbar ";
 
             fab.siblings(".btn, .btn-flat").addClass("btn-floating").removeClass("btn btn-flat");
             fab.siblings(".btn-floating").addBack().wrapAll("<div class='fixed-action-btn " + position + "'>");
             fab.siblings(".btn-floating").wrapAll("<ul>").wrap("<li>");
-            fab.removeClass("fixed-action-btn horizontal click-to-toggle fab-right fab-left fab-absolute");
+            fab.removeClass("fixed-action-btn horizontal click-to-toggle toolbar fab-right fab-left fab-absolute");
         });
 
         $(".fixed-action-btn ul li .btn-floating").each(function() {

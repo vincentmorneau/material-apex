@@ -1,12 +1,12 @@
 // Icons
+
 .icon-float-left i {
-	@extend .left;
+    @extend .left;
 }
 
 .icon-float-right i {
-	@extend .right;
+    @extend .right;
 }
-
 // Fixed Action Button
 .fixed-action-btn {
     bottom: 45px;
@@ -27,7 +27,7 @@
     }
 
     &.horizontal ul li {
-        margin: 5px 0 0 0;
+        margin: 5px 0 0;
     }
 
     ul {
@@ -43,9 +43,36 @@
 .fab-relative {
     position: relative;
 }
-
 /* Inline button
 This is to give space as if there was a label */
 .ma-btn-inline {
     margin-top: 2rem;
+}
+/* Toolbar */
+&.toolbar {
+    &.active {
+        & > button i {
+            opacity: 0;
+        }
+    }
+
+    ul {
+        li {
+            button {
+                display: block;
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                box-shadow: none;
+                color: #fff;
+                line-height: $button-floating-large-size;
+                z-index: 1;
+                border-radius: 0;
+                margin: 0!important;
+                box-shadow: none;
+            }
+        }
+    }
 }

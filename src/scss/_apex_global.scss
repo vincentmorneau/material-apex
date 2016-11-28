@@ -148,6 +148,8 @@ blockquote {
 */
 .ma-region-header {
     display: table;
+    width: 100%;
+    border-collapse: collapse;
 
     .ma-region-title {
         width: 100%;

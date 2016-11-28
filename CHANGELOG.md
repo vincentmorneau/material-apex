@@ -1,4 +1,39 @@
 ## Changelog
+
+#### v0.9.6
+- New features
+    - **Timeline** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:47)
+    - **Wizard** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:72)
+    - **Calendar** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:41)
+    - **Date Pickers** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
+    - **Login Page** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:101)
+    - **Error Page** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:102)
+- Enhancements
+    - **Now support for Font-Awesome (as well as Material Design Icons)** [(view)](https://github.com/vincentmorneau/material-apex/issues/173)
+    - **Page 0 no longer requires the hamburger menu, it is now computed** [(view)](https://github.com/vincentmorneau/material-apex/issues/161)
+    - **Fixed side navigation has a better look and feel** [(view)](https://github.com/vincentmorneau/material-apex/issues/144)
+    - Top and bottom region button has better support [(view)](https://github.com/vincentmorneau/material-apex/issues/157)
+    - Standard and card regions can now have buttons alongside the title (left and right) [(view)](https://github.com/vincentmorneau/material-apex/issues/146)
+    - Added icon support for some region templates (Standard, Card) [(view)](https://github.com/vincentmorneau/material-apex/issues/151)
+    - Added spacers template options to regions, buttons and items [(view)](https://github.com/vincentmorneau/material-apex/issues/128)
+- Bug fixes
+    - Checkbox labels now showing with an empty label [(view)](https://github.com/vincentmorneau/material-apex/issues/158)
+    - Responsive text only applies to display only items now [(view)](https://github.com/vincentmorneau/material-apex/issues/159)
+    - Input labels now inherit the region text color [(view)](https://github.com/vincentmorneau/material-apex/issues/156)
+    - Switch has better positioning [(view)](https://github.com/vincentmorneau/material-apex/issues/147)
+    - Horizontal fields has better alignment [(view)](https://github.com/vincentmorneau/material-apex/issues/149)
+    - App logo has better positioning [(view)](https://github.com/vincentmorneau/material-apex/issues/154)
+    - Nested card region has better support [(view)](https://github.com/vincentmorneau/material-apex/issues/152)
+    - Theme Roller computation enhancements (CSS calc) [(view)](https://github.com/vincentmorneau/material-apex/issues/162)
+    - Modal button has better positioning [(view)](https://github.com/vincentmorneau/material-apex/issues/165)
+- Others
+    - Changed Theme ID [(view)](https://github.com/vincentmorneau/material-apex/issues/148)
+    - Dropped RTL support [(view)](https://github.com/vincentmorneau/material-apex/issues/153)
+    - Merged a few pages in the demo app
+    - Added documentation for available substitution strings in named reports
+
+[More here.](https://github.com/vincentmorneau/material-apex/milestone/11)
+
 #### v0.9.5
 - New features
     - **Switch Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
