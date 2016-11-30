@@ -1,3 +1,9 @@
+/* initial load */
+html {
+    // !important is required to overwrite what APEX already does
+    visibility: hidden!important;
+}
+
 body {
 	background: $background-color;
 }

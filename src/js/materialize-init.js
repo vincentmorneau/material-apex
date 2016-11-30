@@ -133,4 +133,8 @@ $(function() {
         materialAPEX.select.init();
         materialAPEX.datepicker.init();
     });
+
+    // making the page visible again
+    // !important is required to overwrite what APEX already does
+    $("html").attr('style', 'visibility: visible!important');
 });
