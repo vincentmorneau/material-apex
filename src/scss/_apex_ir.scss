@@ -1,4 +1,4 @@
-@mixin ma-col {	
+@mixin ma-col {
     float: left;
     box-sizing: border-box;
 
@@ -36,11 +36,15 @@
     border-bottom: none;
 
 	.a-IRR-controlGroup.a-IRR-controlGroup--search button, .a-IRR-controlGroup.a-IRR-controlGroup--options button, .a-IRR-button.a-IRR-button--reportView {
-		@extend .btn-large;	
-		padding: 0 0.8rem;	
+		@extend .btn-large;
+		padding: 0 0.8rem;
 		background-color: $ir-specific-color;
 
-	  	&:active, &:focus, &:visited, &:hover {
+	  	&:focus {
+			background-color: $ir-specific-color;
+	  	}
+
+	  	&:active, &:visited, &:hover {
 			background-color: $ir-specific-color-light;
 			box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 	  	}
@@ -51,7 +55,11 @@
 		margin: 0 0.5rem;
 		background-color: $ir-specific-color;
 
-	  	&:active, &:focus, &:visited, &:hover {
+	  	&:focus {
+			background-color: $ir-specific-color;
+	  	}
+
+	  	&:active, &:visited, &:hover {
 			background-color: $ir-specific-color-light;
 			box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 	  	}
@@ -127,7 +135,7 @@
 		tr:nth-child(2) {
 			display:none;
 		}
-	}	
+	}
 
 	.t-fht-thead {
 		display:none;
@@ -152,7 +160,7 @@
 
 	table.table-responsive.a-IRR-table td:last-child {
 	    border-bottom: 1px solid #F0F0F0;
-	} 
+	}
 
 	.t-fht-wrapper div:not(.t-fht-tbody) {
 		display:none!important;
@@ -216,7 +224,7 @@
 
 	@extend .btn;
 
-  	&:active, &:focus, &:visited, &:hover {
+  	&:active, &:visited, &:hover {
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   	}
 
@@ -308,7 +316,11 @@
 	background-color: $ir-specific-color;
   	padding: 9px 5px 8px 4px;
 
-  	&:active, &:focus, &:visited, &:hover {
+    &:focus {
+        background-color: $ir-specific-color;
+    }
+
+  	&:active, &:visited, &:hover {
 		background-color: $ir-specific-color-light;
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   	}
