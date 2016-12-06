@@ -114,10 +114,6 @@
     padding: 20px 0px 0px 0px;
 }
 
-.a-IRR .a-Icon:before {
-	font-size: 1.3rem;
-}
-
 .a-Button {
     font-size: inherit;
 }
@@ -206,6 +202,7 @@
 
 .a-IRR-searchFieldContainer {
 	width: calc(100% - 50px);
+    margin-top: 1rem;
 }
 
 .a-IRR-search {
@@ -239,7 +236,7 @@
 	@extend .modal;
 
 	.ui-widget-content {
-		background:none;
+		background: none;
 	}
 
 	@media #{$small-and-down} {
@@ -262,7 +259,7 @@
 
 	select {
 		display:block;
-	  	width: initial;
+	  	// width: initial;
 	}
 
 	.ajax_shuttle select {
@@ -270,9 +267,9 @@
 		height: 10rem;
 	}
 
-	.lov_colorpicker input {
-		width: initial;
-	}
+	// .lov_colorpicker input {
+	// 	width: initial;
+	// }
 
 	.a-IRR-dialogContent--highlight .itemlink {
 		display:none;
@@ -303,9 +300,9 @@
 	}
 }
 
-.a-IRR-dialog .ui-widget-content {
-    background: $background-color 50% 50% repeat-x;
-}
+// .a-IRR-dialog .ui-widget-content {
+//     background: $background-color 50% 50% repeat-x;
+// }
 
 .a-IRR-pagination-label {
   padding: 10px;
@@ -373,4 +370,61 @@ label.a-IRR-controlsCheckboxLabel {
 
 .a-IRR-singleRow-value {
   	background-color: #FCFCFC;
+}
+
+.a-Icon.icon-menu-scroll-up:before {
+    content: "\e0e5";
+}
+
+.a-IRR-controls-item {
+    float: left;
+}
+
+.a-IRR-reportSummaryContainer {
+    display: none;
+}
+
+.a-Menu-content {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 0;
+
+    ul {
+        @extend .collection;
+
+        margin: 0;
+        overflow: visible;
+
+        .a-Menu-item {
+            @extend .collection-item;
+
+            padding: 0;
+            line-height: 32px;
+
+            &.is-focused, &.is-expanded {
+                background-color: $primary-color;
+                color:#fff;
+            }
+
+            .a-Menu .a-Menu-item {
+                border-bottom: none;
+            }
+        }
+
+        .a-Menu-itemSep {
+            @include hide();
+        }
+    }
+}
+
+.ui-widget-content {
+    border: 1px solid #aaa;
+    background: none;
+    color: #222;
+}
+
+.ui-resizable-handle {
+    display: none!important;
 }
