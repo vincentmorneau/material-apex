@@ -74,6 +74,8 @@ materialAPEX.ir = {
         $("[id*='_chart_type'] input[type='radio'], [id*='_default_type'] input[type='radio']").each(function() {
             $(this).after("<label for='" + $(this).attr("id") + "'></label>").parent().removeAttr("nowrap");
         });
+
+        $(document).trigger("apexwindowresized");
     }
 };
 

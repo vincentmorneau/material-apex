@@ -75,11 +75,14 @@
 }
 
 .a-IRR-header {
-  	border-left: none;
+    border-left: none;
+    border-bottom: none;
+  	background-color: transparent;
+    font-size: 15px;
 }
 
-.a-IRR-header {
-  	background-color: transparent;
+.a-IRR-headerLabel, .a-IRR-headerLink {
+    padding: 15px 5px;
 }
 
 .a-IRR-table td {
@@ -259,17 +262,12 @@
 
 	select {
 		display:block;
-	  	// width: initial;
 	}
 
 	.ajax_shuttle select {
 		width:100%;
 		height: 10rem;
 	}
-
-	// .lov_colorpicker input {
-	// 	width: initial;
-	// }
 
 	.a-IRR-dialogContent--highlight .itemlink {
 		display:none;
@@ -279,6 +277,10 @@
 		height: 4rem;
     	width: 60%;
 	}
+
+    .a-IRR-dialogTable {
+        width: inherit;
+    }
 
 	.a-IRR-dialogTable td, .a-IRR-dialogTable th {
 	    padding-right: 20px;
