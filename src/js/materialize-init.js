@@ -118,6 +118,9 @@ materialAPEX.materialize = {
                 $(".select-wrapper .select-wrapper").siblings().remove().end().unwrap();
             };
         }
+
+        // Bottom sheets init
+        $(".modal.bottom-sheet").modal();
     }
 };
 

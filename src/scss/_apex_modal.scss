@@ -24,7 +24,7 @@ body.body-modal {
         .modal-footer {
             text-align:right;
 
-            a {
+            a, button {
                 float: none;
             }
         }
@@ -138,6 +138,10 @@ body {
             opacity: 0.5;
         }
     }
+}
+
+body .ui-dialog--apex .ui-dialog-content {
+    padding: 0;
 }
 
 @media #{$small-and-down} {
