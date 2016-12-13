@@ -126,14 +126,13 @@ materialAPEX.initial = {
 
         $("div.fab-absolute").parent().addClass("fab-relative");
 
-        // Vertical Alignment
-        $(".valign-wrapper>.row").addClass("valign-wrapper");
-
         /* Fix for APEX  Select Template */
         $('select').closest('.input-field').removeClass('input-field');
 
         /* Parallax */
-        $(".parallax-container").closest(".col").removeClass().closest(".row").removeClass();
+        $(".parallax-container")
+            .closest(".col").removeClass()
+            .closest(".row").removeClass();
 
         /* Display only & read only */
         $(".display_only")

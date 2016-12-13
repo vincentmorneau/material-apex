@@ -40,7 +40,8 @@
 }
 
 .ma-region.hide-title > .ma-region-header > .ma-region-title
-, .ma-region.hide-title > .card > .card-content > .ma-region-header > .ma-region-title {
+, .ma-region.hide-title.card > .card-content > .ma-region-header > .ma-region-title
+, blockquote.ma-region.hide-title > .ma-region-title {
     @include hide();
 }
 

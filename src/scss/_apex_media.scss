@@ -4,11 +4,3 @@
         height: auto;
     }
 }
-
-.valign-wrapper {
-    margin-bottom:0;
-
-    .row {
-        @extend .valign-wrapper;
-    }
-}
