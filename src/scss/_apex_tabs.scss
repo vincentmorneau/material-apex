@@ -13,11 +13,11 @@ ul.tabs ~ div.row, .hide-tab-scrollbar ~ div.row {
 }
 
 @media #{$medium-and-up} {
-    .section.white .a-IRR-container {
+    .tabs .section.white .a-IRR-container {
         box-shadow: none;
     }
 
-    .t-fht-thead {
+    .tabs .t-fht-thead {
         width:inherit!important;
     }
 }

@@ -76,9 +76,13 @@
 
 .a-IRR-header {
     border-left: none;
-    border-bottom: none;
-  	background-color: transparent;
+    // border-bottom: none;
+  	background-color: #fff;
     font-size: 15px;
+}
+
+fieldset.datepicker .t-fht-wrapper .t-fht-thead {
+    z-index: 1!important;
 }
 
 .a-IRR-headerLabel, .a-IRR-headerLink {
@@ -87,6 +91,19 @@
 
 .a-IRR-table td {
 	padding: 15px 5px;
+
+    .datepicker td {
+        border-top: none;
+    }
+
+    .picker__table td {
+        border-top: none;
+        padding: 0;
+    }
+}
+
+.picker__input {
+    cursor: pointer;
 }
 
 @media #{$medium-and-up} {

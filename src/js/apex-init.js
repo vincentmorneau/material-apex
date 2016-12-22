@@ -24,6 +24,17 @@ materialAPEX.wizard = {
 
 materialAPEX.items = {
     init: function () {
+        // fix for empty checkbox and radio labels
+        $("[type='checkbox'], [type='radio']").each(function(){
+            if (!this.id) {
+                this.id = Materialize.guid();
+            }
+
+            if (!$(this).next().is("label")) {
+                $(this).after("<label for='" + this.id + "'></label>");
+            }
+        });
+
         /* Fix for label issue with many components. Need to have label after component. */
         $(".input-field > label, .input-field fieldset > label").each(function() {
             $(this).appendTo($(this).parent());
@@ -146,12 +157,6 @@ materialAPEX.initial = {
             .closest('.input-field')
             .removeClass('input-field');
 
-        $("fieldset.checkbox_group input, fieldset.radio_group input").each(function(){
-            if (!$(this).next().is("label")) {
-                $(this).after("<label for='" + this.id + "'></label>");
-            }
-        });
-
         /* Textarea */
         $("[id*='_CHAR_COUNTER']").each(function() {
             $(this).closest("div").siblings("textarea").attr("length", $(this).next().text());
@@ -260,16 +265,16 @@ materialAPEX.initial = {
 $(function() {
     materialAPEX.initial.init();
 
-    materialAPEX.ir.init();
     materialAPEX.items.init();
+    materialAPEX.ir.init();
 
     $(".a-IRR-container").parent().on("apexafterrefresh", function() {
-        materialAPEX.ir.init();
         materialAPEX.items.init();
+        materialAPEX.ir.init();
     });
 
     $(document).ajaxSuccess(function() {
-        materialAPEX.ir.init();
         materialAPEX.items.init();
+        materialAPEX.ir.init();
     });
 });

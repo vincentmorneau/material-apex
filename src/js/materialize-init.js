@@ -9,6 +9,12 @@ materialAPEX.select = {
     }
 };
 
+materialAPEX.textarea = {
+    init: function () {
+        $('textarea').addClass('materialize-textarea');
+    }
+};
+
 materialAPEX.datepicker = {
     init: function () {
         $('.hasDatepicker')
@@ -127,13 +133,17 @@ materialAPEX.materialize = {
 $(function() {
     materialAPEX.select.init();
     materialAPEX.materialize.init();
+    materialAPEX.datepicker.init();
 
     $('select').on('apexafterrefresh', function(){
         materialAPEX.select.init();
+        materialAPEX.textarea.init();
+        materialAPEX.datepicker.init();
     });
 
     $(document).ajaxSuccess(function() {
         materialAPEX.select.init();
+        materialAPEX.textarea.init();
         materialAPEX.datepicker.init();
     });
 
