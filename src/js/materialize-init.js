@@ -22,18 +22,13 @@ materialAPEX.datepicker = {
             .each(function(){
             // replace jquery datepicker formats with pickadate.js formats
             var format = $(this).datepicker('option', 'dateFormat')
-                            .replace("dd", "dd")
-                            .replace("d", "d")
                             .replace("oo", "dd")
                             .replace("o", "dd")
                             .replace("DD", "dddd")
                             .replace("D", "ddd")
-                            .replace("mm", "mm")
-                            .replace("m", "m")
                             .replace("MM", "mmmm")
                             .replace("M", "mmm")
-                            .replace("yy", "yyyy")
-                            .replace("y", "yy")
+                            .replace(/y/g, 'yy')
                             ;
 
             // default date is not working for now
