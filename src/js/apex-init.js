@@ -10,6 +10,18 @@ $.fn.ignore = function(selector) {
 **/
 var materialAPEX = materialAPEX || {};
 
+materialAPEX.sideNav = {
+    init: function() {
+        $("#app-sidenav li.active")
+            .parents(".collapsible-body").css("display","block")
+            .siblings(".collapsible-header")
+            .addClass("active")
+            .parents("li")
+            .addClass("active")
+            ;
+    }
+};
+
 materialAPEX.wizard = {
     init: function() {
         var classSelector =  ".ma-wizard";
