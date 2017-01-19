@@ -15,14 +15,14 @@
 
         {{#row_template1}}
         <li class="collection-item">
-            <a href="#LINK#">#TEXT#</a>
+            #TEXT#
             <span class="new badge truncate">#BADGE#</span>
             <a href="#SECONDARY_LINK#" class="secondary-content">
                 <i class="material-icons">#SECONDARY_ICON#</i>
             </a>
         </li>
         {{/row_template1}}
-        {{#row_template_condition1}}:NEW_BADGE is not null and :LINK is not null{{/row_template_condition1}}
+        {{#row_template_condition1}}:NEW_BADGE is not null{{/row_template_condition1}}
         {{#row_template_display_cond1}}NOT_CONDITIONAL{{/row_template_display_cond1}}
         {{#row_template2}}
         <li class="collection-item">
@@ -33,18 +33,18 @@
             </a>
         </li>
         {{/row_template2}}
-        {{#row_template_condition2}}:NEW_BADGE is not null and :LINK is null{{/row_template_condition2}}
+        {{#row_template_condition2}}:NEW_BADGE is not null{{/row_template_condition2}}
         {{#row_template_display_cond2}}NOT_CONDITIONAL{{/row_template_display_cond2}}
         {{#row_template3}}
         <li class="collection-item">
-            <a href="#LINK#">#TEXT#</a>
+            #TEXT#
             <span class="badge truncate">#BADGE#</span>
             <a href="#SECONDARY_LINK#" class="secondary-content">
                 <i class="material-icons">#SECONDARY_ICON#</i>
             </a>
         </li>
         {{/row_template3}}
-        {{#row_template_condition3}}:NEW_BADGE is null and :LINK is not null{{/row_template_condition3}}
+        {{#row_template_condition3}}:NEW_BADGE is null{{/row_template_condition3}}
         {{#row_template_display_cond3}}NOT_CONDITIONAL{{/row_template_display_cond3}}
         {{#row_template4}}
         <li class="collection-item">
