@@ -3,7 +3,7 @@
     visibility: hidden!important;
 }
 
-@mixin show() {
-    display:initial!important;
-    visibility: initial!important;
+@mixin showBlock() {
+    display:block!important;
+    visibility:visible!important;
 }

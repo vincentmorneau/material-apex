@@ -53,7 +53,7 @@ Sidebar Fixed
             height: calc(100% - #{$navbar-height});
 		}
 
-    	/*header,*/ main, footer {
+    	main, footer {
         	padding-left: $sidenav-width;
       	}
 
@@ -67,8 +67,27 @@ Sidebar Fixed
             display: block!important;
         }
 
-    	/*header,*/ main, footer {
+    	main, footer {
       		padding-left: 0;
     	}
   	}
+}
+
+/* SideNav Header */
+.userView {
+    @include hide();
+
+    a, span {
+        color: $sidenav-header-text-color;
+    }
+
+    a {
+        padding: 0;
+        line-height: 24px;
+        height: auto;
+    }
+}
+
+.side-nav .userView {
+    @include showBlock();
 }

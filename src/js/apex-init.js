@@ -19,6 +19,12 @@ materialAPEX.sideNav = {
             .parents("li")
             .addClass("active")
             ;
+
+        $(".side-nav").prepend(function() {
+            return $(".userView");
+        });
+
+        $(".userView").wrap("<li></li>");
     }
 };
 

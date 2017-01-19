@@ -900,6 +900,16 @@ $navbar-brand-font-size: 2.1rem !default;
 
    /*
    {
+     "var" : "@sidenav-header-text-color",
+     "name" : "Sidenav Header Text Color",
+     "type" : "color",
+     "group": "Side Navigation"
+   }
+   */
+   $sidenav-header-text-color: #fff !default;
+
+   /*
+   {
      "var"  : "@sidenav-width",
      "name" : "Sidenav Width",
      "type" : "number",

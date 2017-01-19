@@ -1,0 +1,48 @@
+{{#row_template_before_rows}}
+<div id="#REGION_STATIC_ID#_report" class="userView #COMPONENT_CSS_CLASSES#">
+{{/row_template_before_rows}}
+
+    {{#before_column_heading}}{{/before_column_heading}}
+
+        {{#column_heading_template}}{{/column_heading_template}}
+
+    {{#after_column_heading}}{{/after_column_heading}}
+
+    {{#row_template_before_first}}{{/row_template_before_first}}
+
+        {{#row_template1}}
+        <div class="background">
+            <img class="responsive-img" src="#BACKGROUND_IMG#">
+        </div>
+        <a href="#PROFILE_LINK#"><img class="circle" src="#PROFILE_IMG#"></a>
+        <span class="name">#TEXT_LINE_1#</span>
+        <span class="email">#TEXT_LINE_2#</span>
+        {{/row_template1}}
+        {{#row_template_condition1}}{{/row_template_condition1}}
+        {{#row_template_display_cond1}}{{/row_template_display_cond1}}
+        {{#row_template2}}{{/row_template2}}
+        {{#row_template_condition2}}{{/row_template_condition2}}
+        {{#row_template_display_cond2}}{{/row_template_display_cond2}}
+        {{#row_template3}}{{/row_template3}}
+        {{#row_template_condition3}}{{/row_template_condition3}}
+        {{#row_template_display_cond3}}{{/row_template_display_cond3}}
+        {{#row_template4}}{{/row_template4}}
+        {{#row_template_condition4}}{{/row_template_condition4}}
+        {{#row_template_display_cond4}}{{/row_template_display_cond4}}
+
+    {{#row_template_after_last}}
+    {{/row_template_after_last}}
+
+{{#row_template_after_rows}}
+</div>
+{{/row_template_after_rows}}
+
+{{#pagination_template}}{{/pagination_template}}
+{{#next_page_template}}{{/next_page_template}}
+{{#previous_page_template}}{{/previous_page_template}}
+{{#next_set_template}}{{/next_set_template}}
+{{#previous_set_template}}{{/previous_set_template}}
+
+{{#template_options}}
+[]
+{{/template_options}}
