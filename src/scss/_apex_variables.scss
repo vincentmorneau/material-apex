@@ -1207,13 +1207,24 @@ $ir-specific-color-light: lighten($ir-specific-color, 15%) !default;
 $modal-background-color: #fafafa;
 /*
 {
-   "var": "@modal-background-header",
-   "name": "Modal Header Background",
+   "var": "@modal-header-text",
+   "name": "Modal Header Text",
    "type": "color",
-   "group": "Modals"
+   "group": "Modals",
+   "subgroup": "Modal Header"
 }
 */
-$modal-background-header: $modal-background-color;
+$modal-header-text: #3d3d3d;
+/*
+{
+   "var": "@modal-header-background",
+   "name": "Modal Header Background",
+   "type": "color",
+   "group": "Modals",
+   "subgroup": "Modal Header"
+}
+*/
+$modal-header-background: $modal-background-color;
 /*
 {
    "var": "@modal-background-footer",

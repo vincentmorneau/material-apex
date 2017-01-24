@@ -1,433 +1,432 @@
-/*
-* Code below was entirely taken from APEX UT Vita theme style
-*/
-body .ui-state-default.ui-button.ui-button--hot,
-body button.ui-state-default.ui-priority-primary {
-    background-color: #2578cf;
-    color: #fff;
-    text-shadow: 0 -1px 0 rgba(0,0,0,.1);
-}
-
-body .ui-state-default.ui-button.ui-button--hot:hover,
-body button.ui-state-default.ui-priority-primary:hover {
-    background-color: #4992de;
-}
-
-body .ui-state-default.ui-button.ui-button--hot.is-active,
-body .ui-state-default.ui-button.ui-button--hot.t-MenuButton.is-active,
-body .ui-state-default.ui-button.ui-button--hot:active,
-body button.ui-state-default.ui-priority-primary.is-active,
-body button.ui-state-default.ui-priority-primary.t-MenuButton.is-active,
-body button.ui-state-default.ui-priority-primary:active {
-    background-color: #1d5fa4;
-}
-
-body .ui-state-default.ui-button.ui-button--hot.t-Button--simple,
-body button.ui-state-default.ui-priority-primary.t-Button--simple {
-    box-shadow: 0 0 0 1px #2578cf inset;
-    background-color: #fff;
-    color: #325c87;
-}
-
-body .ui-state-default.ui-button.ui-button--hot.t-Button--simple .t-Icon,
-body button.ui-state-default.ui-priority-primary.t-Button--simple .t-Icon {
-    color: #325c87;
-}
-
-body .ui-state-default.ui-button.ui-button--hot.t-Button--simple:active,
-body .ui-state-default.ui-button.ui-button--hot.t-Button--simple:focus,
-body .ui-state-default.ui-button.ui-button--hot.t-Button--simple:hover,
-body button.ui-state-default.ui-priority-primary.t-Button--simple:active,
-body button.ui-state-default.ui-priority-primary.t-Button--simple:focus,
-body button.ui-state-default.ui-priority-primary.t-Button--simple:hover {
-    background-color: #2578cf;
-    color: #fff;
-    box-shadow: 0 0 0 1px #2578cf inset;
-}
-
-body .ui-state-default.ui-button.ui-button--hot.t-Button--simple:active .t-Icon,
-body .ui-state-default.ui-button.ui-button--hot.t-Button--simple:focus .t-Icon,
-body .ui-state-default.ui-button.ui-button--hot.t-Button--simple:hover .t-Icon,
-body button.ui-state-default.ui-priority-primary.t-Button--simple:active .t-Icon,
-body button.ui-state-default.ui-priority-primary.t-Button--simple:focus .t-Icon,
-body button.ui-state-default.ui-priority-primary.t-Button--simple:hover .t-Icon {
-    color: #fff;
-}
-
-.fc .fc-basic-view td.fc-day-number,
-.fc .fc-day-number,
-.fc-toolbar h2 {
-    color: #404040;
-}
-
-.fc-day-header.ui-widget-header,
-.fc-view .ui-widget-header {
-    background-color: #efefef;
-    color: #3d3d3d;
-    border-color: #e2e2e2;
-}
-
-div.fc-agendaList {
-    background-color: #fff;
-    border-color: #ebebeb;
-    color: #404040;
-}
-
-.fc .fc-agendaList-dayHeader {
-    background-color: #d6d6d6;
-    color: #3d3d3d;
-    border-color: #fafafa;
-}
-
-.fc .fc-agendaList-day {
-    color: #3d3d3d;
-}
-
-.fc .fc-agendaList-date {
-    color: #636363;
-}
-
-.fc .fc-agendaList .fc-event-all-day,
-.fc .fc-agendaList .fc-event-start-time {
-    color: #666;
-}
-
-body .fc .ui-widget-content,
-body .fc td.fc-today {
-    border-color: #e6e6e6;
-    color: #404040;
-}
-
-body .ui-widget-content.fc-today.ui-state-highlight {
-    background-color: #f2f2f2;
-}
-
-.fc .fc-agendaList-item {
-    border-color: #fafafa;
-}
-
-body .ui-tooltip.content-tooltip,
-body .ui-tooltip.content-tooltip .a-DetailedContentList-body {
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-}
-
-body .ui-tooltip.content-tooltip .arrow.bottom:after,
-body .ui-tooltip.content-tooltip .arrow.bottom:before {
-    border-color: #164678 transparent;
-}
-
-body .ui-tooltip.content-tooltip .arrow.bottom.light:after {
-    border-color: #eaeaea transparent;
-}
-
-body .ui-tooltip.content-tooltip .arrow.top:after,
-body .ui-tooltip.content-tooltip .arrow.top:before {
-    border-color: #164678 transparent;
-}
-
-body .ui-tooltip.content-tooltip .arrow.left:before {
-    border-color: transparent #fff transparent transparent;
-}
-
-body .ui-tooltip.content-tooltip .arrow.left:after {
-    border-color: transparent #164678 transparent transparent;
-}
-
-body .ui-tooltip.content-tooltip .arrow.right:before {
-    border-color: transparent transparent transparent rgba(64,64,64,.5);
-}
-
-body .ui-tooltip.content-tooltip .arrow.right:after {
-    border-color: transparent transparent transparent #164678;
-}
-
-body .ui-dialog .ui-dialog-titlebar {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-body .ui-dialog .ui-dialog-titlebar-close {
-    border-radius: 100%;
-}
-
-body .ui-dialog .ui-dialog-buttonpane {
-    border-top-color: #F0F0F0;
-}
-
-body .ui-widget-content {
-    border-color: #ebebeb;
-    background-color: #fff;
-    color: #404040;
-}
-
-body .ui-widget-content a {
-    color: #2370c2;
-}
-
-body .ui-widget-header {
-    border-color: #ebebeb;
-    background: none;
-    background-color: #fcfcfc;
-    color: #3d3d3d;
-}
-
-body .ui-widget-header a {
-    color: #3d3d3d;
-}
-
-body .ui-state-default,
-body .ui-widget-content .ui-state-default,
-body .ui-widget-header .ui-state-default {
-    background-color: #f8f8f8;
-    color: #383838;
-}
-
-body .ui-state-active a,
-body .ui-state-active a:link,
-body .ui-state-active a:visited,
-body .ui-state-default a,
-body .ui-state-default a:link,
-body .ui-state-default a:visited {
-    color: #2370c2;
-}
-
-body .ui-state-hover,
-body .ui-widget-content .ui-state-hover,
-body .ui-widget-header .ui-state-hover {
-    background-color: #fff;
-    color: #383838;
-}
-
-body .ui-state-focus,
-body .ui-widget-content .ui-state-focus,
-body .ui-widget-header .ui-state-focus {
-    box-shadow: 0 0 0 1px #2578cf inset,0 0 1px 2px rgba(37,120,207,.25)!important;
-    background-color: #fff;
-    color: #383838;
-}
-
-body .ui-datepicker .ui-datepicker-buttonpane button:focus {
-    outline: 0;
-    box-shadow: 0 0 0 1px #2578cf inset,0 0 1px 2px rgba(37,120,207,.25)!important;
-}
-
-body .ui-state-focus a,
-body .ui-state-focus a:hover,
-body .ui-state-focus a:link,
-body .ui-state-focus a:visited,
-body .ui-state-hover a,
-body .ui-state-hover a:hover,
-body .ui-state-hover a:link,
-body .ui-state-hover a:visited {
-    color: #2370c2;
-}
-
-body .ui-state-active,
-body .ui-widget-content .ui-state-active,
-body .ui-widget-header .ui-state-active {
-    background-color: #dedede;
-    color: #383838;
-}
-
-body .ui-state-highlight,
-body .ui-widget-content .ui-state-highlight,
-body .ui-widget-header .ui-state-highlight {
-    background-color: #f6f9fd;
-    color: #404040;
-}
-
-body .ui-state-highlight a,
-body .ui-widget-content .ui-state-highlight a,
-body .ui-widget-header .ui-state-highlight a {
-    color: #404040;
-}
-
-body .ui-state-error,
-body .ui-widget-content .ui-state-error,
-body .ui-widget-header .ui-state-error {
-    background-color: #e90c00;
-    color: #ffeae9;
-}
-
-body .ui-state-error a,
-body .ui-widget-content .ui-state-error a,
-body .ui-widget-header .ui-state-error a {
-    color: #ffeae9;
-}
-
-body .ui-state-error-text,
-body .ui-widget-content .ui-state-error-text,
-body .ui-widget-header .ui-state-error-text {
-    color: #e90c00;
-}
-
-body .ui-datepicker td a.ui-state-default,
-body .ui-datepicker td span.ui-state-default {
-    background-color: transparent;
-    color: #404040;
-}
-
-body .ui-datepicker td a.ui-state-default.ui-state-active,
-body .ui-datepicker td span.ui-state-default.ui-state-active {
-    background-color: #2578cf;
-    color: #fff;
-    font-weight: 700;
-}
-
-body .ui-datepicker td a.ui-state-default.ui-state-active.ui-state-hover,
-body .ui-datepicker td span.ui-state-default.ui-state-active.ui-state-hover {
-    background-color: #2578cf!important;
-}
-
-body .ui-datepicker td a.ui-state-default.ui-state-hover,
-body .ui-datepicker td span.ui-state-default.ui-state-hover {
-    background-color: #f2f2f2!important;
-}
-
-body .ui-datepicker td a.ui-state-default:focus,
-body .ui-datepicker td span.ui-state-default:focus {
-    outline: 0;
-    box-shadow: 0 0 0 1px #2578cf inset,0 0 1px 2px rgba(37,120,207,.25)!important;
-}
-
-body .ui-datepicker td a.ui-state-default.ui-state-highlight,
-body .ui-datepicker td span.ui-state-default.ui-state-highlight {
-    background-color: #ebebeb;
-}
-
-body .ui-datepicker th {
-    color: gray;
-}
-
-body .ui-datepicker .ui-datepicker-buttonpane button,
-body .ui-datepicker .ui-datepicker-header,
-body .ui-datepicker .ui-datepicker-next,
-body .ui-datepicker .ui-datepicker-prev {
-    border-radius: 2px;
-}
-
-body .ui-dialog .ui-dialog-titlebar {
-    background-color: #fcfcfc;
-    border-bottom: 1px solid #e2e2e2;
-}
-
-body .ui-dialog .ui-dialog-title {
-    color: #3d3d3d;
-}
-
-body .ui-dialog .ui-dialog-content {
-    background-color: #fff;
-    color: #404040;
-}
-
-body .ui-corner-all {
-    border-radius: 2px;
-}
-
-body .ui-corner-left,
-body .ui-corner-tl,
-body .ui-corner-top {
-    border-top-left-radius: 2px;
-}
-
-body .ui-corner-right,
-body .ui-corner-top,
-body .ui-corner-tr {
-    border-top-right-radius: 2px;
-}
-
-body .ui-corner-bl,
-body .ui-corner-bottom,
-body .ui-corner-left {
-    border-bottom-left-radius: 2px;
-}
-
-body .ui-corner-bottom,
-body .ui-corner-br,
-body .ui-corner-right {
-    border-bottom-right-radius: 2px;
-}
-
-body .ui-button.ui-corner-all {
-    border-radius: 2px;
-}
-
-body .ui-button.ui-corner-left,
-body .ui-button.ui-corner-tl,
-body .ui-button.ui-corner-top {
-    border-top-left-radius: 2px;
-}
-
-body .ui-button.ui-corner-right,
-body .ui-button.ui-corner-top,
-body .ui-button.ui-corner-tr {
-    border-top-right-radius: 2px;
-}
-
-body .ui-button.ui-corner-bl,
-body .ui-button.ui-corner-bottom,
-body .ui-button.ui-corner-left {
-    border-bottom-left-radius: 2px;
-}
-
-body .ui-button.ui-corner-bottom,
-body .ui-button.ui-corner-br,
-body .ui-button.ui-corner-right {
-    border-bottom-right-radius: 2px;
-}
-// custom
-
-body .ui-state-default,
-body .ui-widget-content .ui-state-default,
-body .ui-widget-header .ui-state-default {
-    border: none;
-    box-shadow: 0 0 0 1px rgba(0,0,0,.125) inset;
-    background-image: none;
-    font-weight: 400;
-}
-
-body .ui-icon-circle-triangle-e,
-body .ui-icon-circle-triangle-w,
-body .ui-icon-closethick {
-    display: inline-block;
-    background-image: none!important;
-    text-indent: 0;
-    width: 16px;
-    height: 16px;
-    overflow: hidden;
-}
-
-.fc .ui-button .ui-icon {
-    float: none;
-    margin: 0;
-    display: inline-block;
-    vertical-align: top;
-}
-
-body .ui-icon-circle-triangle-e:before {
-    content: "\e126";
-}
-
-body .ui-icon-circle-triangle-w:before {
-    content: '\E07F';
-}
-
-body .ui-icon-circle-triangle-e:before,
-body .ui-icon-circle-triangle-w:before,
-body .ui-icon-closethick:before {
-    font-family: apex-5-icon-font!important;
-    font-style: normal!important;
-    font-weight: 400!important;
-    font-variant: normal!important;
-    text-transform: none!important;
-    speak: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 16px;
-    width: 16px;
-    height: 16px;
-    vertical-align: top;
+body .fc {
+    /*
+    * Code below was entirely taken from APEX UT Vita theme style
+    */
+    .ui-state-default.ui-button.ui-button--hot,
+    button.ui-state-default.ui-priority-primary {
+        background-color: #2578cf;
+        color: #fff;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.1);
+    }
+
+    .ui-state-default.ui-button.ui-button--hot:hover,
+    button.ui-state-default.ui-priority-primary:hover {
+        background-color: #4992de;
+    }
+
+    .ui-state-default.ui-button.ui-button--hot.is-active,
+    .ui-state-default.ui-button.ui-button--hot.t-MenuButton.is-active,
+    .ui-state-default.ui-button.ui-button--hot:active,
+    button.ui-state-default.ui-priority-primary.is-active,
+    button.ui-state-default.ui-priority-primary.t-MenuButton.is-active,
+    button.ui-state-default.ui-priority-primary:active {
+        background-color: #1d5fa4;
+    }
+
+    .ui-state-default.ui-button.ui-button--hot.t-Button--simple,
+    button.ui-state-default.ui-priority-primary.t-Button--simple {
+        box-shadow: 0 0 0 1px #2578cf inset;
+        background-color: #fff;
+        color: #325c87;
+    }
+
+    .ui-state-default.ui-button.ui-button--hot.t-Button--simple .t-Icon,
+    button.ui-state-default.ui-priority-primary.t-Button--simple .t-Icon {
+        color: #325c87;
+    }
+
+    .ui-state-default.ui-button.ui-button--hot.t-Button--simple:active,
+    .ui-state-default.ui-button.ui-button--hot.t-Button--simple:focus,
+    .ui-state-default.ui-button.ui-button--hot.t-Button--simple:hover,
+    button.ui-state-default.ui-priority-primary.t-Button--simple:active,
+    button.ui-state-default.ui-priority-primary.t-Button--simple:focus,
+    button.ui-state-default.ui-priority-primary.t-Button--simple:hover {
+        background-color: #2578cf;
+        color: #fff;
+        box-shadow: 0 0 0 1px #2578cf inset;
+    }
+
+    .ui-state-default.ui-button.ui-button--hot.t-Button--simple:active .t-Icon,
+    .ui-state-default.ui-button.ui-button--hot.t-Button--simple:focus .t-Icon,
+    .ui-state-default.ui-button.ui-button--hot.t-Button--simple:hover .t-Icon,
+    button.ui-state-default.ui-priority-primary.t-Button--simple:active .t-Icon,
+    button.ui-state-default.ui-priority-primary.t-Button--simple:focus .t-Icon,
+    button.ui-state-default.ui-priority-primary.t-Button--simple:hover .t-Icon {
+        color: #fff;
+    }
+
+    .fc-basic-view td.fc-day-number,
+    .fc-day-number,
+    .fc-toolbar h2 {
+        color: #404040;
+    }
+
+    .fc-day-header.ui-widget-header,
+    .fc-view .ui-widget-header {
+        background-color: #efefef;
+        color: #3d3d3d;
+        border-color: #e2e2e2;
+    }
+
+    div.fc-agendaList {
+        background-color: #fff;
+        border-color: #ebebeb;
+        color: #404040;
+    }
+
+    .fc-agendaList-dayHeader {
+        background-color: #d6d6d6;
+        color: #3d3d3d;
+        border-color: #fafafa;
+    }
+
+    .fc-agendaList-day {
+        color: #3d3d3d;
+    }
+
+    .fc-agendaList-date {
+        color: #636363;
+    }
+
+    .fc-agendaList .fc-event-all-day,
+    .fc-agendaList .fc-event-start-time {
+        color: #666;
+    }
+
+    .ui-widget-content,
+    td.fc-today {
+        border-color: #e6e6e6;
+        color: #404040;
+    }
+
+    .ui-widget-content.fc-today.ui-state-highlight {
+        background-color: #f2f2f2;
+    }
+
+    .fc-agendaList-item {
+        border-color: #fafafa;
+    }
+
+    .ui-tooltip.content-tooltip,
+    .ui-tooltip.content-tooltip .a-DetailedContentList-{
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+    .ui-tooltip.content-tooltip .arrow.bottom:after,
+    .ui-tooltip.content-tooltip .arrow.bottom:before {
+        border-color: #164678 transparent;
+    }
+
+    .ui-tooltip.content-tooltip .arrow.bottom.light:after {
+        border-color: #eaeaea transparent;
+    }
+
+    .ui-tooltip.content-tooltip .arrow.top:after,
+    .ui-tooltip.content-tooltip .arrow.top:before {
+        border-color: #164678 transparent;
+    }
+
+    .ui-tooltip.content-tooltip .arrow.left:before {
+        border-color: transparent #fff transparent transparent;
+    }
+
+    .ui-tooltip.content-tooltip .arrow.left:after {
+        border-color: transparent #164678 transparent transparent;
+    }
+
+    .ui-tooltip.content-tooltip .arrow.right:before {
+        border-color: transparent transparent transparent rgba(64,64,64,.5);
+    }
+
+    .ui-tooltip.content-tooltip .arrow.right:after {
+        border-color: transparent transparent transparent #164678;
+    }
+
+    .ui-dialog .ui-dialog-titlebar {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .ui-dialog .ui-dialog-titlebar-close {
+        border-radius: 100%;
+    }
+
+    .ui-dialog .ui-dialog-buttonpane {
+        border-top-color: #F0F0F0;
+    }
+
+    .ui-widget-content {
+        border-color: #ebebeb;
+        background-color: #fff;
+        color: #404040;
+    }
+
+    .ui-widget-header {
+        border-color: #ebebeb;
+        background: none;
+        background-color: #fcfcfc;
+        color: #3d3d3d;
+    }
+
+    .ui-widget-header a {
+        color: #3d3d3d;
+    }
+
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default {
+        background-color: #f8f8f8;
+        color: #383838;
+    }
+
+    .ui-state-active a,
+    .ui-state-active a:link,
+    .ui-state-active a:visited,
+    .ui-state-default a,
+    .ui-state-default a:link,
+    .ui-state-default a:visited {
+        color: #2370c2;
+    }
+
+    .ui-state-hover,
+    .ui-widget-content .ui-state-hover,
+    .ui-widget-header .ui-state-hover {
+        background-color: #fff;
+        color: #383838;
+    }
+
+    .ui-state-focus,
+    .ui-widget-content .ui-state-focus,
+    .ui-widget-header .ui-state-focus {
+        box-shadow: 0 0 0 1px #2578cf inset,0 0 1px 2px rgba(37,120,207,.25)!important;
+        background-color: #fff;
+        color: #383838;
+    }
+
+    .ui-datepicker .ui-datepicker-buttonpane button:focus {
+        outline: 0;
+        box-shadow: 0 0 0 1px #2578cf inset,0 0 1px 2px rgba(37,120,207,.25)!important;
+    }
+
+    .ui-state-focus a,
+    .ui-state-focus a:hover,
+    .ui-state-focus a:link,
+    .ui-state-focus a:visited,
+    .ui-state-hover a,
+    .ui-state-hover a:hover,
+    .ui-state-hover a:link,
+    .ui-state-hover a:visited {
+        color: #2370c2;
+    }
+
+    .ui-state-active,
+    .ui-widget-content .ui-state-active,
+    .ui-widget-header .ui-state-active {
+        background-color: #dedede;
+        color: #383838;
+    }
+
+    .ui-state-highlight,
+    .ui-widget-content .ui-state-highlight,
+    .ui-widget-header .ui-state-highlight {
+        background-color: #f6f9fd;
+        color: #404040;
+    }
+
+    .ui-state-highlight a,
+    .ui-widget-content .ui-state-highlight a,
+    .ui-widget-header .ui-state-highlight a {
+        color: #404040;
+    }
+
+    .ui-state-error,
+    .ui-widget-content .ui-state-error,
+    .ui-widget-header .ui-state-error {
+        background-color: #e90c00;
+        color: #ffeae9;
+    }
+
+    .ui-state-error a,
+    .ui-widget-content .ui-state-error a,
+    .ui-widget-header .ui-state-error a {
+        color: #ffeae9;
+    }
+
+    .ui-state-error-text,
+    .ui-widget-content .ui-state-error-text,
+    .ui-widget-header .ui-state-error-text {
+        color: #e90c00;
+    }
+
+    .ui-datepicker td a.ui-state-default,
+    .ui-datepicker td span.ui-state-default {
+        background-color: transparent;
+        color: #404040;
+    }
+
+    .ui-datepicker td a.ui-state-default.ui-state-active,
+    .ui-datepicker td span.ui-state-default.ui-state-active {
+        background-color: #2578cf;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .ui-datepicker td a.ui-state-default.ui-state-active.ui-state-hover,
+    .ui-datepicker td span.ui-state-default.ui-state-active.ui-state-hover {
+        background-color: #2578cf!important;
+    }
+
+    .ui-datepicker td a.ui-state-default.ui-state-hover,
+    .ui-datepicker td span.ui-state-default.ui-state-hover {
+        background-color: #f2f2f2!important;
+    }
+
+    .ui-datepicker td a.ui-state-default:focus,
+    .ui-datepicker td span.ui-state-default:focus {
+        outline: 0;
+        box-shadow: 0 0 0 1px #2578cf inset,0 0 1px 2px rgba(37,120,207,.25)!important;
+    }
+
+    .ui-datepicker td a.ui-state-default.ui-state-highlight,
+    .ui-datepicker td span.ui-state-default.ui-state-highlight {
+        background-color: #ebebeb;
+    }
+
+    .ui-datepicker th {
+        color: gray;
+    }
+
+    .ui-datepicker .ui-datepicker-buttonpane button,
+    .ui-datepicker .ui-datepicker-header,
+    .ui-datepicker .ui-datepicker-next,
+    .ui-datepicker .ui-datepicker-prev {
+        border-radius: 2px;
+    }
+
+    .ui-dialog .ui-dialog-titlebar {
+        background-color: #fcfcfc;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    .ui-dialog .ui-dialog-title {
+        color: #3d3d3d;
+    }
+
+    .ui-dialog .ui-dialog-content {
+        background-color: #fff;
+        color: #404040;
+    }
+
+    .ui-corner-all {
+        border-radius: 2px;
+    }
+
+    .ui-corner-left,
+    .ui-corner-tl,
+    .ui-corner-top {
+        border-top-left-radius: 2px;
+    }
+
+    .ui-corner-right,
+    .ui-corner-top,
+    .ui-corner-tr {
+        border-top-right-radius: 2px;
+    }
+
+    .ui-corner-bl,
+    .ui-corner-bottom,
+    .ui-corner-left {
+        border-bottom-left-radius: 2px;
+    }
+
+    .ui-corner-bottom,
+    .ui-corner-br,
+    .ui-corner-right {
+        border-bottom-right-radius: 2px;
+    }
+
+    .ui-button.ui-corner-all {
+        border-radius: 2px;
+    }
+
+    .ui-button.ui-corner-left,
+    .ui-button.ui-corner-tl,
+    .ui-button.ui-corner-top {
+        border-top-left-radius: 2px;
+    }
+
+    .ui-button.ui-corner-right,
+    .ui-button.ui-corner-top,
+    .ui-button.ui-corner-tr {
+        border-top-right-radius: 2px;
+    }
+
+    .ui-button.ui-corner-bl,
+    .ui-button.ui-corner-bottom,
+    .ui-button.ui-corner-left {
+        border-bottom-left-radius: 2px;
+    }
+
+    .ui-button.ui-corner-bottom,
+    .ui-button.ui-corner-br,
+    .ui-button.ui-corner-right {
+        border-bottom-right-radius: 2px;
+    }
+
+    // custom
+
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default {
+        border: none;
+        box-shadow: 0 0 0 1px rgba(0,0,0,.125) inset;
+        background-image: none;
+        font-weight: 400;
+    }
+
+    .ui-icon-circle-triangle-e,
+    .ui-icon-circle-triangle-w,
+    .ui-icon-closethick {
+        display: inline-block;
+        background-image: none!important;
+        text-indent: 0;
+        width: 16px;
+        height: 16px;
+        overflow: hidden;
+    }
+
+    .ui-button .ui-icon {
+        float: none;
+        margin: 0;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .ui-icon-circle-triangle-e:before {
+        content: "\e126";
+    }
+
+    .ui-icon-circle-triangle-w:before {
+        content: '\E07F';
+    }
+
+    .ui-icon-circle-triangle-e:before,
+    .ui-icon-circle-triangle-w:before,
+    .ui-icon-closethick:before {
+        font-family: apex-5-icon-font!important;
+        font-style: normal!important;
+        font-weight: 400!important;
+        font-variant: normal!important;
+        text-transform: none!important;
+        speak: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+        vertical-align: top;
+    }
 }

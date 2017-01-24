@@ -125,7 +125,22 @@ materialAPEX.initial = {
             })
             .remove();
 
-        // Font Awesome Support with Material Icons HTML markup
+        // Support for APEX 5.1 item icons
+        $(".apex-item-icon")
+            .each(function(index){
+                var el = $(this);
+
+                if (!el.hasClass("fa")) {
+                    el
+                        .removeClass("apex-item-icon")
+                        .text(el.attr("class"))
+                        .addClass("material-icons");
+                }
+
+                el.addClass("prefix").prependTo(el.parent());
+            });
+
+        // Font Awesome & Font APEX Support with Material Icons HTML markup
         $(".material-icons:contains('fa-')").each(function(index) {
             $(this).attr("class", $(this).text()).text('');
         });

@@ -6,7 +6,6 @@ body.body-modal {
     display: block;
     width: 100%;
     max-height: 100%;
-    height: 100%;
     box-shadow:none;
     background-color: $modal-background-color;
 
@@ -15,7 +14,7 @@ body.body-modal {
     }
 
     &.modal-fixed-footer {
-      height: 100%;
+        height: 100%;
 
         .fixed-action-btn {
             bottom: 79px;
@@ -72,7 +71,7 @@ body {
         z-index: 999;
     }
 
-    .ui-dialog {
+    .ui-dialog.ui-front {
         border-width: 0;
         border-radius: 2px;
 
@@ -94,9 +93,13 @@ body {
 
         .ui-dialog-titlebar {
             padding: 24px 24px 0px 24px;
-            background-color: $modal-background-header;
+            background-color: $modal-header-background;
             background-image: none;
             border: none;
+
+            span {
+                color: $modal-header-text;
+            }
         }
 
         .ui-dialog-title {
@@ -106,15 +109,31 @@ body {
         }
 
         .ui-dialog-titlebar-close {
-            display:none;
+            display: block;
+            right: 2.3rem;
+            border: none;
+            box-shadow: none;
+            background-color: transparent;
+            background: none;
+
+            &:before {
+                content: '\E5CD';
+                font-family: 'Material Icons';
+                font-weight: normal;
+                font-style: normal;
+                font-size: 2rem;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .ui-icon-closethick {
+                display: none;
+            }
         }
 
         .ui-dialog-content {
             position: relative;
             border: 0;
-            padding: 24px;
             background: 0 0;
-            overflow: auto;
 
             iframe {
                 border: 0;
