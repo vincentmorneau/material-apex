@@ -4,6 +4,7 @@ $(document).ready(function() {
     materialAPEX.select.init();
     materialAPEX.observe.toolbar();
     materialAPEX.observe.select();
+    Materialize.updateTextFields();
 
     // triggers a resize
     $(document).trigger("apexwindowresized");
