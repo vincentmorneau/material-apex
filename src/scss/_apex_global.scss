@@ -21,6 +21,16 @@ ul {
 	}
 }
 
+// apex hidden components
+input.u-vh
+// , .hideMeButHearMe
+// , .u-VisuallyHidden
+// , .visuallyHidden
+// , .visuallyhidden
+{
+    @include vh();
+}
+
 /*
 * Main Container Handler
 */
@@ -72,14 +82,14 @@ i {
 /*
 * Sticky Footer
 */
-form {
+body > form {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-}
 
-main {
-	flex: 1 0 auto;
+    main {
+    	flex: 1 0 auto;
+    }
 }
 
 /*

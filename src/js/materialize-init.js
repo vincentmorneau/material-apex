@@ -3,63 +3,139 @@ Materialize Initialization
 ************/
 var materialAPEX = materialAPEX || {};
 
-materialAPEX.select = {
-    init: function () {
-        $('form select').not('.disabled').material_select();
-    }
-};
+materialAPEX.observe = {
+    toolbar: function() {
+        if (!classExists("a-IG") && !classExists("a-IRR")) return;
 
-materialAPEX.textarea = {
-    init: function () {
-        $('textarea').addClass('materialize-textarea');
-    }
-};
+        var observerConfig = {
+            childList: true
+        };
 
-materialAPEX.datepicker = {
-    init: function () {
-        $('.hasDatepicker')
-            // .attr("type", "date")
-            .each(function(){
-            // replace jquery datepicker formats with pickadate.js formats
-            var format = $(this).datepicker('option', 'dateFormat')
-                            .replace("oo", "dd")
-                            .replace("o", "dd")
-                            .replace("DD", "dddd")
-                            .replace("D", "ddd")
-                            .replace("MM", "mmmm")
-                            .replace("M", "mmm")
-                            .replace(/y/g, 'yy')
-                            ;
+        var selector = ".a-Toolbar-group select";
 
-            // default date is not working for now
-            // var defaultDate = $(this).datepicker('option', 'defaultDate');
+        var observer = new MutationObserver(function(mutations) {
+            $(selector).material_select();
+            materialAPEX.ig.init();
+        });
 
-            $(this).pickadate({
-                selectMonths: $(this).datepicker('option', 'changeMonth'), // Creates a dropdown to control month
-                selectYears: $(this).datepicker('option', 'yearRange'), // Creates a dropdown of years to control year
-                format: format,
-                min: $(this).datepicker('option', 'minDate') || undefined,
-                max: $(this).datepicker('option', 'maxDate') || undefined,
-                onClose: function () {
-                    $(document.activeElement).blur();
+        $(selector).each(function() {
+            observer.observe(this, observerConfig);
+        });
+    },
+
+    select: function() {
+        if (!classExists("a-IG")) return;
+
+        var observerConfig = {
+            childList: true
+        };
+
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.addedNodes.length > 0) {
+                    $(mutation.target).find("select").material_select();
                 }
             });
         });
 
-        $('.hasDatepicker')
-            .datepicker( "destroy" );
+        $(".a-GV-floatingItemContent").each(function() {
+            observer.observe(this, observerConfig);
+        });
+    }
+};
+
+materialAPEX.ig = {
+    init: function() {
+        console.time("materialAPEX.ig.init");
+        if (!classExists("a-IG")) return;
+
+        $(".a-Toolbar-group")
+            .removeClass("force-hide")
+            .addClass("force-show")
+            .each(function() {
+                var group = $(this);
+
+                // hide the groups that have no visible elements
+                if (group.find(":visible").length === 0) {
+                    group.removeClass("force-show").addClass("force-hide");
+                }
+
+                // hide the groups that have no select options
+                if (group.find("select").length > 0 &&
+                    group.find("select").find("option").length === 0) {
+                    group.removeClass("force-show").addClass("force-hide");
+                }
+
+                // hide the groups that were forced to display: none
+                // that is weird fix but it works....
+                if (group.find("select").attr("style") === "display: none;") {
+                    group.removeClass("force-show").addClass("force-hide");
+                }
+            });
+
+        // trigger a resize for the IG fixed header
+        setTimeout(function(){
+            $(document).trigger("apexwindowresized");
+        }, 250);
+        console.timeEnd("materialAPEX.ig.init");
+    }
+};
+
+materialAPEX.select = {
+    init: function() {
+        $('form select').not('.disabled').material_select();
+    },
+
+    refresh: function(selector) {
+        // reset focus on select elements
+        setTimeout(function(){
+            $(selector).material_select("destroy");
+            $(selector).material_select();
+            $(selector).change(function(){
+                $(selector).material_select("destroy");
+                $(selector).material_select();
+            });
+        }, 250);
+    }
+};
+
+materialAPEX.datepicker = {
+    init: function() {
+        var headerHtml = function (day, month, dayNum, year) {
+            return '<div class="ui-datepicker-material-header">' +
+                '<div class="ui-datepicker-material-day">' + day + '</div>' +
+                '<div class="ui-datepicker-material-month">' + month + '</div>' +
+                '<div class="ui-datepicker-material-day-num">' + dayNum + '</div>' +
+                '<div class="ui-datepicker-material-year">' + year + '</div>' +
+            '</div>';
+        };
+
+        $(".hasDatepicker").on("focus", function() {
+            $('.ui-datepicker select').material_select();
+            $(".ui-datepicker .ui-datepicker-material-header").remove();
+            var date = $(this).datepicker('getDate') || new Date();
+            var day = $.datepicker.formatDate('DD', date);
+            var month = $.datepicker.formatDate('MM', date);
+            var dayNum = $.datepicker.formatDate('d', date);
+            var year = $.datepicker.formatDate('yy', date);
+            $(".ui-datepicker").prepend(headerHtml(day, month, dayNum, year));
+        });
     }
 };
 
 materialAPEX.materialize = {
-    init: function () {
+    init: function() {
         /* Collapsible */
-        $(".collapsible.accordion").collapsible({accordion : true});
-        $(".collapsible.expandable").collapsible({accordion : false});
+        $(".collapsible.accordion").collapsible({
+            accordion: true
+        });
+        $(".collapsible.expandable").collapsible({
+            accordion: false
+        });
 
         // ScrollFire
         var scrollFireOptions = [];
-        $(".enable-scrollfire").each(function(){
+        $(".enable-scrollfire").each(function() {
             scrollFireOptions.push({
                 selector: '#' + this.id,
                 offset: parseInt($(this).attr("offset") || $("#" + this.id + " [offset]").attr("offset")) || 0,
@@ -70,7 +146,7 @@ materialAPEX.materialize = {
 
         /* SideNav */
         if ($('.button-collapse').length > 0) {
-            var edgeDirection = $( "link[href*='app.rtl']").length > 0 ? 'right' : 'left';
+            var edgeDirection = $("link[href*='app.rtl']").length > 0 ? 'right' : 'left';
 
             $('.button-collapse').sideNav({
                 edge: edgeDirection
@@ -83,7 +159,10 @@ materialAPEX.materialize = {
             $(".apex-rds-container").addClass("col hide-on-small-only m3 l2");
 
             var pushpinOffset = ($(".nav-breadcrumbs").length === 0 ? 64 : 128);
-            $('.apex-rds').pushpin({top:0, offset:pushpinOffset});
+            $('.apex-rds').pushpin({
+                top: 0,
+                offset: pushpinOffset
+            });
         }
 
         /* Parallax */
@@ -99,26 +178,19 @@ materialAPEX.materialize = {
         $('.slider').slider();
 
         /* Tooltips */
-        $("[data-tooltip][data-tooltip!='']").tooltip();
+        $("[data-tooltip][data-tooltip!='']").materialtooltip();
 
         /* Tabs */
         $('ul.tabs').tabs();
 
         /* Carousels */
-        $('.carousel.carousel-slider').carousel({full_width: true});
-        $('.carousel:not(.carousel-slider)').carousel();
-
-        /* Tabular Form */
-        if (typeof apex.widget.tabular != 'undefined') {
-            var addRowOld = apex.widget.tabular.addRow;
-            apex.widget.tabular.addRow = function(){
-                addRowOld();
-                materialAPEX.items.init();
-                materialAPEX.select.init();
-                materialAPEX.datepicker.init();
-                $(".select-wrapper .select-wrapper").siblings().remove().end().unwrap();
-            };
-        }
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true,
+            indicators: true
+        });
+        $('.carousel:not(.carousel-slider)').carousel({
+            indicators: true
+        });
 
         // Bottom sheets init
         $(".modal.bottom-sheet").modal();
@@ -126,23 +198,5 @@ materialAPEX.materialize = {
 };
 
 $(function() {
-    materialAPEX.select.init();
     materialAPEX.materialize.init();
-    materialAPEX.datepicker.init();
-
-    $('select').on('apexafterrefresh', function(){
-        materialAPEX.select.init();
-        materialAPEX.textarea.init();
-        materialAPEX.datepicker.init();
-    });
-
-    $(document).ajaxSuccess(function() {
-        materialAPEX.select.init();
-        materialAPEX.textarea.init();
-        materialAPEX.datepicker.init();
-    });
-
-    // making the page visible again
-    // !important is required to overwrite what APEX already does
-    $("html").attr('style', 'visibility: visible!important');
 });

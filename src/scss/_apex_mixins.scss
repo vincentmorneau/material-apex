@@ -7,3 +7,78 @@
     display:block!important;
     visibility:visible!important;
 }
+
+@mixin showInlineBlock() {
+    display:inline-block!important;
+    visibility:visible!important;
+}
+
+@mixin browserDefaultInput() {
+    background-color: transparent;
+    border: none;
+    border-bottom: none;
+    border-radius: 0;
+    outline: none;
+    height: auto;
+    width: auto;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: none;
+}
+
+@mixin vh {
+    border: 0!important;
+    clip: rect(0 0 0 0)!important;
+    height: 1px!important;
+    margin: -1px!important;
+    overflow: hidden!important;
+    padding: 0!important;
+    position: absolute!important;
+    width: 1px!important;
+}
+
+@mixin ma-col {
+    float: left;
+    box-sizing: border-box;
+
+	margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@mixin ma-s2 {
+    width: 16.66667%;
+}
+
+@mixin ma-s3 {
+    width: 25%;
+}
+
+@mixin ma-s9 {
+    width: 75%;
+}
+
+@mixin ma-s10 {
+    width: 83.33333%;
+}
+
+@mixin ma-s12 {
+    width: 100%;
+}
+
+@mixin apex5-font {
+    font-size: 16px;
+    font-family: apex-5-icon-font!important;
+    font-style: normal!important;
+    font-weight: 400!important;
+    font-variant: normal!important;
+    text-transform: none!important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

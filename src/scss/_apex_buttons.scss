@@ -1,5 +1,4 @@
 // Icons
-
 .icon-float-left i {
     @extend .left;
 }
@@ -8,9 +7,13 @@
     @extend .right;
 }
 // Fixed Action Button
+.fab-relative {
+    position: relative;
+}
+
 .fixed-action-btn {
     bottom: 45px;
-    z-index: 997;
+    z-index: 996;
 
     &.fab-left {
         left: 25px;
@@ -26,53 +29,100 @@
         bottom: 0;
     }
 
-    &.horizontal ul li {
-        margin: 5px 0 0;
-    }
-
-    ul {
+    &.horizontal ul {
         bottom: 80px;
+
+        li {
+            margin: 5px 0 0;
+        }
 
         .btn-floating {
             opacity: 0;
             margin: 5px 10px;
         }
     }
+
+    /* Toolbar */
+    &.toolbar {
+      &.active {
+        & > a i {
+          opacity: 0;
+        }
+      }
+
+      padding: 0;
+      height: $button-floating-large-size;
+
+      ul {
+        display: flex;
+        top: 0;
+        bottom: 0;
+
+        li {
+          flex: 1;
+          display: inline-block;
+          margin: 0;
+          height: 100%;
+          transition: none;
+
+          button {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            box-shadow: none;
+            color: #fff;
+            line-height: $button-floating-large-size;
+            z-index: 1;
+
+            i {
+              line-height: inherit;
+            }
+          }
+        }
+      }
+    }
+    // &.toolbar {
+    //     &.active {
+    //         & > button i {
+    //             opacity: 0;
+    //         }
+    //     }
+    //
+    //     ul {
+    //         li {
+    //             button {
+    //                 display: block;
+    //                 overflow: hidden;
+    //                 position: relative;
+    //                 width: 100%;
+    //                 height: 100%;
+    //                 background-color: transparent;
+    //                 box-shadow: none;
+    //                 color: #fff;
+    //                 line-height: $button-floating-large-size;
+    //                 z-index: 1;
+    //                 border-radius: 0;
+    //                 margin: 0!important;
+    //                 box-shadow: none;
+    //             }
+    //         }
+    //     }
+    // }
 }
 
-.fab-relative {
-    position: relative;
-}
 /* Inline button
 This is to give space as if there was a label */
 .ma-btn-inline {
     margin-top: 2rem;
 }
-/* Toolbar */
-&.toolbar {
-    &.active {
-        & > button i {
-            opacity: 0;
-        }
-    }
 
-    ul {
-        li {
-            button {
-                display: block;
-                overflow: hidden;
-                position: relative;
-                width: 100%;
-                height: 100%;
-                background-color: transparent;
-                box-shadow: none;
-                color: #fff;
-                line-height: $button-floating-large-size;
-                z-index: 1;
-                border-radius: 0;
-                margin: 0!important;
-                box-shadow: none;
-            }
-        }
+// IG and IRR buttons
+.a-Button {
+    &:focus {
+        outline: none;
+        background-color: transparent;
     }
 }

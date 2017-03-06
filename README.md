@@ -21,5 +21,5 @@
 ## Sponsors
 Thanks to [Insum Solutions](http://insum.ca/) for sponsoring this project.
 
-## Team
-- [Vincent Morneau](https://twitter.com/vincentmorneau)
+## License
+MIT © [Vincent Morneau](http://vmorneau.me)

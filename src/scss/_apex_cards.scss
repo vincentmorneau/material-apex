@@ -1,5 +1,5 @@
 .card-title {
-	z-index: 1;
+    z-index: 1;
 }
 
 .panel-close {
@@ -16,4 +16,17 @@
 
 .ma-region-bg-color > .card {
     background-color: inherit;
+}
+
+.card-action {
+    & > a {
+        color: $card-link-color;
+        margin-right: $card-padding;
+        transition: color 0.3s ease;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $card-link-color-light;
+        }
+    }
 }

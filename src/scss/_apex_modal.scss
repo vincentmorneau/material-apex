@@ -85,7 +85,7 @@ body {
 
         background-color: $modal-background-color;
         max-height: 100%;
-        overflow-y: auto;
+        // overflow-y: auto;
         z-index: 1000;
         background-clip: padding-box;
         transform: translate(0);
@@ -106,6 +106,7 @@ body {
             @extend h4;
             margin-top: 0;
             width: 80%;
+            overflow: visible;
         }
 
         .ui-dialog-titlebar-close {

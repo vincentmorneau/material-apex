@@ -5,20 +5,30 @@ $.fn.ignore = function(selector) {
     return this.clone().find(selector || ">*").remove().end();
 };
 
+$.fn.removeEmpty = function(selector) {
+    return this.filter(function() {
+        return $.trim($(this).text()) === "" && $(this).children().length === 0;
+    }).remove();
+};
+
+var classExists = function(className) {
+    return document.getElementsByClassName(className).length > 0;
+};
+
+
 /**
-* @materialAPEX
-**/
+ * @materialAPEX
+ **/
 var materialAPEX = materialAPEX || {};
 
 materialAPEX.sideNav = {
     init: function() {
         $("#app-sidenav li.active")
-            .parents(".collapsible-body").css("display","block")
+            .parents(".collapsible-body").css("display", "block")
             .siblings(".collapsible-header")
             .addClass("active")
             .parents("li")
-            .addClass("active")
-            ;
+            .addClass("active");
 
         $(".side-nav").prepend(function() {
             return $(".userView");
@@ -30,7 +40,7 @@ materialAPEX.sideNav = {
 
 materialAPEX.wizard = {
     init: function() {
-        var classSelector =  ".ma-wizard";
+        var classSelector = ".ma-wizard";
 
         // finds the current step and flags all previous ones to complete
         $(classSelector)
@@ -41,32 +51,40 @@ materialAPEX.wizard = {
 };
 
 materialAPEX.items = {
-    init: function () {
+    init: function(selectorPrefix) {
+        var prefix = selectorPrefix || "";
         // fix for empty checkbox and radio labels
-        $("[type='checkbox'], [type='radio']").each(function(){
+        $(".a-GV " + prefix + " input[type='checkbox'], .a-GV " + prefix + " input[type='radio']").addClass("filled-in");
+
+        // fix for empty checkbox and radio labels
+        $(prefix + " [type='checkbox'], " + prefix + " [type='radio']").each(function() {
+            // add an ID to the checkbox or radio if it doesn't exist
             if (!this.id) {
                 this.id = Materialize.guid();
             }
 
-            if (!$(this).next().is("label")) {
+            // add a label next to the checkbox or radio if it doesn't exist
+            // UNLESS IT'S IN A SWITCH COMPONENT
+            if (!$(this).next().is("label") && !$(this).next().is("span.lever")) {
                 $(this).after("<label for='" + this.id + "'></label>");
             }
         });
 
-        /* Fix for label issue with many components. Need to have label after component. */
+        // Fix for label issue with many components. Need to have label after component.
         $(".input-field > label, .input-field fieldset > label").each(function() {
             $(this).appendTo($(this).parent());
         });
+    },
 
-        /* Fix for label issue with many components. Need to have label after component. */
-        $(".u-TF-item--checkbox").after(function(){
-            return $(this).siblings("label");
-        });
+    ig: function(selectorPrefix) {
+        materialAPEX.items.init(selectorPrefix);
     }
 };
 
 materialAPEX.ir = {
-    init: function () {
+    init: function() {
+        if (!classExists("a-IRR")) return;
+
         if (!$('.a-IRR-table').hasClass("table-responsive")) {
             $(".a-IRR-search-field")
                 .attr("placeholder", $(".a-IRR-sortWidget-searchLabel span").text())
@@ -104,7 +122,6 @@ materialAPEX.ir = {
             $(this).after("<label for='" + $(this).attr("id") + "'></label>").parent().removeAttr("nowrap");
         });
 
-        $(document).trigger("apexwindowresized");
     }
 };
 
@@ -118,34 +135,29 @@ materialAPEX.initial = {
         // Grid - Handling s12 default override
         $(".s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10,.s11").removeClass("s12");
 
-        // deletes empty html tags
-        $('.card-action, .card-content, span.badge, i.material-icons, .ma-button-label')
-            .filter(function() {
-                return $.trim($(this).text()) === '' && $(this).children().length === 0;
-            })
-            .remove();
+        // Deletes empty html tags
+        $('.card-action, .card-content, span.badge, i.material-icons, .ma-button-label').removeEmpty();
 
         // Support for APEX 5.1 item icons
-        $(".apex-item-icon")
-            .each(function(index){
-                var el = $(this);
+        $(".apex-item-icon").each(function(index) {
+            var el = $(this);
 
-                if (!el.hasClass("fa")) {
-                    el
-                        .removeClass("apex-item-icon")
-                        .text(el.attr("class"))
-                        .addClass("material-icons");
-                }
+            if (!el.hasClass("fa")) {
+                el
+                    .removeClass("apex-item-icon")
+                    .text(el.attr("class"))
+                    .addClass("material-icons");
+            }
 
-                el.addClass("prefix").prependTo(el.parent());
-            });
+            el.addClass("prefix").prependTo(el.parent());
+        });
 
         // Font Awesome & Font APEX Support with Material Icons HTML markup
         $(".material-icons:contains('fa-')").each(function(index) {
             $(this).attr("class", $(this).text()).text('');
         });
 
-        /* Fixed Action Button */
+        // Fixed Action Button
         $(".fixed-action-btn").each(function() {
             var position = "";
             var fab = $(this);
@@ -170,32 +182,28 @@ materialAPEX.initial = {
 
         $("div.fab-absolute").parent().addClass("fab-relative");
 
-        /* Fix for APEX  Select Template */
-        $('select').closest('.input-field').removeClass('input-field');
+        // Fix for APEX  Select Template
+        $("select").closest('.input-field').removeClass('input-field');
 
-        /* Parallax */
+        // Parallax
         $(".parallax-container")
             .closest(".col").removeClass()
             .closest(".row").removeClass();
 
-        /* Display only & read only */
+        // Display only & read only
         $(".display_only")
             .siblings("label")
             .addClass("active");
 
-        /* Fieldset */
+        // Fieldset
         $("fieldset.checkbox_group, fieldset.radio_group")
             .siblings("label")
             .addClass("active label-block")
             .closest('.input-field')
             .removeClass('input-field');
 
-        /* Textarea */
-        $("[id*='_CHAR_COUNTER']").each(function() {
-            $(this).closest("div").siblings("textarea").attr("length", $(this).next().text());
-        });
-
-        $("[id*='_CHAR_COUNT']").remove();
+        // Textarea
+        $("[id*='_CHAR_COUNTER']").parent().addClass("character-counter");
 
         $("fieldset.textarea").prepend(function() {
             return $(this).siblings();
@@ -203,8 +211,9 @@ materialAPEX.initial = {
 
         $('textarea').addClass('materialize-textarea');
 
-        /* Popup LOV */
+        // Popup LOV
         $("fieldset.lov").parent().addClass("ma-popuplov");
+        $(".ma-popuplov .uPopupLOVIcon").parent().addClass("ma-chevron-up");
 
         // Media
         $(".apex-materialbox img").addClass("materialboxed responsive-img").each(function() {
@@ -214,7 +223,7 @@ materialAPEX.initial = {
 
         // Tooltips
         $("[data-tooltip][data-tooltip!='']").each(function() {
-            $(this).siblings("i").attr("data-tooltip", $(this).attr("data-tooltip"));
+            $(this).siblings("i, span").attr("data-tooltip", $(this).attr("data-tooltip"));
         });
 
         // Icons
@@ -235,12 +244,12 @@ materialAPEX.initial = {
             });
 
         //  closes a toast
-        $(".ma-toast-close").click(function() {
+        $(document).on("click", ".ma-toast-close", function() {
             $(this).closest(".toast").remove();
         });
 
         //  closes a panel
-        $(".panel-close").click(function() {
+        $(document).on("click", ".panel-close", function() {
             $(this).closest(".card-panel").remove();
         });
 
@@ -268,10 +277,10 @@ materialAPEX.initial = {
             return $("header").height();
         };
 
-        /* showSpinner */
+        // showSpinner
         if (typeof apex.util.showSpinner === "function") {
             var showSpinnerOld = apex.util.showSpinner;
-            apex.util.showSpinner = function(container, options){
+            apex.util.showSpinner = function(container, options) {
                 var opt = options || {};
                 var newSpinner = showSpinnerOld(container, options);
 
@@ -297,17 +306,6 @@ materialAPEX.initial = {
 
 $(function() {
     materialAPEX.initial.init();
-
     materialAPEX.items.init();
     materialAPEX.ir.init();
-
-    $(".a-IRR-container").parent().on("apexafterrefresh", function() {
-        materialAPEX.items.init();
-        materialAPEX.ir.init();
-    });
-
-    $(document).ajaxSuccess(function() {
-        materialAPEX.items.init();
-        materialAPEX.ir.init();
-    });
 });

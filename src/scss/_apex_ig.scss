@@ -1,0 +1,145 @@
+.a-GV-rowSelector {
+    height: 22px;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.a-GV-rowSelector:hover, .is-hover .a-GV-rowSelector {
+    border: none;
+
+    &:before {
+        opacity: 0;
+    }
+}
+
+.is-selected .a-GV-rowSelector:before {
+    opacity: 0;
+}
+
+.a-IG {
+    .a-IG-header {
+        padding: 8px;
+        z-index: 800!important;
+    }
+
+    // buttons
+    [data-action='search'] {
+        @include hide();
+    }
+
+    [data-action='edit'] {
+        label {
+            padding: 15px 12px 12px 36px!important;
+            font-size: 12px;
+
+            &:before {
+                margin-top: 14px;
+                margin-left: 8px;
+            }
+        }
+    }
+
+    // borders
+    .a-GV-cell, .a-GV-controlBreakHeader, .a-GV-header, .a-GV-headerGroup {
+        border: none;
+        border-bottom: 1px solid #EAEAEA;
+    }
+
+    // row hover
+    .a-GV-bdy tbody tr.is-hover {
+        background-color: #eeeeee;
+    }
+
+    .a-GV-columnItem {
+        input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+            border-bottom: none;
+            height: auto;
+            width: auto;
+            font-size: inherit;
+            margin: 0;
+
+            &:focus:not([readonly]) {
+                border-bottom: none;
+                box-shadow: none;
+            }
+        }
+
+        fieldset.color_picker td {
+            vertical-align: middle;
+
+            input.color_picker {
+                box-shadow: inset 3px 0px 3px -1px $primary-color;
+                background-color: inherit;
+            }
+        }
+    }
+
+    // selected row
+    .a-GV-table tr.is-selected .a-GV-cell {
+        background-color: #f5f5f5;
+    }
+    .a-GV-cell.is-error:not(.is-active), .a-GV-cell.is-error:not(.is-active):before {
+        color: $error-color;
+    }
+    .a-GV-row.is-inserted .a-GV-cell {
+        background-color: #e3f2fd;
+    }
+    .a-GV-floatingItem:not(.is-expanded)
+    , .a-GV-pageButton:focus
+    , .a-GV-table .a-GV-cell.is-focused
+    , .a-GV-table .a-GV-controlBreakHeader.is-focused
+    , .a-GV-table .a-GV-header.is-focused
+    , .a-GV-table .a-GV-headerGroup.is-focused
+    , .a-GV-cell .a-GV-columnItem input:not([type=radio]):not([type=checkbox]):focus
+    , .a-GV-cell .a-GV-columnItem select[size='1']:focus
+    , .a-GV-floatingItem.is-expanded {
+        border-color: transparent;
+        box-shadow: 0px 0px 2px 1px $radio-empty-color inset;
+    }
+
+    .a-GV-table .a-GV-cell.a-GV-rowHeader.is-focused {
+        box-shadow: none;
+    }
+
+    .a-Button.a-Button--calendar {
+        float: right;
+
+        &:focus {
+            outline: none;
+            background-color: transparent;
+        }
+    }
+
+    // checkboxes
+    .a-GV-header [type="checkbox"].filled-in {
+        &:not(:checked):disabled + label:before {
+            border: 2px solid transparent;
+        }
+
+        &:disabled:not(:checked) + label:after {
+            border-color: $radio-empty-color;
+            background-color: transparent;
+        }
+
+        &:disabled:checked+label:after {
+            background-color: $secondary-color;
+            border-color: $secondary-color;
+        }
+    }
+
+    .a-IG-controlsCheckboxLabel {
+        border: none;
+        box-shadow: none;
+
+        &:before, &:active:before, &:hover:before {
+            opacity: 1;
+        }
+
+        &:active {
+            background-color: transparent;
+            box-shadow: none!important;
+        }
+    }
+}

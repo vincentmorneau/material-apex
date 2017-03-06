@@ -1,34 +1,3 @@
-@mixin ma-col {
-    float: left;
-    box-sizing: border-box;
-
-	margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-@mixin ma-s2 {
-    width: 16.66667%;
-}
-
-@mixin ma-s3 {
-    width: 25%;
-}
-
-@mixin ma-s9 {
-    width: 75%;
-}
-
-@mixin ma-s10 {
-    width: 83.33333%;
-}
-
-@mixin ma-s12 {
-    width: 100%;
-}
-
-
 .a-IRR-toolbar {
 	position: static;
   	background-color: transparent;
@@ -76,7 +45,6 @@
 
 .a-IRR-header {
     border-left: none;
-    // border-bottom: none;
   	background-color: #fff;
     font-size: 15px;
 }
@@ -132,10 +100,6 @@ fieldset.datepicker .t-fht-wrapper .t-fht-thead {
 
 .a-IRR-paginationWrap {
     padding: 20px 0px 0px 0px;
-}
-
-.a-Button {
-    font-size: inherit;
 }
 
 @media #{$small-and-down} {
@@ -204,9 +168,9 @@ fieldset.datepicker .t-fht-wrapper .t-fht-thead {
 	display: none;
 }
 
-.a-Icon.icon-menu-drop-down {
-	display:none;
-}
+// .a-Icon.icon-menu-drop-down {
+// 	display:none;
+// }
 
 .a-IRR-actions {
     float: right !important;
@@ -254,10 +218,6 @@ fieldset.datepicker .t-fht-wrapper .t-fht-thead {
 
 .a-IRR-dialog {
 	@extend .modal;
-
-	.ui-widget-content {
-		background: none;
-	}
 
 	@media #{$small-and-down} {
 		width:90%!important;
@@ -318,10 +278,6 @@ fieldset.datepicker .t-fht-wrapper .t-fht-thead {
 		vertical-align: middle;
 	}
 }
-
-// .a-IRR-dialog .ui-widget-content {
-//     background: $background-color 50% 50% repeat-x;
-// }
 
 .a-IRR-pagination-label {
   padding: 10px;
@@ -403,47 +359,6 @@ label.a-IRR-controlsCheckboxLabel {
     display: none;
 }
 
-.a-Menu-content {
-    border: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    padding: 0;
-
-    ul {
-        @extend .collection;
-
-        margin: 0;
-        overflow: visible;
-
-        .a-Menu-item {
-            @extend .collection-item;
-
-            padding: 0;
-            line-height: 32px;
-
-            &.is-focused, &.is-expanded {
-                background-color: $primary-color;
-                color:#fff;
-            }
-
-            .a-Menu .a-Menu-item {
-                border-bottom: none;
-            }
-        }
-
-        .a-Menu-itemSep {
-            @include hide();
-        }
-    }
-}
-
-.ui-widget-content {
-    border: 1px solid #aaa;
-    background: none;
-    color: #222;
-}
-
-.ui-resizable-handle {
-    display: none!important;
-}
+// .ui-resizable-handle {
+//     display: none!important;
+// }

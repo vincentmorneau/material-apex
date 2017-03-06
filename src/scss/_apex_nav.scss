@@ -1,14 +1,13 @@
 // temporary fix for search bar
 .nav-wrapper, .nav-wrapper form, .nav-wrapper form .input-field{ height: 100%; }
+nav .search-nav-wrapper .input-field label.active {
+    transform: translateY(0);
+}
 // end temporary fix for search bar
 
 .page-navbar-fixed .top-nav-wrapper {
     @extend .navbar-fixed;
 }
-
-/*.top-nav {
-    z-index: 998;
-}*/
 
 nav ul a {
     display: inline-block;
@@ -32,10 +31,6 @@ nav .nav-wrapper i {
   	.drag-target {
 		top:$navbar-height;
 	}
-
-	// [role="tabpanel"] {
-	// 	padding-top:$navbar-height;
-	// }
 }
 
 .page-center-logo .brand-logo {

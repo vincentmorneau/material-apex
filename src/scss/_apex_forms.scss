@@ -24,22 +24,8 @@ Colors
 /*
 Date Pickers
 */
-// ::-webkit-datetime-edit-year-field:not([aria-valuenow]),
-// ::-webkit-datetime-edit-month-field:not([aria-valuenow]),
-// ::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
-//     color: transparent;
-// }
-
 .u-TF-item--datepicker, .datepicker {
     cursor: pointer;
-
-    // &::after {
-    //     font-family: "Material Icons";
-    //     content: "today";
-    //     position: absolute;
-    //     right: 0;
-    //     font-size: 2rem;
-    // }
 }
 
 /*
@@ -51,7 +37,7 @@ Inputs
 	label {
 		left:0;
 
-		&.active {
+		&:not(.label-icon).active {
     		transform: translateY(-190%);
 		}
 	}
@@ -85,7 +71,7 @@ Autocomplete
 */
 div.ac_results {
     border: none;
-    overflow: visible;;
+    overflow: visible;
 
 	ul {
 		@extend .autocomplete-content;
@@ -124,6 +110,14 @@ body.uPopUpLOV div.uActionBar {
 }
 
 .ma-popuplov {
+    fieldset {
+        display: block;
+    }
+
+    .lov input {
+        border-bottom: 1px solid $input-border-color;
+    }
+
     label {
         transform: translateY(-190%);
         font-size: 0.8rem;
@@ -132,11 +126,16 @@ body.uPopUpLOV div.uActionBar {
     .prefix ~ fieldset {
         margin-left: 3rem;
     }
+
+    .ma-chevron-up:before {
+        @include apex5-font();
+        content: "\e012";
+    }
 }
 
 /* Validation */
 span.ma-error-message {
-    color: #EF5350;
+    color: $error-color;
     font-size: 0.8rem;
     position: absolute;
     top: 0;
@@ -173,16 +172,19 @@ span.ma-error-message {
 
 .input-field .switch + label {
     font-size: 0.8rem;
-    -webkit-transform: translateY(-190%);
     transform: translateY(-190%);
 }
 
 /* Ranges */
 .input-field .range-field + label {
     font-size: 0.8rem;
-    -webkit-transform: translateY(-190%);
     transform: translateY(-190%);
 }
+
+input[type=range] {
+    border: none;
+}
+
 
 /* Text Alignment */
 .ma-field-container {
@@ -196,4 +198,10 @@ span.ma-error-message {
 /* Fieldset Labels */
 .label-block {
     display: block;
+}
+
+// Textarea
+.character-counter {
+    float: right;
+    font-size: 12px;
 }
