@@ -103,10 +103,10 @@ materialAPEX.datepicker = {
     init: function() {
         var headerHtml = function (day, month, dayNum, year) {
             return '<div class="ui-datepicker-material-header">' +
-                '<div class="ui-datepicker-material-day">' + day + '</div>' +
-                '<div class="ui-datepicker-material-month">' + month + '</div>' +
-                '<div class="ui-datepicker-material-day-num">' + dayNum + '</div>' +
                 '<div class="ui-datepicker-material-year">' + year + '</div>' +
+                '<div class="ui-datepicker-material-day">' + day + ', ' + month + ' ' + dayNum +'</div>' +
+                // '<div class="ui-datepicker-material-month">' + month + '</div>' +
+                // '<div class="ui-datepicker-material-day-num">' + dayNum + '</div>' +
             '</div>';
         };
 
@@ -114,7 +114,7 @@ materialAPEX.datepicker = {
             $('.ui-datepicker select').material_select();
             $(".ui-datepicker .ui-datepicker-material-header").remove();
             var date = $(this).datepicker('getDate') || new Date();
-            var day = $.datepicker.formatDate('DD', date);
+            var day = $.datepicker.formatDate('D', date);
             var month = $.datepicker.formatDate('MM', date);
             var dayNum = $.datepicker.formatDate('d', date);
             var year = $.datepicker.formatDate('yy', date);
