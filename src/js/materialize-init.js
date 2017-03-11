@@ -90,10 +90,10 @@ materialAPEX.select = {
         // reset focus on select elements
         setTimeout(function(){
             $(selector).material_select("destroy");
-            $(selector).material_select();
+            $(selector).not(".a-Property-field--select").material_select();
             $(selector).change(function(){
                 $(selector).material_select("destroy");
-                $(selector).material_select();
+                $(selector).not(".a-Property-field--select").material_select();
             });
         }, 250);
     }

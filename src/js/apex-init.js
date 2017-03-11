@@ -50,6 +50,13 @@ materialAPEX.wizard = {
     }
 };
 
+materialAPEX.messages = {
+    init: function() {
+        // missing for theme roller
+        apex.lang.addMessages({"PE.SELECT": "- Select -"});
+    }
+};
+
 materialAPEX.items = {
     init: function(selectorPrefix) {
         var prefix = selectorPrefix || "";
@@ -78,6 +85,11 @@ materialAPEX.items = {
 
     ig: function(selectorPrefix) {
         materialAPEX.items.init(selectorPrefix);
+    },
+
+    utr: function() {
+        if (!classExists("a-LiveTemplateOptions")) return;
+        $(".a-Property-checkbox-input").addClass("filled-in");
     }
 };
 
@@ -306,6 +318,7 @@ materialAPEX.initial = {
 
 $(function() {
     materialAPEX.initial.init();
+    materialAPEX.messages.init();
     materialAPEX.items.init();
     materialAPEX.ir.init();
 });

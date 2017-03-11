@@ -1,63 +1,73 @@
-.utr--main {
-    input.a-D3ColorPicker-control {
-    	height: initial;
-    	width: initial;
+body .ui-dialog.ui-widget.utr {
+    z-index: 1000!important;
 
-    	&.a-D3ColorPicker-control--rgb {
-    		width: 100%;
-    	}
+    // select
+    &.a-LiveTemplateOptions {
+        .a-Property-field--select {
+            width: 95%;
+            padding-right: 0;
+        }
     }
 
-    .a-D3ColorPicker {
-    	width: 300px;
+    // checkbox and radio
+    .a-Property-checkbox-input[type="checkbox"], .a-Property-radio-input[type="radio"] {
+        & + label {
+            padding-left: 35px;
+
+            &:before {
+                background-color: transparent;
+                border: none;
+            }
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        // &:checked + label {
+        //     &:before {
+        //
+        //     }
+        //     &:after {
+        //
+        //     }
+        // }
+
+        &:focus:checked + label {
+            &:before {
+                border-color: transparent;
+                background-color: transparent;
+            }
+            // &:after {
+            //
+            // }
+        }
+
+        &:hover, &:focus {
+            & + label:before {
+                border-color: transparent;
+                box-shadow: none;
+            }
+
+            & + label:after {
+                transform: inherit;
+            }
+        }
     }
 
-    select {
-    	display: initial;
-        height: initial;
-    }
+    // Footer
+    .ui-dialog-buttonpane {
+        margin-top: 0;
+        padding: 0;
 
-    input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
-        background-color: initial;
-        border: initial;
-        border-bottom: initial;
-        border-radius: initial;
-        outline: initial;
-        height: initial;
-        width: initial;
-        font-size: initial;
-        margin: initial;
-        padding: initial;
-        box-shadow: initial;
-        box-sizing: initial;
-        -webkit-transition: initial;
-        transition: initial;
-        background-size: 20px;
-        background-position: center;
-        background-repeat: no-repeat;
-        float: right;
-        transition: width 0.15s linear;
-        width: 30px;
-        height: 30px;
-        text-decoration: none;
-        padding: 1px 5px;
-        border: solid 1px #505050;
-        background-color: #202020;
-        color: #EEE !important;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
-        box-sizing: border-box;
-        margin-top: 0px;
-    }
+        .ui-dialog-buttonset {
+            .ui-button {
+                @extend .btn-flat;
+                background: none;
+            }
 
-    input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-        border-bottom: initial;
-        box-shadow: initial;
-    }
-
-    .utr-toolbar-search:focus, .utr-toolbar-search:hover, .utr-toolbar-search:valid {
-        width: 100px;
-        background-image: none;
+            .ui-button.ui-button--hot {
+                @extend .btn;
+            }
+        }
     }
 }

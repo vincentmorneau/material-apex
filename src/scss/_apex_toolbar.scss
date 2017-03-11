@@ -172,11 +172,21 @@
 }
 
 // toolbar modals
-.ui-dialog.ui-widget {
+body .ui-dialog.ui-widget {
     // minimu width to hold 3 buttons
     min-width: 460px;
-    background: none;
+    background: $modal-background-color;
 
+    // region display selector
+    .apex-rds {
+        padding-top: 0;
+
+        li {
+            display: inline-block;
+        }
+    }
+
+    // toolbar buttons
     .a-Button:focus {
         outline: none;
         background-color: transparent;

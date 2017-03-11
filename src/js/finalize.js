@@ -51,6 +51,7 @@ $(document).ready(function() {
     $(document).on("dialogopen", function(event, object) {
         console.time("dialogopen");
         materialAPEX.select.refresh("#" + event.target.id + " select");
+        materialAPEX.items.utr();
         console.timeEnd("dialogopen");
     });
     // modal interactive grid
