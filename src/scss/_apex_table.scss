@@ -29,6 +29,14 @@
     }
 }
 
-table thead th {
-    font-size: 15px;
+table {
+    thead th {
+        font-size: 15px;
+    }
+
+    td {
+        input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea, .select-wrapper input.select-dropdown {
+            margin-bottom: 0;
+        }
+    }
 }

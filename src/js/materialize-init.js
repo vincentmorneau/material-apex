@@ -5,7 +5,8 @@ var materialAPEX = materialAPEX || {};
 
 materialAPEX.observe = {
     toolbar: function() {
-        if (!classExists("a-IG") && !classExists("a-IRR")) return;
+        if (!classExists("a-Toolbar-group")) return;
+        materialAPEX.debug.time("materialAPEX.observe.toolbar");
 
         var observerConfig = {
             childList: true
@@ -21,10 +22,13 @@ materialAPEX.observe = {
         $(selector).each(function() {
             observer.observe(this, observerConfig);
         });
+
+        materialAPEX.debug.timeEnd("materialAPEX.observe.toolbar");
     },
 
     select: function() {
-        if (!classExists("a-IG")) return;
+        if (!classExists("a-GV-floatingItemContent")) return;
+        materialAPEX.debug.time("materialAPEX.observe.select");
 
         var observerConfig = {
             childList: true
@@ -41,13 +45,15 @@ materialAPEX.observe = {
         $(".a-GV-floatingItemContent").each(function() {
             observer.observe(this, observerConfig);
         });
+
+        materialAPEX.debug.timeEnd("materialAPEX.observe.select");
     }
 };
 
 materialAPEX.ig = {
     init: function() {
         if (!classExists("a-IG")) return;
-        maTime("materialAPEX.ig.init");
+        materialAPEX.debug.time("materialAPEX.ig.init");
 
         $(".a-Toolbar-group")
             .removeClass("force-hide")
@@ -77,20 +83,26 @@ materialAPEX.ig = {
         setTimeout(function(){
             $(document).trigger("apexwindowresized");
         }, 250);
-        maTimeEnd("materialAPEX.ig.init");
+
+        materialAPEX.debug.timeEnd("materialAPEX.ig.init");
     }
 };
 
 materialAPEX.select = {
     init: function() {
+        materialAPEX.debug.time("materialAPEX.select.init");
         $('form select').not('.disabled').material_select();
+        materialAPEX.debug.timeEnd("materialAPEX.select.init");
     },
 
     ir: function() {
+        materialAPEX.debug.time("materialAPEX.select.ir");
         $('.a-IRR select').not('.disabled').material_select();
+        materialAPEX.debug.timeEnd("materialAPEX.select.ir");
     },
 
     refresh: function(selector) {
+        materialAPEX.debug.time("materialAPEX.select.refresh");
         var exclude = ".a-Property-field--select, .a-IRR-dialogTable select";
         // reset focus on select elements
         setTimeout(function(){
@@ -101,11 +113,15 @@ materialAPEX.select = {
                 $(selector).not(exclude).material_select();
             });
         }, 250);
+        materialAPEX.debug.timeEnd("materialAPEX.select.refresh");
     }
 };
 
 materialAPEX.datepicker = {
     init: function() {
+        if (!classExists("hasDatepicker")) return;
+        materialAPEX.debug.time("materialAPEX.datepicker.init");
+
         var headerHtml = function (day, month, dayNum, year) {
             return '<div class="ui-datepicker-material-header">' +
                 '<div class="ui-datepicker-material-year">' + year + '</div>' +
@@ -115,7 +131,7 @@ materialAPEX.datepicker = {
             '</div>';
         };
 
-        $(".hasDatepicker").on("focus", function() {
+        $(document).on("focus", ".hasDatepicker", function() {
             $('.ui-datepicker select').material_select();
             $(".ui-datepicker .ui-datepicker-material-header").remove();
             var date = $(this).datepicker('getDate') || new Date();
@@ -125,11 +141,15 @@ materialAPEX.datepicker = {
             var year = $.datepicker.formatDate('yy', date);
             $(".ui-datepicker").prepend(headerHtml(day, month, dayNum, year));
         });
+
+        materialAPEX.debug.timeEnd("materialAPEX.datepicker.init");
     }
 };
 
 materialAPEX.materialize = {
     init: function() {
+        materialAPEX.debug.time("materialAPEX.materialize.init");
+
         /* Collapsible */
         $(".collapsible.accordion").collapsible({
             accordion: true
@@ -151,11 +171,11 @@ materialAPEX.materialize = {
 
         /* SideNav */
         if ($('.button-collapse').length > 0) {
-            var edgeDirection = $("link[href*='app.rtl']").length > 0 ? 'right' : 'left';
+            // var edgeDirection = $("link[href*='app.rtl']").length > 0 ? 'right' : 'left';
 
-            $('.button-collapse').sideNav({
+            $('.button-collapse').sideNav(/*{
                 edge: edgeDirection
-            });
+            }*/);
         }
 
         /* Scrollspy & Pushpin */
@@ -199,6 +219,8 @@ materialAPEX.materialize = {
 
         // Bottom sheets init
         $(".modal.bottom-sheet").modal();
+
+        materialAPEX.debug.timeEnd("materialAPEX.materialize.init");
     }
 };
 

@@ -27,7 +27,7 @@
             }
 
             .a-IRR-controlGroup--search {
-            	@include ma-s6;
+            	// @include ma-s6;
 
                 .a-IRR-colSelector {
                     @include ma-s2;
@@ -40,6 +40,7 @@
                     .a-IRR-search-field {
                         margin-bottom: 0;
                         margin-left: 0.5rem;
+                        width: calc(100% - 1rem);
                     }
                 }
 
@@ -49,7 +50,7 @@
             }
 
             .a-IRR-controlGroup--views {
-            	@include ma-s4;
+            	// @include ma-s4;
 
                 .a-IRR-savedReports {
                     display: block;
@@ -57,11 +58,12 @@
             }
 
             .a-IRR-controlGroup--options {
-            	@include ma-s2;
+            	// @include ma-s2;
+                float: right;
 
-                .a-IRR-actions {
-                    float: right;
-                }
+                // .a-IRR-actions {
+                //     float: right;
+                // }
             }
 
             // IR Buttons
@@ -102,6 +104,10 @@
             td {
                 padding: 8px 4px;
                 border-left: none;
+            }
+
+            .datepicker td {
+                border-top: none;
             }
         }
 
@@ -144,6 +150,10 @@
     select {
         @include browserDefaultInput();
         @include browserDefaultSelect();
+    }
+
+    .ajax_shuttle select {
+        height: auto;
     }
 
     input {

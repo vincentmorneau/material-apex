@@ -183,3 +183,8 @@ blockquote {
         margin-left: 1rem;
     }
 }
+
+// error template
+.a-Error-details h2 {
+	font-size: $h5-fontsize;
+}

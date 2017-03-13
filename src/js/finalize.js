@@ -16,50 +16,60 @@ $(document).ready(function() {
 
     // event handler for apexafterrefresh
     $('select').on('apexafterrefresh', function(){
-        maTime("apexafterrefresh");
+        materialAPEX.debug.time("apexafterrefresh");
         materialAPEX.select.init();
-        apex.debug(maTimeEnd("apexafterrefresh"));
+        materialAPEX.debug.timeEnd("apexafterrefresh");
     });
 
     // event handler for interactive reports
     $(".a-IRR-container").closest(".ma-region").on("apexafterrefresh", function() {
+        materialAPEX.debug.time("IRR-apexafterrefresh");
         materialAPEX.ir.init();
-        materialAPEX.items.init();
         materialAPEX.select.ir();
+        materialAPEX.debug.timeEnd("IRR-apexafterrefresh");
+    });
+
+    // global apexafterrefresh handler
+    $(document).on("apexafterrefresh", function() {
+        materialAPEX.debug.time("apexafterrefresh");
+        materialAPEX.items.init();
+        materialAPEX.textarea.init();
+        materialAPEX.debug.timeEnd("apexafterrefresh");
     });
 
     // event handler #1 for interactive grids
     $(document).on("gridpagechange", function(event, object) {
-        maTime("gridpagechange");
+        materialAPEX.debug.time("gridpagechange");
         materialAPEX.ig.init();
         materialAPEX.items.init();
-        maTimeEnd("gridpagechange");
+        materialAPEX.debug.timeEnd("gridpagechange");
     });
 
     // event handler #2 for interactive grids
     $(document).on("apexbeginrecordedit", function(event, object) {
-        maTime("apexbeginrecordedit");
-        maTimeEnd("apexbeginrecordedit");
+        materialAPEX.debug.time("apexbeginrecordedit");
+        materialAPEX.debug.timeEnd("apexbeginrecordedit");
     });
 
     // event handler #3 for interactive grids
     $(document).on("interactivegridselectionchange", function(event, object) {
-        maTime("interactivegridselectionchange");
+        materialAPEX.debug.time("interactivegridselectionchange");
         materialAPEX.items.init(object.recordId);
-        maTimeEnd("interactivegridselectionchange");
+        materialAPEX.debug.timeEnd("interactivegridselectionchange");
     });
 
     // modal interactive grid
     $(document).on("dialogopen", function(event, object) {
-        maTime("dialogopen");
+        materialAPEX.debug.time("dialogopen");
         materialAPEX.select.refresh("#" + event.target.id + " select");
         materialAPEX.items.init("#" + event.target.id);
         materialAPEX.items.utr();
-        maTimeEnd("dialogopen");
+        materialAPEX.debug.timeEnd("dialogopen");
     });
+
     // modal interactive grid
     $(document).on("dialogclose", function(event, object) {
-        maTime("dialogclose");
-        maTimeEnd("dialogclose");
+        materialAPEX.debug.time("dialogclose");
+        materialAPEX.debug.timeEnd("dialogclose");
     });
 });

@@ -5,7 +5,7 @@ $.fn.ignore = function(selector) {
     return this.clone().find(selector || ">*").remove().end();
 };
 
-$.fn.removeEmpty = function(selector) {
+$.fn.removeEmpty = function() {
     return this.filter(function() {
         return $.trim($(this).text()) === "" && $(this).children().length === 0;
     }).remove();
@@ -15,28 +15,30 @@ var classExists = function(className) {
     return document.getElementsByClassName(className).length > 0;
 };
 
-var maTime = function(name) {
-    if (apex.debug.getLevel() > apex.debug.LOG_LEVEL.OFF) {
-        console.time(name);
-    }
-};
-
-var maTimeEnd = function(name) {
-    if (apex.debug.getLevel() > apex.debug.LOG_LEVEL.OFF) {
-        console.timeEnd(name);
-    }
-};
-
 
 /**
  * @materialAPEX
  **/
 var materialAPEX = materialAPEX || {};
 
+materialAPEX.debug = {
+    time: function(name) {
+        if (apex.debug.getLevel() > apex.debug.LOG_LEVEL.OFF) {
+            console.time(name);
+        }
+    },
+
+    timeEnd: function(name) {
+        if (apex.debug.getLevel() > apex.debug.LOG_LEVEL.OFF) {
+            console.timeEnd(name);
+        }
+    }
+};
+
 materialAPEX.sideNav = {
     init: function() {
         if (!classExists("side-nav")) return;
-        maTime("materialAPEX.sideNav.init");
+        materialAPEX.debug.time("materialAPEX.sideNav.init");
 
         $("#app-sidenav li.active")
             .parents(".collapsible-body").css("display", "block")
@@ -50,14 +52,14 @@ materialAPEX.sideNav = {
         });
 
         $(".userView").wrap("<li></li>");
-        maTimeEnd("materialAPEX.sideNav.init");
+        materialAPEX.debug.timeEnd("materialAPEX.sideNav.init");
     }
 };
 
 materialAPEX.wizard = {
     init: function() {
         if (!classExists("ma-wizard")) return;
-        maTime("materialAPEX.wizard.init");
+        materialAPEX.debug.time("materialAPEX.wizard.init");
 
         // finds the current step and flags all previous ones to complete
         $(".ma-wizard")
@@ -65,7 +67,7 @@ materialAPEX.wizard = {
             .prevAll(".ma-wizard-step")
             .addClass("is-complete");
 
-        maTimeEnd("materialAPEX.wizard.init");
+        materialAPEX.debug.timeEnd("materialAPEX.wizard.init");
     }
 };
 
@@ -78,7 +80,7 @@ materialAPEX.messages = {
 
 materialAPEX.items = {
     init: function(selectorPrefix) {
-        maTime("materialAPEX.items.init");
+        materialAPEX.debug.time("materialAPEX.items.init");
 
         var prefix = selectorPrefix || "";
         // fix for empty checkbox and radio labels
@@ -103,7 +105,7 @@ materialAPEX.items = {
             $(this).appendTo($(this).parent());
         });
 
-        maTimeEnd("materialAPEX.items.init");
+        materialAPEX.debug.timeEnd("materialAPEX.items.init");
     },
 
     utr: function() {
@@ -115,7 +117,7 @@ materialAPEX.items = {
 materialAPEX.ir = {
     init: function() {
         if (!classExists("a-IRR")) return;
-        maTime("materialAPEX.ir.init");
+        materialAPEX.debug.time("materialAPEX.ir.init");
 
         if (!$('.a-IRR-table').hasClass("table-responsive")) {
             $('.a-IRR-table').addClass("table-responsive");
@@ -156,13 +158,25 @@ materialAPEX.ir = {
 
         $(".a-IRR-controlsCheckbox").addClass("filled-in");
 
-        maTimeEnd("materialAPEX.ir.init");
+        materialAPEX.debug.timeEnd("materialAPEX.ir.init");
+    }
+};
+
+materialAPEX.textarea = {
+    init: function() {
+        $("[id*='_CHAR_COUNTER']").parent().addClass("character-counter");
+
+        $("fieldset.textarea").prepend(function() {
+            return $(this).siblings();
+        });
+
+        $('textarea').addClass('materialize-textarea');
     }
 };
 
 materialAPEX.initial = {
     init: function() {
-        maTime("materialAPEX.initial.init");
+        materialAPEX.debug.time("materialAPEX.initial.init");
         // App Menu
         if (document.getElementById('app-sidenav')) {
             $("#app-sidenav-trigger").removeClass("hide");
@@ -239,13 +253,7 @@ materialAPEX.initial = {
             .removeClass('input-field');
 
         // Textarea
-        $("[id*='_CHAR_COUNTER']").parent().addClass("character-counter");
-
-        $("fieldset.textarea").prepend(function() {
-            return $(this).siblings();
-        });
-
-        $('textarea').addClass('materialize-textarea');
+        materialAPEX.textarea.init();
 
         // Popup LOV
         $("fieldset.lov").parent().addClass("ma-popuplov");
@@ -338,7 +346,7 @@ materialAPEX.initial = {
             };
         }
 
-        maTimeEnd("materialAPEX.initial.init");
+        materialAPEX.debug.timeEnd("materialAPEX.initial.init");
     }
 };
 
