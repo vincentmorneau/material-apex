@@ -1,7 +1,7 @@
 // menu container
 .a-Menu-content {
     border: none;
-    @extend .z-depth-3;
+    @include z-depth-3;
 
     ul {
         background-color: $dropdown-bg-color;
@@ -109,58 +109,6 @@
     }
 }
 
-// toolbar group
-.a-Toolbar-group {
-    margin-bottom: 0;
-
-    &.force-show {
-        @include showInlineBlock();
-    }
-
-    &.force-hide {
-        @include hide();
-    }
-
-    .a-Button {
-        @extend .btn-flat;
-        height: $input-height;
-        padding: 0px 12px!important;
-        line-height: 16px;
-
-        &[disabled] {
-            background-color: transparent!important;
-        }
-    }
-
-    input.a-Toolbar-input {
-        &.a-Toolbar-inputText {
-            width: auto;
-
-            &:focus {
-                outline: none;
-            }
-        }
-    }
-
-    // select fix
-    select.a-Toolbar-selectList {
-        @include hide();
-    }
-
-    .select-wrapper input.select-dropdown, .a-Toolbar-inputText {
-        margin: 0 0 8px 0;
-    }
-
-    div.a-Toolbar-selectList {
-        background-color: transparent;
-        overflow: visible;
-        height: inherit;
-        padding-right: 0;
-        background-image: none;
-        border: none;
-    }
-}
-
 // remove outlines
 .a-Toolbar-group .a-Button:focus
 , input:not(.a-Toolbar-inputText):focus + .a-Toolbar-group .a-Button
@@ -220,7 +168,7 @@ body .ui-dialog.ui-widget {
         border: 0;
         padding: 0;
         background: 0 0;
-        overflow: hidden;
+        // overflow: hidden;
 
         // fix for weird overflow
         &
@@ -283,12 +231,12 @@ body .ui-dialog.ui-widget {
 
         .ui-dialog-buttonset {
             .ui-button {
-                @extend .btn-flat;
+                @include btn-flat;
                 background: none;
             }
 
             .ui-button.ui-button--hot {
-                @extend .btn;
+                @include btn;
             }
         }
     }
@@ -340,4 +288,34 @@ body .ui-dialog.ui-widget {
 #apex_popup_help_area .ui-dialog.ui-widget {
     max-height: 80%;
     overflow-y: scroll;
+}
+
+// IR and IG filters
+.a-IG, .a-IRR {
+    .a-MediaBlock {
+        .a-MediaBlock-graphic {
+            @include hide;
+        }
+
+        .a-IRR-reportSummaryContainer, .a-IG-reportSummaryContainer {
+            @include hide;
+        }
+
+        .a-IRR-controls-cell:first-child {
+            padding: 0;
+        }
+
+        .a-IRR-controlsCheckboxLabel {
+            border: none;
+            box-shadow: none;
+
+            &:before {
+                top: 6px!important;
+            }
+
+            &:after {
+                top: 6px!important;
+            }
+        }
+    }
 }

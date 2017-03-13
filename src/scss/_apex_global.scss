@@ -22,12 +22,7 @@ ul {
 }
 
 // apex hidden components
-input.u-vh
-// , .hideMeButHearMe
-// , .u-VisuallyHidden
-// , .visuallyHidden
-// , .visuallyhidden
-{
+input.u-vh {
     @include vh();
 }
 

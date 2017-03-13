@@ -46,8 +46,8 @@ materialAPEX.observe = {
 
 materialAPEX.ig = {
     init: function() {
-        console.time("materialAPEX.ig.init");
         if (!classExists("a-IG")) return;
+        maTime("materialAPEX.ig.init");
 
         $(".a-Toolbar-group")
             .removeClass("force-hide")
@@ -77,7 +77,7 @@ materialAPEX.ig = {
         setTimeout(function(){
             $(document).trigger("apexwindowresized");
         }, 250);
-        console.timeEnd("materialAPEX.ig.init");
+        maTimeEnd("materialAPEX.ig.init");
     }
 };
 
@@ -86,14 +86,19 @@ materialAPEX.select = {
         $('form select').not('.disabled').material_select();
     },
 
+    ir: function() {
+        $('.a-IRR select').not('.disabled').material_select();
+    },
+
     refresh: function(selector) {
+        var exclude = ".a-Property-field--select, .a-IRR-dialogTable select";
         // reset focus on select elements
         setTimeout(function(){
             $(selector).material_select("destroy");
-            $(selector).not(".a-Property-field--select").material_select();
+            $(selector).not(exclude).material_select();
             $(selector).change(function(){
                 $(selector).material_select("destroy");
-                $(selector).not(".a-Property-field--select").material_select();
+                $(selector).not(exclude).material_select();
             });
         }, 250);
     }

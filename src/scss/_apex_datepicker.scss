@@ -16,11 +16,9 @@
     z-index: 800!important;
     width: auto;
     min-width: 250px;
-    // max-width: 300px;
-    @extend .z-depth-5;
+    @include z-depth-5;
 
     .ui-datepicker-material-header {
-        // text-align: center;
         background-color: $datepicker-date-bg;
         color: #fff;
         padding: 1rem 2rem;
@@ -32,23 +30,8 @@
         }
 
         .ui-datepicker-material-day {
-            // background-color: $datepicker-weekday-bg;
-            // padding: 10px;
-            // font-weight: 200;
-            // letter-spacing: .5;
             font-size: 2rem;
-            // margin-bottom: 15px;
         }
-
-        // .ui-datepicker-material-month {
-        //     font-size: 2rem;
-        //     text-transform: uppercase;
-        // }
-
-        // .ui-datepicker-material-day-num {
-        //     font-size: 4.5rem;
-        //     font-weight: 400;
-        // }
     }
 
     .ui-datepicker-header {

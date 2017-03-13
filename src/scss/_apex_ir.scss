@@ -1,364 +1,162 @@
-.a-IRR-toolbar {
-	position: static;
-  	background-color: transparent;
-    padding: 0;
-    border-bottom: none;
+.a-IRR-container {
+    @include ma-card;
+    padding: 1rem;
 
-	.a-IRR-controlGroup.a-IRR-controlGroup--search button, .a-IRR-controlGroup.a-IRR-controlGroup--options button, .a-IRR-button.a-IRR-button--reportView {
-		@extend .btn-large;
-		padding: 0 0.8rem;
-		background-color: $ir-specific-color;
+    .a-IRR {
+        border: none;
+        background-color: transparent;
 
-	  	&:focus {
-			background-color: $ir-specific-color;
-	  	}
+        // IR Toolbar
+        .a-IRR-toolbar {
+          	background-color: transparent;
+            border-bottom: none;
+            padding: 0;
+            padding-bottom: 1rem;
 
-	  	&:active, &:visited, &:hover {
-			background-color: $ir-specific-color-light;
-			box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-	  	}
-	}
+            // IR Buttons
+            .a-IRR-button {
+                @include btn-flat;
 
-	.a-IRR-controlGroup.a-IRR-controlGroup--views button {
-		@extend .btn-floating;
-		margin: 0 0.5rem;
-		background-color: $ir-specific-color;
+                i {
+                    font-size: 2rem;
+                }
+            }
 
-	  	&:focus {
-			background-color: $ir-specific-color;
-	  	}
+            .a-IRR-controlGroup {
+                margin-bottom: 0;
+            }
 
-	  	&:active, &:visited, &:hover {
-			background-color: $ir-specific-color-light;
-			box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-	  	}
-	}
+            .a-IRR-controlGroup--search {
+            	@include ma-s6;
 
-	.a-IRR-controls .a-Icon {
-	    vertical-align: middle;
-	    display: inline-block;
-	    width: 20px;
-	    height: 26px;
-	    line-height: 26px;
-	}
+                .a-IRR-colSelector {
+                    @include ma-s2;
+                }
+
+                .a-IRR-searchFieldContainer {
+                    @include ma-s10;
+                    margin-top: 0;
+
+                    .a-IRR-search-field {
+                        margin-bottom: 0;
+                        margin-left: 0.5rem;
+                    }
+                }
+
+                .a-IRR-searchButtonContainer {
+                    @include hide;
+                }
+            }
+
+            .a-IRR-controlGroup--views {
+            	@include ma-s4;
+
+                .a-IRR-savedReports {
+                    display: block;
+                }
+            }
+
+            .a-IRR-controlGroup--options {
+            	@include ma-s2;
+
+                .a-IRR-actions {
+                    float: right;
+                }
+            }
+
+            // IR Buttons
+            .a-IRR-button {
+                height: $input-height;
+                padding: 0 0.5rem;
+                line-height: 3rem;
+            }
+
+            // select list
+            select.a-IRR-selectList {
+                @include hide;
+            }
+
+            div.a-IRR-selectList {
+                display: block;
+                height: auto;
+                padding: 0;
+                border: none;
+                background-image: none;
+                overflow:visible;
+
+                input {
+                    margin-bottom:0;
+                }
+            }
+        }
+
+        // IR Table
+        .a-IRR-table {
+            // IR th
+            .a-IRR-header {
+                border-left: none;
+              	background-color: #fff;
+                font-size: 16px;
+            }
+
+            td {
+                padding: 8px 4px;
+                border-left: none;
+            }
+        }
+
+        .a-IRR-paginationWrap {
+            &.a-IRR-paginationWrap--bottom {
+                padding: 12px 12px 0 12px;
+            }
+
+            // IR Buttons
+            .a-IRR-button {
+                @include btn-flat;
+                @include small-btn;
+
+                i {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
 }
 
-.a-IRR-header {
-    border-left: none;
-  	background-color: #fff;
-    font-size: 15px;
+// menu when sorting columns
+.a-IRR-sortWidget {
+    .a-IRR-sortWidget-search>.a-IRR-sortWidget-searchField {
+        width: calc(100% - 40px);
+    }
 }
 
-fieldset.datepicker .t-fht-wrapper .t-fht-thead {
-    z-index: 1!important;
+// modal inputs
+.a-IRR-dialogContent {
+    padding: 1rem;
 }
 
-.a-IRR-headerLabel, .a-IRR-headerLink {
-    padding: 15px 5px;
-}
-
-.a-IRR-table td {
-	padding: 15px 5px;
-
-    .datepicker td {
-        border-top: none;
+.a-IRR-dialogTable {
+    td, th {
+        padding: 5px;
+        vertical-align: middle;
     }
 
-    .picker__table td {
-        border-top: none;
-        padding: 0;
-    }
-}
-
-.picker__input {
-    cursor: pointer;
-}
-
-@media #{$medium-and-up} {
-	.a-IRR-container {
-        padding: 20px;
-        display: block;
-        margin: .5rem 0 1rem;
-        background-color: #fff;
-        border-radius: 2px;
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
-	}
-}
-
-.a-IRR {
-    border: none;
-    background-color: transparent;
-}
-
-.a-IRR-table td {
-    border-left: none;
-}
-
-.input-field .a-IRR-search-field {
-    margin-left: 1rem;
-}
-
-.a-IRR-paginationWrap {
-    padding: 20px 0px 0px 0px;
-}
-
-@media #{$small-and-down} {
-	.t-fht-tbody .a-IRR-table, .a-IRR-dialogTable.table-responsive {
-		margin-top: 0!important;
-
-		tr:first-child {
-			display:none;
-		}
-	}
-
-	.a-IRR-dialogContent--highlight table table {
-		tr:nth-child(2) {
-			display:none;
-		}
-	}
-
-	.t-fht-thead {
-		display:none;
-	}
-
-	table.table-responsive.a-IRR-table tr {
-	    position: relative;
-	    padding-bottom: 4.5rem;
-	}
-
-	table.table-responsive.a-IRR-table td {
-	    border-bottom: 1px solid #F0F0F0;
-	    border-top: none;
-	}
-
-	table.table-responsive.a-IRR-table td:first-child {
-		border-bottom: none;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-	}
-
-	table.table-responsive.a-IRR-table td:last-child {
-	    border-bottom: 1px solid #F0F0F0;
-	}
-
-	.t-fht-wrapper div:not(.t-fht-tbody) {
-		display:none!important;
-	}
-
-	.a-IRR-paginationWrap--bottom {
-	    border-top: none;
-	}
-
-	table.table-responsive.a-IRR-table .a-IRR-header-tr {
-		display:none;
-	}
-
-	table.table-responsive.a-IRR-table .a-IRR-header-tr--group {
-	  	padding-bottom: initial;
-	}
-
-	table.table-responsive.a-IRR-table .a-IRR-header.a-IRR-header--group {
-	  	border-top: none;
-	  	border-bottom: none;
-	}
-}
-
-.a-IRR-searchButtonContainer, .a-IRR-button--actions, .a-IRR-button--colSearch {
-	display: none;
-}
-
-// .a-Icon.icon-menu-drop-down {
-// 	display:none;
-// }
-
-.a-IRR-actions {
-    float: right !important;
-}
-
-.a-IRR-controlGroup--options {
-	@include ma-s3;
-}
-
-.a-IRR-controlGroup--search {
-	@include ma-s9;
-}
-
-.a-IRR-searchFieldContainer {
-	width: calc(100% - 50px);
-    margin-top: 1rem;
-}
-
-.a-IRR-search {
-	@include ma-s12;
-	margin-right: 0;
-}
-
-.a-IRR-table tr:hover td {
-    background-color: transparent;
-}
-
-.a-IRR-detail-row {
-	text-align: center;
-	margin-bottom: 0;
-	margin-right: 0.2em;
-
-	@extend .btn;
-
-  	&:active, &:visited, &:hover {
-		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  	}
-
-  	padding: 0 0.5rem;
-}
-
-.a-IRR-dialogTable td, .a-IRR-dialogTable th {
-    vertical-align: middle;
-}
-
-.a-IRR-dialog {
-	@extend .modal;
-
-	@media #{$small-and-down} {
-		width:90%!important;
-	}
-
-	@media #{$medium-only} {
-		width:80%!important;
-	}
-
-	@media #{$large-and-up} {
-		width:60%!important;
-	}
-
-    .ui-button {
-    	background: none;
-		@extend .btn-flat;
-		padding: 0 0.8rem;
-	}
-
-	select {
-		display:block;
-	}
-
-	.ajax_shuttle select {
-		width:100%;
-		height: 10rem;
-	}
-
-	.a-IRR-dialogContent--highlight .itemlink {
-		display:none;
-	}
-
-	[title="Expression"], input[type=text] {
-		height: 4rem;
-    	width: 60%;
-	}
-
-    .a-IRR-dialogTable {
-        width: inherit;
+    select {
+        @include browserDefaultInput();
+        @include browserDefaultSelect();
     }
 
-	.a-IRR-dialogTable td, .a-IRR-dialogTable th {
-	    padding-right: 20px;
-	}
-
-	@media only screen and (max-width: 600px) {
-		.a-IRR-dialogTable.table-responsive select {
-			width: 60%;
-			display: inline-block;
-		}
-
-		.a-IRR-dialogTable.table-responsive td:before {
-		    line-height: 50px;
-		}
-	}
-
-	.lov_colorpicker .a-Icon.icon-up-chevron {
-		vertical-align: middle;
-	}
-}
-
-.a-IRR-pagination-label {
-  padding: 10px;
-}
-
-.a-IRR-pagination-item:first-child .a-IRR-button.a-IRR-button--pagination, .a-IRR-pagination-item:last-child .a-IRR-button.a-IRR-button--pagination {
-	@extend .btn;
-	background-color: $ir-specific-color;
-  	padding: 9px 5px 8px 4px;
-
-    &:focus {
-        background-color: $ir-specific-color;
+    input {
+        width: auto;
+        margin: 0;
     }
 
-  	&:active, &:visited, &:hover {
-		background-color: $ir-specific-color-light;
-		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  	}
+    .a-Button--menu {
+        @include btn-flat;
+        @include small-btn;
+    }
+
+    .a-IRR-format-mask-picker {
+        margin-left: -20px;
+    }
 }
-
-label.a-IRR-controlsCheckboxLabel {
-	border: none;
-	box-shadow: none;
-	padding-left: 25px;
-	background-color: transparent;
-
-}
-
-.a-IRR-controlsCheckboxLabel:before {
-  	opacity: 1;
-}
-
-.a-IRR-controlsCheckboxLabel:active {
-  background-color: transparent;
-}
-
-.a-MediaBlock-graphic {
-	display: none;
-}
-
-.a-IRR-button--reportView .a-Icon {
-  	vertical-align: middle;
-  	line-height: 20px;
-	height: 20px;
-}
-
-.a-IRR-controls-cell--label {
-  	width: 200px;
-}
-
-.a-IRR-reportSummaryContainer {
-	padding-top: 10px;
-}
-
-.a-IRR-controlGroup.a-IRR-controlGroup--views {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	margin-bottom: 13px;
-}
-
-.a-IRR-sortWidget-search>.a-IRR-sortWidget-searchField, .a-IRR-sortWidget-search>.a-IRR-sortWidget-searchField[type=text]{
-	width: calc(100% - 40px);
-}
-
-.a-IRR-singleRow-value {
-  	background-color: #FCFCFC;
-}
-
-.a-Icon.icon-menu-scroll-up:before {
-    content: "\e0e5";
-}
-
-.a-IRR-controls-item {
-    float: left;
-}
-
-.a-IRR-reportSummaryContainer {
-    display: none;
-}
-
-// .ui-resizable-handle {
-//     display: none!important;
-// }

@@ -15,6 +15,18 @@ var classExists = function(className) {
     return document.getElementsByClassName(className).length > 0;
 };
 
+var maTime = function(name) {
+    if (apex.debug.getLevel() > apex.debug.LOG_LEVEL.OFF) {
+        console.time(name);
+    }
+};
+
+var maTimeEnd = function(name) {
+    if (apex.debug.getLevel() > apex.debug.LOG_LEVEL.OFF) {
+        console.timeEnd(name);
+    }
+};
+
 
 /**
  * @materialAPEX
@@ -23,6 +35,9 @@ var materialAPEX = materialAPEX || {};
 
 materialAPEX.sideNav = {
     init: function() {
+        if (!classExists("side-nav")) return;
+        maTime("materialAPEX.sideNav.init");
+
         $("#app-sidenav li.active")
             .parents(".collapsible-body").css("display", "block")
             .siblings(".collapsible-header")
@@ -35,30 +50,36 @@ materialAPEX.sideNav = {
         });
 
         $(".userView").wrap("<li></li>");
+        maTimeEnd("materialAPEX.sideNav.init");
     }
 };
 
 materialAPEX.wizard = {
     init: function() {
-        var classSelector = ".ma-wizard";
+        if (!classExists("ma-wizard")) return;
+        maTime("materialAPEX.wizard.init");
 
         // finds the current step and flags all previous ones to complete
-        $(classSelector)
-            .find(classSelector + "-step.is-active")
-            .prevAll(classSelector + "-step")
+        $(".ma-wizard")
+            .find(".ma-wizard-step.is-active")
+            .prevAll(".ma-wizard-step")
             .addClass("is-complete");
+
+        maTimeEnd("materialAPEX.wizard.init");
     }
 };
 
 materialAPEX.messages = {
     init: function() {
-        // missing for theme roller
+        // message is missing for theme roller
         apex.lang.addMessages({"PE.SELECT": "- Select -"});
     }
 };
 
 materialAPEX.items = {
     init: function(selectorPrefix) {
+        maTime("materialAPEX.items.init");
+
         var prefix = selectorPrefix || "";
         // fix for empty checkbox and radio labels
         $(".a-GV " + prefix + " input[type='checkbox'], .a-GV " + prefix + " input[type='radio']").addClass("filled-in");
@@ -81,10 +102,8 @@ materialAPEX.items = {
         $(".input-field > label, .input-field fieldset > label").each(function() {
             $(this).appendTo($(this).parent());
         });
-    },
 
-    ig: function(selectorPrefix) {
-        materialAPEX.items.init(selectorPrefix);
+        maTimeEnd("materialAPEX.items.init");
     },
 
     utr: function() {
@@ -96,16 +115,17 @@ materialAPEX.items = {
 materialAPEX.ir = {
     init: function() {
         if (!classExists("a-IRR")) return;
+        maTime("materialAPEX.ir.init");
 
         if (!$('.a-IRR-table').hasClass("table-responsive")) {
+            $('.a-IRR-table').addClass("table-responsive");
+
             $(".a-IRR-search-field")
-                .attr("placeholder", $(".a-IRR-sortWidget-searchLabel span").text())
+                .attr("placeholder", apex.lang.getMessage("APEX.IG.SEARCH"))
                 .parent().addClass("input-field");
 
-            $(".a-IRR-button--actions").html('<i class="material-icons">more_vert</i>').show();
-            $(".a-IRR-button--colSearch").html('<i class="material-icons">search</i>').show();
-
-            $('.a-IRR-table').addClass("table-responsive");
+            $(".a-IRR-button--actions").html('<i class="material-icons">more_vert</i>')/*.show()*/;
+            $(".a-IRR-button--colSearch").html('<i class="material-icons">search</i>')/*.show()*/;
 
             $(".a-IRR-table td").each(function(index) {
                 $(this)
@@ -134,11 +154,15 @@ materialAPEX.ir = {
             $(this).after("<label for='" + $(this).attr("id") + "'></label>").parent().removeAttr("nowrap");
         });
 
+        $(".a-IRR-controlsCheckbox").addClass("filled-in");
+
+        maTimeEnd("materialAPEX.ir.init");
     }
 };
 
 materialAPEX.initial = {
     init: function() {
+        maTime("materialAPEX.initial.init");
         // App Menu
         if (document.getElementById('app-sidenav')) {
             $("#app-sidenav-trigger").removeClass("hide");
@@ -313,6 +337,8 @@ materialAPEX.initial = {
                 return newSpinner;
             };
         }
+
+        maTimeEnd("materialAPEX.initial.init");
     }
 };
 
@@ -320,5 +346,4 @@ $(function() {
     materialAPEX.initial.init();
     materialAPEX.messages.init();
     materialAPEX.items.init();
-    materialAPEX.ir.init();
 });

@@ -1,42 +1,85 @@
-.a-GV-rowSelector {
-    height: 22px;
-    border: none;
-    padding: 0;
-    box-shadow: none;
-    background-color: transparent;
-}
-
-.a-GV-rowSelector:hover, .is-hover .a-GV-rowSelector {
-    border: none;
-
-    &:before {
-        opacity: 0;
-    }
-}
-
-.is-selected .a-GV-rowSelector:before {
-    opacity: 0;
-}
-
 .a-IG {
+    @include ma-card;
+
     .a-IG-header {
         padding: 8px;
         z-index: 800!important;
-    }
+        background-color: $card-bg-color;
 
-    // buttons
-    [data-action='search'] {
-        @include hide();
-    }
+        // toolbar group
+        .a-Toolbar-group {
+            margin-bottom: 0;
 
-    [data-action='edit'] {
-        label {
-            padding: 15px 12px 12px 36px!important;
-            font-size: 12px;
+            &.force-show {
+                @include showInlineBlock();
+            }
 
-            &:before {
-                margin-top: 14px;
-                margin-left: 8px;
+            &.force-hide {
+                @include hide();
+            }
+
+            .a-Button {
+                @include btn-flat;
+                height: $input-height;
+                padding: 0 0.5rem;
+                line-height: 16px;
+
+                &[disabled] {
+                    background-color: transparent!important;
+                }
+
+                .icon-menu-drop-down {
+                    @include hide;
+                }
+            }
+
+            input.a-Toolbar-input {
+                &.a-Toolbar-inputText {
+                    width: auto;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            // select fix
+            select.a-Toolbar-selectList {
+                @include hide();
+            }
+
+            .select-wrapper input.select-dropdown, .a-Toolbar-inputText {
+                margin: 0 0 8px 0;
+            }
+
+            div.a-Toolbar-selectList {
+                background-color: transparent;
+                overflow: visible;
+                height: inherit;
+                padding-right: 0;
+                background-image: none;
+                border: none;
+            }
+
+            // buttons
+            // [data-enter-action='search'] {
+            //     margin-left: 1rem;
+            // }
+
+            [data-action='search'] {
+                @include hide();
+            }
+
+            [data-action='edit'] {
+                label {
+                    padding: 15px 12px 12px 36px!important;
+                    font-size: 12px;
+
+                    &:before {
+                        margin-top: 14px;
+                        margin-left: 8px;
+                    }
+                }
             }
         }
     }
@@ -110,6 +153,26 @@
             outline: none;
             background-color: transparent;
         }
+    }
+
+    .a-GV-rowSelector {
+        height: 22px;
+        border: none;
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .a-GV-rowSelector:hover, .is-hover .a-GV-rowSelector {
+        border: none;
+
+        &:before {
+            opacity: 0;
+        }
+    }
+
+    .is-selected .a-GV-rowSelector:before {
+        opacity: 0;
     }
 
     // checkboxes
