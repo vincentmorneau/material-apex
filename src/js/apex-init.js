@@ -1,26 +1,39 @@
 /**
- * APEX Initialization
- **/
+ * Ignores a selector of objects from the given jQuery selector
+ * @param {string} selector - jQuery selector to be ignored.
+ * @returns {object} currated jQuery selector
+ */
 $.fn.ignore = function(selector) {
     return this.clone().find(selector || ">*").remove().end();
 };
 
+/**
+ * Removes empty objects from the DOM based on the given selector
+ * @returns {object}
+ */
 $.fn.removeEmpty = function() {
     return this.filter(function() {
         return $.trim($(this).text()) === "" && $(this).children().length === 0;
     }).remove();
 };
 
+/**
+ * Verifies if the given class exists on the DOM
+ * This is performed in vanilla JS instead of jQuery to increase performance
+ * @returns {boolean} true if the class exists, false if it doesn't
+ */
 var classExists = function(className) {
     return document.getElementsByClassName(className).length > 0;
 };
 
-
 /**
- * @materialAPEX
+ * @namespace materialAPEX
  **/
 var materialAPEX = materialAPEX || {};
 
+/**
+ * @module debug
+ **/
 materialAPEX.debug = {
     time: function(name) {
         if (apex.debug.getLevel() > apex.debug.LOG_LEVEL.OFF) {
@@ -35,6 +48,9 @@ materialAPEX.debug = {
     }
 };
 
+/**
+ * @module sideNav
+ **/
 materialAPEX.sideNav = {
     init: function() {
         if (!classExists("side-nav")) return;
@@ -56,6 +72,9 @@ materialAPEX.sideNav = {
     }
 };
 
+/**
+ * @module wizard
+ **/
 materialAPEX.wizard = {
     init: function() {
         if (!classExists("ma-wizard")) return;
@@ -71,6 +90,9 @@ materialAPEX.wizard = {
     }
 };
 
+/**
+ * @module messages
+ **/
 materialAPEX.messages = {
     init: function() {
         // message is missing for theme roller
@@ -78,6 +100,9 @@ materialAPEX.messages = {
     }
 };
 
+/**
+ * @module items
+ **/
 materialAPEX.items = {
     init: function(selectorPrefix) {
         materialAPEX.debug.time("materialAPEX.items.init");
@@ -114,6 +139,9 @@ materialAPEX.items = {
     }
 };
 
+/**
+ * @module ir
+ **/
 materialAPEX.ir = {
     init: function() {
         if (!classExists("a-IRR")) return;
@@ -162,6 +190,9 @@ materialAPEX.ir = {
     }
 };
 
+/**
+ * @module textarea
+ **/
 materialAPEX.textarea = {
     init: function() {
         $("[id*='_CHAR_COUNTER']").parent().addClass("character-counter");
@@ -174,6 +205,9 @@ materialAPEX.textarea = {
     }
 };
 
+/**
+ * @module initial
+ **/
 materialAPEX.initial = {
     init: function() {
         materialAPEX.debug.time("materialAPEX.initial.init");

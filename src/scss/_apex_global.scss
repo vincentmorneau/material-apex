@@ -185,6 +185,12 @@ blockquote {
 }
 
 // error template
-.a-Error-details h2 {
+.a-Error-details h2
+, h2.a-Notification-title
+, .a-Notification-details h2 {
 	font-size: $h5-fontsize;
+}
+
+body .ui-dialog.ui-widget .ui-dialog-content.ui-widget-content.a-Notification-details {
+    padding: 1rem;
 }

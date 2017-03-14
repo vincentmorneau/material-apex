@@ -40,3 +40,29 @@ table {
         }
     }
 }
+
+// standard reports
+.u-Report--dataLoad {
+    td, th {
+        overflow: visible;
+        min-width: 125px;
+        max-width: none;
+    }
+}
+
+.u-Report tr:nth-child(even) {
+    td, th[scope=row] {
+        background-color: #fff;
+    }
+}
+
+.u-Report--standardLook {
+    td, th {
+        padding: 8px;
+    }
+}
+
+.u-Report--dataLoad, .u-Report--standardLook {
+    line-height: inherit;
+    font-size: inherit;
+}

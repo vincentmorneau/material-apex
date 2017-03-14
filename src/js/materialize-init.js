@@ -1,8 +1,11 @@
-/************
-Materialize Initialization
-************/
+/**
+ * @namespace materialAPEX
+ **/
 var materialAPEX = materialAPEX || {};
 
+/**
+ * @module observe
+ **/
 materialAPEX.observe = {
     toolbar: function() {
         if (!classExists("a-Toolbar-group")) return;
@@ -50,6 +53,9 @@ materialAPEX.observe = {
     }
 };
 
+/**
+ * @module ig
+ **/
 materialAPEX.ig = {
     init: function() {
         if (!classExists("a-IG")) return;
@@ -88,6 +94,9 @@ materialAPEX.ig = {
     }
 };
 
+/**
+ * @module select
+ **/
 materialAPEX.select = {
     init: function() {
         materialAPEX.debug.time("materialAPEX.select.init");
@@ -117,6 +126,9 @@ materialAPEX.select = {
     }
 };
 
+/**
+ * @module datepicker
+ **/
 materialAPEX.datepicker = {
     init: function() {
         if (!classExists("hasDatepicker")) return;
@@ -146,6 +158,9 @@ materialAPEX.datepicker = {
     }
 };
 
+/**
+ * @module materialize
+ **/
 materialAPEX.materialize = {
     init: function() {
         materialAPEX.debug.time("materialAPEX.materialize.init");
@@ -203,7 +218,9 @@ materialAPEX.materialize = {
         $('.slider').slider();
 
         /* Tooltips */
-        $("[data-tooltip][data-tooltip!='']").materialtooltip();
+        $("[data-tooltip][data-tooltip!='']").materialtooltip({
+            html: true
+        });
 
         /* Tabs */
         $('ul.tabs').tabs();
