@@ -70,4 +70,41 @@ body .ui-dialog.ui-widget.utr {
             }
         }
     }
+
+    .utr-toolbar-search {
+        border-bottom: none;
+        height: 30px;
+        width: 30px;
+        padding: 0;
+
+        &:hover {
+            width: 100px;
+        }
+    }
+
+    button:focus {
+        background-color:transparent;
+    }
+
+    .utr-container__field--select__container select {
+        display:block;
+        height:auto;
+        padding: 0;
+    }
+
+    .a-D3ColorPicker-control {
+        width: 4rem;
+        height: auto;
+    }
+
+    .ui-dialog-titlebar {
+        .ui-dialog-titlebar__minimize {
+            right: 45px
+        }
+
+        .ui-dialog-titlebar-close {
+            right: 20px;
+            top: 10px;
+        }
+    }
 }

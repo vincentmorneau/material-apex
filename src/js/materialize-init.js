@@ -50,6 +50,24 @@ materialAPEX.observe = {
         });
 
         materialAPEX.debug.timeEnd("materialAPEX.observe.select");
+    },
+
+    irDialog: function() {
+        materialAPEX.debug.time("materialAPEX.observe.irDialog");
+
+        var observerConfig = {
+            childList: true
+        };
+
+        var observer = new MutationObserver(function(mutations) {
+            materialAPEX.items.init();
+        });
+
+        $(".a-IRR-dialogBody").each(function() {
+            observer.observe(this, observerConfig);
+        });
+
+        materialAPEX.debug.timeEnd("materialAPEX.observe.irDialog");
     }
 };
 
@@ -112,7 +130,7 @@ materialAPEX.select = {
 
     refresh: function(selector) {
         materialAPEX.debug.time("materialAPEX.select.refresh");
-        var exclude = ".a-Property-field--select, .a-IRR-dialogTable select";
+        var exclude = ".a-Property-field--select, .a-IRR-dialogTable select, .utr select";
         // reset focus on select elements
         setTimeout(function(){
             $(selector).material_select("destroy");
@@ -138,20 +156,20 @@ materialAPEX.datepicker = {
             return '<div class="ui-datepicker-material-header">' +
                 '<div class="ui-datepicker-material-year">' + year + '</div>' +
                 '<div class="ui-datepicker-material-day">' + day + ', ' + month + ' ' + dayNum +'</div>' +
-                // '<div class="ui-datepicker-material-month">' + month + '</div>' +
-                // '<div class="ui-datepicker-material-day-num">' + dayNum + '</div>' +
             '</div>';
         };
 
         $(document).on("focus", ".hasDatepicker", function() {
-            $('.ui-datepicker select').material_select();
-            $(".ui-datepicker .ui-datepicker-material-header").remove();
             var date = $(this).datepicker('getDate') || new Date();
             var day = $.datepicker.formatDate('D', date);
             var month = $.datepicker.formatDate('MM', date);
             var dayNum = $.datepicker.formatDate('d', date);
             var year = $.datepicker.formatDate('yy', date);
-            $(".ui-datepicker").prepend(headerHtml(day, month, dayNum, year));
+            setTimeout(function(){
+                $('.ui-datepicker select').material_select();
+                $(".ui-datepicker .ui-datepicker-material-header").remove();
+                $(".ui-datepicker").prepend(headerHtml(day, month, dayNum, year));
+            }, 250);
         });
 
         materialAPEX.debug.timeEnd("materialAPEX.datepicker.init");
@@ -223,7 +241,9 @@ materialAPEX.materialize = {
         });
 
         /* Tabs */
-        $('ul.tabs').tabs();
+        $('ul.tabs').tabs(/*{
+            swipeable: true
+        }*/);
 
         /* Carousels */
         $('.carousel.carousel-slider').carousel({

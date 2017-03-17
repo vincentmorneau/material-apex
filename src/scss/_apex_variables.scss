@@ -28,8 +28,7 @@ Material APEX Variables
  *  22. Flow Text
  *  23. Collections
  *  24. Progress Bar
- *  25. Interactive Reports
- *  26. Modals
+ *  25. Modals
  */
 
 /*
@@ -149,7 +148,7 @@ Material APEX Variables
    "group": "Colors"
 }
 */
-$background-color: #f5f5f5;
+$background-color: #efefef;
 /*
 {
     "var": "@primary-color",
@@ -490,6 +489,7 @@ $card-link-color-light: lighten($card-link-color, 20%) !default;
 }
 */
 $collapsible-height: 3rem !default;
+$collapsible-line-height: $collapsible-height !default;
 /*
 {
     "var"  : "@collapsible-header-color",
@@ -840,6 +840,7 @@ $element-bottom-margin: ($gutter-width*2)/3 !default;
 }
 */
 $navbar-height: 64px !default;
+$navbar-line-height: $navbar-height !default;
 /*
 {
   "var"  : "@navbar-height-mobile",
@@ -855,6 +856,7 @@ $navbar-height: 64px !default;
 }
 */
 $navbar-height-mobile: 56px !default;
+$navbar-line-height-mobile: $navbar-height-mobile !default;
 /*
 {
   "var"  : "@navbar-font-size",
@@ -898,30 +900,30 @@ $navbar-brand-font-size: 2.1rem !default;
 /* 14. Side Navigation
    ========================================================================== */
 
-   /*
-   {
-     "var" : "@sidenav-header-text-color",
-     "name" : "Sidenav Header Text Color",
-     "type" : "color",
-     "group": "Side Navigation"
-   }
-   */
-   $sidenav-header-text-color: #fff !default;
+/*
+{
+ "var" : "@sidenav-header-text-color",
+ "name" : "Sidenav Header Text Color",
+ "type" : "color",
+ "group": "Side Navigation"
+}
+*/
+$sidenav-header-text-color: #fff !default;
 
-   /*
-   {
-     "var"  : "@sidenav-width",
-     "name" : "Sidenav Width",
-     "type" : "number",
-     "units": "px",
-     "range": {
-       "min": 100,
-       "max": 500,
-       "increment": 10
-     },
-     "group": "Side Navigation"
-   }
-   */
+/*
+{
+ "var"  : "@sidenav-width",
+ "name" : "Sidenav Width",
+ "type" : "number",
+ "units": "px",
+ "range": {
+   "min": 100,
+   "max": 500,
+   "increment": 10
+ },
+ "group": "Side Navigation"
+}
+*/
 $sidenav-width: 300px !default;
 $sidenav-font-size: 14px !default;
 /*
@@ -972,6 +974,7 @@ $sidenav-padding: 16px !default;
 }
 */
 $sidenav-item-height: 48px !default;
+$sidenav-line-height: $sidenav-item-height !default;
 
 
 /* 15. Photo Slider
@@ -1179,21 +1182,8 @@ $collection-link-color: $secondary-color !default;
 
 $progress-bar-color: $secondary-color !default;
 
-/* 25. Interactive Reports
-   ========================================================================== */
-/*
-{
-"var" : "@ir-specific-color",
-"name" : "Interactive Report Button Color",
-"type" : "color",
-"group": "Interactive Reports"
-}
-*/
-$ir-specific-color: #9e9e9e;
-$ir-specific-color-light: lighten($ir-specific-color, 15%) !default;
 
-
-/* 26. Modals
+/* 25. Modals
    ========================================================================== */
 
 /*

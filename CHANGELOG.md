@@ -1,5 +1,15 @@
 ## Changelog
 
+#### v0.10.0
+- New features
+    - APEX 5.1 compatible
+    - Interactive Grids [(view)](https://apex.oracle.com/pls/apex/f?p=12192:80)
+    - Data Loading Wizard [(view)](https://apex.oracle.com/pls/apex/f?p=12192:90)
+- Enhancements
+    - Date Pickers
+    - Interactive Report [(view)](https://apex.oracle.com/pls/apex/f?p=12192:62)
+- & more bug fixes
+
 #### v0.9.6
 - New features
     - **Timeline** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:47)

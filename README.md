@@ -16,7 +16,7 @@
     - [See documentation](docs/manual-install.md)
 
 ## Changelog
-[See complete changelog](CHANGELOG.md).
+[See complete changelog](chanelog.md).
 
 ## Sponsors
 Thanks to [Insum Solutions](http://insum.ca/) for sponsoring this project.

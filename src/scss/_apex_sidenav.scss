@@ -54,7 +54,7 @@ Sidebar Fixed
             height: calc(100% - #{$navbar-height});
 		}
 
-    	main, footer {
+    	main, footer, nav.nav-breadcrumbs {
         	padding-left: $sidenav-width;
       	}
 

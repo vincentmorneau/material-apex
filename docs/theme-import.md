@@ -21,11 +21,18 @@ PATH | `#THEME_IMAGES#`
 ##### Regions
 Name | Type | Position | Template | Source
 --- | --- | --- | --- | ---
-{hamburger menu} | Static Content | Hamburger Menu | *None* | See below
+{sidenav header} | Classic Report | Item Container | *None* | **See Below (1)*
 {search bar} | Static Content | Search Bar | *None* |
 {region display selector} | Region Display Selector | Region Display Selector | *None* |
-```html
-<a href="#" id="menu-trigger" class="button-collapse" data-activates="app-sidenav"><i class="material-icons left">menu</i></a>
+
+*Source (1) Example:
+```sql
+select '/img/sample-1.jpg' background_img
+    , '/img/profile-picture.jpeg' profile_img
+    , '#' profile_link
+    , 'Vincent Morneau' text_line_1
+    , 'vmorneau@insum.ca' text_line_2
+from dual
 ```
 
 ##### Items
