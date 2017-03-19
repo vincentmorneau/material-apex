@@ -210,6 +210,21 @@ $link-color: #039be5;
 }
 */
 $badge-bg-color: $secondary-color !default;
+/*
+{
+    "var"  : "@badge-height",
+    "name" : "Badge Height",
+    "type" : "number",
+    "units": "px",
+        "range": {
+        "min": 0,
+        "max": 50,
+        "increment": 1
+    },
+    "group": "Badges"
+}
+*/
+$badge-height: 22px !default;
 
 
 /* 3. Buttons
@@ -1175,6 +1190,21 @@ $collection-hover-bg-color: #ddd !default;
 }
 */
 $collection-link-color: $secondary-color !default;
+/*
+{
+  "var"  : "@collection-line-height",
+  "name" : "Collection Line Height",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 1,
+    "max": 5,
+    "increment": 0.1
+  },
+  "group": "Collections"
+}
+*/
+$collection-line-height: 1.5rem !default;
 
 
 /* 24. Progress Bar
