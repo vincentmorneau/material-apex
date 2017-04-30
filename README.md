@@ -1,4 +1,6 @@
 # Material APEX
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/vincentmorneau/material-apex.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/vincentmorneau/material-apex.svg?branch=master)](https://travis-ci.org/vincentmorneau/material-apex)
 [![Dependency Status](https://david-dm.org/vincentmorneau/material-apex.svg)](https://david-dm.org/vincentmorneau/material-apex)
 
