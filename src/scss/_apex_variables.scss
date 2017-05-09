@@ -236,7 +236,7 @@ $button-background-focus: lighten($secondary-color, 4%) !default;
 /*
 {
     "var"  : "@button-font-size",
-    "name" : "Button Icon Size",
+    "name" : "Button Font Size",
     "type" : "number",
     "units": "rem",
         "range": {
@@ -247,7 +247,22 @@ $button-background-focus: lighten($secondary-color, 4%) !default;
     "group": "Buttons"
 }
 */
-$button-font-size: 1.3rem !default;
+$button-font-size: 1.0rem !default;
+/*
+{
+    "var"  : "@button-icon-font-size",
+    "name" : "Button Icon Font Size",
+    "type" : "number",
+    "units": "rem",
+        "range": {
+        "min": 0,
+        "max": 5,
+        "increment": 0.1
+    },
+    "group": "Buttons"
+}
+*/
+$button-icon-font-size: 1.3rem !default;
 /*
 {
     "var"  : "@button-height",
@@ -686,6 +701,7 @@ $input-focus-color: $secondary-color !default;
 }
 */
 $input-font-size: 1rem !default;
+$input-margin-bottom: 20px;
 $input-margin: 0 0 20px 0 !default;
 $input-padding: 0 !default;
 $input-transition: all .3s !default;
@@ -823,6 +839,7 @@ $large-screen: 1200px !default;
 
 $medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
 $large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$extra-large-and-up: "only screen and (min-width : #{$large-screen-up})" !default;
 $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
 $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
 $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;

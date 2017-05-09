@@ -1,5 +1,6 @@
 # Material APEX
-[![Build Status](https://travis-ci.org/vincentmorneau/material-apex.svg?branch=master)](https://travis-ci.org/vincentmorneau/material-apex)
+
+[![npm](https://img.shields.io/npm/v/material-apex.svg)]() [![Build Status](https://travis-ci.org/vincentmorneau/material-apex.svg?branch=master)](https://travis-ci.org/vincentmorneau/material-apex)
 [![Dependency Status](https://david-dm.org/vincentmorneau/material-apex.svg)](https://david-dm.org/vincentmorneau/material-apex)
 
 ![banner](/docs/img/banner.png)
