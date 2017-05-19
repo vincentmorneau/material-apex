@@ -101,12 +101,16 @@ div.ac_results {
 }
 
 /* Popup LOV */
-body.uPopUpLOV div.uActionBar {
-    height: initial;
+.ma-popuplov-modal {
+    .collection {
+		br {
+			@include hide();
+		}
 
-    input[type=text] {
-    	width: 100%;
-    }
+		a {
+			@extend .collection-item;
+		}
+	}
 }
 
 .ma-popuplov {

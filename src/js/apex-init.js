@@ -293,7 +293,6 @@ materialAPEX.initial = {
 
 		// Popup LOV
 		$("fieldset.lov").parent().addClass("ma-popuplov");
-		$(".ma-popuplov .uPopupLOVIcon").parent().addClass("ma-chevron-up");
 
 		// Media
 		$(".apex-materialbox img").addClass("materialboxed responsive-img").each(function() {
