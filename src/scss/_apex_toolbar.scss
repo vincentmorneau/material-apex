@@ -1,112 +1,112 @@
 // menu container
 .a-Menu-content {
-    border: none;
-    @include z-depth-3;
+	border: none;
+	@include z-depth-3;
 
-    ul {
-        background-color: $dropdown-bg-color;
+	ul {
+		background-color: $dropdown-bg-color;
 
-        // menu separator
-        .a-Menu-itemSep {
-            min-height: 0;
-            height: 1px;
-            border-top: 1px solid #F0F0F0;
+		// menu separator
+		.a-Menu-itemSep {
+			min-height: 0;
+			height: 1px;
+			border-top: 1px solid #F0F0F0;
 
-            .a-Menu-inner {
-                @include hide();
-            }
-        }
+			.a-Menu-inner {
+				@include hide();
+			}
+		}
 
-        li {
-            min-height: 42px;
+		li {
+			min-height: 42px;
 
-            & > span {
-                line-height: 14px;
-                height: 42px;
-            }
-        }
+			& > span {
+				line-height: 14px;
+				height: 42px;
+			}
+		}
 
-        // memu item
-        .a-Menu-item {
-            // hover and focused color states
-            &.is-expanded, &.is-focused, &:hover {
-                background-color: $dropdown-hover-bg-color;
-                color: $dropdown-color;
+		// memu item
+		.a-Menu-item {
+			// hover and focused color states
+			&.is-expanded, &.is-focused, &:hover {
+				background-color: $dropdown-hover-bg-color;
+				color: $dropdown-color;
 
-                .a-Menu-inner .a-Menu-statusCol {
-                    color: $dropdown-color;
-                }
-            }
+				.a-Menu-inner .a-Menu-statusCol {
+					color: $dropdown-color;
+				}
+			}
 
-            // disabled state
-            &.is-disabled
-            , &.is-disabled .a-Menu-inner
-            , &.is-disabled .a-Menu-label
-            , &.is-disabled .a-Menu-statusCol {
-                cursor: not-allowed!important;
-                color: rgba(64,64,64,.5)!important;
-            }
-            &.is-disabled.is-focused {
-                background-color: transparent;
-                box-shadow: none;
-            }
+			// disabled state
+			&.is-disabled
+			, &.is-disabled .a-Menu-inner
+			, &.is-disabled .a-Menu-label
+			, &.is-disabled .a-Menu-statusCol {
+				cursor: not-allowed!important;
+				color: rgba(64,64,64,.5)!important;
+			}
+			&.is-disabled.is-focused {
+				background-color: transparent;
+				box-shadow: none;
+			}
 
-            // menu item inner container
-            .a-Menu-inner {
-                clear: both;
-                color: $off-black;
-                cursor: pointer;
-                min-height: $dropdown-item-height;
-                line-height: 1.5rem;
-                width: 100%;
-                text-align: left;
-                text-transform: none;
+			// menu item inner container
+			.a-Menu-inner {
+				clear: both;
+				color: $off-black;
+				cursor: pointer;
+				min-height: $dropdown-item-height;
+				line-height: 1.5rem;
+				width: 100%;
+				text-align: left;
+				text-transform: none;
 
-                // menu label
-                .a-Menu-labelContainer {
-                    font-size: 16px;
-                    color: $dropdown-color;
-                    display: block;
-                    line-height: 22px;
-                    padding: 6px 10px;
+				// menu label
+				.a-Menu-labelContainer {
+					font-size: 16px;
+					color: $dropdown-color;
+					display: block;
+					line-height: 22px;
+					padding: 6px 10px;
 
-                    .a-Menu-label {
-                        line-height: 32px;
-                    }
-                }
+					.a-Menu-label {
+						line-height: 32px;
+					}
+				}
 
-                // right arrow
-                .a-Menu-accelContainer {
-                    font-size: 16px;
-                    color: $dropdown-color;
-                    line-height: 22px;
-                    padding: 6px 10px;
+				// right arrow
+				.a-Menu-accelContainer {
+					font-size: 16px;
+					color: $dropdown-color;
+					line-height: 22px;
+					padding: 6px 10px;
 
-                    .a-Menu-subMenuCol {
-                        padding: 4px 4px 8px 0px;
-                    }
-                }
+					.a-Menu-subMenuCol {
+						padding: 4px 4px 8px 0px;
+					}
+				}
 
-                // Icon alignment override
-                span .a-Icon {
-                    height: inherit;
-                    line-height: inherit;
+				// Icon alignment override
+				span .a-Icon {
+					height: inherit;
+					line-height: inherit;
 
-                    // override save icon
-                    &.icon-ig-save:before {
-                        content: "\f0c7";
-                        font-family: font-apex!important;
-                    }
+					// override save icon
+					&.icon-ig-save:before {
+						content: "\f0c7";
+						font-family: font-apex!important;
+					}
 
-                    // override save icon
-                    &.icon-ig-delete:before {
-                        content: "\f014";
-                        font-family: font-apex!important;
-                    }
-                }
-            }
-        }
-    }
+					// override save icon
+					&.icon-ig-delete:before {
+						content: "\f014";
+						font-family: font-apex!important;
+					}
+				}
+			}
+		}
+	}
 }
 
 // remove outlines
@@ -116,206 +116,190 @@
 , .a-Toolbar-radioGroup input:focus + .a-Button
 , .a-Toolbar-toggleButton input:focus + .a-Button
 , .a-TreeView-row.is-focused {
-    outline: none;
+	outline: none;
 }
 
 // toolbar modals
 body .ui-dialog.ui-widget {
-    // minimu width to hold 3 buttons
-    min-width: 460px;
-    background: $modal-background-color;
+	// region display selector
+	.apex-rds {
+		padding-top: 0;
 
-    // region display selector
-    .apex-rds {
-        padding-top: 0;
+		li {
+			display: inline-block;
+		}
+	}
 
-        li {
-            display: inline-block;
-        }
-    }
+	// toolbar buttons
+	.a-Button:focus {
+		outline: none;
+		background-color: transparent;
+	}
 
-    // toolbar buttons
-    .a-Button:focus {
-        outline: none;
-        background-color: transparent;
-    }
+	.a-Button--withIcon {
+		background-color: transparent;
+		box-shadow: none;
+	}
 
-    .a-Button--withIcon {
-        background-color: transparent;
-        box-shadow: none;
-    }
+	// make select dropdown smaller
+	.dropdown-content li {
+		min-height: 42px;
 
-    // make select dropdown smaller
-    .dropdown-content li {
-        min-height: 42px;
+		& > span {
+			line-height: 14px;
+			height: 42px;
+		}
+	}
 
-        & > span {
-            line-height: 14px;
-            height: 42px;
-        }
-    }
+	// Body
+	.ui-dialog-content {
+		// fix for weird overflow
+		&
+		, .a-IGDialog-region
+		, .a-RV
+		, .a-RV-w-scroll
+		{
+			width: 100%!important;
+			position:relative!important;
+		}
 
-    // Header
-    .ui-dialog-titlebar {}
+		// fix special height scenarios
+		&[id*="flashback"] {
+			min-height: 115px!important;
+		}
 
-    .ui-widget-content {
-        background: none;
-    }
+		// left region
+		.a-IGDialog-side {
+			// little toolbar below table (sort buttons)
+			.a-Toolbar {
+				padding: 0;
+			}
 
-    // Body
-    .ui-dialog-content {
-        position: relative;
-        border: 0;
-        padding: 0;
-        background: 0 0;
-        // overflow: hidden;
+			// left grid
+			.a-GV-table {
+				table-layout: auto;
+				width: auto!important;
+			}
 
-        // fix for weird overflow
-        &
-        , .a-IGDialog-region
-        , .a-RV
-        , .a-RV-w-scroll
-        {
-            width: 100%!important;
-            position:relative!important;
-        }
+			.a-GV-header {
+				border:none;
 
-        // fix special height scenarios
-        &[id*="flashback"] {
-            min-height: 115px!important;
-        }
+				&.is-readonly span {
+					display:none;
+				}
+			}
+		}
 
-        // left region
-        .a-IGDialog-side {
-            // little toolbar below table (sort buttons)
-            .a-Toolbar {
-                padding: 0;
-            }
+		// right section
+		.a-RV-body {
+			padding: 0 16px;
+		}
 
-            // left grid
-            .a-GV-table {
-                table-layout: auto;
-                width: auto!important;
-            }
+		textarea {
+			width: auto;
+		}
+	}
 
-            .a-GV-header {
-                border:none;
+	// fix for padding on help texts
+	&.ui-dialog--notification, &.ui-dialog--notificationLarge {
+		.ui-dialog-content {
+			padding: 0;
 
-                &.is-readonly span {
-                    display:none;
-                }
-            }
-        }
+			p {
+				padding: 0 32px 36px;
+			}
+		}
+	}
 
-        // right section
-        .a-RV-body {
-            padding: 0 16px;
-        }
-    }
+	// Footer
+	.ui-dialog-buttonpane {
+		.ui-dialog-buttonset {
+			.ui-button {
+				@include btn-flat;
+				background: none;
+			}
 
-    // fix for padding on help texts
-    &.ui-dialog--notification, &.ui-dialog--notificationLarge {
-        .ui-dialog-content {
-            padding: 0;
+			.ui-button.ui-button--hot {
+				@include btn;
+			}
+		}
+	}
 
-            p {
-                padding: 0 32px 36px;
-            }
-        }
-    }
+	// shuttle box background
+	.a-GV-hdr {
+		background-color: transparent;
+	}
 
-    // Footer
-    .ui-dialog-buttonpane {
-        margin-top: 0;
-        padding: 0;
+	// make checkboxes bigger
+	.ro-checkbox::before {
+		font-size: 16px;
+	}
 
-        .ui-dialog-buttonset {
-            .ui-button {
-                @include btn-flat;
-                background: none;
-            }
+	// select list fix
+	select.selectlist {
+		@include hide();
+	}
 
-            .ui-button.ui-button--hot {
-                @include btn;
-            }
-        }
-    }
+	.u-Form-inputContainer {
+		overflow: visible;
 
-    // shuttle box background
-    .a-GV-hdr {
-        background-color: transparent;
-    }
+		.a-GV-columnItem input/*, .a-GV-columnItem input.select-dropdown*/ {
+			margin: 0;
+		}
+	}
 
-    // make checkboxes bigger
-    .ro-checkbox::before {
-        font-size: 16px;
-    }
+	// color picker
+	.color_picker .a-Combobox-wrapper {
+		& > span {
+			margin: 6px 4px!important;
+		}
 
-    // select list fix
-    select.selectlist {
-        @include hide();
-    }
+		& > input {
+			@include hide();
+		}
 
-    .u-Form-inputContainer {
-        overflow: visible;
+		& > button {
+			margin-left: 26px!important;
+		}
 
-        .a-GV-columnItem input/*, .a-GV-columnItem input.select-dropdown*/ {
-            margin: 0;
-        }
-    }
-
-    // color picker
-    .color_picker .a-Combobox-wrapper {
-        & > span {
-            margin: 6px 4px!important;
-        }
-
-        & > input {
-            @include hide();
-        }
-
-        & > button {
-            margin-left: 26px!important;
-        }
-
-        & > button[data-menu] {
-            margin-left: 0!important;
-        }
-    }
+		& > button[data-menu] {
+			margin-left: 0!important;
+		}
+	}
 }
 
 // help text fix
 #apex_popup_help_area .ui-dialog.ui-widget {
-    max-height: 80%;
-    overflow-y: scroll;
+	max-height: 80%;
+	overflow-y: scroll;
 }
 
 // IR and IG filters
 .a-IG, .a-IRR {
-    .a-MediaBlock {
-        .a-MediaBlock-graphic {
-            @include hide;
-        }
+	.a-MediaBlock {
+		.a-MediaBlock-graphic {
+			@include hide;
+		}
 
-        .a-IRR-reportSummaryContainer, .a-IG-reportSummaryContainer {
-            @include hide;
-        }
+		.a-IRR-reportSummaryContainer, .a-IG-reportSummaryContainer {
+			@include hide;
+		}
 
-        .a-IRR-controls-cell:first-child {
-            padding: 0;
-        }
+		.a-IRR-controls-cell:first-child {
+			padding: 0;
+		}
 
-        .a-IRR-controlsCheckboxLabel {
-            border: none;
-            box-shadow: none;
+		.a-IRR-controlsCheckboxLabel {
+			border: none;
+			box-shadow: none;
 
-            &:before {
-                top: 6px!important;
-            }
+			&:before {
+				top: 6px!important;
+			}
 
-            &:after {
-                top: 6px!important;
-            }
-        }
-    }
+			&:after {
+				top: 6px!important;
+			}
+		}
+	}
 }

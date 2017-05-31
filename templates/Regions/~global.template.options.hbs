@@ -1,1090 +1,1059 @@
 {{#template_option_groups}}
 [
-    {
-        "name": "TITLE_ALIGNMENT",
-        "display_name": "Alignment - Title",
-        "display_sequence": 1,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "N",
-        "template_options": [{
-                "name": "TITLE_LEFT",
-                "display_name": "Left",
-                "display_sequence": 1,
-                "css_classes": "ma-region-title-left",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "TITLE_CENTER",
-                "display_name": "Center",
-                "display_sequence": 2,
-                "css_classes": "ma-region-title-center",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "TITLE_RIGHT",
-                "display_name": "Right",
-                "display_sequence": 3,
-                "css_classes": "ma-region-title-right",
-                "help_text": "",
-                "is_advanced": ""
-            }
-        ]
-    },
-    {
-        "name": "BODY_ALIGNMENT",
-        "display_name": "Alignment - Body",
-        "display_sequence": 2,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "N",
-        "template_options": [{
-                "name": "BODY_LEFT",
-                "display_name": "Left",
-                "display_sequence": 1,
-                "css_classes": "ma-region-body-left",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "BODY_CENTER",
-                "display_name": "Center",
-                "display_sequence": 2,
-                "css_classes": "ma-region-body-center",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "BODY_RIGHT",
-                "display_name": "Right",
-                "display_sequence": 3,
-                "css_classes": "ma-region-body-right",
-                "help_text": "",
-                "is_advanced": ""
-            }
-        ]
-    },
-    {
-        "name": "BUTTONS_ALIGNMENT",
-        "display_name": "Alignment - Buttons",
-        "display_sequence": 3,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "N",
-        "template_options": [{
-                "name": "BUTTONS_LEFT",
-                "display_name": "Left",
-                "display_sequence": 1,
-                "css_classes": "ma-region-buttons-left",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "BUTTONS_CENTER",
-                "display_name": "Center",
-                "display_sequence": 2,
-                "css_classes": "ma-region-buttons-center",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "BUTTONS_RIGHT",
-                "display_name": "Right",
-                "display_sequence": 3,
-                "css_classes": "ma-region-buttons-right",
-                "help_text": "",
-                "is_advanced": ""
-            }
-        ]
-    },
-    {
-        "name": "HIDING_CONTENT",
-        "display_name": "Hiding Content",
-        "display_sequence": 800,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "Y",
-        "template_options": [
-            {
-                "name": "R_HIDDEN_ALL_DEVICES",
-                "display_name": "Hidden for All Devices",
-                "display_sequence": 1,
-                "css_classes": "hide",
-                "help_text": "",
-                "is_advanced": ""
-            },
+	{
+		"name": "TITLE_ALIGNMENT",
+		"display_name": "Alignment - Title",
+		"display_sequence": 1,
+		"help_text": "",
+		"null_text": "",
+		"is_advanced": "N",
+		"template_options": [{
+				"name": "TITLE_LEFT",
+				"display_name": "Left",
+				"display_sequence": 1,
+				"css_classes": "ma-region-title-left",
+				"help_text": "",
+				"is_advanced": ""
+			}, {
+				"name": "TITLE_CENTER",
+				"display_name": "Center",
+				"display_sequence": 2,
+				"css_classes": "ma-region-title-center",
+				"help_text": "",
+				"is_advanced": ""
+			}, {
+				"name": "TITLE_RIGHT",
+				"display_name": "Right",
+				"display_sequence": 3,
+				"css_classes": "ma-region-title-right",
+				"help_text": "",
+				"is_advanced": ""
+			}
+		]
+	},
+	{
+		"name": "BODY_ALIGNMENT",
+		"display_name": "Alignment - Body",
+		"display_sequence": 2,
+		"help_text": "",
+		"null_text": "",
+		"is_advanced": "N",
+		"template_options": [{
+				"name": "BODY_LEFT",
+				"display_name": "Left",
+				"display_sequence": 1,
+				"css_classes": "ma-region-body-left",
+				"help_text": "",
+				"is_advanced": ""
+			}, {
+				"name": "BODY_CENTER",
+				"display_name": "Center",
+				"display_sequence": 2,
+				"css_classes": "ma-region-body-center",
+				"help_text": "",
+				"is_advanced": ""
+			}, {
+				"name": "BODY_RIGHT",
+				"display_name": "Right",
+				"display_sequence": 3,
+				"css_classes": "ma-region-body-right",
+				"help_text": "",
+				"is_advanced": ""
+			}
+		]
+	},
+	{
+		"name": "HIDING_CONTENT",
+		"display_name": "Hiding Content",
+		"display_sequence": 800,
+		"help_text": "",
+		"null_text": "",
+		"is_advanced": "Y",
+		"template_options": [
+			{
+				"name": "R_HIDDEN_ALL_DEVICES",
+				"display_name": "Hidden for All Devices",
+				"display_sequence": 1,
+				"css_classes": "hide",
+				"help_text": "",
+				"is_advanced": ""
+			},
 
-            {
-                "name": "R_HIDDEN_SMALL_ONLY",
-                "display_name": "Hidden for Small Only",
-                "display_sequence": 2,
-                "css_classes": "hide-on-small-only",
-                "help_text": "",
-                "is_advanced": ""
-            },
+			{
+				"name": "R_HIDDEN_SMALL_ONLY",
+				"display_name": "Hidden for Small Only",
+				"display_sequence": 2,
+				"css_classes": "hide-on-small-only",
+				"help_text": "",
+				"is_advanced": ""
+			},
 
-            {
-                "name": "R_HIDDEN_MEDIUM_ONLY",
-                "display_name": "Hidden for Medium Only",
-                "display_sequence": 3,
-                "css_classes": "hide-on-med-only",
-                "help_text": "",
-                "is_advanced": ""
-            },
+			{
+				"name": "R_HIDDEN_MEDIUM_ONLY",
+				"display_name": "Hidden for Medium Only",
+				"display_sequence": 3,
+				"css_classes": "hide-on-med-only",
+				"help_text": "",
+				"is_advanced": ""
+			},
 
-            {
-                "name": "R_HIDDEN_LARGE_ONLY",
-                "display_name": "Hidden for Large Only",
-                "display_sequence": 4,
-                "css_classes": "hide-on-large-only",
-                "help_text": "",
-                "is_advanced": ""
-            },
+			{
+				"name": "R_HIDDEN_LARGE_ONLY",
+				"display_name": "Hidden for Large Only",
+				"display_sequence": 4,
+				"css_classes": "hide-on-large-only",
+				"help_text": "",
+				"is_advanced": ""
+			},
 
-            {
-                "name": "R_HIDDEN_MEDIUM_AND_BELOW",
-                "display_name": "Hidden for Medium and Below",
-                "display_sequence": 5,
-                "css_classes": "hide-on-med-and-down",
-                "help_text": "",
-                "is_advanced": ""
-            },
+			{
+				"name": "R_HIDDEN_MEDIUM_AND_BELOW",
+				"display_name": "Hidden for Medium and Below",
+				"display_sequence": 5,
+				"css_classes": "hide-on-med-and-down",
+				"help_text": "",
+				"is_advanced": ""
+			},
 
-            {
-                "name": "R_HIDDEN_MEDIUM_AND_ABOVE",
-                "display_name": "Hidden for Medium and Above",
-                "display_sequence": 6,
-                "css_classes": "hide-on-med-and-up",
-                "help_text": "",
-                "is_advanced": ""
-            },
+			{
+				"name": "R_HIDDEN_MEDIUM_AND_ABOVE",
+				"display_name": "Hidden for Medium and Above",
+				"display_sequence": 6,
+				"css_classes": "hide-on-med-and-up",
+				"help_text": "",
+				"is_advanced": ""
+			},
 
-            {
-                "name": "R_HIDDEN_SMALL_AND_LARGE",
-                "display_name": "Hidden for Small and Large",
-                "display_sequence": 7,
-                "css_classes": "hide-on-small-only hide-on-large-only",
-                "help_text": "",
-                "is_advanced": ""
-            }
-        ]
-    },
-    {
-        "name": "SHADOW",
-        "display_name": "Shadow",
-        "display_sequence": 4,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "Y",
-        "template_options": [{
-                "name": "DEPTH_1",
-                "display_name": "Depth 1",
-                "display_sequence": 1,
-                "css_classes": "z-depth-1",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "DEPTH_2",
-                "display_name": "Depth 2",
-                "display_sequence": 2,
-                "css_classes": "z-depth-2",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "DEPTH_3",
-                "display_name": "Depth 3",
-                "display_sequence": 3,
-                "css_classes": "z-depth-3",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "DEPTH_4",
-                "display_name": "Depth 4",
-                "display_sequence": 4,
-                "css_classes": "z-depth-4",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "DEPTH_5",
-                "display_name": "Depth 5",
-                "display_sequence": 5,
-                "css_classes": "z-depth-5",
-                "help_text": "",
-                "is_advanced": ""
-            }
-        ]
-    },
-    {
-        "name": "BACKGROUND_COLOR",
-        "display_name": "Background Color",
-        "display_sequence": 6,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "N",
-        "template_options": [{
-                "name": "REGION_BG_BLACK",
-                "display_name": "Black",
-                "display_sequence": 1,
-                "css_classes": "ma-region-bg-color black",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_WHITE",
-                "display_name": "White",
-                "display_sequence": 2,
-                "css_classes": "ma-region-bg-color white",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_TRANSPARENT",
-                "display_name": "Transparent",
-                "display_sequence": 3,
-                "css_classes": "ma-region-bg-color transparent",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_RED",
-                "display_name": "Red",
-                "display_sequence": 4,
-                "css_classes": "ma-region-bg-color red",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_PINK",
-                "display_name": "Pink",
-                "display_sequence": 5,
-                "css_classes": "ma-region-bg-color pink",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_PURPLE",
-                "display_name": "Purple",
-                "display_sequence": 6,
-                "css_classes": "ma-region-bg-color purple",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_DEEP_PURPLE",
-                "display_name": "Deep Purple",
-                "display_sequence": 7,
-                "css_classes": "ma-region-bg-color deep-purple",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_INDIGO",
-                "display_name": "Indigo",
-                "display_sequence": 8,
-                "css_classes": "ma-region-bg-color indigo",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_BLUE",
-                "display_name": "Blue",
-                "display_sequence": 9,
-                "css_classes": "ma-region-bg-color blue",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_LIGHT_BLUE",
-                "display_name": "Light Blue",
-                "display_sequence": 10,
-                "css_classes": "ma-region-bg-color light-blue",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_CYAN",
-                "display_name": "Cyan",
-                "display_sequence": 11,
-                "css_classes": "ma-region-bg-color cyan",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_TEAL",
-                "display_name": "Teal",
-                "display_sequence": 12,
-                "css_classes": "ma-region-bg-color teal",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_GREEN",
-                "display_name": "Green",
-                "display_sequence": 13,
-                "css_classes": "ma-region-bg-color green",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_LIGHT_GREEN",
-                "display_name": "Light Green",
-                "display_sequence": 14,
-                "css_classes": "ma-region-bg-color light-green",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_LIME",
-                "display_name": "Lime",
-                "display_sequence": 15,
-                "css_classes": "ma-region-bg-color lime",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_YELLOW",
-                "display_name": "Yellow",
-                "display_sequence": 16,
-                "css_classes": "ma-region-bg-color yellow",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_AMBER",
-                "display_name": "Amber",
-                "display_sequence": 17,
-                "css_classes": "ma-region-bg-color amber",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_ORANGE",
-                "display_name": "Orange",
-                "display_sequence": 18,
-                "css_classes": "ma-region-bg-color orange",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_DEEP_ORANGE",
-                "display_name": "Deep Orange",
-                "display_sequence": 19,
-                "css_classes": "ma-region-bg-color deep-orange",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_BROWN",
-                "display_name": "Brown",
-                "display_sequence": 20,
-                "css_classes": "ma-region-bg-color brown",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_GREY",
-                "display_name": "Grey",
-                "display_sequence": 21,
-                "css_classes": "ma-region-bg-color grey",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "REGION_BG_BLUE_GREY",
-                "display_name": "Blue Grey",
-                "display_sequence": 22,
-                "css_classes": "ma-region-bg-color blue-grey",
-                "help_text": "",
-                "is_advanced": ""
-            }
-        ]
-    },
-    {
-        "name": "BACKGROUND_MODIFIER",
-        "display_name": "Background Modifier",
-        "display_sequence": 7,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "N",
-        "template_options": [
-            {
-                "name": "ACCENT_1",
-                "display_name": "Accent 1",
-                "display_sequence": 1,
-                "css_classes": "accent-1",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "ACCENT_2",
-                "display_name": "Accent 2",
-                "display_sequence": 2,
-                "css_classes": "accent-2",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "ACCENT_3",
-                "display_name": "Accent 3",
-                "display_sequence": 3,
-                "css_classes": "accent-3",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "ACCENT_4",
-                "display_name": "Accent 4",
-                "display_sequence": 4,
-                "css_classes": "accent-4",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "DARKEN_1",
-                "display_name": "Darken 1",
-                "display_sequence": 5,
-                "css_classes": "darken-1",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "DARKEN_2",
-                "display_name": "Darken 2",
-                "display_sequence": 6,
-                "css_classes": "darken-2",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "DARKEN_3",
-                "display_name": "Darken 3",
-                "display_sequence": 7,
-                "css_classes": "darken-3",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "DARKEN_4",
-                "display_name": "Darken 4",
-                "display_sequence": 8,
-                "css_classes": "darken-4",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "LIGHTEN_1",
-                "display_name": "Lighten 1",
-                "display_sequence": 9,
-                "css_classes": "lighten-1",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "LIGHTEN_2",
-                "display_name": "Lighten 2",
-                "display_sequence": 10,
-                "css_classes": "lighten-2",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "LIGHTEN_3",
-                "display_name": "Lighten 3",
-                "display_sequence": 11,
-                "css_classes": "lighten-3",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "LIGHTEN_4",
-                "display_name": "Lighten 4",
-                "display_sequence": 12,
-                "css_classes": "lighten-4",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "LIGHTEN_5",
-                "display_name": "Lighten 5",
-                "display_sequence": 13,
-                "css_classes": "lighten-5",
-                "help_text": "",
-                "is_advanced": ""
-            }
-        ]
-    },
-    {
-        "name": "TEXT_COLOR_GLOBAL",
-        "display_name": "Text Color - Global",
-        "display_sequence": 4,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "N",
-        "template_options": [{
-                "name": "AMBER_TEXT",
-                "display_name": "Amber",
-                "display_sequence": 1,
-                "css_classes": "ma-colored-region amber-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "BLUE_GREY_TEXT",
-                "display_name": "Blue Grey",
-                "display_sequence": 2,
-                "css_classes": "ma-colored-region blue-grey-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "BLUE_TEXT",
-                "display_name": "Blue",
-                "display_sequence": 3,
-                "css_classes": "ma-colored-region blue-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "BROWN_TEXT",
-                "display_name": "Brown",
-                "display_sequence": 4,
-                "css_classes": "ma-colored-region brown-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "CYAN_TEXT",
-                "display_name": "Cyan",
-                "display_sequence": 5,
-                "css_classes": "ma-colored-region cyan-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "DEEP_ORANGE_TEXT",
-                "display_name": "Deep Orange",
-                "display_sequence": 6,
-                "css_classes": "ma-colored-region deep-orange-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "DEEP_PURPLE_TEXT",
-                "display_name": "Deep Deep Purple",
-                "display_sequence": 7,
-                "css_classes": "ma-colored-region deep-purple-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "GREEN_TEXT",
-                "display_name": "Green",
-                "display_sequence": 8,
-                "css_classes": "ma-colored-region green-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "GREY_TEXT",
-                "display_name": "Grey",
-                "display_sequence": 9,
-                "css_classes": "ma-colored-region grey-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "INDIGO_TEXT",
-                "display_name": "Light Indigo",
-                "display_sequence": 10,
-                "css_classes": "ma-colored-region indigo-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "LIGHT_BLUE_TEXT",
-                "display_name": "Light Blue",
-                "display_sequence": 11,
-                "css_classes": "ma-colored-region light-blue-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "LIGHT_GREEN_TEXT",
-                "display_name": "Light Green",
-                "display_sequence": 12,
-                "css_classes": "ma-colored-region light-green-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "LIME_TEXT",
-                "display_name": "Lime",
-                "display_sequence": 13,
-                "css_classes": "ma-colored-region lime-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "ORANGE_TEXT",
-                "display_name": "Light Orange",
-                "display_sequence": 14,
-                "css_classes": "ma-colored-region orange-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "PINK_TEXT",
-                "display_name": "Pink",
-                "display_sequence": 15,
-                "css_classes": "ma-colored-region pink-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "PURPLE_TEXT",
-                "display_name": "Purple",
-                "display_sequence": 16,
-                "css_classes": "ma-colored-region purple-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "RED_TEXT",
-                "display_name": "Red",
-                "display_sequence": 17,
-                "css_classes": "ma-colored-region red-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TEAL_TEXT",
-                "display_name": "Teal",
-                "display_sequence": 18,
-                "css_classes": "ma-colored-region teal-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "WHITE",
-                "display_name": "White",
-                "display_sequence": 19,
-                "css_classes": "ma-colored-region white-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "YELLOW_TEXT",
-                "display_name": "Yellow",
-                "display_sequence": 20,
-                "css_classes": "ma-colored-region yellow-text",
-                "help_text": "",
-                "is_advanced": ""
-            }
-        ]
-    },
-    {
-        "name": "TEXT_COLOR_TITLE",
-        "display_name": "Text Color - Title",
-        "display_sequence": 5,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "N",
-        "template_options": [{
-                "name": "TITLE_AMBER_TEXT",
-                "display_name": "Amber",
-                "display_sequence": 1,
-                "css_classes": "ma-region-title-amber-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_BLUE_GREY_TEXT",
-                "display_name": "Blue Grey",
-                "display_sequence": 2,
-                "css_classes": "ma-region-title-blue-grey-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_BLUE_TEXT",
-                "display_name": "Blue",
-                "display_sequence": 3,
-                "css_classes": "ma-region-title-blue-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_BROWN_TEXT",
-                "display_name": "Brown",
-                "display_sequence": 4,
-                "css_classes": "ma-region-title-brown-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_CYAN_TEXT",
-                "display_name": "Cyan",
-                "display_sequence": 5,
-                "css_classes": "ma-region-title-cyan-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_DEEP_ORANGE_TEXT",
-                "display_name": "Deep Orange",
-                "display_sequence": 6,
-                "css_classes": "ma-region-title-deep-orange-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_DEEP_PURPLE_TEXT",
-                "display_name": "Deep Deep Purple",
-                "display_sequence": 7,
-                "css_classes": "ma-region-title-deep-purple-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_GREEN_TEXT",
-                "display_name": "Green",
-                "display_sequence": 8,
-                "css_classes": "ma-region-title-green-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_GREY_TEXT",
-                "display_name": "Grey",
-                "display_sequence": 9,
-                "css_classes": "ma-region-title-grey-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_INDIGO_TEXT",
-                "display_name": "Light Indigo",
-                "display_sequence": 10,
-                "css_classes": "ma-region-title-indigo-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_LIGHT_BLUE_TEXT",
-                "display_name": "Light Blue",
-                "display_sequence": 11,
-                "css_classes": "ma-region-title-light-blue-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_LIGHT_GREEN_TEXT",
-                "display_name": "Light Green",
-                "display_sequence": 12,
-                "css_classes": "ma-region-title-light-green-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_LIME_TEXT",
-                "display_name": "Lime",
-                "display_sequence": 13,
-                "css_classes": "ma-region-title-lime-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_ORANGE_TEXT",
-                "display_name": "Light Orange",
-                "display_sequence": 14,
-                "css_classes": "ma-region-title-orange-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_PINK_TEXT",
-                "display_name": "Pink",
-                "display_sequence": 15,
-                "css_classes": "ma-region-title-pink-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_PURPLE_TEXT",
-                "display_name": "Purple",
-                "display_sequence": 16,
-                "css_classes": "ma-region-title-purple-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_RED_TEXT",
-                "display_name": "Red",
-                "display_sequence": 17,
-                "css_classes": "ma-region-title-red-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_TEAL_TEXT",
-                "display_name": "Teal",
-                "display_sequence": 18,
-                "css_classes": "ma-region-title-teal-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_WHITE",
-                "display_name": "White",
-                "display_sequence": 19,
-                "css_classes": "ma-region-title-white-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TITLE_YELLOW_TEXT",
-                "display_name": "Yellow",
-                "display_sequence": 20,
-                "css_classes": "ma-region-title-yellow-text",
-                "help_text": "",
-                "is_advanced": ""
-            }
-        ]
-    },
-    {
-        "name": "REGION_MARGIN_TOP",
-        "display_name": "Margin top",
-        "display_sequence": 900,
-        "help_text": "Apply \"Margin top\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "REGION_MARGINTOP0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "m-t-0"
-        }, {
-            "name": "REGION_MARGINTOP1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "m-t-1"
-        }, {
-            "name": "REGION_MARGINTOP2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "m-t-2"
-        }, {
-            "name": "REGION_MARGINTOP3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "m-t-3"
-        }]
-    }, {
-        "name": "REGION_MARGIN_BOTTOM",
-        "display_name": "--------- bottom",
-        "display_sequence": 901,
-        "help_text": "Apply \"Margin bottom\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "REGION_MARGINBOT0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "m-b-0"
-        }, {
-            "name": "REGION_MARGINBOT1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "m-b-1"
-        }, {
-            "name": "REGION_MARGINBOT2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "m-b-2"
-        }, {
-            "name": "REGION_MARGINBOT3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "m-b-3"
-        }]
-    }, {
-        "name": "REGION_MARGIN_RIGHT",
-        "display_name": "--------- right",
-        "display_sequence": 902,
-        "help_text": "Apply \"Margin right\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "REGION_MARGINRIGHT0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "m-r-0"
-        }, {
-            "name": "REGION_MARGINRIGHT1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "m-r-1"
-        }, {
-            "name": "REGION_MARGINRIGHT2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "m-r-2"
-        }, {
-            "name": "REGION_MARGINRIGHT3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "m-r-3"
-        }]
-    }, {
-        "name": "REGION_MARGIN_LEFT",
-        "display_name": "--------- left",
-        "display_sequence": 903,
-        "help_text": "Apply \"Margin left\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "REGION_MARGINLEFT0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "m-l-0"
-        }, {
-            "name": "REGION_MARGINLEFT1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "m-l-1"
-        }, {
-            "name": "REGION_MARGINLEFT2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "m-l-2"
-        }, {
-            "name": "REGION_MARGINLEFT3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "m-l-3"
-        }]
-    }, {
-        "name": "REGION_PADDING_TOP",
-        "display_name": "Padding top",
-        "display_sequence": 910,
-        "help_text": "Apply \"Padding top\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "REGION_PADDINGTOP0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "p-t-0"
-        }, {
-            "name": "REGION_PADDINGTOP1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "p-t-1"
-        }, {
-            "name": "REGION_PADDINGTOP2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "p-t-2"
-        }, {
-            "name": "REGION_PADDINGTOP3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "p-t-3"
-        }]
-    }, {
-        "name": "REGION_PADDING_BOTTOM",
-        "display_name": "----------- bottom",
-        "display_sequence": 911,
-        "help_text": "Apply \"Padding bottom\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "REGION_PADDINGBOT0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "p-b-0"
-        }, {
-            "name": "REGION_PADDINGBOT1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "p-b-1"
-        }, {
-            "name": "REGION_PADDINGBOT2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "p-b-2"
-        }, {
-            "name": "REGION_PADDINGBOT3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "p-b-3"
-        }]
-    }, {
-        "name": "REGION_PADDING_RIGHT",
-        "display_name": "----------- right",
-        "display_sequence": 912,
-        "help_text": "Apply \"Padding right\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "REGION_PADDINGRIGHT0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "p-r-0"
-        }, {
-            "name": "REGION_PADDINGRIGHT1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "p-r-1"
-        }, {
-            "name": "REGION_PADDINGRIGHT2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "p-r-2"
-        }, {
-            "name": "REGION_PADDINGRIGHT3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "p-r-3"
-        }]
-    }, {
-        "name": "REGION_PADDING_LEFT",
-        "display_name": "----------- left",
-        "display_sequence": 913,
-        "help_text": "Apply \"Padding left\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "REGION_PADDINGLEFT0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "p-l-0"
-        }, {
-            "name": "REGION_PADDINGLEFT1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "p-l-1"
-        }, {
-            "name": "REGION_PADDINGLEFT2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "p-l-2"
-        }, {
-            "name": "REGION_PADDINGLEFT3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "p-l-3"
-        }]
-    }
+			{
+				"name": "R_HIDDEN_SMALL_AND_LARGE",
+				"display_name": "Hidden for Small and Large",
+				"display_sequence": 7,
+				"css_classes": "hide-on-small-only hide-on-large-only",
+				"help_text": "",
+				"is_advanced": ""
+			}
+		]
+	},
+	{
+		"name": "SHADOW",
+		"display_name": "Shadow",
+		"display_sequence": 4,
+		"help_text": "",
+		"null_text": "",
+		"is_advanced": "Y",
+		"template_options": [{
+				"name": "DEPTH_1",
+				"display_name": "Depth 1",
+				"display_sequence": 1,
+				"css_classes": "z-depth-1",
+				"help_text": "",
+				"is_advanced": ""
+			}, {
+				"name": "DEPTH_2",
+				"display_name": "Depth 2",
+				"display_sequence": 2,
+				"css_classes": "z-depth-2",
+				"help_text": "",
+				"is_advanced": ""
+			}, {
+				"name": "DEPTH_3",
+				"display_name": "Depth 3",
+				"display_sequence": 3,
+				"css_classes": "z-depth-3",
+				"help_text": "",
+				"is_advanced": ""
+			}, {
+				"name": "DEPTH_4",
+				"display_name": "Depth 4",
+				"display_sequence": 4,
+				"css_classes": "z-depth-4",
+				"help_text": "",
+				"is_advanced": ""
+			}, {
+				"name": "DEPTH_5",
+				"display_name": "Depth 5",
+				"display_sequence": 5,
+				"css_classes": "z-depth-5",
+				"help_text": "",
+				"is_advanced": ""
+			}
+		]
+	},
+	{
+		"name": "BACKGROUND_COLOR",
+		"display_name": "Background Color",
+		"display_sequence": 6,
+		"help_text": "",
+		"null_text": "",
+		"is_advanced": "N",
+		"template_options": [{
+				"name": "REGION_BG_BLACK",
+				"display_name": "Black",
+				"display_sequence": 1,
+				"css_classes": "ma-region-bg-color black",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_WHITE",
+				"display_name": "White",
+				"display_sequence": 2,
+				"css_classes": "ma-region-bg-color white",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_TRANSPARENT",
+				"display_name": "Transparent",
+				"display_sequence": 3,
+				"css_classes": "ma-region-bg-color transparent",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_RED",
+				"display_name": "Red",
+				"display_sequence": 4,
+				"css_classes": "ma-region-bg-color red",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_PINK",
+				"display_name": "Pink",
+				"display_sequence": 5,
+				"css_classes": "ma-region-bg-color pink",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_PURPLE",
+				"display_name": "Purple",
+				"display_sequence": 6,
+				"css_classes": "ma-region-bg-color purple",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_DEEP_PURPLE",
+				"display_name": "Deep Purple",
+				"display_sequence": 7,
+				"css_classes": "ma-region-bg-color deep-purple",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_INDIGO",
+				"display_name": "Indigo",
+				"display_sequence": 8,
+				"css_classes": "ma-region-bg-color indigo",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_BLUE",
+				"display_name": "Blue",
+				"display_sequence": 9,
+				"css_classes": "ma-region-bg-color blue",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_LIGHT_BLUE",
+				"display_name": "Light Blue",
+				"display_sequence": 10,
+				"css_classes": "ma-region-bg-color light-blue",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_CYAN",
+				"display_name": "Cyan",
+				"display_sequence": 11,
+				"css_classes": "ma-region-bg-color cyan",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_TEAL",
+				"display_name": "Teal",
+				"display_sequence": 12,
+				"css_classes": "ma-region-bg-color teal",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_GREEN",
+				"display_name": "Green",
+				"display_sequence": 13,
+				"css_classes": "ma-region-bg-color green",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_LIGHT_GREEN",
+				"display_name": "Light Green",
+				"display_sequence": 14,
+				"css_classes": "ma-region-bg-color light-green",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_LIME",
+				"display_name": "Lime",
+				"display_sequence": 15,
+				"css_classes": "ma-region-bg-color lime",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_YELLOW",
+				"display_name": "Yellow",
+				"display_sequence": 16,
+				"css_classes": "ma-region-bg-color yellow",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_AMBER",
+				"display_name": "Amber",
+				"display_sequence": 17,
+				"css_classes": "ma-region-bg-color amber",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_ORANGE",
+				"display_name": "Orange",
+				"display_sequence": 18,
+				"css_classes": "ma-region-bg-color orange",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_DEEP_ORANGE",
+				"display_name": "Deep Orange",
+				"display_sequence": 19,
+				"css_classes": "ma-region-bg-color deep-orange",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_BROWN",
+				"display_name": "Brown",
+				"display_sequence": 20,
+				"css_classes": "ma-region-bg-color brown",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_GREY",
+				"display_name": "Grey",
+				"display_sequence": 21,
+				"css_classes": "ma-region-bg-color grey",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "REGION_BG_BLUE_GREY",
+				"display_name": "Blue Grey",
+				"display_sequence": 22,
+				"css_classes": "ma-region-bg-color blue-grey",
+				"help_text": "",
+				"is_advanced": ""
+			}
+		]
+	},
+	{
+		"name": "BACKGROUND_MODIFIER",
+		"display_name": "Background Modifier",
+		"display_sequence": 7,
+		"help_text": "",
+		"null_text": "",
+		"is_advanced": "N",
+		"template_options": [
+			{
+				"name": "ACCENT_1",
+				"display_name": "Accent 1",
+				"display_sequence": 1,
+				"css_classes": "accent-1",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "ACCENT_2",
+				"display_name": "Accent 2",
+				"display_sequence": 2,
+				"css_classes": "accent-2",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "ACCENT_3",
+				"display_name": "Accent 3",
+				"display_sequence": 3,
+				"css_classes": "accent-3",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "ACCENT_4",
+				"display_name": "Accent 4",
+				"display_sequence": 4,
+				"css_classes": "accent-4",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "DARKEN_1",
+				"display_name": "Darken 1",
+				"display_sequence": 5,
+				"css_classes": "darken-1",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "DARKEN_2",
+				"display_name": "Darken 2",
+				"display_sequence": 6,
+				"css_classes": "darken-2",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "DARKEN_3",
+				"display_name": "Darken 3",
+				"display_sequence": 7,
+				"css_classes": "darken-3",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "DARKEN_4",
+				"display_name": "Darken 4",
+				"display_sequence": 8,
+				"css_classes": "darken-4",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "LIGHTEN_1",
+				"display_name": "Lighten 1",
+				"display_sequence": 9,
+				"css_classes": "lighten-1",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "LIGHTEN_2",
+				"display_name": "Lighten 2",
+				"display_sequence": 10,
+				"css_classes": "lighten-2",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "LIGHTEN_3",
+				"display_name": "Lighten 3",
+				"display_sequence": 11,
+				"css_classes": "lighten-3",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "LIGHTEN_4",
+				"display_name": "Lighten 4",
+				"display_sequence": 12,
+				"css_classes": "lighten-4",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "LIGHTEN_5",
+				"display_name": "Lighten 5",
+				"display_sequence": 13,
+				"css_classes": "lighten-5",
+				"help_text": "",
+				"is_advanced": ""
+			}
+		]
+	},
+	{
+		"name": "TEXT_COLOR_GLOBAL",
+		"display_name": "Text Color - Global",
+		"display_sequence": 4,
+		"help_text": "",
+		"null_text": "",
+		"is_advanced": "N",
+		"template_options": [{
+				"name": "AMBER_TEXT",
+				"display_name": "Amber",
+				"display_sequence": 1,
+				"css_classes": "ma-colored-region amber-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "BLUE_GREY_TEXT",
+				"display_name": "Blue Grey",
+				"display_sequence": 2,
+				"css_classes": "ma-colored-region blue-grey-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "BLUE_TEXT",
+				"display_name": "Blue",
+				"display_sequence": 3,
+				"css_classes": "ma-colored-region blue-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "BROWN_TEXT",
+				"display_name": "Brown",
+				"display_sequence": 4,
+				"css_classes": "ma-colored-region brown-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "CYAN_TEXT",
+				"display_name": "Cyan",
+				"display_sequence": 5,
+				"css_classes": "ma-colored-region cyan-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "DEEP_ORANGE_TEXT",
+				"display_name": "Deep Orange",
+				"display_sequence": 6,
+				"css_classes": "ma-colored-region deep-orange-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "DEEP_PURPLE_TEXT",
+				"display_name": "Deep Deep Purple",
+				"display_sequence": 7,
+				"css_classes": "ma-colored-region deep-purple-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "GREEN_TEXT",
+				"display_name": "Green",
+				"display_sequence": 8,
+				"css_classes": "ma-colored-region green-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "GREY_TEXT",
+				"display_name": "Grey",
+				"display_sequence": 9,
+				"css_classes": "ma-colored-region grey-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "INDIGO_TEXT",
+				"display_name": "Light Indigo",
+				"display_sequence": 10,
+				"css_classes": "ma-colored-region indigo-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "LIGHT_BLUE_TEXT",
+				"display_name": "Light Blue",
+				"display_sequence": 11,
+				"css_classes": "ma-colored-region light-blue-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "LIGHT_GREEN_TEXT",
+				"display_name": "Light Green",
+				"display_sequence": 12,
+				"css_classes": "ma-colored-region light-green-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "LIME_TEXT",
+				"display_name": "Lime",
+				"display_sequence": 13,
+				"css_classes": "ma-colored-region lime-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "ORANGE_TEXT",
+				"display_name": "Light Orange",
+				"display_sequence": 14,
+				"css_classes": "ma-colored-region orange-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "PINK_TEXT",
+				"display_name": "Pink",
+				"display_sequence": 15,
+				"css_classes": "ma-colored-region pink-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "PURPLE_TEXT",
+				"display_name": "Purple",
+				"display_sequence": 16,
+				"css_classes": "ma-colored-region purple-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "RED_TEXT",
+				"display_name": "Red",
+				"display_sequence": 17,
+				"css_classes": "ma-colored-region red-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TEAL_TEXT",
+				"display_name": "Teal",
+				"display_sequence": 18,
+				"css_classes": "ma-colored-region teal-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "WHITE",
+				"display_name": "White",
+				"display_sequence": 19,
+				"css_classes": "ma-colored-region white-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "YELLOW_TEXT",
+				"display_name": "Yellow",
+				"display_sequence": 20,
+				"css_classes": "ma-colored-region yellow-text",
+				"help_text": "",
+				"is_advanced": ""
+			}
+		]
+	},
+	{
+		"name": "TEXT_COLOR_TITLE",
+		"display_name": "Text Color - Title",
+		"display_sequence": 5,
+		"help_text": "",
+		"null_text": "",
+		"is_advanced": "N",
+		"template_options": [{
+				"name": "TITLE_AMBER_TEXT",
+				"display_name": "Amber",
+				"display_sequence": 1,
+				"css_classes": "ma-region-title-amber-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_BLUE_GREY_TEXT",
+				"display_name": "Blue Grey",
+				"display_sequence": 2,
+				"css_classes": "ma-region-title-blue-grey-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_BLUE_TEXT",
+				"display_name": "Blue",
+				"display_sequence": 3,
+				"css_classes": "ma-region-title-blue-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_BROWN_TEXT",
+				"display_name": "Brown",
+				"display_sequence": 4,
+				"css_classes": "ma-region-title-brown-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_CYAN_TEXT",
+				"display_name": "Cyan",
+				"display_sequence": 5,
+				"css_classes": "ma-region-title-cyan-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_DEEP_ORANGE_TEXT",
+				"display_name": "Deep Orange",
+				"display_sequence": 6,
+				"css_classes": "ma-region-title-deep-orange-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_DEEP_PURPLE_TEXT",
+				"display_name": "Deep Deep Purple",
+				"display_sequence": 7,
+				"css_classes": "ma-region-title-deep-purple-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_GREEN_TEXT",
+				"display_name": "Green",
+				"display_sequence": 8,
+				"css_classes": "ma-region-title-green-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_GREY_TEXT",
+				"display_name": "Grey",
+				"display_sequence": 9,
+				"css_classes": "ma-region-title-grey-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_INDIGO_TEXT",
+				"display_name": "Light Indigo",
+				"display_sequence": 10,
+				"css_classes": "ma-region-title-indigo-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_LIGHT_BLUE_TEXT",
+				"display_name": "Light Blue",
+				"display_sequence": 11,
+				"css_classes": "ma-region-title-light-blue-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_LIGHT_GREEN_TEXT",
+				"display_name": "Light Green",
+				"display_sequence": 12,
+				"css_classes": "ma-region-title-light-green-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_LIME_TEXT",
+				"display_name": "Lime",
+				"display_sequence": 13,
+				"css_classes": "ma-region-title-lime-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_ORANGE_TEXT",
+				"display_name": "Light Orange",
+				"display_sequence": 14,
+				"css_classes": "ma-region-title-orange-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_PINK_TEXT",
+				"display_name": "Pink",
+				"display_sequence": 15,
+				"css_classes": "ma-region-title-pink-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_PURPLE_TEXT",
+				"display_name": "Purple",
+				"display_sequence": 16,
+				"css_classes": "ma-region-title-purple-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_RED_TEXT",
+				"display_name": "Red",
+				"display_sequence": 17,
+				"css_classes": "ma-region-title-red-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_TEAL_TEXT",
+				"display_name": "Teal",
+				"display_sequence": 18,
+				"css_classes": "ma-region-title-teal-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_WHITE",
+				"display_name": "White",
+				"display_sequence": 19,
+				"css_classes": "ma-region-title-white-text",
+				"help_text": "",
+				"is_advanced": ""
+			},
+			{
+				"name": "TITLE_YELLOW_TEXT",
+				"display_name": "Yellow",
+				"display_sequence": 20,
+				"css_classes": "ma-region-title-yellow-text",
+				"help_text": "",
+				"is_advanced": ""
+			}
+		]
+	},
+	{
+		"name": "REGION_MARGIN_TOP",
+		"display_name": "Margin top",
+		"display_sequence": 900,
+		"help_text": "Apply \"Margin top\" to any element with a template option.",
+		"is_advanced": "Y",
+		"template_options": [{
+			"name": "REGION_MARGINTOP0",
+			"display_name": "0",
+			"display_sequence": 0,
+			"css_classes": "m-t-0"
+		}, {
+			"name": "REGION_MARGINTOP1",
+			"display_name": "1",
+			"display_sequence": 1,
+			"css_classes": "m-t-1"
+		}, {
+			"name": "REGION_MARGINTOP2",
+			"display_name": "2",
+			"display_sequence": 2,
+			"css_classes": "m-t-2"
+		}, {
+			"name": "REGION_MARGINTOP3",
+			"display_name": "3",
+			"display_sequence": 3,
+			"css_classes": "m-t-3"
+		}]
+	}, {
+		"name": "REGION_MARGIN_BOTTOM",
+		"display_name": "--------- bottom",
+		"display_sequence": 901,
+		"help_text": "Apply \"Margin bottom\" to any element with a template option.",
+		"is_advanced": "Y",
+		"template_options": [{
+			"name": "REGION_MARGINBOT0",
+			"display_name": "0",
+			"display_sequence": 0,
+			"css_classes": "m-b-0"
+		}, {
+			"name": "REGION_MARGINBOT1",
+			"display_name": "1",
+			"display_sequence": 1,
+			"css_classes": "m-b-1"
+		}, {
+			"name": "REGION_MARGINBOT2",
+			"display_name": "2",
+			"display_sequence": 2,
+			"css_classes": "m-b-2"
+		}, {
+			"name": "REGION_MARGINBOT3",
+			"display_name": "3",
+			"display_sequence": 3,
+			"css_classes": "m-b-3"
+		}]
+	}, {
+		"name": "REGION_MARGIN_RIGHT",
+		"display_name": "--------- right",
+		"display_sequence": 902,
+		"help_text": "Apply \"Margin right\" to any element with a template option.",
+		"is_advanced": "Y",
+		"template_options": [{
+			"name": "REGION_MARGINRIGHT0",
+			"display_name": "0",
+			"display_sequence": 0,
+			"css_classes": "m-r-0"
+		}, {
+			"name": "REGION_MARGINRIGHT1",
+			"display_name": "1",
+			"display_sequence": 1,
+			"css_classes": "m-r-1"
+		}, {
+			"name": "REGION_MARGINRIGHT2",
+			"display_name": "2",
+			"display_sequence": 2,
+			"css_classes": "m-r-2"
+		}, {
+			"name": "REGION_MARGINRIGHT3",
+			"display_name": "3",
+			"display_sequence": 3,
+			"css_classes": "m-r-3"
+		}]
+	}, {
+		"name": "REGION_MARGIN_LEFT",
+		"display_name": "--------- left",
+		"display_sequence": 903,
+		"help_text": "Apply \"Margin left\" to any element with a template option.",
+		"is_advanced": "Y",
+		"template_options": [{
+			"name": "REGION_MARGINLEFT0",
+			"display_name": "0",
+			"display_sequence": 0,
+			"css_classes": "m-l-0"
+		}, {
+			"name": "REGION_MARGINLEFT1",
+			"display_name": "1",
+			"display_sequence": 1,
+			"css_classes": "m-l-1"
+		}, {
+			"name": "REGION_MARGINLEFT2",
+			"display_name": "2",
+			"display_sequence": 2,
+			"css_classes": "m-l-2"
+		}, {
+			"name": "REGION_MARGINLEFT3",
+			"display_name": "3",
+			"display_sequence": 3,
+			"css_classes": "m-l-3"
+		}]
+	}, {
+		"name": "REGION_PADDING_TOP",
+		"display_name": "Padding top",
+		"display_sequence": 910,
+		"help_text": "Apply \"Padding top\" to any element with a template option.",
+		"is_advanced": "Y",
+		"template_options": [{
+			"name": "REGION_PADDINGTOP0",
+			"display_name": "0",
+			"display_sequence": 0,
+			"css_classes": "p-t-0"
+		}, {
+			"name": "REGION_PADDINGTOP1",
+			"display_name": "1",
+			"display_sequence": 1,
+			"css_classes": "p-t-1"
+		}, {
+			"name": "REGION_PADDINGTOP2",
+			"display_name": "2",
+			"display_sequence": 2,
+			"css_classes": "p-t-2"
+		}, {
+			"name": "REGION_PADDINGTOP3",
+			"display_name": "3",
+			"display_sequence": 3,
+			"css_classes": "p-t-3"
+		}]
+	}, {
+		"name": "REGION_PADDING_BOTTOM",
+		"display_name": "----------- bottom",
+		"display_sequence": 911,
+		"help_text": "Apply \"Padding bottom\" to any element with a template option.",
+		"is_advanced": "Y",
+		"template_options": [{
+			"name": "REGION_PADDINGBOT0",
+			"display_name": "0",
+			"display_sequence": 0,
+			"css_classes": "p-b-0"
+		}, {
+			"name": "REGION_PADDINGBOT1",
+			"display_name": "1",
+			"display_sequence": 1,
+			"css_classes": "p-b-1"
+		}, {
+			"name": "REGION_PADDINGBOT2",
+			"display_name": "2",
+			"display_sequence": 2,
+			"css_classes": "p-b-2"
+		}, {
+			"name": "REGION_PADDINGBOT3",
+			"display_name": "3",
+			"display_sequence": 3,
+			"css_classes": "p-b-3"
+		}]
+	}, {
+		"name": "REGION_PADDING_RIGHT",
+		"display_name": "----------- right",
+		"display_sequence": 912,
+		"help_text": "Apply \"Padding right\" to any element with a template option.",
+		"is_advanced": "Y",
+		"template_options": [{
+			"name": "REGION_PADDINGRIGHT0",
+			"display_name": "0",
+			"display_sequence": 0,
+			"css_classes": "p-r-0"
+		}, {
+			"name": "REGION_PADDINGRIGHT1",
+			"display_name": "1",
+			"display_sequence": 1,
+			"css_classes": "p-r-1"
+		}, {
+			"name": "REGION_PADDINGRIGHT2",
+			"display_name": "2",
+			"display_sequence": 2,
+			"css_classes": "p-r-2"
+		}, {
+			"name": "REGION_PADDINGRIGHT3",
+			"display_name": "3",
+			"display_sequence": 3,
+			"css_classes": "p-r-3"
+		}]
+	}, {
+		"name": "REGION_PADDING_LEFT",
+		"display_name": "----------- left",
+		"display_sequence": 913,
+		"help_text": "Apply \"Padding left\" to any element with a template option.",
+		"is_advanced": "Y",
+		"template_options": [{
+			"name": "REGION_PADDINGLEFT0",
+			"display_name": "0",
+			"display_sequence": 0,
+			"css_classes": "p-l-0"
+		}, {
+			"name": "REGION_PADDINGLEFT1",
+			"display_name": "1",
+			"display_sequence": 1,
+			"css_classes": "p-l-1"
+		}, {
+			"name": "REGION_PADDINGLEFT2",
+			"display_name": "2",
+			"display_sequence": 2,
+			"css_classes": "p-l-2"
+		}, {
+			"name": "REGION_PADDINGLEFT3",
+			"display_name": "3",
+			"display_sequence": 3,
+			"css_classes": "p-l-3"
+		}]
+	}
 ]
 {{/template_option_groups}}
 
 {{#template_options}}
 [
-    {
-        "name": "CONTAINER",
-        "display_name": "Wrap Region in a Container",
-        "display_sequence": 1,
-        "css_classes": "container",
-        "help_text": "",
-        "is_advanced": "N"
-    },
+	{
+		"name": "CONTAINER",
+		"display_name": "Wrap Region in a Container",
+		"display_sequence": 1,
+		"css_classes": "container",
+		"help_text": "",
+		"is_advanced": "N"
+	},
 
-    {
-        "name": "ENABLE_SCROLLFIRE",
-        "display_name": "Enable Scrollfire",
-        "display_sequence": 1,
-        "css_classes": "enable-scrollfire",
-        "help_text": "Use the component \"HTML Attributes\" and add those attributes: \n offset=\"500\" \n callback=\"apex.event.trigger(document, 'fadeInImage');\"",
-        "is_advanced": "Y"
-    }
+	{
+		"name": "ENABLE_SCROLLFIRE",
+		"display_name": "Enable Scrollfire",
+		"display_sequence": 1,
+		"css_classes": "enable-scrollfire",
+		"help_text": "Use the component \"HTML Attributes\" and add those attributes: \n offset=\"500\" \n callback=\"apex.event.trigger(document, 'fadeInImage');\"",
+		"is_advanced": "Y"
+	}
 ]
 {{/template_options}}

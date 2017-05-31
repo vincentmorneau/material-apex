@@ -1,171 +1,113 @@
-body.body-modal {
-    background-color: $modal-background-color;
+.modal, .t-Dialog-page {
+	background-color: $modal-background-color;
+
+	.fixed-action-btn {
+		bottom: 23px;
+	}
+
+	&.bottom-sheet {
+		top: auto;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		display: block;
+	}
+
+	.t-Dialog-body {
+		padding: 0 1rem;
+	}
+
+	.t-Dialog-footer {
+		padding: 0 1rem;
+
+		// remove unnessessary margin on modal footers
+		.ma-region {
+			margin-bottom: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
 }
 
-.modal {
-    display: block;
-    width: 100%;
-    max-height: 100%;
-    box-shadow:none;
-    background-color: $modal-background-color;
-
-    .fixed-action-btn {
-        bottom: 23px;
-    }
-
-    &.modal-fixed-footer {
-        height: 100%;
-
-        .fixed-action-btn {
-            bottom: 79px;
-        }
-
-        .modal-footer {
-            text-align:right;
-
-            a, button {
-                float: none;
-            }
-        }
-    }
-
-    &.bottom-sheet {
-        top: auto;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        display: block;
-    }
-
-    .modal-content {
-        padding-top: 0;
-    }
-
-    .modal-footer {
-        background-color: $modal-background-footer;
-
-        td, th {
-            padding: 0;
-        }
-    }
+// Strech modals
+// Okay that's a funny hack...
+// The UT modal mecanism is hardcoding it's strech modal to 95%
+.ui-dialog--apex[style*="height: 95%; width: 95%;"] {
+    width: 100%!important;
+    height: 100%!important;
+    top: 0!important;
+    left: 0!important;
 }
 
 .region.modal {
-    &.bottom-sheet {
-          top: auto;
-          bottom: -100%;
-          width: 100%;
+	&.bottom-sheet {
+		top: auto;
+		bottom: -100%;
+		width: 100%;
 
-          .modal-footer {
-                display:none;
-          }
-    }
-
-    .modal-content {
-        padding-top: 24px;
-    }
+		.modal-footer {
+			display: none;
+		}
+	}
 }
 
 body {
-    .ui-front, .ui-widget-overlay {
-        z-index: 999;
-    }
+	.ui-widget-overlay {
+		z-index: 999;
+	}
 
-    .ui-dialog.ui-front {
-        border-width: 0;
-        border-radius: 2px;
+	.ui-dialog.ui-front {
+		border-width: 0;
+		border-radius: 2px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 0;
+		outline: 0;
+		box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+		box-sizing: content-box;
+		background-color: $modal-background-color;
+		z-index: 1000;
+		background-clip: padding-box;
+		transform: translate(0);
+		will-change: top, opacity;
 
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 0;
-        outline: 0;
-        box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
-        box-sizing: content-box;
+		.ui-dialog-titlebar {
+			background-color: $modal-header-background;
+			background: none;
 
-        background-color: $modal-background-color;
-        max-height: 100%;
-        // overflow-y: auto;
-        z-index: 1000;
-        background-clip: padding-box;
-        transform: translate(0);
-        will-change: top, opacity;
+			.ui-dialog-title {
+				@extend h4;
+				color: $modal-header-text;
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
 
-        .ui-dialog-titlebar {
-            padding: 24px 24px 0px 24px;
-            background-color: $modal-header-background;
-            background-image: none;
-            border: none;
+		.ui-dialog-titlebar-close {
+			right: 16px;
+			top: 16px;
+			box-shadow: none;
+			background: none;
+			border:none;
 
-            span {
-                color: $modal-header-text;
-            }
-        }
+			&:before {
+				content: '\E5CD';
+				font-family: 'Material Icons';
+				font-size: 2rem;
+			}
 
-        .ui-dialog-title {
-            @extend h4;
-            margin-top: 0;
-            width: 80%;
-            overflow: visible;
-        }
-
-        .ui-dialog-titlebar-close {
-            display: block;
-            right: 2.3rem;
-            border: none;
-            box-shadow: none;
-            background-color: transparent;
-            background: none;
-
-            &:before {
-                content: '\E5CD';
-                font-family: 'Material Icons';
-                font-weight: normal;
-                font-style: normal;
-                font-size: 2rem;
-                -webkit-font-smoothing: antialiased;
-            }
-
-            .ui-icon-closethick {
-                display: none;
-            }
-        }
-
-        .ui-dialog-content {
-            position: relative;
-            border: 0;
-            background: 0 0;
-
-            iframe {
-                border: 0;
-                width: 100%;
-                background-color: $modal-background-color;
-            }
-        }
-
-        .ui-widget-overlay {
-            position: fixed;
-            z-index: 999;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            height: 115%;
-            width: 100%;
-            background: #000;
-            will-change: opacity;
-            display: block;
-            opacity: 0.5;
-        }
-    }
+			.ui-icon-closethick {
+				display: none;
+			}
+		}
+	}
 }
 
 body .ui-dialog--apex .ui-dialog-content {
-    padding: 0;
+	padding: 0;
 }
 
-@media #{$small-and-down} {
-    body .ui-dialog {
-        width: 90%!important;
-    }
+.ui-widget-content {
+	background: none;
 }

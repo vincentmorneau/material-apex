@@ -1,30 +1,27 @@
 {{#template}}
 <blockquote id="#REGION_STATIC_ID#" class="ma-region #REGION_CSS_CLASSES#">
-    <div class="ma-region-header">
-        <div class="ma-region-buttons ma-region-buttons-left">
-            #PREVIOUS#
-        </div>
-        <div class="ma-region-title">
-            <i class="material-icons">#ICON_CSS_CLASSES#</i>
-            #TITLE#
-        </div>
-        <div class="ma-region-buttons ma-region-buttons-right">
-            #NEXT#
-        </div>
-    </div>
+	<div class="ma-region-header">
+		<div class="ma-region-buttons ma-region-buttons-left">#COPY#</div>
+		<div class="ma-region-title">
+			<i class="material-icons">#ICON_CSS_CLASSES#</i>#TITLE#</div>
+		<div class="ma-region-buttons ma-region-buttons-right">#EDIT#</div>
+	</div>
 
-    <div class="ma-region-buttons top">
-        #EDIT##EXPAND##CREATE##NEXT##PREVIOUS#
-    </div>
+	<div class="ma-region-buttons">
+		<div class="ma-region-buttons-left">#PREVIOUS#</div>
+		<div class="ma-region-buttons-right">#NEXT#</div>
+	</div>
 
-    <div class="ma-region-body">
-        #BODY#
-        #SUB_REGIONS#
-    </div>
+	<div class="ma-region-body t-Region-body">
+		#BODY#
+		#SUB_REGIONS#
+	</div>
 
-    <div class="ma-region-buttons bottom">
-        #CLOSE##COPY##DELETE##CHANGE##HELP##CREATE2#
-    </div>
+	<div class="ma-region-buttons">
+		<div class="ma-region-buttons-left">#CLOSE##HELP#</div>
+		<div class="ma-region-buttons-center">#CHANGE#</div>
+		<div class="ma-region-buttons-right">#DELETE##CREATE##CREATE2#</div>
+	</div>
 </blockquote>
 {{/template}}
 

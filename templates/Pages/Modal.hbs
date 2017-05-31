@@ -2,30 +2,29 @@
 {{/inline_css}}
 {{#header_template}}
 <!DOCTYPE html>
-<head>
-    <title>#TITLE#</title>
+<html class="no-js #RTL_CLASS# page-&APP_PAGE_ID. app-&APP_ALIAS." lang="&BROWSER_LANGUAGE." #TEXT_DIRECTION#>
+	<head>
+		<title>#TITLE#</title>
 
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="author" content="Vincent Morneau">
-    <meta name="description" content="Material Design Theme for APEX">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Meta -->
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<meta charset="utf-8">
+		<meta name="author" content="Vincent Morneau">
+		<meta name="description" content="Material Design Theme for APEX">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <!-- Mandatory APEX CSS Stuff -->
-    #HEAD#
-    #APEX_CSS#
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Material APEX CSS -->
-    #THEME_CSS#
-    #THEME_STYLE_CSS#
-    #TEMPLATE_CSS#
-
-    <!-- Additionnal CSS -->
-    #APPLICATION_CSS#
-    #PAGE_CSS#
-</head>
-<body id="#PAGE_STATIC_ID#" class="body-modal #PAGE_CSS_CLASSES#" #ONLOAD#>
+		#APEX_CSS#
+		#THEME_CSS#
+		#TEMPLATE_CSS#
+		#THEME_STYLE_CSS#
+		#APPLICATION_CSS#
+		#PAGE_CSS#
+		#FAVICONS#
+		#HEAD#
+	</head>
+	<body class="t-Dialog-page t-Dialog-page--standard #DIALOG_CSS_CLASSES# #PAGE_CSS_CLASSES#" #TEXT_DIRECTION# #ONLOAD#>
 {{/header_template}}
 
 {{#box}}
@@ -34,111 +33,121 @@
 <!-- Item Container -->
 #REGION_POSITION_01#
 
-<div class="modal modal-fixed-footer #PAGE_CSS_CLASSES#">
-    <div class="modal-content">
-        <div class="row">
-            <div class="ma-body-column-css-classes">
-                #GLOBAL_NOTIFICATION#
-                #SUCCESS_MESSAGE#
-                #NOTIFICATION_MESSAGE#
-                #BODY#
-            </div>
+<div class="t-Dialog #PAGE_CSS_CLASSES#" role="dialog" aria-label="#TITLE#">
+	<div class="t-Dialog-header">
+		#REGION_POSITION_02#
+	</div>
 
-            <!-- Region Display Selector -->
-            #REGION_POSITION_04#
-        </div>
-    </div>
-    <div class="modal-footer">
-        #REGION_POSITION_06#
-    </div>
+	<div class="t-Dialog-bodyWrapperOut">
+		<div class="t-Dialog-bodyWrapperIn">
+			<div class="t-Dialog-body ma-body-column-css-classes">
+				#SUCCESS_MESSAGE#
+				#NOTIFICATION_MESSAGE#
+				#GLOBAL_NOTIFICATION#
+				#BODY#
+			</div>
+
+			<!-- Region Display Selector -->
+			#REGION_POSITION_04#
+		</div>
+	</div>
+
+	<div class="t-Dialog-footer">
+		#REGION_POSITION_06#
+	</div>
 </div>
 
 #FORM_CLOSE#
 {{/box}}
 
 {{#footer_template}}
-<!-- Mandatory APEX JS -->
 #DEVELOPER_TOOLBAR#
 #APEX_JAVASCRIPT#
 
-<!-- Material APEX JS -->
 #THEME_JAVASCRIPT#
 #TEMPLATE_JAVASCRIPT#
 
-<!-- Additionnal CSS -->
 #APPLICATION_JAVASCRIPT#
 #PAGE_JAVASCRIPT#
 
-<!-- Generated CSS and JS -->
 #GENERATED_CSS#
 #GENERATED_JAVASCRIPT#
 
-<!-- Finalize script -->
+<!-- Finalize script for Material APEX -->
 <script type="text/javascript" src="&PATH.js/finalize#MIN#.js"></script>
 </body>
+
 </html>
 {{/footer_template}}
 
 {{#success_message}}
-<div id="toast-container">
-    <div class="toast velocity-animating green lighten-2">
-        #SUCCESS_MESSAGE#
-        <i class="ma-toast-close material-icons right">close</i>
-    </div>
-</div>
+	<div id="toast-container">
+		<div class="toast velocity-animating green lighten-2">
+			#SUCCESS_MESSAGE#
+			<i class="ma-toast-close material-icons right">close</i>
+		</div>
+	</div>
 {{/success_message}}
 {{#message}}
-<div class="row m-b-0">
-    <div class="col s12">
-        <div class="ma-alert card-panel yellow lighten-4 grey-text text-darken-1">
-            <div class="ma-alert-icon p-r-1">
-                <i class="material-icons">warning</i>
-            </div>
-            <div class="ma-alert-content">
-                #MESSAGE#
-            </div>
-            <div class="ma-alert-close p-l-1">
-                <i class="panel-close material-icons">close</i>
-            </div>
-        </div>
-    </div>
-</div>
+	<div class="row m-b-0">
+		<div class="col s12">
+			<div class="ma-alert card-panel yellow lighten-4 grey-text text-darken-1">
+				<div class="ma-alert-icon p-r-1">
+					<i class="material-icons">warning</i>
+				</div>
+				<div class="ma-alert-content">
+					#MESSAGE#
+				</div>
+				<div class="ma-alert-close p-l-1">
+					<i class="panel-close material-icons">close</i>
+				</div>
+			</div>
+		</div>
+	</div>
 {{/message}}
 
 {{#error_page_template}}
-<div class="row m-t-3">
-    <div class="col s12 m8 offset-m2">
-        <div class="card">
-            <div class="card-image center">
-                <i class="material-icons xlarge red-text text-lighten-1 m-t-1">error</i>
-            </div>
-            <div class="card-content grey-text">
-                <p>#MESSAGE#</p>
-                <p>#ADDITIONAL_INFO#</p>
-                <p>#TECHNICAL_INFO#</p>
-            </div>
-            <div class="card-action">
-                <a href="#BACK_LINK#" class="btn-flat waves-effect waves-light">#OK#</a>
-            </div>
-        </div>
-    </div>
-</div>
+	<div class="row m-t-3">
+		<div class="col s12 m8 offset-m2">
+			<div class="card">
+				<div class="card-image center">
+					<i class="material-icons xlarge red-text text-lighten-1 m-t-1">error</i>
+				</div>
+				<div class="card-content grey-text">
+					<p>#MESSAGE#</p>
+					<p>#ADDITIONAL_INFO#</p>
+					<p>#TECHNICAL_INFO#</p>
+				</div>
+				<div class="card-action">
+					<a href="#BACK_LINK#" class="btn-flat waves-effect waves-light">#OK#</a>
+				</div>
+			</div>
+		</div>
+	</div>
 {{/error_page_template}}
 
 {{#grid_template}}
-#ROWS#
+	#ROWS#
 {{/grid_template}}
 {{#grid_row_template}}
-<div class="row">
-    #COLUMNS#
-</div>
+	<div class="row">
+		#COLUMNS#
+	</div>
 {{/grid_row_template}}
 {{#grid_column_template}}
-<div class="col s12 m#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>
-    #CONTENT#
-</div>
+	<div class="col s12 m#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>
+		#CONTENT#
+	</div>
 {{/grid_column_template}}
 
 {{#template_options}}
-[]
+[
+	{
+		"name": "STRETCH_TO_FIT_WINDOW",
+		"display_name": "Stretch to Fit Window",
+		"display_sequence": 1,
+		"css_classes": "ui-dialog--stretch",
+		"help_text": "Stretch the dialog to fit the browser window."
+	}
+]
 {{/template_options}}

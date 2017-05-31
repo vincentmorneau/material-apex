@@ -1,11 +1,4 @@
 /*
-Global
-*/
-.ma-field-container {
-    position: relative;
-}
-
-/*
 Colors
 */
 .ma-colored-field, .ma-colored-region {
@@ -55,11 +48,17 @@ Inputs
     @extend .fade-in;
 }
 
-fieldset {
+fieldset
+, fieldset.textarea {
     border: 0;
     margin: 0;
     padding: 0;
     display: block;
+}
+
+fieldset.checkbox_group
+, fieldset.radio_group {
+	margin-bottom: 20px
 }
 
 :focus {

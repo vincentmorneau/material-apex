@@ -1,32 +1,27 @@
 {{#template}}
 <div id="#REGION_STATIC_ID#" class="ma-region card #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
-    <!--div class="card"-->
-        <div class="ma-region-body card-content">
-            <div class="ma-region-header">
-                <div class="ma-region-buttons ma-region-buttons-left">
-                    #PREVIOUS#
-                </div>
-                <div class="ma-region-title card-title">
-                    <i class="material-icons">#ICON_CSS_CLASSES#</i>
-                    #TITLE#
-                </div>
-                <div class="ma-region-buttons ma-region-buttons-right">
-                    #NEXT#
-                </div>
-            </div>
+	<div class="ma-region-body card-content">
+		<div class="ma-region-header">
+			<div class="ma-region-buttons ma-region-buttons-left">#COPY#</div>
+			<div class="ma-region-title card-title">
+				<i class="material-icons">#ICON_CSS_CLASSES#</i>#TITLE#</div>
+			<div class="ma-region-buttons ma-region-buttons-right">#EDIT#</div>
+		</div>
 
-            <div class="ma-region-buttons top">
-                #EDIT##EXPAND##CREATE#
-            </div>
+		<div class="ma-region-buttons">
+			<div class="ma-region-buttons-left">#PREVIOUS#</div>
+			<div class="ma-region-buttons-right">#NEXT#</div>
+		</div>
 
-            #BODY#
-            #SUB_REGIONS#
-        </div>
+		#BODY#
+		#SUB_REGIONS#
+	</div>
 
-        <div class="ma-region-buttons bottom card-action">
-            #CLOSE##COPY##DELETE##CHANGE##HELP##CREATE2#
-        </div>
-    <!--/div-->
+	<div class="ma-region-buttons card-action">
+		<div class="ma-region-buttons-left">#CLOSE##HELP#</div>
+		<div class="ma-region-buttons-center">#CHANGE#</div>
+		<div class="ma-region-buttons-right">#DELETE##CREATE##CREATE2#</div>
+	</div>
 </div>
 {{/template}}
 
@@ -36,13 +31,13 @@
 
 {{#template_options}}
 [
-    {
-        "name": "HIDE_TITLE",
-        "display_name": "Hide Title",
-        "display_sequence": 1,
-        "css_classes": "hide-title",
-        "help_text": "",
-        "is_advanced": ""
-    }
+	{
+		"name": "HIDE_TITLE",
+		"display_name": "Hide Title",
+		"display_sequence": 1,
+		"css_classes": "hide-title",
+		"help_text": "",
+		"is_advanced": ""
+	}
 ]
 {{/template_options}}

@@ -1,19 +1,23 @@
-.row .col {
-    min-height: 0;
+.row {
+	margin-bottom: 0;
+
+	.col {
+		min-height: 0;
+	}
 }
 
 .ma-card-col-2 .ma-card-col {
-    @extend .m6;
+	@extend .m6;
 }
 
 .ma-card-col-3 .ma-card-col {
-    @extend .m4;
+	@extend .m4;
 }
 
 .ma-card-col-4 .ma-card-col {
-    @extend .m3;
+	@extend .m3;
 }
 
 .ma-region.card .row {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
