@@ -1,24 +1,21 @@
 # Theme Import
 
-**IMPORTANT:** Updating a theme is not fully supported by Oracle yet. Upgrading the theme of an existing app dismisses all template options that you might have selected. See:
-- https://github.com/vincentmorneau/material-apex/issues/83
-- https://twitter.com/vincentmorneau/status/707650168129265664
-- https://community.oracle.com/message/13733156
-- https://community.oracle.com/message/14356542#14356542
+1. Import `empty-app.sql` from the [latest release](https://github.com/vincentmorneau/material-apex/releases/latest) in your workspace
+2. Go to your existing application
+3. Go to Shared Components - Themes
+4. Select Restore Theme Subscription ![restore1](img/restore1.png)
+5. Follow the instructions ![restore2](img/restore2.png)
 
-#### Import the file `theme-export.sql` from the [latest release](https://github.com/vincentmorneau/material-apex/releases/latest) in your existing application.
-1. Create theme
-2. From export
-3. Select `theme-export.sql`
-4. Switch theme
-5. Match templates
+---
 
-#### Configure Application Substitution Strings
+Make sure the following components are up to date:
+
+#### Application Substitution Strings
 Name | Value
 --- | ---
 PATH | `#THEME_IMAGES#`
 
-#### Configure Page 0
+#### Page 0
 ##### Regions
 Name | Type | Position | Template | Source
 --- | --- | --- | --- | ---

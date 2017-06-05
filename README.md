@@ -8,12 +8,10 @@
 [http://materialapex.com](http://materialapex.com)
 
 ## Install
-- **Option 1) Application Import** - *Best for new application*
-    - Import **empty-app.sql** or **demo-app.sql** from the [latest release](https://github.com/vincentmorneau/material-apex/releases/latest) in your workspace.
-- **Option 2) Theme Import** - *Best for upgrading existing application*
-    - [See documentation](docs/theme-import.md)
-- **Option 3) Manual install** - *Best for customizing the theme*
-    - [See documentation](docs/manual-install.md)
+Import **empty-app.sql** or **demo-app.sql** from the [latest release](https://github.com/vincentmorneau/material-apex/releases/latest) in your workspace.
+
+## Update
+[See documentation](docs/theme-import.md)
 
 ## Changelog
 [See complete changelog](chanelog.md).

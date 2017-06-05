@@ -1,5 +1,7 @@
 ## Changelog
 
+#### v0.11.0
+
 #### v0.10.0
 - New features
     - APEX 5.1 compatible
