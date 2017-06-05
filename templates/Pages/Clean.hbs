@@ -2,31 +2,29 @@
 {{/inline_css}}
 {{#header_template}}
 <!DOCTYPE html>
+<html class="no-js #RTL_CLASS# page-&APP_PAGE_ID. app-&APP_ALIAS." lang="&BROWSER_LANGUAGE." #TEXT_DIRECTION#>
 <head>
-    <title>#TITLE#</title>
-    #FAVICONS#
+	<title>#TITLE#</title>
 
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="author" content="Vincent Morneau">
-    <meta name="description" content="Material Design Theme for APEX">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Meta -->
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<meta charset="utf-8">
+	<meta name="author" content="Vincent Morneau">
+	<meta name="description" content="Material Design Theme for APEX">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <!-- Mandatory APEX CSS Stuff -->
-    #HEAD#
-    #APEX_CSS#
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Material APEX CSS -->
-    #THEME_CSS#
-    #THEME_STYLE_CSS#
-    #TEMPLATE_CSS#
-
-    <!-- Additionnal CSS -->
-    #APPLICATION_CSS#
-    #PAGE_CSS#
+	#APEX_CSS#
+	#THEME_CSS#
+	#TEMPLATE_CSS#
+	#THEME_STYLE_CSS#
+	#APPLICATION_CSS#
+	#PAGE_CSS#
+	#FAVICONS#
+	#HEAD#
 </head>
-<body id="#PAGE_STATIC_ID#" class="#PAGE_CSS_CLASSES#" #ONLOAD#>
+<body id="#PAGE_STATIC_ID#" class="#PAGE_CSS_CLASSES#" #TEXT_DIRECTION# #ONLOAD#>
 {{/header_template}}
 
 {{#box}}
@@ -36,34 +34,26 @@
 #REGION_POSITION_01#
 
 <div class="ma-main-container m-t-3">
-    #GLOBAL_NOTIFICATION#
-    #SUCCESS_MESSAGE#
-    #NOTIFICATION_MESSAGE#
+	#GLOBAL_NOTIFICATION#
+	#SUCCESS_MESSAGE#
+	#NOTIFICATION_MESSAGE#
 
-    #BODY#
+	#BODY#
 </div>
 
 #FORM_CLOSE#
 {{/box}}
 
 {{#footer_template}}
-<!-- Mandatory APEX JS -->
+#FORM_CLOSE#
 #DEVELOPER_TOOLBAR#
 #APEX_JAVASCRIPT#
-
-<!-- Material APEX JS -->
+#GENERATED_CSS#
 #THEME_JAVASCRIPT#
 #TEMPLATE_JAVASCRIPT#
-
-<!-- Additionnal CSS -->
 #APPLICATION_JAVASCRIPT#
 #PAGE_JAVASCRIPT#
-
-<!-- Generated CSS and JS -->
-#GENERATED_CSS#
 #GENERATED_JAVASCRIPT#
-
-<!-- Finalize script -->
 <script type="text/javascript" src="&PATH.js/finalize#MIN#.js"></script>
 </body>
 </html>
@@ -71,47 +61,47 @@
 
 {{#success_message}}
 <div id="toast-container">
-    <div class="toast velocity-animating green lighten-2">
-        #SUCCESS_MESSAGE#
-        <i class="ma-toast-close material-icons right">close</i>
-    </div>
+	<div class="toast velocity-animating green lighten-2">
+		#SUCCESS_MESSAGE#
+		<i class="ma-toast-close material-icons right">close</i>
+	</div>
 </div>
 {{/success_message}}
 {{#message}}
 <div class="row m-b-0">
-    <div class="col s12">
-        <div class="ma-alert card-panel yellow lighten-4 grey-text text-darken-1">
-            <div class="ma-alert-icon p-r-1">
-                <i class="material-icons">warning</i>
-            </div>
-            <div class="ma-alert-content">
-                #MESSAGE#
-            </div>
-            <div class="ma-alert-close p-l-1">
-                <i class="panel-close material-icons">close</i>
-            </div>
-        </div>
-    </div>
+	<div class="col s12">
+		<div class="ma-alert card-panel yellow lighten-4 grey-text text-darken-1">
+			<div class="ma-alert-icon p-r-1">
+				<i class="material-icons">warning</i>
+			</div>
+			<div class="ma-alert-content">
+				#MESSAGE#
+			</div>
+			<div class="ma-alert-close p-l-1">
+				<i class="panel-close material-icons">close</i>
+			</div>
+		</div>
+	</div>
 </div>
 {{/message}}
 
 {{#error_page_template}}
 <div class="row m-t-3">
-    <div class="col s12 m8 offset-m2">
-        <div class="card">
-            <div class="card-image center">
-                <i class="material-icons xlarge red-text text-lighten-1 m-t-1">error</i>
-            </div>
-            <div class="card-content grey-text">
-                <p>#MESSAGE#</p>
-                <p>#ADDITIONAL_INFO#</p>
-                <p>#TECHNICAL_INFO#</p>
-            </div>
-            <div class="card-action">
-                <a href="#BACK_LINK#" class="btn-flat waves-effect waves-light">#OK#</a>
-            </div>
-        </div>
-    </div>
+	<div class="col s12 m8 offset-m2">
+		<div class="card">
+			<div class="card-image center">
+				<i class="material-icons xlarge red-text text-lighten-1 m-t-1">error</i>
+			</div>
+			<div class="card-content grey-text">
+				<p>#MESSAGE#</p>
+				<p>#ADDITIONAL_INFO#</p>
+				<p>#TECHNICAL_INFO#</p>
+			</div>
+			<div class="card-action">
+				<a href="#BACK_LINK#" class="btn-flat waves-effect waves-light">#OK#</a>
+			</div>
+		</div>
+	</div>
 </div>
 {{/error_page_template}}
 
@@ -120,23 +110,23 @@
 {{/grid_template}}
 {{#grid_row_template}}
 <div class="row">
-    #COLUMNS#
+	#COLUMNS#
 </div>
 {{/grid_row_template}}
 {{#grid_column_template}}
 <div class="col s12 m#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>
-    #CONTENT#
+	#CONTENT#
 </div>
 {{/grid_column_template}}
 
 {{#template_options}}
 [
-    {
-        "name": "CONTAINER",
-        "display_name": "Container",
-        "display_sequence": 1,
-        "css_classes": "main-container",
-        "help_text": ""
-    }
+	{
+		"name": "CONTAINER",
+		"display_name": "Wrap Page in a Container",
+		"display_sequence": 1,
+		"css_classes": "main-container",
+		"help_text": ""
+	}
 ]
 {{/template_options}}

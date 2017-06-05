@@ -37,24 +37,18 @@ nav .nav-wrapper i {
 	@extend .center;
 }
 
-.navbar-list li {
-    height: $navbar-height-mobile;
-    line-height: $navbar-height-mobile;
-
-    i {
+.navbar-list .dropdown-content {
+    li, a, i, span {
         height: $navbar-height-mobile;
-        line-height: $navbar-height-mobile;
+        line-height: ($navbar-height-mobile / 2);
     }
 }
 
 @media #{$medium-and-up} {
-	.navbar-list li {
-	    height: $navbar-height;
-	    line-height: $navbar-height;
-
-	    i {
-		    height: $navbar-height;
-		    line-height: $navbar-height;
+	.navbar-list .dropdown-content {
+		li, a, i, span {
+			height: $navbar-height;
+			line-height: ($navbar-height / 2);
 		}
 	}
 }

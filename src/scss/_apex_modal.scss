@@ -104,10 +104,14 @@ body {
 	}
 }
 
-body .ui-dialog--apex .ui-dialog-content {
-	padding: 0;
+body .ui-dialog .ui-widget-content {
+	background: none;
+
+	.ui-state-focus {
+		box-shadow: none!important;
+	}
 }
 
-.ui-widget-content {
-	background: none;
+body .ui-dialog .ui-dialog-content, .t-Dialog-page {
+	background-color: $modal-background-color;
 }

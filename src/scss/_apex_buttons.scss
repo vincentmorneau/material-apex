@@ -93,7 +93,7 @@ This is to give space as if there was a label */
 }
 
 // IG and IRR buttons
-.a-Button {
+.a-Button, .ui-button {
 	&:focus {
 		outline: none;
 		background-color: transparent;

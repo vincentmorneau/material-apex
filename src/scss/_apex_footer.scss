@@ -1,3 +1,11 @@
-.footer-copyright .row {
-    margin-bottom:0;
+.footer-copyright {
+	.version
+	, .customize
+	, .screenreader {
+		display: inline-block;
+	}
+
+	a {
+		color: inherit;
+	}
 }

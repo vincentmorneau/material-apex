@@ -4,15 +4,16 @@
 - https://github.com/vincentmorneau/material-apex/issues/83
 - https://twitter.com/vincentmorneau/status/707650168129265664
 - https://community.oracle.com/message/13733156
+- https://community.oracle.com/message/14356542#14356542
 
-#### Import the file `theme-export.sql` from the [latest release](https://github.com/vincentmorneau/material-apex/releases/latest) in your existing application.  
+#### Import the file `theme-export.sql` from the [latest release](https://github.com/vincentmorneau/material-apex/releases/latest) in your existing application.
 1. Create theme
 2. From export
 3. Select `theme-export.sql`
 4. Switch theme
 5. Match templates
 
-#### Configure Application Substitution Strings  
+#### Configure Application Substitution Strings
 Name | Value
 --- | ---
 PATH | `#THEME_IMAGES#`
@@ -21,9 +22,8 @@ PATH | `#THEME_IMAGES#`
 ##### Regions
 Name | Type | Position | Template | Source
 --- | --- | --- | --- | ---
-{sidenav header} | Classic Report | Item Container | *None* | **See Below (1)*
 {search bar} | Static Content | Search Bar | *None* |
-{region display selector} | Region Display Selector | Region Display Selector | *None* |
+{sidenav header} | Classic Report | Item Container | *None* | **See Below (1)*
 
 *Source (1) Example:
 ```sql
