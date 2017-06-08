@@ -104,7 +104,7 @@ body {
 	}
 }
 
-body .ui-dialog .ui-widget-content {
+body .ui-dialog, body .ui-dialog .ui-widget-content {
 	background: none;
 
 	.ui-state-focus {

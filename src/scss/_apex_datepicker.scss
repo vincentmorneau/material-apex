@@ -68,6 +68,7 @@
         .ui-datepicker-prev, .ui-datepicker-next {
             top: auto;
             height: 4rem;
+            width: 3rem;
             cursor: pointer;
 
             .ui-icon {
@@ -120,21 +121,25 @@
             background: none;
             border: none;
             text-align: center;
+            box-shadow: none;
             padding: .75rem 0;
         }
 
-        .ui-state-highlight {
-            color: $datepicker-date-bg;
-        }
-
-        .ui-state-active {
+        .ui-state-active, .ui-state-highlight, .ui-state-hover {
             border-radius: 50%;
-            background-color: $datepicker-selected;
             color: #fff;
             width: 35px;
             height: 35px;
             margin: auto;
             line-height: 15px;
+        }
+
+        .ui-state-active {
+            background-color: $datepicker-selected;
+        }
+
+        .ui-state-highlight, .ui-state-hover {
+            color: $datepicker-date-bg;
         }
 
         thead {

@@ -322,17 +322,17 @@ materialAPEX.initial = {
 				$(".search-nav-wrapper").toggleClass("hide");
 			});
 
-		//  closes a toast
+		// Closes a toast
 		$(document).on("click", ".ma-toast-close", function() {
 			$(this).closest(".toast").remove();
 		});
 
-		//  closes a panel
+		// Closes a panel
 		$(document).on("click", ".panel-close", function() {
 			$(this).closest(".card-panel").remove();
 		});
 
-		// checkboxes and radio alternate look
+		// Checkboxes and radio alternate look
 		$(".ma-alternate-look input[type='checkbox']").addClass("filled-in");
 		$(".ma-alternate-look input[type='radio']").addClass("with-gap");
 

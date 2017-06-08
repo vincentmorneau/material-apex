@@ -1,8 +1,12 @@
 .collection:not(.with-header) .collection-header {
-    display: none;
+	@include hide();
 }
 
 .collection span.badge {
-    max-width: 60%;
-    display: inline-block;
+	max-width: 60%;
+	display: inline-block;
+}
+
+.collection .secondary-content:empty {
+	@include hide();
 }

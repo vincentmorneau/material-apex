@@ -1,32 +1,56 @@
-.card-title {
-    z-index: 1;
+.card .card-title {
+	z-index: 1;
 }
+
+// Handling conditional display for reveal cards
+.ma-card-reveal-content {
+	@include hide();
+}
+
+.ma-card-reveal {
+	.ma-card-reveal-content {
+		@include showBlock();
+	}
+
+	.ma-card-image-content {
+		@include hide();
+	}
+}
+// End
 
 .panel-close {
-    cursor: pointer;
-}
-
-.ma-card-horizontal .card {
-    @extend .horizontal;
-}
-
-.ma-sticky-action .card {
-    @extend .sticky-action;
+	cursor: pointer;
 }
 
 .ma-region-bg-color > .card {
-    background-color: inherit;
+	background-color: inherit;
 }
 
-.card-action {
-    & > a {
-        color: $card-link-color;
-        margin-right: $card-padding;
-        transition: color 0.3s ease;
-        text-transform: uppercase;
 
-        &:hover {
-            color: $card-link-color-light;
-        }
-    }
+// Horizontal Cards
+.ma-card-horizontal .card {
+	@extend .horizontal;
+
+	.ma-card-stacked {
+		@extend .card-stacked;
+	}
+}
+
+// Card Buttons
+.card-action {
+	& > a {
+		color: $card-link-color;
+		margin-right: $card-padding;
+		transition: color 0.3s ease;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $card-link-color-light;
+		}
+	}
+}
+
+// Hoverable
+.ma-card-hoverable > .ma-card-col > .card {
+	@extend .hoverable;
 }
