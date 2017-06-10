@@ -18,6 +18,16 @@ $.fn.removeEmpty = function() {
 };
 
 /**
+ * Removes empty objects from the DOM based on the given selector
+ * @returns {object}
+ */
+$.fn.removeEmptySpaces = function() {
+	return this.filter(function() {
+		return $.trim($(this).text()) === "";
+	}).remove();
+};
+
+/**
  * Verifies if the given class exists on the DOM
  * This is performed in vanilla JS instead of jQuery to increase performance
  * @returns {boolean} true if the class exists, false if it doesn't
@@ -149,42 +159,16 @@ materialAPEX.ir = {
 		if (!classExists("a-IRR")) return;
 		materialAPEX.debug.time("materialAPEX.ir.init");
 
-		if (!$('.a-IRR-table').hasClass("table-responsive")) {
-			$('.a-IRR-table').addClass("table-responsive");
+		$(".a-IRR-search-field")
+			.attr("placeholder", apex.lang.getMessage("APEX.IG.SEARCH"))
+			.parent().addClass("input-field");
 
-			$(".a-IRR-search-field")
-				.attr("placeholder", apex.lang.getMessage("APEX.IG.SEARCH"))
-				.parent().addClass("input-field");
+		$(".a-IRR-button--actions").html('<i class="material-icons">more_vert</i>');
+		$(".a-IRR-button--colSearch").html('<i class="material-icons">search</i>');
 
-			$(".a-IRR-button--actions").html('<i class="material-icons">more_vert</i>') /*.show()*/ ;
-			$(".a-IRR-button--colSearch").html('<i class="material-icons">search</i>') /*.show()*/ ;
-
-			$(".a-IRR-table td").each(function(index) {
-				$(this)
-					.attr("data-label",
-						$(this).closest('table')
-						.find('th')
-						.not(".a-IRR-header--group")
-						.eq($(this).index())
-						.find("a")
-						.ignore("span")
-						.text());
-			});
-
-			$(".a-IRR-header:not(.a-IRR-header--group)").closest("tr").addClass("a-IRR-header-tr");
-			$(".a-IRR-header.a-IRR-header--group").closest("tr").addClass("a-IRR-header-tr--group");
-		}
-
-		$("[id*='_column_filter'], .a-IRR-dialogContent--highlight table table")
-			.addClass("table-responsive")
-			.find("td")
-			.each(function(index) {
-				$(this).attr("data-label", $(this).closest('table').find('.a-IRR-dialogTable-header').eq($(this).index()).text());
-			});
-
-		$("[id*='_chart_type'] input[type='radio'], [id*='_default_type'] input[type='radio']").each(function() {
-			$(this).after("<label for='" + $(this).attr("id") + "'></label>").parent().removeAttr("nowrap");
-		});
+		// $("[id*='_chart_type'] input[type='radio'], [id*='_default_type'] input[type='radio']").each(function() {
+		// 	$(this).after("<label for='" + $(this).attr("id") + "'></label>").parent().removeAttr("nowrap");
+		// });
 
 		$(".a-IRR-controlsCheckbox").addClass("filled-in");
 
@@ -222,7 +206,8 @@ materialAPEX.initial = {
 		$(".s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10,.s11").removeClass("s12");
 
 		// Deletes empty html tags
-		$('.card-action, .card-content, span.badge, i.material-icons, .ma-button-label').removeEmpty();
+		$('.card-content, span.badge, i.material-icons, .ma-button-label').removeEmpty();
+		$('.card-action').removeEmptySpaces();
 
 		// Support for APEX 5.1 item icons
 		$(".apex-item-icon").each(function(index) {

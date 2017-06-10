@@ -1,172 +1,163 @@
 .a-IRR-container {
-    @include ma-card;
-    padding: 1rem;
+	@include ma-card;
+	padding: 1rem;
 
-    .a-IRR {
-        border: none;
-        background-color: transparent;
+	.a-IRR {
+		border: none;
+		background-color: transparent;
 
-        // IR Toolbar
-        .a-IRR-toolbar {
-          	background-color: transparent;
-            border-bottom: none;
-            padding: 0;
-            padding-bottom: 1rem;
+		// IR Toolbar
+		.a-IRR-toolbar {
+			background-color: transparent;
+			border-bottom: none;
+			padding: 0;
+			padding-bottom: 1rem;
 
-            // IR Buttons
-            .a-IRR-button {
-                @include btn-flat;
+			// IR Buttons
+			.a-IRR-button {
+				@include btn-flat;
 
-                i {
-                    font-size: 2rem;
-                }
-            }
+				i {
+					font-size: 2rem;
+				}
+			}
 
-            .a-IRR-controlGroup {
-                margin-bottom: 0;
-            }
+			.a-IRR-controlGroup {
+				margin-bottom: 0;
+			}
 
-            .a-IRR-controlGroup--search {
-            	// @include ma-s6;
+			.a-IRR-controlGroup--search {
+				.a-IRR-colSelector {
+					@include ma-s2;
+				}
 
-                .a-IRR-colSelector {
-                    @include ma-s2;
-                }
+				.a-IRR-searchFieldContainer {
+					@include ma-s10;
+					margin-top: 0;
 
-                .a-IRR-searchFieldContainer {
-                    @include ma-s10;
-                    margin-top: 0;
+					.a-IRR-search-field {
+						margin-bottom: 0;
+						margin-left: 0.5rem;
+						width: calc(100% - 1rem);
+					}
+				}
 
-                    .a-IRR-search-field {
-                        margin-bottom: 0;
-                        margin-left: 0.5rem;
-                        width: calc(100% - 1rem);
-                    }
-                }
+				.a-IRR-searchButtonContainer {
+					@include hide;
+				}
+			}
 
-                .a-IRR-searchButtonContainer {
-                    @include hide;
-                }
-            }
+			.a-IRR-controlGroup--views {
+				.a-IRR-savedReports {
+					display: block;
+				}
+			}
 
-            .a-IRR-controlGroup--views {
-            	// @include ma-s4;
+			.a-IRR-controlGroup--options {
+				float: right;
+			}
 
-                .a-IRR-savedReports {
-                    display: block;
-                }
-            }
+			// IR Buttons
+			.a-IRR-button {
+				height: $input-height;
+				padding: 0 0.5rem;
+				line-height: 3rem;
+			}
 
-            .a-IRR-controlGroup--options {
-            	// @include ma-s2;
-                float: right;
+			// select list
+			select.a-IRR-selectList {
+				@include hide;
+			}
 
-                // .a-IRR-actions {
-                //     float: right;
-                // }
-            }
+			div.a-IRR-selectList {
+				display: block;
+				height: auto;
+				padding: 0;
+				border: none;
+				background-image: none;
+				overflow:visible;
 
-            // IR Buttons
-            .a-IRR-button {
-                height: $input-height;
-                padding: 0 0.5rem;
-                line-height: 3rem;
-            }
+				input {
+					margin-bottom:0;
+				}
+			}
+		}
 
-            // select list
-            select.a-IRR-selectList {
-                @include hide;
-            }
+		// IR Table
+		.a-IRR-table {
+			// IR th
+			.a-IRR-header {
+				border-left: none;
+				background-color: #fff;
+				font-size: 16px;
+			}
 
-            div.a-IRR-selectList {
-                display: block;
-                height: auto;
-                padding: 0;
-                border: none;
-                background-image: none;
-                overflow:visible;
+			td {
+				padding: 8px 4px;
+				border-left: none;
+			}
 
-                input {
-                    margin-bottom:0;
-                }
-            }
-        }
+			.datepicker td {
+				border-top: none;
+			}
+		}
 
-        // IR Table
-        .a-IRR-table {
-            // IR th
-            .a-IRR-header {
-                border-left: none;
-              	background-color: #fff;
-                font-size: 16px;
-            }
+		.a-IRR-paginationWrap {
+			&.a-IRR-paginationWrap--bottom {
+				padding: 12px 12px 0 12px;
+			}
 
-            td {
-                padding: 8px 4px;
-                border-left: none;
-            }
+			// IR Buttons
+			.a-IRR-button {
+				@include btn-flat;
+				@include small-btn;
 
-            .datepicker td {
-                border-top: none;
-            }
-        }
-
-        .a-IRR-paginationWrap {
-            &.a-IRR-paginationWrap--bottom {
-                padding: 12px 12px 0 12px;
-            }
-
-            // IR Buttons
-            .a-IRR-button {
-                @include btn-flat;
-                @include small-btn;
-
-                i {
-                    font-size: 2rem;
-                }
-            }
-        }
-    }
+				i {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
 }
 
-// menu when sorting columns
+// Menu when sorting columns
 .a-IRR-sortWidget {
-    .a-IRR-sortWidget-search>.a-IRR-sortWidget-searchField {
-        width: calc(100% - 40px);
-    }
+	.a-IRR-sortWidget-search>.a-IRR-sortWidget-searchField {
+		width: calc(100% - 40px);
+	}
 }
 
-// modal inputs
+// Modal inputs
 .a-IRR-dialogContent {
-    padding: 1rem;
+	padding: 1rem;
 }
 
 .a-IRR-dialogTable {
-    td, th {
-        padding: 5px;
-        vertical-align: middle;
-    }
+	td, th {
+		padding: 5px;
+		vertical-align: middle;
+	}
 
-    select {
-        @include browserDefaultInput();
-        @include browserDefaultSelect();
-    }
+	select {
+		@include browserDefaultInput();
+		@include browserDefaultSelect();
+	}
 
-    .ajax_shuttle select {
-        height: auto;
-    }
+	.ajax_shuttle select {
+		height: auto;
+	}
 
-    input {
-        width: auto;
-        margin: 0;
-    }
+	input {
+		width: auto;
+		margin: 0;
+	}
 
-    .a-Button--menu {
-        @include btn-flat;
-        @include small-btn;
-    }
+	.a-Button--menu {
+		@include btn-flat;
+		@include small-btn;
+	}
 
-    .a-IRR-format-mask-picker {
-        margin-left: -20px;
-    }
+	.a-IRR-format-mask-picker {
+		margin-left: -20px;
+	}
 }
