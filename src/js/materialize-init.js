@@ -118,7 +118,7 @@ materialAPEX.ig = {
 materialAPEX.select = {
 	init: function() {
 		materialAPEX.debug.time("materialAPEX.select.init");
-		$('form select').not('.disabled').material_select();
+		$('form select').not('.disabled, .shuttle_left, .shuttle_right').material_select();
 		materialAPEX.debug.timeEnd("materialAPEX.select.init");
 	},
 
