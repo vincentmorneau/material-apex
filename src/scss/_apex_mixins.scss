@@ -1,91 +1,89 @@
 @mixin hide() {
-    display:none!important;
-    visibility: hidden!important;
+	display:none!important;
+	visibility: hidden!important;
 }
 
 @mixin showBlock() {
-    display:block!important;
-    visibility:visible!important;
+	display:block!important;
+	visibility:visible!important;
 }
 
 @mixin showInlineBlock() {
-    display:inline-block!important;
-    visibility:visible!important;
+	display:inline-block!important;
+	visibility:visible!important;
 }
 
 @mixin browserDefaultInput() {
-    background-color: transparent;
-    border: none;
-    border-bottom: none;
-    border-radius: 0;
-    outline: none;
-    height: auto;
-    width: auto;
-    font-size: inherit;
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
-    box-sizing: content-box;
-    transition: none;
+	background-color: transparent;
+	border: none;
+	border-bottom: none;
+	border-radius: 0;
+	outline: none;
+	height: auto;
+	width: auto;
+	font-size: inherit;
+	margin: 0;
+	padding: 0;
+	box-shadow: none;
+	box-sizing: content-box;
+	transition: none;
 }
 
 @mixin browserDefaultSelect() {
-    display:block;
-    width: 100%;
-    height: $input-height;
-    border-bottom: $input-border;
+	display:block;
+	width: 100%;
+	height: $input-height;
+	border-bottom: $input-border;
 }
 
 @mixin vh {
-    border: 0!important;
-    clip: rect(0 0 0 0)!important;
-    height: 1px!important;
-    margin: -1px!important;
-    overflow: hidden!important;
-    padding: 0!important;
-    position: absolute!important;
-    width: 1px!important;
+	border: 0!important;
+	clip: rect(0 0 0 0)!important;
+	height: 1px!important;
+	margin: -1px!important;
+	overflow: hidden!important;
+	padding: 0!important;
+	position: absolute!important;
+	width: 1px!important;
 }
 
 @mixin ma-s2 {
-    width: 16.66667%;
+	width: 16.66667%;
 }
 
 @mixin ma-s3 {
-    width: 25%;
+	width: 25%;
 }
 
 @mixin ma-s4 {
-    width: 33.3333%;
+	width: 33.3333%;
 }
 
 @mixin ma-s6 {
-    width: 50%;
+	width: 50%;
 }
 
 @mixin ma-s9 {
-    width: 75%;
+	width: 75%;
 }
 
 @mixin ma-s10 {
-    width: 83.33333%;
+	width: 83.33333%;
 }
 
 @mixin ma-s12 {
-    width: 100%;
+	width: 100%;
 }
 
 @mixin apex5-font {
-    font-size: 16px;
-    font-family: apex-5-icon-font!important;
-    font-style: normal!important;
-    font-weight: 400!important;
-    font-variant: normal!important;
-    text-transform: none!important;
-    speak: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	font-family: apex-5-icon-font!important;
+	font-style: normal!important;
+	font-weight: 400!important;
+	font-variant: normal!important;
+	text-transform: none!important;
+	speak: none;
+	line-height: 1;
 }
 
 @mixin material-icons {
@@ -100,44 +98,77 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
 }
 
 @mixin small-btn {
-    height: 24px;
-    line-height: 18px;
-    padding: 0 1rem;
+	height: 24px;
+	line-height: 18px;
+	padding: 0 1rem;
 }
 
 @mixin btn {
-    @extend .btn;
+	@extend .btn;
 }
 
 @mixin btn-flat {
-    @extend .btn-flat;
+	@extend .btn-flat;
 }
 
 @mixin ma-card {
-    @extend .card;
+	@extend .card;
 }
 
 @mixin z-depth-1 {
-    @extend .z-depth-1;
+	@extend .z-depth-1;
 }
 
 @mixin z-depth-2 {
-    @extend .z-depth-2;
+	@extend .z-depth-2;
 }
 
 @mixin z-depth-3 {
-    @extend .z-depth-3;
+	@extend .z-depth-3;
 }
 
 @mixin z-depth-4 {
-    @extend .z-depth-4;
+	@extend .z-depth-4;
 }
 
 @mixin z-depth-5 {
-    @extend .z-depth-5;
+	@extend .z-depth-5;
+}
+
+// Flexbox regions
+@mixin ma-flex {
+	display: flex;
+
+	&.ma-flex-justify {
+		justify-content: space-between;
+	}
+
+	& > .ma-flex-left, & > .ma-flex-right {
+		align-self: center;
+
+		&:empty {
+			@include hide();
+		}
+	}
+
+	& > .ma-flex-left {
+		text-align: left;
+		margin-right: 1rem;
+	}
+
+	& > .ma-flex-right {
+		text-align: right;
+		margin-left: 1rem;
+	}
+
+	& > .ma-flex-center {
+		text-align: center;
+	}
+
+	& > .ma-flex-content {
+		width: 100%;
+	}
 }

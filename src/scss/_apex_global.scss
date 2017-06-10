@@ -1,6 +1,7 @@
-/* initial load */
 html {
 	// !important is required to overwrite what APEX already does
+	// Will be set to visible when the page has finished loading
+	// using JavaScript
 	visibility: hidden!important;
 }
 
@@ -21,25 +22,17 @@ ul {
 	}
 }
 
-// .ma-region {
-// 	margin-bottom: 20px;
-// }
-
-// apex hidden components
+// APEX hidden components
 input.u-vh {
 	@include vh();
 }
 
-/*
-* Main Container Handler
-*/
+// Main Container Handler
 .main-container .ma-main-container {
 	@extend .container;
 }
 
-/*
-* Fix for menu icons
-*/
+// Fix for menu icons
 i {
 	&.left-l {
 		float: left;
@@ -60,9 +53,7 @@ i {
 	}
 }
 
-/*
-* Hamburger Menu
-*/
+// Hamburger Menu
 #app-sidenav-trigger {
 	display: block!important;
 
@@ -71,16 +62,12 @@ i {
 	}
 }
 
-/*
-* Materialbox
-*/
+// Materialbox
 .materialbox-caption {
 	top:0;
 }
 
-/*
-* Sticky Footer
-*/
+// Sticky Footer
 body > form {
 	display: flex;
 	min-height: 100vh;
@@ -91,94 +78,40 @@ body > form {
 	}
 }
 
-/*
-Alignments
-*/
-// title
-.ma-region-title-left .ma-region-title {
+// Alignments
+.ma-region-title-left .ma-region-title
+, .ma-region-body-left .ma-region-body
+, [align='left'] {
 	text-align: left;
 }
-.ma-region-title-center .ma-region-title {
+.ma-region-title-center .ma-region-title
+, .ma-region-body-center .ma-region-body
+, [align='center'] {
 	text-align: center;
 }
-.ma-region-title-right .ma-region-title {
+.ma-region-title-right .ma-region-title
+, .ma-region-body-right .ma-region-body
+, [align='right'] {
 	text-align: right;
 }
 
-// body
-.ma-region-body-left .ma-region-body {
-	text-align: left;
-}
-.ma-region-body-center .ma-region-body {
-	text-align: center;
-}
-.ma-region-body-right .ma-region-body {
-	text-align: right;
-}
-
-// buttons
-[align='left'], .ma-region-buttons-left {
-	text-align: left;
-}
-
-[align='center'], .ma-region-buttons-center {
-	text-align: center;
-}
-
-[align='right'], .ma-region-buttons-right {
-	text-align: right;
-}
-
-/*
-Badges
-*/
+// Badges
 span.badge.new:after {
 	content: "";
 }
 
-/* Parallax */
+// Parallax
 .parallax-container {
 	height: initial;
 	min-height: 400px;
 }
 
-/* Blockquote */
+// Blockquote
 blockquote {
 	padding: 1rem;
 }
 
-/*
-* Buttons container
-*/
-.ma-region-buttons, .ma-region-header {
-	display: table;
-	width: 100%;
-	border-collapse: collapse;
-
-	.ma-region-buttons-left, .ma-region-buttons-center, .ma-region-buttons-right {
-		width: 0;
-		display: table-cell;
-		vertical-align: middle;
-		white-space: nowrap;
-		padding: 1rem 0;
-
-		&:empty {
-			@include hide();
-		}
-	}
-
-	.ma-region-title {
-		width: 100%;
-		display: table-cell;
-		vertical-align: middle;
-	}
-}
-
-.ma-region-header .ma-region-buttons-left button:last-child {
-	margin-right: 1rem;
-}
-
-// error template
+// Error template
 .a-Error-details h2
 , h2.a-Notification-title
 , .a-Notification-details h2 {
@@ -186,6 +119,29 @@ blockquote {
 	margin-top: 0;
 }
 
+// Notifications
 body .ui-dialog.ui-widget .ui-dialog-content.ui-widget-content.a-Notification-details {
 	padding: 1rem;
+}
+
+// Apply flex to regions
+.ma-region.section, .ma-region.card .card-content, .ma-region-header, .ma-region-buttons {
+	@include ma-flex();
+}
+
+.ma-region-buttons {
+	.ma-flex-left
+	, .ma-flex-center
+	, .ma-flex-right {
+		white-space: nowrap;
+	}
+
+	&:not(.card-action) {
+		.ma-flex-left
+		, .ma-flex-center
+		, .ma-flex-right {
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+		}
+	}
 }

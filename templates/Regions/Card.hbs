@@ -1,25 +1,33 @@
 {{#template}}
 <div id="#REGION_STATIC_ID#" class="ma-region card #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
-	<div class="ma-region-body card-content">
-		<div class="ma-region-header">
-			<div class="ma-region-buttons ma-region-buttons-left">#COPY#</div>
-			<div class="ma-region-title card-title">
-				<i class="material-icons">#ICON_CSS_CLASSES#</i>#TITLE#</div>
-			<div class="ma-region-buttons ma-region-buttons-right">#EDIT#</div>
+	<div class="card-content">
+		<div class="ma-flex-left">#PREVIOUS#</div>
+
+		<div class="ma-flex-content">
+			<div class="ma-region-header">
+				<div class="ma-flex-content">
+					<div class="ma-region-title card-title"><i class="material-icons">#ICON_CSS_CLASSES#</i>#TITLE#</div>
+				</div>
+				<div class="ma-flex-right">#EDIT#</div>
+			</div>
+
+			<div class="ma-region-buttons ma-flex-justify">
+				<div class="ma-flex-left">#COPY#</div>
+				<div class="ma-flex-content"></div>
+				<div class="ma-flex-right">#EXPAND#</div>
+			</div>
+
+			<div class="ma-region-body t-Region-body">#BODY##SUB_REGIONS#</div>
+
 		</div>
 
-		<div class="ma-region-buttons">
-			<div class="ma-region-buttons-left">#PREVIOUS#</div>
-			<div class="ma-region-buttons-right">#NEXT#</div>
-		</div>
-
-		<div class="ma-region-body t-Region-body">#BODY##SUB_REGIONS#</div>
+		<div class="ma-flex-right">#NEXT#</div>
 	</div>
 
-	<div class="ma-region-buttons card-action">
-		<div class="ma-region-buttons-left">#CLOSE##HELP#</div>
-		<div class="ma-region-buttons-center">#CHANGE#</div>
-		<div class="ma-region-buttons-right">#DELETE##CREATE##CREATE2#</div>
+	<div class="ma-region-buttons ma-flex-justify card-action">
+		<div class="ma-flex-left">#CLOSE##HELP#</div>
+		<div class="ma-flex-center ma-flex-content">#CHANGE#</div>
+		<div class="ma-flex-right">#DELETE##CREATE##CREATE2#</div>
 	</div>
 </div>
 {{/template}}

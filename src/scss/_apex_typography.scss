@@ -1,132 +1,132 @@
 /* Text Size */
 .ma-text-size-responsive .display_only {
-    @extend .flow-text;
+	@extend .flow-text;
 }
 
-.h1 > .ma-region-header > .ma-region-title
+.ma-region.h1 > .ma-flex-content > .ma-region-header .ma-region-title
 , .ma-text-size-h1 .display_only {
 	font-size: $h1-fontsize;
-    font-weight: 300;
+	font-weight: 300;
 }
 
-.h2 > .ma-region-header > .ma-region-title
+.ma-region.h2 > .ma-flex-content > .ma-region-header .ma-region-title
 , .ma-text-size-h2 .display_only {
 	font-size: $h2-fontsize;
-    font-weight: 300;
+	font-weight: 300;
 }
 
-.h3 > .ma-region-header > .ma-region-title
+.ma-region.h3 > .ma-flex-content > .ma-region-header .ma-region-title
 , .ma-text-size-h3 .display_only {
 	font-size: $h3-fontsize;
-    font-weight: 300;
+	font-weight: 300;
 }
 
-.h4 > .ma-region-header > .ma-region-title
+.ma-region.h4 > .ma-flex-content > .ma-region-header .ma-region-title
 , .ma-text-size-h4 .display_only {
 	font-size: $h4-fontsize;
-    font-weight: 300;
+	font-weight: 300;
 }
 
-.h5 > .ma-region-header > .ma-region-title
+.ma-region.h5 > .ma-flex-content > .ma-region-header .ma-region-title
 , .ma-text-size-h5 .display_only {
 	font-size: $h5-fontsize;
-    font-weight: 300;
+	font-weight: 300;
 }
 
-.h6 > .ma-region-header > .ma-region-title
+.ma-region.h6 > .ma-flex-content > .ma-region-header .ma-region-title
 , .ma-text-size-h6 .display_only {
 	font-size: $h6-fontsize;
-    font-weight: 300;
+	font-weight: 300;
 }
 
-.ma-region.hide-title > .ma-region-header > .ma-region-title
-, .ma-region.hide-title.card > .card-content > .ma-region-header > .ma-region-title
-, blockquote.ma-region.hide-title > .ma-region-title {
-    @include hide();
+.ma-region.hide-title > .ma-flex-content > .ma-region-header .ma-region-title
+, .ma-region.hide-title.card > .card-content > .ma-flex-content > .ma-region-header .ma-region-title
+, blockquote.ma-region.hide-title > .ma-region-header .ma-region-title {
+	@include hide();
 }
 
 // Nowrap
 .text-nowrap {
-    white-space: nowrap;
+	white-space: nowrap;
 }
 
 /* Text Color */
 .ma-region-title-amber-text .ma-region-title {
-    @extend .amber-text;
+	@extend .amber-text;
 }
 
 .ma-region-title-blue-grey-text .ma-region-title {
-    @extend .blue-grey-text;
+	@extend .blue-grey-text;
 }
 
 .ma-region-title-blue-text .ma-region-title {
-    @extend .blue-text;
+	@extend .blue-text;
 }
 
 .ma-region-title-brown-text .ma-region-title {
-    @extend .brown-text;
+	@extend .brown-text;
 }
 
 .ma-region-title-cyan-text .ma-region-title {
-    @extend .cyan-text;
+	@extend .cyan-text;
 }
 
 .ma-region-title-deep-orange-text .ma-region-title {
-    @extend .deep-orange-text;
+	@extend .deep-orange-text;
 }
 
 .ma-region-title-deep-purple-text .ma-region-title {
-    @extend .deep-purple-text;
+	@extend .deep-purple-text;
 }
 
 .ma-region-title-green-text .ma-region-title {
-    @extend .green-text;
+	@extend .green-text;
 }
 
 .ma-region-title-grey-text .ma-region-title {
-    @extend .grey-text;
+	@extend .grey-text;
 }
 
 .ma-region-title-indigo-text .ma-region-title {
-    @extend .indigo-text;
+	@extend .indigo-text;
 }
 
 .ma-region-title-light-blue-text .ma-region-title {
-    @extend .light-blue-text;
+	@extend .light-blue-text;
 }
 
 .ma-region-title-light-green-text .ma-region-title {
-    @extend .light-green-text;
+	@extend .light-green-text;
 }
 
 .ma-region-title-lime-text .ma-region-title {
-    @extend .lime-text;
+	@extend .lime-text;
 }
 
 .ma-region-title-orange-text .ma-region-title {
-    @extend .orange-text;
+	@extend .orange-text;
 }
 
 .ma-region-title-pink-text .ma-region-title {
-    @extend .pink-text;
+	@extend .pink-text;
 }
 
 .ma-region-title-purple-text .ma-region-title {
-    @extend .purple-text;
+	@extend .purple-text;
 }
 
 .ma-region-title-red-text .ma-region-title {
-    @extend .red-text;
+	@extend .red-text;
 }
 
 .ma-region-title-teal-text .ma-region-title {
-    @extend .teal-text;
+	@extend .teal-text;
 }
 
 .ma-region-title-white-text .ma-region-title {
-    @extend .white-text;
+	@extend .white-text;
 }
 
 .ma-region-title-yellow-text .ma-region-title {
-    @extend .yellow-text;
+	@extend .yellow-text;
 }

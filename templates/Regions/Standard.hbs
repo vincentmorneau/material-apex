@@ -1,23 +1,31 @@
 {{#template}}
-<div id="#REGION_STATIC_ID#" class="ma-region section clearfix #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
-	<div class="ma-region-header">
-		<div class="ma-region-buttons-left">#COPY#</div>
-		<div class="ma-region-title"><i class="material-icons">#ICON_CSS_CLASSES#</i>#TITLE#</div>
-		<div class="ma-region-buttons-right">#EDIT#</div>
+<div id="#REGION_STATIC_ID#" class="ma-region section #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
+	<div class="ma-flex-left">#PREVIOUS#</div>
+
+	<div class="ma-flex-content">
+		<div class="ma-region-header">
+			<div class="ma-flex-content">
+				<div class="ma-region-title"><i class="material-icons">#ICON_CSS_CLASSES#</i>#TITLE#</div>
+			</div>
+			<div class="ma-flex-right">#EDIT#</div>
+		</div>
+
+		<div class="ma-region-buttons ma-flex-justify">
+			<div class="ma-flex-left">#COPY#</div>
+			<div class="ma-flex-content"></div>
+			<div class="ma-flex-right">#EXPAND#</div>
+		</div>
+
+		<div class="ma-region-body t-Region-body">#BODY##SUB_REGIONS#</div>
+
+		<div class="ma-region-buttons ma-flex-justify">
+			<div class="ma-flex-left">#CLOSE##HELP#</div>
+			<div class="ma-flex-center ma-flex-content">#CHANGE#</div>
+			<div class="ma-flex-right">#DELETE##CREATE##CREATE2#</div>
+		</div>
 	</div>
 
-	<div class="ma-region-buttons">
-		<div class="ma-region-buttons-left">#PREVIOUS#</div>
-		<div class="ma-region-buttons-right">#NEXT#</div>
-	</div>
-
-	<div class="ma-region-body t-Region-body">#BODY##SUB_REGIONS#</div>
-
-	<div class="ma-region-buttons">
-		<div class="ma-region-buttons-left">#CLOSE##HELP#</div>
-		<div class="ma-region-buttons-center">#CHANGE#</div>
-		<div class="ma-region-buttons-right">#DELETE##CREATE##CREATE2#</div>
-	</div>
+	<div class="ma-flex-right">#NEXT#</div>
 </div>
 {{/template}}
 
@@ -27,64 +35,64 @@
 
 {{#template_option_groups}}
 [
-    {
-        "name": "TITLE_SIZE",
-        "display_name": "Title Size",
-        "display_sequence": 0,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "N",
-        "template_options": [
-            {
-                "name": "H1",
-                "display_name": "H1",
-                "display_sequence": 1,
-                "css_classes": "h1",
-                "help_text": ""
-            },
-            {
-                "name": "H2",
-                "display_name": "H2",
-                "display_sequence": 2,
-                "css_classes": "h2",
-                "help_text": ""
-            },
-            {
-                "name": "H3",
-                "display_name": "H3",
-                "display_sequence": 3,
-                "css_classes": "h3",
-                "help_text": ""
-            },
-            {
-                "name": "H4",
-                "display_name": "H4",
-                "display_sequence": 4,
-                "css_classes": "h4",
-                "help_text": ""
-            },
-            {
-                "name": "H5",
-                "display_name": "H5",
-                "display_sequence": 5,
-                "css_classes": "h5",
-                "help_text": ""
-            },
-            {
-                "name": "H6",
-                "display_name": "H6",
-                "display_sequence": 6,
-                "css_classes": "h6",
-                "help_text": ""
-            },
-            {
-                "name": "HIDDEN",
-                "display_name": "Hidden",
-                "display_sequence": 0,
-                "css_classes": "hide-title",
-                "help_text": ""
-            }
-        ]
-    }
+	{
+		"name": "TITLE_SIZE",
+		"display_name": "Title Size",
+		"display_sequence": 0,
+		"help_text": "The font size of your region title",
+		"null_text": "",
+		"is_advanced": "N",
+		"template_options": [
+			{
+				"name": "HIDDEN",
+				"display_name": "Hidden",
+				"display_sequence": 0,
+				"css_classes": "hide-title",
+				"help_text": ""
+			},
+			{
+				"name": "H1",
+				"display_name": "H1",
+				"display_sequence": 1,
+				"css_classes": "h1",
+				"help_text": ""
+			},
+			{
+				"name": "H2",
+				"display_name": "H2",
+				"display_sequence": 2,
+				"css_classes": "h2",
+				"help_text": ""
+			},
+			{
+				"name": "H3",
+				"display_name": "H3",
+				"display_sequence": 3,
+				"css_classes": "h3",
+				"help_text": ""
+			},
+			{
+				"name": "H4",
+				"display_name": "H4",
+				"display_sequence": 4,
+				"css_classes": "h4",
+				"help_text": ""
+			},
+			{
+				"name": "H5",
+				"display_name": "H5",
+				"display_sequence": 5,
+				"css_classes": "h5",
+				"help_text": ""
+			},
+			{
+				"name": "H6",
+				"display_name": "H6",
+				"display_sequence": 6,
+				"css_classes": "h6",
+				"help_text": ""
+			}
+		]
+	}
 ]
 {{/template_option_groups}}
