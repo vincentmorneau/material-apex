@@ -1,37 +1,37 @@
 /*
 Colors
 */
-.ma-colored-field, .ma-colored-region {
-    label {
-        // we are enforcing this color so it should overwrite the :focus value
-        color: inherit!important;
-    }
+.ma-colored-field,
+.ma-colored-region {
+	label {
+		// we are enforcing this color so it should overwrite the :focus value
+		color: inherit!important;
+	}
 
-    input {
-        // we are enforcing this color so it should overwrite the :focus value
-        border-color: inherit!important;
-        box-shadow: inherit!important;
-    }
+	input {
+		// we are enforcing this color so it should overwrite the :focus value
+		border-color: inherit!important;
+		box-shadow: inherit!important;
+	}
 }
-
 /*
 Date Pickers
 */
-.u-TF-item--datepicker, .datepicker {
-    cursor: pointer;
+.datepicker,
+.u-TF-item--datepicker {
+	cursor: pointer;
 }
-
 /*
 Inputs
 */
 .input-field {
-    margin-top: 1.5rem;
+	margin-top: 1.5rem;
 
 	label {
-		left:0;
+		left: 0;
 
 		&:not(.label-icon).active {
-    		transform: translateY(-190%);
+			transform: translateY(-190%);
 		}
 	}
 }
@@ -45,63 +45,61 @@ Inputs
 }
 
 .item-fade-in img {
-    @extend .fade-in;
+	@extend .fade-in;
 }
 
-fieldset
-, fieldset.textarea {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    display: block;
+fieldset,
+fieldset.textarea {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	display: block;
 }
 
-fieldset.checkbox_group
-, fieldset.radio_group {
-	margin-bottom: 20px
+fieldset.checkbox_group,
+fieldset.radio_group {
+	margin-bottom: 20px;
 }
 
 :focus {
-	outline:none;
+	outline: none;
 }
-
 /*
 Autocomplete
 */
 div.ac_results {
-    border: none;
-    overflow: visible;
+	border: none;
+	overflow: visible;
 
 	ul {
 		@extend .autocomplete-content;
 		@extend .dropdown-content;
 
-        li {
-            font-size: 16px;
-            color: $primary-color;
-            display: block;
-            line-height: 22px;
-            padding: 14px 16px;
+		li {
+			font-size: 16px;
+			color: $primary-color;
+			display: block;
+			line-height: 22px;
+			padding: 14px 16px;
 
-            &.ac_odd {
-                background-color: initial;
-            }
+			&.ac_odd {
+				background-color: initial;
+			}
 
-            &.ac_over {
-                background-color: #eee;
-            }
+			&.ac_over {
+				background-color: #eee;
+			}
 
-            strong {
-                font-weight: 500;
-                color: #444;
-            }
-        }
+			strong {
+				font-weight: 500;
+				color: #444;
+			}
+		}
 	}
 }
-
 /* Popup LOV */
 .ma-popuplov-modal {
-    .collection {
+	.collection {
 		br {
 			@include hide();
 		}
@@ -113,98 +111,123 @@ div.ac_results {
 }
 
 .ma-popuplov {
-    fieldset {
-        display: block;
-    }
+	fieldset {
+		display: block;
+	}
 
-    .lov input {
-        border-bottom: 1px solid $input-border-color;
-    }
+	.lov input {
+		border-bottom: 1px solid $input-border-color;
+	}
 
-    label {
-        transform: translateY(-190%);
-        font-size: 0.8rem;
-    }
+	label {
+		transform: translateY(-190%);
+		font-size: 0.8rem;
+	}
 
-    .prefix ~ fieldset {
-        margin-left: 3rem;
-    }
+	.prefix ~ fieldset {
+		margin-left: 3rem;
+	}
 
-    .ma-chevron-up:before {
-        @include apex5-font();
-        content: "\e012";
-    }
+	.ma-chevron-up:before {
+		@include apex5-font();
+		content: "\e012";
+	}
 }
-
 /* Validation */
 span.ma-error-message {
-    color: $error-color;
-    font-size: 0.8rem;
-    position: absolute;
-    top: 0;
+	color: $error-color;
+	font-size: 0.8rem;
+	position: absolute;
+	top: 0;
 }
 
 .input-field {
-    br {
-        display: none;
-    }
+	br {
+		display: none;
+	}
 
-    span.ma-error-message {
-        top: 3.5rem;
-    }
+	span.ma-error-message {
+		top: 3.5rem;
+	}
 }
 
 .input-field .prefix ~ label {
-    width: auto;
+	width: auto;
 }
-
 /* Display Only */
 .input-field .prefix ~ .display_only {
-   margin-left: 3rem;
+	margin-left: 3rem;
 }
-
 /* No Label */
 .item-no-label > label {
 	visibility: hidden!important;
 }
-
 /* Switches */
 .switch label {
-    position: relative;
+	position: relative;
 }
 
 .input-field .switch + label {
-    font-size: 0.8rem;
-    transform: translateY(-190%);
+	font-size: 0.8rem;
+	transform: translateY(-190%);
 }
-
 /* Ranges */
 .input-field .range-field + label {
-    font-size: 0.8rem;
-    transform: translateY(-190%);
+	font-size: 0.8rem;
+	transform: translateY(-190%);
 }
 
 input[type=range] {
-    border: none;
+	border: none;
 }
-
-
 /* Text Alignment */
 .ma-field-container {
-    &.left-align, &.center-align, &.right-align {
-        input:not(.select-dropdown), textarea {
-            text-align:inherit;
-        }
-    }
+	&.center-align,
+	&.left-align,
+	&.right-align {
+		input:not(.select-dropdown),
+		textarea {
+			text-align: inherit;
+		}
+	}
 }
-
 /* Fieldset Labels */
 .label-block {
-    display: block;
+	display: block;
 }
-
 // Textarea
 .character-counter {
-    float: right;
-    font-size: 12px;
+	float: right;
+	font-size: 12px;
+}
+// Shuttle
+fieldset.shuttle {
+	width: 100%;
+}
+
+fieldset.shuttle table.shuttle {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+fieldset.shuttle td {
+	vertical-align: top;
+}
+
+fieldset.shuttle .shuttleControl,
+fieldset.shuttle .shuttleSort2 {
+	width: 1%;
+}
+
+fieldset.shuttle .shuttleSelect1,
+fieldset.shuttle .shuttleSelect2 {
+	width: 49%;
+}
+
+fieldset.shuttle select.shuttle_left,
+fieldset.shuttle select.shuttle_right {
+	width: 100%;
+	min-height: 14.0rem;
+	margin: 0.4rem 0;
+	display: block;
 }
