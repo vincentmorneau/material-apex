@@ -30,6 +30,11 @@ input.u-vh {
 // Main Container Handler
 .main-container .ma-main-container {
 	@extend .container;
+	margin-top: 1rem;
+}
+
+.t-Dialog-bodyWrapperOut {
+	margin-top: 1rem;
 }
 
 // Fix for menu icons
@@ -125,7 +130,7 @@ body .ui-dialog.ui-widget .ui-dialog-content.ui-widget-content.a-Notification-de
 }
 
 // Apply flex to regions
-.ma-region.section, .ma-region.card .card-content, .ma-region-header, .ma-region-buttons {
+.ma-region-standard, .ma-region-card .card-content, .ma-region-header, .ma-region-buttons {
 	@include ma-flex();
 }
 

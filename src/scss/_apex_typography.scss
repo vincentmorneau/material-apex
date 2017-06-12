@@ -45,6 +45,10 @@
 	@include hide();
 }
 
+blockquote.ma-region > .ma-region-header .ma-region-title {
+	font-weight: 300;
+}
+
 // Nowrap
 .text-nowrap {
 	white-space: nowrap;

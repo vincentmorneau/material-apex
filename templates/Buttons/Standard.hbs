@@ -1,106 +1,106 @@
 {{#template}}
-<button type="button" onclick="#JAVASCRIPT#" id="#BUTTON_ID#" class="#BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES#>
-    <i class="material-icons">#ICON_CSS_CLASSES#</i>
-    <span class="ma-button-label">#LABEL#</span>
+<button type="button" onclick="#JAVASCRIPT#" id="#BUTTON_ID#" class="ma-button #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES#>
+	<span class="ma-button-label">#LABEL#</span>
+	<i class="material-icons">#ICON_CSS_CLASSES#</i>
 </button>
 {{/template}}
 
 {{#hot_template}}
-<a href="#LINK#" id="#BUTTON_ID#" class="#BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES#>
-    <i class="material-icons">#ICON_CSS_CLASSES#</i>
-    <span class="ma-button-label">#LABEL#</span>
+<a href="#LINK#" id="#BUTTON_ID#" class="ma-button #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES#>
+	<span class="ma-button-label">#LABEL#</span>
+	<i class="material-icons">#ICON_CSS_CLASSES#</i>
 </a>
 {{/hot_template}}
 
 {{#template_option_groups}}
 [
-    {
-        "name": "ICON_FLOAT",
-        "display_name": "Icon Float",
-        "display_sequence": 1,
-        "help_text": "Only applies if your button has an icon",
-        "null_text": "",
-        "is_advanced": "Y",
-        "template_options": [
-            {
-                "name": "ICON-FLOAT-LEFT",
-                "display_name": "Left",
-                "display_sequence": 1,
-                "css_classes": "icon-float-left",
-                "help_text": "Only applies if the button has an icon",
-                "is_advanced": ""
-            },
+	{
+		"name": "ICON_FLOAT",
+		"display_name": "Icon Float",
+		"display_sequence": 1,
+		"help_text": "Only applies if your button has an icon",
+		"null_text": "",
+		"is_advanced": "Y",
+		"template_options": [
+			{
+				"name": "ICON-FLOAT-LEFT",
+				"display_name": "Left",
+				"display_sequence": 1,
+				"css_classes": "icon-float-left",
+				"help_text": "Only applies if the button has an icon",
+				"is_advanced": ""
+			},
 
-            {
-                "name": "ICON-FLOAT-RIGHT",
-                "display_name": "Right",
-                "display_sequence": 2,
-                "css_classes": "icon-float-right",
-                "help_text": "Only applies if the button has an icon.",
-                "is_advanced": ""
-            }
-        ]
-    },
-    {
-        "name": "SIZE",
-        "display_name": "Size",
-        "display_sequence": 2,
-        "help_text": "",
-        "null_text": "Default",
-        "is_advanced": "N",
-        "template_options": [
-            {
-                "name": "LARGE",
-                "display_name": "Large",
-                "display_sequence": 1,
-                "css_classes": "btn-large",
-                "help_text": "",
-                "is_advanced": ""
-            }
-        ]
-    },
-    {
-        "name": "TYPE",
-        "display_name": "Type",
-        "display_sequence": 1,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "N",
-        "template_options": [
-            {
-                "name": "FLAT",
-                "display_name": "Flat",
-                "display_sequence": 3,
-                "css_classes": "btn-flat",
-                "help_text": "",
-                "is_advanced": ""
-            },
+			{
+				"name": "ICON-FLOAT-RIGHT",
+				"display_name": "Right",
+				"display_sequence": 2,
+				"css_classes": "icon-float-right",
+				"help_text": "Only applies if the button has an icon.",
+				"is_advanced": ""
+			}
+		]
+	},
+	{
+		"name": "SIZE",
+		"display_name": "Size",
+		"display_sequence": 2,
+		"help_text": "",
+		"null_text": "Default",
+		"is_advanced": "N",
+		"template_options": [
+			{
+				"name": "LARGE",
+				"display_name": "Large",
+				"display_sequence": 1,
+				"css_classes": "btn-large",
+				"help_text": "",
+				"is_advanced": ""
+			}
+		]
+	},
+	{
+		"name": "TYPE",
+		"display_name": "Type",
+		"display_sequence": 1,
+		"help_text": "",
+		"null_text": "",
+		"is_advanced": "N",
+		"template_options": [
+			{
+				"name": "FLAT",
+				"display_name": "Flat",
+				"display_sequence": 3,
+				"css_classes": "btn-flat",
+				"help_text": "",
+				"is_advanced": ""
+			},
 
-            {
-                "name": "FLOATING",
-                "display_name": "Floating",
-                "display_sequence": 2,
-                "css_classes": "btn-floating",
-                "help_text": "",
-                "is_advanced": ""
-            },
+			{
+				"name": "FLOATING",
+				"display_name": "Floating",
+				"display_sequence": 2,
+				"css_classes": "btn-floating",
+				"help_text": "",
+				"is_advanced": ""
+			},
 
-            {
-                "name": "RAISED",
-                "display_name": "Raised",
-                "display_sequence": 1,
-                "css_classes": "btn",
-                "help_text": "",
-                "is_advanced": ""
-            }
-        ]
-    }
+			{
+				"name": "RAISED",
+				"display_name": "Raised",
+				"display_sequence": 1,
+				"css_classes": "btn",
+				"help_text": "",
+				"is_advanced": ""
+			}
+		]
+	}
 ]
 {{/template_option_groups}}
 
 {{#template_options}}
 [
-    {
+	{
 		"name": "BUTTON_BLOCK",
 		"display_name": "Full Column Width",
 		"display_sequence": 1,
@@ -108,11 +108,11 @@
 		"help_text": "This makes the button to be 100% of the width of it's container."
 	},
 	{
-        "name": "INLINE_BUTTON",
-        "display_name": "Inline (Next to an item)",
-        "display_sequence": 2,
-        "css_classes": "ma-btn-inline",
-        "help_text": ""
-    }
+		"name": "INLINE_BUTTON",
+		"display_name": "Inline (Next to an item)",
+		"display_sequence": 2,
+		"css_classes": "ma-btn-inline",
+		"help_text": ""
+	}
 ]
 {{/template_options}}

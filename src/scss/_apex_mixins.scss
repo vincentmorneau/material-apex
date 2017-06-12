@@ -170,5 +170,6 @@
 
 	& > .ma-flex-content {
 		width: 100%;
+		flex-shrink: 99999;
 	}
 }

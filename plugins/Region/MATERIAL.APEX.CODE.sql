@@ -11,6 +11,7 @@ function render (
 
 	/* t_region Attributes */
 	l_language_type plugin_attr := p_region.attribute_01;
+	l_source_code plugin_attr := p_region.attribute_02;
 begin
 	/* debug information will be included */
 	if apex_application.g_debug then
@@ -21,8 +22,8 @@ begin
 		);
 	end if;
 
-	l_plugin_html := '<pre><code class="' || l_language_type || '">'
-		|| apex_escape.html(p_region.source)
+	l_plugin_html := '<pre class="card"><code class="' || l_language_type || '">'
+		|| apex_escape.html(l_source_code)
 		|| '</code></pre>';
 
 	sys.htp.p(l_plugin_html);

@@ -1,3 +1,7 @@
+var windowResize = function () {
+	$(document).trigger("apexwindowresized");
+};
+
 /**
  * @namespace materialAPEX
  **/
@@ -251,11 +255,9 @@ materialAPEX.materialize = {
 		});
 
 		/* Tabs */
-		$('ul.tabs').tabs(
-			/*{
-			            swipeable: true
-			        }*/
-		);
+		$('ul.tabs').tabs({
+			onShow: windowResize
+		});
 
 		/* Carousels */
 		$('.carousel.carousel-slider').carousel({

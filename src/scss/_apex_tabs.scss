@@ -1,35 +1,35 @@
 // Fix for Regions under Tabs
 ul.tabs ~ div.row, .hide-tab-scrollbar ~ div.row {
-    margin-bottom: 0;
+	margin-bottom: 0;
 
-    .section {
-        padding-top:0;
-    }
+	.ma-region {
+		padding-top:0;
+	}
 }
 
-// White sections
-.section.white .ma-region-title {
-    padding: 0 20px;
-}
+// White ma-region
+// .ma-region.white .ma-region-title {
+// 	padding: 0 20px;
+// }
 
 @media #{$medium-and-up} {
-    .tabs .section.white .a-IRR-container {
-        box-shadow: none;
-    }
+	.tabs .ma-region.white .a-IRR-container {
+		box-shadow: none;
+	}
 
-    .tabs .t-fht-thead {
-        width:inherit!important;
-    }
+	.tabs .t-fht-thead {
+		width:inherit!important;
+	}
 }
 
 @media #{$small-and-down} {
-    .section.white {
-        .a-IRR-container {
-            padding: 20px;
-        }
+	.ma-region.white {
+		.a-IRR-container {
+			padding: 20px;
+		}
 
-        table.table-responsive tr {
-            box-shadow: none;
-        }
-    }
+		table.table-responsive tr {
+			box-shadow: none;
+		}
+	}
 }

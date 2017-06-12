@@ -7,6 +7,31 @@
 	@extend .right;
 }
 
+button, a {
+	&.icon-float-right, &.icon-float-left {
+		i {
+			margin-right: 0;
+			margin-left: 0;
+		}
+	}
+
+	&.icon-float-left .ma-button-label ~ i {
+		margin-right: 15px;
+	}
+
+	&.icon-float-right .ma-button-label ~ i {
+		margin-left: 15px;
+	}
+
+	&.no-label {
+		padding: 0 1rem;
+	}
+}
+
+.ma-button.btn-floating .ma-button-label {
+	@include hide();
+}
+
 // Fixed Action Button
 .fab-relative {
 	position: relative;
