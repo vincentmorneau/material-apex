@@ -1,5 +1,9 @@
 ## Changelog
 
+#### v0.11.1
+- Hot fix for the pulse button [(view)](http://www.materialapex.com/pls/apex/f?p=12192:21)
+- Simplifies the release process
+
 #### v0.11.0
 - Breaking changes
 	- Cards are now merged into one template. Please review yours.
