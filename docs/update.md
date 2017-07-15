@@ -1,4 +1,4 @@
-# Theme Import
+# Update
 
 1. Import `empty-app.sql` from the [latest release](https://github.com/vincentmorneau/material-apex/releases/latest) in your workspace
 2. Go to your existing application
@@ -8,21 +8,14 @@
 
 ---
 
-Make sure the following components are up to date:
-
-#### Application Substitution Strings
-Name | Value
---- | ---
-PATH | `#THEME_IMAGES#`
-
-#### Page 0
+### Make sure the following components are up to date:
+#### Page 0 (optional)
 ##### Regions
 Name | Type | Position | Template | Source
 --- | --- | --- | --- | ---
 {search bar} | Static Content | Search Bar | *None* |
-{sidenav header} | Classic Report | Item Container | *None* | **See Below (1)*
+{sidenav header} | Classic Report | Item Container | *None* | *See Below*
 
-*Source (1) Example:
 ```sql
 select '/img/sample-1.jpg' background_img
     , '/img/profile-picture.jpeg' profile_img

@@ -1,7 +1,7 @@
 ## Changelog
 
 #### v0.11.1
-- Hot fix for the pulse button [(view)](http://www.materialapex.com/pls/apex/f?p=12192:21)
+- Hot fix for the pulse button [(view)](https://apex.oracle.com/pls/apex/f?p=12192:21)
 - Simplifies the release process
 
 #### v0.11.0
@@ -11,9 +11,9 @@
 	- Most button positions have changed. Please review yours.
 	- Previously we had 2 region position for the footer (top and bottom). Now only the top is customizable and it's been renamed to "Footer".
 - New features
-	- **Pulse effect for buttons** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:21)
-	- **Feature Discovery** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:38)
-	- Badge List plugin is now supported [(view)](http://www.materialapex.com/pls/apex/f?p=12192:200)
+	- **Pulse effect for buttons** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:21)
+	- **Feature Discovery** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:38)
+	- Badge List plugin is now supported [(view)](https://apex.oracle.com/pls/apex/f?p=12192:200)
 	- Full width buttons
 - Enhancements
 	- **Modals now have automatic height**
@@ -29,21 +29,21 @@
 #### v0.10.0
 - New features
 	- APEX 5.1 compatible
-	- Interactive Grids [(view)](http://www.materialapex.com/pls/apex/f?p=12192:80)
-	- Data Loading Wizard [(view)](http://www.materialapex.com/pls/apex/f?p=12192:90)
+	- Interactive Grids [(view)](https://apex.oracle.com/pls/apex/f?p=12192:80)
+	- Data Loading Wizard [(view)](https://apex.oracle.com/pls/apex/f?p=12192:90)
 - Enhancements
 	- Date Pickers
-	- Interactive Report [(view)](http://www.materialapex.com/pls/apex/f?p=12192:62)
+	- Interactive Report [(view)](https://apex.oracle.com/pls/apex/f?p=12192:62)
 - & more bug fixes
 
 #### v0.9.6
 - New features
-	- **Timeline** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:47)
-	- **Wizard** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:72)
-	- **Calendar** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:41)
-	- **Date Pickers** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:25)
-	- **Login Page** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:101)
-	- **Error Page** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:102)
+	- **Timeline** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:47)
+	- **Wizard** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:72)
+	- **Calendar** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:41)
+	- **Date Pickers** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
+	- **Login Page** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:101)
+	- **Error Page** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:102)
 - Enhancements
 	- **Now support for Font-Awesome (as well as Material Design Icons)** [(view)](https://github.com/vincentmorneau/material-apex/issues/173)
 	- **Page 0 no longer requires the hamburger menu, it is now computed** [(view)](https://github.com/vincentmorneau/material-apex/issues/161)
@@ -72,9 +72,9 @@
 
 #### v0.9.5
 - New features
-	- **Switch Component** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:25)
-	- **Range Component** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:25)
-	- **Loading Indicator Dynamic Action** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:28)
+	- **Switch Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
+	- **Range Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
+	- **Loading Indicator Dynamic Action** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:28)
 	- **Over 80 New Theme Roller Attributes**
 - Enhancements
 	- Responsive Text Template Options for Display Only Items
@@ -85,8 +85,8 @@
 
 #### v0.9.4
 - New features
-	- **Horizontal Cards** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:22)
-	- **Carousel Component** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:45)
+	- **Horizontal Cards** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:22)
+	- **Carousel Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:45)
 	- Fixed Action Button can now display text on hover
 - Enhancements
 	- **Completely new dynamic documentation**
@@ -124,8 +124,8 @@
 
 #### v0.9.2
 - New features:
-	- Global Search in navigation bar [(view)](http://www.materialapex.com/pls/apex/f?p=12192:1)
-	- Support for Popup LOV [(view)](http://www.materialapex.com/pls/apex/f?p=12192:25)
+	- Global Search in navigation bar [(view)](https://apex.oracle.com/pls/apex/f?p=12192:1)
+	- Support for Popup LOV [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
 	- New download option: Empty application. Contains the theme and page 0.
 - Bug fixes:
 	- Tabular form select fix
@@ -146,11 +146,11 @@
 	- Notification box position doesn't overflow on Scrollspy anymore
 
 #### v0.9.0
-- **NEW:** Transitions [(view)](http://www.materialapex.com/pls/apex/f?p=12192:43)
-- **NEW:** Scrollfire [(view)](http://www.materialapex.com/pls/apex/f?p=12192:44)
-- **NEW:** Breadcrumbs [(view)](http://www.materialapex.com/pls/apex/f?p=12192:42)
-- **NEW:** Multi Select [(view)](http://www.materialapex.com/pls/apex/f?p=12192:25)
-- **NEW:** Fixed Action Buttons [(view)](http://www.materialapex.com/pls/apex/f?p=12192:21)
+- **NEW:** Transitions [(view)](https://apex.oracle.com/pls/apex/f?p=12192:43)
+- **NEW:** Scrollfire [(view)](https://apex.oracle.com/pls/apex/f?p=12192:44)
+- **NEW:** Breadcrumbs [(view)](https://apex.oracle.com/pls/apex/f?p=12192:42)
+- **NEW:** Multi Select [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
+- **NEW:** Fixed Action Buttons [(view)](https://apex.oracle.com/pls/apex/f?p=12192:21)
 	- Horizontal FAB
 	- Click to toggle FAB
 	- Within it's container FAB
@@ -179,7 +179,7 @@
 
 #### v0.8.2
 - **Removed Bower dependency. Using npm now.**
-- **Added chips.** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:18)
+- **Added chips.** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:18)
 - **RTL Support** (Right to Left) with a new Theme Style.
 - **Added support for multi level menus in navigation bar.**
 - Now possible to have 2 FAB (fixed action button) on the same page.
@@ -206,7 +206,7 @@
 
 #### v0.8.0
 - **Theme Roller Support**, primary and secondary colors are now choosable from the theme roller!
-- **New easier grid layout system**  [(view)](http://www.materialapex.com/pls/apex/f?p=12192:11)
+- **New easier grid layout system**  [(view)](https://apex.oracle.com/pls/apex/f?p=12192:11)
 - **New Date Picker**. We let go of the "pickadate.js" plugin for better compabilitiby.
 - The hamburger menu is now selectable as a component on page 0. Can be controled for conditions or authorization schemes.
 - Now uses Official Google Icon web font
@@ -223,27 +223,27 @@
 - More...
 
 #### v0.7.5
-- **New Interactive Report Support** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:62)
-- **Enhanced Tabular Form Support** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:61)
-- **Reports Responsive Styles**: See Style 2 [(view)](http://www.materialapex.com/pls/apex/f?p=12192:16)
+- **New Interactive Report Support** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:62)
+- **Enhanced Tabular Form Support** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:61)
+- **Reports Responsive Styles**: See Style 2 [(view)](https://apex.oracle.com/pls/apex/f?p=12192:16)
 - Fixed issues with checkboxes and radio buttons
 - Better HTML markup for reports
 
 #### v0.7.0
-- **New Modal Style: Bottom Sheet** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:34)
+- **New Modal Style: Bottom Sheet** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:34)
 	- Modals can now be regions as well as pages
-- **New Media components in the CSS section** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:13)
+- **New Media components in the CSS section** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:13)
 	- Responsive Images
 	- Circular Images
 	- Responsive Video (iframes and HTML5 videos)
-- **New Template Options Helpers across every template** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:12)
+- **New Template Options Helpers across every template** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:12)
 	- Automatic vertical align (using flexbox)
 	- Text alignment
 	- Floats
 	- Responsive content hiding
 	- Truncating text
-- **New Javascript Tabs for switching content** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:39)
-- **New Pagination Component** [(view)](http://www.materialapex.com/pls/apex/f?p=12192:29)
+- **New Javascript Tabs for switching content** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:39)
+- **New Pagination Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:29)
 - Important Javascript performance enhancements
 - Dropdown Fixes
 - Fixed an issue where Textarea wasn't loaded properly
