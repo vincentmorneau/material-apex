@@ -202,8 +202,8 @@ materialAPEX.initial = {
 		$(".s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10,.s11").removeClass("s12");
 
 		// Deletes empty html tags
-		$('.card-content, span.badge, i.material-icons, .ma-button-label').removeEmpty();
-		$('.card-action, .ma-region-buttons').removeEmptySpaces();
+		$('.card-content, .card-action, span.badge, i.material-icons, .ma-button-label').removeEmpty();
+		$('.ma-region-buttons').removeEmptySpaces();
 
 		// Icon buttons
 		$('.ma-button:not(:has(.ma-button-label))').addClass('no-label');
