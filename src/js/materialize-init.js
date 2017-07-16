@@ -216,13 +216,7 @@ materialAPEX.materialize = {
 
 		/* SideNav */
 		if ($('.button-collapse').length > 0) {
-			// var edgeDirection = $("link[href*='app.rtl']").length > 0 ? 'right' : 'left';
-
-			$('.button-collapse').sideNav(
-				/*{
-				                edge: edgeDirection
-				            }*/
-			);
+			$('.button-collapse').sideNav();
 		}
 
 		/* Scrollspy & Pushpin */

@@ -166,10 +166,6 @@ materialAPEX.ir = {
 		$(".a-IRR-button--actions").html('<i class="material-icons">more_vert</i>');
 		$(".a-IRR-button--colSearch").html('<i class="material-icons">search</i>');
 
-		// $("[id*='_chart_type'] input[type='radio'], [id*='_default_type'] input[type='radio']").each(function() {
-		// 	$(this).after("<label for='" + $(this).attr("id") + "'></label>").parent().removeAttr("nowrap");
-		// });
-
 		$(".a-IRR-controlsCheckbox").addClass("filled-in");
 
 		materialAPEX.debug.timeEnd("materialAPEX.ir.init");

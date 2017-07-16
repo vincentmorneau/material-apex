@@ -3,6 +3,7 @@ $(document).ready(function() {
     materialAPEX.datepicker.init();
     materialAPEX.select.init();
     materialAPEX.ir.init();
+    materialAPEX.ig.init();
     materialAPEX.observe.toolbar();
     materialAPEX.observe.select();
     materialAPEX.observe.irDialog();
