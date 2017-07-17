@@ -1,14 +1,14 @@
 {{#template}}
 <button type="button" onclick="#JAVASCRIPT#" id="#BUTTON_ID#" class="ma-button #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES#>
 	<span class="ma-button-label">#LABEL#</span>
-	<i class="material-icons">#ICON_CSS_CLASSES#</i>
+	<i class="material-icons" aria-hidden="true">#ICON_CSS_CLASSES#</i>
 </button>
 {{/template}}
 
 {{#hot_template}}
 <a href="#LINK#" id="#BUTTON_ID#" class="ma-button #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES#>
 	<span class="ma-button-label">#LABEL#</span>
-	<i class="material-icons">#ICON_CSS_CLASSES#</i>
+	<i class="material-icons" aria-hidden="true">#ICON_CSS_CLASSES#</i>
 </a>
 {{/hot_template}}
 
@@ -42,24 +42,6 @@
 		]
 	},
 	{
-		"name": "SIZE",
-		"display_name": "Size",
-		"display_sequence": 2,
-		"help_text": "",
-		"null_text": "Default",
-		"is_advanced": "N",
-		"template_options": [
-			{
-				"name": "LARGE",
-				"display_name": "Large",
-				"display_sequence": 1,
-				"css_classes": "btn-large",
-				"help_text": "",
-				"is_advanced": ""
-			}
-		]
-	},
-	{
 		"name": "TYPE",
 		"display_name": "Type",
 		"display_sequence": 1,
@@ -72,15 +54,6 @@
 				"display_name": "Flat",
 				"display_sequence": 3,
 				"css_classes": "btn-flat",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "FLOATING",
-				"display_name": "Floating",
-				"display_sequence": 2,
-				"css_classes": "btn-floating",
 				"help_text": "",
 				"is_advanced": ""
 			},
@@ -107,6 +80,7 @@
 		"css_classes": "ma-btn-block",
 		"help_text": "This makes the button to be 100% of the width of it's container."
 	},
+
 	{
 		"name": "INLINE_BUTTON",
 		"display_name": "Inline (Next to an item)",

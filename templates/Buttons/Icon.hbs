@@ -1,0 +1,62 @@
+{{#template}}
+<button type="button" onclick="#JAVASCRIPT#" id="#BUTTON_ID#" class="ma-button ma-button-icon #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES# title="#LABEL#" aria-label="#LABEL#">
+	<i class="material-icons">#ICON_CSS_CLASSES#</i>
+</button>
+{{/template}}
+
+{{#hot_template}}
+<a href="#LINK#" id="#BUTTON_ID#" class="ma-button ma-button-icon ma-button-hot #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES#>
+	<i class="material-icons">#ICON_CSS_CLASSES#</i>
+</a>
+{{/hot_template}}
+
+{{#template_option_groups}}
+[
+	{
+		"name": "TYPE",
+		"display_name": "Type",
+		"display_sequence": 1,
+		"help_text": "",
+		"null_text": "",
+		"is_advanced": "N",
+		"template_options": [
+			{
+				"name": "FLAT",
+				"display_name": "Flat",
+				"display_sequence": 3,
+				"css_classes": "btn-flat",
+				"help_text": "",
+				"is_advanced": ""
+			},
+
+			{
+				"name": "RAISED",
+				"display_name": "Raised",
+				"display_sequence": 1,
+				"css_classes": "btn",
+				"help_text": "",
+				"is_advanced": ""
+			}
+		]
+	}
+]
+{{/template_option_groups}}
+
+{{#template_options}}
+[
+	{
+		"name": "BUTTON_BLOCK",
+		"display_name": "Full Column Width",
+		"display_sequence": 1,
+		"css_classes": "ma-btn-block",
+		"help_text": "This makes the button to be 100% of the width of it's container."
+	},
+	{
+		"name": "INLINE_BUTTON",
+		"display_name": "Inline (Next to an item)",
+		"display_sequence": 2,
+		"css_classes": "ma-btn-inline",
+		"help_text": ""
+	}
+]
+{{/template_options}}
