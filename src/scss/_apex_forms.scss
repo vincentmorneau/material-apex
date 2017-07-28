@@ -141,13 +141,14 @@ span.ma-error-message {
 	top: 0;
 }
 
-.input-field {
-	// br {
-	// 	display: none;
-	// }
-
+.ma-field-container {
 	span.ma-error-message {
 		top: 3.5rem;
+		left: 0;
+	}
+
+	&.ma-select-container span.ma-error-message {
+		top: 5rem;
 	}
 }
 
@@ -182,6 +183,8 @@ input[type=range] {
 }
 /* Text Alignment */
 .ma-field-container {
+	position:relative;
+
 	&.center-align,
 	&.left-align,
 	&.right-align {

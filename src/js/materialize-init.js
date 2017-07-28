@@ -123,6 +123,7 @@ materialAPEX.select = {
 	init: function() {
 		materialAPEX.debug.time("materialAPEX.select.init");
 		$('form select').not('.disabled, .shuttle_left, .shuttle_right').material_select();
+		$('.select-wrapper').closest(".ma-field-container").addClass("ma-select-container");
 		materialAPEX.debug.timeEnd("materialAPEX.select.init");
 	},
 

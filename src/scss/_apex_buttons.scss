@@ -11,10 +11,6 @@
 	padding: 0 1rem;
 }
 
-.ma-button.btn-floating .ma-button-label {
-	@include hide();
-}
-
 // Fixed Action Button
 .fab-relative {
 	position: relative;
