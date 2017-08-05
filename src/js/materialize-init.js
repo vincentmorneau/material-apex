@@ -1,7 +1,3 @@
-var windowResize = function () {
-	$(document).trigger("apexwindowresized");
-};
-
 /**
  * @namespace materialAPEX
  **/
@@ -250,8 +246,37 @@ materialAPEX.materialize = {
 		});
 
 		/* Tabs */
-		$('ul.tabs').tabs({
-			onShow: windowResize
+		$('ul.tabs').each(function(){
+			var el = this;
+			var tabContainer = $(el).closest('.ma-region-tabs');
+			var tabContainerID = tabContainer.attr('id');
+
+			$(el).tabs({
+				onShow: function (tab) {
+					$(document).trigger("apexwindowresized");
+
+					if (tabContainer.hasClass("js-useLocalStorage")) {
+						var maSessionStorage = apex.storage.getScopedSessionStorage({
+							usePageId: true,
+							useAppId: true,
+							regionId: tabContainerID
+						});
+
+						var tabID = tab.attr('id');
+						maSessionStorage.setItem("activeTab", tabID);
+					}
+				}
+			});
+
+			if (tabContainer.hasClass("js-useLocalStorage")) {
+				var maSessionStorage = apex.storage.getScopedSessionStorage({
+					usePageId: true,
+					useAppId: true,
+					regionId: tabContainerID
+				});
+
+				$(el).tabs('select_tab', maSessionStorage.getItem("activeTab"));
+			}
 		});
 
 		/* Carousels */

@@ -1,5 +1,5 @@
 {{#template}}
-<div id="#REGION_STATIC_ID#" class="ma-region #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>#SUB_REGION_HEADERS##SUB_REGIONS#</div>
+<div id="#REGION_STATIC_ID#" class="ma-region ma-region-tabs #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>#SUB_REGION_HEADERS##SUB_REGIONS#</div>
 {{/template}}
 
 {{#sub_plug_header_template}}
@@ -11,3 +11,16 @@
 {{#sub_plug_template}}
 <div id="tab-#SUB_REGION_ID#">#SUB_REGION#</div>
 {{/sub_plug_template}}
+
+{{#template_options}}
+[
+	{
+		"name": "REMEMBER_ACTIVE_TAB",
+		"display_name": "Remember Active Tab",
+		"display_sequence": 1,
+		"css_classes": "js-useLocalStorage",
+		"help_text": "",
+		"is_advanced": ""
+	}
+]
+{{/template_options}}
