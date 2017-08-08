@@ -7,6 +7,7 @@ $(document).ready(function() {
     materialAPEX.observe.toolbar();
     materialAPEX.observe.select();
     materialAPEX.observe.irDialog();
+    materialAPEX.observe.irHeader();
     Materialize.updateTextFields();
 
     // triggers a resize

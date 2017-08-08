@@ -53,6 +53,7 @@ materialAPEX.observe = {
 	},
 
 	irDialog: function() {
+		if (!classExists("a-IRR")) return;
 		materialAPEX.debug.time("materialAPEX.observe.irDialog");
 
 		var observerConfig = {
@@ -68,6 +69,32 @@ materialAPEX.observe = {
 		});
 
 		materialAPEX.debug.timeEnd("materialAPEX.observe.irDialog");
+	},
+
+	irHeader: function() {
+		if (!classExists("a-IRR")) return;
+		materialAPEX.debug.time("materialAPEX.observe.irHeader");
+
+		var observerConfig = {
+			attributes: true
+		};
+
+		var observer = new MutationObserver(function(mutations) {
+			mutations.forEach(function(mutation) {
+				if (mutation.attributeName === 'class') {
+					$(document).trigger("apexwindowresized");
+					setTimeout(function() {
+						$(document).trigger("apexwindowresized");
+					}, 250);
+				}
+			});
+		});
+
+		$(".t-fht-thead").each(function() {
+			observer.observe(this, observerConfig);
+		});
+
+		materialAPEX.debug.timeEnd("materialAPEX.observe.irHeader");
 	}
 };
 
