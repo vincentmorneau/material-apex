@@ -1,6 +1,10 @@
 body .ui-dialog.ui-widget.utr {
     z-index: 1000!important;
 
+	.utr-container__body {
+		max-height: 70vh!important;
+	}
+
     // select
     &.a-LiveTemplateOptions {
         .a-Property-field--select {
