@@ -51,6 +51,10 @@ Material APEX Variables
             "common": true,
             "sequence": 4
         }, {
+            "name": "Carousel",
+            "common": false,
+            "sequence": 4.5
+        },
             "name": "Collapsible",
             "common": false,
             "sequence": 5
@@ -500,6 +504,27 @@ $card-bg-color: #fff !default;
 $card-link-color: #ffab40;
 $card-link-color-light: lighten($card-link-color, 20%) !default;
 
+// 4.5 Carousel
+// ==========================================================================
+
+/*
+{
+    "var"  : "@carousel-height",
+    "name" : "Carousel Height",
+    "type" : "number",
+    "units": "px",
+        "range": {
+        "min": 0,
+        "max": 1000,
+        "increment": 10
+    },
+    "group": "Carousel"
+}
+*/
+$carousel-height: 400px !default;
+$carousel-item-height: $carousel-height / 2 !default;
+$carousel-item-width: $carousel-item-height !default;
+
 
 /* 5. Collapsible
    ========================================================================== */
@@ -814,6 +839,8 @@ $track-height: 3px !default;
 $select-border: 1px solid #f2f2f2 !default;
 $select-background: rgba(255, 255, 255, 0.90) !default;
 $select-focus: 1px solid lighten($secondary-color, 47%) !default;
+$select-option-hover: rgba(0,0,0,.06) !default;
+$select-option-focus: rgba(0,0,0,.03) !default;
 $select-padding: 5px !default;
 $select-radius: 2px !default;
 $select-disabled-color: rgba(0,0,0,.3) !default;
@@ -1137,6 +1164,7 @@ $toast-color: #323232 !default;
 }
 */
 $toast-text-color: #fff !default;
+$toast-action-color: #eeff41;
 
 
 /* 20. Typography
@@ -1157,13 +1185,53 @@ $h6-fontsize: 1rem !default;
 
 /*
 {
+   "var"  : "@footer-font-size",
+   "name" : "Footer Font Size",
+   "type" : "number",
+   "units": "rem",
+       "range": {
+       "min": 0,
+       "max": 5,
+       "increment": 0.1
+   },
+   "group": "Footer"
+}
+*/
+$footer-font-size: 1.0rem !default;
+/*
+{
+"var" : "@footer-font-color",
+"name" : "Footer Font Color",
+"type" : "color",
+"group": "Footer"
+}
+*/
+$footer-font-color: #fff !default;
+/*
+{
 "var" : "@footer-bg-color",
 "name" : "Footer Background Color",
 "type" : "color",
 "group": "Footer"
 }
 */
-$footer-bg-color: $primary-color !default;
+$footer-bg-color: $primary-color !default;/*
+{
+"var" : "@footer-copyright-font-color",
+"name" : "Footer Copyright Font Color",
+"type" : "color",
+"group": "Footer"
+}
+*/
+$footer-copyright-font-color: rgba(255,255,255,.8) !default;/*
+{
+"var" : "@footer-copyright-bg-color",
+"name" : "Footer Copyright Background Color",
+"type" : "color",
+"group": "Footer"
+}
+*/
+$footer-copyright-bg-color: rgba(51,51,51,.08) !default;
 
 
 /* 22. Flow Text
