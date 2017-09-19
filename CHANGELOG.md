@@ -1,5 +1,8 @@
 ## Changelog
 
+#### v0.12.0
+-
+
 #### v0.11.1
 - Hot fix for the pulse button [(view)](https://apex.oracle.com/pls/apex/f?p=12192:21)
 - Simplifies the release process
