@@ -1,208 +1,227 @@
 .a-IG {
-    @include ma-card;
+	@include ma-card;
 
-    .a-IG-header {
-        padding: 8px;
-        z-index: 800!important;
-        background-color: $card-bg-color;
+	.a-IG-header {
+		padding: 8px;
+		z-index: 800!important;
+		background-color: $card-bg-color;
+		// toolbar group
+		.a-Toolbar-group {
+			margin-bottom: 0;
 
-        // toolbar group
-        .a-Toolbar-group {
-            margin-bottom: 0;
+			&.force-show {
+				@include showInlineBlock();
+			}
 
-            &.force-show {
-                @include showInlineBlock();
-            }
+			&.force-hide {
+				@include hide();
+			}
 
-            &.force-hide {
-                @include hide();
-            }
+			.a-Button {
+				@include btn-flat;
+				height: $input-height;
+				padding: 0 0.5rem;
+				line-height: 16px;
 
-            .a-Button {
-                @include btn-flat;
-                height: $input-height;
-                padding: 0 0.5rem;
-                line-height: 16px;
+				&[disabled] {
+					background-color: transparent!important;
+				}
 
-                &[disabled] {
-                    background-color: transparent!important;
-                }
+				.icon-menu-drop-down {
+					@include hide;
+				}
+			}
 
-                .icon-menu-drop-down {
-                    @include hide;
-                }
-            }
+			input.a-Toolbar-input {
+				&.a-Toolbar-inputText {
+					width: auto;
 
-            input.a-Toolbar-input {
-                &.a-Toolbar-inputText {
-                    width: auto;
+					&:focus {
+						outline: none;
+					}
+				}
+			}
+			// select fix
+			select.a-Toolbar-selectList {
+				@include hide();
+			}
 
-                    &:focus {
-                        outline: none;
-                    }
-                }
-            }
+			.a-Toolbar-inputText,
+			.select-wrapper input.select-dropdown {
+				margin: 0 0 8px;
+			}
 
-            // select fix
-            select.a-Toolbar-selectList {
-                @include hide();
-            }
+			div.a-Toolbar-selectList {
+				background-color: transparent;
+				overflow: visible;
+				height: inherit;
+				padding-right: 0;
+				background-image: none;
+				border: none;
+			}
+			// buttons
+			// [data-enter-action='search'] {
+			//     margin-left: 1rem;
+			// }
+			[data-action='search'] {
+				@include hide();
+			}
 
-            .select-wrapper input.select-dropdown, .a-Toolbar-inputText {
-                margin: 0 0 8px 0;
-            }
+			[data-action='edit'] {
+				label {
+					padding: 15px 12px 12px 36px !important;
+					font-size: 12px;
 
-            div.a-Toolbar-selectList {
-                background-color: transparent;
-                overflow: visible;
-                height: inherit;
-                padding-right: 0;
-                background-image: none;
-                border: none;
-            }
+					&:before {
+						margin-top: 14px;
+						margin-left: 8px;
+					}
+				}
+			}
+		}
+	}
+	// borders
+	.a-GV-cell,
+	.a-GV-controlBreakHeader,
+	.a-GV-header,
+	.a-GV-headerGroup {
+		border: none;
+		border-bottom: 1px solid #EAEAEA;
+	}
+	// row hover
+	.a-GV-bdy tbody tr.is-hover {
+		background-color: #eeeeee;
+	}
 
-            // buttons
-            // [data-enter-action='search'] {
-            //     margin-left: 1rem;
-            // }
+	.a-GV-columnItem {
+		input:not([type]),
+		input[type=date],
+		input[type=datetime-local],
+		input[type=datetime],
+		input[type=email],
+		input[type=number],
+		input[type=password],
+		input[type=search],
+		input[type=tel],
+		input[type=text],
+		input[type=time],
+		input[type=url],
+		textarea.materialize-textarea {
+			border-bottom: none;
+			height: auto;
+			width: auto;
+			font-size: inherit;
+			margin: 0;
 
-            [data-action='search'] {
-                @include hide();
-            }
+			&:focus:not([readonly]) {
+				border-bottom: none;
+				box-shadow: none;
+			}
+		}
 
-            [data-action='edit'] {
-                label {
-                    padding: 15px 12px 12px 36px!important;
-                    font-size: 12px;
+		fieldset.color_picker td {
+			vertical-align: middle;
 
-                    &:before {
-                        margin-top: 14px;
-                        margin-left: 8px;
-                    }
-                }
-            }
-        }
-    }
+			input.color_picker {
+				box-shadow: inset 3px 0 3px -1px $primary-color;
+				background-color: inherit;
+			}
+		}
+	}
+	// selected row
+	.a-GV-table tr.is-selected .a-GV-cell {
+		background-color: #f5f5f5;
+	}
 
-    // borders
-    .a-GV-cell, .a-GV-controlBreakHeader, .a-GV-header, .a-GV-headerGroup {
-        border: none;
-        border-bottom: 1px solid #EAEAEA;
-    }
+	.a-GV-cell.is-error:not(.is-active),
+	.a-GV-cell.is-error:not(.is-active):before {
+		color: $error-color;
+	}
 
-    // row hover
-    .a-GV-bdy tbody tr.is-hover {
-        background-color: #eeeeee;
-    }
+	.a-GV-row.is-inserted .a-GV-cell {
+		background-color: #e3f2fd;
+	}
 
-    .a-GV-columnItem {
-        input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
-            border-bottom: none;
-            height: auto;
-            width: auto;
-            font-size: inherit;
-            margin: 0;
+	.a-GV-cell .a-GV-columnItem input:not([type=radio]):not([type=checkbox]):focus,
+	.a-GV-cell .a-GV-columnItem select[size='1']:focus,
+	.a-GV-floatingItem.is-expanded,
+	.a-GV-floatingItem:not(.is-expanded),
+	.a-GV-pageButton:focus,
+	.a-GV-table .a-GV-cell.is-focused,
+	.a-GV-table .a-GV-controlBreakHeader.is-focused,
+	.a-GV-table .a-GV-header.is-focused,
+	.a-GV-table .a-GV-headerGroup.is-focused {
+		border-color: transparent;
+		box-shadow: 0 0 2px 1px $radio-empty-color inset;
+	}
 
-            &:focus:not([readonly]) {
-                border-bottom: none;
-                box-shadow: none;
-            }
-        }
+	.a-GV-table .a-GV-cell.a-GV-rowHeader.is-focused {
+		box-shadow: none;
+	}
 
-        fieldset.color_picker td {
-            vertical-align: middle;
+	.a-Button.a-Button--calendar {
+		float: right;
 
-            input.color_picker {
-                box-shadow: inset 3px 0px 3px -1px $primary-color;
-                background-color: inherit;
-            }
-        }
-    }
+		&:focus {
+			outline: none;
+			background-color: transparent;
+		}
+	}
 
-    // selected row
-    .a-GV-table tr.is-selected .a-GV-cell {
-        background-color: #f5f5f5;
-    }
-    .a-GV-cell.is-error:not(.is-active), .a-GV-cell.is-error:not(.is-active):before {
-        color: $error-color;
-    }
-    .a-GV-row.is-inserted .a-GV-cell {
-        background-color: #e3f2fd;
-    }
-    .a-GV-floatingItem:not(.is-expanded)
-    , .a-GV-pageButton:focus
-    , .a-GV-table .a-GV-cell.is-focused
-    , .a-GV-table .a-GV-controlBreakHeader.is-focused
-    , .a-GV-table .a-GV-header.is-focused
-    , .a-GV-table .a-GV-headerGroup.is-focused
-    , .a-GV-cell .a-GV-columnItem input:not([type=radio]):not([type=checkbox]):focus
-    , .a-GV-cell .a-GV-columnItem select[size='1']:focus
-    , .a-GV-floatingItem.is-expanded {
-        border-color: transparent;
-        box-shadow: 0px 0px 2px 1px $radio-empty-color inset;
-    }
+	.a-GV-rowSelector {
+		height: 22px;
+		border: none;
+		padding: 0;
+		box-shadow: none;
+		background-color: transparent;
+	}
 
-    .a-GV-table .a-GV-cell.a-GV-rowHeader.is-focused {
-        box-shadow: none;
-    }
+	.a-GV-rowSelector:hover,
+	.is-hover .a-GV-rowSelector {
+		border: none;
 
-    .a-Button.a-Button--calendar {
-        float: right;
+		&:before {
+			opacity: 0;
+		}
+	}
 
-        &:focus {
-            outline: none;
-            background-color: transparent;
-        }
-    }
+	.is-selected .a-GV-rowSelector:before {
+		opacity: 0;
+	}
+	// checkboxes
+	.a-GV-header [type="checkbox"].filled-in {
+		& + label:empty {
+			padding-left: 0;
+		}
 
-    .a-GV-rowSelector {
-        height: 22px;
-        border: none;
-        padding: 0;
-        box-shadow: none;
-        background-color: transparent;
-    }
+		&:not(:checked):disabled + label:before {
+			border: 2px solid transparent;
+		}
 
-    .a-GV-rowSelector:hover, .is-hover .a-GV-rowSelector {
-        border: none;
+		&:disabled:not(:checked) + label:after {
+			border-color: $radio-empty-color;
+			background-color: transparent;
+		}
 
-        &:before {
-            opacity: 0;
-        }
-    }
+		&:disabled:checked+label:after {
+			background-color: $secondary-color;
+			border-color: $secondary-color;
+		}
+	}
 
-    .is-selected .a-GV-rowSelector:before {
-        opacity: 0;
-    }
+	.a-IG-controlsCheckboxLabel {
+		border: none;
+		box-shadow: none;
 
-    // checkboxes
-    .a-GV-header [type="checkbox"].filled-in {
-        &:not(:checked):disabled + label:before {
-            border: 2px solid transparent;
-        }
+		&:active:before,
+		&:before,
+		&:hover:before {
+			opacity: 1;
+		}
 
-        &:disabled:not(:checked) + label:after {
-            border-color: $radio-empty-color;
-            background-color: transparent;
-        }
-
-        &:disabled:checked+label:after {
-            background-color: $secondary-color;
-            border-color: $secondary-color;
-        }
-    }
-
-    .a-IG-controlsCheckboxLabel {
-        border: none;
-        box-shadow: none;
-
-        &:before, &:active:before, &:hover:before {
-            opacity: 1;
-        }
-
-        &:active {
-            background-color: transparent;
-            box-shadow: none!important;
-        }
-    }
+		&:active {
+			background-color: transparent;
+			box-shadow: none!important;
+		}
+	}
 }
