@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
 // Required files for overwrites
-// @import "components/prefixer";
-@import "components/mixins";
 @import "components/color";
 
 // Custom APEX variables
@@ -38,9 +36,6 @@
 @import "components/carousel";
 @import "components/tapTarget";
 @import "components/pulse";
-// @import "components/date_picker/default";
-// @import "components/date_picker/default.date";
-// @import "components/date_picker/default.time";
 
 // Custom APEX styles
 @import "apex_alert";
