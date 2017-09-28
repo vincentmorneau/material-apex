@@ -268,7 +268,7 @@ materialAPEX.materialize = {
 		$('.slider').slider();
 
 		/* Tooltips */
-		$("[data-tooltip][data-tooltip!='']").materialtooltip({
+		$("[data-tooltip][data-tooltip!='']").materialTooltip({
 			html: true
 		});
 

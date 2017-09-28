@@ -249,8 +249,11 @@ materialAPEX.initial = {
 
 		$("div.fab-absolute").parent().addClass("fab-relative");
 
-		// Fix for APEX  Select Template
-		$("select").closest('.input-field').removeClass('input-field');
+		// Switches
+		$(".switch").closest('.input-field').addClass('ma-switch-container');
+
+		// Some components need to have the class input-field removed
+		$("select, .switch").closest('.input-field').removeClass('input-field');
 
 		// Parallax
 		$(".parallax-container")
