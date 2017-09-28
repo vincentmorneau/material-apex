@@ -1,0 +1,53 @@
+{{#template}}
+<ul id="#REGION_STATIC_ID#" class="ma-region collapsible #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>#SUB_REGION_HEADERS##SUB_REGIONS#</ul>
+{{/template}}
+
+{{#sub_plug_header_template}}{{/sub_plug_header_template}}
+{{#sub_plug_header_entry_template}}{{/sub_plug_header_entry_template}}
+{{#sub_plug_template}}
+<li id="#SUB_REGION_ID#">
+	<div class="collapsible-header">#SUB_REGION_TITLE#</div>
+	<div class="collapsible-body">#SUB_REGION#</div>
+</li>
+{{/sub_plug_template}}
+
+{{#template_option_groups}}
+[
+    {
+        "name": "COLLAPSIBLE_BEHAVIOR",
+        "display_name": "Collapsible Behavior",
+        "display_sequence": 1,
+        "help_text": "",
+        "null_text": "",
+        "is_advanced": "N",
+        "template_options": [
+            {
+                "name": "ACCORDION",
+                "display_name": "Accordion",
+                "display_sequence": 1,
+                "css_classes": "accordion",
+                "help_text": ""
+            },
+            {
+                "name": "EXPANDABLE",
+                "display_name": "Expandable",
+                "display_sequence": 2,
+                "css_classes": "expandable",
+                "help_text": ""
+            }
+        ]
+    }
+]
+{{/template_option_groups}}
+
+{{#template_options}}
+[
+	{
+		"name": "POPOUT",
+		"display_name": "Popout",
+		"display_sequence": 1,
+		"css_classes": "popout",
+		"help_text": ""
+	}
+]
+{{/template_options}}
