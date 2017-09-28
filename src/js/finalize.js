@@ -24,6 +24,13 @@ $(document).ready(function() {
         materialAPEX.debug.timeEnd("apexafterrefresh");
     });
 
+	// event handler for apexafterrefresh
+	$('select').on('change', function(){
+		materialAPEX.debug.time("selectonchange");
+		materialAPEX.select.init();
+		materialAPEX.debug.timeEnd("selectonchange");
+	});
+
     // event handler for interactive reports
     $(".a-IRR-container").closest(".ma-region").on("apexafterrefresh", function() {
         materialAPEX.debug.time("IRR-apexafterrefresh");

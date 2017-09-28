@@ -240,3 +240,8 @@ fieldset.shuttle select.shuttle_right {
 	margin: 0.4rem 0;
 	display: block;
 }
+
+// Quick picks in dropdowns
+.apex-quick-picks {
+	transform: translateY(-14px);
+}
