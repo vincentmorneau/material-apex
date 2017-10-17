@@ -9,10 +9,10 @@ materialAPEX.sideNav.init();
 {{/inline_css}}
 
 {{#list_template_before_rows}}
- <ul id="app-sidenav" class="side-nav">
+<ul id="app-sidenav" class="side-nav">
 {{/list_template_before_rows}}
     {{#list_template_current}}
-    <li class="active">
+    <li class="side-nav-entry active">
         <a href="#LINK#" class="truncate">
             <i class="material-icons">#ICON_CSS_CLASSES#</i>
             #TEXT#
@@ -20,7 +20,7 @@ materialAPEX.sideNav.init();
     </li>
     {{/list_template_current}}
     {{#list_template_noncurrent}}
-    <li>
+    <li class="side-nav-entry">
         <a href="#LINK#" class="truncate">
             <i class="material-icons">#ICON_CSS_CLASSES#</i>
             #TEXT#
@@ -28,7 +28,7 @@ materialAPEX.sideNav.init();
     </li>
     {{/list_template_noncurrent}}
     {{#item_template_curr_w_child}}
-    <li class="no-padding">
+    <li class="side-nav-entry no-padding">
         <ul class="collapsible collapsible-accordion">
             <li>
                 <a class="collapsible-header active truncate waves-effect">
@@ -40,9 +40,9 @@ materialAPEX.sideNav.init();
     </li>
     {{/item_template_curr_w_child}}
     {{#item_template_noncurr_w_child}}
-    <li class="no-padding">
+    <li class="side-nav-entry no-padding">
         <ul class="collapsible collapsible-accordion">
-            <li>
+            <li class="side-nav-entry">
                 <a class="collapsible-header truncate waves-effect">
                     <i class="material-icons">#ICON_CSS_CLASSES#</i>
                     #TEXT#
@@ -59,7 +59,7 @@ materialAPEX.sideNav.init();
     <ul>
     {{/before_sub_list}}
         {{#sub_list_item_current}}
-        <li class="active">
+        <li class="side-nav-entry active">
             <a href="#LINK#" class="truncate">
                 <i class="material-icons">#ICON_CSS_CLASSES#</i>
                 #TEXT#
@@ -69,7 +69,7 @@ materialAPEX.sideNav.init();
         {{#sub_template_curr_w_child}}
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
-                <li>
+                <li class="side-nav-entry">
                     <a class="collapsible-header active truncate waves-effect">
                         <i class="material-icons">#ICON_CSS_CLASSES#</i>
                         #TEXT#
@@ -79,7 +79,7 @@ materialAPEX.sideNav.init();
         </li>
         {{/sub_template_curr_w_child}}
         {{#sub_list_item_noncurrent}}
-        <li>
+        <li class="side-nav-entry">
             <a href="#LINK#" class="truncate">
                 <i class="material-icons">#ICON_CSS_CLASSES#</i>
                 #TEXT#
@@ -87,7 +87,7 @@ materialAPEX.sideNav.init();
         </li>
         {{/sub_list_item_noncurrent}}
         {{#sub_template_noncurr_w_child}}
-        <li class="no-padding">
+        <li class="side-nav-entry no-padding">
             <ul class="collapsible collapsible-accordion">
                 <li>
                     <a class="collapsible-header truncate waves-effect">

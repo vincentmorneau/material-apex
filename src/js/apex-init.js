@@ -193,8 +193,9 @@ materialAPEX.textarea = {
 materialAPEX.initial = {
 	init: function() {
 		materialAPEX.debug.time("materialAPEX.initial.init");
-		// App Menu
-		if (document.getElementById('app-sidenav')) {
+
+		// Show the hamburger menu only if there is any sidebar menu entry
+		if ($(".side-nav .side-nav-entry").length > 0) {
 			$("#app-sidenav-trigger").removeClass("hide");
 		}
 
