@@ -83,6 +83,13 @@ body > form {
 	}
 }
 
+// fix for IE to put the footer on the bottom
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	body > form {
+		height: 1px;
+	}
+}
+
 // Alignments
 .ma-region-title-left .ma-region-title
 , .ma-region-body-left .ma-region-body
