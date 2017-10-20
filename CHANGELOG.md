@@ -1,7 +1,25 @@
 ## Changelog
 
 #### v0.12.0
--
+- Breaking changes
+	- Button standard is now split into 3 different templates like UT (text, icon, text with icon)
+- New features
+	- **You can now use Material APEX while being 100% offline**
+	- Collapsible component as a region template
+- Enhancements
+	- The footer now has theme roller support
+	- Tabs component now has "Remember active tab" support
+	- **Interactive report modals should be more stable**
+	- **Interactive grid should be more stable**
+- Bug fixes
+	- Footer positioning in IE
+	- Hamburger menu now hides when there is no menu entry
+	- Quick picks on dropdowns are now working
+	- Select lists validation message is more consistent
+	- Firefox button rendering is fixed
+	- Classic report card now works without button label
+- More documentation enhancements...
+
 
 #### v0.11.1
 - Hot fix for the pulse button [(view)](https://apex.oracle.com/pls/apex/f?p=12192:21)
