@@ -244,7 +244,7 @@ materialAPEX.initial = {
 
 		$(".fixed-action-btn ul li .btn-floating").each(function() {
 			$(this)
-				.attr("data-tooltip", $(this).find(".ma-button-label").text())
+				.attr("data-tooltip", $(this).find(".ma-button-label").text() || $(this).attr("title"))
 				.attr("data-position", "left");
 		});
 
