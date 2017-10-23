@@ -9,6 +9,9 @@ logs
 *.log
 npm-debug.log*
 
+# Mac
+.DS_Store
+
 # Others
 .atom-build-oracle.json
 app.export.sql
