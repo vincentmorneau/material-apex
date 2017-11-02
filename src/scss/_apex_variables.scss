@@ -1,155 +1,110 @@
-/* ==========================================================================
-Material APEX Variables
-========================================================================== */
-
-/**
- * Table of Contents:
- *
- *  1.  Colors
- *  2.  Badges
- *  3.  Buttons
- *  4.  Cards
- *  5.  Collapsible
- *  6.  Chips
- *  7.  Date Picker
- *  8.  Dropdown
- *  10. Forms
- *  11. Global
- *  12. Grid
- *  13. Navigation Bar
- *  14. Side Navigation
- *  15. Photo Slider
- *  16. Spinners | Loaders
- *  17. Tabs
- *  18. Tables
- *  19. Toasts
- *  20. Typography
- *  21. Footer
- *  22. Flow Text
- *  23. Collections
- *  24. Progress Bar
- *  25. Modals
- */
-
 /*
-    {
-        "translate": false,
-        "groups": [{
-            "name": "Colors",
-            "common": true,
-            "sequence": 1
-        }, {
-            "name": "Badges",
-            "common": true,
-            "sequence": 2
-        }, {
-            "name": "Buttons",
-            "common": true,
-            "sequence": 3
-        }, {
-            "name": "Cards",
-            "common": true,
-            "sequence": 4
-        }, {
-            "name": "Carousel",
-            "common": false,
-            "sequence": 4.5
-        },
-            "name": "Collapsible",
-            "common": false,
-            "sequence": 5
-        }, {
-            "name": "Chips",
-            "common": false,
-            "sequence": 6
-        }, {
-            "name": "Date Picker",
-            "common": false,
-            "sequence": 7
-        }, {
-            "name": "Dropdown",
-            "common": false,
-            "sequence": 8
-        }, {
-            "name": "Forms",
-            "common": true,
-            "sequence": 10
-        }, {
-            "name": "Global",
-            "common": true,
-            "sequence": 11
-        }, {
-            "name": "Grid",
-            "common": false,
-            "sequence": 12
-        }, {
-            "name": "Navigation Bar",
-            "common": false,
-            "sequence": 13
-        }, {
-            "name": "Side Navigation",
-            "common": false,
-            "sequence": 14
-        }, {
-            "name": "Photo Slider",
-            "common": false,
-            "sequence": 15
-        }, {
-            "name": "Spinners | Loaders",
-            "common": false,
-            "sequence": 16
-        }, {
-            "name": "Tabs",
-            "common": false,
-            "sequence": 17
-        }, {
-            "name": "Tables",
-            "common": true,
-            "sequence": 18
-        }, {
-            "name": "Toasts",
-            "common": false,
-            "sequence": 19
-        }, {
-            "name": "Typography",
-            "common": false,
-            "sequence": 20
-        }, {
-            "name": "Footer",
-            "common": false,
-            "sequence": 21
-        }, {
-            "name": "Flow Text",
-            "common": false,
-            "sequence": 22
-        }, {
-            "name": "Collections",
-            "common": false,
-            "sequence": 23
-        }, {
-            "name": "Progress Bar",
-            "common": false,
-            "sequence": 24
-        }, {
-            "name": "Interactive Reports",
-            "common": false,
-            "sequence": 25
-        }, {
-            "name": "Modals",
-            "common": false,
-            "sequence": 26
-        }]
-    }
+{
+  "translate": false,
+  "groups":[
+  {
+    "name": "Global",
+    "common": true,
+    "sequence": 1
+  },
+  {
+    "name": "Button",
+    "common": true,
+    "sequence": 2
+  },
+  {
+    "name": "Card",
+    "common": true,
+    "sequence": 3
+  },
+  {
+    "name": "Form",
+    "common": true,
+    "sequence": 4
+  },
+  {
+    "name": "Table",
+    "common": true,
+    "sequence": 5
+  },
+  {
+    "name": "Badge",
+    "common": false,
+    "sequence": 6
+  },
+  {
+    "name": "Carousel",
+    "common": false,
+    "sequence": 7
+  },
+    "name": "Collapsible",
+    "common": false,
+    "sequence": 8
+  },
+  {
+    "name": "Chips",
+    "common": false,
+    "sequence": 9
+  },
+  {
+    "name": "Dropdown",
+    "common": false,
+    "sequence": 10
+  },
+  {
+    "name": "Top Navigation",
+    "common": false,
+    "sequence": 11
+  },
+  {
+    "name": "Side Navigation",
+    "common": false,
+    "sequence": 12
+  },
+  {
+    "name": "Slider",
+    "common": false,
+    "sequence": 13
+  },
+  {
+    "name": "Tab",
+    "common": false,
+    "sequence": 14
+  },
+  {
+    "name": "Toast",
+    "common": false,
+    "sequence": 15
+  },
+  {
+    "name": "Footer",
+    "common": false,
+    "sequence": 16
+  },
+  {
+    "name": "Collection",
+    "common": false,
+    "sequence": 17
+  },
+  {
+    "name": "Modal",
+    "common": false,
+    "sequence": 18
+  }
+  ]
+}
 */
 
-/* 1. Colors
-   ========================================================================== */
+/* ===============================================================
+1- Global
+=============================================================== */
 /*
 {
    "var": "@background-color",
    "name": "Body Background",
    "type": "color",
-   "group": "Colors"
+   "style": "big",
+   "group": "Global"
 }
 */
 $background-color: #efefef;
@@ -158,7 +113,8 @@ $background-color: #efefef;
     "var": "@primary-color",
     "name": "Primary",
     "type": "color",
-    "group": "Colors"
+    "style": "big",
+    "group": "Global"
 }
 */
 $primary-color: #00bcd4;
@@ -169,7 +125,8 @@ $primary-color-dark: darken($primary-color, 15%) !default;
     "var": "@secondary-color",
     "name": "Secondary",
     "type": "color",
-    "group": "Colors"
+    "style": "big",
+    "group": "Global"
 }
 */
 $secondary-color: #EF5350;
@@ -178,7 +135,7 @@ $secondary-color: #EF5350;
     "var": "@success-color",
     "name": "Success",
     "type": "color",
-    "group": "Colors"
+    "group": "Global"
 }
 */
 $success-color: #4CAF50;
@@ -187,7 +144,7 @@ $success-color: #4CAF50;
     "var": "@error-color",
     "name": "Error",
     "type": "color",
-    "group": "Colors"
+    "group": "Global"
 }
 */
 $error-color: #F44336;
@@ -196,125 +153,100 @@ $error-color: #F44336;
     "var": "@link-color",
     "name": "Link",
     "type": "color",
-    "group": "Colors"
+    "group": "Global"
 }
 */
 $link-color: #039be5;
 
+/* ===============================================================
+End Global
+=============================================================== */
 
-/* 2. Badges
-   ========================================================================== */
+/* ===============================================================
+2- Buttons
+ ============================================================== */
 
-/*
-{
-   "var": "@badge-bg-color",
-   "name": "Background",
-   "type": "color",
-   "group": "Badges"
-}
-*/
-$badge-bg-color: $secondary-color !default;
-/*
-{
-    "var"  : "@badge-height",
-    "name" : "Badge Height",
-    "type" : "number",
-    "units": "px",
-        "range": {
-        "min": 0,
-        "max": 50,
-        "increment": 1
-    },
-    "group": "Badges"
-}
-*/
-$badge-height: 22px !default;
-
-
-/* 3. Buttons
-   ========================================================================== */
-
-// Shared styles
 $button-border: none !default;
 $button-background-focus: lighten($secondary-color, 4%) !default;
 /*
 {
-    "var"  : "@button-font-size",
-    "name" : "Button Font Size",
-    "type" : "number",
-    "units": "rem",
-        "range": {
-        "min": 0,
-        "max": 5,
-        "increment": 0.1
-    },
-    "group": "Buttons"
+   "var"  : "@button-font-size",
+   "name" : "Font Size",
+   "type" : "number",
+   "units": "rem",
+      "range": {
+      "min": 0,
+      "max": 5,
+      "increment": 0.1
+   },
+   "group": "Button"
 }
 */
 $button-font-size: 1.0rem !default;
 /*
 {
-    "var"  : "@button-icon-font-size",
-    "name" : "Button Icon Font Size",
-    "type" : "number",
-    "units": "rem",
-        "range": {
-        "min": 0,
-        "max": 5,
-        "increment": 0.1
-    },
-    "group": "Buttons"
+   "var"  : "@button-icon-font-size",
+   "name" : "Font Size - Icon",
+   "type" : "number",
+   "units": "rem",
+       "range": {
+       "min": 0,
+       "max": 5,
+       "increment": 0.1
+   },
+   "group": "Button"
 }
 */
 $button-icon-font-size: 1.3rem !default;
 /*
 {
-    "var"  : "@button-height",
-    "name" : "Height",
-    "type" : "number",
-    "units": "px",
-        "range": {
-        "min": 0,
-        "max": 100,
-        "increment": 2
-    },
-    "group": "Buttons"
+   "var"  : "@button-height",
+   "name" : "Height",
+   "type" : "number",
+   "units": "px",
+       "range": {
+       "min": 0,
+       "max": 100,
+       "increment": 2
+   },
+   "group": "Button"
 }
 */
 $button-height: 36px !default;
 $button-padding: 0 2rem !default;
 /*
 {
-    "var"  : "@button-radius",
-    "name" : "Radius",
-    "type" : "number",
-    "units": "px",
-        "range": {
-        "min": 0,
-        "max": 100,
-        "increment": 2
-    },
-    "group": "Buttons"
+   "var"  : "@button-radius",
+   "name" : "Radius",
+   "type" : "number",
+   "units": "px",
+       "range": {
+       "min": 0,
+       "max": 100,
+       "increment": 2
+   },
+   "group": "Button"
 }
 */
 $button-radius: 2px !default;
 
-// Disabled styles
 /*
 {
-    "var"  : "@button-disabled-background",
-    "name" : "Disabled Background",
-    "type" : "color",
-    "group": "Buttons"
+   "var"  : "@button-disabled-background",
+   "name" : "Background",
+   "type" : "color",
+   "group": "Button",
+   "subgroup": "Disabled Button Colors"
 }
 */
 $button-disabled-background: #DFDFDF !default;
 /*
 {
-    "var"  : "@button-disabled-color",
-    "name" : "Disabled Text",
-    "type" : "color",
-    "group": "Buttons"
+   "var"  : "@button-disabled-color",
+   "name" : "Text",
+   "type" : "color",
+   "group": "Button",
+   "subgroup": "Disabled Button Colors"
 }
 */
 $button-disabled-color: #9F9F9F !default;
@@ -322,201 +254,327 @@ $button-disabled-color: #9F9F9F !default;
 // Raised buttons
 /*
 {
-    "var"  : "@button-raised-background",
-    "name" : "Raised Background",
-    "type" : "color",
-    "group": "Buttons"
+   "var"  : "@button-raised-background",
+   "name" : "Background",
+   "type" : "color",
+   "group": "Button",
+   "subgroup": "Default Button Colors"
 }
 */
 $button-raised-background: $secondary-color !default;
-/*
-{
-    "var"  : "@button-raised-background-hover",
-    "name" : "Raise Hover",
-    "type" : "color",
-    "group": "Buttons"
-}
-*/
 $button-raised-background-hover: lighten($button-raised-background, 5%) !default;
 /*
 {
-    "var"  : "@button-raised-color",
-    "name" : "Raised Text",
-    "type" : "color",
-    "group": "Buttons"
+   "var"  : "@button-raised-color",
+   "name" : "Text",
+   "type" : "color",
+   "group": "Button",
+   "subgroup": "Default Button Colors"
 }
 */
 $button-raised-color: #fff !default;
-
-// Large buttons
-/*
-{
-    "var"  : "@button-large-icon-font-size",
-    "name" : "Large Button Icon Font Size",
-    "type" : "number",
-    "units": "rem",
-        "range": {
-        "min": 0,
-        "max": 10,
-        "increment": 0.2
-    },
-    "group": "Buttons"
-}
-*/
 $button-large-icon-font-size: 1.6rem !default;
-/*
-{
-    "var"  : "@button-large-height",
-    "name" : "Large Button Height",
-    "type" : "number",
-    "units": "px",
-        "range": {
-        "min": 0,
-        "max": 100,
-        "increment": 2
-    },
-    "group": "Buttons"
-}
-*/
 $button-large-height: $button-height * 1.5 !default;
 
-// Flat buttons
 /*
 {
-    "var"  : "@button-flat-color",
-    "name" : "Flat Button Text",
-    "type" : "color",
-    "group": "Buttons"
+   "var"  : "@button-floating-background",
+   "name" : "Background",
+   "type" : "color",
+   "group": "Button",
+   "subgroup": "Floating Button Colors"
+}
+*/
+$button-floating-background: $secondary-color !default;
+$button-floating-background-hover: $button-floating-background !default;
+/*
+{
+   "var"  : "@button-floating-color",
+   "name" : "Text",
+   "type" : "color",
+   "group": "Button",
+   "subgroup": "Floating Button Colors"
+}
+*/
+$button-floating-color: #fff !default;
+$button-floating-size: 37px !default;
+$button-floating-large-size: $button-floating-size * 1.5 !default;
+$button-floating-radius: 50% !default;
+
+/*
+{
+   "var"  : "@button-flat-color",
+   "name" : "Flat Button Text",
+   "type" : "color",
+   "group": "Button"
 }
 */
 $button-flat-color: #343434 !default;
 $button-flat-disabled-color: lighten(#999, 10%) !default;
 
-// Floating buttons
-/*
-{
-    "var"  : "@button-floating-background",
-    "name" : "Floating Button Background",
-    "type" : "color",
-    "group": "Buttons"
-}
-*/
-$button-floating-background: $secondary-color !default;
-/*
-{
-    "var"  : "@button-floating-background-hover",
-    "name" : "Floating Button Hover",
-    "type" : "color",
-    "group": "Buttons"
-}
-*/
-$button-floating-background-hover: $button-floating-background !default;
-/*
-{
-    "var"  : "@button-floating-color",
-    "name" : "Floating Button Text",
-    "type" : "color",
-    "group": "Buttons"
-}
-*/
-$button-floating-color: #fff !default;
-/*
-{
-    "var"  : "@button-floating-size",
-    "name" : "Floating Button Size",
-    "type" : "number",
-    "units": "px",
-        "range": {
-        "min": 0,
-        "max": 100,
-        "increment": 1
-    },
-    "group": "Buttons"
-}
-*/
-$button-floating-size: 37px !default;
-/*
-{
-    "var"  : "@button-floating-large-size",
-    "name" : "Large Floating Button Size",
-    "type" : "number",
-    "units": "px",
-        "range": {
-        "min": 0,
-        "max": 100,
-        "increment": 1
-    },
-    "group": "Buttons"
-}
-*/
-$button-floating-large-size: $button-floating-size * 1.5 !default;
-/*
-{
-    "var"  : "@button-floating-radius",
-    "name" : "Floating Button Radius",
-    "type" : "number",
-    "units": "%",
-        "range": {
-        "min": 0,
-        "max": 100,
-        "increment": 1
-    },
-    "group": "Buttons"
-}
-*/
-$button-floating-radius: 50% !default;
+/* ===============================================================
+End Buttons
+=============================================================== */
 
-
-/* 4. Cards
-   ========================================================================== */
+/* ===============================================================
+3- Cards
+=============================================================== */
 /*
 {
     "var"  : "@card-padding",
     "name" : "Padding",
     "type" : "number",
     "units": "px",
-        "range": {
-        "min": 0,
-        "max": 100,
-        "increment": 1
+    "range": {
+    "min": 0,
+    "max": 100,
+    "increment": 1
     },
-    "group": "Cards"
+    "group": "Card"
 }
 */
 $card-padding: 20px !default;
 /*
 {
     "var"  : "@card-bg-color",
-    "name" : "Card Background Color",
+    "name" : "Background",
     "type" : "color",
-    "group": "Cards"
+    "group": "Card",
+    "subgroup": "Card Colors"
+
 }
 */
 $card-bg-color: #fff !default;
 /*
 {
     "var"  : "@card-link-color",
-    "name" : "Card Link Color",
+    "name" : "Text",
     "type" : "color",
-    "group": "Cards"
+    "group": "Card",
+    "subgroup": "Card Colors"
 }
 */
 $card-link-color: #ffab40;
 $card-link-color-light: lighten($card-link-color, 20%) !default;
 
-// 4.5 Carousel
-// ==========================================================================
+/* ===============================================================
+End Cards
+=============================================================== */
+
+/* ===============================================================
+4- Forms
+=============================================================== */
+
+/*
+{
+  "var"  : "@input-height",
+  "name" : "Input - Height",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 1,
+    "max": 5,
+    "increment": 1
+  },
+  "group": "Form"
+}
+*/
+$input-height: 3rem !default;
+/*
+{
+  "var" : "@input-border-color",
+  "name" : "Input - Border",
+  "type" : "color",
+  "group": "Form"
+}
+*/
+$input-border-color: #9e9e9e;
+$input-border: 1px solid $input-border-color !default;
+/*
+{
+  "var" : "@input-background",
+  "name" : "Input - Background",
+  "type" : "color",
+  "group": "Form"
+}
+*/
+$input-background: #fff !default;
+$input-error-color: $error-color !default;
+$input-success-color: $success-color !default;
+$input-focus-color: $secondary-color !default;
+/*
+{
+  "var"  : "@input-font-size",
+  "name" : "Input - Font Size",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 1,
+    "max": 5,
+    "increment": 0.1
+  },
+  "group": "Form"
+}
+*/
+$input-font-size: 1rem !default;
+$input-margin-bottom: 20px;
+$input-margin: 0 0 20px 0 !default;
+$input-padding: 0 !default;
+$input-transition: all .3s !default;
+/*
+{
+  "var"  : "@label-font-size",
+  "name" : "Label - Font Size",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 0,
+    "max": 3,
+    "increment": 0.1
+  },
+  "group": "Form"
+}
+*/
+$label-font-size: .8rem !default;
+$input-disabled-color: rgba(0,0,0, .26) !default;
+$input-disabled-solid-color: #BDBDBD !default;
+$input-disabled-border: 1px dotted $input-disabled-color !default;
+$input-invalid-border: 1px solid $input-error-color !default;
+$placeholder-text-color: lighten($input-border-color, 20%) !default;
+
+// Radio Buttons
+$radio-fill-color: $secondary-color !default;
+$radio-empty-color: #5a5a5a !default;
+$radio-border: 2px solid $radio-fill-color !default;
+
+// Range
+/*
+{
+  "var"  : "@range-height",
+  "name" : "Range - Height",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 1,
+    "max": 30,
+    "increment": 1
+  },
+  "group": "Form"
+}
+*/
+$range-height: 14px !default;
+/*
+{
+  "var"  : "@range-width",
+  "name" : "Range - Width",
+  "type" : "number",
+  "units": "px",
+  "range": {
+    "min": 1,
+    "max": 30,
+    "increment": 1
+  },
+  "group": "Form"
+}
+*/
+$range-width: 14px !default;
+$track-height: 3px !default;
+
+// Select
+$select-border: 1px solid #f2f2f2 !default;
+$select-background: rgba(255, 255, 255, 0.90) !default;
+$select-focus: 1px solid lighten($secondary-color, 47%) !default;
+$select-option-hover: rgba(0,0,0,.06) !default;
+$select-option-focus: rgba(0,0,0,.03) !default;
+$select-padding: 5px !default;
+$select-radius: 2px !default;
+$select-disabled-color: rgba(0,0,0,.3) !default;
+
+// Switches
+$switch-bg-color: $secondary-color !default;
+$switch-checked-lever-bg: desaturate(lighten($secondary-color, 25%), 25%) !default;
+$switch-unchecked-bg: #F1F1F1 !default;
+$switch-unchecked-lever-bg: #818181 !default;
+$switch-radius: 15px !default;
+
+/* ===============================================================
+End Forms
+=============================================================== */
+
+/* ===============================================================
+5- Table
+ ============================================================== */
+
+/*
+{
+"var" : "@table-border-color",
+"name" : "Border",
+"type" : "color",
+"group": "Table"
+}
+*/
+$table-border-color: #d0d0d0 !default;
+/*
+{
+ "var" : "@table-striped-color",
+ "name" : "Hover",
+ "type" : "color",
+ "group": "Table"
+}
+*/
+$table-striped-color: #f2f2f2 !default;
+
+/* ===============================================================
+End Table
+ ============================================================== */
+
+/* ===============================================================
+6- Badge
+============================================================== */
+
+/*
+{
+    "var": "@badge-bg-color",
+    "name": "Background",
+    "type": "color",
+    "group": "Badge"
+}
+*/
+$badge-bg-color: $secondary-color !default;
+/*
+{
+    "var"  : "@badge-height",
+    "name" : "Height",
+    "type" : "number",
+    "units": "px",
+    "range": {
+    "min": 0,
+    "max": 50,
+    "increment": 1
+    },
+    "group": "Badge"
+}
+*/
+$badge-height: 22px !default;
+
+/* ===============================================================
+End Badge
+=============================================================== */
+
+/* ===============================================================
+7- Carousel
+ ============================================================== */
 
 /*
 {
     "var"  : "@carousel-height",
-    "name" : "Carousel Height",
+    "name" : "Height",
     "type" : "number",
     "units": "px",
-        "range": {
-        "min": 0,
-        "max": 1000,
-        "increment": 10
+    "range": {
+    "min": 0,
+    "max": 1000,
+    "increment": 10
     },
     "group": "Carousel"
 }
@@ -525,20 +583,24 @@ $carousel-height: 400px !default;
 $carousel-item-height: $carousel-height / 2 !default;
 $carousel-item-width: $carousel-item-height !default;
 
+/* ===============================================================
+End Carousel
+=============================================================== */
 
-/* 5. Collapsible
-   ========================================================================== */
+/* ===============================================================
+8- Collasible
+ ============================================================== */
 
 /*
 {
     "var"  : "@collapsible-height",
-    "name" : "Collapsible Height",
+    "name" : "Height",
     "type" : "number",
     "units": "rem",
-        "range": {
-        "min": 0,
-        "max": 10,
-        "increment": 1
+    "range": {
+    "min": 0,
+    "max": 10,
+    "increment": 1
     },
     "group": "Collapsible"
 }
@@ -548,7 +610,7 @@ $collapsible-line-height: $collapsible-height !default;
 /*
 {
     "var"  : "@collapsible-header-color",
-    "name" : "Collapsible Header",
+    "name" : "Header",
     "type" : "color",
     "group": "Collapsible"
 }
@@ -557,7 +619,7 @@ $collapsible-header-color: #fff !default;
 /*
 {
     "var"  : "@collapsible-border-color",
-    "name" : "Collapsible Border",
+    "name" : "Border",
     "type" : "color",
     "group": "Collapsible"
 }
@@ -565,12 +627,18 @@ $collapsible-header-color: #fff !default;
 $collapsible-border-color: #ddd !default;
 
 
-/* 6. Chips
-   ========================================================================== */
+/* ===============================================================
+End Collapsible
+=============================================================== */
+
+/* ===============================================================
+9- Chip
+ ============================================================== */
+
 /*
 {
   "var" : "@chip-bg-color",
-  "name" : "Chip Background Color",
+  "name" : "Background",
   "type" : "color",
   "group": "Chips"
 }
@@ -594,10 +662,13 @@ $chip-selected-color: #26a69a !default;
 */
 $chip-margin: 5px !default;
 
+/* ===============================================================
+End Chip
+=============================================================== */
 
-/* 7. Date Picker
-   ========================================================================== */
-
+/* ===============================================================
+Date Picker
+ ============================================================== */
 
 $datepicker-weekday-bg: darken($secondary-color, 7%) !default;
 $datepicker-date-bg: $secondary-color !default;
@@ -606,257 +677,56 @@ $datepicker-focus: rgba(0,0,0, .05) !default;
 $datepicker-selected: $secondary-color !default;
 $datepicker-selected-outfocus: desaturate(lighten($secondary-color, 35%), 15%) !default;
 
+/* ===============================================================
+End Date Picker
+=============================================================== */
 
-/* 8. Dropdown
-   ========================================================================== */
+/* ===============================================================
+10- Dropdown
+ ============================================================== */
 
 /*
 {
- "var" : "@dropdown-bg-color",
- "name" : "Dropdown Background Color",
- "type" : "color",
- "group": "Dropdown"
+  "var" : "@dropdown-bg-color",
+  "name" : "Background",
+  "type" : "color",
+  "group": "Dropdown",
+  "subgroup": "Dropdown Colors"
 }
 */
 $dropdown-bg-color: #fff !default;
-/*
-{
-  "var" : "@dropdown-hover-bg-color",
-  "name" : "Dropdown Hover Background Color",
-  "type" : "color",
-  "group": "Dropdown"
-}
-*/
 $dropdown-hover-bg-color: #eee !default;
 /*
 {
   "var" : "@dropdown-color",
-  "name" : "Dropdown Text Color",
+  "name" : "Text",
   "type" : "color",
-  "group": "Dropdown"
+  "group": "Dropdown",
+  "subgroup": "Dropdown Colors"
 }
 */
 $dropdown-color: $secondary-color !default;
 $dropdown-item-height: 50px !default;
 
 
-/* 9. Fonts
-   ========================================================================== */
+/* ===============================================================
+End Dropdown
+=============================================================== */
+
+/* ===============================================================
+Font
+ ============================================================== */
 
 $roboto-font-path: "../lib/materialize/fonts/roboto/" !default;
 
+/* ===============================================================
+End Font
+=============================================================== */
 
-/* 10. Forms
-   ========================================================================== */
+/* ===============================================================
+Media Queries
+ ============================================================== */
 
-// Text Inputs + Textarea
-/*
-{
-  "var"  : "@input-height",
-  "name" : "Input Height",
-  "type" : "number",
-  "units": "rem",
-  "range": {
-    "min": 1,
-    "max": 5,
-    "increment": 1
-  },
-  "group": "Forms"
-}
-*/
-$input-height: 3rem !default;
-/*
-{
-  "var" : "@input-border-color",
-  "name" : "Input Border Color",
-  "type" : "color",
-  "group": "Forms"
-}
-*/
-$input-border-color: #9e9e9e;
-$input-border: 1px solid $input-border-color !default;
-/*
-{
-  "var" : "@input-background",
-  "name" : "Input Background Color",
-  "type" : "color",
-  "group": "Forms"
-}
-*/
-$input-background: #fff !default;
-/*
-{
-  "var" : "@input-error-color",
-  "name" : "Input Error Color",
-  "type" : "color",
-  "group": "Forms"
-}
-*/
-$input-error-color: $error-color !default;
-/*
-{
-  "var" : "@input-success-color",
-  "name" : "Input Success Color",
-  "type" : "color",
-  "group": "Forms"
-}
-*/
-$input-success-color: $success-color !default;
-/*
-{
-  "var" : "@input-focus-color",
-  "name" : "Input Focus Color",
-  "type" : "color",
-  "group": "Forms"
-}
-*/
-$input-focus-color: $secondary-color !default;
-/*
-{
-  "var"  : "@input-font-size",
-  "name" : "Input Font Size",
-  "type" : "number",
-  "units": "rem",
-  "range": {
-    "min": 1,
-    "max": 5,
-    "increment": 0.1
-  },
-  "group": "Forms"
-}
-*/
-$input-font-size: 1rem !default;
-$input-margin-bottom: 20px;
-$input-margin: 0 0 20px 0 !default;
-$input-padding: 0 !default;
-$input-transition: all .3s !default;
-/*
-{
-  "var"  : "@label-font-size",
-  "name" : "Label Font Size",
-  "type" : "number",
-  "units": "rem",
-  "range": {
-    "min": 0,
-    "max": 3,
-    "increment": 0.1
-  },
-  "group": "Forms"
-}
-*/
-$label-font-size: .8rem !default;
-/*
-{
-  "var" : "@input-disabled-color",
-  "name" : "Input Disabled Color",
-  "type" : "color",
-  "group": "Forms"
-}
-*/
-$input-disabled-color: rgba(0,0,0, .26) !default;
-$input-disabled-solid-color: #BDBDBD !default;
-$input-disabled-border: 1px dotted $input-disabled-color !default;
-$input-invalid-border: 1px solid $input-error-color !default;
-/*
-{
-  "var" : "@placeholder-text-color",
-  "name" : "Placeholder Text Color",
-  "type" : "color",
-  "group": "Forms"
-}
-*/
-$placeholder-text-color: lighten($input-border-color, 20%) !default;
-
-// Radio Buttons
-/*
-{
-  "var" : "@radio-fill-color",
-  "name" : "Radio Button & Checkbox Filled Color",
-  "type" : "color",
-  "group": "Forms"
-}
-*/
-$radio-fill-color: $secondary-color !default;
-/*
-{
-  "var" : "@radio-empty-color",
-  "name" : "Radio Button & Checkbox Empty Color",
-  "type" : "color",
-  "group": "Forms"
-}
-*/
-$radio-empty-color: #5a5a5a !default;
-$radio-border: 2px solid $radio-fill-color !default;
-
-// Range
-/*
-{
-  "var"  : "@range-height",
-  "name" : "Range Height",
-  "type" : "number",
-  "units": "px",
-  "range": {
-    "min": 1,
-    "max": 30,
-    "increment": 1
-  },
-  "group": "Forms"
-}
-*/
-$range-height: 14px !default;
-/*
-{
-  "var"  : "@range-width",
-  "name" : "Range Width",
-  "type" : "number",
-  "units": "px",
-  "range": {
-    "min": 1,
-    "max": 30,
-    "increment": 1
-  },
-  "group": "Forms"
-}
-*/
-$range-width: 14px !default;
-/*
-{
-  "var"  : "@track-height",
-  "name" : "Track Height",
-  "type" : "number",
-  "units": "px",
-  "range": {
-    "min": 1,
-    "max": 30,
-    "increment": 1
-  },
-  "group": "Forms"
-}
-*/
-$track-height: 3px !default;
-
-// Select
-$select-border: 1px solid #f2f2f2 !default;
-$select-background: rgba(255, 255, 255, 0.90) !default;
-$select-focus: 1px solid lighten($secondary-color, 47%) !default;
-$select-option-hover: rgba(0,0,0,.06) !default;
-$select-option-focus: rgba(0,0,0,.03) !default;
-$select-padding: 5px !default;
-$select-radius: 2px !default;
-$select-disabled-color: rgba(0,0,0,.3) !default;
-
-// Switches
-$switch-bg-color: $secondary-color !default;
-$switch-checked-lever-bg: desaturate(lighten($secondary-color, 25%), 25%) !default;
-$switch-unchecked-bg: #F1F1F1 !default;
-$switch-unchecked-lever-bg: #818181 !default;
-$switch-radius: 15px !default;
-
-
-/* 11. Global
-   ========================================================================== */
-
-// Media Query Ranges
 $small-screen-up: 601px !default;
 $medium-screen-up: 993px !default;
 $large-screen-up: 1201px !default;
@@ -871,23 +741,31 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
 $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
 $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
 
+/* ===============================================================
+End Media Queries
+=============================================================== */
 
-/* 12. Grid
-   ========================================================================== */
+/* ===============================================================
+Grid
+ ============================================================== */
 
 $num-cols: 12 !default;
 $gutter-width: 1.5rem !default;
 $element-top-margin: $gutter-width/3 !default;
 $element-bottom-margin: ($gutter-width*2)/3 !default;
 
+/* ===============================================================
+End Grid
+=============================================================== */
 
-/* 13. Navigation Bar
-   ========================================================================== */
+/* ===============================================================
+11- Top Navigation
+ ============================================================== */
 
 /*
 {
  "var"  : "@navbar-height",
- "name" : "Navbar Height",
+ "name" : "Height",
  "type" : "number",
  "units": "px",
  "range": {
@@ -895,7 +773,7 @@ $element-bottom-margin: ($gutter-width*2)/3 !default;
    "max": 100,
    "increment": 1
  },
- "group": "Navigation Bar"
+ "group": "Top Navigation"
 }
 */
 $navbar-height: 64px !default;
@@ -903,7 +781,7 @@ $navbar-line-height: $navbar-height !default;
 /*
 {
   "var"  : "@navbar-height-mobile",
-  "name" : "Navbar Height Mobile",
+  "name" : "Height (Mobile)",
   "type" : "number",
   "units": "px",
   "range": {
@@ -911,58 +789,63 @@ $navbar-line-height: $navbar-height !default;
     "max": 100,
     "increment": 1
   },
-  "group": "Navigation Bar"
+  "group": "Top Navigation"
 }
 */
 $navbar-height-mobile: 56px !default;
 $navbar-line-height-mobile: $navbar-height-mobile !default;
 /*
 {
-  "var"  : "@navbar-font-size",
-  "name" : "Navbar Font Size",
-  "type" : "number",
-  "units": "rem",
-  "range": {
-    "min": 1,
-    "max": 5,
-    "increment": 0.1
-  },
-  "group": "Navigation Bar"
-}
-*/
-$navbar-font-size: 1rem !default;
-/*
-{
   "var" : "@navbar-font-color",
-  "name" : "Navbar Font Color",
+  "name" : "Font Color",
   "type" : "color",
-  "group": "Navigation Bar"
+  "group": "Top Navigation"
 }
 */
 $navbar-font-color: #fff !default;
 /*
 {
-  "var"  : "@navbar-brand-font-size",
-  "name" : "Navbar Brand Font Size",
+  "var"  : "@navbar-font-size",
+  "name" : "Font Size - Menu Entries",
   "type" : "number",
   "units": "rem",
   "range": {
     "min": 1,
-    "max": 5,
-    "increment": 0.1
+    "max": 3,
+    "increment": 0.2
   },
-  "group": "Navigation Bar"
+  "group": "Top Navigation"
+}
+*/
+$navbar-font-size: 1rem !default;
+/*
+{
+  "var"  : "@navbar-brand-font-size",
+  "name" : "Font Size - Logo",
+  "type" : "number",
+  "units": "rem",
+  "range": {
+    "min": 1,
+    "max": 3,
+    "increment": 0.2
+  },
+  "group": "Top Navigation"
 }
 */
 $navbar-brand-font-size: 2.1rem !default;
 
-/* 14. Side Navigation
-   ========================================================================== */
+/* ===============================================================
+End Top Navigation
+=============================================================== */
+
+/* ===============================================================
+12- Side Navigation
+ ============================================================== */
 
 /*
 {
  "var" : "@sidenav-header-text-color",
- "name" : "Sidenav Header Text Color",
+ "name" : "Header Text",
  "type" : "color",
  "group": "Side Navigation"
 }
@@ -972,7 +855,7 @@ $sidenav-header-text-color: #fff !default;
 /*
 {
  "var"  : "@sidenav-width",
- "name" : "Sidenav Width",
+ "name" : "Width",
  "type" : "number",
  "units": "px",
  "range": {
@@ -988,153 +871,108 @@ $sidenav-font-size: 14px !default;
 /*
 {
   "var" : "@sidenav-font-color",
-  "name" : "Sidenav Font Color",
+  "name" : "Background",
   "type" : "color",
-  "group": "Side Navigation"
+  "group": "Side Navigation",
+  "subgroup": "Menu Colors"
 }
 */
 $sidenav-font-color: rgba(0,0,0,.87) !default;
 /*
 {
   "var" : "@sidenav-bg-color",
-  "name" : "Sidenav Background Color",
+  "name" : "Text",
   "type" : "color",
-  "group": "Side Navigation"
+  "group": "Side Navigation",
+  "subgroup": "Menu Colors"
 }
 */
 $sidenav-bg-color: #fff !default;
-/*
-{
-  "var"  : "@sidenav-padding",
-  "name" : "Navbar Padding",
-  "type" : "number",
-  "units": "px",
-  "range": {
-    "min": 1,
-    "max": 30,
-    "increment": 1
-  },
-  "group": "Navigation Bar"
-}
-*/
 $sidenav-padding: 16px !default;
-/*
-{
-  "var"  : "@sidenav-item-height",
-  "name" : "Navbar Item Height",
-  "type" : "number",
-  "units": "px",
-  "range": {
-    "min": 1,
-    "max": 100,
-    "increment": 1
-  },
-  "group": "Navigation Bar"
-}
-*/
 $sidenav-item-height: 48px !default;
 $sidenav-line-height: $sidenav-item-height !default;
 
+/* ===============================================================
+End Side Navigation
+=============================================================== */
 
-/* 15. Photo Slider
-   ========================================================================== */
+/* ===============================================================
+13- Slider
+ ============================================================== */
 /*
 {
   "var" : "@slider-bg-color",
-  "name" : "Slider Background Color",
+  "name" : "Background",
   "type" : "color",
-  "group": "Photo Slider"
+  "group": "Slider",
+  "subgroup": "Colors"
 }
 */
 $slider-bg-color: #9e9e9e;
-/*
-{
-  "var" : "@slider-bg-color-light",
-  "name" : "Slider Background Light Color",
-  "type" : "color",
-  "group": "Photo Slider"
-}
-*/
-$slider-bg-color-light: #e0e0e0;
+$slider-bg-color-light: lighten($slider-bg-color, 20%);
 /*
 {
   "var" : "@slider-indicator-color",
-  "name" : "Slider Indicator Color",
+  "name" : "Text",
   "type" : "color",
-  "group": "Photo Slider"
+  "group": "Slider",
+  "subgroup": "Colors"
 }
 */
 $slider-indicator-color: #4CAF50;
 
+/* ===============================================================
+End Slider
+=============================================================== */
 
-/* 16. Spinners | Loaders
-   ========================================================================== */
+/* ===============================================================
+Spinner
+ ============================================================== */
 
 $spinner-default-color: $secondary-color !default;
 
+/* ===============================================================
+End Spinner
+=============================================================== */
 
-/* 17. Tabs
-   ========================================================================== */
+/* ===============================================================
+14- Tab
+ ============================================================== */
 
-/*
-{
-"var" : "@tabs-underline-color",
-"name" : "Tabs Underline Color",
-"type" : "color",
-"group": "Tabs"
-}
-*/
-$tabs-underline-color: $primary-color-light !default;
 /*
 {
  "var" : "@tabs-text-color",
- "name" : "Tabs Text Color",
+ "name" : "Background",
  "type" : "color",
- "group": "Tabs"
+ "group": "Tab",
+ "subgroup": "Colors"
 }
 */
 $tabs-text-color: $primary-color !default;
+$tabs-underline-color: lighten($tabs-text-color, 15%) !default;
 /*
 {
  "var" : "@tabs-bg-color",
- "name" : "Tabs Background Color",
+ "name" : "Text",
  "type" : "color",
- "group": "Tabs"
+ "group": "Tab",
+ "subgroup": "Colors"
 }
 */
 $tabs-bg-color: #fff !default;
 
+/* ===============================================================
+End Tab
+=============================================================== */
 
-/* 18. Tables
-   ========================================================================== */
-
-/*
-{
-"var" : "@table-border-color",
-"name" : "Table Border Color",
-"type" : "color",
-"group": "Tables"
-}
-*/
-$table-border-color: #d0d0d0 !default;
-/*
-{
- "var" : "@table-striped-color",
- "name" : "Table Striped & Hover Color",
- "type" : "color",
- "group": "Tables"
-}
-*/
-$table-striped-color: #f2f2f2 !default;
-
-
-/* 19. Toasts
-   ========================================================================== */
+/* ===============================================================
+15- Toast
+ ============================================================== */
 
 /*
 {
  "var"  : "@toast-height",
- "name" : "Toast Height",
+ "name" : "Height",
  "type" : "number",
  "units": "px",
  "range": {
@@ -1142,33 +980,39 @@ $table-striped-color: #f2f2f2 !default;
    "max": 100,
    "increment": 1
  },
- "group": "Toasts"
+ "group": "Toast"
 }
 */
 $toast-height: 48px !default;
 /*
 {
 "var" : "@toast-color",
-"name" : "Toast Color",
+"name" : "Background",
 "type" : "color",
-"group": "Toasts"
+"group": "Toast",
+"subgroup": "Colors"
 }
 */
 $toast-color: #323232 !default;
 /*
 {
 "var" : "@toast-text-color",
-"name" : "Toast Text Color",
+"name" : "Text",
 "type" : "color",
-"group": "Toasts"
+"group": "Toast",
+"subgroup": "Colors"
 }
 */
 $toast-text-color: #fff !default;
 $toast-action-color: #eeff41;
 
+/* ===============================================================
+End Toast
+=============================================================== */
 
-/* 20. Typography
-   ========================================================================== */
+/* ===============================================================
+Typography
+ ============================================================== */
 
 $off-black: rgba(0, 0, 0, 0.87) !default;
 // Header Styles
@@ -1179,14 +1023,18 @@ $h4-fontsize: 2.28rem !default;
 $h5-fontsize: 1.64rem !default;
 $h6-fontsize: 1rem !default;
 
+/* ===============================================================
+End Typography
+=============================================================== */
 
-/* 21. Footer
-   ========================================================================== */
+/* ===============================================================
+16- Footer
+ ============================================================== */
 
 /*
 {
    "var"  : "@footer-font-size",
-   "name" : "Footer Font Size",
+   "name" : "Font Size",
    "type" : "number",
    "units": "rem",
        "range": {
@@ -1200,66 +1048,81 @@ $h6-fontsize: 1rem !default;
 $footer-font-size: 1.0rem !default;
 /*
 {
-"var" : "@footer-font-color",
-"name" : "Footer Font Color",
+"var" : "@footer-bg-color",
+"name" : "Background",
 "type" : "color",
-"group": "Footer"
+"group": "Footer",
+"subgroup": "Top"
+}
+*/
+$footer-bg-color: $primary-color !default;
+/*
+{
+"var" : "@footer-font-color",
+"name" : "Text",
+"type" : "color",
+"group": "Footer",
+"subgroup": "Top"
 }
 */
 $footer-font-color: #fff !default;
 /*
 {
-"var" : "@footer-bg-color",
-"name" : "Footer Background Color",
-"type" : "color",
-"group": "Footer"
-}
-*/
-$footer-bg-color: $primary-color !default;/*
-{
-"var" : "@footer-copyright-font-color",
-"name" : "Footer Copyright Font Color",
-"type" : "color",
-"group": "Footer"
-}
-*/
-$footer-copyright-font-color: rgba(255,255,255,.8) !default;/*
-{
 "var" : "@footer-copyright-bg-color",
-"name" : "Footer Copyright Background Color",
+"name" : "Background",
 "type" : "color",
-"group": "Footer"
+"group": "Footer",
+"subgroup": "Bottom"
 }
 */
 $footer-copyright-bg-color: rgba(51,51,51,.08) !default;
+/*
+{
+"var" : "@footer-copyright-font-color",
+"name" : "Text",
+"type" : "color",
+"group": "Footer",
+"subgroup": "Bottom"
+}
+*/
+$footer-copyright-font-color: rgba(255,255,255,.8) !default;
 
+/* ===============================================================
+End Footer
+=============================================================== */
 
-/* 22. Flow Text
-   ========================================================================== */
+/* ===============================================================
+Responsive Text
+ ============================================================== */
 
 $range : $large-screen - $small-screen !default;
 $intervals: 20 !default;
 $interval-size: $range / $intervals !default;
 
+/* ===============================================================
+End Responsive Text
+=============================================================== */
 
-/* 23. Collections
-   ========================================================================== */
+/* ===============================================================
+17- Collection
+ ============================================================== */
 
 /*
 {
 "var" : "@collection-border-color",
-"name" : "Collection Border Color",
+"name" : "Border",
 "type" : "color",
-"group": "Collections"
+"group": "Collection"
 }
 */
 $collection-border-color: #e0e0e0 !default;
 /*
 {
 "var" : "@collection-bg-color",
-"name" : "Collection Background Color",
+"name" : "Background",
 "type" : "color",
-"group": "Collections"
+"group": "Collection",
+"subgroup": "Collection Colors"
 }
 */
 $collection-bg-color: #fff !default;
@@ -1269,16 +1132,17 @@ $collection-hover-bg-color: #ddd !default;
 /*
 {
 "var" : "@collection-link-color",
-"name" : "Collection Link Color",
+"name" : "Text",
 "type" : "color",
-"group": "Collections"
+"group": "Collection",
+"subgroup": "Collection Colors"
 }
 */
 $collection-link-color: $secondary-color !default;
 /*
 {
   "var"  : "@collection-line-height",
-  "name" : "Collection Line Height",
+  "name" : "Line Height",
   "type" : "number",
   "units": "rem",
   "range": {
@@ -1286,56 +1150,60 @@ $collection-link-color: $secondary-color !default;
     "max": 5,
     "increment": 0.1
   },
-  "group": "Collections"
+  "group": "Collection"
 }
 */
 $collection-line-height: 1.5rem !default;
 
+/* ===============================================================
+End Collection
+=============================================================== */
 
-/* 24. Progress Bar
-   ========================================================================== */
+/* ===============================================================
+Progress
+ ============================================================== */
 
 $progress-bar-color: $secondary-color !default;
 
+/* ===============================================================
+End Progress
+=============================================================== */
 
-/* 25. Modals
-   ========================================================================== */
+/* ===============================================================
+18- Modal
+ ============================================================== */
 
 /*
    {
    "var": "@modal-background-color",
-   "name": "Modal Background",
+   "name": "Background",
    "type": "color",
-   "group": "Modals"
+   "group": "Modal"
 }
 */
 $modal-background-color: #fafafa;
 /*
 {
    "var": "@modal-header-text",
-   "name": "Modal Header Text",
+   "name": "Header",
    "type": "color",
-   "group": "Modals",
-   "subgroup": "Modal Header"
+   "group": "Modal",
+   "subgroup": "Header"
 }
 */
 $modal-header-text: #3d3d3d;
 /*
 {
    "var": "@modal-header-background",
-   "name": "Modal Header Background",
+   "name": "Header",
    "type": "color",
-   "group": "Modals",
-   "subgroup": "Modal Header"
+   "group": "Modal",
+   "subgroup": "Header"
 }
 */
 $modal-header-background: $modal-background-color;
-/*
-{
-   "var": "@modal-background-footer",
-   "name": "Modal Footer Background",
-   "type": "color",
-   "group": "Modals"
-}
-*/
 $modal-background-footer: $modal-background-color;
+
+/* ===============================================================
+End Modal
+=============================================================== */
