@@ -1,6 +1,7 @@
 # Material APEX
 
-[![npm](https://img.shields.io/npm/v/material-apex.svg)](https://www.npmjs.com/package/material-apex) [![Build Status](https://travis-ci.org/vincentmorneau/material-apex.svg?branch=master)](https://travis-ci.org/vincentmorneau/material-apex) [![Dependency Status](https://david-dm.org/vincentmorneau/material-apex.svg)](https://david-dm.org/vincentmorneau/material-apex) [![Greenkeeper badge](https://badges.greenkeeper.io/vincentmorneau/material-apex.svg)](https://greenkeeper.io/)
+[![npm](https://img.shields.io/npm/v/material-apex.svg)](https://www.npmjs.com/package/material-apex) [![Build Status](https://travis-ci.org/vincentmorneau/material-apex.svg?branch=master)](https://travis-ci.org/vincentmorneau/material-apex) [![Dependency Status](https://david-dm.org/vincentmorneau/material-apex.svg)](https://david-dm.org/vincentmorneau/material-apex) [![APEX Theme](https://cdn.rawgit.com/Dani3lSun/apex-github-badges/b7e95341/badges/apex-theme-badge.svg)](https://cdn.rawgit.com/Dani3lSun/apex-github-badges)
+
 
 ![banner](/docs/img/banner.png)
 
