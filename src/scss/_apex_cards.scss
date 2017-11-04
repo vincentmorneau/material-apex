@@ -54,3 +54,12 @@
 .ma-card-hoverable > .ma-card-col > .card {
 	@extend .hoverable;
 }
+
+// Fixing Card margin
+.card .card-content .card-title {
+	margin-bottom: 0;
+}
+
+.card .ma-region-body:not(:empty) {
+	margin-top: 8px;
+}
