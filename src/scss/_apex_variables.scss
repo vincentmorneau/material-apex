@@ -764,6 +764,26 @@ End Grid
 
 /*
 {
+	"var" : "@navbar-bg-color",
+	"name" : "Background",
+	"type" : "color",
+	"group": "Top Navigation",
+	"subgroup": "Colors"
+}
+*/
+$navbar-bg-color: $primary-color !default;
+/*
+{
+	"var" : "@navbar-font-color",
+	"name" : "Text",
+	"type" : "color",
+	"group": "Top Navigation",
+	"subgroup": "Colors"
+}
+*/
+$navbar-font-color: #fff !default;
+/*
+{
  "var"  : "@navbar-height",
  "name" : "Height",
  "type" : "number",
@@ -796,22 +816,13 @@ $navbar-height-mobile: 56px !default;
 $navbar-line-height-mobile: $navbar-height-mobile !default;
 /*
 {
-  "var" : "@navbar-font-color",
-  "name" : "Font Color",
-  "type" : "color",
-  "group": "Top Navigation"
-}
-*/
-$navbar-font-color: #fff !default;
-/*
-{
   "var"  : "@navbar-font-size",
   "name" : "Font Size - Menu Entries",
   "type" : "number",
   "units": "rem",
   "range": {
-    "min": 1,
-    "max": 3,
+    "min": 0.2,
+    "max": 2,
     "increment": 0.2
   },
   "group": "Top Navigation"
@@ -821,11 +832,11 @@ $navbar-font-size: 1rem !default;
 /*
 {
   "var"  : "@navbar-brand-font-size",
-  "name" : "Font Size - Logo",
+  "name" : "Font Size - Title",
   "type" : "number",
   "units": "rem",
   "range": {
-    "min": 1,
+    "min": 0.2,
     "max": 3,
     "increment": 0.2
   },
@@ -870,24 +881,24 @@ $sidenav-width: 300px !default;
 $sidenav-font-size: 14px !default;
 /*
 {
-  "var" : "@sidenav-font-color",
+  "var" : "@sidenav-bg-color",
   "name" : "Background",
   "type" : "color",
   "group": "Side Navigation",
   "subgroup": "Menu Colors"
 }
 */
-$sidenav-font-color: rgba(0,0,0,.87) !default;
+$sidenav-bg-color: #fff !default;
 /*
 {
-  "var" : "@sidenav-bg-color",
+  "var" : "@sidenav-font-color",
   "name" : "Text",
   "type" : "color",
   "group": "Side Navigation",
   "subgroup": "Menu Colors"
 }
 */
-$sidenav-bg-color: #fff !default;
+$sidenav-font-color: rgba(0,0,0,.87) !default;
 $sidenav-padding: 16px !default;
 $sidenav-item-height: 48px !default;
 $sidenav-line-height: $sidenav-item-height !default;
@@ -1184,24 +1195,24 @@ End Progress
 $modal-background-color: #fafafa;
 /*
 {
-   "var": "@modal-header-text",
-   "name": "Header",
-   "type": "color",
-   "group": "Modal",
-   "subgroup": "Header"
-}
-*/
-$modal-header-text: #3d3d3d;
-/*
-{
    "var": "@modal-header-background",
-   "name": "Header",
+   "name": "Background",
    "type": "color",
    "group": "Modal",
    "subgroup": "Header"
 }
 */
 $modal-header-background: $modal-background-color;
+/*
+{
+   "var": "@modal-header-text",
+   "name": "Text",
+   "type": "color",
+   "group": "Modal",
+   "subgroup": "Header"
+}
+*/
+$modal-header-text: #3d3d3d;
 $modal-background-footer: $modal-background-color;
 
 /* ===============================================================

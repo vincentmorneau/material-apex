@@ -9,17 +9,22 @@ nav .search-nav-wrapper .input-field label.active {
     @extend .navbar-fixed;
 }
 
+nav {
+	background-color: $navbar-bg-color;
+	color: $navbar-font-color;
+}
+
 nav ul a {
-    display: inline-block;
+	display: inline-block;
 }
 
 nav .nav-wrapper i {
-	font-size: 2rem!important;
+	font-size: ($navbar-font-size * 2)!important;
 }
 
 @media #{$medium-and-up} {
-  	nav .nav-wrapper i {
-		font-size: 2.7rem!important;
+	nav .nav-wrapper i {
+		font-size: ($navbar-font-size * 2.5)!important;
 	}
 }
 
