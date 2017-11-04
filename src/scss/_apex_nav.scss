@@ -40,7 +40,9 @@ nav .nav-wrapper i {
 .navbar-list .dropdown-content {
     li, a, i, span {
         height: $navbar-height-mobile;
-        line-height: ($navbar-height-mobile / 2);
+        line-height: $navbar-height-mobile;
+		padding-top: 0;
+		padding-bottom: 0;
     }
 }
 
@@ -48,7 +50,7 @@ nav .nav-wrapper i {
 	.navbar-list .dropdown-content {
 		li, a, i, span {
 			height: $navbar-height;
-			line-height: ($navbar-height / 2);
+			line-height: $navbar-height;
 		}
 	}
 }
