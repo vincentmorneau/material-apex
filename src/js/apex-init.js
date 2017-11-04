@@ -203,8 +203,9 @@ materialAPEX.initial = {
 		$(".s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10,.s11").removeClass("s12");
 
 		// Deletes empty html tags
+		$('.ma-region-title:not(:visible)').remove();
 		$('.card-content, .card-action, span.badge, i.material-icons, .ma-button-label').removeEmpty();
-		$('.ma-region-buttons').removeEmptySpaces();
+		$('.ma-region-buttons, .ma-region-header').removeEmptySpaces();
 
 		// Support for APEX 5.1 item icons
 		$(".apex-item-icon").each(function(index) {

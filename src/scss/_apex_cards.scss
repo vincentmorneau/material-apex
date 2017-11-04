@@ -60,6 +60,7 @@
 	margin-bottom: 0;
 }
 
-.card .ma-region-body:not(:empty) {
-	margin-top: 8px;
+.card .ma-region-header ~ .ma-region-body:not(:empty)
+, .card .card-content .card-title:not(:empty) + p {
+	margin-top: 1rem;
 }
