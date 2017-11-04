@@ -1,5 +1,22 @@
 ## Changelog
 
+#### v0.12.1
+- New features
+	- [**Two new Theme Styles**](https://github.com/vincentmorneau/material-apex/issues/279#issuecomment-341931568)
+		- Skyrocket
+		- Marine
+	- [AnimAPEX](http://animapex.com/) is now bundled with Material APEX
+- Enhancements
+	- Better and cleaner theme roller attribute structure
+	- Navbar items now follows the line height of it's container
+	- New "Depth 0" template options to all regions and buttons
+- Bug fixes
+	- Create a new theme style no longer shows a failed resource loading
+	- Renders iFrames correctly
+	- Renders card padding better
+	- Fixed an issue where page template options were not selectable
+- More documentation enhancements...
+
 #### v0.12.0
 - Breaking changes
 	- Button standard is now split into 3 different templates like UT (text, icon, text with icon)
