@@ -244,9 +244,12 @@ materialAPEX.initial = {
 		});
 
 		$(".fixed-action-btn ul li .btn-floating").each(function() {
-			$(this)
-				.attr("data-tooltip", $(this).find(".ma-button-label").text() || $(this).attr("title"))
-				.attr("data-position", "left");
+			var buttonText = ($(this).find(".ma-button-label").text() || $(this).attr("title")).trim();
+			if (buttonText !== '') {
+				$(this)
+					.attr("data-tooltip", buttonText)
+					.attr("data-position", "left");
+			}
 		});
 
 		$("div.fab-absolute").parent().addClass("fab-relative");
