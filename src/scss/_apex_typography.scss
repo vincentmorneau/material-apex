@@ -1,4 +1,10 @@
 /* Text Size */
+// Default
+.ma-region > .ma-flex-content > .ma-region-header .ma-region-title {
+	font-size: $h2-fontsize;
+	font-weight: 300;
+}
+
 .ma-text-size-responsive .display_only {
 	@extend .flow-text;
 }
