@@ -27,12 +27,7 @@
 			}
 
 			.a-IRR-controlGroup--search {
-				.a-IRR-colSelector {
-					@include ma-s2;
-				}
-
 				.a-IRR-searchFieldContainer {
-					@include ma-s10;
 					margin-top: 0;
 
 					.a-IRR-search-field {
@@ -40,10 +35,6 @@
 						margin-left: 0.5rem;
 						width: calc(100% - 1rem);
 					}
-				}
-
-				.a-IRR-searchButtonContainer {
-					@include hide;
 				}
 			}
 
