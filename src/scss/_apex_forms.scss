@@ -159,10 +159,15 @@ span.ma-error-message {
 .input-field .prefix ~ .display_only {
 	margin-left: 3rem;
 }
+
 /* No Label */
-.item-no-label > label {
-	visibility: hidden!important;
+.item-no-label {
+	// hides regular input & fieldset labels
+	& > label, fieldset > label {
+		@include hide;
+	}
 }
+
 /* Switches */
 .switch label {
 	position: relative;
