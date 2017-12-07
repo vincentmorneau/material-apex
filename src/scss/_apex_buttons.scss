@@ -11,6 +11,11 @@
 	padding: 0 1rem;
 }
 
+// Spacing around Buttons
+.ma-button {
+    margin: 4px 2px;
+}
+
 // Fixed Action Button
 .fab-relative {
 	position: relative;
@@ -69,7 +74,7 @@
 				height: 100%;
 				transition: none;
 
-				button {
+				button, a {
 					display: block;
 					overflow: hidden;
 					position: relative;
@@ -80,6 +85,7 @@
 					color: #fff;
 					line-height: $button-floating-large-size;
 					z-index: 1;
+					margin: 0;
 
 					i {
 						line-height: inherit;
