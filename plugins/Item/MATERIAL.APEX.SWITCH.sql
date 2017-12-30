@@ -9,6 +9,7 @@ function render (
 
 	l_disabled varchar2(15);
 	l_checked varchar2(15);
+	l_id_suffix varchar2(15);
 
 	/* Global variables */
 	l_result apex_plugin.t_page_item_render_result;
@@ -37,6 +38,9 @@ begin
 			, p_is_printer_friendly => p_is_printer_friendly
 		);
 
+		l_result.is_navigable := false;
+
+		l_id_suffix := '_DISPLAY';
 		l_disabled := ' disabled ';
 	end if;
 
@@ -48,7 +52,7 @@ begin
 		|| '<label>'
 		|| l_off_label
 		|| '<input type="checkbox"'
-			|| ' id="' || p_item.name || '"'
+			|| ' id="' || p_item.name || l_id_suffix || '"'
 			|| ' class="' || p_item.element_css_classes || '"'
 			|| ' name="' || apex_plugin.get_input_name_for_page_item(false) || '"'
 			|| ' value="' || l_on_value || '"'
