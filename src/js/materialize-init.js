@@ -143,16 +143,18 @@ materialAPEX.ig = {
  * @module select
  **/
 materialAPEX.select = {
+	noInit: '.disabled, .shuttle_left, .shuttle_right, .datetimepicker_newMonth',
+
 	init: function() {
 		materialAPEX.debug.time("materialAPEX.select.init");
-		$('form select').not('.disabled, .shuttle_left, .shuttle_right').material_select();
+		$('form select').not(materialAPEX.select.noInit).material_select();
 		$('.select-wrapper').closest(".ma-field-container").addClass("ma-select-container");
 		materialAPEX.debug.timeEnd("materialAPEX.select.init");
 	},
 
 	ir: function() {
 		materialAPEX.debug.time("materialAPEX.select.ir");
-		$('.a-IRR select').not('.disabled').material_select();
+		$('.a-IRR select').not(materialAPEX.select.noInit).material_select();
 		materialAPEX.debug.timeEnd("materialAPEX.select.ir");
 	},
 
@@ -193,7 +195,7 @@ materialAPEX.datepicker = {
 			var month = $.datepicker.formatDate('MM', date);
 			var dayNum = $.datepicker.formatDate('d', date);
 			var year = $.datepicker.formatDate('yy', date);
-			$('.ui-datepicker select').material_select();
+			$('.ui-datepicker select').not(materialAPEX.select.noInit).material_select();
 			$(".ui-datepicker .ui-datepicker-material-header").remove();
 			$(".ui-datepicker").prepend(headerHtml(day, month, dayNum, year));
 		};
@@ -203,6 +205,11 @@ materialAPEX.datepicker = {
 				materialDatePicker();
 			}, 1);
 		}).next(".ui-datepicker-trigger").addClass("a-Button a-Button--calendar");
+
+		// fixes the unwanted jumping around the datepicker...
+		$(".hasDatepicker").datepicker("option", "onSelect", function() {
+			$(".ui-datepicker a").removeAttr("href");
+		})
 
 		$(document).on("focus", ".hasDatepicker", function() {
 			materialDatePicker();
