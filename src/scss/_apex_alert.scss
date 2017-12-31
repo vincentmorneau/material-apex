@@ -1,23 +1,23 @@
 .ma-alert {
-    display: table;
-    width: 100%;
+	display: table;
+	width: 100%;
 
-    .ma-alert-icon {
-        display: table-cell;
-        width: 5%;
-        vertical-align: middle;
-    }
+	.ma-alert-icon {
+		display: table-cell;
+		width: 5%;
+		vertical-align: middle;
+	}
 
-    .ma-alert-content {
-        display: table-cell;
-        width: 90%;
-        vertical-align: middle;
-    }
+	.ma-alert-content {
+		display: table-cell;
+		width: 90%;
+		vertical-align: middle;
+	}
 
-    .ma-alert-close {
-        display: table-cell;
-        width: 5%;
-        vertical-align: middle;
-        text-align: right;
-    }
+	.ma-alert-close {
+		display: table-cell;
+		width: 5%;
+		vertical-align: middle;
+		text-align: right;
+	}
 }
