@@ -1,23 +1,79 @@
-.ma-alert {
-	display: table;
-	width: 100%;
+#ma-notification-container {
+	@extend #toast-container;
+	max-width:none;
+	z-index: 999;
+}
 
-	.ma-alert-icon {
-		display: table-cell;
-		width: 5%;
-		vertical-align: middle;
+@media #{$medium-and-up} {
+	#ma-notification-container {
+		top: 1.6rem;
+		right: 1.6rem;
+		left: auto;
+		bottom: auto;
 	}
 
-	.ma-alert-content {
-		display: table-cell;
-		width: 90%;
-		vertical-align: middle;
+	.t-Alert--page {
+		max-width: 50rem;
+		min-width: 20rem;
+	}
+}
+
+.t-Alert {
+	@include z-depth-1;
+
+	&.t-Alert--horizontal .t-Alert-wrap {
+		padding: 0;
 	}
 
-	.ma-alert-close {
-		display: table-cell;
-		width: 5%;
-		vertical-align: middle;
-		text-align: right;
+	&.t-Alert--page .t-Alert-icon {
+		padding: 16px 0 16px 16px;
+	}
+
+	.t-Alert-header {
+		padding: 20px;
+	}
+
+	&.t-Alert--page .t-Alert-title, &.t-Alert--page .a-Notification-title {
+		font-size: 1.3rem;
+		line-height: 1.3rem;
+	}
+
+	&.t-Alert--page .t-Button--closeAlert {
+		position: static;
+		margin-right: 1rem;
+	}
+
+	.t-Alert-buttons button {
+		padding: 0;
+	}
+
+	&.t-Alert--page .a-Notification-list {
+		font-size: 1rem;
+	}
+}
+
+.t-Alert--success {
+	background-color: $success-color;
+	color: $success-color-text;
+
+	.t-Alert-buttons button {
+		color: $success-color-text;
+	}
+}
+
+.t-Alert--warning {
+	background-color: $warning-color;
+	color: $warning-color-text;
+
+	&.t-Alert--page .t-Alert-icon {
+		color: darken($warning-color, 40%);
+	}
+
+	&.t-Alert--page .a-Notification-list {
+		color: lighten($warning-color-text, 30%);
+	}
+
+	.t-Alert-buttons button {
+		color: $warning-color-text;
 	}
 }

@@ -133,12 +133,43 @@ $secondary-color: #EF5350;
 /*
 {
     "var": "@success-color",
-    "name": "Success",
+    "name": "Background",
     "type": "color",
-    "group": "Global"
+    "group": "Global",
+    "subgroup": "Success"
 }
 */
-$success-color: #4CAF50;
+$success-color: #81c784;
+/*
+{
+    "var": "@success-color-text",
+    "name": "Text",
+    "type": "color",
+    "group": "Global",
+    "subgroup": "Success"
+}
+*/
+$success-color-text: #fff;
+/*
+{
+    "var": "@warning-color",
+    "name": "Warning",
+    "type": "color",
+    "group": "Global",
+    "subgroup": "Warning"
+}
+*/
+$warning-color: #fef7e0;
+/*
+{
+    "var": "@warning-color-text",
+    "name": "Text",
+    "type": "color",
+    "group": "Global",
+    "subgroup": "Warning"
+}
+*/
+$warning-color-text: #303030;
 /*
 {
     "var": "@error-color",

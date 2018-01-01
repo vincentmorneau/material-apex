@@ -32,11 +32,11 @@
 #REGION_POSITION_01#
 
 <div class="ma-main-container m-t-3">
-	#GLOBAL_NOTIFICATION#
-	#SUCCESS_MESSAGE#
-	#NOTIFICATION_MESSAGE#
+#BODY#
+</div>
 
-	#BODY#
+<div id="ma-notification-container">
+#SUCCESS_MESSAGE##NOTIFICATION_MESSAGE##GLOBAL_NOTIFICATION#
 </div>
 
 #FORM_CLOSE#
@@ -58,28 +58,41 @@
 {{/footer_template}}
 
 {{#success_message}}
-<div id="toast-container">
-	<div class="toast velocity-animating green lighten-2">
-		#SUCCESS_MESSAGE#
-		<i class="ma-toast-close material-icons right">close</i>
-	</div>
+<div class="t-Body-alert">
+  <div class="t-Alert t-Alert--defaultIcons t-Alert--success t-Alert--horizontal t-Alert--page t-Alert--colorBG" id="t_Alert_Success" role="alert">
+    <div class="t-Alert-wrap">
+      <div class="t-Alert-icon">
+  		<i class="material-icons">check</i>
+      </div>
+      <div class="t-Alert-content">
+        <div class="t-Alert-header">
+          <span class="t-Alert-title">#SUCCESS_MESSAGE#</span>
+        </div>
+      </div>
+      <div class="t-Alert-buttons">
+        <button class="t-Button t-Button--noUI t-Button--icon t-Button--closeAlert btn-flat" type="button" title="#CLOSE_NOTIFICATION#"><i class="panel-close material-icons">close</i></button>
+      </div>
+    </div>
+  </div>
 </div>
 {{/success_message}}
 {{#message}}
-<div class="row m-b-0">
-	<div class="col s12">
-		<div class="ma-alert card-panel yellow lighten-4 grey-text text-darken-1">
-			<div class="ma-alert-icon p-r-1">
-				<i class="material-icons">warning</i>
-			</div>
-			<div class="ma-alert-content">
-				#MESSAGE#
-			</div>
-			<div class="ma-alert-close p-l-1">
-				<i class="panel-close material-icons">close</i>
-			</div>
-		</div>
-	</div>
+<div class="t-Body-alert">
+  <div class="t-Alert t-Alert--defaultIcons t-Alert--warning t-Alert--horizontal t-Alert--page" id="t_Alert_Success" role="alert">
+    <div class="t-Alert-wrap">
+      <div class="t-Alert-icon">
+  		<i class="material-icons">warning</i>
+      </div>
+      <div class="t-Alert-content">
+        <div class="t-Alert-header">
+          <span class="t-Alert-title">#MESSAGE#</span>
+        </div>
+      </div>
+      <div class="t-Alert-buttons">
+        <button class="t-Button t-Button--noUI t-Button--icon t-Button--closeAlert btn-flat" type="button" title="#CLOSE_NOTIFICATION#"><i class="panel-close material-icons">close</i></button>
+      </div>
+    </div>
+  </div>
 </div>
 {{/message}}
 
