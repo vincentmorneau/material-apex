@@ -1,0 +1,92 @@
+{
+	"mode": "advanced",
+	"appURL": "CHANGEME_URL/f?p=12192:1",
+	"srcFolder": "CHANGE_ME_PATH/material-apex/src",
+	"distFolder": "CHANGE_ME_PATH/material-apex/dist",
+	"js": {
+		"processor": "default",
+		"concat": false,
+		"library": false,
+		"tsConcat": false
+	},
+	"css": {
+		"language": "sass",
+		"concat": false,
+		"sassIncludePath": "CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass"
+	},
+	"browsersync": {
+		"notify": true,
+		"ghostMode": false
+	},
+	"header": {
+		"enabled": true,
+		"packageJsonPath": "CHANGE_ME_PATH/material-apex/package.json"
+	},
+	"apex": {
+		"openBuilder": true
+	},
+	"publish": {
+		"destination": "theme",
+		"path": "sql",
+		"connectionType": "basic"
+	},
+	"themeroller": {
+		"files": [
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_variables.scss",
+			"CHANGE_ME_PATH/material-apex/src/less/_apex_variables.less",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_mixins.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_global.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_navbar.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_cards.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_toast.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_tabs.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_tooltip.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_buttons.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_dropdown.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_waves.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_modal.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_collapsible.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_chips.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_materialbox.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/forms/_input-fields.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/forms/_radio-buttons.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/forms/_checkboxes.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/forms/_switches.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/forms/_select.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/forms/_file-input.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/forms/_range.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_sideNav.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_preloader.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_slider.scss",
+			"CHANGE_ME_PATH/material-apex/node_modules/materialize-css/sass/components/_carousel.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_buttons.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_global.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_cards.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_code.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_collapsible.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_collections.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_datepicker.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_demo.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_dropdown.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_forms.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_grid.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_icons.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_ir.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_materialbox.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_media.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_modal.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_nav.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_pagination.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_preloader.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_promo.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_sidenav.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_table.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_tabs.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_tabular_form.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_themeroller.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_toasts.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_typography.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_footer.scss"
+		]
+	}
+}

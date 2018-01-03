@@ -14,6 +14,9 @@ Import **empty-app.sql** or **demo-app.sql** from the [latest release](https://g
 ## Update
 [See documentation](docs/update.md)
 
+## Contribute
+[Learn how to build this project yourself and contribute](contributing.md).
+
 ## Changelog
 [See complete changelog](changelog.md).
 
