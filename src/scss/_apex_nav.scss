@@ -38,8 +38,15 @@ nav .nav-wrapper i {
 	}
 }
 
-.page-center-logo .brand-logo {
+.page-center-logo nav .brand-logo {
 	@extend .center;
+}
+
+@media #{$small-and-down} {
+	.page-center-logo nav .brand-logo {
+		left: auto;
+		transform: none;
+	}
 }
 
 .navbar-list .dropdown-content {
