@@ -12,7 +12,7 @@ As a user of Material APEX you're the perfect candidate to help us improve our d
 - Ensure you're using the latest version of Material APEX.
 - Use a clear and descriptive title.
 - Include as much information as possible: Steps to reproduce the issue, error message, screenshots, etc.
-- The more time you put into an issue, the more we will.
+- The more time you put into an issue, the more we will drill.
 
 ### Pull Requests
 This means actual code contributions.
@@ -44,7 +44,7 @@ Material APEX is built using [APEX Nitro](https://github.com/OraOpenSource/apex-
    npm install
    ```
 
-4. Download the APEX Nitro [configuration file](material-apex.json)
+4. Download the APEX Nitro [configuration file](/apex-nitro/material-apex.json)
 
 	a. Search and replace all occurrences of `CHANGE_ME_PATH` to the path from step 1
 
