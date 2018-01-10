@@ -1,10 +1,26 @@
 // Icons
-.icon-float-left i {
-	@extend .left;
+.icon-float-left {
+	// left icon
+	i:first-child {
+		margin-right: 0.5rem;
+		vertical-align: top;
+	}
+	// right icon
+	.ma-button-label + i {
+		@include hide;
+	}
 }
 
-.icon-float-right i {
-	@extend .right;
+.icon-float-right {
+	// left icon
+	i:first-child {
+		@include hide;
+	}
+	// right icon
+	.ma-button-label + i {
+		margin-left: 0.5rem;
+		vertical-align: top;
+	}
 }
 
 .ma-button-icon:not(.btn-floating) {
