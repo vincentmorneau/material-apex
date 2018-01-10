@@ -32,6 +32,23 @@
 				}
 			}
 
+			.a-Toolbar-radioGroup {
+				label.a-Button {
+					&:before, &:after {
+						@include hide;
+					}
+
+					&.is-active {
+						color: $primary-color;
+					}
+
+					.a-Icon {
+						height: $input-height;
+						line-height: $input-height;
+					}
+				}
+			}
+
 			input.a-Toolbar-input {
 				&.a-Toolbar-inputText {
 					width: auto;
