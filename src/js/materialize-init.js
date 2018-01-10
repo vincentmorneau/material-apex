@@ -287,7 +287,7 @@ materialAPEX.materialize = {
 
 		/* Dropdown */
 		$('.dropdown-button').dropdown({
-			hover: false // Activate on click
+			constrainWidth: false
 		});
 
 		/* Media */
