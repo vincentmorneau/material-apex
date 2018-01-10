@@ -1,11 +1,13 @@
-.a-Button.a-Button--calendar {
-	margin-left: -32px;
+.ui-datepicker-trigger {
+	margin-left: -32px!important;
 	background-color: transparent;
 	border: none;
 	box-shadow: none;
+	padding: 4px 8px;
+	line-height: 12px;
 }
 
-.a-IG .a-Button.a-Button--calendar {
+.a-IG .ui-datepicker-trigger {
 	margin-left: -1px;
 }
 

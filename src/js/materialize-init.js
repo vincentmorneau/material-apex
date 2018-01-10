@@ -182,6 +182,22 @@ materialAPEX.datepicker = {
 		if (!classExists("hasDatepicker")) return;
 		materialAPEX.debug.time("materialAPEX.datepicker.init");
 
+		/**
+		* Because we modify the datepicker options below, we need to override
+		* the constructor. For some reason, _showDatepicker is passed a jQuery
+		* event instead of the actual input, so we have to check that.
+		* If the argument is indeed a jQuery event, we have to pass the target
+		* of that event to the original constructor.
+		*/
+		$.datepicker._showDatepickerOverrideMA = $.datepicker._showDatepicker;
+		$.datepicker._showDatepicker = function (input) {
+			if (input.target) {
+				$.datepicker._showDatepickerOverrideMA(input.target);
+			} else {
+				$.datepicker._showDatepickerOverrideMA(input);
+			}
+		};
+
 		var headerHtml = function(day, month, dayNum, year) {
 			return '<div class="ui-datepicker-material-header">' +
 				'<div class="ui-datepicker-material-year">' + year + '</div>' +
@@ -200,16 +216,20 @@ materialAPEX.datepicker = {
 			$(".ui-datepicker").prepend(headerHtml(day, month, dayNum, year));
 		};
 
-		$(".hasDatepicker").datepicker("option", "beforeShow", function() {
+		var materialDateBeforeShow = function() {
 			setTimeout(function() {
 				materialDatePicker();
 			}, 1);
-		}).next(".ui-datepicker-trigger").addClass("a-Button a-Button--calendar");
+		};
 
-		// fixes the unwanted jumping around the datepicker...
-		$(".hasDatepicker").datepicker("option", "onSelect", function() {
+		var materialDateOnSelect = function() {
 			$(".ui-datepicker a").removeAttr("href");
-		})
+		};
+
+		// initializes the material header
+		$(".hasDatepicker").datepicker("option", "beforeShow", materialDateBeforeShow);
+		// fixes the unwanted jumping around the datepicker...
+		$(".hasDatepicker").datepicker("option", "onSelect", materialDateOnSelect);
 
 		$(document).on("focus", ".hasDatepicker", function() {
 			materialDatePicker();
