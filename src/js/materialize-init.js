@@ -143,7 +143,7 @@ materialAPEX.ig = {
  * @module select
  **/
 materialAPEX.select = {
-	noInit: '.disabled, .shuttle_left, .shuttle_right, .datetimepicker_newMonth',
+	noInit: '.disabled, .shuttle_left, .shuttle_right, .datetimepicker_newMonth, .a-GV-columnItem select',
 
 	init: function() {
 		materialAPEX.debug.time("materialAPEX.select.init");
