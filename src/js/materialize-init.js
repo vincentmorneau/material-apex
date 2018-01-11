@@ -246,14 +246,6 @@ materialAPEX.materialize = {
 	init: function() {
 		materialAPEX.debug.time("materialAPEX.materialize.init");
 
-		/* Collapsible */
-		$(".collapsible.accordion").collapsible({
-			accordion: true
-		});
-		$(".collapsible.expandable").collapsible({
-			accordion: false
-		});
-
 		// ScrollFire
 		var scrollFireOptions = [];
 		$(".enable-scrollfire").each(function() {

@@ -64,3 +64,7 @@
 , .card .card-content .card-title:not(:empty) + p {
 	margin-top: 1rem;
 }
+
+.ma-region-card.hide-title .ma-region-body {
+	margin-top: 0!important;
+}
