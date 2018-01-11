@@ -1,5 +1,30 @@
 ## Changelog
 
+#### v0.12.2
+- New features
+	- Timepicker support
+	- Demo allows to toggle between theme styles
+- Enhancements
+	- Better button layout on mobile
+	- Interactive Report now has the search button back
+	- Rich Text Editor Support
+	- Application title is now responsive, it no longer hides on mobile
+	- Full Width buttons now aligns the icon better
+	- Better support for Interactive Grid Select Lists
+- Bug fixes
+	- Better Date Pickers
+	- Fixed badge plugin on mobile
+	- Fixed Textarea label
+	- Fixed Popup LOV
+	- Fixed Default Region values on page creation wizard
+	- Disabled plugins now show properly
+	- Interactive Report column alignment is now supported
+	- Calendar Height is now automatic
+	- Fixed Interactive Grid flashing on Windows
+- More documentation enhancements...
+
+For more info check out https://github.com/vincentmorneau/material-apex/milestone/19
+
 #### v0.12.1
 - New features
 	- [**Two new Theme Styles**](https://github.com/vincentmorneau/material-apex/issues/279#issuecomment-341931568)
