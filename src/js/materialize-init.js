@@ -178,6 +178,26 @@ materialAPEX.select = {
  * @module datepicker
  **/
 materialAPEX.datepicker = {
+	materialDatePicker: function() {
+		var headerHtml = function(day, month, dayNum, year) {
+			return '<div class="ui-datepicker-material-header">' +
+				'<div class="ui-datepicker-material-year">' + year + '</div>' +
+				'<div class="ui-datepicker-material-day">' + day + ', ' + month + ' ' + dayNum + '</div>' +
+				'</div>';
+		};
+
+		setTimeout(function() {
+			var date = $(this).datepicker('getDate') || new Date();
+			var day = $.datepicker.formatDate('D', date);
+			var month = $.datepicker.formatDate('MM', date);
+			var dayNum = $.datepicker.formatDate('d', date);
+			var year = $.datepicker.formatDate('yy', date);
+			$('.ui-datepicker select').not(materialAPEX.select.noInit).material_select();
+			$(".ui-datepicker .ui-datepicker-material-header").remove();
+			$(".ui-datepicker").prepend(headerHtml(day, month, dayNum, year));
+		}, 1);
+	},
+
 	init: function() {
 		if (!classExists("hasDatepicker")) return;
 		materialAPEX.debug.time("materialAPEX.datepicker.init");
@@ -198,41 +218,8 @@ materialAPEX.datepicker = {
 			}
 		};
 
-		var headerHtml = function(day, month, dayNum, year) {
-			return '<div class="ui-datepicker-material-header">' +
-				'<div class="ui-datepicker-material-year">' + year + '</div>' +
-				'<div class="ui-datepicker-material-day">' + day + ', ' + month + ' ' + dayNum + '</div>' +
-				'</div>';
-		};
-
-		var materialDatePicker = function() {
-			var date = $(this).datepicker('getDate') || new Date();
-			var day = $.datepicker.formatDate('D', date);
-			var month = $.datepicker.formatDate('MM', date);
-			var dayNum = $.datepicker.formatDate('d', date);
-			var year = $.datepicker.formatDate('yy', date);
-			$('.ui-datepicker select').not(materialAPEX.select.noInit).material_select();
-			$(".ui-datepicker .ui-datepicker-material-header").remove();
-			$(".ui-datepicker").prepend(headerHtml(day, month, dayNum, year));
-		};
-
-		var materialDateBeforeShow = function() {
-			setTimeout(function() {
-				materialDatePicker();
-			}, 1);
-		};
-
-		var materialDateOnSelect = function() {
-			$(".ui-datepicker a").removeAttr("href");
-		};
-
-		// initializes the material header
-		$(".hasDatepicker").datepicker("option", "beforeShow", materialDateBeforeShow);
-		// fixes the unwanted jumping around the datepicker...
-		$(".hasDatepicker").datepicker("option", "onSelect", materialDateOnSelect);
-
 		$(document).on("focus", ".hasDatepicker", function() {
-			materialDatePicker();
+			materialAPEX.datepicker.materialDatePicker();
 		});
 
 		materialAPEX.debug.timeEnd("materialAPEX.datepicker.init");

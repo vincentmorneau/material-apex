@@ -198,6 +198,16 @@ materialAPEX.initial = {
 	init: function() {
 		materialAPEX.debug.time("materialAPEX.initial.init");
 
+		$.datepicker.setDefaults({
+			beforeShow: function(input, inst) {
+				materialAPEX.datepicker.materialDatePicker();
+			},
+			onSelect: function(input, inst) {
+				$(".ui-datepicker a").removeAttr("href");
+				materialAPEX.datepicker.materialDatePicker();
+			}
+		});
+
 		// Show the hamburger menu only if there is any sidebar menu entry
 		if ($(".side-nav .side-nav-entry").length > 0) {
 			$("#app-sidenav-trigger").removeClass("hide");
