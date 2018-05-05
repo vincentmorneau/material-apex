@@ -16,6 +16,7 @@ function render (
 	/* Item Attributes */
 	l_min plugin_attr := p_item.attribute_01;
 	l_max plugin_attr := p_item.attribute_02;
+	l_step plugin_attr := p_item.attribute_03;
 begin
 	/* debug information will be included */
 	if apex_application.g_debug then
@@ -50,6 +51,7 @@ begin
 		|| ' value="' || p_value || '"'
 		|| ' min="' || l_min || '"'
 		|| ' max="' || l_max || '"'
+		|| case when l_step is not null then ' step="' || l_step || '"' else null end
 		|| ' ' || p_item.element_attributes
 		|| l_disabled
 		|| '>'
