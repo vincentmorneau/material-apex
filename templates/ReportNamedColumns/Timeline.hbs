@@ -1,16 +1,17 @@
-{{#row_template_before_rows}}
+{{#ROW_TEMPLATE_BEFORE_ROWS}}
 <section class="cd-timeline cd-container">
-{{/row_template_before_rows}}
 
-    {{#before_column_heading}}{{/before_column_heading}}
+{{/ROW_TEMPLATE_BEFORE_ROWS}}
 
-        {{#column_heading_template}}{{/column_heading_template}}
+{{#BEFORE_COLUMN_HEADING}}{{/BEFORE_COLUMN_HEADING}}
 
-    {{#after_column_heading}}{{/after_column_heading}}
+{{#COLUMN_HEADING_TEMPLATE}}{{/COLUMN_HEADING_TEMPLATE}}
 
-    {{#row_template_before_first}}{{/row_template_before_first}}
+{{#AFTER_COLUMN_HEADING}}{{/AFTER_COLUMN_HEADING}}
 
-        {{#row_template1}}
+{{#ROW_TEMPLATE_BEFORE_FIRST}}{{/ROW_TEMPLATE_BEFORE_FIRST}}
+
+{{#ROW_TEMPLATE1}}
         <div class="cd-timeline-block">
 			<div class="cd-timeline-img blue lighten-2">
 				<i class="material-icons">#ICON#</i>
@@ -23,29 +24,45 @@
 				<span class="cd-date">#TIMELINE_DATE#</span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
-        {{/row_template1}}
-        {{#row_template_condition1}}{{/row_template_condition1}}
-        {{#row_template_display_cond1}}{{/row_template_display_cond1}}
-        {{#row_template2}}
-        {{/row_template2}}
-        {{#row_template_condition2}}{{/row_template_condition2}}
-        {{#row_template_display_cond2}}{{/row_template_display_cond2}}
-        {{#row_template3}}{{/row_template3}}
-        {{#row_template_condition3}}{{/row_template_condition3}}
-        {{#row_template_display_cond3}}{{/row_template_display_cond3}}
-        {{#row_template4}}{{/row_template4}}
-        {{#row_template_condition4}}{{/row_template_condition4}}
-        {{#row_template_display_cond4}}{{/row_template_display_cond4}}
 
-    {{#row_template_after_last}}
-    {{/row_template_after_last}}
+{{/ROW_TEMPLATE1}}
+{{#ROW_TEMPLATE_CONDITION1}}{{/ROW_TEMPLATE_CONDITION1}}
+{{#ROW_TEMPLATE_DISPLAY_COND1}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND1}}
+{{#ROW_TEMPLATE2}}{{/ROW_TEMPLATE2}}
+{{#ROW_TEMPLATE_CONDITION2}}{{/ROW_TEMPLATE_CONDITION2}}
+{{#ROW_TEMPLATE_DISPLAY_COND2}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND2}}
+{{#ROW_TEMPLATE3}}{{/ROW_TEMPLATE3}}
+{{#ROW_TEMPLATE_CONDITION3}}{{/ROW_TEMPLATE_CONDITION3}}
+{{#ROW_TEMPLATE_DISPLAY_COND3}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND3}}
+{{#ROW_TEMPLATE4}}{{/ROW_TEMPLATE4}}
+{{#ROW_TEMPLATE_CONDITION4}}{{/ROW_TEMPLATE_CONDITION4}}
+{{#ROW_TEMPLATE_DISPLAY_COND4}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND4}}
 
-{{#row_template_after_rows}}
-</section>
-{{/row_template_after_rows}}
+{{#ROW_TEMPLATE_AFTER_LAST}}{{/ROW_TEMPLATE_AFTER_LAST}}
 
-{{#pagination_template}}{{/pagination_template}}
-{{#next_page_template}}{{/next_page_template}}
-{{#previous_page_template}}{{/previous_page_template}}
-{{#next_set_template}}{{/next_set_template}}
-{{#previous_set_template}}{{/previous_set_template}}
+{{#ROW_TEMPLATE_AFTER_ROWS}}
+ 
+{{/ROW_TEMPLATE_AFTER_ROWS}}
+
+{{#PAGINATION_TEMPLATE}}{{/PAGINATION_TEMPLATE}}
+{{#NEXT_PAGE_TEMPLATE}}{{/NEXT_PAGE_TEMPLATE}}
+{{#PREVIOUS_PAGE_TEMPLATE}}{{/PREVIOUS_PAGE_TEMPLATE}}
+{{#NEXT_SET_TEMPLATE}}{{/NEXT_SET_TEMPLATE}}
+{{#PREVIOUS_SET_TEMPLATE}}{{/PREVIOUS_SET_TEMPLATE}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
+[]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
+[]
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

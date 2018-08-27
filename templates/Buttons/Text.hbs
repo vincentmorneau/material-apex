@@ -1,63 +1,66 @@
-{{#template}}
+{{#TEMPLATE}}
 <button type="button" onclick="#JAVASCRIPT#" id="#BUTTON_ID#" class="ma-button #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES#>
 	<span class="ma-button-label">#LABEL#</span>
 </button>
-{{/template}}
 
-{{#hot_template}}
+
+{{/TEMPLATE}}
+{{#HOT_TEMPLATE}}
 <a href="#LINK#" id="#BUTTON_ID#" class="ma-button ma-button-hot #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES#>
 	<span class="ma-button-label">#LABEL#</span>
 </a>
-{{/hot_template}}
 
-{{#template_option_groups}}
+{{/HOT_TEMPLATE}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
 [
-	{
-		"name": "TYPE",
-		"display_name": "Type",
-		"display_sequence": 1,
-		"help_text": "",
-		"null_text": "",
-		"is_advanced": "N",
-		"template_options": [
-			{
-				"name": "RAISED",
-				"display_name": "Raised",
-				"display_sequence": 1,
-				"css_classes": "btn",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "FLAT",
-				"display_name": "Flat",
-				"display_sequence": 3,
-				"css_classes": "btn-flat",
-				"help_text": "",
-				"is_advanced": ""
-			}
-		]
-	}
+  {
+    "NAME": "TYPE",
+    "DISPLAY_NAME": "Type",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "RAISED",
+        "DISPLAY_NAME": "Raised",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "btn",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FLAT",
+        "DISPLAY_NAME": "Flat",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "btn-flat",
+        "HELP_TEXT": ""
+      }
+    ]
+  }
 ]
-{{/template_option_groups}}
-
-{{#template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 [
-	{
-		"name": "BUTTON_BLOCK",
-		"display_name": "Full Column Width",
-		"display_sequence": 1,
-		"css_classes": "ma-btn-block",
-		"help_text": "This makes the button to be 100% of the width of it's container."
-	},
-
-	{
-		"name": "INLINE_BUTTON",
-		"display_name": "Inline (Next to an item)",
-		"display_sequence": 2,
-		"css_classes": "ma-btn-inline",
-		"help_text": ""
-	}
+  {
+    "NAME": "BUTTON_BLOCK",
+    "DISPLAY_NAME": "Full Column Width",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "ma-btn-block",
+    "HELP_TEXT": "This makes the button to be 100% of the width of it's container.",
+    "IS_ADVANCED": ""
+  },
+  {
+    "NAME": "INLINE_BUTTON",
+    "DISPLAY_NAME": "Inline (Next to an item)",
+    "DISPLAY_SEQUENCE": 2,
+    "CSS_CLASSES": "ma-btn-inline",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  }
 ]
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+btn:waves-effect waves-light
+{{/PRESET_TEMPLATE_OPTIONS}}

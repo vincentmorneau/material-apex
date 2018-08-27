@@ -1,6 +1,10 @@
-{{#inline_css}}
-{{/inline_css}}
-{{#header_template}}
+{{#JAVASCRIPT_FILE_URLS}}{{/JAVASCRIPT_FILE_URLS}}
+{{#JAVASCRIPT_CODE}}{{/JAVASCRIPT_CODE}}
+{{#JAVASCRIPT_CODE_ONLOAD}}{{/JAVASCRIPT_CODE_ONLOAD}}
+{{#CSS_FILE_URLS}}{{/CSS_FILE_URLS}}
+{{#INLINE_CSS}}{{/INLINE_CSS}}
+
+{{#HEADER_TEMPLATE}}
 <!DOCTYPE html>
 <html class="no-js #RTL_CLASS# page-&APP_PAGE_ID. app-&APP_ALIAS." lang="&BROWSER_LANGUAGE." #TEXT_DIRECTION#>
 <head>
@@ -23,9 +27,8 @@
 	#HEAD#
 </head>
 <body id="#PAGE_STATIC_ID#" class="#PAGE_CSS_CLASSES#" #TEXT_DIRECTION# #ONLOAD#>
-{{/header_template}}
-
-{{#box}}
+{{/HEADER_TEMPLATE}}
+{{#BOX}}
 #FORM_OPEN#
 
 <!-- Item Container -->
@@ -40,9 +43,8 @@
 </div>
 
 #FORM_CLOSE#
-{{/box}}
-
-{{#footer_template}}
+{{/BOX}}
+{{#FOOTER_TEMPLATE}}
 #FORM_CLOSE#
 #DEVELOPER_TOOLBAR#
 #APEX_JAVASCRIPT#
@@ -55,9 +57,9 @@
 <script type="text/javascript" src="#THEME_IMAGES#js/finalize#MIN#.js"></script>
 </body>
 </html>
-{{/footer_template}}
+{{/FOOTER_TEMPLATE}}
 
-{{#success_message}}
+{{#SUCCESS_MESSAGE}}
 <div class="t-Body-alert">
   <div class="t-Alert t-Alert--defaultIcons t-Alert--success t-Alert--horizontal t-Alert--page t-Alert--colorBG" id="t_Alert_Success" role="alert">
     <div class="t-Alert-wrap">
@@ -75,8 +77,8 @@
     </div>
   </div>
 </div>
-{{/success_message}}
-{{#message}}
+{{/SUCCESS_MESSAGE}}
+{{#MESSAGE}}
 <div class="t-Body-alert">
   <div class="t-Alert t-Alert--defaultIcons t-Alert--warning t-Alert--horizontal t-Alert--page" id="t_Alert_Success" role="alert">
     <div class="t-Alert-wrap">
@@ -94,77 +96,57 @@
     </div>
   </div>
 </div>
-{{/message}}
+{{/MESSAGE}}
 
-{{#error_page_template}}
-<div class="row m-t-3">
-	<div class="col s12 m8 offset-m2">
-		<div class="card">
-			<div class="card-image center">
-				<i class="material-icons xlarge red-text text-lighten-1 m-t-1">error</i>
-			</div>
-			<div class="card-content grey-text">
-				<p>#MESSAGE#</p>
-				<p>#ADDITIONAL_INFO#</p>
-				<p>#TECHNICAL_INFO#</p>
-			</div>
-			<div class="card-action">
-				<a href="#BACK_LINK#" class="btn-flat waves-effect waves-light">#OK#</a>
-			</div>
-		</div>
-	</div>
-</div>
-{{/error_page_template}}
-
-{{#grid_template}}
+{{#GRID_TEMPLATE}}
 <div class="ma-container">
 	#ROWS#
 </div>
-{{/grid_template}}
-{{#grid_row_template}}
+{{/GRID_TEMPLATE}}
+{{#GRID_ROW_TEMPLATE}}
 <div class="row">
 	#COLUMNS#
 </div>
-{{/grid_row_template}}
-{{#grid_column_template}}
+{{/GRID_ROW_TEMPLATE}}
+{{#GRID_COLUMN_TEMPLATE}}
 <div class="col s12 m#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>
 	#CONTENT#
 </div>
-{{/grid_column_template}}
+{{/GRID_COLUMN_TEMPLATE}}
 
-{{#dialog_browser_frame}}
+{{#DIALOG_BROWSER_FRAME}}
 MODAL
-{{/dialog_browser_frame}}
-{{#dialog_css_classes}}
-{{/dialog_css_classes}}
-{{#dialog_height}}
-{{/dialog_height}}
-{{#dialog_js_cancel_code}}
+{{/DIALOG_BROWSER_FRAME}}
+{{#DIALOG_CSS_CLASSES}}{{/DIALOG_CSS_CLASSES}}
+{{#DIALOG_HEIGHT}}{{/DIALOG_HEIGHT}}
+{{#DIALOG_JS_CANCEL_CODE}}
 apex.navigation.dialog.cancel(#IS_MODAL#);
-{{/dialog_js_cancel_code}}
-{{#dialog_js_close_code}}
+{{/DIALOG_JS_CANCEL_CODE}}
+{{#DIALOG_JS_CLOSE_CODE}}
 apex.navigation.dialog.close(#IS_MODAL#,#TARGET#);
-{{/dialog_js_close_code}}
-{{#dialog_js_init_code}}
+{{/DIALOG_JS_CLOSE_CODE}}
+{{#DIALOG_JS_INIT_CODE}}
 apex.navigation.dialog(#PAGE_URL#,{title:#TITLE#,height:#DIALOG_HEIGHT#,width:#DIALOG_WIDTH#,maxWidth:#DIALOG_MAX_WIDTH#,modal:#IS_MODAL#,dialog:#DIALOG#,#DIALOG_ATTRIBUTES#},#DIALOG_CSS_CLASSES#,#TRIGGERING_ELEMENT#);
-{{/dialog_js_init_code}}
-{{#dialog_max_width}}
-{{/dialog_max_width}}
-{{#dialog_width}}
-{{/dialog_width}}
+{{/DIALOG_JS_INIT_CODE}}
+{{#DIALOG_MAX_WIDTH}}{{/DIALOG_MAX_WIDTH}}
+{{#DIALOG_WIDTH}}{{/DIALOG_WIDTH}}
 
-{{#template_option_groups}}
+{{#TEMPLATE_OPTION_GROUPS}}
 []
-{{/template_option_groups}}
-
-{{#template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 [
-	{
-		"name": "CONTAINER",
-		"display_name": "Wrap Page in a Container",
-		"display_sequence": 1,
-		"css_classes": "main-container",
-		"help_text": ""
-	}
+  {
+    "NAME": "CONTAINER",
+    "DISPLAY_NAME": "Wrap Page in a Container",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "main-container",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  }
 ]
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}
+main-container
+{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

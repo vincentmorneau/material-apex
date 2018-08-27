@@ -1,55 +1,73 @@
-{{#row_template_before_rows}}
-<a class="btn dropdown-button" href="#!" data-activates="#REGION_STATIC_ID#-report">
+{{#ROW_TEMPLATE_BEFORE_ROWS}}
+<a class="btn dropdown-trigger" href="#!" data-target="#REGION_STATIC_ID#-report">
     #REGION_TITLE#
     <i class="material-icons right">arrow_drop_down</i>
 </a>
 <ul id="#REGION_STATIC_ID#-report" class="dropdown-content #COMPONENT_CSS_CLASSES#">
-{{/row_template_before_rows}}
+{{/ROW_TEMPLATE_BEFORE_ROWS}}
 
-    {{#before_column_heading}}{{/before_column_heading}}
+{{#BEFORE_COLUMN_HEADING}}{{/BEFORE_COLUMN_HEADING}}
 
-        {{#column_heading_template}}{{/column_heading_template}}
+{{#COLUMN_HEADING_TEMPLATE}}{{/COLUMN_HEADING_TEMPLATE}}
 
-    {{#after_column_heading}}{{/after_column_heading}}
+{{#AFTER_COLUMN_HEADING}}{{/AFTER_COLUMN_HEADING}}
 
-    {{#row_template_before_first}}{{/row_template_before_first}}
+{{#ROW_TEMPLATE_BEFORE_FIRST}}{{/ROW_TEMPLATE_BEFORE_FIRST}}
 
-        {{#row_template1}}
-        <li>
+{{#ROW_TEMPLATE1}}
+<li>
             <a href="#TARGET#">
                 #DISPLAY#
                 <span class="new badge">#BADGE#</span>
             </a>
         </li>
-        {{/row_template1}}
-        {{#row_template_condition1}}:NEW_BADGE is not null{{/row_template_condition1}}
-        {{#row_template_display_cond1}}NOT_CONDITIONAL{{/row_template_display_cond1}}
-        {{#row_template2}}
-        <li>
+{{/ROW_TEMPLATE1}}
+{{#ROW_TEMPLATE_CONDITION1}}
+:NEW_BADGE is not null
+{{/ROW_TEMPLATE_CONDITION1}}
+{{#ROW_TEMPLATE_DISPLAY_COND1}}
+NOT_CONDITIONAL
+{{/ROW_TEMPLATE_DISPLAY_COND1}}
+{{#ROW_TEMPLATE2}}
+<li>
             <a href="#TARGET#">
                 #DISPLAY#
                 <span class="badge">#BADGE#</span>
             </a>
         </li>
-        {{/row_template2}}
-        {{#row_template_condition2}}{{/row_template_condition2}}
-        {{#row_template_display_cond2}}{{/row_template_display_cond2}}
-        {{#row_template3}}{{/row_template3}}
-        {{#row_template_condition3}}{{/row_template_condition3}}
-        {{#row_template_display_cond3}}{{/row_template_display_cond3}}
-        {{#row_template4}}{{/row_template4}}
-        {{#row_template_condition4}}{{/row_template_condition4}}
-        {{#row_template_display_cond4}}{{/row_template_display_cond4}}
+{{/ROW_TEMPLATE2}}
+{{#ROW_TEMPLATE_CONDITION2}}{{/ROW_TEMPLATE_CONDITION2}}
+{{#ROW_TEMPLATE_DISPLAY_COND2}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND2}}
+{{#ROW_TEMPLATE3}}{{/ROW_TEMPLATE3}}
+{{#ROW_TEMPLATE_CONDITION3}}{{/ROW_TEMPLATE_CONDITION3}}
+{{#ROW_TEMPLATE_DISPLAY_COND3}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND3}}
+{{#ROW_TEMPLATE4}}{{/ROW_TEMPLATE4}}
+{{#ROW_TEMPLATE_CONDITION4}}{{/ROW_TEMPLATE_CONDITION4}}
+{{#ROW_TEMPLATE_DISPLAY_COND4}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND4}}
 
-    {{#row_template_after_last}}
-    {{/row_template_after_last}}
+{{#ROW_TEMPLATE_AFTER_LAST}}{{/ROW_TEMPLATE_AFTER_LAST}}
 
-{{#row_template_after_rows}}
+{{#ROW_TEMPLATE_AFTER_ROWS}}
 </ul>
-{{/row_template_after_rows}}
+{{/ROW_TEMPLATE_AFTER_ROWS}}
 
-{{#pagination_template}}{{/pagination_template}}
-{{#next_page_template}}{{/next_page_template}}
-{{#previous_page_template}}{{/previous_page_template}}
-{{#next_set_template}}{{/next_set_template}}
-{{#previous_set_template}}{{/previous_set_template}}
+{{#PAGINATION_TEMPLATE}}{{/PAGINATION_TEMPLATE}}
+{{#NEXT_PAGE_TEMPLATE}}{{/NEXT_PAGE_TEMPLATE}}
+{{#PREVIOUS_PAGE_TEMPLATE}}{{/PREVIOUS_PAGE_TEMPLATE}}
+{{#NEXT_SET_TEMPLATE}}{{/NEXT_SET_TEMPLATE}}
+{{#PREVIOUS_SET_TEMPLATE}}{{/PREVIOUS_SET_TEMPLATE}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
+[]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
+[]
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

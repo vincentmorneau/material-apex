@@ -12,6 +12,10 @@ npm-debug.log*
 # Mac
 .DS_Store
 
+# VSCode
+.vscode
+
 # Others
 .atom-build-oracle.json
+.build-oracle.json
 app.export.sql

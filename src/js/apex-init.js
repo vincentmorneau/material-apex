@@ -3,7 +3,7 @@
  * @param {string} selector - jQuery selector to be ignored.
  * @returns {object} currated jQuery selector
  */
-$.fn.ignore = function(selector) {
+$.fn.ignore = function (selector) {
 	return this.clone().find(selector || ">*").remove().end();
 };
 
@@ -11,8 +11,8 @@ $.fn.ignore = function(selector) {
  * Removes empty objects from the DOM based on the given selector
  * @returns {object}
  */
-$.fn.removeEmpty = function() {
-	return this.filter(function() {
+$.fn.removeEmpty = function () {
+	return this.filter(function () {
 		return $.trim($(this).text()) === "" && $(this).children().length === 0;
 	}).remove();
 };
@@ -21,8 +21,8 @@ $.fn.removeEmpty = function() {
  * Removes empty objects from the DOM based on the given selector
  * @returns {object}
  */
-$.fn.removeEmptySpaces = function() {
-	return this.filter(function() {
+$.fn.removeEmptySpaces = function () {
+	return this.filter(function () {
 		return $.trim($(this).text()) === "";
 	}).remove();
 };
@@ -32,7 +32,7 @@ $.fn.removeEmptySpaces = function() {
  * This is performed in vanilla JS instead of jQuery to increase performance
  * @returns {boolean} true if the class exists, false if it doesn't
  */
-var classExists = function(className) {
+var classExists = function (className) {
 	return document.getElementsByClassName(className).length > 0;
 };
 
@@ -45,13 +45,13 @@ var materialAPEX = materialAPEX || {};
  * @module debug
  **/
 materialAPEX.debug = {
-	time: function(name) {
+	time: function (name) {
 		if (apex.debug.getLevel() > apex.debug.LOG_LEVEL.OFF) {
 			console.time(name);
 		}
 	},
 
-	timeEnd: function(name) {
+	timeEnd: function (name) {
 		if (apex.debug.getLevel() > apex.debug.LOG_LEVEL.OFF) {
 			console.timeEnd(name);
 		}
@@ -62,8 +62,8 @@ materialAPEX.debug = {
  * @module sideNav
  **/
 materialAPEX.sideNav = {
-	init: function() {
-		if (!classExists("side-nav")) return;
+	init: function () {
+		if (!classExists("sidenav")) return;
 		materialAPEX.debug.time("materialAPEX.sideNav.init");
 
 		$("#app-sidenav li.active")
@@ -73,11 +73,11 @@ materialAPEX.sideNav = {
 			.parents("li")
 			.addClass("active");
 
-		$(".side-nav").prepend(function() {
-			return $(".userView");
+		$(".sidenav").prepend(function () {
+			return $(".user-view");
 		});
 
-		$(".userView").wrap("<li></li>");
+		$(".user-view").wrap("<li></li>");
 		materialAPEX.debug.timeEnd("materialAPEX.sideNav.init");
 	}
 };
@@ -86,7 +86,7 @@ materialAPEX.sideNav = {
  * @module wizard
  **/
 materialAPEX.wizard = {
-	init: function() {
+	init: function () {
 		if (!classExists("ma-wizard")) return;
 		materialAPEX.debug.time("materialAPEX.wizard.init");
 
@@ -104,7 +104,7 @@ materialAPEX.wizard = {
  * @module messages
  **/
 materialAPEX.messages = {
-	init: function() {
+	init: function () {
 		// message is missing for theme roller
 		apex.lang.addMessages({
 			"PE.SELECT": "- Select -"
@@ -116,7 +116,7 @@ materialAPEX.messages = {
  * @module items
  **/
 materialAPEX.items = {
-	init: function(selectorPrefix) {
+	init: function (selectorPrefix) {
 		materialAPEX.debug.time("materialAPEX.items.init");
 
 		var prefix = selectorPrefix || "";
@@ -124,7 +124,7 @@ materialAPEX.items = {
 		$(".a-GV " + prefix + " input[type='checkbox'], .a-GV " + prefix + " input[type='radio']").addClass("filled-in");
 
 		// fix for empty checkbox and radio labels
-		$(prefix + " [type='checkbox'], " + prefix + " [type='radio']").each(function() {
+		$(prefix + " [type='checkbox'], " + prefix + " [type='radio']").each(function () {
 			// add an ID to the checkbox or radio if it doesn't exist
 			if (!this.id) {
 				this.id = Materialize.guid();
@@ -138,7 +138,7 @@ materialAPEX.items = {
 		});
 
 		// Fix for label issue with many components. Need to have label after component.
-		$(".input-field > label, .input-field fieldset > label").each(function() {
+		$(".input-field > label, .input-field fieldset > label").each(function () {
 			$(this).appendTo($(this).parent());
 		});
 
@@ -149,7 +149,7 @@ materialAPEX.items = {
 		materialAPEX.debug.timeEnd("materialAPEX.items.init");
 	},
 
-	utr: function() {
+	utr: function () {
 		if (!classExists("a-LiveTemplateOptions")) return;
 		$(".a-Property-checkbox-input").addClass("filled-in");
 	}
@@ -159,7 +159,7 @@ materialAPEX.items = {
  * @module ir
  **/
 materialAPEX.ir = {
-	init: function() {
+	init: function () {
 		if (!classExists("a-IRR")) return;
 		materialAPEX.debug.time("materialAPEX.ir.init");
 
@@ -180,10 +180,10 @@ materialAPEX.ir = {
  * @module textarea
  **/
 materialAPEX.textarea = {
-	init: function() {
+	init: function () {
 		$("[id*='_CHAR_COUNTER']").parent().addClass("character-counter");
 
-		$("fieldset.textarea").prepend(function() {
+		$("fieldset.textarea").prepend(function () {
 			return $(this).siblings();
 		});
 
@@ -195,21 +195,21 @@ materialAPEX.textarea = {
  * @module initial
  **/
 materialAPEX.initial = {
-	init: function() {
+	init: function () {
 		materialAPEX.debug.time("materialAPEX.initial.init");
 
 		$.datepicker.setDefaults({
-			beforeShow: function(input, inst) {
+			beforeShow: function (input, inst) {
 				materialAPEX.datepicker.materialDatePicker();
 			},
-			onSelect: function(input, inst) {
+			onSelect: function (input, inst) {
 				$(".ui-datepicker a").removeAttr("href");
 				materialAPEX.datepicker.materialDatePicker();
 			}
 		});
 
 		// Show the hamburger menu only if there is any sidebar menu entry
-		if ($(".side-nav .side-nav-entry").length > 0) {
+		if ($(".sidenav .sidenav-entry").length > 0) {
 			$("#app-sidenav-trigger").removeClass("hide");
 		}
 
@@ -221,7 +221,7 @@ materialAPEX.initial = {
 		$('.ma-region-buttons, .ma-region-header').removeEmptySpaces();
 
 		// Support for APEX 5.1 item icons
-		$(".apex-item-icon").each(function(index) {
+		$(".apex-item-icon").each(function (index) {
 			var el = $(this);
 
 			if (!el.hasClass("fa")) {
@@ -235,12 +235,12 @@ materialAPEX.initial = {
 		});
 
 		// Font Awesome & Font APEX Support with Material Icons HTML markup
-		$(".material-icons:contains('fa-')").each(function(index) {
+		$(".material-icons:contains('fa-')").each(function (index) {
 			$(this).attr("class", $(this).text()).text('');
 		});
 
 		// Fixed Action Button
-		$(".fixed-action-btn").each(function() {
+		$(".fixed-action-btn").each(function () {
 			var position = "";
 			var fab = $(this);
 			if (fab.hasClass("fab-right")) position += "fab-right ";
@@ -256,7 +256,7 @@ materialAPEX.initial = {
 			fab.removeClass("fixed-action-btn horizontal click-to-toggle toolbar fab-right fab-left fab-absolute");
 		});
 
-		$(".fixed-action-btn ul li .btn-floating").each(function() {
+		$(".fixed-action-btn ul li .btn-floating").each(function () {
 			var buttonText = ($(this).find(".ma-button-label").text() || $(this).attr("title")).trim();
 			if (buttonText !== '') {
 				$(this)
@@ -297,13 +297,13 @@ materialAPEX.initial = {
 		$("fieldset.lov").parent().addClass("ma-popuplov");
 
 		// Media
-		$(".apex-materialbox img").addClass("materialboxed responsive-img").each(function() {
+		$(".apex-materialbox img").addClass("materialboxed responsive-img").each(function () {
 			$(this).attr("data-caption", $(this).parent().attr("data-caption"));
 			$(this).parent().removeAttr("data-caption");
 		});
 
 		// Tooltips
-		$("[data-tooltip][data-tooltip!='']").each(function() {
+		$("[data-tooltip][data-tooltip!='']").each(function () {
 			$(this).siblings("i, span").attr("data-tooltip", $(this).attr("data-tooltip"));
 		});
 
@@ -311,7 +311,7 @@ materialAPEX.initial = {
 		$("i[class='']").remove();
 
 		// Search Bar
-		$(".top-nav li a i:contains('search')").parent().click(function() {
+		$(".top-nav li a i:contains('search')").parent().click(function () {
 			$(".main-nav-wrapper").toggleClass("hide");
 			$(".search-nav-wrapper").toggleClass("hide");
 			$("#P0_SEARCH").focus();
@@ -319,18 +319,18 @@ materialAPEX.initial = {
 
 		$("#P0_SEARCH")
 			.attr("type", "search")
-			.blur(function() {
+			.blur(function () {
 				$(".main-nav-wrapper").toggleClass("hide");
 				$(".search-nav-wrapper").toggleClass("hide");
 			});
 
 		// Closes a toast
-		$(document).on("click", ".ma-toast-close", function() {
+		$(document).on("click", ".ma-toast-close", function () {
 			$(this).closest(".toast").remove();
 		});
 
 		// Closes a panel
-		$(document).on("click", ".panel-close", function() {
+		$(document).on("click", ".panel-close", function () {
 			$(this).closest(".card-panel").remove();
 		});
 
@@ -339,25 +339,25 @@ materialAPEX.initial = {
 		$(".ma-alternate-look input[type='radio']").addClass("with-gap");
 
 		// this is for displaying a success message when a modal page closes
-		$("body").on("apexafterclosedialog", function(e, data) {
+		$("body").on("apexafterclosedialog", function (e, data) {
 			if (data.successMessage.text) {
 				apex.message.showPageSuccess(data.successMessage.text);
 			}
 		});
 
 		// overwrites apex.theme.defaultStickyTop to help with the region display selector
-		apex.theme.defaultStickyTop = function() {
+		apex.theme.defaultStickyTop = function () {
 			return $("header").height();
 		};
 
 		// showSpinner
 		if (typeof apex.util.showSpinner === "function") {
 			var showSpinnerOld = apex.util.showSpinner;
-			apex.util.showSpinner = function(container, options) {
+			apex.util.showSpinner = function (container, options) {
 				var opt = options || {};
 				var newSpinner = showSpinnerOld(container, options);
 
-				var spinnerLayer = function(layerColor) {
+				var spinnerLayer = function (layerColor) {
 					return '<div class="spinner-layer spinner-' + layerColor + '"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div>';
 				};
 
@@ -383,7 +383,7 @@ materialAPEX.initial = {
 	}
 };
 
-$(function() {
+$(function () {
 	materialAPEX.initial.init();
 	materialAPEX.messages.init();
 	materialAPEX.items.init();

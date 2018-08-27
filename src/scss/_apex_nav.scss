@@ -69,7 +69,11 @@ nav .nav-wrapper i {
 
 /* Scrollspy */
 .apex-rds {
-    @extend .table-of-contents;
+	@extend .table-of-contents;
+}
+
+.apex-rds-slider {
+	@include hide;
 }
 
 /* Region Display Selector */

@@ -1,20 +1,31 @@
-{{#before_first}}
-<nav class="nav-breadcrumbs #COMPONENT_CSS_CLASSES#">
+{{#BEFORE_FIRST}}
+<nav class="nav-breadcrumbs">
     <div class="nav-wrapper row">
         <div class="col s12">
-{{/before_first}}
-    {{#current_page_option}}
-    <a href="#LINK#" class="breadcrumb">#NAME#</a>
-    {{/current_page_option}}
-    {{#non_current_page_option}}
-    <a href="#LINK#" class="breadcrumb">#NAME#</a>
-    {{/non_current_page_option}}
-    {{#menu_link_attributes}}{{/menu_link_attributes}}
-    {{#between_levels}}{{/between_levels}}
-{{#after_last}}
+{{/BEFORE_FIRST}}
+{{#CURRENT_PAGE_OPTION}}
+<a href="#LINK#" class="breadcrumb">#NAME#</a>
+{{/CURRENT_PAGE_OPTION}}
+{{#NON_CURRENT_PAGE_OPTION}}
+<a href="#LINK#" class="breadcrumb">#NAME#</a>
+{{/NON_CURRENT_PAGE_OPTION}}
+{{#MENU_LINK_ATTRIBUTES}}{{/MENU_LINK_ATTRIBUTES}}
+{{#BETWEEN_LEVELS}}{{/BETWEEN_LEVELS}}
+{{#AFTER_LAST}}
 </div>
 </div>
 </nav>
-{{/after_last}}
+{{/AFTER_LAST}}
 
-{{#max_levels}}{{/max_levels}}
+{{#MAX_LEVELS}}
+12
+{{/MAX_LEVELS}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
+[]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
+[]
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

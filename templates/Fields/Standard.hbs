@@ -1,319 +1,308 @@
-{{#before_label_and_item}}
+{{#BEFORE_ITEM}}
 <div id="#CURRENT_ITEM_NAME#_CONTAINER" class="ma-field-container input-field #ITEM_CSS_CLASSES#">
-{{/before_label_and_item}}
-    {{#before_label}}
+
+{{/BEFORE_ITEM}}
+{{#TEMPLATE_BODY1}}
     <label for="#CURRENT_ITEM_NAME#" id="#LABEL_ID#" data-tooltip="#CURRENT_ITEM_HELP_TEXT#">
-    {{/before_label}}
-    {{#after_label}}
+
+{{/TEMPLATE_BODY1}}
+{{#TEMPLATE_BODY2}}
     </label>
-    {{/after_label}}
 
-    {{#before_item}}
+{{/TEMPLATE_BODY2}}
+{{#ITEM_PRE_TEXT}}{{/ITEM_PRE_TEXT}}
+{{#BEFORE_ELEMENT}}
     #ERROR_TEMPLATE#
-    {{/before_item}}
-    {{#after_item}}
-    {{/after_item}}
-{{#after_label_and_item}}
+
+{{/BEFORE_ELEMENT}}
+{{#AFTER_ELEMENT}}{{/AFTER_ELEMENT}}
+{{#ITEM_POST_TEXT}}{{/ITEM_POST_TEXT}}
+{{#AFTER_ITEM}}
 </div>
-{{/after_label_and_item}}
 
-{{#on_error_before_label}}{{/on_error_before_label}}
-{{#on_error_after_label}}{{/on_error_after_label}}
-{{#error_template}}
+
+{{/AFTER_ITEM}}
+
+{{#ON_ERROR_BEFORE_LABEL}}{{/ON_ERROR_BEFORE_LABEL}}
+{{#ON_ERROR_AFTER_LABEL}}{{/ON_ERROR_AFTER_LABEL}}
+{{#ERROR_TEMPLATE}}
 <span class="ma-error-message">#ERROR_MESSAGE#</span>
-{{/error_template}}
-{{#help_template}}{{/help_template}}
 
-{{#template_option_groups}}
+{{/ERROR_TEMPLATE}}
+{{#HELP_LINK}}{{/HELP_LINK}}
+{{#INLINE_HELP_TEXT}}{{/INLINE_HELP_TEXT}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
 [
-    {
-        "name": "FIELD_COLOR",
-        "display_name": "Text Color",
-        "display_sequence": 2,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "N",
-        "template_options": [{
-                "name": "AMBER_TEXT",
-                "display_name": "Amber",
-                "display_sequence": 1,
-                "css_classes": "ma-colored-field amber-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "BLUE_GREY_TEXT",
-                "display_name": "Blue Grey",
-                "display_sequence": 2,
-                "css_classes": "ma-colored-field blue-grey-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "BLUE_TEXT",
-                "display_name": "Blue",
-                "display_sequence": 3,
-                "css_classes": "ma-colored-field blue-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "BROWN_TEXT",
-                "display_name": "Brown",
-                "display_sequence": 4,
-                "css_classes": "ma-colored-field brown-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "CYAN_TEXT",
-                "display_name": "Cyan",
-                "display_sequence": 5,
-                "css_classes": "ma-colored-field cyan-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "DEEP_ORANGE_TEXT",
-                "display_name": "Deep Orange",
-                "display_sequence": 6,
-                "css_classes": "ma-colored-field deep-orange-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "DEEP_PURPLE_TEXT",
-                "display_name": "Deep Deep Purple",
-                "display_sequence": 7,
-                "css_classes": "ma-colored-field deep-purple-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "GREEN_TEXT",
-                "display_name": "Green",
-                "display_sequence": 8,
-                "css_classes": "ma-colored-field green-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "GREY_TEXT",
-                "display_name": "Grey",
-                "display_sequence": 9,
-                "css_classes": "ma-colored-field grey-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "INDIGO_TEXT",
-                "display_name": "Light Indigo",
-                "display_sequence": 10,
-                "css_classes": "ma-colored-field indigo-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "LIGHT_BLUE_TEXT",
-                "display_name": "Light Blue",
-                "display_sequence": 11,
-                "css_classes": "ma-colored-field light-blue-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "LIGHT_GREEN_TEXT",
-                "display_name": "Light Green",
-                "display_sequence": 12,
-                "css_classes": "ma-colored-field light-green-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "LIME_TEXT",
-                "display_name": "Lime",
-                "display_sequence": 13,
-                "css_classes": "ma-colored-field lime-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "ORANGE_TEXT",
-                "display_name": "Light Orange",
-                "display_sequence": 14,
-                "css_classes": "ma-colored-field orange-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "PINK_TEXT",
-                "display_name": "Pink",
-                "display_sequence": 15,
-                "css_classes": "ma-colored-field pink-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "PURPLE_TEXT",
-                "display_name": "Purple",
-                "display_sequence": 16,
-                "css_classes": "ma-colored-field purple-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "RED_TEXT",
-                "display_name": "Red",
-                "display_sequence": 17,
-                "css_classes": "ma-colored-field red-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "TEAL_TEXT",
-                "display_name": "Teal",
-                "display_sequence": 18,
-                "css_classes": "ma-colored-field teal-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "WHITE",
-                "display_name": "White",
-                "display_sequence": 19,
-                "css_classes": "ma-colored-field white-text",
-                "help_text": "",
-                "is_advanced": ""
-            },
-            {
-                "name": "YELLOW_TEXT",
-                "display_name": "Yellow",
-                "display_sequence": 20,
-                "css_classes": "ma-colored-field yellow-text",
-                "help_text": "",
-                "is_advanced": ""
-            }
-        ]
-    },
-    {
-        "name": "TEXT_SIZE",
-        "display_name": "Display Only - Text Size",
-        "display_sequence": 3,
-        "help_text": "Defines the size of the text.",
-        "null_text": "Default",
-        "is_advanced": "N",
-        "template_options": [
-            {
-                "name": "FIELD_FLOW_TEXT",
-                "display_name": "Responsive Text",
-                "display_sequence": 0,
-                "css_classes": "ma-text-size-responsive",
-                "help_text": "Make any display only and read only text responsive",
-                "is_advanced": ""
-            },
-            {
-                "name": "H1",
-                "display_name": "H1",
-                "display_sequence": 1,
-                "css_classes": "ma-text-size-h1",
-                "help_text": ""
-            },
-            {
-                "name": "H2",
-                "display_name": "H2",
-                "display_sequence": 2,
-                "css_classes": "ma-text-size-h2",
-                "help_text": ""
-            },
-            {
-                "name": "H3",
-                "display_name": "H3",
-                "display_sequence": 3,
-                "css_classes": "ma-text-size-h3",
-                "help_text": ""
-            },
-            {
-                "name": "H4",
-                "display_name": "H4",
-                "display_sequence": 4,
-                "css_classes": "ma-text-size-h4",
-                "help_text": ""
-            },
-            {
-                "name": "H5",
-                "display_name": "H5",
-                "display_sequence": 5,
-                "css_classes": "ma-text-size-h5",
-                "help_text": ""
-            },
-            {
-                "name": "H6",
-                "display_name": "H6",
-                "display_sequence": 6,
-                "css_classes": "ma-text-size-h6",
-                "help_text": ""
-            }
-        ]
-    },
-    {
-        "name": "FIELD_ALIGNMENT",
-        "display_name": "Text Alignment",
-        "display_sequence": 1,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "N",
-        "template_options": [{
-                "name": "FIELD_LEFT",
-                "display_name": "Left",
-                "display_sequence": 1,
-                "css_classes": "left-align",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "FIELD_CENTER",
-                "display_name": "Center",
-                "display_sequence": 2,
-                "css_classes": "center-align",
-                "help_text": "",
-                "is_advanced": ""
-            }, {
-                "name": "FIELD_RIGHT",
-                "display_name": "Right",
-                "display_sequence": 3,
-                "css_classes": "right-align",
-                "help_text": "",
-                "is_advanced": ""
-            }
-        ]
-    }
+  {
+    "NAME": "FIELD_ALIGNMENT",
+    "DISPLAY_NAME": "Text Alignment",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "FIELD_LEFT",
+        "DISPLAY_NAME": "Left",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "left-align",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_CENTER",
+        "DISPLAY_NAME": "Center",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "center-align",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_RIGHT",
+        "DISPLAY_NAME": "Right",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "right-align",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "FIELD_COLOR",
+    "DISPLAY_NAME": "Text Color",
+    "DISPLAY_SEQUENCE": 2,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "AMBER_TEXT",
+        "DISPLAY_NAME": "Amber",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ma-colored-field amber-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BLUE_GREY_TEXT",
+        "DISPLAY_NAME": "Blue Grey",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ma-colored-field blue-grey-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BLUE_TEXT",
+        "DISPLAY_NAME": "Blue",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "ma-colored-field blue-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BROWN_TEXT",
+        "DISPLAY_NAME": "Brown",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "ma-colored-field brown-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "CYAN_TEXT",
+        "DISPLAY_NAME": "Cyan",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "ma-colored-field cyan-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "DEEP_ORANGE_TEXT",
+        "DISPLAY_NAME": "Deep Orange",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "ma-colored-field deep-orange-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "DEEP_PURPLE_TEXT",
+        "DISPLAY_NAME": "Deep Deep Purple",
+        "DISPLAY_SEQUENCE": 7,
+        "CSS_CLASSES": "ma-colored-field deep-purple-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "GREEN_TEXT",
+        "DISPLAY_NAME": "Green",
+        "DISPLAY_SEQUENCE": 8,
+        "CSS_CLASSES": "ma-colored-field green-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "GREY_TEXT",
+        "DISPLAY_NAME": "Grey",
+        "DISPLAY_SEQUENCE": 9,
+        "CSS_CLASSES": "ma-colored-field grey-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "INDIGO_TEXT",
+        "DISPLAY_NAME": "Light Indigo",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "ma-colored-field indigo-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "LIGHT_BLUE_TEXT",
+        "DISPLAY_NAME": "Light Blue",
+        "DISPLAY_SEQUENCE": 11,
+        "CSS_CLASSES": "ma-colored-field light-blue-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "LIGHT_GREEN_TEXT",
+        "DISPLAY_NAME": "Light Green",
+        "DISPLAY_SEQUENCE": 12,
+        "CSS_CLASSES": "ma-colored-field light-green-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "LIME_TEXT",
+        "DISPLAY_NAME": "Lime",
+        "DISPLAY_SEQUENCE": 13,
+        "CSS_CLASSES": "ma-colored-field lime-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "ORANGE_TEXT",
+        "DISPLAY_NAME": "Light Orange",
+        "DISPLAY_SEQUENCE": 14,
+        "CSS_CLASSES": "ma-colored-field orange-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "PINK_TEXT",
+        "DISPLAY_NAME": "Pink",
+        "DISPLAY_SEQUENCE": 15,
+        "CSS_CLASSES": "ma-colored-field pink-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "PURPLE_TEXT",
+        "DISPLAY_NAME": "Purple",
+        "DISPLAY_SEQUENCE": 16,
+        "CSS_CLASSES": "ma-colored-field purple-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "RED_TEXT",
+        "DISPLAY_NAME": "Red",
+        "DISPLAY_SEQUENCE": 17,
+        "CSS_CLASSES": "ma-colored-field red-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "TEAL_TEXT",
+        "DISPLAY_NAME": "Teal",
+        "DISPLAY_SEQUENCE": 18,
+        "CSS_CLASSES": "ma-colored-field teal-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "WHITE",
+        "DISPLAY_NAME": "White",
+        "DISPLAY_SEQUENCE": 19,
+        "CSS_CLASSES": "ma-colored-field white-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "YELLOW_TEXT",
+        "DISPLAY_NAME": "Yellow",
+        "DISPLAY_SEQUENCE": 20,
+        "CSS_CLASSES": "ma-colored-field yellow-text",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "TEXT_SIZE",
+    "DISPLAY_NAME": "Display Only - Text Size",
+    "DISPLAY_SEQUENCE": 3,
+    "HELP_TEXT": "Defines the size of the text.",
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "FIELD_FLOW_TEXT",
+        "DISPLAY_NAME": "Responsive Text",
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "ma-text-size-responsive",
+        "HELP_TEXT": "Make any display only and read only text responsive"
+      },
+      {
+        "NAME": "H1",
+        "DISPLAY_NAME": "H1",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ma-text-size-h1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "H2",
+        "DISPLAY_NAME": "H2",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ma-text-size-h2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "H3",
+        "DISPLAY_NAME": "H3",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "ma-text-size-h3",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "H4",
+        "DISPLAY_NAME": "H4",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "ma-text-size-h4",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "H5",
+        "DISPLAY_NAME": "H5",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "ma-text-size-h5",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "H6",
+        "DISPLAY_NAME": "H6",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "ma-text-size-h6",
+        "HELP_TEXT": ""
+      }
+    ]
+  }
 ]
-{{/template_option_groups}}
-
-{{#template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 [
-    {
-        "name": "TRUNCATE_TEXT_OVERFLOW",
-        "display_name": "Display Only - Truncate Text",
-        "display_sequence": 11,
-        "css_classes": "truncate",
-        "help_text": ""
-    },
-
-
-    {
-        "name": "NO_LABEL",
-        "display_name": "Hide Label",
-        "display_sequence": 1,
-        "css_classes": "item-no-label",
-        "help_text": ""
-    },
-
-    {
-        "name": "CHECKBOX_ALTERNATE",
-        "display_name": "Checkbox & Radio - 2nd Look",
-        "display_sequence": 10,
-        "css_classes": "ma-alternate-look",
-        "help_text": ""
-    }
+  {
+    "NAME": "NO_LABEL",
+    "DISPLAY_NAME": "Hide Label",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "item-no-label",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  },
+  {
+    "NAME": "CHECKBOX_ALTERNATE",
+    "DISPLAY_NAME": "Checkbox & Radio - 2nd Look",
+    "DISPLAY_SEQUENCE": 10,
+    "CSS_CLASSES": "ma-alternate-look",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  },
+  {
+    "NAME": "TRUNCATE_TEXT_OVERFLOW",
+    "DISPLAY_NAME": "Display Only - Truncate Text",
+    "DISPLAY_SEQUENCE": 11,
+    "CSS_CLASSES": "truncate",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  }
 ]
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

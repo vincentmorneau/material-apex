@@ -18,7 +18,7 @@ materialAPEX.observe = {
 		var selector = ".a-Toolbar-group select";
 
 		var observer = new MutationObserver(function(mutations) {
-			$(selector).material_select();
+			$(selector).formSelect();
 			materialAPEX.ig.init();
 		});
 
@@ -40,7 +40,7 @@ materialAPEX.observe = {
 		var observer = new MutationObserver(function(mutations) {
 			mutations.forEach(function(mutation) {
 				if (mutation.addedNodes.length > 0) {
-					$(mutation.target).find("select").material_select();
+					$(mutation.target).find("select").formSelect();
 				}
 			});
 		});
@@ -147,14 +147,14 @@ materialAPEX.select = {
 
 	init: function() {
 		materialAPEX.debug.time("materialAPEX.select.init");
-		$('form select').not(materialAPEX.select.noInit).material_select();
+		$('form select').not(materialAPEX.select.noInit).formSelect();
 		$('.select-wrapper').closest(".ma-field-container").addClass("ma-select-container");
 		materialAPEX.debug.timeEnd("materialAPEX.select.init");
 	},
 
 	ir: function() {
 		materialAPEX.debug.time("materialAPEX.select.ir");
-		$('.a-IRR select').not(materialAPEX.select.noInit).material_select();
+		$('.a-IRR select').not(materialAPEX.select.noInit).formSelect();
 		materialAPEX.debug.timeEnd("materialAPEX.select.ir");
 	},
 
@@ -163,11 +163,11 @@ materialAPEX.select = {
 		var exclude = ".a-Property-field--select, .a-IRR-dialogTable select, .utr select";
 		// reset focus on select elements
 		setTimeout(function() {
-			$(selector).material_select("destroy");
-			$(selector).not(exclude).material_select();
+			$(selector).formSelect("destroy");
+			$(selector).not(exclude).formSelect();
 			$(selector).change(function() {
-				$(selector).material_select("destroy");
-				$(selector).not(exclude).material_select();
+				$(selector).formSelect("destroy");
+				$(selector).not(exclude).formSelect();
 			});
 		}, 250);
 		materialAPEX.debug.timeEnd("materialAPEX.select.refresh");
@@ -192,7 +192,7 @@ materialAPEX.datepicker = {
 			var month = $.datepicker.formatDate('MM', date);
 			var dayNum = $.datepicker.formatDate('d', date);
 			var year = $.datepicker.formatDate('yy', date);
-			$('.ui-datepicker select').not(materialAPEX.select.noInit).material_select();
+			$('.ui-datepicker select').not(materialAPEX.select.noInit).formSelect();
 			$(".ui-datepicker .ui-datepicker-material-header").remove();
 			$(".ui-datepicker").prepend(headerHtml(day, month, dayNum, year));
 		}, 1);
@@ -233,22 +233,6 @@ materialAPEX.materialize = {
 	init: function() {
 		materialAPEX.debug.time("materialAPEX.materialize.init");
 
-		// ScrollFire
-		var scrollFireOptions = [];
-		$(".enable-scrollfire").each(function() {
-			scrollFireOptions.push({
-				selector: '#' + this.id,
-				offset: parseInt($(this).attr("offset") || $("#" + this.id + " [offset]").attr("offset")) || 0,
-				callback: $(this).attr("callback") || $("#" + this.id + " [callback]").attr("callback")
-			});
-		});
-		Materialize.scrollFire(scrollFireOptions);
-
-		/* SideNav */
-		if ($('.button-collapse').length > 0) {
-			$('.button-collapse').sideNav();
-		}
-
 		/* Scrollspy & Pushpin */
 		if ($('.apex-rds li').length > 0) {
 			$(".ma-body-column-css-classes").addClass("col s12 m9 l10");
@@ -264,17 +248,12 @@ materialAPEX.materialize = {
 		/* Parallax */
 		$('.parallax').parallax();
 
-		/* Dropdown */
-		$('.dropdown-button').dropdown({
-			constrainWidth: false
-		});
-
 		/* Media */
 		$(".materialboxed").materialbox();
 		$('.slider').slider();
 
 		/* Tooltips */
-		$("[data-tooltip][data-tooltip!='']").materialTooltip({
+		$("[data-tooltip][data-tooltip!='']").tooltip({
 			html: true
 		});
 
@@ -308,7 +287,7 @@ materialAPEX.materialize = {
 					regionId: tabContainerID
 				});
 
-				$(el).tabs('select_tab', maSessionStorage.getItem("activeTab"));
+				$(el).tabs('select', maSessionStorage.getItem("activeTab"));
 			}
 		});
 

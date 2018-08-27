@@ -7,8 +7,9 @@ $(document).ready(function() {
     materialAPEX.observe.toolbar();
     materialAPEX.observe.select();
     materialAPEX.observe.irDialog();
-    materialAPEX.observe.irHeader();
-    Materialize.updateTextFields();
+	materialAPEX.observe.irHeader();
+	M.AutoInit();
+    M.updateTextFields();
 
     // triggers a resize
     $(document).trigger("apexwindowresized");

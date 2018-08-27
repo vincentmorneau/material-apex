@@ -1,26 +1,34 @@
-{{#template}}
+{{#TEMPLATE}}
 <div id="#REGION_STATIC_ID#" class="ma-region ma-region-tabs #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>#SUB_REGION_HEADERS##SUB_REGIONS#</div>
-{{/template}}
 
-{{#sub_plug_header_template}}
+{{/TEMPLATE}}
+{{#SUB_PLUG_HEADER_TEMPLATE}}
 <ul class="tabs tabs-fixed-width">#ENTRIES#</ul>
-{{/sub_plug_header_template}}
-{{#sub_plug_header_entry_template}}
-<li class="tab"><a href="#tab-#SUB_REGION_ID#">#SUB_REGION_TITLE#</a></li>
-{{/sub_plug_header_entry_template}}
-{{#sub_plug_template}}
-<div id="tab-#SUB_REGION_ID#">#SUB_REGION#</div>
-{{/sub_plug_template}}
 
-{{#template_options}}
+{{/SUB_PLUG_HEADER_TEMPLATE}}
+{{#SUB_PLUG_HEADER_ENTRY_TEMPLATE}}
+<li class="tab"><a href="#tab-#SUB_REGION_ID#">#SUB_REGION_TITLE#</a></li>
+
+{{/SUB_PLUG_HEADER_ENTRY_TEMPLATE}}
+{{#SUB_PLUG_TEMPLATE}}
+<div id="tab-#SUB_REGION_ID#">#SUB_REGION#</div>
+
+{{/SUB_PLUG_TEMPLATE}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
+[]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 [
-	{
-		"name": "REMEMBER_ACTIVE_TAB",
-		"display_name": "Remember Active Tab",
-		"display_sequence": 1,
-		"css_classes": "js-useLocalStorage",
-		"help_text": "",
-		"is_advanced": ""
-	}
+  {
+    "NAME": "REMEMBER_ACTIVE_TAB",
+    "DISPLAY_NAME": "Remember Active Tab",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "js-useLocalStorage",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  }
 ]
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

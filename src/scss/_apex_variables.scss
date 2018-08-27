@@ -343,6 +343,18 @@ $button-floating-radius: 50% !default;
 $button-flat-color: #343434 !default;
 $button-flat-disabled-color: lighten(#999, 10%) !default;
 
+// Large buttons
+$button-large-font-size: 15px !default;
+$button-large-icon-font-size: 1.6rem !default;
+$button-large-height: $button-height * 1.5 !default;
+$button-floating-large-size: 56px !default;
+
+// Small buttons
+$button-small-font-size: 13px !default;
+$button-small-icon-font-size: 1.2rem !default;
+$button-small-height: $button-height * .9 !default;
+$button-floating-small-size: $button-height * .9 !default;
+
 /* ===============================================================
 End Buttons
 =============================================================== */
@@ -471,6 +483,7 @@ $input-disabled-color: rgba(0,0,0, .26) !default;
 $input-disabled-solid-color: #BDBDBD !default;
 $input-disabled-border: 1px dotted $input-disabled-color !default;
 $input-invalid-border: 1px solid $input-error-color !default;
+$input-icon-size: 2rem;
 $placeholder-text-color: lighten($input-border-color, 20%) !default;
 
 // Radio Buttons
@@ -515,11 +528,12 @@ $track-height: 3px !default;
 $select-border: 1px solid #f2f2f2 !default;
 $select-background: rgba(255, 255, 255, 0.90) !default;
 $select-focus: 1px solid lighten($secondary-color, 47%) !default;
-$select-option-hover: rgba(0,0,0,.06) !default;
-$select-option-focus: rgba(0,0,0,.03) !default;
+$select-option-hover: rgba(0, 0, 0, .08) !default;
+$select-option-focus: rgba(0, 0, 0, .08) !default;
+$select-option-selected: rgba(0, 0, 0, .03) !default;
 $select-padding: 5px !default;
 $select-radius: 2px !default;
-$select-disabled-color: rgba(0,0,0,.3) !default;
+$select-disabled-color: rgba(0, 0, 0, .3) !default;
 
 // Switches
 $switch-bg-color: $secondary-color !default;
@@ -698,15 +712,22 @@ End Chip
 =============================================================== */
 
 /* ===============================================================
-Date Picker
+Date+Time Picker
  ============================================================== */
 
+$datepicker-display-font-size: 2.8rem;
+$datepicker-calendar-header-color: #999;
+$datepicker-weekday-color: rgba(0, 0, 0, .87) !default;
 $datepicker-weekday-bg: darken($secondary-color, 7%) !default;
 $datepicker-date-bg: $secondary-color !default;
-$datepicker-year: rgba(255, 255, 255, .4) !default;
-$datepicker-focus: rgba(0,0,0, .05) !default;
+$datepicker-year: rgba(255, 255, 255, .7) !default;
+$datepicker-focus: rgba(0, 0, 0, .05) !default;
 $datepicker-selected: $secondary-color !default;
 $datepicker-selected-outfocus: desaturate(lighten($secondary-color, 35%), 15%) !default;
+$datepicker-day-focus: transparentize(desaturate($secondary-color, 5%), .75) !default;
+$datepicker-disabled-day-color: rgba(0, 0, 0, .3) !default;
+$timepicker-clock-color: rgba(0, 0, 0, .87) !default;
+$timepicker-clock-plate-bg: #eee !default;
 
 /* ===============================================================
 End Date Picker
@@ -742,16 +763,6 @@ $dropdown-item-height: 50px !default;
 
 /* ===============================================================
 End Dropdown
-=============================================================== */
-
-/* ===============================================================
-Font
- ============================================================== */
-
-$roboto-font-path: "../lib/materialize/fonts/roboto/" !default;
-
-/* ===============================================================
-End Font
 =============================================================== */
 
 /* ===============================================================
@@ -1052,10 +1063,17 @@ $toast-action-color: #eeff41;
 End Toast
 =============================================================== */
 
-/* ===============================================================
-Typography
- ============================================================== */
-
+// 20. Typography
+// ==========================================================================
+$font-stack: -apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+Oxygen-Sans,
+Ubuntu,
+Cantarell,
+"Helvetica Neue",
+sans-serif !default;
 $off-black: rgba(0, 0, 0, 0.87) !default;
 // Header Styles
 $h1-fontsize: 4.2rem !default;
@@ -1063,7 +1081,7 @@ $h2-fontsize: 3.56rem !default;
 $h3-fontsize: 2.92rem !default;
 $h4-fontsize: 2.28rem !default;
 $h5-fontsize: 1.64rem !default;
-$h6-fontsize: 1rem !default;
+$h6-fontsize: 1.15rem !default;
 
 /* ===============================================================
 End Typography

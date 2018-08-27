@@ -1,80 +1,81 @@
-{{#template}}
+{{#TEMPLATE}}
 <button type="button" onclick="#JAVASCRIPT#" id="#BUTTON_ID#" class="fixed-action-btn btn-floating #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES# title="#LABEL#" aria-label="#LABEL#">
     <i class="material-icons">#ICON_CSS_CLASSES#</i>
 </button>
-{{/template}}
 
-{{#hot_template}}
+
+{{/TEMPLATE}}
+{{#HOT_TEMPLATE}}
 <a href="#LINK#" id="#BUTTON_ID#" class="fixed-action-btn btn-floating #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES# title="#LABEL#" aria-label="#LABEL#">
     <i class="material-icons">#ICON_CSS_CLASSES#</i>
 </a>
-{{/hot_template}}
 
-{{#template_option_groups}}
+{{/HOT_TEMPLATE}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
 [
-    {
-        "name": "POSITION",
-        "display_name": "Position",
-        "display_sequence": 1,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "N",
-        "template_options": [
-            {
-                "name": "INSIDE_THE_PARENT",
-                "display_name": "Inside the Parent",
-                "display_sequence": 3,
-                "css_classes": "fab-absolute",
-                "help_text": "",
-                "is_advanced": ""
-            },
-
-            {
-                "name": "LEFT",
-                "display_name": "Fixed - Bottom Left",
-                "display_sequence": 2,
-                "css_classes": "fab-left",
-                "help_text": "",
-                "is_advanced": ""
-            },
-
-            {
-                "name": "RIGHT",
-                "display_name": "Fixed - Bottom Right",
-                "display_sequence": 1,
-                "css_classes": "fab-right",
-                "help_text": "",
-                "is_advanced": ""
-            }
-        ]
-    }
+  {
+    "NAME": "POSITION",
+    "DISPLAY_NAME": "Position",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "RIGHT",
+        "DISPLAY_NAME": "Fixed - Bottom Right",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "fab-right",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "LEFT",
+        "DISPLAY_NAME": "Fixed - Bottom Left",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "fab-left",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "INSIDE_THE_PARENT",
+        "DISPLAY_NAME": "Inside the Parent",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "fab-absolute",
+        "HELP_TEXT": ""
+      }
+    ]
+  }
 ]
-{{/template_option_groups}}
-
-{{#template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 [
-    {
-        "name": "FAB_HORIZONTAL",
-        "display_name": "Horizontal",
-        "display_sequence": 1,
-        "css_classes": "horizontal",
-        "help_text": ""
-    },
-
-    {
-        "name": "CLICK_TO_TOGGLE",
-        "display_name": "Click to Toggle",
-        "display_sequence": 2,
-        "css_classes": "click-to-toggle",
-        "help_text": ""
-    },
-
-    {
-        "name": "FAB_TOOLBAR",
-        "display_name": "Toolbar",
-        "display_sequence": 3,
-        "css_classes": "toolbar",
-        "help_text": ""
-    }
+  {
+    "NAME": "FAB_HORIZONTAL",
+    "DISPLAY_NAME": "Horizontal",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "horizontal",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  },
+  {
+    "NAME": "CLICK_TO_TOGGLE",
+    "DISPLAY_NAME": "Click to Toggle",
+    "DISPLAY_SEQUENCE": 2,
+    "CSS_CLASSES": "click-to-toggle",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  },
+  {
+    "NAME": "FAB_TOOLBAR",
+    "DISPLAY_NAME": "Toolbar",
+    "DISPLAY_SEQUENCE": 3,
+    "CSS_CLASSES": "toolbar",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  }
 ]
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+fab-right:btn-large:waves-effect waves-light
+{{/PRESET_TEMPLATE_OPTIONS}}

@@ -5,7 +5,7 @@ function render_staggered_list (
 is
 	l_result apex_plugin.t_dynamic_action_render_result;
 begin
-	l_result.javascript_function := 'function(){$(this.affectedElements.selector).modal(''close'');}';
+	l_result.javascript_function := 'function(){$(this.affectedElements).modal(''close'');}';
 
 	return l_result;
 end render_staggered_list;

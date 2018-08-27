@@ -1,91 +1,97 @@
-{{#javascript_file_urls}}
-{{/javascript_file_urls}}
-{{#javascript_code_onload}}
-{{/javascript_code_onload}}
-{{#css_file_urls}}
-{{/css_file_urls}}
-{{#inline_css}}
-{{/inline_css}}
+{{#JAVASCRIPT_FILE_URLS}}{{/JAVASCRIPT_FILE_URLS}}
+{{#JAVASCRIPT_CODE_ONLOAD}}{{/JAVASCRIPT_CODE_ONLOAD}}
+{{#CSS_FILE_URLS}}{{/CSS_FILE_URLS}}
+{{#INLINE_CSS}}{{/INLINE_CSS}}
 
-{{#list_template_before_rows}}
+{{#LIST_TEMPLATE_BEFORE_ROWS}}
 <ul id="#LIST_ID#" class="right navbar-list #COMPONENT_CSS_CLASSES#">
-{{/list_template_before_rows}}
-    {{#list_template_current}}
-    <li class="active">
+{{/LIST_TEMPLATE_BEFORE_ROWS}}
+{{#LIST_TEMPLATE_CURRENT}}
+<li class="active">
         <a id="#LIST_ITEM_ID#" href="#LINK#" class="#A01#">
             <i class="material-icons right-l">#ICON_CSS_CLASSES#</i>
             <span class="hide-on-med-and-down">#TEXT#</span>
         </a>
     </li>
-    {{/list_template_current}}
-    {{#list_template_noncurrent}}
-    <li>
+{{/LIST_TEMPLATE_CURRENT}}
+{{#ITEM_TEMPLATE_CURR_W_CHILD}}
+<li class="active">
+        <a id="#LIST_ITEM_ID#" class="dropdown-trigger #A01#" href="#LINK#" data-target="#LIST_ITEM_ID#-menu">
+            <span class="hide-on-med-and-down">#TEXT#</span>
+            <i class="material-icons right-l">arrow_drop_down</i>
+        </a>
+    </li>
+{{/ITEM_TEMPLATE_CURR_W_CHILD}}
+{{#LIST_TEMPLATE_NONCURRENT}}
+<li>
         <a id="#LIST_ITEM_ID#" href="#LINK#" class="#A01#">
             <i class="material-icons right-l">#ICON_CSS_CLASSES#</i>
             <span class="hide-on-med-and-down">#TEXT#</span>
         </a>
     </li>
-    {{/list_template_noncurrent}}
-    {{#item_template_curr_w_child}}
-    <li class="active">
-        <a id="#LIST_ITEM_ID#" class="dropdown-button #A01#" href="#LINK#" data-activates="#LIST_ITEM_ID#-menu">
+{{/LIST_TEMPLATE_NONCURRENT}}
+{{#ITEM_TEMPLATE_NONCURR_W_CHILD}}
+<li>
+        <a id="#LIST_ITEM_ID#" class="dropdown-trigger #A01#" href="#LINK#" data-target="#LIST_ITEM_ID#-menu">
             <span class="hide-on-med-and-down">#TEXT#</span>
             <i class="material-icons right-l">arrow_drop_down</i>
         </a>
     </li>
-    {{/item_template_curr_w_child}}
-    {{#item_template_noncurr_w_child}}
-    <li>
-        <a id="#LIST_ITEM_ID#" class="dropdown-button #A01#" href="#LINK#" data-activates="#LIST_ITEM_ID#-menu">
-            <span class="hide-on-med-and-down">#TEXT#</span>
-            <i class="material-icons right-l">arrow_drop_down</i>
-        </a>
-    </li>
-    {{/item_template_noncurr_w_child}}
-    {{#between_items}}
-    {{/between_items}}
+{{/ITEM_TEMPLATE_NONCURR_W_CHILD}}
+{{#BETWEEN_ITEMS}}{{/BETWEEN_ITEMS}}
 
-    {{#before_sub_list}}
-    <ul id="#PARENT_LIST_ITEM_ID#-menu" class="dropdown-content">
-    {{/before_sub_list}}
-        {{#sub_list_item_current}}
-        <li><a href="#LINK#">#TEXT#</a></li>
-        {{/sub_list_item_current}}
-        {{#sub_template_curr_w_child}}{{/sub_template_curr_w_child}}
-        {{#sub_list_item_noncurrent}}
-        <li><a href="#LINK#">#TEXT#</a></li>
-        {{/sub_list_item_noncurrent}}
-        {{#sub_template_noncurr_w_child}}{{/sub_template_noncurr_w_child}}
-        {{#between_sub_list_items}}{{/between_sub_list_items}}
-    {{#after_sub_list}}
-    </ul>
-    {{/after_sub_list}}
-
-    {{#first_list_template_noncurrent}}{{/first_list_template_noncurrent}}
-    {{#first_list_template_current}}{{/first_list_template_current}}
-    {{#f_item_template_curr_w_child}}{{/f_item_template_curr_w_child}}
-    {{#fitem_template_noncurr_w_child}}{{/fitem_template_noncurr_w_child}}
-{{#list_template_after_rows}}
+{{#BEFORE_SUB_LIST}}
+<ul id="#PARENT_LIST_ITEM_ID#-menu" class="dropdown-content">
+{{/BEFORE_SUB_LIST}}
+{{#SUB_LIST_ITEM_CURRENT}}
+<li><a href="#LINK#">#TEXT#</a></li>
+{{/SUB_LIST_ITEM_CURRENT}}
+{{#SUB_LIST_ITEM_NONCURRENT}}
+<li><a href="#LINK#">#TEXT#</a></li>
+{{/SUB_LIST_ITEM_NONCURRENT}}
+{{#SUB_TEMPLATE_CURR_W_CHILD}}{{/SUB_TEMPLATE_CURR_W_CHILD}}
+{{#SUB_TEMPLATE_NONCURR_W_CHILD}}{{/SUB_TEMPLATE_NONCURR_W_CHILD}}
+{{#BETWEEN_SUB_LIST_ITEMS}}{{/BETWEEN_SUB_LIST_ITEMS}}
+{{#AFTER_SUB_LIST}}
 </ul>
-{{/list_template_after_rows}}
+{{/AFTER_SUB_LIST}}
 
-{{#a01_label}}Button CSS Classes{{/a01_label}}
-{{#a02_label}}{{/a02_label}}
-{{#a03_label}}{{/a03_label}}
-{{#a04_label}}{{/a04_label}}
-{{#a05_label}}{{/a05_label}}
-{{#a06_label}}{{/a06_label}}
-{{#a07_label}}{{/a07_label}}
-{{#a08_label}}{{/a08_label}}
-{{#a09_label}}{{/a09_label}}
-{{#a10_label}}{{/a10_label}}
-{{#a11_label}}{{/a11_label}}
-{{#a12_label}}{{/a12_label}}
-{{#a13_label}}{{/a13_label}}
-{{#a14_label}}{{/a14_label}}
-{{#a15_label}}{{/a15_label}}
-{{#a16_label}}{{/a16_label}}
-{{#a17_label}}{{/a17_label}}
-{{#a18_label}}{{/a18_label}}
-{{#a19_label}}{{/a19_label}}
-{{#a20_label}}{{/a20_label}}
+{{#FIRST_LIST_TEMPLATE_NONCURRENT}}{{/FIRST_LIST_TEMPLATE_NONCURRENT}}
+{{#FIRST_LIST_TEMPLATE_CURRENT}}{{/FIRST_LIST_TEMPLATE_CURRENT}}
+{{#F_ITEM_TEMPLATE_CURR_W_CHILD}}{{/F_ITEM_TEMPLATE_CURR_W_CHILD}}
+{{#FITEM_TEMPLATE_NONCURR_W_CHILD}}{{/FITEM_TEMPLATE_NONCURR_W_CHILD}}
+{{#LIST_TEMPLATE_AFTER_ROWS}}
+</ul>
+{{/LIST_TEMPLATE_AFTER_ROWS}}
+
+{{#A01_LABEL}}
+Button CSS Classes
+{{/A01_LABEL}}
+{{#A02_LABEL}}{{/A02_LABEL}}
+{{#A03_LABEL}}{{/A03_LABEL}}
+{{#A04_LABEL}}{{/A04_LABEL}}
+{{#A05_LABEL}}{{/A05_LABEL}}
+{{#A06_LABEL}}{{/A06_LABEL}}
+{{#A07_LABEL}}{{/A07_LABEL}}
+{{#A08_LABEL}}{{/A08_LABEL}}
+{{#A09_LABEL}}{{/A09_LABEL}}
+{{#A10_LABEL}}{{/A10_LABEL}}
+{{#A11_LABEL}}{{/A11_LABEL}}
+{{#A12_LABEL}}{{/A12_LABEL}}
+{{#A13_LABEL}}{{/A13_LABEL}}
+{{#A14_LABEL}}{{/A14_LABEL}}
+{{#A15_LABEL}}{{/A15_LABEL}}
+{{#A16_LABEL}}{{/A16_LABEL}}
+{{#A17_LABEL}}{{/A17_LABEL}}
+{{#A18_LABEL}}{{/A18_LABEL}}
+{{#A19_LABEL}}{{/A19_LABEL}}
+{{#A20_LABEL}}{{/A20_LABEL}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
+[]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
+[]
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

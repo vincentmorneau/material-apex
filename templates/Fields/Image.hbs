@@ -1,50 +1,63 @@
-{{#before_label_and_item}}
+{{#BEFORE_ITEM}}
 <div id="#CURRENT_ITEM_NAME#_CONTAINER" class="#ITEM_CSS_CLASSES#">
-{{/before_label_and_item}}
-    {{#before_label}}
+
+{{/BEFORE_ITEM}}
+{{#TEMPLATE_BODY1}}
     <label class="hide">
-    {{/before_label}}
-    {{#after_label}}
+
+{{/TEMPLATE_BODY1}}
+{{#TEMPLATE_BODY2}}
     </label>
-    {{/after_label}}
 
-    {{#before_item}}
-    {{/before_item}}
-    {{#after_item}}
-    {{/after_item}}
-{{#after_label_and_item}}
+{{/TEMPLATE_BODY2}}
+{{#ITEM_PRE_TEXT}}{{/ITEM_PRE_TEXT}}
+{{#BEFORE_ELEMENT}}{{/BEFORE_ELEMENT}}
+{{#AFTER_ELEMENT}}{{/AFTER_ELEMENT}}
+{{#ITEM_POST_TEXT}}{{/ITEM_POST_TEXT}}
+{{#AFTER_ITEM}}
 </div>
-{{/after_label_and_item}}
 
-{{#on_error_before_label}}{{/on_error_before_label}}
-{{#on_error_after_label}}{{/on_error_after_label}}
-{{#error_template}}{{/error_template}}
-{{#help_template}}{{/help_template}}
 
-{{#template_options}}
+{{/AFTER_ITEM}}
+
+{{#ON_ERROR_BEFORE_LABEL}}{{/ON_ERROR_BEFORE_LABEL}}
+{{#ON_ERROR_AFTER_LABEL}}{{/ON_ERROR_AFTER_LABEL}}
+{{#ERROR_TEMPLATE}}{{/ERROR_TEMPLATE}}
+{{#HELP_LINK}}{{/HELP_LINK}}
+{{#INLINE_HELP_TEXT}}{{/INLINE_HELP_TEXT}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
+[]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 [
-    {
-        "name": "IMAGE_CIRCLE",
-        "display_name": "Image Circle",
-        "display_sequence": 1,
-        "css_classes": "item-image-circle",
-        "help_text": ""
-    },
-
-    {
-        "name": "FADE_IN_EFFECT",
-        "display_name": "Fade In Effect",
-        "display_sequence": 2,
-        "css_classes": "item-fade-in",
-        "help_text": ""
-    },
-
-    {
-        "name": "IMAGE_RESPONSIVE",
-        "display_name": "Image Responsive",
-        "display_sequence": 3,
-        "css_classes": "item-image-responsive",
-        "help_text": ""
-    }
+  {
+    "NAME": "IMAGE_CIRCLE",
+    "DISPLAY_NAME": "Image Circle",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "item-image-circle",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  },
+  {
+    "NAME": "FADE_IN_EFFECT",
+    "DISPLAY_NAME": "Fade In Effect",
+    "DISPLAY_SEQUENCE": 2,
+    "CSS_CLASSES": "item-fade-in",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  },
+  {
+    "NAME": "IMAGE_RESPONSIVE",
+    "DISPLAY_NAME": "Image Responsive",
+    "DISPLAY_SEQUENCE": 3,
+    "CSS_CLASSES": "item-image-responsive",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  }
 ]
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}
+item-image-responsive
+{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

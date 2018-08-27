@@ -1,14 +1,17 @@
-{{#row_template_before_rows}}
+{{#ROW_TEMPLATE_BEFORE_ROWS}}
 <div class="row u-colors #COMPONENT_CSS_CLASSES#">
-{{/row_template_before_rows}}
+{{/ROW_TEMPLATE_BEFORE_ROWS}}
 
-	{{#before_column_heading}}{{/before_column_heading}}
-		{{#column_heading_template}}{{/column_heading_template}}
-	{{#after_column_heading}}{{/after_column_heading}}
-	{{#row_template_before_first}}{{/row_template_before_first}}
+{{#BEFORE_COLUMN_HEADING}}{{/BEFORE_COLUMN_HEADING}}
 
-		{{#row_template1}}
-		<div class="ma-card-col col s12">
+{{#COLUMN_HEADING_TEMPLATE}}{{/COLUMN_HEADING_TEMPLATE}}
+
+{{#AFTER_COLUMN_HEADING}}{{/AFTER_COLUMN_HEADING}}
+
+{{#ROW_TEMPLATE_BEFORE_FIRST}}{{/ROW_TEMPLATE_BEFORE_FIRST}}
+
+{{#ROW_TEMPLATE1}}
+<div class="ma-card-col col s12">
 			<div class="card">
 				<div class="card-image">
 					<img src="#IMG_SRC#">
@@ -22,11 +25,15 @@
 				</div>
 			</div>
 		</div>
-		{{/row_template1}}
-		{{#row_template_condition1}}:FAB_LINK is not null and :FAB_ICON is not null and :IMG_SRC is not null{{/row_template_condition1}}
-		{{#row_template_display_cond1}}NOT_CONDITIONAL{{/row_template_display_cond1}}
-		{{#row_template2}}
-		<div class="ma-card-col col s12">
+{{/ROW_TEMPLATE1}}
+{{#ROW_TEMPLATE_CONDITION1}}
+:FAB_LINK is not null and :FAB_ICON is not null and :IMG_SRC is not null
+{{/ROW_TEMPLATE_CONDITION1}}
+{{#ROW_TEMPLATE_DISPLAY_COND1}}
+NOT_CONDITIONAL
+{{/ROW_TEMPLATE_DISPLAY_COND1}}
+{{#ROW_TEMPLATE2}}
+<div class="ma-card-col col s12">
 			<div class="ma-card-image-content">
 				<div class="card">
 					<div class="card-image">
@@ -58,11 +65,15 @@
 				</div>
 			</div>
 		</div>
-		{{/row_template2}}
-		{{#row_template_condition2}}:IMG_SRC is not null{{/row_template_condition2}}
-		{{#row_template_display_cond2}}NOT_CONDITIONAL{{/row_template_display_cond2}}
-		{{#row_template3}}
-		<div class="ma-card-col col s12">
+{{/ROW_TEMPLATE2}}
+{{#ROW_TEMPLATE_CONDITION2}}
+:IMG_SRC is not null
+{{/ROW_TEMPLATE_CONDITION2}}
+{{#ROW_TEMPLATE_DISPLAY_COND2}}
+NOT_CONDITIONAL
+{{/ROW_TEMPLATE_DISPLAY_COND2}}
+{{#ROW_TEMPLATE3}}
+<div class="ma-card-col col s12">
 			<div class="card">
 				<div class="card-content">
 					<p class="card-title black-text">#TITLE#</p>
@@ -71,94 +82,98 @@
 				<div class="card-action">#BTN_LABEL_1##BTN_LABEL_2#</div>
 			</div>
 		</div>
-		{{/row_template3}}
-		{{#row_template_condition3}}{{/row_template_condition3}}
-		{{#row_template_display_cond3}}{{/row_template_display_cond3}}
-		{{#row_template4}}{{/row_template4}}
-		{{#row_template_condition4}}{{/row_template_condition4}}
-		{{#row_template_display_cond4}}{{/row_template_display_cond4}}
+{{/ROW_TEMPLATE3}}
+{{#ROW_TEMPLATE_CONDITION3}}{{/ROW_TEMPLATE_CONDITION3}}
+{{#ROW_TEMPLATE_DISPLAY_COND3}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND3}}
+{{#ROW_TEMPLATE4}}{{/ROW_TEMPLATE4}}
+{{#ROW_TEMPLATE_CONDITION4}}{{/ROW_TEMPLATE_CONDITION4}}
+{{#ROW_TEMPLATE_DISPLAY_COND4}}
+NOT_CONDITIONAL
+{{/ROW_TEMPLATE_DISPLAY_COND4}}
 
-	{{#row_template_after_last}}
-	{{/row_template_after_last}}
+{{#ROW_TEMPLATE_AFTER_LAST}}{{/ROW_TEMPLATE_AFTER_LAST}}
 
-{{#row_template_after_rows}}
+{{#ROW_TEMPLATE_AFTER_ROWS}}
 </div>
-{{/row_template_after_rows}}
+{{/ROW_TEMPLATE_AFTER_ROWS}}
 
-{{#pagination_template}}{{/pagination_template}}
-{{#next_page_template}}{{/next_page_template}}
-{{#previous_page_template}}{{/previous_page_template}}
-{{#next_set_template}}{{/next_set_template}}
-{{#previous_set_template}}{{/previous_set_template}}
+{{#PAGINATION_TEMPLATE}}{{/PAGINATION_TEMPLATE}}
+{{#NEXT_PAGE_TEMPLATE}}{{/NEXT_PAGE_TEMPLATE}}
+{{#PREVIOUS_PAGE_TEMPLATE}}{{/PREVIOUS_PAGE_TEMPLATE}}
+{{#NEXT_SET_TEMPLATE}}{{/NEXT_SET_TEMPLATE}}
+{{#PREVIOUS_SET_TEMPLATE}}{{/PREVIOUS_SET_TEMPLATE}}
 
-{{#template_option_groups}}
+{{#TEMPLATE_OPTION_GROUPS}}
 [
-	{
-		"name": "CARD_COLUMNS",
-		"display_name": "Number of columns",
-		"display_sequence": 1,
-		"help_text": "",
-		"null_text": "",
-		"is_advanced": "N",
-		"template_options": [
-			{
-				"name": "CARD_COL1",
-				"display_name": "1 Column",
-				"display_sequence": 1,
-				"css_classes": "ma-card-col-1",
-				"help_text": ""
-			},
-			{
-				"name": "CARD_COL2",
-				"display_name": "2 Columns",
-				"display_sequence": 2,
-				"css_classes": "ma-card-col-2",
-				"help_text": ""
-			},
-			{
-				"name": "CARD_COL3",
-				"display_name": "3 Columns",
-				"display_sequence": 3,
-				"css_classes": "ma-card-col-3",
-				"help_text": ""
-			},
-			{
-				"name": "CARD_COL4",
-				"display_name": "4 Columns",
-				"display_sequence": 4,
-				"css_classes": "ma-card-col-4",
-				"help_text": ""
-			}
-		]
-	}
+  {
+    "NAME": "CARD_COLUMNS",
+    "DISPLAY_NAME": "Number of columns",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "CARD_COL1",
+        "DISPLAY_NAME": "1 Column",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "ma-card-col-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "CARD_COL2",
+        "DISPLAY_NAME": "2 Columns",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "ma-card-col-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "CARD_COL3",
+        "DISPLAY_NAME": "3 Columns",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "ma-card-col-3",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "CARD_COL4",
+        "DISPLAY_NAME": "4 Columns",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "ma-card-col-4",
+        "HELP_TEXT": ""
+      }
+    ]
+  }
 ]
-{{/template_option_groups}}
-
-{{#template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 [
-	{
-		"name": "CARD_HORIZONTAL",
-		"display_name": "Horizontal",
-		"display_sequence": 1,
-		"css_classes": "ma-card-horizontal",
-		"help_text": "If the card contains an image, it will be displayed horizontally",
-		"is_advanced": ""
-	},
-	{
-		"name": "CARD_HOVERABLE1",
-		"display_name": "Hoverable",
-		"display_sequence": 2,
-		"css_classes": "ma-card-hoverable",
-		"help_text": "",
-		"is_advanced": ""
-	},
-	{
-		"name": "CARD_REVEAL",
-		"display_name": "Reveal Effect",
-		"display_sequence": 3,
-		"css_classes": "ma-card-reveal",
-		"help_text": "The content will unfold when clicking on the card.",
-		"is_advanced": "Y"
-	}
+  {
+    "NAME": "CARD_HORIZONTAL",
+    "DISPLAY_NAME": "Horizontal",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "ma-card-horizontal",
+    "HELP_TEXT": "If the card contains an image, it will be displayed horizontally",
+    "IS_ADVANCED": ""
+  },
+  {
+    "NAME": "CARD_HOVERABLE1",
+    "DISPLAY_NAME": "Hoverable",
+    "DISPLAY_SEQUENCE": 2,
+    "CSS_CLASSES": "ma-card-hoverable",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  },
+  {
+    "NAME": "CARD_REVEAL",
+    "DISPLAY_NAME": "Reveal Effect",
+    "DISPLAY_SEQUENCE": 3,
+    "CSS_CLASSES": "ma-card-reveal",
+    "HELP_TEXT": "The content will unfold when clicking on the card.",
+    "IS_ADVANCED": "Y"
+  }
 ]
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

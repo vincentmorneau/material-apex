@@ -1,952 +1,943 @@
-{{#template_option_groups}}
+{{#TEMPLATE_OPTION_GROUPS}}
 [
-	{
-		"name": "SIZE",
-		"display_name": "Size",
-		"display_sequence": 2,
-		"help_text": "",
-		"null_text": "Default",
-		"is_advanced": "N",
-		"template_options": [
-			{
-				"name": "LARGE",
-				"display_name": "Large",
-				"display_sequence": 1,
-				"css_classes": "btn-large",
-				"help_text": "",
-				"is_advanced": ""
-			}
-		]
-	},
-	{
-		"name": "HIDING_CONTENT",
-		"display_name": "Hiding Content",
-		"display_sequence": 800,
-		"help_text": "",
-		"null_text": "",
-		"is_advanced": "Y",
-		"template_options": [
-			{
-				"name": "B_HIDDEN_ALL_DEVICES",
-				"display_name": "Hidden for All Devices",
-				"display_sequence": 1,
-				"css_classes": "hide",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "B_HIDDEN_SMALL_ONLY",
-				"display_name": "Hidden for Small Only",
-				"display_sequence": 2,
-				"css_classes": "hide-on-small-only",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "B_HIDDEN_MEDIUM_ONLY",
-				"display_name": "Hidden for Medium Only",
-				"display_sequence": 3,
-				"css_classes": "hide-on-med-only",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "B_HIDDEN_LARGE_ONLY",
-				"display_name": "Hidden for Large Only",
-				"display_sequence": 4,
-				"css_classes": "hide-on-large-only",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "B_HIDDEN_MEDIUM_AND_BELOW",
-				"display_name": "Hidden for Medium and Below",
-				"display_sequence": 5,
-				"css_classes": "hide-on-med-and-down",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "B_HIDDEN_MEDIUM_AND_ABOVE",
-				"display_name": "Hidden for Medium and Above",
-				"display_sequence": 6,
-				"css_classes": "hide-on-med-and-up",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "B_HIDDEN_SMALL_AND_LARGE",
-				"display_name": "Hidden for Small and Large",
-				"display_sequence": 7,
-				"css_classes": "hide-on-small-only hide-on-large-only",
-				"help_text": "",
-				"is_advanced": ""
-			}
-		]
-	},
-	{
-		"name": "BACKGROUND_COLOR",
-		"display_name": "Background Color",
-		"display_sequence": 3,
-		"help_text": "",
-		"null_text": "",
-		"is_advanced": "N",
-		"template_options": [{
-				"name": "BTN_BG_BLACK",
-				"display_name": "Black",
-				"display_sequence": 1,
-				"css_classes": "black",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_WHITE",
-				"display_name": "White",
-				"display_sequence": 2,
-				"css_classes": "white",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_TRANSPARENT",
-				"display_name": "Transparent",
-				"display_sequence": 3,
-				"css_classes": "transparent",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_RED",
-				"display_name": "Red",
-				"display_sequence": 4,
-				"css_classes": "red",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_PINK",
-				"display_name": "Pink",
-				"display_sequence": 5,
-				"css_classes": "pink",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_PURPLE",
-				"display_name": "Purple",
-				"display_sequence": 6,
-				"css_classes": "purple",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_DEEP_PURPLE",
-				"display_name": "Deep Purple",
-				"display_sequence": 7,
-				"css_classes": "deep-purple",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_INDIGO",
-				"display_name": "Indigo",
-				"display_sequence": 8,
-				"css_classes": "indigo",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_BLUE",
-				"display_name": "Blue",
-				"display_sequence": 9,
-				"css_classes": "blue",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_LIGHT_BLUE",
-				"display_name": "Light Blue",
-				"display_sequence": 10,
-				"css_classes": "light-blue",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_CYAN",
-				"display_name": "Cyan",
-				"display_sequence": 11,
-				"css_classes": "cyan",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_TEAL",
-				"display_name": "Teal",
-				"display_sequence": 12,
-				"css_classes": "teal",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_GREEN",
-				"display_name": "Green",
-				"display_sequence": 13,
-				"css_classes": "green",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_LIGHT_GREEN",
-				"display_name": "Light Green",
-				"display_sequence": 14,
-				"css_classes": "light-green",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_LIME",
-				"display_name": "Lime",
-				"display_sequence": 15,
-				"css_classes": "lime",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_YELLOW",
-				"display_name": "Yellow",
-				"display_sequence": 16,
-				"css_classes": "yellow",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_AMBER",
-				"display_name": "Amber",
-				"display_sequence": 17,
-				"css_classes": "amber",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_ORANGE",
-				"display_name": "Orange",
-				"display_sequence": 18,
-				"css_classes": "orange",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_DEEP_ORANGE",
-				"display_name": "Deep Orange",
-				"display_sequence": 19,
-				"css_classes": "deep-orange",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_BROWN",
-				"display_name": "Brown",
-				"display_sequence": 20,
-				"css_classes": "brown",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_GREY",
-				"display_name": "Grey",
-				"display_sequence": 21,
-				"css_classes": "grey",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_BLUE_GREY",
-				"display_name": "Blue Grey",
-				"display_sequence": 22,
-				"css_classes": "blue-grey",
-				"help_text": "",
-				"is_advanced": ""
-			}
-		]
-	},
-	{
-		"name": "BACKGROUND_MODIFIER",
-		"display_name": "Background Modifier",
-		"display_sequence": 4,
-		"help_text": "",
-		"null_text": "",
-		"is_advanced": "N",
-		"template_options": [
-			{
-				"name": "BTN_BG_ACCENT_1",
-				"display_name": "Accent 1",
-				"display_sequence": 1,
-				"css_classes": "accent-1",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_ACCENT_2",
-				"display_name": "Accent 2",
-				"display_sequence": 2,
-				"css_classes": "accent-2",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_ACCENT_3",
-				"display_name": "Accent 3",
-				"display_sequence": 3,
-				"css_classes": "accent-3",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_ACCENT_4",
-				"display_name": "Accent 4",
-				"display_sequence": 4,
-				"css_classes": "accent-4",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_DARKEN_1",
-				"display_name": "Darken 1",
-				"display_sequence": 5,
-				"css_classes": "darken-1",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_DARKEN_2",
-				"display_name": "Darken 2",
-				"display_sequence": 6,
-				"css_classes": "darken-2",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_DARKEN_3",
-				"display_name": "Darken 3",
-				"display_sequence": 7,
-				"css_classes": "darken-3",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_DARKEN_4",
-				"display_name": "Darken 4",
-				"display_sequence": 8,
-				"css_classes": "darken-4",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_LIGHTEN_1",
-				"display_name": "Lighten 1",
-				"display_sequence": 9,
-				"css_classes": "lighten-1",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_LIGHTEN_2",
-				"display_name": "Lighten 2",
-				"display_sequence": 10,
-				"css_classes": "lighten-2",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_LIGHTEN_3",
-				"display_name": "Lighten 3",
-				"display_sequence": 11,
-				"css_classes": "lighten-3",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_LIGHTEN_4",
-				"display_name": "Lighten 4",
-				"display_sequence": 12,
-				"css_classes": "lighten-4",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_BG_LIGHTEN_5",
-				"display_name": "Lighten 5",
-				"display_sequence": 13,
-				"css_classes": "lighten-5",
-				"help_text": "",
-				"is_advanced": ""
-			}
-		]
-	},
-	{
-		"name": "SHADOW",
-		"display_name": "Shadow",
-		"display_sequence": 7,
-		"help_text": "",
-		"null_text": "",
-		"is_advanced": "N",
-		"template_options": [
-			{
-				"name": "DEPTH_0",
-				"display_name": "Depth 0",
-				"display_sequence": 0,
-				"css_classes": "z-depth-0",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "DEPTH_1",
-				"display_name": "Depth 1",
-				"display_sequence": 1,
-				"css_classes": "z-depth-1",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "DEPTH_2",
-				"display_name": "Depth 2",
-				"display_sequence": 2,
-				"css_classes": "z-depth-2",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "DEPTH_3",
-				"display_name": "Depth 3",
-				"display_sequence": 3,
-				"css_classes": "z-depth-3",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "DEPTH_4",
-				"display_name": "Depth 4",
-				"display_sequence": 4,
-				"css_classes": "z-depth-4",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "DEPTH_5",
-				"display_name": "Depth 5",
-				"display_sequence": 5,
-				"css_classes": "z-depth-5",
-				"help_text": "",
-				"is_advanced": ""
-			}
-		]
-	},
-	{
-		"name": "TEXT_COLOR",
-		"display_name": "Text Color",
-		"display_sequence": 5,
-		"help_text": "",
-		"null_text": "",
-		"is_advanced": "N",
-		"template_options": [
-			{
-				"name": "BTN_TEXT_BLACK",
-				"display_name": "Black",
-				"display_sequence": 0,
-				"css_classes": "black-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_AMBER",
-				"display_name": "Amber",
-				"display_sequence": 1,
-				"css_classes": "amber-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_BLUE_GREY",
-				"display_name": "Blue Grey",
-				"display_sequence": 2,
-				"css_classes": "blue-grey-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_BLUE",
-				"display_name": "Blue",
-				"display_sequence": 3,
-				"css_classes": "blue-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_BROWN",
-				"display_name": "Brown",
-				"display_sequence": 4,
-				"css_classes": "brown-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_CYAN",
-				"display_name": "Cyan",
-				"display_sequence": 5,
-				"css_classes": "cyan-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_DEEP_ORANGE",
-				"display_name": "Deep Orange",
-				"display_sequence": 6,
-				"css_classes": "deep-orange-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_DEEP_PURPLE",
-				"display_name": "Deep Deep Purple",
-				"display_sequence": 7,
-				"css_classes": "deep-purple-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_GREEN",
-				"display_name": "Green",
-				"display_sequence": 8,
-				"css_classes": "green-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_GREY",
-				"display_name": "Grey",
-				"display_sequence": 9,
-				"css_classes": "grey-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_INDIGO",
-				"display_name": "Light Indigo",
-				"display_sequence": 10,
-				"css_classes": "indigo-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_LIGHT_BLUE",
-				"display_name": "Light Blue",
-				"display_sequence": 11,
-				"css_classes": "light-blue-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_LIGHT_GREEN",
-				"display_name": "Light Green",
-				"display_sequence": 12,
-				"css_classes": "light-green-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_LIME",
-				"display_name": "Lime",
-				"display_sequence": 13,
-				"css_classes": "lime-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_ORANGE",
-				"display_name": "Light Orange",
-				"display_sequence": 14,
-				"css_classes": "orange-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_PINK",
-				"display_name": "Pink",
-				"display_sequence": 15,
-				"css_classes": "pink-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_PURPLE",
-				"display_name": "Purple",
-				"display_sequence": 16,
-				"css_classes": "purple-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_RED",
-				"display_name": "Red",
-				"display_sequence": 17,
-				"css_classes": "red-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_TEAL",
-				"display_name": "Teal",
-				"display_sequence": 18,
-				"css_classes": "teal-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_WHITE",
-				"display_name": "White",
-				"display_sequence": 19,
-				"css_classes": "white-text",
-				"help_text": "",
-				"is_advanced": ""
-			},
-			{
-				"name": "BTN_TEXT_YELLOW",
-				"display_name": "Yellow",
-				"display_sequence": 20,
-				"css_classes": "yellow-text",
-				"help_text": "",
-				"is_advanced": ""
-			}
-		]
-	},
-	{
-		"name": "WAVE_EFFECT",
-		"display_name": "Wave Effect",
-		"display_sequence": 6,
-		"help_text": "",
-		"null_text": "None",
-		"is_advanced": "N",
-		"template_options": [
-			{
-				"name": "GREEN",
-				"display_name": "Green",
-				"display_sequence": 1,
-				"css_classes": "waves-effect waves-green",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "LIGHT",
-				"display_name": "Light",
-				"display_sequence": 2,
-				"css_classes": "waves-effect waves-light",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "ORANGE",
-				"display_name": "Orange",
-				"display_sequence": 3,
-				"css_classes": "waves-effect waves-orange",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "PURPLE",
-				"display_name": "Purple",
-				"display_sequence": 4,
-				"css_classes": "waves-effect waves-purple",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "RED",
-				"display_name": "Red",
-				"display_sequence": 5,
-				"css_classes": "waves-effect waves-red",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "TEAL",
-				"display_name": "Teal",
-				"display_sequence": 6,
-				"css_classes": "waves-effect waves-teal",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "WAVE_DEFAULT",
-				"display_name": "Default",
-				"display_sequence": 7,
-				"css_classes": "waves-effect",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "WAVE_NONE",
-				"display_name": "None",
-				"display_sequence": 8,
-				"css_classes": "wave-none",
-				"help_text": "",
-				"is_advanced": ""
-			},
-
-			{
-				"name": "YELLOW",
-				"display_name": "Yellow",
-				"display_sequence": 9,
-				"css_classes": "waves-effect waves-yellow",
-				"help_text": "",
-				"is_advanced": ""
-			}
-		]
-	},
-	{
-		"name": "BUTTON_MARGIN_TOP",
-		"display_name": "Margin top",
-		"display_sequence": 900,
-		"help_text": "Apply \"Margin top\" to any element with a template option.",
-		"is_advanced": "Y",
-		"template_options": [{
-			"name": "BUTTON_MARGINTOP0",
-			"display_name": "0",
-			"display_sequence": 0,
-			"css_classes": "m-t-0"
-		}, {
-			"name": "BUTTON_MARGINTOP1",
-			"display_name": "1",
-			"display_sequence": 1,
-			"css_classes": "m-t-1"
-		}, {
-			"name": "BUTTON_MARGINTOP2",
-			"display_name": "2",
-			"display_sequence": 2,
-			"css_classes": "m-t-2"
-		}, {
-			"name": "BUTTON_MARGINTOP3",
-			"display_name": "3",
-			"display_sequence": 3,
-			"css_classes": "m-t-3"
-		}]
-	}, {
-		"name": "BUTTON_MARGIN_BOTTOM",
-		"display_name": "--------- bottom",
-		"display_sequence": 901,
-		"help_text": "Apply \"Margin bottom\" to any element with a template option.",
-		"is_advanced": "Y",
-		"template_options": [{
-			"name": "BUTTON_MARGINBOT0",
-			"display_name": "0",
-			"display_sequence": 0,
-			"css_classes": "m-b-0"
-		}, {
-			"name": "BUTTON_MARGINBOT1",
-			"display_name": "1",
-			"display_sequence": 1,
-			"css_classes": "m-b-1"
-		}, {
-			"name": "BUTTON_MARGINBOT2",
-			"display_name": "2",
-			"display_sequence": 2,
-			"css_classes": "m-b-2"
-		}, {
-			"name": "BUTTON_MARGINBOT3",
-			"display_name": "3",
-			"display_sequence": 3,
-			"css_classes": "m-b-3"
-		}]
-	}, {
-		"name": "BUTTON_MARGIN_RIGHT",
-		"display_name": "--------- right",
-		"display_sequence": 902,
-		"help_text": "Apply \"Margin right\" to any element with a template option.",
-		"is_advanced": "Y",
-		"template_options": [{
-			"name": "BUTTON_MARGINRIGHT0",
-			"display_name": "0",
-			"display_sequence": 0,
-			"css_classes": "m-r-0"
-		}, {
-			"name": "BUTTON_MARGINRIGHT1",
-			"display_name": "1",
-			"display_sequence": 1,
-			"css_classes": "m-r-1"
-		}, {
-			"name": "BUTTON_MARGINRIGHT2",
-			"display_name": "2",
-			"display_sequence": 2,
-			"css_classes": "m-r-2"
-		}, {
-			"name": "BUTTON_MARGINRIGHT3",
-			"display_name": "3",
-			"display_sequence": 3,
-			"css_classes": "m-r-3"
-		}]
-	}, {
-		"name": "BUTTON_MARGIN_LEFT",
-		"display_name": "--------- left",
-		"display_sequence": 903,
-		"help_text": "Apply \"Margin left\" to any element with a template option.",
-		"is_advanced": "Y",
-		"template_options": [{
-			"name": "BUTTON_MARGINLEFT0",
-			"display_name": "0",
-			"display_sequence": 0,
-			"css_classes": "m-l-0"
-		}, {
-			"name": "BUTTON_MARGINLEFT1",
-			"display_name": "1",
-			"display_sequence": 1,
-			"css_classes": "m-l-1"
-		}, {
-			"name": "BUTTON_MARGINLEFT2",
-			"display_name": "2",
-			"display_sequence": 2,
-			"css_classes": "m-l-2"
-		}, {
-			"name": "BUTTON_MARGINLEFT3",
-			"display_name": "3",
-			"display_sequence": 3,
-			"css_classes": "m-l-3"
-		}]
-	}, {
-		"name": "BUTTON_PADDING_TOP",
-		"display_name": "Padding top",
-		"display_sequence": 910,
-		"help_text": "Apply \"Padding top\" to any element with a template option.",
-		"is_advanced": "Y",
-		"template_options": [{
-			"name": "BUTTON_PADDINGTOP0",
-			"display_name": "0",
-			"display_sequence": 0,
-			"css_classes": "p-t-0"
-		}, {
-			"name": "BUTTON_PADDINGTOP1",
-			"display_name": "1",
-			"display_sequence": 1,
-			"css_classes": "p-t-1"
-		}, {
-			"name": "BUTTON_PADDINGTOP2",
-			"display_name": "2",
-			"display_sequence": 2,
-			"css_classes": "p-t-2"
-		}, {
-			"name": "BUTTON_PADDINGTOP3",
-			"display_name": "3",
-			"display_sequence": 3,
-			"css_classes": "p-t-3"
-		}]
-	}, {
-		"name": "BUTTON_PADDING_BOTTOM",
-		"display_name": "----------- bottom",
-		"display_sequence": 911,
-		"help_text": "Apply \"Padding bottom\" to any element with a template option.",
-		"is_advanced": "Y",
-		"template_options": [{
-			"name": "BUTTON_PADDINGBOT0",
-			"display_name": "0",
-			"display_sequence": 0,
-			"css_classes": "p-b-0"
-		}, {
-			"name": "BUTTON_PADDINGBOT1",
-			"display_name": "1",
-			"display_sequence": 1,
-			"css_classes": "p-b-1"
-		}, {
-			"name": "BUTTON_PADDINGBOT2",
-			"display_name": "2",
-			"display_sequence": 2,
-			"css_classes": "p-b-2"
-		}, {
-			"name": "BUTTON_PADDINGBOT3",
-			"display_name": "3",
-			"display_sequence": 3,
-			"css_classes": "p-b-3"
-		}]
-	}, {
-		"name": "BUTTON_PADDING_RIGHT",
-		"display_name": "----------- right",
-		"display_sequence": 912,
-		"help_text": "Apply \"Padding right\" to any element with a template option.",
-		"is_advanced": "Y",
-		"template_options": [{
-			"name": "BUTTON_PADDINGRIGHT0",
-			"display_name": "0",
-			"display_sequence": 0,
-			"css_classes": "p-r-0"
-		}, {
-			"name": "BUTTON_PADDINGRIGHT1",
-			"display_name": "1",
-			"display_sequence": 1,
-			"css_classes": "p-r-1"
-		}, {
-			"name": "BUTTON_PADDINGRIGHT2",
-			"display_name": "2",
-			"display_sequence": 2,
-			"css_classes": "p-r-2"
-		}, {
-			"name": "BUTTON_PADDINGRIGHT3",
-			"display_name": "3",
-			"display_sequence": 3,
-			"css_classes": "p-r-3"
-		}]
-	}, {
-		"name": "BUTTON_PADDING_LEFT",
-		"display_name": "----------- left",
-		"display_sequence": 913,
-		"help_text": "Apply \"Padding left\" to any element with a template option.",
-		"is_advanced": "Y",
-		"template_options": [{
-			"name": "BUTTON_PADDINGLEFT0",
-			"display_name": "0",
-			"display_sequence": 0,
-			"css_classes": "p-l-0"
-		}, {
-			"name": "BUTTON_PADDINGLEFT1",
-			"display_name": "1",
-			"display_sequence": 1,
-			"css_classes": "p-l-1"
-		}, {
-			"name": "BUTTON_PADDINGLEFT2",
-			"display_name": "2",
-			"display_sequence": 2,
-			"css_classes": "p-l-2"
-		}, {
-			"name": "BUTTON_PADDINGLEFT3",
-			"display_name": "3",
-			"display_sequence": 3,
-			"css_classes": "p-l-3"
-		}]
-	}
+  {
+    "NAME": "SIZE",
+    "DISPLAY_NAME": "Size",
+    "DISPLAY_SEQUENCE": 2,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "LARGE",
+        "DISPLAY_NAME": "Large",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "btn-large",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "BACKGROUND_COLOR",
+    "DISPLAY_NAME": "Background Color",
+    "DISPLAY_SEQUENCE": 3,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "BTN_BG_BLACK",
+        "DISPLAY_NAME": "Black",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "black",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_WHITE",
+        "DISPLAY_NAME": "White",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "white",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_TRANSPARENT",
+        "DISPLAY_NAME": "Transparent",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "transparent",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_RED",
+        "DISPLAY_NAME": "Red",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "red",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_PINK",
+        "DISPLAY_NAME": "Pink",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "pink",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_PURPLE",
+        "DISPLAY_NAME": "Purple",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "purple",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_DEEP_PURPLE",
+        "DISPLAY_NAME": "Deep Purple",
+        "DISPLAY_SEQUENCE": 7,
+        "CSS_CLASSES": "deep-purple",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_INDIGO",
+        "DISPLAY_NAME": "Indigo",
+        "DISPLAY_SEQUENCE": 8,
+        "CSS_CLASSES": "indigo",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_BLUE",
+        "DISPLAY_NAME": "Blue",
+        "DISPLAY_SEQUENCE": 9,
+        "CSS_CLASSES": "blue",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_LIGHT_BLUE",
+        "DISPLAY_NAME": "Light Blue",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "light-blue",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_CYAN",
+        "DISPLAY_NAME": "Cyan",
+        "DISPLAY_SEQUENCE": 11,
+        "CSS_CLASSES": "cyan",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_TEAL",
+        "DISPLAY_NAME": "Teal",
+        "DISPLAY_SEQUENCE": 12,
+        "CSS_CLASSES": "teal",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_GREEN",
+        "DISPLAY_NAME": "Green",
+        "DISPLAY_SEQUENCE": 13,
+        "CSS_CLASSES": "green",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_LIGHT_GREEN",
+        "DISPLAY_NAME": "Light Green",
+        "DISPLAY_SEQUENCE": 14,
+        "CSS_CLASSES": "light-green",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_LIME",
+        "DISPLAY_NAME": "Lime",
+        "DISPLAY_SEQUENCE": 15,
+        "CSS_CLASSES": "lime",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_YELLOW",
+        "DISPLAY_NAME": "Yellow",
+        "DISPLAY_SEQUENCE": 16,
+        "CSS_CLASSES": "yellow",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_AMBER",
+        "DISPLAY_NAME": "Amber",
+        "DISPLAY_SEQUENCE": 17,
+        "CSS_CLASSES": "amber",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_ORANGE",
+        "DISPLAY_NAME": "Orange",
+        "DISPLAY_SEQUENCE": 18,
+        "CSS_CLASSES": "orange",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_DEEP_ORANGE",
+        "DISPLAY_NAME": "Deep Orange",
+        "DISPLAY_SEQUENCE": 19,
+        "CSS_CLASSES": "deep-orange",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_BROWN",
+        "DISPLAY_NAME": "Brown",
+        "DISPLAY_SEQUENCE": 20,
+        "CSS_CLASSES": "brown",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_GREY",
+        "DISPLAY_NAME": "Grey",
+        "DISPLAY_SEQUENCE": 21,
+        "CSS_CLASSES": "grey",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_BLUE_GREY",
+        "DISPLAY_NAME": "Blue Grey",
+        "DISPLAY_SEQUENCE": 22,
+        "CSS_CLASSES": "blue-grey",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "BACKGROUND_MODIFIER",
+    "DISPLAY_NAME": "Background Modifier",
+    "DISPLAY_SEQUENCE": 4,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "BTN_BG_ACCENT_1",
+        "DISPLAY_NAME": "Accent 1",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "accent-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_ACCENT_2",
+        "DISPLAY_NAME": "Accent 2",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "accent-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_ACCENT_3",
+        "DISPLAY_NAME": "Accent 3",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "accent-3",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_ACCENT_4",
+        "DISPLAY_NAME": "Accent 4",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "accent-4",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_DARKEN_1",
+        "DISPLAY_NAME": "Darken 1",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "darken-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_DARKEN_2",
+        "DISPLAY_NAME": "Darken 2",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "darken-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_DARKEN_3",
+        "DISPLAY_NAME": "Darken 3",
+        "DISPLAY_SEQUENCE": 7,
+        "CSS_CLASSES": "darken-3",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_DARKEN_4",
+        "DISPLAY_NAME": "Darken 4",
+        "DISPLAY_SEQUENCE": 8,
+        "CSS_CLASSES": "darken-4",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_LIGHTEN_1",
+        "DISPLAY_NAME": "Lighten 1",
+        "DISPLAY_SEQUENCE": 9,
+        "CSS_CLASSES": "lighten-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_LIGHTEN_2",
+        "DISPLAY_NAME": "Lighten 2",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "lighten-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_LIGHTEN_3",
+        "DISPLAY_NAME": "Lighten 3",
+        "DISPLAY_SEQUENCE": 11,
+        "CSS_CLASSES": "lighten-3",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_LIGHTEN_4",
+        "DISPLAY_NAME": "Lighten 4",
+        "DISPLAY_SEQUENCE": 12,
+        "CSS_CLASSES": "lighten-4",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_BG_LIGHTEN_5",
+        "DISPLAY_NAME": "Lighten 5",
+        "DISPLAY_SEQUENCE": 13,
+        "CSS_CLASSES": "lighten-5",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "TEXT_COLOR",
+    "DISPLAY_NAME": "Text Color",
+    "DISPLAY_SEQUENCE": 5,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "BTN_TEXT_BLACK",
+        "DISPLAY_NAME": "Black",
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "black-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_AMBER",
+        "DISPLAY_NAME": "Amber",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "amber-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_BLUE_GREY",
+        "DISPLAY_NAME": "Blue Grey",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "blue-grey-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_BLUE",
+        "DISPLAY_NAME": "Blue",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "blue-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_BROWN",
+        "DISPLAY_NAME": "Brown",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "brown-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_CYAN",
+        "DISPLAY_NAME": "Cyan",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "cyan-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_DEEP_ORANGE",
+        "DISPLAY_NAME": "Deep Orange",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "deep-orange-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_DEEP_PURPLE",
+        "DISPLAY_NAME": "Deep Deep Purple",
+        "DISPLAY_SEQUENCE": 7,
+        "CSS_CLASSES": "deep-purple-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_GREEN",
+        "DISPLAY_NAME": "Green",
+        "DISPLAY_SEQUENCE": 8,
+        "CSS_CLASSES": "green-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_GREY",
+        "DISPLAY_NAME": "Grey",
+        "DISPLAY_SEQUENCE": 9,
+        "CSS_CLASSES": "grey-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_INDIGO",
+        "DISPLAY_NAME": "Light Indigo",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "indigo-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_LIGHT_BLUE",
+        "DISPLAY_NAME": "Light Blue",
+        "DISPLAY_SEQUENCE": 11,
+        "CSS_CLASSES": "light-blue-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_LIGHT_GREEN",
+        "DISPLAY_NAME": "Light Green",
+        "DISPLAY_SEQUENCE": 12,
+        "CSS_CLASSES": "light-green-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_LIME",
+        "DISPLAY_NAME": "Lime",
+        "DISPLAY_SEQUENCE": 13,
+        "CSS_CLASSES": "lime-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_ORANGE",
+        "DISPLAY_NAME": "Light Orange",
+        "DISPLAY_SEQUENCE": 14,
+        "CSS_CLASSES": "orange-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_PINK",
+        "DISPLAY_NAME": "Pink",
+        "DISPLAY_SEQUENCE": 15,
+        "CSS_CLASSES": "pink-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_PURPLE",
+        "DISPLAY_NAME": "Purple",
+        "DISPLAY_SEQUENCE": 16,
+        "CSS_CLASSES": "purple-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_RED",
+        "DISPLAY_NAME": "Red",
+        "DISPLAY_SEQUENCE": 17,
+        "CSS_CLASSES": "red-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_TEAL",
+        "DISPLAY_NAME": "Teal",
+        "DISPLAY_SEQUENCE": 18,
+        "CSS_CLASSES": "teal-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_WHITE",
+        "DISPLAY_NAME": "White",
+        "DISPLAY_SEQUENCE": 19,
+        "CSS_CLASSES": "white-text",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BTN_TEXT_YELLOW",
+        "DISPLAY_NAME": "Yellow",
+        "DISPLAY_SEQUENCE": 20,
+        "CSS_CLASSES": "yellow-text",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "WAVE_EFFECT",
+    "DISPLAY_NAME": "Wave Effect",
+    "DISPLAY_SEQUENCE": 6,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "None",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "GREEN",
+        "DISPLAY_NAME": "Green",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "waves-effect waves-green",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "LIGHT",
+        "DISPLAY_NAME": "Light",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "waves-effect waves-light",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "ORANGE",
+        "DISPLAY_NAME": "Orange",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "waves-effect waves-orange",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "PURPLE",
+        "DISPLAY_NAME": "Purple",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "waves-effect waves-purple",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "RED",
+        "DISPLAY_NAME": "Red",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "waves-effect waves-red",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "TEAL",
+        "DISPLAY_NAME": "Teal",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "waves-effect waves-teal",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "WAVE_DEFAULT",
+        "DISPLAY_NAME": "Default",
+        "DISPLAY_SEQUENCE": 7,
+        "CSS_CLASSES": "waves-effect",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "WAVE_NONE",
+        "DISPLAY_NAME": "None",
+        "DISPLAY_SEQUENCE": 8,
+        "CSS_CLASSES": "wave-none",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "YELLOW",
+        "DISPLAY_NAME": "Yellow",
+        "DISPLAY_SEQUENCE": 9,
+        "CSS_CLASSES": "waves-effect waves-yellow",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "SHADOW",
+    "DISPLAY_NAME": "Shadow",
+    "DISPLAY_SEQUENCE": 7,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "DEPTH_0",
+        "DISPLAY_NAME": "Depth 0",
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "z-depth-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "DEPTH_1",
+        "DISPLAY_NAME": "Depth 1",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "z-depth-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "DEPTH_2",
+        "DISPLAY_NAME": "Depth 2",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "z-depth-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "DEPTH_3",
+        "DISPLAY_NAME": "Depth 3",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "z-depth-3",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "DEPTH_4",
+        "DISPLAY_NAME": "Depth 4",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "z-depth-4",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "DEPTH_5",
+        "DISPLAY_NAME": "Depth 5",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "z-depth-5",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "HIDING_CONTENT",
+    "DISPLAY_NAME": "Hiding Content",
+    "DISPLAY_SEQUENCE": 800,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "B_HIDDEN_ALL_DEVICES",
+        "DISPLAY_NAME": "Hidden for All Devices",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "hide",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "B_HIDDEN_SMALL_ONLY",
+        "DISPLAY_NAME": "Hidden for Small Only",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "hide-on-small-only",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "B_HIDDEN_MEDIUM_ONLY",
+        "DISPLAY_NAME": "Hidden for Medium Only",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "hide-on-med-only",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "B_HIDDEN_LARGE_ONLY",
+        "DISPLAY_NAME": "Hidden for Large Only",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "hide-on-large-only",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "B_HIDDEN_MEDIUM_AND_BELOW",
+        "DISPLAY_NAME": "Hidden for Medium and Below",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "hide-on-med-and-down",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "B_HIDDEN_MEDIUM_AND_ABOVE",
+        "DISPLAY_NAME": "Hidden for Medium and Above",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "hide-on-med-and-up",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "B_HIDDEN_SMALL_AND_LARGE",
+        "DISPLAY_NAME": "Hidden for Small and Large",
+        "DISPLAY_SEQUENCE": 7,
+        "CSS_CLASSES": "hide-on-small-only hide-on-large-only",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "BUTTON_MARGIN_TOP",
+    "DISPLAY_NAME": "Margin top",
+    "DISPLAY_SEQUENCE": 900,
+    "HELP_TEXT": "Apply \"Margin top\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "BUTTON_MARGINTOP0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "m-t-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_MARGINTOP1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "m-t-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_MARGINTOP2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "m-t-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_MARGINTOP3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "m-t-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "BUTTON_MARGIN_BOTTOM",
+    "DISPLAY_NAME": "--------- bottom",
+    "DISPLAY_SEQUENCE": 901,
+    "HELP_TEXT": "Apply \"Margin bottom\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "BUTTON_MARGINBOT0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "m-b-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_MARGINBOT1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "m-b-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_MARGINBOT2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "m-b-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_MARGINBOT3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "m-b-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "BUTTON_MARGIN_RIGHT",
+    "DISPLAY_NAME": "--------- right",
+    "DISPLAY_SEQUENCE": 902,
+    "HELP_TEXT": "Apply \"Margin right\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "BUTTON_MARGINRIGHT0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "m-r-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_MARGINRIGHT1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "m-r-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_MARGINRIGHT2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "m-r-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_MARGINRIGHT3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "m-r-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "BUTTON_MARGIN_LEFT",
+    "DISPLAY_NAME": "--------- left",
+    "DISPLAY_SEQUENCE": 903,
+    "HELP_TEXT": "Apply \"Margin left\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "BUTTON_MARGINLEFT0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "m-l-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_MARGINLEFT1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "m-l-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_MARGINLEFT2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "m-l-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_MARGINLEFT3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "m-l-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "BUTTON_PADDING_TOP",
+    "DISPLAY_NAME": "Padding top",
+    "DISPLAY_SEQUENCE": 910,
+    "HELP_TEXT": "Apply \"Padding top\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "BUTTON_PADDINGTOP0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "p-t-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_PADDINGTOP1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "p-t-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_PADDINGTOP2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "p-t-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_PADDINGTOP3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "p-t-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "BUTTON_PADDING_BOTTOM",
+    "DISPLAY_NAME": "----------- bottom",
+    "DISPLAY_SEQUENCE": 911,
+    "HELP_TEXT": "Apply \"Padding bottom\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "BUTTON_PADDINGBOT0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "p-b-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_PADDINGBOT1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "p-b-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_PADDINGBOT2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "p-b-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_PADDINGBOT3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "p-b-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "BUTTON_PADDING_RIGHT",
+    "DISPLAY_NAME": "----------- right",
+    "DISPLAY_SEQUENCE": 912,
+    "HELP_TEXT": "Apply \"Padding right\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "BUTTON_PADDINGRIGHT0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "p-r-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_PADDINGRIGHT1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "p-r-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_PADDINGRIGHT2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "p-r-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_PADDINGRIGHT3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "p-r-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "BUTTON_PADDING_LEFT",
+    "DISPLAY_NAME": "----------- left",
+    "DISPLAY_SEQUENCE": 913,
+    "HELP_TEXT": "Apply \"Padding left\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "BUTTON_PADDINGLEFT0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "p-l-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_PADDINGLEFT1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "p-l-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_PADDINGLEFT2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "p-l-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "BUTTON_PADDINGLEFT3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "p-l-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  }
 ]
-{{/template_option_groups}}
-
-{{#template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 [
-	{
-		"name": "BUTTON_PULSE",
-		"display_name": "Pulse",
-		"display_sequence": 3,
-		"css_classes": "pulse",
-		"help_text": "Draw attention to your buttons with this subtle but captivating effect."
-	}
+  {
+    "NAME": "BUTTON_PULSE",
+    "DISPLAY_NAME": "Pulse",
+    "DISPLAY_SEQUENCE": 3,
+    "CSS_CLASSES": "pulse",
+    "HELP_TEXT": "Draw attention to your buttons with this subtle but captivating effect.",
+    "IS_ADVANCED": ""
+  }
 ]
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}

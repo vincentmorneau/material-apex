@@ -1,27 +1,41 @@
-{{#before_label_and_item}}
+{{#BEFORE_ITEM}}
 <div id="#CURRENT_ITEM_NAME#_CONTAINER" class="file-field input-field #ITEM_CSS_CLASSES#">
 <div class="btn">
-{{/before_label_and_item}}
-    {{#before_label}}
-    <span>
-    {{/before_label}}
-    {{#after_label}}
-    </span>
-    {{/after_label}}
 
-    {{#before_item}}
-    {{/before_item}}
-    {{#after_item}}
-    {{/after_item}}
-{{#after_label_and_item}}
+{{/BEFORE_ITEM}}
+{{#TEMPLATE_BODY1}}
+    <span>
+
+{{/TEMPLATE_BODY1}}
+{{#TEMPLATE_BODY2}}
+    </span>
+
+{{/TEMPLATE_BODY2}}
+{{#ITEM_PRE_TEXT}}{{/ITEM_PRE_TEXT}}
+{{#BEFORE_ELEMENT}}{{/BEFORE_ELEMENT}}
+{{#AFTER_ELEMENT}}{{/AFTER_ELEMENT}}
+{{#ITEM_POST_TEXT}}{{/ITEM_POST_TEXT}}
+{{#AFTER_ITEM}}
 </div>
 <div class="file-path-wrapper">
     <input class="file-path validate" type="text">
 </div>
 </div>
-{{/after_label_and_item}}
 
-{{#on_error_before_label}}{{/on_error_before_label}}
-{{#on_error_after_label}}{{/on_error_after_label}}
-{{#error_template}}{{/error_template}}
-{{#help_template}}{{/help_template}}
+
+{{/AFTER_ITEM}}
+
+{{#ON_ERROR_BEFORE_LABEL}}{{/ON_ERROR_BEFORE_LABEL}}
+{{#ON_ERROR_AFTER_LABEL}}{{/ON_ERROR_AFTER_LABEL}}
+{{#ERROR_TEMPLATE}}{{/ERROR_TEMPLATE}}
+{{#HELP_LINK}}{{/HELP_LINK}}
+{{#INLINE_HELP_TEXT}}{{/INLINE_HELP_TEXT}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
+[]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
+[]
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

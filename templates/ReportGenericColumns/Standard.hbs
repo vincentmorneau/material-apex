@@ -1,123 +1,146 @@
-{{#row_template_before_rows}}
+{{#ROW_TEMPLATE_BEFORE_ROWS}}
 <table id="report_#REGION_STATIC_ID#" class="#COMPONENT_CSS_CLASSES#" #REPORT_ATTRIBUTES#>
-{{/row_template_before_rows}}
 
-{{#before_column_heading}}
+{{/ROW_TEMPLATE_BEFORE_ROWS}}
+
+{{#BEFORE_COLUMN_HEADING}}
 <thead>
 <tr>
-{{/before_column_heading}}
 
-    {{#column_heading_template}}
+{{/BEFORE_COLUMN_HEADING}}
+{{#COLUMN_HEADING_TEMPLATE}}
     <th data-field="#COLUMN_HEADER_NAME#" #ALIGNMENT# #COLUMN_WIDTH# id="#COLUMN_HEADER_NAME#">#COLUMN_HEADER#</th>
-    {{/column_heading_template}}
 
-{{#after_column_heading}}
+{{/COLUMN_HEADING_TEMPLATE}}
+{{#AFTER_COLUMN_HEADING}}
 </tr>
 </thead>
 <tbody>
-{{/after_column_heading}}
 
-    {{#row_template_before_first}}
+{{/AFTER_COLUMN_HEADING}}
+
+{{#ROW_TEMPLATE_BEFORE_FIRST}}
     <tr>
-    {{/row_template_before_first}}
 
-        {{#row_template1}}
+{{/ROW_TEMPLATE_BEFORE_FIRST}}
+
+{{#ROW_TEMPLATE1}}
         <td headers="#COLUMN_HEADER_NAME#" data-label="#COLUMN_HEADER#" #ALIGNMENT#>#COLUMN_VALUE#</td>
-        {{/row_template1}}
-        {{#row_template_condition1}}{{/row_template_condition1}}
-        {{#row_template_display_cond1}}{{/row_template_display_cond1}}
-        {{#row_template2}}{{/row_template2}}
-        {{#row_template_condition2}}{{/row_template_condition2}}
-        {{#row_template_display_cond2}}{{/row_template_display_cond2}}
-        {{#row_template3}}{{/row_template3}}
-        {{#row_template_condition3}}{{/row_template_condition3}}
-        {{#row_template_display_cond3}}{{/row_template_display_cond3}}
-        {{#row_template4}}{{/row_template4}}
-        {{#row_template_condition4}}{{/row_template_condition4}}
-        {{#row_template_display_cond4}}{{/row_template_display_cond4}}
 
-    {{#row_template_after_last}}
+{{/ROW_TEMPLATE1}}
+{{#ROW_TEMPLATE_CONDITION1}}{{/ROW_TEMPLATE_CONDITION1}}
+{{#ROW_TEMPLATE_DISPLAY_COND1}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND1}}
+{{#ROW_TEMPLATE2}}{{/ROW_TEMPLATE2}}
+{{#ROW_TEMPLATE_CONDITION2}}{{/ROW_TEMPLATE_CONDITION2}}
+{{#ROW_TEMPLATE_DISPLAY_COND2}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND2}}
+{{#ROW_TEMPLATE3}}{{/ROW_TEMPLATE3}}
+{{#ROW_TEMPLATE_CONDITION3}}{{/ROW_TEMPLATE_CONDITION3}}
+{{#ROW_TEMPLATE_DISPLAY_COND3}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND3}}
+{{#ROW_TEMPLATE4}}{{/ROW_TEMPLATE4}}
+{{#ROW_TEMPLATE_CONDITION4}}{{/ROW_TEMPLATE_CONDITION4}}
+{{#ROW_TEMPLATE_DISPLAY_COND4}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND4}}
+
+{{#ROW_TEMPLATE_AFTER_LAST}}
     </tr>
-    {{/row_template_after_last}}
 
-{{#row_template_after_rows}}
+{{/ROW_TEMPLATE_AFTER_LAST}}
+
+{{#ROW_TEMPLATE_AFTER_ROWS}}
 </tbody>
 </table>
 <tfoot class="right">
     <div>#EXTERNAL_LINK##CSV_LINK#</div>
     <div class="report-pagination">#PAGINATION#</div>
 </tfoot>
-{{/row_template_after_rows}}
 
-{{#pagination_template}}
+{{/ROW_TEMPLATE_AFTER_ROWS}}
+
+{{#PAGINATION_TEMPLATE}}
 <span class="instructiontext">#TEXT#</span>
-{{/pagination_template}}
-{{#next_page_template}}
+
+{{/PAGINATION_TEMPLATE}}
+{{#NEXT_PAGE_TEMPLATE}}
 <a href="#LINK#"><i class="material-icons">navigate_next</i></a>
-{{/next_page_template}}
-{{#previous_page_template}}
+
+{{/NEXT_PAGE_TEMPLATE}}
+{{#PREVIOUS_PAGE_TEMPLATE}}
 <a href="#LINK#"><i class="material-icons">navigate_before</i></a>
-{{/previous_page_template}}
-{{#next_set_template}}
+
+{{/PREVIOUS_PAGE_TEMPLATE}}
+{{#NEXT_SET_TEMPLATE}}
 <a href="#LINK#"><i class="material-icons">skip_next</i></a>
-{{/next_set_template}}
-{{#previous_set_template}}
+
+{{/NEXT_SET_TEMPLATE}}
+{{#PREVIOUS_SET_TEMPLATE}}
 <a href="#LINK#"><i class="material-icons">skip_previous</i></a>
-{{/previous_set_template}}
 
-{{#template_option_groups}}
+{{/PREVIOUS_SET_TEMPLATE}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
 [
-    {
-        "name": "RESPONSIVE_BEHAVIOR",
-        "display_name": "Responsive Behavior",
-        "display_sequence": 1,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "N",
-        "template_options": [
-            {
-                "name": "RESPONSIVE",
-                "display_name": "Style 1",
-                "display_sequence": 1,
-                "css_classes": "responsive-table",
-                "help_text": ""
-            },
-            {
-                "name": "STYLE_2",
-                "display_name": "Style 2",
-                "display_sequence": 2,
-                "css_classes": "table-responsive",
-                "help_text": ""
-            }
-        ]
-    }
+  {
+    "NAME": "RESPONSIVE_BEHAVIOR",
+    "DISPLAY_NAME": "Responsive Behavior",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "RESPONSIVE",
+        "DISPLAY_NAME": "Style 1",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "responsive-table",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "STYLE_2",
+        "DISPLAY_NAME": "Style 2",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "table-responsive",
+        "HELP_TEXT": ""
+      }
+    ]
+  }
 ]
-{{/template_option_groups}}
-
-{{#template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 [
-    {
-        "name": "BORDERLESS",
-        "display_name": "Borderless",
-        "display_sequence": 1,
-        "css_classes": "borderless",
-        "help_text": ""
-    },
-
-    {
-        "name": "STRIPED",
-        "display_name": "Striped",
-        "display_sequence": 2,
-        "css_classes": "striped",
-        "help_text": ""
-    },
-
-    {
-        "name": "HOVERABLE",
-        "display_name": "Hoverable",
-        "display_sequence": 3,
-        "css_classes": "highlight",
-        "help_text": ""
-    }
+  {
+    "NAME": "BORDERLESS",
+    "DISPLAY_NAME": "Borderless",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "borderless",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  },
+  {
+    "NAME": "STRIPED",
+    "DISPLAY_NAME": "Striped",
+    "DISPLAY_SEQUENCE": 2,
+    "CSS_CLASSES": "striped",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  },
+  {
+    "NAME": "HOVERABLE",
+    "DISPLAY_NAME": "Hoverable",
+    "DISPLAY_SEQUENCE": 3,
+    "CSS_CLASSES": "highlight",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  }
 ]
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}
+borderless
+{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

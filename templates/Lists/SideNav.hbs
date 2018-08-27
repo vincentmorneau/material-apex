@@ -1,34 +1,23 @@
-{{#javascript_file_urls}}
-{{/javascript_file_urls}}
-{{#javascript_code_onload}}
+{{#JAVASCRIPT_FILE_URLS}}{{/JAVASCRIPT_FILE_URLS}}
+{{#JAVASCRIPT_CODE_ONLOAD}}
 materialAPEX.sideNav.init();
-{{/javascript_code_onload}}
-{{#css_file_urls}}
-{{/css_file_urls}}
-{{#inline_css}}
-{{/inline_css}}
+{{/JAVASCRIPT_CODE_ONLOAD}}
+{{#CSS_FILE_URLS}}{{/CSS_FILE_URLS}}
+{{#INLINE_CSS}}{{/INLINE_CSS}}
 
-{{#list_template_before_rows}}
-<ul id="app-sidenav" class="side-nav">
-{{/list_template_before_rows}}
-    {{#list_template_current}}
-    <li class="side-nav-entry active">
+{{#LIST_TEMPLATE_BEFORE_ROWS}}
+<ul id="app-sidenav" class="sidenav">
+{{/LIST_TEMPLATE_BEFORE_ROWS}}
+{{#LIST_TEMPLATE_CURRENT}}
+<li class="sidenav-entry active">
         <a href="#LINK#" class="truncate">
             <i class="material-icons">#ICON_CSS_CLASSES#</i>
             #TEXT#
         </a>
     </li>
-    {{/list_template_current}}
-    {{#list_template_noncurrent}}
-    <li class="side-nav-entry">
-        <a href="#LINK#" class="truncate">
-            <i class="material-icons">#ICON_CSS_CLASSES#</i>
-            #TEXT#
-        </a>
-    </li>
-    {{/list_template_noncurrent}}
-    {{#item_template_curr_w_child}}
-    <li class="side-nav-entry no-padding">
+{{/LIST_TEMPLATE_CURRENT}}
+{{#ITEM_TEMPLATE_CURR_W_CHILD}}
+<li class="sidenav-entry no-padding">
         <ul class="collapsible collapsible-accordion">
             <li>
                 <a class="collapsible-header active truncate waves-effect">
@@ -38,11 +27,19 @@ materialAPEX.sideNav.init();
             </li>
         </ul>
     </li>
-    {{/item_template_curr_w_child}}
-    {{#item_template_noncurr_w_child}}
-    <li class="side-nav-entry no-padding">
+{{/ITEM_TEMPLATE_CURR_W_CHILD}}
+{{#LIST_TEMPLATE_NONCURRENT}}
+<li class="sidenav-entry">
+        <a href="#LINK#" class="truncate">
+            <i class="material-icons">#ICON_CSS_CLASSES#</i>
+            #TEXT#
+        </a>
+    </li>
+{{/LIST_TEMPLATE_NONCURRENT}}
+{{#ITEM_TEMPLATE_NONCURR_W_CHILD}}
+<li class="sidenav-entry no-padding">
         <ul class="collapsible collapsible-accordion">
-            <li class="side-nav-entry">
+            <li class="sidenav-entry">
                 <a class="collapsible-header truncate waves-effect">
                     <i class="material-icons">#ICON_CSS_CLASSES#</i>
                     #TEXT#
@@ -50,26 +47,33 @@ materialAPEX.sideNav.init();
             </li>
         </ul>
     </li>
-    {{/item_template_noncurr_w_child}}
-    {{#between_items}}
-    {{/between_items}}
+{{/ITEM_TEMPLATE_NONCURR_W_CHILD}}
+{{#BETWEEN_ITEMS}}{{/BETWEEN_ITEMS}}
 
-    {{#before_sub_list}}
-    <div class="collapsible-body">
+{{#BEFORE_SUB_LIST}}
+<div class="collapsible-body">
     <ul>
-    {{/before_sub_list}}
-        {{#sub_list_item_current}}
-        <li class="side-nav-entry active">
+{{/BEFORE_SUB_LIST}}
+{{#SUB_LIST_ITEM_CURRENT}}
+<li class="sidenav-entry active">
             <a href="#LINK#" class="truncate">
                 <i class="material-icons">#ICON_CSS_CLASSES#</i>
                 #TEXT#
             </a>
         </li>
-        {{/sub_list_item_current}}
-        {{#sub_template_curr_w_child}}
-        <li class="no-padding">
+{{/SUB_LIST_ITEM_CURRENT}}
+{{#SUB_LIST_ITEM_NONCURRENT}}
+<li class="sidenav-entry">
+            <a href="#LINK#" class="truncate">
+                <i class="material-icons">#ICON_CSS_CLASSES#</i>
+                #TEXT#
+            </a>
+        </li>
+{{/SUB_LIST_ITEM_NONCURRENT}}
+{{#SUB_TEMPLATE_CURR_W_CHILD}}
+<li class="no-padding">
             <ul class="collapsible collapsible-accordion">
-                <li class="side-nav-entry">
+                <li class="sidenav-entry">
                     <a class="collapsible-header active truncate waves-effect">
                         <i class="material-icons">#ICON_CSS_CLASSES#</i>
                         #TEXT#
@@ -77,17 +81,9 @@ materialAPEX.sideNav.init();
                 </li>
             </ul>
         </li>
-        {{/sub_template_curr_w_child}}
-        {{#sub_list_item_noncurrent}}
-        <li class="side-nav-entry">
-            <a href="#LINK#" class="truncate">
-                <i class="material-icons">#ICON_CSS_CLASSES#</i>
-                #TEXT#
-            </a>
-        </li>
-        {{/sub_list_item_noncurrent}}
-        {{#sub_template_noncurr_w_child}}
-        <li class="side-nav-entry no-padding">
+{{/SUB_TEMPLATE_CURR_W_CHILD}}
+{{#SUB_TEMPLATE_NONCURR_W_CHILD}}
+<li class="sidenav-entry no-padding">
             <ul class="collapsible collapsible-accordion">
                 <li>
                     <a class="collapsible-header truncate waves-effect">
@@ -97,38 +93,47 @@ materialAPEX.sideNav.init();
                 </li>
             </ul>
         </li>
-        {{/sub_template_noncurr_w_child}}
-        {{#between_sub_list_items}}{{/between_sub_list_items}}
-    {{#after_sub_list}}
-    </ul>
-    </div>
-    {{/after_sub_list}}
-
-    {{#first_list_template_noncurrent}}{{/first_list_template_noncurrent}}
-    {{#first_list_template_current}}{{/first_list_template_current}}
-    {{#f_item_template_curr_w_child}}{{/f_item_template_curr_w_child}}
-    {{#fitem_template_noncurr_w_child}}{{/fitem_template_noncurr_w_child}}
-{{#list_template_after_rows}}
+{{/SUB_TEMPLATE_NONCURR_W_CHILD}}
+{{#BETWEEN_SUB_LIST_ITEMS}}{{/BETWEEN_SUB_LIST_ITEMS}}
+{{#AFTER_SUB_LIST}}
 </ul>
-{{/list_template_after_rows}}
+    </div>
+{{/AFTER_SUB_LIST}}
 
-{{#a01_label}}{{/a01_label}}
-{{#a02_label}}{{/a02_label}}
-{{#a03_label}}{{/a03_label}}
-{{#a04_label}}{{/a04_label}}
-{{#a05_label}}{{/a05_label}}
-{{#a06_label}}{{/a06_label}}
-{{#a07_label}}{{/a07_label}}
-{{#a08_label}}{{/a08_label}}
-{{#a09_label}}{{/a09_label}}
-{{#a10_label}}{{/a10_label}}
-{{#a11_label}}{{/a11_label}}
-{{#a12_label}}{{/a12_label}}
-{{#a13_label}}{{/a13_label}}
-{{#a14_label}}{{/a14_label}}
-{{#a15_label}}{{/a15_label}}
-{{#a16_label}}{{/a16_label}}
-{{#a17_label}}{{/a17_label}}
-{{#a18_label}}{{/a18_label}}
-{{#a19_label}}{{/a19_label}}
-{{#a20_label}}{{/a20_label}}
+{{#FIRST_LIST_TEMPLATE_NONCURRENT}}{{/FIRST_LIST_TEMPLATE_NONCURRENT}}
+{{#FIRST_LIST_TEMPLATE_CURRENT}}{{/FIRST_LIST_TEMPLATE_CURRENT}}
+{{#F_ITEM_TEMPLATE_CURR_W_CHILD}}{{/F_ITEM_TEMPLATE_CURR_W_CHILD}}
+{{#FITEM_TEMPLATE_NONCURR_W_CHILD}}{{/FITEM_TEMPLATE_NONCURR_W_CHILD}}
+{{#LIST_TEMPLATE_AFTER_ROWS}}
+</ul>
+{{/LIST_TEMPLATE_AFTER_ROWS}}
+
+{{#A01_LABEL}}{{/A01_LABEL}}
+{{#A02_LABEL}}{{/A02_LABEL}}
+{{#A03_LABEL}}{{/A03_LABEL}}
+{{#A04_LABEL}}{{/A04_LABEL}}
+{{#A05_LABEL}}{{/A05_LABEL}}
+{{#A06_LABEL}}{{/A06_LABEL}}
+{{#A07_LABEL}}{{/A07_LABEL}}
+{{#A08_LABEL}}{{/A08_LABEL}}
+{{#A09_LABEL}}{{/A09_LABEL}}
+{{#A10_LABEL}}{{/A10_LABEL}}
+{{#A11_LABEL}}{{/A11_LABEL}}
+{{#A12_LABEL}}{{/A12_LABEL}}
+{{#A13_LABEL}}{{/A13_LABEL}}
+{{#A14_LABEL}}{{/A14_LABEL}}
+{{#A15_LABEL}}{{/A15_LABEL}}
+{{#A16_LABEL}}{{/A16_LABEL}}
+{{#A17_LABEL}}{{/A17_LABEL}}
+{{#A18_LABEL}}{{/A18_LABEL}}
+{{#A19_LABEL}}{{/A19_LABEL}}
+{{#A20_LABEL}}{{/A20_LABEL}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
+[]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
+[]
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

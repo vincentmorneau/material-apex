@@ -8,7 +8,7 @@ $sidenav-height: 44px;
   	z-index: 1000;
 }
 
-.side-nav {
+.sidenav {
     z-index: 1000;
     height: 100%;
     width: $sidenav-width;
@@ -34,9 +34,9 @@ $sidenav-height: 44px;
 /*
 Sidebar Fixed
 */
-.side-nav-fixed {
-    .side-nav {
-        @extend .fixed;
+.ma-sidenav-fixed {
+    .sidenav {
+        @extend .sidenav-fixed;
     }
 
 	@media #{$large-and-up} {
@@ -48,7 +48,7 @@ Sidebar Fixed
             z-index: 1001;
         }
 
-		.side-nav {
+		.sidenav {
             transform: translateX(0)!important;
             top: $navbar-height;
             height: calc(100% - #{$navbar-height});
@@ -75,7 +75,7 @@ Sidebar Fixed
 }
 
 /* SideNav Header */
-.userView {
+.user-view {
     @include hide();
 
     a, span {
@@ -89,6 +89,6 @@ Sidebar Fixed
     }
 }
 
-.side-nav .userView {
+.sidenav .user-view {
     @include showBlock();
 }

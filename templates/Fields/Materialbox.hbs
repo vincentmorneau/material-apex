@@ -1,24 +1,42 @@
-{{#before_label_and_item}}
+{{#BEFORE_ITEM}}
 <div class="apex-materialbox">
-{{/before_label_and_item}}
-    {{#before_label}}
+
+{{/BEFORE_ITEM}}
+{{#TEMPLATE_BODY1}}
     <label class="big-label">
-    {{/before_label}}
-    {{#after_label}}
+
+{{/TEMPLATE_BODY1}}
+{{#TEMPLATE_BODY2}}
     </label>
-    {{/after_label}}
 
-    {{#before_item}}
+{{/TEMPLATE_BODY2}}
+{{#ITEM_PRE_TEXT}}{{/ITEM_PRE_TEXT}}
+{{#BEFORE_ELEMENT}}
     <div data-caption="#CURRENT_ITEM_HELP_TEXT# ">
-    {{/before_item}}
-    {{#after_item}}
-    </div>
-    {{/after_item}}
-{{#after_label_and_item}}
-</div>
-{{/after_label_and_item}}
 
-{{#on_error_before_label}}{{/on_error_before_label}}
-{{#on_error_after_label}}{{/on_error_after_label}}
-{{#error_template}}{{/error_template}}
-{{#help_template}}{{/help_template}}
+{{/BEFORE_ELEMENT}}
+{{#AFTER_ELEMENT}}
+    </div>
+
+{{/AFTER_ELEMENT}}
+{{#ITEM_POST_TEXT}}{{/ITEM_POST_TEXT}}
+{{#AFTER_ITEM}}
+</div>
+
+
+{{/AFTER_ITEM}}
+
+{{#ON_ERROR_BEFORE_LABEL}}{{/ON_ERROR_BEFORE_LABEL}}
+{{#ON_ERROR_AFTER_LABEL}}{{/ON_ERROR_AFTER_LABEL}}
+{{#ERROR_TEMPLATE}}{{/ERROR_TEMPLATE}}
+{{#HELP_LINK}}{{/HELP_LINK}}
+{{#INLINE_HELP_TEXT}}{{/INLINE_HELP_TEXT}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
+[]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
+[]
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

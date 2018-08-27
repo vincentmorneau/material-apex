@@ -1,83 +1,94 @@
-{{#row_template_before_rows}}
+{{#ROW_TEMPLATE_BEFORE_ROWS}}
 <ul class="collapsible #COMPONENT_CSS_CLASSES#">
-{{/row_template_before_rows}}
+{{/ROW_TEMPLATE_BEFORE_ROWS}}
 
-    {{#before_column_heading}}{{/before_column_heading}}
+{{#BEFORE_COLUMN_HEADING}}{{/BEFORE_COLUMN_HEADING}}
 
-        {{#column_heading_template}}{{/column_heading_template}}
+{{#COLUMN_HEADING_TEMPLATE}}{{/COLUMN_HEADING_TEMPLATE}}
 
-    {{#after_column_heading}}{{/after_column_heading}}
+{{#AFTER_COLUMN_HEADING}}{{/AFTER_COLUMN_HEADING}}
 
-    {{#row_template_before_first}}{{/row_template_before_first}}
+{{#ROW_TEMPLATE_BEFORE_FIRST}}{{/ROW_TEMPLATE_BEFORE_FIRST}}
 
-        {{#row_template1}}
-        <li>
+{{#ROW_TEMPLATE1}}
+<li>
             <div class="collapsible-header"><i class="material-icons">#ICON_CSS_CLASSES#</i>#TITLE#</div>
             <div class="collapsible-body"><span>#DESCRIPTION#</span></div>
         </li>
-        {{/row_template1}}
-        {{#row_template_condition1}}{{/row_template_condition1}}
-        {{#row_template_display_cond1}}{{/row_template_display_cond1}}
-        {{#row_template2}}{{/row_template2}}
-        {{#row_template_condition2}}{{/row_template_condition2}}
-        {{#row_template_display_cond2}}{{/row_template_display_cond2}}
-        {{#row_template3}}{{/row_template3}}
-        {{#row_template_condition3}}{{/row_template_condition3}}
-        {{#row_template_display_cond3}}{{/row_template_display_cond3}}
-        {{#row_template4}}{{/row_template4}}
-        {{#row_template_condition4}}{{/row_template_condition4}}
-        {{#row_template_display_cond4}}{{/row_template_display_cond4}}
+{{/ROW_TEMPLATE1}}
+{{#ROW_TEMPLATE_CONDITION1}}{{/ROW_TEMPLATE_CONDITION1}}
+{{#ROW_TEMPLATE_DISPLAY_COND1}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND1}}
+{{#ROW_TEMPLATE2}}{{/ROW_TEMPLATE2}}
+{{#ROW_TEMPLATE_CONDITION2}}{{/ROW_TEMPLATE_CONDITION2}}
+{{#ROW_TEMPLATE_DISPLAY_COND2}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND2}}
+{{#ROW_TEMPLATE3}}{{/ROW_TEMPLATE3}}
+{{#ROW_TEMPLATE_CONDITION3}}{{/ROW_TEMPLATE_CONDITION3}}
+{{#ROW_TEMPLATE_DISPLAY_COND3}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND3}}
+{{#ROW_TEMPLATE4}}{{/ROW_TEMPLATE4}}
+{{#ROW_TEMPLATE_CONDITION4}}{{/ROW_TEMPLATE_CONDITION4}}
+{{#ROW_TEMPLATE_DISPLAY_COND4}}
+0
+{{/ROW_TEMPLATE_DISPLAY_COND4}}
 
-    {{#row_template_after_last}}
-    {{/row_template_after_last}}
+{{#ROW_TEMPLATE_AFTER_LAST}}{{/ROW_TEMPLATE_AFTER_LAST}}
 
-{{#row_template_after_rows}}
+{{#ROW_TEMPLATE_AFTER_ROWS}}
 </ul>
-{{/row_template_after_rows}}
+{{/ROW_TEMPLATE_AFTER_ROWS}}
 
-{{#pagination_template}}{{/pagination_template}}
-{{#next_page_template}}{{/next_page_template}}
-{{#previous_page_template}}{{/previous_page_template}}
-{{#next_set_template}}{{/next_set_template}}
-{{#previous_set_template}}{{/previous_set_template}}
+{{#PAGINATION_TEMPLATE}}{{/PAGINATION_TEMPLATE}}
+{{#NEXT_PAGE_TEMPLATE}}{{/NEXT_PAGE_TEMPLATE}}
+{{#PREVIOUS_PAGE_TEMPLATE}}{{/PREVIOUS_PAGE_TEMPLATE}}
+{{#NEXT_SET_TEMPLATE}}{{/NEXT_SET_TEMPLATE}}
+{{#PREVIOUS_SET_TEMPLATE}}{{/PREVIOUS_SET_TEMPLATE}}
 
-{{#template_option_groups}}
+{{#TEMPLATE_OPTION_GROUPS}}
 [
-    {
-        "name": "COLLAPSIBLE_BEHAVIOR",
-        "display_name": "Collapsible Behavior",
-        "display_sequence": 1,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "N",
-        "template_options": [
-            {
-                "name": "ACCORDION",
-                "display_name": "Accordion",
-                "display_sequence": 1,
-                "css_classes": "accordion",
-                "help_text": ""
-            },
-            {
-                "name": "EXPANDABLE",
-                "display_name": "Expandable",
-                "display_sequence": 2,
-                "css_classes": "expandable",
-                "help_text": ""
-            }
-        ]
-    }
+  {
+    "NAME": "COLLAPSIBLE_BEHAVIOR",
+    "DISPLAY_NAME": "Collapsible Behavior",
+    "DISPLAY_SEQUENCE": 1,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "ACCORDION",
+        "DISPLAY_NAME": "Accordion",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "accordion",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "EXPANDABLE",
+        "DISPLAY_NAME": "Expandable",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "expandable",
+        "HELP_TEXT": ""
+      }
+    ]
+  }
 ]
-{{/template_option_groups}}
-
-{{#template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 [
-    {
-        "name": "POPOUT",
-        "display_name": "Popout",
-        "display_sequence": 1,
-        "css_classes": "popout",
-        "help_text": ""
-    }
+  {
+    "NAME": "POPOUT",
+    "DISPLAY_NAME": "Popout",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "popout",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  }
 ]
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+accordion
+{{/PRESET_TEMPLATE_OPTIONS}}

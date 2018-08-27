@@ -1,4 +1,4 @@
-{{#template}}
+{{#TEMPLATE}}
 <div id="#REGION_STATIC_ID#" class="ma-region ma-region-card card #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
 	<div class="card-content">
 		<div class="ma-flex-left">#PREVIOUS#</div>
@@ -30,29 +30,33 @@
 		<div class="ma-flex-right">#DELETE##CREATE##CREATE2#</div>
 	</div>
 </div>
-{{/template}}
+{{/TEMPLATE}}
+{{#SUB_PLUG_HEADER_TEMPLATE}}{{/SUB_PLUG_HEADER_TEMPLATE}}
+{{#SUB_PLUG_HEADER_ENTRY_TEMPLATE}}{{/SUB_PLUG_HEADER_ENTRY_TEMPLATE}}
+{{#SUB_PLUG_TEMPLATE}}{{/SUB_PLUG_TEMPLATE}}
 
-{{#sub_plug_header_template}}{{/sub_plug_header_template}}
-{{#sub_plug_header_entry_template}}{{/sub_plug_header_entry_template}}
-{{#sub_plug_template}}{{/sub_plug_template}}
-
-{{#template_options}}
+{{#TEMPLATE_OPTION_GROUPS}}
+[]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 [
-	{
-		"name": "HIDE_TITLE",
-		"display_name": "Hide Title",
-		"display_sequence": 1,
-		"css_classes": "hide-title",
-		"help_text": "",
-		"is_advanced": ""
-	},
-	{
-		"name": "CARD_HOVERABLE",
-		"display_name": "Hoverable",
-		"display_sequence": 1,
-		"css_classes": "hoverable",
-		"help_text": "Adds an animation for a box shadow around the card.",
-		"is_advanced": ""
-	}
+  {
+    "NAME": "CARD_HOVERABLE",
+    "DISPLAY_NAME": "Hoverable",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "hoverable",
+    "HELP_TEXT": "Adds an animation for a box shadow around the card.",
+    "IS_ADVANCED": ""
+  },
+  {
+    "NAME": "HIDE_TITLE",
+    "DISPLAY_NAME": "Hide Title",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "hide-title",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  }
 ]
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

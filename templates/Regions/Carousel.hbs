@@ -1,24 +1,30 @@
-{{#template}}
+{{#TEMPLATE}}
 <div id="#REGION_STATIC_ID#" class="ma-region carousel #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
 	<div class="ma-region-body t-Region-body">#BODY##SUB_REGIONS#</div>
 </div>
-{{/template}}
 
-{{#sub_plug_header_template}}{{/sub_plug_header_template}}
-{{#sub_plug_header_entry_template}}{{/sub_plug_header_entry_template}}
-{{#sub_plug_template}}
+{{/TEMPLATE}}
+{{#SUB_PLUG_HEADER_TEMPLATE}}{{/SUB_PLUG_HEADER_TEMPLATE}}
+{{#SUB_PLUG_HEADER_ENTRY_TEMPLATE}}{{/SUB_PLUG_HEADER_ENTRY_TEMPLATE}}
+{{#SUB_PLUG_TEMPLATE}}
 <div class="carousel-item">#SUB_REGION#</div>
-{{/sub_plug_template}}
 
-{{#template_options}}
+{{/SUB_PLUG_TEMPLATE}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
+[]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
 [
-	{
-		"name": "CAROUSEL_SLIDER",
-		"display_name": "Full Width Carousel",
-		"display_sequence": 1,
-		"css_classes": "carousel-slider",
-		"help_text": "Our carousel has a full width option that makes it into a simple and elegant image carousel",
-		"is_advanced": ""
-	}
+  {
+    "NAME": "CAROUSEL_SLIDER",
+    "DISPLAY_NAME": "Full Width Carousel",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "carousel-slider",
+    "HELP_TEXT": "Our carousel has a full width option that makes it into a simple and elegant image carousel",
+    "IS_ADVANCED": ""
+  }
 ]
-{{/template_options}}
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}

@@ -1,306 +1,370 @@
-{{#template_option_groups}}
+{{#TEMPLATE_OPTION_GROUPS}}
 [
-    {
-        "name": "HIDING_CONTENT",
-        "display_name": "Hiding Content",
-        "display_sequence": 800,
-        "help_text": "",
-        "null_text": "",
-        "is_advanced": "Y",
-        "template_options": [
-            {
-                "name": "I_HIDDEN_ALL_DEVICES",
-                "display_name": "Hidden for All Devices",
-                "display_sequence": 1,
-                "css_classes": "hide",
-                "help_text": "",
-                "is_advanced": ""
-            },
-
-            {
-                "name": "I_HIDDEN_MOBILE_ONLY",
-                "display_name": "Hidden for Small Only",
-                "display_sequence": 2,
-                "css_classes": "hide-on-small-only",
-                "help_text": "",
-                "is_advanced": ""
-            },
-
-            {
-                "name": "I_HIDDEN_MEDIUM_ONLY",
-                "display_name": "Hidden for Medium Only",
-                "display_sequence": 3,
-                "css_classes": "hide-on-med-only",
-                "help_text": "",
-                "is_advanced": ""
-            },
-
-            {
-                "name": "I_HIDDEN_LARGE_ONLY",
-                "display_name": "Hidden for Large Only",
-                "display_sequence": 4,
-                "css_classes": "hide-on-large-only",
-                "help_text": "",
-                "is_advanced": ""
-            },
-
-            {
-                "name": "I_HIDDEN_MEDIUM_AND_BELOW",
-                "display_name": "Hidden for Medium and Below",
-                "display_sequence": 5,
-                "css_classes": "hide-on-med-and-down",
-                "help_text": "",
-                "is_advanced": ""
-            },
-
-            {
-                "name": "I_HIDDEN_MEDIUM_AND_ABOVE",
-                "display_name": "Hidden for Medium and Above",
-                "display_sequence": 6,
-                "css_classes": "hide-on-med-and-up",
-                "help_text": "",
-                "is_advanced": ""
-            },
-
-            {
-                "name": "I_HIDDEN_SMALL_AND_LARGE",
-                "display_name": "Hidden for Small and Large",
-                "display_sequence": 7,
-                "css_classes": "hide-on-small-only hide-on-large-only",
-                "help_text": "",
-                "is_advanced": ""
-            }
-        ]
-    },
-    {
-        "name": "FIELD_MARGIN_TOP",
-        "display_name": "Margin top",
-        "display_sequence": 900,
-        "help_text": "Apply \"Margin top\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "FIELD_MARGINTOP0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "m-t-0"
-        }, {
-            "name": "FIELD_MARGINTOP1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "m-t-1"
-        }, {
-            "name": "FIELD_MARGINTOP2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "m-t-2"
-        }, {
-            "name": "FIELD_MARGINTOP3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "m-t-3"
-        }]
-    }, {
-        "name": "FIELD_MARGIN_BOTTOM",
-        "display_name": "--------- bottom",
-        "display_sequence": 901,
-        "help_text": "Apply \"Margin bottom\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "FIELD_MARGINBOT0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "m-b-0"
-        }, {
-            "name": "FIELD_MARGINBOT1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "m-b-1"
-        }, {
-            "name": "FIELD_MARGINBOT2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "m-b-2"
-        }, {
-            "name": "FIELD_MARGINBOT3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "m-b-3"
-        }]
-    }, {
-        "name": "FIELD_MARGIN_RIGHT",
-        "display_name": "--------- right",
-        "display_sequence": 902,
-        "help_text": "Apply \"Margin right\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "FIELD_MARGINRIGHT0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "m-r-0"
-        }, {
-            "name": "FIELD_MARGINRIGHT1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "m-r-1"
-        }, {
-            "name": "FIELD_MARGINRIGHT2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "m-r-2"
-        }, {
-            "name": "FIELD_MARGINRIGHT3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "m-r-3"
-        }]
-    }, {
-        "name": "FIELD_MARGIN_LEFT",
-        "display_name": "--------- left",
-        "display_sequence": 903,
-        "help_text": "Apply \"Margin left\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "FIELD_MARGINLEFT0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "m-l-0"
-        }, {
-            "name": "FIELD_MARGINLEFT1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "m-l-1"
-        }, {
-            "name": "FIELD_MARGINLEFT2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "m-l-2"
-        }, {
-            "name": "FIELD_MARGINLEFT3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "m-l-3"
-        }]
-    }, {
-        "name": "FIELD_PADDING_TOP",
-        "display_name": "Padding top",
-        "display_sequence": 910,
-        "help_text": "Apply \"Padding top\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "FIELD_PADDINGTOP0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "p-t-0"
-        }, {
-            "name": "FIELD_PADDINGTOP1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "p-t-1"
-        }, {
-            "name": "FIELD_PADDINGTOP2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "p-t-2"
-        }, {
-            "name": "FIELD_PADDINGTOP3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "p-t-3"
-        }]
-    }, {
-        "name": "FIELD_PADDING_BOTTOM",
-        "display_name": "----------- bottom",
-        "display_sequence": 911,
-        "help_text": "Apply \"Padding bottom\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "FIELD_PADDINGBOT0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "p-b-0"
-        }, {
-            "name": "FIELD_PADDINGBOT1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "p-b-1"
-        }, {
-            "name": "FIELD_PADDINGBOT2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "p-b-2"
-        }, {
-            "name": "FIELD_PADDINGBOT3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "p-b-3"
-        }]
-    }, {
-        "name": "FIELD_PADDING_RIGHT",
-        "display_name": "----------- right",
-        "display_sequence": 912,
-        "help_text": "Apply \"Padding right\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "FIELD_PADDINGRIGHT0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "p-r-0"
-        }, {
-            "name": "FIELD_PADDINGRIGHT1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "p-r-1"
-        }, {
-            "name": "FIELD_PADDINGRIGHT2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "p-r-2"
-        }, {
-            "name": "FIELD_PADDINGRIGHT3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "p-r-3"
-        }]
-    }, {
-        "name": "FIELD_PADDING_LEFT",
-        "display_name": "----------- left",
-        "display_sequence": 913,
-        "help_text": "Apply \"Padding left\" to any element with a template option.",
-        "is_advanced": "Y",
-        "template_options": [{
-            "name": "FIELD_PADDINGLEFT0",
-            "display_name": "0",
-            "display_sequence": 0,
-            "css_classes": "p-l-0"
-        }, {
-            "name": "FIELD_PADDINGLEFT1",
-            "display_name": "1",
-            "display_sequence": 1,
-            "css_classes": "p-l-1"
-        }, {
-            "name": "FIELD_PADDINGLEFT2",
-            "display_name": "2",
-            "display_sequence": 2,
-            "css_classes": "p-l-2"
-        }, {
-            "name": "FIELD_PADDINGLEFT3",
-            "display_name": "3",
-            "display_sequence": 3,
-            "css_classes": "p-l-3"
-        }]
-    }
+  {
+    "NAME": "HIDING_CONTENT",
+    "DISPLAY_NAME": "Hiding Content",
+    "DISPLAY_SEQUENCE": 800,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "I_HIDDEN_ALL_DEVICES",
+        "DISPLAY_NAME": "Hidden for All Devices",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "hide",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "I_HIDDEN_MOBILE_ONLY",
+        "DISPLAY_NAME": "Hidden for Small Only",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "hide-on-small-only",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "I_HIDDEN_MEDIUM_ONLY",
+        "DISPLAY_NAME": "Hidden for Medium Only",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "hide-on-med-only",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "I_HIDDEN_LARGE_ONLY",
+        "DISPLAY_NAME": "Hidden for Large Only",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "hide-on-large-only",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "I_HIDDEN_MEDIUM_AND_BELOW",
+        "DISPLAY_NAME": "Hidden for Medium and Below",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "hide-on-med-and-down",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "I_HIDDEN_MEDIUM_AND_ABOVE",
+        "DISPLAY_NAME": "Hidden for Medium and Above",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "hide-on-med-and-up",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "I_HIDDEN_SMALL_AND_LARGE",
+        "DISPLAY_NAME": "Hidden for Small and Large",
+        "DISPLAY_SEQUENCE": 7,
+        "CSS_CLASSES": "hide-on-small-only hide-on-large-only",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "FIELD_MARGIN_TOP",
+    "DISPLAY_NAME": "Margin top",
+    "DISPLAY_SEQUENCE": 900,
+    "HELP_TEXT": "Apply \"Margin top\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "FIELD_MARGINTOP0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "m-t-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_MARGINTOP1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "m-t-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_MARGINTOP2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "m-t-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_MARGINTOP3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "m-t-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "FIELD_MARGIN_BOTTOM",
+    "DISPLAY_NAME": "--------- bottom",
+    "DISPLAY_SEQUENCE": 901,
+    "HELP_TEXT": "Apply \"Margin bottom\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "FIELD_MARGINBOT0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "m-b-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_MARGINBOT1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "m-b-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_MARGINBOT2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "m-b-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_MARGINBOT3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "m-b-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "FIELD_MARGIN_RIGHT",
+    "DISPLAY_NAME": "--------- right",
+    "DISPLAY_SEQUENCE": 902,
+    "HELP_TEXT": "Apply \"Margin right\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "FIELD_MARGINRIGHT0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "m-r-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_MARGINRIGHT1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "m-r-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_MARGINRIGHT2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "m-r-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_MARGINRIGHT3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "m-r-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "FIELD_MARGIN_LEFT",
+    "DISPLAY_NAME": "--------- left",
+    "DISPLAY_SEQUENCE": 903,
+    "HELP_TEXT": "Apply \"Margin left\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "FIELD_MARGINLEFT0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "m-l-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_MARGINLEFT1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "m-l-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_MARGINLEFT2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "m-l-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_MARGINLEFT3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "m-l-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "FIELD_PADDING_TOP",
+    "DISPLAY_NAME": "Padding top",
+    "DISPLAY_SEQUENCE": 910,
+    "HELP_TEXT": "Apply \"Padding top\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "FIELD_PADDINGTOP0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "p-t-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_PADDINGTOP1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "p-t-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_PADDINGTOP2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "p-t-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_PADDINGTOP3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "p-t-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "FIELD_PADDING_BOTTOM",
+    "DISPLAY_NAME": "----------- bottom",
+    "DISPLAY_SEQUENCE": 911,
+    "HELP_TEXT": "Apply \"Padding bottom\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "FIELD_PADDINGBOT0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "p-b-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_PADDINGBOT1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "p-b-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_PADDINGBOT2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "p-b-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_PADDINGBOT3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "p-b-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "FIELD_PADDING_RIGHT",
+    "DISPLAY_NAME": "----------- right",
+    "DISPLAY_SEQUENCE": 912,
+    "HELP_TEXT": "Apply \"Padding right\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "FIELD_PADDINGRIGHT0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "p-r-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_PADDINGRIGHT1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "p-r-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_PADDINGRIGHT2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "p-r-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_PADDINGRIGHT3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "p-r-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "FIELD_PADDING_LEFT",
+    "DISPLAY_NAME": "----------- left",
+    "DISPLAY_SEQUENCE": 913,
+    "HELP_TEXT": "Apply \"Padding left\" to any element with a template option.",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "Y",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "FIELD_PADDINGLEFT0",
+        "DISPLAY_NAME": 0,
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "p-l-0",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_PADDINGLEFT1",
+        "DISPLAY_NAME": 1,
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "p-l-1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_PADDINGLEFT2",
+        "DISPLAY_NAME": 2,
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "p-l-2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FIELD_PADDINGLEFT3",
+        "DISPLAY_NAME": 3,
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "p-l-3",
+        "HELP_TEXT": ""
+      }
+    ]
+  }
 ]
-{{/template_option_groups}}
-
-{{#template_options}}
-[
-    {
-        "name": "ENABLE_SCROLLFIRE",
-        "display_name": "Enable Scrollfire",
-        "display_sequence": 1,
-        "css_classes": "enable-scrollfire",
-        "help_text": "Use the component \"HTML Attributes\" and add those attributes: \n offset=\"500\" \n callback=\"apex.event.trigger(document, 'fadeInImage');\"",
-        "is_advanced": "Y"
-    }
-]
-{{/template_options}}
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
+[]
+{{/TEMPLATE_OPTIONS}}

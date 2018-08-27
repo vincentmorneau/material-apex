@@ -1,7 +1,7 @@
 @charset "UTF-8";
-
-// Required files for overwrites
-@import "components/color";
+// Color
+@import "components/color-variables";
+@import "components/color-classes";
 
 // Custom APEX variables
 @import "apex_variables";
@@ -14,7 +14,6 @@
 @import "components/icons-material-design";
 @import "components/grid";
 @import "components/navbar";
-@import "components/roboto";
 @import "components/typography";
 @import "components/transitions";
 @import "components/cards";
@@ -30,12 +29,14 @@
 @import "components/materialbox";
 @import "components/forms/forms";
 @import "components/table_of_contents";
-@import "components/sideNav";
+@import "components/sidenav";
 @import "components/preloader";
 @import "components/slider";
 @import "components/carousel";
 @import "components/tapTarget";
 @import "components/pulse";
+@import "components/datepicker";
+@import "components/timepicker";
 
 // Custom APEX styles
 @import "apex_alert";
@@ -44,7 +45,6 @@
 @import "apex_calendar";
 @import "apex_cards";
 @import "apex_carousel";
-@import "apex_code";
 @import "apex_collapsible";
 @import "apex_collections";
 @import "apex_datepicker";
