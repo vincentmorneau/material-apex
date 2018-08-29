@@ -274,7 +274,7 @@ materialAPEX.materialize = {
 							regionId: tabContainerID
 						});
 
-						var tabID = tab.attr('id');
+						var tabID = $(tab).attr('id');
 						maSessionStorage.setItem("activeTab", tabID);
 					}
 				}
@@ -306,7 +306,3 @@ materialAPEX.materialize = {
 		materialAPEX.debug.timeEnd("materialAPEX.materialize.init");
 	}
 };
-
-$(function() {
-	materialAPEX.materialize.init();
-});

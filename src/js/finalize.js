@@ -1,5 +1,6 @@
 $(document).ready(function() {
     // initialize functions
+    materialAPEX.materialize.init();
     materialAPEX.datepicker.init();
     materialAPEX.select.init();
     materialAPEX.ir.init();
