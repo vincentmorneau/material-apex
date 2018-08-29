@@ -347,7 +347,7 @@ materialAPEX.initial = {
 
 		// overwrites apex.theme.defaultStickyTop to help with the region display selector
 		apex.theme.defaultStickyTop = function () {
-			return $("header").height();
+			return $("header .top-nav").height();
 		};
 
 		// showSpinner
