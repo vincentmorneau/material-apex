@@ -7,7 +7,7 @@ var materialAPEX = materialAPEX || {};
  * @module observe
  **/
 materialAPEX.observe = {
-	toolbar: function() {
+	toolbar: function () {
 		if (!classExists("a-Toolbar-group")) return;
 		materialAPEX.debug.time("materialAPEX.observe.toolbar");
 
@@ -17,19 +17,19 @@ materialAPEX.observe = {
 
 		var selector = ".a-Toolbar-group select";
 
-		var observer = new MutationObserver(function(mutations) {
+		var observer = new MutationObserver(function (mutations) {
 			$(selector).formSelect();
 			materialAPEX.ig.init();
 		});
 
-		$(selector).each(function() {
+		$(selector).each(function () {
 			observer.observe(this, observerConfig);
 		});
 
 		materialAPEX.debug.timeEnd("materialAPEX.observe.toolbar");
 	},
 
-	select: function() {
+	select: function () {
 		if (!classExists("a-GV-floatingItemContent")) return;
 		materialAPEX.debug.time("materialAPEX.observe.select");
 
@@ -37,22 +37,22 @@ materialAPEX.observe = {
 			childList: true
 		};
 
-		var observer = new MutationObserver(function(mutations) {
-			mutations.forEach(function(mutation) {
+		var observer = new MutationObserver(function (mutations) {
+			mutations.forEach(function (mutation) {
 				if (mutation.addedNodes.length > 0) {
 					$(mutation.target).find("select").formSelect();
 				}
 			});
 		});
 
-		$(".a-GV-floatingItemContent").each(function() {
+		$(".a-GV-floatingItemContent").each(function () {
 			observer.observe(this, observerConfig);
 		});
 
 		materialAPEX.debug.timeEnd("materialAPEX.observe.select");
 	},
 
-	irDialog: function() {
+	irDialog: function () {
 		if (!classExists("a-IRR")) return;
 		materialAPEX.debug.time("materialAPEX.observe.irDialog");
 
@@ -60,18 +60,18 @@ materialAPEX.observe = {
 			childList: true
 		};
 
-		var observer = new MutationObserver(function(mutations) {
+		var observer = new MutationObserver(function (mutations) {
 			materialAPEX.items.init();
 		});
 
-		$(".a-IRR-dialogBody").each(function() {
+		$(".a-IRR-dialogBody").each(function () {
 			observer.observe(this, observerConfig);
 		});
 
 		materialAPEX.debug.timeEnd("materialAPEX.observe.irDialog");
 	},
 
-	irHeader: function() {
+	irHeader: function () {
 		if (!classExists("a-IRR")) return;
 		materialAPEX.debug.time("materialAPEX.observe.irHeader");
 
@@ -79,18 +79,18 @@ materialAPEX.observe = {
 			attributes: true
 		};
 
-		var observer = new MutationObserver(function(mutations) {
-			mutations.forEach(function(mutation) {
+		var observer = new MutationObserver(function (mutations) {
+			mutations.forEach(function (mutation) {
 				if (mutation.attributeName === 'class') {
 					$(document).trigger("apexwindowresized");
-					setTimeout(function() {
+					setTimeout(function () {
 						$(document).trigger("apexwindowresized");
 					}, 250);
 				}
 			});
 		});
 
-		$(".t-fht-thead").each(function() {
+		$(".t-fht-thead").each(function () {
 			observer.observe(this, observerConfig);
 		});
 
@@ -102,14 +102,14 @@ materialAPEX.observe = {
  * @module ig
  **/
 materialAPEX.ig = {
-	init: function() {
+	init: function () {
 		if (!classExists("a-IG")) return;
 		materialAPEX.debug.time("materialAPEX.ig.init");
 
 		$(".a-Toolbar-group")
 			.removeClass("force-hide")
 			.addClass("force-show")
-			.each(function() {
+			.each(function () {
 				var group = $(this);
 
 				// hide the groups that have no visible elements
@@ -131,7 +131,7 @@ materialAPEX.ig = {
 			});
 
 		// trigger a resize for the IG fixed header
-		setTimeout(function() {
+		setTimeout(function () {
 			$(document).trigger("apexwindowresized");
 		}, 250);
 
@@ -145,27 +145,27 @@ materialAPEX.ig = {
 materialAPEX.select = {
 	noInit: '.disabled, .shuttle_left, .shuttle_right, .datetimepicker_newMonth, .a-GV-columnItem select',
 
-	init: function() {
+	init: function () {
 		materialAPEX.debug.time("materialAPEX.select.init");
 		$('form select').not(materialAPEX.select.noInit).formSelect();
 		$('.select-wrapper').closest(".ma-field-container").addClass("ma-select-container");
 		materialAPEX.debug.timeEnd("materialAPEX.select.init");
 	},
 
-	ir: function() {
+	ir: function () {
 		materialAPEX.debug.time("materialAPEX.select.ir");
 		$('.a-IRR select').not(materialAPEX.select.noInit).formSelect();
 		materialAPEX.debug.timeEnd("materialAPEX.select.ir");
 	},
 
-	refresh: function(selector) {
+	refresh: function (selector) {
 		materialAPEX.debug.time("materialAPEX.select.refresh");
 		var exclude = ".a-Property-field--select, .a-IRR-dialogTable select, .utr select";
 		// reset focus on select elements
-		setTimeout(function() {
+		setTimeout(function () {
 			$(selector).formSelect("destroy");
 			$(selector).not(exclude).formSelect();
-			$(selector).change(function() {
+			$(selector).change(function () {
 				$(selector).formSelect("destroy");
 				$(selector).not(exclude).formSelect();
 			});
@@ -178,15 +178,15 @@ materialAPEX.select = {
  * @module datepicker
  **/
 materialAPEX.datepicker = {
-	materialDatePicker: function() {
-		var headerHtml = function(day, month, dayNum, year) {
+	materialDatePicker: function () {
+		var headerHtml = function (day, month, dayNum, year) {
 			return '<div class="ui-datepicker-material-header">' +
 				'<div class="ui-datepicker-material-year">' + year + '</div>' +
 				'<div class="ui-datepicker-material-day">' + day + ', ' + month + ' ' + dayNum + '</div>' +
 				'</div>';
 		};
 
-		setTimeout(function() {
+		setTimeout(function () {
 			var date = $(this).datepicker('getDate') || new Date();
 			var day = $.datepicker.formatDate('D', date);
 			var month = $.datepicker.formatDate('MM', date);
@@ -198,17 +198,17 @@ materialAPEX.datepicker = {
 		}, 1);
 	},
 
-	init: function() {
+	init: function () {
 		if (!classExists("hasDatepicker")) return;
 		materialAPEX.debug.time("materialAPEX.datepicker.init");
 
 		/**
-		* Because we modify the datepicker options below, we need to override
-		* the constructor. For some reason, _showDatepicker is passed a jQuery
-		* event instead of the actual input, so we have to check that.
-		* If the argument is indeed a jQuery event, we have to pass the target
-		* of that event to the original constructor.
-		*/
+		 * Because we modify the datepicker options below, we need to override
+		 * the constructor. For some reason, _showDatepicker is passed a jQuery
+		 * event instead of the actual input, so we have to check that.
+		 * If the argument is indeed a jQuery event, we have to pass the target
+		 * of that event to the original constructor.
+		 */
 		$.datepicker._showDatepickerOverrideMA = $.datepicker._showDatepicker;
 		$.datepicker._showDatepicker = function (input) {
 			if (input.target) {
@@ -218,7 +218,7 @@ materialAPEX.datepicker = {
 			}
 		};
 
-		$(document).on("focus", ".hasDatepicker", function() {
+		$(document).on("focus", ".hasDatepicker", function () {
 			materialAPEX.datepicker.materialDatePicker();
 		});
 
@@ -230,7 +230,7 @@ materialAPEX.datepicker = {
  * @module materialize
  **/
 materialAPEX.materialize = {
-	init: function() {
+	init: function () {
 		materialAPEX.debug.time("materialAPEX.materialize.init");
 
 		/* Scrollspy & Pushpin */
@@ -258,7 +258,7 @@ materialAPEX.materialize = {
 		});
 
 		/* Tabs */
-		$('ul.tabs').each(function(){
+		$('ul.tabs').each(function () {
 			var el = this;
 			var tabContainer = $(el).closest('.ma-region-tabs');
 			var tabContainerID = tabContainer.attr('id');
