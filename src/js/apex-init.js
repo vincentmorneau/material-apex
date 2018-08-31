@@ -127,7 +127,7 @@ materialAPEX.items = {
 		$(prefix + " [type='checkbox'], " + prefix + " [type='radio']").each(function () {
 			// add an ID to the checkbox or radio if it doesn't exist
 			if (!this.id) {
-				this.id = Materialize.guid();
+				this.id = M.guid();
 			}
 
 			// add a label next to the checkbox or radio if it doesn't exist
@@ -138,13 +138,9 @@ materialAPEX.items = {
 		});
 
 		// Fix for label issue with many components. Need to have label after component.
-		$(".input-field > label, .input-field fieldset > label").each(function () {
+		$(".input-field > label").each(function () {
 			$(this).appendTo($(this).parent());
 		});
-
-		// adding collapsible data attributes
-		$(".collapsible.accordion").data("collapsible", "accordion");
-		$(".collapsible.expandable").data("collapsible", "expandable");
 
 		materialAPEX.debug.timeEnd("materialAPEX.items.init");
 	},
@@ -183,7 +179,7 @@ materialAPEX.textarea = {
 	init: function () {
 		$("[id*='_CHAR_COUNTER']").parent().addClass("character-counter");
 
-		$("fieldset.textarea").prepend(function () {
+		$(".textarea").prepend(function () {
 			return $(this).siblings();
 		});
 
@@ -204,6 +200,9 @@ materialAPEX.initial = {
 			},
 			onSelect: function (input, inst) {
 				$(".ui-datepicker a").removeAttr("href");
+				materialAPEX.datepicker.materialDatePicker();
+			},
+			onChangeMonthYear: function (input, inst) {
 				materialAPEX.datepicker.materialDatePicker();
 			}
 		});
@@ -241,19 +240,37 @@ materialAPEX.initial = {
 
 		// Fixed Action Button
 		$(".fixed-action-btn").each(function () {
-			var position = "";
 			var fab = $(this);
-			if (fab.hasClass("fab-right")) position += "fab-right ";
-			if (fab.hasClass("fab-left")) position += "fab-left ";
-			if (fab.hasClass("fab-absolute")) position += "fab-absolute ";
-			if (fab.hasClass("horizontal")) position += "horizontal ";
-			if (fab.hasClass("click-to-toggle")) position += "click-to-toggle ";
-			if (fab.hasClass("toolbar")) position += "toolbar ";
+
+			var fabPosition = " fab-position-right ";
+			if (fab.hasClass("fab-position-right")) fabPosition = " fab-position-right ";
+			if (fab.hasClass("fab-position-left")) fabPosition = " fab-position-left ";
+			if (fab.hasClass("fab-position-absolute")) fabPosition = " fab-position-absolute ";
+
+			var fabDirection = "top";
+			if (fab.hasClass("fab-direction-top")) fabDirection = "top";
+			if (fab.hasClass("fab-direction-right")) fabDirection = "right";
+			if (fab.hasClass("fab-direction-bottom")) fabDirection = "bottom";
+			if (fab.hasClass("fab-direction-left")) fabDirection = "left";
+
+			var fabHoverEnabled = true;
+			if (fab.hasClass("fab-open-behavior-hover")) fabHoverEnabled = true;
+			if (fab.hasClass("fab-open-behavior-click")) fabHoverEnabled = false;
+
+			var fabToolbarEnabled = false;
+			if (fab.hasClass("fab-toolbar")) fabToolbarEnabled = true;
+			if (fab.hasClass("fab-toolbar")) fabPosition += " toolbar ";
 
 			fab.siblings(".btn, .btn-flat").addClass("btn-floating").removeClass("btn btn-flat");
-			fab.siblings(".btn-floating").addBack().wrapAll("<div class='fixed-action-btn " + position + "'>");
+			fab.siblings(".btn-floating").addBack().wrapAll("<div class='fixed-action-btn " + fabPosition + "'>");
 			fab.siblings(".btn-floating").wrapAll("<ul>").wrap("<li>");
-			fab.removeClass("fixed-action-btn horizontal click-to-toggle toolbar fab-right fab-left fab-absolute");
+			fab.removeClass("fixed-action-btn fab-position-right fab-position-left fab-position-absolute");
+
+			fab.parent().floatingActionButton({
+				direction: fabDirection,
+				hoverEnabled: fabHoverEnabled,
+				toolbarEnabled: fabToolbarEnabled
+			});
 		});
 
 		$(".fixed-action-btn ul li .btn-floating").each(function () {
@@ -265,7 +282,7 @@ materialAPEX.initial = {
 			}
 		});
 
-		$("div.fab-absolute").parent().addClass("fab-relative");
+		$("div.fab-position-absolute").parent().addClass("fab-relative");
 
 		// Switches
 		$(".switch").closest('.input-field').addClass('ma-switch-container');
@@ -283,8 +300,8 @@ materialAPEX.initial = {
 			.siblings("label")
 			.addClass("active");
 
-		// Fieldset
-		$("fieldset.checkbox_group, fieldset.radio_group")
+		// Checkbox and radio
+		$(".checkbox_group, .radio_group")
 			.siblings("label")
 			.addClass("active label-block")
 			.closest('.input-field')
@@ -294,7 +311,7 @@ materialAPEX.initial = {
 		materialAPEX.textarea.init();
 
 		// Popup LOV
-		$("fieldset.lov").parent().addClass("ma-popuplov");
+		$(".lov").parent().addClass("ma-popuplov");
 
 		// Media
 		$(".apex-materialbox img").addClass("materialboxed responsive-img").each(function () {

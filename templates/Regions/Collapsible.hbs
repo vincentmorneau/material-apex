@@ -5,8 +5,8 @@
 {{#SUB_PLUG_HEADER_ENTRY_TEMPLATE}}{{/SUB_PLUG_HEADER_ENTRY_TEMPLATE}}
 {{#SUB_PLUG_TEMPLATE}}
 <li id="#SUB_REGION_ID#">
-	<div class="collapsible-header">#SUB_REGION_TITLE#</div>
-	<div class="collapsible-body">#SUB_REGION#</div>
+  <div class="collapsible-header">#SUB_REGION_TITLE#</div>
+  <div class="collapsible-body">#SUB_REGION#</div>
 </li>
 {{/SUB_PLUG_TEMPLATE}}
 
@@ -24,14 +24,14 @@
         "NAME": "ACCORDION",
         "DISPLAY_NAME": "Accordion",
         "DISPLAY_SEQUENCE": 1,
-        "CSS_CLASSES": "accordion",
+        "CSS_CLASSES": "ma-collapsible-accordion",
         "HELP_TEXT": ""
       },
       {
         "NAME": "EXPANDABLE",
         "DISPLAY_NAME": "Expandable",
         "DISPLAY_SEQUENCE": 2,
-        "CSS_CLASSES": "expandable",
+        "CSS_CLASSES": "ma-collapsible-expandable",
         "HELP_TEXT": ""
       }
     ]
@@ -51,4 +51,6 @@
 ]
 {{/TEMPLATE_OPTIONS}}
 {{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
-{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+ma-collapsible-accordion
+{{/PRESET_TEMPLATE_OPTIONS}}

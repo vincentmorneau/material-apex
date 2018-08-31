@@ -1,12 +1,16 @@
-// temporary fix for search bar
-.nav-wrapper, .nav-wrapper form, .nav-wrapper form .input-field{ height: 100%; }
-nav .search-nav-wrapper .input-field label.active {
-    transform: translateY(0);
+.nav-wrapper,
+.nav-wrapper form,
+.nav-wrapper form .input-field {
+	height: 100%;
 }
-// end temporary fix for search bar
+
+nav .search-nav-wrapper .input-field label.active {
+	transform: translateY(0);
+	left: 1rem;
+}
 
 .page-navbar-fixed .top-nav-wrapper {
-    @extend .navbar-fixed;
+	@extend .navbar-fixed;
 }
 
 nav {
@@ -19,22 +23,22 @@ nav ul a {
 }
 
 nav .nav-wrapper i {
-	font-size: ($navbar-font-size * 2)!important;
+	font-size: ($navbar-font-size * 2) !important;
 }
 
 @media #{$medium-and-up} {
 	nav .nav-wrapper i {
-		font-size: ($navbar-font-size * 2.5)!important;
+		font-size: ($navbar-font-size * 2.5) !important;
 	}
 }
 
 .drag-target {
-	top:$navbar-height-mobile;
+	top: $navbar-height-mobile;
 }
 
 @media #{$medium-and-up} {
-  	.drag-target {
-		top:$navbar-height;
+	.drag-target {
+		top: $navbar-height;
 	}
 }
 
@@ -50,17 +54,25 @@ nav .nav-wrapper i {
 }
 
 .navbar-list .dropdown-content {
-    li, a, i, span {
-        height: $navbar-height-mobile;
-        line-height: $navbar-height-mobile;
+
+	li,
+	a,
+	i,
+	span {
+		height: $navbar-height-mobile;
+		line-height: $navbar-height-mobile;
 		padding-top: 0;
 		padding-bottom: 0;
-    }
+	}
 }
 
 @media #{$medium-and-up} {
 	.navbar-list .dropdown-content {
-		li, a, i, span {
+
+		li,
+		a,
+		i,
+		span {
 			height: $navbar-height;
 			line-height: $navbar-height;
 		}
@@ -78,12 +90,12 @@ nav .nav-wrapper i {
 
 /* Region Display Selector */
 .apex-rds-selected a {
-    font-weight: 500;
-    padding-left: 18px;
-    border-left: 2px solid $secondary-color;
+	font-weight: 500;
+	padding-left: 18px;
+	border-left: 2px solid $secondary-color;
 }
 
 /* Button */
 nav .button-collapse {
-    margin: 0;
+	margin: 0;
 }

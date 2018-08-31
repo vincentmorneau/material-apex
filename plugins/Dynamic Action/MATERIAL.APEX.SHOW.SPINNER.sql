@@ -13,7 +13,13 @@ begin
 		);
 	end if;
 
-	l_result.javascript_function := 'function(){apex.util.showSpinner(this.affectedElements.selector, {"size":"' || p_dynamic_action.attribute_01 || '","color":"' || p_dynamic_action.attribute_02 || '"});}';
+	l_result.javascript_function := 'function(){'
+			|| 'var container = this.affectedElements[0] === document ? null : this.affectedElements;'
+			|| 'apex.util.showSpinner(container, {'
+				|| '"size":"' || p_dynamic_action.attribute_01 || '",'
+				|| '"color":"' || p_dynamic_action.attribute_02 || '"'
+			|| '});'
+	|| '}';
 
 	return l_result;
 end render;

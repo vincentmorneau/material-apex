@@ -9,7 +9,22 @@ $(document).ready(function () {
 	materialAPEX.observe.select();
 	materialAPEX.observe.irDialog();
 	materialAPEX.observe.irHeader();
-	M.AutoInit();
+
+	var materializePlugins = {
+    Chips: document.body.querySelectorAll('.chips'),
+    Dropdown: document.body.querySelectorAll('.dropdown-trigger'),
+    Materialbox: document.body.querySelectorAll('.materialboxed'),
+    Parallax: document.body.querySelectorAll('.parallax'),
+    Pushpin: document.body.querySelectorAll('.pushpin'),
+    ScrollSpy: document.body.querySelectorAll('.scrollspy'),
+    Sidenav: document.body.querySelectorAll('.sidenav')
+  };
+
+  for (var pluginName in materializePlugins) {
+    var plugin = M[pluginName];
+    plugin.init(materializePlugins[pluginName]);
+  }
+
 	M.updateTextFields();
 
 	// triggers a resize

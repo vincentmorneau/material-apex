@@ -47,22 +47,11 @@
 			height: 3rem;
 			line-height: 3rem;
 
-			.select-wrapper {
-				display: inline-block;
+			.ui-datepicker-month, .ui-datepicker-year {
+				@extend .browser-default;
+				display: inline-block!important;
 				margin: 0 0.5rem;
 				width: 25%;
-				border: 1px solid #f2f2f2;
-
-				input.select-dropdown {
-					border-bottom: none;
-					text-align: left;
-					padding-left: 1rem;
-					margin-bottom: 0;
-				}
-
-				span.caret {
-					margin: 16px 5px;
-				}
 			}
 		}
 
@@ -153,6 +142,10 @@
 				padding: 0.7em 0;
 			}
 		}
+
+		tr {
+			border-bottom: 0;
+		}
 	}
 
 	.ui-datepicker-buttonpane {
@@ -162,6 +155,10 @@
 			.spanTime {
 				table {
 					margin-bottom: 0;
+				}
+
+				tr {
+					border: none;
 				}
 
 				.datetimepicker_newMonth {

@@ -41,15 +41,15 @@
 	bottom: 45px;
 	z-index: 996;
 
-	&.fab-left {
+	&.fab-position-left {
 		left: 25px;
 	}
 
-	&.fab-right {
+	&.fab-position-right {
 		right: 25px;
 	}
 
-	&.fab-absolute {
+	&.fab-position-absolute {
 		position: absolute;
 		right: 0;
 		bottom: 0;
@@ -69,7 +69,7 @@
 	}
 
 	/* Toolbar */
-	&.toolbar {
+	&.fab-toolbar {
 		&.active {
 			& > a i {
 				opacity: 0;

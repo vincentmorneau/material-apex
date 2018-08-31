@@ -143,7 +143,7 @@ materialAPEX.ig = {
  * @module select
  **/
 materialAPEX.select = {
-	noInit: '.disabled, .shuttle_left, .shuttle_right, .datetimepicker_newMonth, .a-GV-columnItem select',
+	noInit: '.disabled, .shuttle_left, .shuttle_right, .datepicker-select, .a-GV-columnItem select',
 
 	init: function () {
 		materialAPEX.debug.time("materialAPEX.select.init");
@@ -192,7 +192,6 @@ materialAPEX.datepicker = {
 			var month = $.datepicker.formatDate('MM', date);
 			var dayNum = $.datepicker.formatDate('d', date);
 			var year = $.datepicker.formatDate('yy', date);
-			$('.ui-datepicker select').not(materialAPEX.select.noInit).formSelect();
 			$(".ui-datepicker .ui-datepicker-material-header").remove();
 			$(".ui-datepicker").prepend(headerHtml(day, month, dayNum, year));
 		}, 1);
@@ -233,7 +232,7 @@ materialAPEX.materialize = {
 	init: function () {
 		materialAPEX.debug.time("materialAPEX.materialize.init");
 
-		/* Scrollspy & Pushpin */
+		/* Pushpin */
 		if ($('.apex-rds li').length > 0) {
 			$(".ma-body-column-css-classes").addClass("col s12 m9 l10");
 			$(".apex-rds-container").addClass("col hide-on-small-only m3 l2");
@@ -245,15 +244,11 @@ materialAPEX.materialize = {
 			});
 		}
 
-		/* Parallax */
-		$('.parallax').parallax();
-
 		/* Media */
-		$(".materialboxed").materialbox();
 		$('.slider').slider();
 
 		/* Tooltips */
-		$("[data-tooltip][data-tooltip!='']").tooltip({
+		$("[data-tooltip][data-tooltip!='']").maTooltip({
 			html: true
 		});
 
@@ -299,6 +294,10 @@ materialAPEX.materialize = {
 		$('.carousel:not(.carousel-slider)').carousel({
 			indicators: true
 		});
+
+		// Collapsible
+		$(".ma-collapsible-accordion").collapsible({accordion: true});
+		$(".ma-collapsible-expandable").collapsible({accordion: false});
 
 		// Bottom sheets init
 		$(".modal.bottom-sheet").modal();

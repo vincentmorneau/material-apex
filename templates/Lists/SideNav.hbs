@@ -10,94 +10,94 @@ materialAPEX.sideNav.init();
 {{/LIST_TEMPLATE_BEFORE_ROWS}}
 {{#LIST_TEMPLATE_CURRENT}}
 <li class="sidenav-entry active">
-        <a href="#LINK#" class="truncate">
-            <i class="material-icons">#ICON_CSS_CLASSES#</i>
-            #TEXT#
-        </a>
-    </li>
+    <a href="#LINK#" class="truncate">
+        <i class="material-icons">#ICON_CSS_CLASSES#</i>
+        #TEXT#
+    </a>
+</li>
 {{/LIST_TEMPLATE_CURRENT}}
 {{#ITEM_TEMPLATE_CURR_W_CHILD}}
 <li class="sidenav-entry no-padding">
-        <ul class="collapsible collapsible-accordion">
-            <li>
-                <a class="collapsible-header active truncate waves-effect">
-                    <i class="material-icons">#ICON_CSS_CLASSES#</i>
-                    #TEXT#
-                </a>
-            </li>
-        </ul>
-    </li>
+    <ul class="collapsible ma-collapsible-expandable">
+        <li>
+            <a class="collapsible-header active truncate waves-effect">
+                <i class="material-icons">#ICON_CSS_CLASSES#</i>
+                #TEXT#
+            </a>
+        </li>
+    </ul>
+</li>
 {{/ITEM_TEMPLATE_CURR_W_CHILD}}
 {{#LIST_TEMPLATE_NONCURRENT}}
 <li class="sidenav-entry">
-        <a href="#LINK#" class="truncate">
-            <i class="material-icons">#ICON_CSS_CLASSES#</i>
-            #TEXT#
-        </a>
-    </li>
+    <a href="#LINK#" class="truncate">
+        <i class="material-icons">#ICON_CSS_CLASSES#</i>
+        #TEXT#
+    </a>
+</li>
 {{/LIST_TEMPLATE_NONCURRENT}}
 {{#ITEM_TEMPLATE_NONCURR_W_CHILD}}
 <li class="sidenav-entry no-padding">
-        <ul class="collapsible collapsible-accordion">
-            <li class="sidenav-entry">
-                <a class="collapsible-header truncate waves-effect">
-                    <i class="material-icons">#ICON_CSS_CLASSES#</i>
-                    #TEXT#
-                </a>
-            </li>
-        </ul>
-    </li>
+    <ul class="collapsible ma-collapsible-expandable">
+        <li class="sidenav-entry">
+            <a class="collapsible-header truncate waves-effect">
+                <i class="material-icons">#ICON_CSS_CLASSES#</i>
+                #TEXT#
+            </a>
+        </li>
+    </ul>
+</li>
 {{/ITEM_TEMPLATE_NONCURR_W_CHILD}}
 {{#BETWEEN_ITEMS}}{{/BETWEEN_ITEMS}}
 
 {{#BEFORE_SUB_LIST}}
 <div class="collapsible-body">
-    <ul>
+<ul>
 {{/BEFORE_SUB_LIST}}
 {{#SUB_LIST_ITEM_CURRENT}}
 <li class="sidenav-entry active">
-            <a href="#LINK#" class="truncate">
-                <i class="material-icons">#ICON_CSS_CLASSES#</i>
-                #TEXT#
-            </a>
-        </li>
+    <a href="#LINK#" class="truncate">
+        <i class="material-icons">#ICON_CSS_CLASSES#</i>
+        #TEXT#
+    </a>
+</li>
 {{/SUB_LIST_ITEM_CURRENT}}
 {{#SUB_LIST_ITEM_NONCURRENT}}
 <li class="sidenav-entry">
-            <a href="#LINK#" class="truncate">
+    <a href="#LINK#" class="truncate">
+        <i class="material-icons">#ICON_CSS_CLASSES#</i>
+        #TEXT#
+    </a>
+</li>
+{{/SUB_LIST_ITEM_NONCURRENT}}
+{{#SUB_TEMPLATE_CURR_W_CHILD}}
+<li class="no-padding">
+    <ul class="collapsible ma-collapsible-expandable">
+        <li class="sidenav-entry">
+            <a class="collapsible-header active truncate waves-effect">
                 <i class="material-icons">#ICON_CSS_CLASSES#</i>
                 #TEXT#
             </a>
         </li>
-{{/SUB_LIST_ITEM_NONCURRENT}}
-{{#SUB_TEMPLATE_CURR_W_CHILD}}
-<li class="no-padding">
-            <ul class="collapsible collapsible-accordion">
-                <li class="sidenav-entry">
-                    <a class="collapsible-header active truncate waves-effect">
-                        <i class="material-icons">#ICON_CSS_CLASSES#</i>
-                        #TEXT#
-                    </a>
-                </li>
-            </ul>
-        </li>
+    </ul>
+</li>
 {{/SUB_TEMPLATE_CURR_W_CHILD}}
 {{#SUB_TEMPLATE_NONCURR_W_CHILD}}
 <li class="sidenav-entry no-padding">
-            <ul class="collapsible collapsible-accordion">
-                <li>
-                    <a class="collapsible-header truncate waves-effect">
-                        <i class="material-icons">#ICON_CSS_CLASSES#</i>
-                        #TEXT#
-                    </a>
-                </li>
-            </ul>
+    <ul class="collapsible ma-collapsible-expandable">
+        <li>
+            <a class="collapsible-header truncate waves-effect">
+                <i class="material-icons">#ICON_CSS_CLASSES#</i>
+                #TEXT#
+            </a>
         </li>
+    </ul>
+</li>
 {{/SUB_TEMPLATE_NONCURR_W_CHILD}}
 {{#BETWEEN_SUB_LIST_ITEMS}}{{/BETWEEN_SUB_LIST_ITEMS}}
 {{#AFTER_SUB_LIST}}
 </ul>
-    </div>
+</div>
 {{/AFTER_SUB_LIST}}
 
 {{#FIRST_LIST_TEMPLATE_NONCURRENT}}{{/FIRST_LIST_TEMPLATE_NONCURRENT}}

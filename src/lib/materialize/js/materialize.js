@@ -4764,7 +4764,7 @@ $jscomp.polyfill = function (e, r, p, m) {
   M.Tooltip = Tooltip;
 
   if (M.jQueryLoaded) {
-    M.initializeJqueryWrapper(Tooltip, 'tooltip', 'M_Tooltip');
+    M.initializeJqueryWrapper(Tooltip, 'maTooltip', 'M_Tooltip');
   }
 })(cash, M.anime);
 ; /*!
@@ -9641,7 +9641,7 @@ $jscomp.polyfill = function (e, r, p, m) {
   M.Datepicker = Datepicker;
 
   if (M.jQueryLoaded) {
-    M.initializeJqueryWrapper(Datepicker, 'datepicker', 'M_Datepicker');
+    M.initializeJqueryWrapper(Datepicker, 'datepicker2', 'M_Datepicker');
   }
 })(cash);
 ;(function ($) {

@@ -1,15 +1,12 @@
 {{#TEMPLATE}}
 <button type="button" onclick="#JAVASCRIPT#" id="#BUTTON_ID#" class="fixed-action-btn btn-floating #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES# title="#LABEL#" aria-label="#LABEL#">
-    <i class="material-icons">#ICON_CSS_CLASSES#</i>
+  <i class="material-icons">#ICON_CSS_CLASSES#</i>
 </button>
-
-
 {{/TEMPLATE}}
 {{#HOT_TEMPLATE}}
 <a href="#LINK#" id="#BUTTON_ID#" class="fixed-action-btn btn-floating #BUTTON_CSS_CLASSES#" #BUTTON_ATTRIBUTES# title="#LABEL#" aria-label="#LABEL#">
-    <i class="material-icons">#ICON_CSS_CLASSES#</i>
+  <i class="material-icons">#ICON_CSS_CLASSES#</i>
 </a>
-
 {{/HOT_TEMPLATE}}
 
 {{#TEMPLATE_OPTION_GROUPS}}
@@ -17,7 +14,7 @@
   {
     "NAME": "POSITION",
     "DISPLAY_NAME": "Position",
-    "DISPLAY_SEQUENCE": 1,
+    "DISPLAY_SEQUENCE": 10,
     "HELP_TEXT": "",
     "NULL_TEXT": "",
     "IS_ADVANCED": "N",
@@ -26,21 +23,83 @@
         "NAME": "RIGHT",
         "DISPLAY_NAME": "Fixed - Bottom Right",
         "DISPLAY_SEQUENCE": 1,
-        "CSS_CLASSES": "fab-right",
+        "CSS_CLASSES": "fab-position-right",
         "HELP_TEXT": ""
       },
       {
         "NAME": "LEFT",
         "DISPLAY_NAME": "Fixed - Bottom Left",
         "DISPLAY_SEQUENCE": 2,
-        "CSS_CLASSES": "fab-left",
+        "CSS_CLASSES": "fab-position-left",
         "HELP_TEXT": ""
       },
       {
         "NAME": "INSIDE_THE_PARENT",
         "DISPLAY_NAME": "Inside the Parent",
         "DISPLAY_SEQUENCE": 3,
-        "CSS_CLASSES": "fab-absolute",
+        "CSS_CLASSES": "fab-position-absolute",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "FAB_DIRECTION",
+    "DISPLAY_NAME": "Direction",
+    "DISPLAY_SEQUENCE": 20,
+    "HELP_TEXT": "Direction FAB menu opens. Can be 'top', 'right', 'bottom', 'left'",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "FAB_DIRECTION_TOP",
+        "DISPLAY_NAME": "Top",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "fab-direction-top",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FAB_DIRECTION_RIGHT",
+        "DISPLAY_NAME": "Right",
+        "DISPLAY_SEQUENCE": 20,
+        "CSS_CLASSES": "fab-direction-right",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FAB_DIRECTION_BOTTOM",
+        "DISPLAY_NAME": "Bottom",
+        "DISPLAY_SEQUENCE": 30,
+        "CSS_CLASSES": "fab-direction-bottom",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FAB_DIRECTION_LEFT",
+        "DISPLAY_NAME": "Left",
+        "DISPLAY_SEQUENCE": 40,
+        "CSS_CLASSES": "fab-direction-left",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
+    "NAME": "FAB_OPEN_BEHAVIOR",
+    "DISPLAY_NAME": "Open Behavior",
+    "DISPLAY_SEQUENCE": 30,
+    "HELP_TEXT": "Determines if the FAB opens using Hover or Click",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "FAB_OPEN_BEHAVIOR_HOVER",
+        "DISPLAY_NAME": "Hover",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "fab-open-behavior-hover",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "FAB_OPEN_BEHAVIOR_CLICK",
+        "DISPLAY_NAME": "Click",
+        "DISPLAY_SEQUENCE": 20,
+        "CSS_CLASSES": "fab-open-behavior-click",
         "HELP_TEXT": ""
       }
     ]
@@ -50,26 +109,10 @@
 {{#TEMPLATE_OPTIONS}}
 [
   {
-    "NAME": "FAB_HORIZONTAL",
-    "DISPLAY_NAME": "Horizontal",
-    "DISPLAY_SEQUENCE": 1,
-    "CSS_CLASSES": "horizontal",
-    "HELP_TEXT": "",
-    "IS_ADVANCED": ""
-  },
-  {
-    "NAME": "CLICK_TO_TOGGLE",
-    "DISPLAY_NAME": "Click to Toggle",
-    "DISPLAY_SEQUENCE": 2,
-    "CSS_CLASSES": "click-to-toggle",
-    "HELP_TEXT": "",
-    "IS_ADVANCED": ""
-  },
-  {
     "NAME": "FAB_TOOLBAR",
     "DISPLAY_NAME": "Toolbar",
-    "DISPLAY_SEQUENCE": 3,
-    "CSS_CLASSES": "toolbar",
+    "DISPLAY_SEQUENCE": 40,
+    "CSS_CLASSES": "fab-toolbar",
     "HELP_TEXT": "",
     "IS_ADVANCED": ""
   }
@@ -77,5 +120,5 @@
 {{/TEMPLATE_OPTIONS}}
 {{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
 {{#PRESET_TEMPLATE_OPTIONS}}
-fab-right:btn-large:waves-effect waves-light
+fab-position-right:btn-large:waves-effect waves-light:fab-direction-top:fab-open-behavior-hover
 {{/PRESET_TEMPLATE_OPTIONS}}
