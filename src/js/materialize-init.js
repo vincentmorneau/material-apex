@@ -163,10 +163,10 @@ materialAPEX.select = {
 		var exclude = ".a-Property-field--select, .a-IRR-dialogTable select, .utr select";
 		// reset focus on select elements
 		setTimeout(function () {
-			$(selector).formSelect("destroy");
+			$(selector).not(exclude).formSelect("destroy");
 			$(selector).not(exclude).formSelect();
-			$(selector).change(function () {
-				$(selector).formSelect("destroy");
+			$(selector).not(exclude).change(function () {
+				$(selector).not(exclude).formSelect("destroy");
 				$(selector).not(exclude).formSelect();
 			});
 		}, 250);

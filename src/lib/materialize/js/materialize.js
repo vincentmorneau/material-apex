@@ -9641,7 +9641,7 @@ $jscomp.polyfill = function (e, r, p, m) {
   M.Datepicker = Datepicker;
 
   if (M.jQueryLoaded) {
-    M.initializeJqueryWrapper(Datepicker, 'datepicker2', 'M_Datepicker');
+    M.initializeJqueryWrapper(Datepicker, 'maDatepicker', 'M_Datepicker');
   }
 })(cash);
 ;(function ($) {
