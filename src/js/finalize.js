@@ -1,5 +1,19 @@
 $(document).ready(function () {
-	// initialize functions
+	var materializePlugins = {
+		Chips: document.body.querySelectorAll('.chips'),
+		Dropdown: document.body.querySelectorAll('.dropdown-trigger'),
+		Materialbox: document.body.querySelectorAll('.materialboxed'),
+		Parallax: document.body.querySelectorAll('.parallax'),
+		Pushpin: document.body.querySelectorAll('.pushpin'),
+		ScrollSpy: document.body.querySelectorAll('.scrollspy'),
+		Sidenav: document.body.querySelectorAll('.sidenav')
+	};
+
+	for (var pluginName in materializePlugins) {
+		var plugin = M[pluginName];
+		plugin.init(materializePlugins[pluginName]);
+	}
+
 	materialAPEX.materialize.init();
 	materialAPEX.datepicker.init();
 	materialAPEX.select.init();
@@ -9,21 +23,6 @@ $(document).ready(function () {
 	materialAPEX.observe.select();
 	materialAPEX.observe.irDialog();
 	materialAPEX.observe.irHeader();
-
-	var materializePlugins = {
-    Chips: document.body.querySelectorAll('.chips'),
-    Dropdown: document.body.querySelectorAll('.dropdown-trigger'),
-    Materialbox: document.body.querySelectorAll('.materialboxed'),
-    Parallax: document.body.querySelectorAll('.parallax'),
-    Pushpin: document.body.querySelectorAll('.pushpin'),
-    ScrollSpy: document.body.querySelectorAll('.scrollspy'),
-    Sidenav: document.body.querySelectorAll('.sidenav')
-  };
-
-  for (var pluginName in materializePlugins) {
-    var plugin = M[pluginName];
-    plugin.init(materializePlugins[pluginName]);
-  }
 
 	M.updateTextFields();
 
@@ -41,8 +40,8 @@ $(document).ready(function () {
 		materialAPEX.debug.timeEnd("apexafterrefresh");
 	});
 
-	// event handler for apexafterrefresh
-	$('select').on('change', function () {
+	// event handler for select change
+	$('select:not(.apex-item-select--multiple)').on('change', function () {
 		materialAPEX.debug.time("selectonchange");
 		materialAPEX.select.init();
 		materialAPEX.debug.timeEnd("selectonchange");
