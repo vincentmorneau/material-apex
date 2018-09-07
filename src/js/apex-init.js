@@ -163,8 +163,8 @@ materialAPEX.ir = {
 			.attr("placeholder", apex.lang.getMessage("APEX.IG.SEARCH"))
 			.parent().addClass("input-field");
 
-		$(".a-IRR-button--actions").html('<i class="material-icons">more_vert</i>');
-		$(".a-IRR-button--colSearch").html('<i class="material-icons">search</i>');
+		$(".a-IRR-button--actions").html('TODO');
+		$(".a-IRR-button--colSearch").html('TODO');
 
 		$(".a-IRR-controlsCheckbox").addClass("filled-in");
 
@@ -202,8 +202,14 @@ materialAPEX.initial = {
 				$(".ui-datepicker a").removeAttr("href");
 				materialAPEX.datepicker.materialDatePicker();
 			},
-			onChangeMonthYear: function (input, inst) {
+			onChangeMonthYear: function (year, month) {
 				materialAPEX.datepicker.materialDatePicker();
+			},
+			onClose: function (dateText, inst) {
+				// ensures the label is on top of the datepicker when user picks a value
+				if (dateText !== "") {
+					$(inst.input[0]).siblings("label").addClass("active");
+				}
 			}
 		});
 
@@ -216,27 +222,8 @@ materialAPEX.initial = {
 		$(".s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10,.s11").removeClass("s12");
 
 		// Deletes empty html tags
-		$('.card-content, .card-action, span.badge, i.material-icons, .ma-button-label').removeEmpty();
+		$('.card-content, .card-action, span.badge, .ma-button-label').removeEmpty();
 		$('.ma-region-buttons, .ma-region-header').removeEmptySpaces();
-
-		// Support for APEX 5.1 item icons
-		$(".apex-item-icon").each(function (index) {
-			var el = $(this);
-
-			if (!el.hasClass("fa")) {
-				el
-					.removeClass("apex-item-icon")
-					.text(el.attr("class"))
-					.addClass("material-icons");
-			}
-
-			el.addClass("prefix").prependTo(el.parent());
-		});
-
-		// Font Awesome & Font APEX Support with Material Icons HTML markup
-		$(".material-icons:contains('fa-')").each(function (index) {
-			$(this).attr("class", $(this).text()).text('');
-		});
 
 		// Fixed Action Button
 		$(".fixed-action-btn").each(function () {

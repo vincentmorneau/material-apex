@@ -12,19 +12,21 @@
 
 {{#ROW_TEMPLATE1}}
 <div class="ma-card-col col s12">
-			<div class="card">
-				<div class="card-image">
-					<img src="#IMG_SRC#">
-					<span class="card-title">#TITLE#</span>
-					<a href="#FAB_LINK#" class="btn-floating btn-large halfway-fab waves-effect waves-light u-color #FAB_COLOR#"><i class="material-icons">#FAB_ICON#</i></a>
-				</div>
+  <div class="card">
+    <div class="card-image">
+      <img src="#IMG_SRC#">
+      <span class="card-title">#TITLE#</span>
+      <a href="#FAB_LINK#" class="btn-floating btn-large halfway-fab waves-effect waves-light u-color #FAB_COLOR#" title="#FAB_LABEL#" aria-label="#FAB_LABEL#">
+        <i class="fa #FAB_ICON_CSS_CLASSES#" aria-hidden="true"></i>
+      </a>
+    </div>
 
-				<div class="ma-card-stacked m-t-2">
-					<div class="card-content">#CONTENT#</div>
-					<div class="card-action">#BTN_LABEL_1##BTN_LABEL_2#</div>
-				</div>
-			</div>
-		</div>
+    <div class="ma-card-stacked m-t-2">
+      <div class="card-content">#CONTENT#</div>
+      <div class="card-action">#BTN_LABEL_1##BTN_LABEL_2#</div>
+    </div>
+  </div>
+</div>
 {{/ROW_TEMPLATE1}}
 {{#ROW_TEMPLATE_CONDITION1}}
 :FAB_LINK is not null and :FAB_ICON is not null and :IMG_SRC is not null
@@ -34,37 +36,37 @@ NOT_CONDITIONAL
 {{/ROW_TEMPLATE_DISPLAY_COND1}}
 {{#ROW_TEMPLATE2}}
 <div class="ma-card-col col s12">
-			<div class="ma-card-image-content">
-				<div class="card">
-					<div class="card-image">
-						<img src="#IMG_SRC#">
-						<span class="card-title">#TITLE#</span>
-					</div>
-					<div class="ma-card-stacked">
-						<div class="card-content">
-							<p>#CONTENT#</p>
-						</div>
-						<div class="card-action">#BTN_LABEL_1##BTN_LABEL_2#</div>
-					</div>
-				</div>
-			</div>
+      <div class="ma-card-image-content">
+        <div class="card">
+          <div class="card-image">
+            <img src="#IMG_SRC#">
+            <span class="card-title">#TITLE#</span>
+          </div>
+          <div class="ma-card-stacked">
+            <div class="card-content">
+              <p>#CONTENT#</p>
+            </div>
+            <div class="card-action">#BTN_LABEL_1##BTN_LABEL_2#</div>
+          </div>
+        </div>
+      </div>
 
-			<div class="ma-card-reveal-content">
-				<div class="card sticky-action">
-					<div class="card-image waves-effect waves-block waves-light">
-						<img src="#IMG_SRC#" class="activator">
-					</div>
-					<div class="card-content">
-						<span class="card-title activator">#TITLE#<i class="material-icons right">more_vert</i></span>
-					</div>
-					<div class="card-action">#BTN_LABEL_1##BTN_LABEL_2#</div>
-					<div class="card-reveal">
-						<span class="card-title">#TITLE#<i class="material-icons right">close</i></span>
-						<p>#CONTENT#</p>
-					</div>
-				</div>
-			</div>
-		</div>
+      <div class="ma-card-reveal-content">
+        <div class="card sticky-action">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img src="#IMG_SRC#" class="activator">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator">#TITLE#<i class="fa fa-ellipsis-v right" aria-hidden="true"></i></span>
+          </div>
+          <div class="card-action">#BTN_LABEL_1##BTN_LABEL_2#</div>
+          <div class="card-reveal">
+            <span class="card-title">#TITLE#<i class="fa fa-ellipsis-v right" aria-hidden="true"></i></span>
+            <p>#CONTENT#</p>
+          </div>
+        </div>
+      </div>
+    </div>
 {{/ROW_TEMPLATE2}}
 {{#ROW_TEMPLATE_CONDITION2}}
 :IMG_SRC is not null
@@ -74,14 +76,14 @@ NOT_CONDITIONAL
 {{/ROW_TEMPLATE_DISPLAY_COND2}}
 {{#ROW_TEMPLATE3}}
 <div class="ma-card-col col s12">
-			<div class="card">
-				<div class="card-content">
-					<p class="card-title black-text">#TITLE#</p>
-					<p>#CONTENT#</p>
-				</div>
-				<div class="card-action">#BTN_LABEL_1##BTN_LABEL_2#</div>
-			</div>
-		</div>
+      <div class="card">
+        <div class="card-content">
+          <p class="card-title black-text">#TITLE#</p>
+          <p>#CONTENT#</p>
+        </div>
+        <div class="card-action">#BTN_LABEL_1##BTN_LABEL_2#</div>
+      </div>
+    </div>
 {{/ROW_TEMPLATE3}}
 {{#ROW_TEMPLATE_CONDITION3}}{{/ROW_TEMPLATE_CONDITION3}}
 {{#ROW_TEMPLATE_DISPLAY_COND3}}

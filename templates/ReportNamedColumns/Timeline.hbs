@@ -12,19 +12,18 @@
 {{#ROW_TEMPLATE_BEFORE_FIRST}}{{/ROW_TEMPLATE_BEFORE_FIRST}}
 
 {{#ROW_TEMPLATE1}}
-        <div class="cd-timeline-block">
-			<div class="cd-timeline-img blue lighten-2">
-				<i class="material-icons">#ICON#</i>
-			</div> <!-- cd-timeline-img -->
+<div class="cd-timeline-block">
+  <div class="cd-timeline-img blue lighten-2">
+    <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+  </div>
 
-			<div class="cd-timeline-content z-depth-1">
-				<h5>#TITLE#</h5>
-				<p class="flow-text">#DESCRIPTION#</p>
-				<a href="#BTN_LINK#" class="btn cd-read-more">#BTN_LABEL#</a>
-				<span class="cd-date">#TIMELINE_DATE#</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-
+  <div class="cd-timeline-content z-depth-1">
+    <h5>#TITLE#</h5>
+    <p class="flow-text">#DESCRIPTION#</p>
+    <a href="#BTN_LINK#" class="btn cd-read-more">#BTN_LABEL#</a>
+    <span class="cd-date">#TIMELINE_DATE#</span>
+  </div>
+</div>
 {{/ROW_TEMPLATE1}}
 {{#ROW_TEMPLATE_CONDITION1}}{{/ROW_TEMPLATE_CONDITION1}}
 {{#ROW_TEMPLATE_DISPLAY_COND1}}
@@ -49,7 +48,7 @@
 {{#ROW_TEMPLATE_AFTER_LAST}}{{/ROW_TEMPLATE_AFTER_LAST}}
 
 {{#ROW_TEMPLATE_AFTER_ROWS}}
- 
+
 {{/ROW_TEMPLATE_AFTER_ROWS}}
 
 {{#PAGINATION_TEMPLATE}}{{/PAGINATION_TEMPLATE}}

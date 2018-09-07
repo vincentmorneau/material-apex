@@ -1,32 +1,26 @@
 {{#ROW_TEMPLATE_BEFORE_ROWS}}
 <table id="report_#REGION_STATIC_ID#" class="#COMPONENT_CSS_CLASSES#" #REPORT_ATTRIBUTES#>
-
 {{/ROW_TEMPLATE_BEFORE_ROWS}}
 
 {{#BEFORE_COLUMN_HEADING}}
 <thead>
 <tr>
-
 {{/BEFORE_COLUMN_HEADING}}
 {{#COLUMN_HEADING_TEMPLATE}}
-    <th data-field="#COLUMN_HEADER_NAME#" #ALIGNMENT# #COLUMN_WIDTH# id="#COLUMN_HEADER_NAME#">#COLUMN_HEADER#</th>
-
+<th data-field="#COLUMN_HEADER_NAME#" #ALIGNMENT# #COLUMN_WIDTH# id="#COLUMN_HEADER_NAME#">#COLUMN_HEADER#</th>
 {{/COLUMN_HEADING_TEMPLATE}}
 {{#AFTER_COLUMN_HEADING}}
 </tr>
 </thead>
 <tbody>
-
 {{/AFTER_COLUMN_HEADING}}
 
 {{#ROW_TEMPLATE_BEFORE_FIRST}}
-    <tr>
-
+<tr>
 {{/ROW_TEMPLATE_BEFORE_FIRST}}
 
 {{#ROW_TEMPLATE1}}
-        <td headers="#COLUMN_HEADER_NAME#" data-label="#COLUMN_HEADER#" #ALIGNMENT#>#COLUMN_VALUE#</td>
-
+<td headers="#COLUMN_HEADER_NAME#" data-label="#COLUMN_HEADER#" #ALIGNMENT#>#COLUMN_VALUE#</td>
 {{/ROW_TEMPLATE1}}
 {{#ROW_TEMPLATE_CONDITION1}}{{/ROW_TEMPLATE_CONDITION1}}
 {{#ROW_TEMPLATE_DISPLAY_COND1}}
@@ -60,28 +54,22 @@
     <div>#EXTERNAL_LINK##CSV_LINK#</div>
     <div class="report-pagination">#PAGINATION#</div>
 </tfoot>
-
 {{/ROW_TEMPLATE_AFTER_ROWS}}
 
 {{#PAGINATION_TEMPLATE}}
 <span class="instructiontext">#TEXT#</span>
-
 {{/PAGINATION_TEMPLATE}}
 {{#NEXT_PAGE_TEMPLATE}}
-<a href="#LINK#"><i class="material-icons">navigate_next</i></a>
-
+<a href="#LINK#"><i class="fa fa-angle-right" aria-hidden="true">next</i></a>
 {{/NEXT_PAGE_TEMPLATE}}
 {{#PREVIOUS_PAGE_TEMPLATE}}
-<a href="#LINK#"><i class="material-icons">navigate_before</i></a>
-
+<a href="#LINK#"><i class="fa fa-angle-left" aria-hidden="true">before</i></a>
 {{/PREVIOUS_PAGE_TEMPLATE}}
 {{#NEXT_SET_TEMPLATE}}
-<a href="#LINK#"><i class="material-icons">skip_next</i></a>
-
+<a href="#LINK#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
 {{/NEXT_SET_TEMPLATE}}
 {{#PREVIOUS_SET_TEMPLATE}}
-<a href="#LINK#"><i class="material-icons">skip_previous</i></a>
-
+<a href="#LINK#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
 {{/PREVIOUS_SET_TEMPLATE}}
 
 {{#TEMPLATE_OPTION_GROUPS}}

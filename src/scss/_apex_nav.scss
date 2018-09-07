@@ -23,12 +23,12 @@ nav ul a {
 }
 
 nav .nav-wrapper i {
-	font-size: ($navbar-font-size * 2) !important;
+	font-size: ($navbar-font-size * 1.25) !important;
 }
 
 @media #{$medium-and-up} {
 	nav .nav-wrapper i {
-		font-size: ($navbar-font-size * 2.5) !important;
+		font-size: ($navbar-font-size * 1.75) !important;
 	}
 }
 

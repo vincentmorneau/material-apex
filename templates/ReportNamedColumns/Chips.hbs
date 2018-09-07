@@ -1,5 +1,5 @@
 {{#ROW_TEMPLATE_BEFORE_ROWS}}
- 
+
 {{/ROW_TEMPLATE_BEFORE_ROWS}}
 
 {{#BEFORE_COLUMN_HEADING}}{{/BEFORE_COLUMN_HEADING}}
@@ -11,12 +11,11 @@
 {{#ROW_TEMPLATE_BEFORE_FIRST}}{{/ROW_TEMPLATE_BEFORE_FIRST}}
 
 {{#ROW_TEMPLATE1}}
-        <div class="chip">
-            #IMAGE#
-            #TEXT#
-            <i class="close material-icons">close</i>
-        </div>
-
+<div class="chip">
+    #IMAGE#
+    #TEXT#
+    <i class="close fa fa-times" aria-hidden="true"></i>
+</div>
 {{/ROW_TEMPLATE1}}
 {{#ROW_TEMPLATE_CONDITION1}}
 :IND_CLOSABLE is not null AND :IMAGE is not null
@@ -25,11 +24,10 @@
 NOT_CONDITIONAL
 {{/ROW_TEMPLATE_DISPLAY_COND1}}
 {{#ROW_TEMPLATE2}}
-        <div class="chip">
-            #IMAGE#
-            #TEXT#
-        </div>
-
+<div class="chip">
+    #IMAGE#
+    #TEXT#
+</div>
 {{/ROW_TEMPLATE2}}
 {{#ROW_TEMPLATE_CONDITION2}}
 :IMAGE is not null
@@ -38,11 +36,10 @@ NOT_CONDITIONAL
 NOT_CONDITIONAL
 {{/ROW_TEMPLATE_DISPLAY_COND2}}
 {{#ROW_TEMPLATE3}}
-        <div class="chip">
-            #TEXT#
-            <i class="close material-icons">close</i>
-        </div>
-
+<div class="chip">
+    #TEXT#
+    <i class="close fa fa-times" aria-hidden="true"></i>
+</div>
 {{/ROW_TEMPLATE3}}
 {{#ROW_TEMPLATE_CONDITION3}}
 :IND_CLOSABLE is not null
@@ -51,10 +48,9 @@ NOT_CONDITIONAL
 NOT_CONDITIONAL
 {{/ROW_TEMPLATE_DISPLAY_COND3}}
 {{#ROW_TEMPLATE4}}
-        <div class="chip">
-            #TEXT#
-        </div>
-
+<div class="chip">
+    #TEXT#
+</div>
 {{/ROW_TEMPLATE4}}
 {{#ROW_TEMPLATE_CONDITION4}}{{/ROW_TEMPLATE_CONDITION4}}
 {{#ROW_TEMPLATE_DISPLAY_COND4}}
@@ -64,7 +60,7 @@ NOT_CONDITIONAL
 {{#ROW_TEMPLATE_AFTER_LAST}}{{/ROW_TEMPLATE_AFTER_LAST}}
 
 {{#ROW_TEMPLATE_AFTER_ROWS}}
- 
+
 {{/ROW_TEMPLATE_AFTER_ROWS}}
 
 {{#PAGINATION_TEMPLATE}}{{/PAGINATION_TEMPLATE}}

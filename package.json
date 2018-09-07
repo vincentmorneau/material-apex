@@ -10,7 +10,6 @@
     "url": "git://github.com/vincentmorneau/material-apex.git"
   },
   "dependencies": {
-    "material-design-icons": "^3.0.1",
     "materialize-css": "1.0.0-rc.2"
   }
 }

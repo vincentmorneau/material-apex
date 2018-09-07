@@ -8,27 +8,24 @@ materialAPEX.wizard.init();
 {{#LIST_TEMPLATE_BEFORE_ROWS}}
 <span class="hide">#CURRENT_PROGRESS#</span>
 <ul id="#LIST_ID#" class="ma-wizard #COMPONENT_CSS_CLASSES#">
-
 {{/LIST_TEMPLATE_BEFORE_ROWS}}
 {{#LIST_TEMPLATE_CURRENT}}
-    <li id="#LIST_ITEM_ID#" class="ma-wizard-step is-active">
-        <div class="ma-wizard-step-wrap">
-            <span class="ma-wizard-step-marker z-depth-2 blue lighten-2"><i class="material-icons">#ICON_CSS_CLASSES#</i></span>
-            <span class="ma-wizard-step-label">#TEXT#</span>
-        </div>
-    </li>
-
+<li id="#LIST_ITEM_ID#" class="ma-wizard-step is-active">
+    <div class="ma-wizard-step-wrap">
+        <span class="ma-wizard-step-marker z-depth-2 blue lighten-2"><i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i></span>
+        <span class="ma-wizard-step-label">#TEXT#</span>
+    </div>
+</li>
 {{/LIST_TEMPLATE_CURRENT}}
 {{#ITEM_TEMPLATE_CURR_W_CHILD}}{{/ITEM_TEMPLATE_CURR_W_CHILD}}
 {{#LIST_TEMPLATE_NONCURRENT}}
-    <li id="#LIST_ITEM_ID#" class="ma-wizard-step">
-        <div class="ma-wizard-step-wrap">
-            <span class="ma-wizard-step-marker complete green lighten-2"><i class="material-icons">done</i></span>
-            <span class="ma-wizard-step-marker not-complete"><i class="material-icons">#ICON_CSS_CLASSES#</i></span>
-            <span class="ma-wizard-step-label">#TEXT#</span>
-        </div>
-    </li>
-
+<li id="#LIST_ITEM_ID#" class="ma-wizard-step">
+    <div class="ma-wizard-step-wrap">
+        <span class="ma-wizard-step-marker complete green lighten-2"><i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i></span>
+        <span class="ma-wizard-step-marker not-complete"><i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i></span>
+        <span class="ma-wizard-step-label">#TEXT#</span>
+    </div>
+</li>
 {{/LIST_TEMPLATE_NONCURRENT}}
 {{#ITEM_TEMPLATE_NONCURR_W_CHILD}}{{/ITEM_TEMPLATE_NONCURR_W_CHILD}}
 {{#BETWEEN_ITEMS}}{{/BETWEEN_ITEMS}}

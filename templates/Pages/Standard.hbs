@@ -8,23 +8,23 @@
 <!DOCTYPE html>
 <html class="no-js #RTL_CLASS# page-&APP_PAGE_ID. app-&APP_ALIAS." lang="&BROWSER_LANGUAGE." #TEXT_DIRECTION#>
 <head>
-	<title>#TITLE#</title>
+  <title>#TITLE#</title>
 
-	<!-- Meta -->
-	<meta http-equiv="x-ua-compatible" content="IE=edge" />
-	<meta charset="utf-8">
-	<meta name="author" content="Vincent Morneau">
-	<meta name="description" content="Material Design Theme for APEX">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- Meta -->
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <meta name="author" content="Vincent Morneau">
+  <meta name="description" content="Material Design Theme for APEX">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-	#APEX_CSS#
-	#THEME_CSS#
-	#TEMPLATE_CSS#
-	#THEME_STYLE_CSS#
-	#APPLICATION_CSS#
-	#PAGE_CSS#
-	#FAVICONS#
-	#HEAD#
+  #APEX_CSS#
+  #THEME_CSS#
+  #TEMPLATE_CSS#
+  #THEME_STYLE_CSS#
+  #APPLICATION_CSS#
+  #PAGE_CSS#
+  #FAVICONS#
+  #HEAD#
 </head>
 <body id="#PAGE_STATIC_ID#" class="#PAGE_CSS_CLASSES#" #TEXT_DIRECTION# #ONLOAD#>
 {{/HEADER_TEMPLATE}}
@@ -36,55 +36,55 @@
 
 <!-- Navbar & Sidenav -->
 <header>
-	<div class="top-nav-wrapper">
-		<nav class="top-nav">
-			<div class="nav-wrapper main-nav-wrapper m-l-1">
-				<a href="#" id="app-sidenav-trigger" class="sidenav-trigger button-collapse show-on-large hide" data-target="app-sidenav" title="#EXPAND_COLLAPSE_NAV_LABEL#"><i class="material-icons left">menu</i></a>
-				<a href="#HOME_LINK#" class="brand-logo ma-responsive-text">#LOGO#</a>
-				#NAVIGATION_BAR#
-				#TOP_GLOBAL_NAVIGATION_LIST#
-			</div>
-			<div class="nav-wrapper search-nav-wrapper hide">
-				<!-- Search Bar -->
-				#REGION_POSITION_05#
-			</div>
-		</nav>
-	</div>
-	<!-- Breadcrumbs -->
-	#REGION_POSITION_03#
-	<!-- Side nav -->
-	#SIDE_GLOBAL_NAVIGATION_LIST#
+  <div class="top-nav-wrapper">
+    <nav class="top-nav">
+      <div class="nav-wrapper main-nav-wrapper m-l-1">
+        <a href="#" id="app-sidenav-trigger" class="sidenav-trigger button-collapse show-on-large hide" data-target="app-sidenav" title="#EXPAND_COLLAPSE_NAV_LABEL#"><i class="fa fa-navicon" aria-hidden="true"></i></a>
+        <a href="#HOME_LINK#" class="brand-logo ma-responsive-text">#LOGO#</a>
+        #NAVIGATION_BAR#
+        #TOP_GLOBAL_NAVIGATION_LIST#
+      </div>
+      <div class="nav-wrapper search-nav-wrapper hide">
+        <!-- Search Bar -->
+        #REGION_POSITION_05#
+      </div>
+    </nav>
+  </div>
+  <!-- Breadcrumbs -->
+  #REGION_POSITION_03#
+  <!-- Side nav -->
+  #SIDE_GLOBAL_NAVIGATION_LIST#
 </header>
 
 <!-- Content -->
 <main>
-	<div class="ma-main-container">
-		<div class="row">
-			<div class="ma-body-column-css-classes">
-				#BODY#
-			</div>
+  <div class="ma-main-container">
+    <div class="row">
+      <div class="ma-body-column-css-classes">
+        #BODY#
+      </div>
 
-			<!-- Region Display Selector -->
-			#REGION_POSITION_04#
-		</div>
-	</div>
+      <!-- Region Display Selector -->
+      #REGION_POSITION_04#
+    </div>
+  </div>
 </main>
 
 <!-- Footer -->
 <footer class="page-footer">
-	<div class="container">
-		<!-- Footer Top -->
-		#REGION_POSITION_07#
-	</div>
+  <div class="container">
+    <!-- Footer Top -->
+    #REGION_POSITION_07#
+  </div>
 
-	<!-- Footer Bottom -->
-	<div class="footer-copyright">
-		<div class="container">
-			<div class="version">#APP_VERSION#</div>
-			<div class="customize right">#CUSTOMIZE#</div>
-			<div class="screenreader right">#SCREEN_READER_TOGGLE#</div>
-		</div>
-	</div>
+  <!-- Footer Bottom -->
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="version">#APP_VERSION#</div>
+      <div class="customize right">#CUSTOMIZE#</div>
+      <div class="screenreader right">#SCREEN_READER_TOGGLE#</div>
+    </div>
+  </div>
 </footer>
 
 <div id="ma-notification-container">
@@ -113,7 +113,7 @@
   <div class="t-Alert t-Alert--defaultIcons t-Alert--success t-Alert--horizontal t-Alert--page t-Alert--colorBG" id="t_Alert_Success" role="alert">
     <div class="t-Alert-wrap">
       <div class="t-Alert-icon">
-  		<i class="material-icons">check</i>
+			<i aria-hidden="true" class="fa fa-check"></i>
       </div>
       <div class="t-Alert-content">
         <div class="t-Alert-header">
@@ -121,7 +121,7 @@
         </div>
       </div>
       <div class="t-Alert-buttons">
-        <button class="t-Button t-Button--noUI t-Button--icon t-Button--closeAlert btn-flat" type="button" title="#CLOSE_NOTIFICATION#"><i class="panel-close material-icons">close</i></button>
+        <button class="t-Button t-Button--noUI t-Button--icon t-Button--closeAlert btn-flat" type="button" title="#CLOSE_NOTIFICATION#"><i aria-hidden="true" class="fa fa-times panel-close"></i></button>
       </div>
     </div>
   </div>
@@ -132,7 +132,7 @@
   <div class="t-Alert t-Alert--defaultIcons t-Alert--warning t-Alert--horizontal t-Alert--page" id="t_Alert_Success" role="alert">
     <div class="t-Alert-wrap">
       <div class="t-Alert-icon">
-  		<i class="material-icons">warning</i>
+			<i aria-hidden="true" class="fa fa-warning"></i>
       </div>
       <div class="t-Alert-content">
         <div class="t-Alert-header">
@@ -140,7 +140,7 @@
         </div>
       </div>
       <div class="t-Alert-buttons">
-        <button class="t-Button t-Button--noUI t-Button--icon t-Button--closeAlert btn-flat" type="button" title="#CLOSE_NOTIFICATION#"><i class="panel-close material-icons">close</i></button>
+        <button class="t-Button t-Button--noUI t-Button--icon t-Button--closeAlert btn-flat" type="button" title="#CLOSE_NOTIFICATION#"><i aria-hidden="true" class="fa fa-times panel-close"></i></button>
       </div>
     </div>
   </div>
@@ -149,17 +149,17 @@
 
 {{#GRID_TEMPLATE}}
 <div class="ma-container">
-	#ROWS#
+  #ROWS#
 </div>
 {{/GRID_TEMPLATE}}
 {{#GRID_ROW_TEMPLATE}}
 <div class="row">
-	#COLUMNS#
+  #COLUMNS#
 </div>
 {{/GRID_ROW_TEMPLATE}}
 {{#GRID_COLUMN_TEMPLATE}}
 <div class="col s12 m#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>
-	#CONTENT#
+  #CONTENT#
 </div>
 {{/GRID_COLUMN_TEMPLATE}}
 

@@ -8,35 +8,35 @@
 {{/LIST_TEMPLATE_BEFORE_ROWS}}
 {{#LIST_TEMPLATE_CURRENT}}
 <li class="active">
-        <a id="#LIST_ITEM_ID#" href="#LINK#" class="#A01#">
-            <i class="material-icons right-l">#ICON_CSS_CLASSES#</i>
-            <span class="hide-on-med-and-down">#TEXT#</span>
-        </a>
-    </li>
+    <a id="#LIST_ITEM_ID#" href="#LINK#" class="#A01#">
+        <i class="#ICON_CSS_CLASSES# right-l" aria-hidden="true"></i>
+        <span class="hide-on-med-and-down">#TEXT#</span>
+    </a>
+</li>
 {{/LIST_TEMPLATE_CURRENT}}
 {{#ITEM_TEMPLATE_CURR_W_CHILD}}
 <li class="active">
-        <a id="#LIST_ITEM_ID#" class="dropdown-trigger #A01#" href="#LINK#" data-target="#LIST_ITEM_ID#-menu">
-            <span class="hide-on-med-and-down">#TEXT#</span>
-            <i class="material-icons right-l">arrow_drop_down</i>
-        </a>
-    </li>
+    <a id="#LIST_ITEM_ID#" class="dropdown-trigger #A01#" href="#LINK#" data-target="#LIST_ITEM_ID#-menu">
+        <span class="hide-on-med-and-down">#TEXT#</span>
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+    </a>
+</li>
 {{/ITEM_TEMPLATE_CURR_W_CHILD}}
 {{#LIST_TEMPLATE_NONCURRENT}}
 <li>
-        <a id="#LIST_ITEM_ID#" href="#LINK#" class="#A01#">
-            <i class="material-icons right-l">#ICON_CSS_CLASSES#</i>
-            <span class="hide-on-med-and-down">#TEXT#</span>
-        </a>
-    </li>
+    <a id="#LIST_ITEM_ID#" href="#LINK#" class="#A01#">
+        <i class="#ICON_CSS_CLASSES# right-l" aria-hidden="true"></i>
+        <span class="hide-on-med-and-down">#TEXT#</span>
+    </a>
+</li>
 {{/LIST_TEMPLATE_NONCURRENT}}
 {{#ITEM_TEMPLATE_NONCURR_W_CHILD}}
 <li>
-        <a id="#LIST_ITEM_ID#" class="dropdown-trigger #A01#" href="#LINK#" data-target="#LIST_ITEM_ID#-menu">
-            <span class="hide-on-med-and-down">#TEXT#</span>
-            <i class="material-icons right-l">arrow_drop_down</i>
-        </a>
-    </li>
+    <a id="#LIST_ITEM_ID#" class="dropdown-trigger #A01#" href="#LINK#" data-target="#LIST_ITEM_ID#-menu">
+        <span class="hide-on-med-and-down">#TEXT#</span>
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+    </a>
+</li>
 {{/ITEM_TEMPLATE_NONCURR_W_CHILD}}
 {{#BETWEEN_ITEMS}}{{/BETWEEN_ITEMS}}
 

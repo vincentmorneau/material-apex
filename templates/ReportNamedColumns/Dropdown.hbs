@@ -1,7 +1,7 @@
 {{#ROW_TEMPLATE_BEFORE_ROWS}}
 <a class="btn dropdown-trigger" href="#!" data-target="#REGION_STATIC_ID#-report">
     #REGION_TITLE#
-    <i class="material-icons right">arrow_drop_down</i>
+    <i class="fa fa-caret-down right" aria-hidden="true"></i>
 </a>
 <ul id="#REGION_STATIC_ID#-report" class="dropdown-content #COMPONENT_CSS_CLASSES#">
 {{/ROW_TEMPLATE_BEFORE_ROWS}}
@@ -16,11 +16,11 @@
 
 {{#ROW_TEMPLATE1}}
 <li>
-            <a href="#TARGET#">
-                #DISPLAY#
-                <span class="new badge">#BADGE#</span>
-            </a>
-        </li>
+    <a href="#TARGET#">
+        #DISPLAY#
+        <span class="new badge">#BADGE#</span>
+    </a>
+</li>
 {{/ROW_TEMPLATE1}}
 {{#ROW_TEMPLATE_CONDITION1}}
 :NEW_BADGE is not null
@@ -30,11 +30,11 @@ NOT_CONDITIONAL
 {{/ROW_TEMPLATE_DISPLAY_COND1}}
 {{#ROW_TEMPLATE2}}
 <li>
-            <a href="#TARGET#">
-                #DISPLAY#
-                <span class="badge">#BADGE#</span>
-            </a>
-        </li>
+    <a href="#TARGET#">
+        #DISPLAY#
+        <span class="badge">#BADGE#</span>
+    </a>
+</li>
 {{/ROW_TEMPLATE2}}
 {{#ROW_TEMPLATE_CONDITION2}}{{/ROW_TEMPLATE_CONDITION2}}
 {{#ROW_TEMPLATE_DISPLAY_COND2}}
