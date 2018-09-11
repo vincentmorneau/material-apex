@@ -30,9 +30,10 @@
 }
 
 @mixin browserDefaultSelect() {
-	display:block;
+	display: block;
 	width: 100%;
 	height: $input-height;
+	border: none;
 	border-bottom: $input-border;
 }
 
@@ -47,32 +48,52 @@
 	width: 1px!important;
 }
 
+@mixin ma-s1 {
+	width: percentage(100 / 12 * 1);
+}
+
 @mixin ma-s2 {
-	width: 16.66667%;
+	width: percentage(100 / 12 * 2);
 }
 
 @mixin ma-s3 {
-	width: 25%;
+	width: percentage(100 / 12 * 3);
 }
 
 @mixin ma-s4 {
-	width: 33.3333%;
+	width: percentage(100 / 12 * 4);
+}
+
+@mixin ma-s5 {
+	width: percentage(100 / 12 * 5);
 }
 
 @mixin ma-s6 {
-	width: 50%;
+	width: percentage(100 / 12 * 6);
+}
+
+@mixin ma-s7 {
+	width: percentage(100 / 12 * 7);
+}
+
+@mixin ma-s8 {
+	width: percentage(100 / 12 * 8);
 }
 
 @mixin ma-s9 {
-	width: 75%;
+	width: percentage(100 / 12 * 9);
 }
 
 @mixin ma-s10 {
-	width: 83.33333%;
+	width: percentage(100 / 12 * 10);
+}
+
+@mixin ma-s11 {
+	width: percentage(101 / 12 * 11);
 }
 
 @mixin ma-s12 {
-	width: 100%;
+	width: percentage(100 / 12 * 12);
 }
 
 @mixin apex5-font {
@@ -84,6 +105,14 @@
 	text-transform: none!important;
 	speak: none;
 	line-height: 1;
+}
+
+@mixin font-apex-small {
+	font-family: 'Font APEX Small' !important;
+}
+
+@mixin font-apex-large {
+	font-family: 'Font APEX Large' !important;
 }
 
 @mixin small-btn {

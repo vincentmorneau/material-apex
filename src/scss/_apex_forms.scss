@@ -266,3 +266,13 @@ input[type=range] {
 .apex-quick-picks {
 	transform: translateY(-14px);
 }
+
+// Browser defaults
+input.browser-default {
+	@include browserDefaultInput();
+}
+
+select.browser-default {
+	@include browserDefaultInput();
+	@include browserDefaultSelect();
+}

@@ -1,29 +1,106 @@
 {{#TEMPLATE}}
-<blockquote id="#REGION_STATIC_ID#" class="ma-region #REGION_CSS_CLASSES#">
-  <div class="ma-region-header">
-    <h5 class="ma-region-title"><i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>#TITLE#</h5>
-  </div>
-  <div class="ma-region-body t-Region-body">#BODY##SUB_REGIONS#</div>
+<blockquote id="#REGION_STATIC_ID#" class="ma-region ma-region-blockquote #REGION_CSS_CLASSES#" #REGION_ATTRIBUTES#>
+	<div class="ma-flex-left">#PREVIOUS#</div>
+
+	<div class="ma-flex-content">
+		<div class="ma-region-header">
+			<div class="ma-flex-content">
+				<div class="ma-region-title"><i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>#TITLE#</div>
+			</div>
+			<div class="ma-flex-right">#EDIT#</div>
+		</div>
+
+		<div class="ma-region-buttons ma-flex-justify">
+			<div class="ma-flex-left">#COPY#</div>
+			<div class="ma-flex-content"></div>
+			<div class="ma-flex-right">#EXPAND#</div>
+		</div>
+
+		<div class="ma-region-body t-Region-body">#BODY##SUB_REGIONS#</div>
+
+		<div class="ma-region-buttons ma-flex-justify">
+			<div class="ma-flex-left">#CLOSE##HELP#</div>
+			<div class="ma-flex-center ma-flex-content">#CHANGE#</div>
+			<div class="ma-flex-right">#DELETE##CREATE##CREATE2#</div>
+		</div>
+	</div>
+
+	<div class="ma-flex-right">#NEXT#</div>
 </blockquote>
+
 {{/TEMPLATE}}
 {{#SUB_PLUG_HEADER_TEMPLATE}}{{/SUB_PLUG_HEADER_TEMPLATE}}
 {{#SUB_PLUG_HEADER_ENTRY_TEMPLATE}}{{/SUB_PLUG_HEADER_ENTRY_TEMPLATE}}
 {{#SUB_PLUG_TEMPLATE}}{{/SUB_PLUG_TEMPLATE}}
 
 {{#TEMPLATE_OPTION_GROUPS}}
-[]
-{{/TEMPLATE_OPTION_GROUPS}}
-{{#TEMPLATE_OPTIONS}}
 [
   {
-    "NAME": "HIDE_TITLE",
-    "DISPLAY_NAME": "Hide Title",
-    "DISPLAY_SEQUENCE": 1,
-    "CSS_CLASSES": "hide-title",
-    "HELP_TEXT": "",
-    "IS_ADVANCED": ""
+    "NAME": "TITLE_SIZE",
+    "DISPLAY_NAME": "Title Size",
+    "DISPLAY_SEQUENCE": 0,
+    "HELP_TEXT": "The font size of your region title",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "HIDDEN",
+        "DISPLAY_NAME": "Hidden",
+        "DISPLAY_SEQUENCE": 0,
+        "CSS_CLASSES": "hide-title",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "H1",
+        "DISPLAY_NAME": "H1",
+        "DISPLAY_SEQUENCE": 1,
+        "CSS_CLASSES": "h1",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "H2",
+        "DISPLAY_NAME": "H2",
+        "DISPLAY_SEQUENCE": 2,
+        "CSS_CLASSES": "h2",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "H3",
+        "DISPLAY_NAME": "H3",
+        "DISPLAY_SEQUENCE": 3,
+        "CSS_CLASSES": "h3",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "H4",
+        "DISPLAY_NAME": "H4",
+        "DISPLAY_SEQUENCE": 4,
+        "CSS_CLASSES": "h4",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "H5",
+        "DISPLAY_NAME": "H5",
+        "DISPLAY_SEQUENCE": 5,
+        "CSS_CLASSES": "h5",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "H6",
+        "DISPLAY_NAME": "H6",
+        "DISPLAY_SEQUENCE": 6,
+        "CSS_CLASSES": "h6",
+        "HELP_TEXT": ""
+      }
+    ]
   }
 ]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
+[]
 {{/TEMPLATE_OPTIONS}}
-{{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
-{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}
+h6
+{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+{{/PRESET_TEMPLATE_OPTIONS}}

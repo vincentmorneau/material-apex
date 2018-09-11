@@ -153,3 +153,16 @@ body .ui-dialog.ui-widget .ui-dialog-content.ui-widget-content.a-Notification-de
 		}
 	}
 }
+
+.ma-region.ma-region--no-padding {
+	.card-content {
+		padding: 0;
+	}
+}
+
+// Breadcrumb
+.breadcrumb:before {
+	@include font-apex-large;
+	content: '\f054';
+	font-size: inherit;
+}

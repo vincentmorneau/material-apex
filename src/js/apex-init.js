@@ -315,7 +315,7 @@ materialAPEX.initial = {
 		$("i[class='']").remove();
 
 		// Search Bar
-		$(".top-nav li a i:contains('search')").parent().click(function () {
+		$(".top-nav li a:contains('Search'), .top-nav li a:has(.fa-search)").parent().click(function () {
 			$(".main-nav-wrapper").toggleClass("hide");
 			$(".search-nav-wrapper").toggleClass("hide");
 			$("#P0_SEARCH").focus();

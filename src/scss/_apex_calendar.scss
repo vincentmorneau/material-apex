@@ -1,3 +1,7 @@
 .fc-scroller {
    height: auto!important; // need to override inline style
 }
+
+.fc-toolbar.fc-header-toolbar {
+	margin-bottom: 0!important;
+}

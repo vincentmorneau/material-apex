@@ -1,9 +1,8 @@
 {{#ROW_TEMPLATE_BEFORE_ROWS}}
 <ul class="collection #COMPONENT_CSS_CLASSES#">
-    <li class="collection-header">
-        <h4>#REGION_TITLE#</h4>
-    </li>
-
+<li class="collection-header">
+    <h4>#REGION_TITLE#</h4>
+</li>
 {{/ROW_TEMPLATE_BEFORE_ROWS}}
 
 {{#BEFORE_COLUMN_HEADING}}{{/BEFORE_COLUMN_HEADING}}
@@ -15,12 +14,13 @@
 {{#ROW_TEMPLATE_BEFORE_FIRST}}{{/ROW_TEMPLATE_BEFORE_FIRST}}
 
 {{#ROW_TEMPLATE1}}
-        <li class="collection-item">
-            #TEXT#
-            <span class="new badge truncate">#BADGE#</span>
-            <a href="#SECONDARY_LINK#" class="secondary-content"><i class="fa #SECONDARY_ICON_CSS_CLASSES#" aria-hidden="true"></i></a>
-        </li>
-
+<li class="collection-item">
+    #TEXT#
+    <span class="new badge truncate">#BADGE#</span>
+    <a href="#SECONDARY_LINK#" class="secondary-content">
+        <i class="fa #SECONDARY_ICON_CSS_CLASSES#" aria-hidden="true"></i>
+    </a>
+</li>
 {{/ROW_TEMPLATE1}}
 {{#ROW_TEMPLATE_CONDITION1}}
 :NEW_BADGE is not null
@@ -29,12 +29,13 @@
 NOT_CONDITIONAL
 {{/ROW_TEMPLATE_DISPLAY_COND1}}
 {{#ROW_TEMPLATE2}}
-        <li class="collection-item">
-            #TEXT#
-            <span class="new badge truncate">#BADGE#</span>
-            <a href="#SECONDARY_LINK#" class="secondary-content"><i class="fa #SECONDARY_ICON_CSS_CLASSES#" aria-hidden="true"></i></a>
-        </li>
-
+<li class="collection-item">
+    #TEXT#
+    <span class="new badge truncate">#BADGE#</span>
+    <a href="#SECONDARY_LINK#" class="secondary-content">
+        <i class="fa #SECONDARY_ICON_CSS_CLASSES#" aria-hidden="true"></i>
+    </a>
+</li>
 {{/ROW_TEMPLATE2}}
 {{#ROW_TEMPLATE_CONDITION2}}
 :NEW_BADGE is not null
@@ -43,12 +44,13 @@ NOT_CONDITIONAL
 NOT_CONDITIONAL
 {{/ROW_TEMPLATE_DISPLAY_COND2}}
 {{#ROW_TEMPLATE3}}
-        <li class="collection-item">
-            #TEXT#
-            <span class="badge truncate">#BADGE#</span>
-            <a href="#SECONDARY_LINK#" class="secondary-content"><i class="fa #SECONDARY_ICON_CSS_CLASSES#" aria-hidden="true"></i></a>
-        </li>
-
+<li class="collection-item">
+    #TEXT#
+    <span class="badge truncate">#BADGE#</span>
+    <a href="#SECONDARY_LINK#" class="secondary-content">
+        <i class="fa #SECONDARY_ICON_CSS_CLASSES#" aria-hidden="true"></i>
+    </a>
+</li>
 {{/ROW_TEMPLATE3}}
 {{#ROW_TEMPLATE_CONDITION3}}
 :NEW_BADGE is null
@@ -57,12 +59,13 @@ NOT_CONDITIONAL
 NOT_CONDITIONAL
 {{/ROW_TEMPLATE_DISPLAY_COND3}}
 {{#ROW_TEMPLATE4}}
-        <li class="collection-item">
-            #TEXT#
-            <span class="badge truncate">#BADGE#</span>
-            <a href="#SECONDARY_LINK#" class="secondary-content"><i class="fa #SECONDARY_ICON_CSS_CLASSES#" aria-hidden="true"></i></a>
-        </li>
-
+<li class="collection-item">
+    #TEXT#
+    <span class="badge truncate">#BADGE#</span>
+    <a href="#SECONDARY_LINK#" class="secondary-content">
+        <i class="fa #SECONDARY_ICON_CSS_CLASSES#" aria-hidden="true"></i>
+    </a>
+</li>
 {{/ROW_TEMPLATE4}}
 {{#ROW_TEMPLATE_CONDITION4}}{{/ROW_TEMPLATE_CONDITION4}}
 {{#ROW_TEMPLATE_DISPLAY_COND4}}
@@ -73,7 +76,6 @@ NOT_CONDITIONAL
 
 {{#ROW_TEMPLATE_AFTER_ROWS}}
 </ul>
-
 {{/ROW_TEMPLATE_AFTER_ROWS}}
 
 {{#PAGINATION_TEMPLATE}}{{/PAGINATION_TEMPLATE}}

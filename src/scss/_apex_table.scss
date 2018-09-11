@@ -40,7 +40,17 @@ table {
             	margin-bottom: 0;
 			}
         }
-    }
+	}
+
+	tbody tr:last-child {
+		border-bottom: 0;
+	}
+
+	&.ma-table-small {
+		td, th {
+			padding: 5px;
+		}
+	}
 }
 
 // standard reports
