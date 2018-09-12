@@ -24,11 +24,15 @@ nav ul a {
 
 nav .nav-wrapper i {
 	font-size: ($navbar-font-size * 1.25) !important;
+	height: $navbar-height-mobile;
+	line-height: $navbar-height-mobile;
 }
 
 @media #{$medium-and-up} {
 	nav .nav-wrapper i {
 		font-size: ($navbar-font-size * 1.75) !important;
+		height: $navbar-height;
+		line-height: $navbar-height;
 	}
 }
 
