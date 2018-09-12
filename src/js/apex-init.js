@@ -205,20 +205,16 @@ materialAPEX.initial = {
 
 		$.datepicker.setDefaults({
 			beforeShow: function (input, inst) {
-				console.log(11111, input, inst);
 				materialAPEX.datepicker.materialDatePicker(inst, input);
 			},
 			onSelect: function (input, inst) {
-				console.log(22222, input, inst);
 				$(".ui-datepicker a").removeAttr("href");
 				materialAPEX.datepicker.materialDatePicker(inst);
 			},
 			onChangeMonthYear: function (year, month, inst) {
-				console.log(33333, year, month, inst);
 				materialAPEX.datepicker.materialDatePicker(inst);
 			},
 			onClose: function (dateText, inst) {
-				console.log(44444, dateText, inst);
 				// ensures the label is on top of the datepicker when user picks a value
 				if (dateText !== "") {
 					$(inst.input[0]).siblings("label").addClass("active");

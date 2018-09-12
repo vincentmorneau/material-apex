@@ -179,8 +179,6 @@ materialAPEX.select = {
  **/
 materialAPEX.datepicker = {
 	materialDatePicker: function (inst, input) {
-		console.log(555, input, inst, inst.input, inst.lastVal);
-
 		var headerHtml = function (day, month, dayNum, year) {
 			return '<div class="ui-datepicker-material-header">' +
 				'<div class="ui-datepicker-material-year">' + year + '</div>' +
@@ -194,7 +192,7 @@ materialAPEX.datepicker = {
 			var month = $.datepicker.formatDate('M', date);
 			var dayNum = $.datepicker.formatDate('d', date);
 			var year = $.datepicker.formatDate('yy', date);
-			console.log(666, date);
+
 			$(".ui-datepicker")
 				.remove(".ui-datepicker-material-header")
 				.wrapInner("<div class='ui-datepicker-material-body'></div>")
@@ -222,11 +220,6 @@ materialAPEX.datepicker = {
 				$.datepicker._showDatepickerOverrideMA(input);
 			}
 		};
-
-		// $(document).on("focus", ".hasDatepicker", function () {
-		// 	console.log(000);
-		// 	materialAPEX.datepicker.materialDatePicker();
-		// });
 
 		materialAPEX.debug.timeEnd("materialAPEX.datepicker.init");
 	}
