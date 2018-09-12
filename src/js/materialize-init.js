@@ -178,7 +178,9 @@ materialAPEX.select = {
  * @module datepicker
  **/
 materialAPEX.datepicker = {
-	materialDatePicker: function () {
+	materialDatePicker: function (inst, input) {
+		console.log(555, input, inst, inst.input, inst.lastVal);
+
 		var headerHtml = function (day, month, dayNum, year) {
 			return '<div class="ui-datepicker-material-header">' +
 				'<div class="ui-datepicker-material-year">' + year + '</div>' +
@@ -187,13 +189,17 @@ materialAPEX.datepicker = {
 		};
 
 		setTimeout(function () {
-			var date = $(this).datepicker('getDate') || new Date();
+			var date = $(inst.input).datepicker('getDate') || new Date();
 			var day = $.datepicker.formatDate('D', date);
-			var month = $.datepicker.formatDate('MM', date);
+			var month = $.datepicker.formatDate('M', date);
 			var dayNum = $.datepicker.formatDate('d', date);
 			var year = $.datepicker.formatDate('yy', date);
-			$(".ui-datepicker .ui-datepicker-material-header").remove();
-			$(".ui-datepicker").prepend(headerHtml(day, month, dayNum, year));
+			console.log(666, date);
+			$(".ui-datepicker")
+				.remove(".ui-datepicker-material-header")
+				.wrapInner("<div class='ui-datepicker-material-body'></div>")
+				.prepend(headerHtml(day, month, dayNum, year))
+				.wrapInner("<div class='ui-datepicker-material'></div>");
 		}, 1);
 	},
 
@@ -217,9 +223,10 @@ materialAPEX.datepicker = {
 			}
 		};
 
-		$(document).on("focus", ".hasDatepicker", function () {
-			materialAPEX.datepicker.materialDatePicker();
-		});
+		// $(document).on("focus", ".hasDatepicker", function () {
+		// 	console.log(000);
+		// 	materialAPEX.datepicker.materialDatePicker();
+		// });
 
 		materialAPEX.debug.timeEnd("materialAPEX.datepicker.init");
 	}

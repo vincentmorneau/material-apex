@@ -16,14 +16,18 @@
 	border: none;
 	z-index: 800!important;
 	width: auto;
-	min-width: 250px;
 	@include z-depth-5;
+
+	.ui-datepicker-material {
+		display: flex;
+	}
 
 	.ui-datepicker-material-header {
 		background-color: $datepicker-date-bg;
 		color: #fff;
-		padding: 1rem 2rem;
+		padding: 1rem;
 		font-weight: 300;
+		max-width: 200px;
 
 		.ui-datepicker-material-year {
 			font-size: 1.3rem;
@@ -35,6 +39,11 @@
 		}
 	}
 
+	.ui-datepicker-material-body {
+		display: block;
+		min-width: 250px;
+	}
+
 	.ui-datepicker-header {
 		text-align: center;
 		background: #fff;
@@ -43,9 +52,8 @@
 		border: none;
 
 		.ui-datepicker-title {
-			margin: .5rem 0;
-			height: 3rem;
-			line-height: 3rem;
+			margin: .3rem 0;
+			height: 2.3rem;
 
 			.ui-datepicker-month, .ui-datepicker-year {
 				@extend .browser-default;
@@ -108,20 +116,20 @@
 			border: none;
 			text-align: center;
 			box-shadow: none;
-			padding: .75rem 0;
+			padding: .4rem 0;
 		}
 
 		.ui-state-active, .ui-state-highlight, .ui-state-hover {
 			border-radius: 50%;
 			color: #fff;
-			width: 35px;
-			height: 35px;
+			width: 25px;
+			height: 25px;
 			margin: auto;
-			line-height: 14px;
+			line-height: 13px;
 		}
 
 		.ui-state-active {
-			background-color: $datepicker-selected;
+			background-color: $datepicker-selected!important;
 		}
 
 		.ui-state-highlight, .ui-state-hover {
@@ -134,8 +142,8 @@
 			th {
 				color: #999;
 				font-weight: 500;
-				width: 14.285714286%;
-				padding: 0.7em 0;
+				width: percentage($number: 1 / 7);
+				padding: 0.5em 0;
 			}
 		}
 
@@ -169,6 +177,7 @@
 
 		button {
 			@include btn-flat;
+			font-weight: normal;
 		}
 	}
 }

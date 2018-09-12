@@ -268,11 +268,11 @@ input[type=range] {
 }
 
 // Browser defaults
-input.browser-default {
+.apex-item-text.browser-default {
 	@include browserDefaultInput();
 }
 
-select.browser-default {
+.apex-item-select.browser-default {
 	@include browserDefaultInput();
 	@include browserDefaultSelect();
 }
