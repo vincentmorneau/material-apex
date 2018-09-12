@@ -12,8 +12,11 @@ materialAPEX.wizard.init();
 {{#LIST_TEMPLATE_CURRENT}}
 <li id="#LIST_ITEM_ID#" class="ma-wizard-step is-active">
     <div class="ma-wizard-step-wrap">
-        <span class="ma-wizard-step-marker z-depth-2 blue lighten-2"><i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i></span>
-        <span class="ma-wizard-step-label">#TEXT#</span>
+        <span class="ma-wizard-step-marker z-depth-2 blue lighten-2">
+            <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+        </span>
+        <span class="ma-wizard-step-label hide-on-small-only show-on-medium-and-up">#TEXT#</span>
+        <span class="ma-wizard-step-label show-on-small hide-on-med-and-up">#A01#</span>
     </div>
 </li>
 {{/LIST_TEMPLATE_CURRENT}}
@@ -21,9 +24,14 @@ materialAPEX.wizard.init();
 {{#LIST_TEMPLATE_NONCURRENT}}
 <li id="#LIST_ITEM_ID#" class="ma-wizard-step">
     <div class="ma-wizard-step-wrap">
-        <span class="ma-wizard-step-marker complete green lighten-2"><i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i></span>
-        <span class="ma-wizard-step-marker not-complete"><i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i></span>
-        <span class="ma-wizard-step-label">#TEXT#</span>
+        <span class="ma-wizard-step-marker complete green lighten-2">
+            <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+        </span>
+        <span class="ma-wizard-step-marker not-complete">
+            <i class="#ICON_CSS_CLASSES#" aria-hidden="true"></i>
+        </span>
+        <span class="ma-wizard-step-label hide-on-small-only show-on-medium-and-up">#TEXT#</span>
+        <span class="ma-wizard-step-label show-on-small hide-on-med-and-up">#A01#</span>
     </div>
 </li>
 {{/LIST_TEMPLATE_NONCURRENT}}
@@ -47,7 +55,7 @@ materialAPEX.wizard.init();
 
 {{/LIST_TEMPLATE_AFTER_ROWS}}
 
-{{#A01_LABEL}}{{/A01_LABEL}}
+{{#A01_LABEL}}Mobile Text{{/A01_LABEL}}
 {{#A02_LABEL}}{{/A02_LABEL}}
 {{#A03_LABEL}}{{/A03_LABEL}}
 {{#A04_LABEL}}{{/A04_LABEL}}

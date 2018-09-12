@@ -1,95 +1,100 @@
 .ma-wizard {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: table;
-    table-layout: fixed;
-    width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: table;
+	table-layout: fixed;
+	width: 100%;
 
-    .ma-wizard-step {
-        display: table-cell;
-        vertical-align: top;
+	.ma-wizard-step {
+		display: table-cell;
+		vertical-align: top;
 
-        .ma-wizard-step-wrap {
-            float: left;
-            width: 100%;
-            height: 100%;
-            position: relative;
+		.ma-wizard-step-wrap {
+			float: left;
+			width: 100%;
+			height: 100%;
+			position: relative;
 
-            &:after {
-                content: '';
-                position: absolute;
-                width: 100%;
-                top: 16px;
-                height: 2px;
-                margin-top: -1px;
-                background-color: #d0d0d0;
-            }
-        }
+			&:after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				top: 16px;
+				height: 2px;
+				margin-top: -1px;
+				background-color: #d0d0d0;
+			}
+		}
 
-        .ma-wizard-step-marker {
-            display: block;
-            text-align: center;
-            width: 32px;
-            height: 32px;
-            margin-top: -10px;
-            margin-left: -18px;
-            top: 10px;
-            left: 50%;
-            position: absolute;
-            z-index: 1;
-            padding: 4px;
-            border-radius: 100%;
-            color: #666;
-        }
+		.ma-wizard-step-marker {
+			display: block;
+			text-align: center;
+			width: 32px;
+			height: 32px;
+			margin-top: -10px;
+			margin-left: -18px;
+			top: 10px;
+			left: 50%;
+			position: absolute;
+			z-index: 1;
+			padding: 4px;
+			border-radius: 100%;
+			color: #666;
 
-        .ma-wizard-step-marker.complete {
-            display:none;
-        }
+			i {
+				font-size: 22px;
+			}
+		}
 
-        &.is-complete {
-            .ma-wizard-step-marker.complete {
-                display:block;
-            }
+		.ma-wizard-step-marker.complete {
+			display: none;
+		}
 
-            .ma-wizard-step-marker.not-complete {
-                display:none;
-            }
-        }
+		&.is-complete {
+			.ma-wizard-step-marker.complete {
+				display: block;
+			}
 
-        &.is-complete, &.is-active {
-            .ma-wizard-step-marker {
-                color: #FFF;
-            }
-        }
+			.ma-wizard-step-marker.not-complete {
+				display: none;
+			}
+		}
 
-        .ma-wizard-step-label {
-            display: block;
-            text-align: center;
-            margin-top: 36px;
-            padding: 8px;
-            line-height: 18px;
-            font-size: 1.2rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            color: #666;
-        }
+		&.is-complete,
+		&.is-active {
+			.ma-wizard-step-marker {
+				color: #FFF;
+			}
+		}
 
-        &.is-active .ma-wizard-step-label {
-            color: #404040;
-            font-weight: 700;
-        }
-    }
+		.ma-wizard-step-label {
+			display: block;
+			text-align: center;
+			margin-top: 36px;
+			padding: 8px;
+			line-height: 18px;
+			font-size: 1.2rem;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			color: #666;
+		}
+
+		&.is-active .ma-wizard-step-label {
+			color: #404040;
+			font-weight: 700;
+		}
+	}
 }
 
 .ma-wizard-step:first-child .ma-wizard-step-wrap:after {
-    left: 50%;
-    right: 0;
-    width: 50%;
+	left: 50%;
+	right: 0;
+	width: 50%;
 }
 
 .ma-wizard-step:last-child .ma-wizard-step-wrap:after {
-    right: 50%;
-    left: 0;
-    width: 50%;
+	right: 50%;
+	left: 0;
+	width: 50%;
 }
