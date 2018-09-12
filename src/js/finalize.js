@@ -5,8 +5,7 @@ $(document).ready(function () {
 		Materialbox: document.body.querySelectorAll('.materialboxed'),
 		Parallax: document.body.querySelectorAll('.parallax'),
 		Pushpin: document.body.querySelectorAll('.pushpin'),
-		ScrollSpy: document.body.querySelectorAll('.scrollspy'),
-		Sidenav: document.body.querySelectorAll('.sidenav')
+		ScrollSpy: document.body.querySelectorAll('.scrollspy')
 	};
 
 	for (var pluginName in materializePlugins) {

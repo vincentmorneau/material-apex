@@ -113,6 +113,15 @@ materialAPEX.messages = {
 };
 
 /**
+ * @module theme
+ **/
+materialAPEX.theme = {
+	isRTL: function () {
+		return $("html.u-RTL").length > 0;
+	}
+};
+
+/**
  * @module items
  **/
 materialAPEX.items = {
@@ -163,8 +172,8 @@ materialAPEX.ir = {
 			.attr("placeholder", apex.lang.getMessage("APEX.IG.SEARCH"))
 			.parent().addClass("input-field");
 
-		$(".a-IRR-button--actions").html('TODO');
-		$(".a-IRR-button--colSearch").html('TODO');
+		$(".a-IRR-button--actions").html('<i aria-hidden="true" class="fa fa-ellipsis-v"></i>');
+		$(".a-IRR-button--colSearch").html('<i class="fa fa-search" aria-hidden="true"></i>');
 
 		$(".a-IRR-controlsCheckbox").addClass("filled-in");
 

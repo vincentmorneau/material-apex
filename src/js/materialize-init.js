@@ -232,6 +232,12 @@ materialAPEX.materialize = {
 	init: function () {
 		materialAPEX.debug.time("materialAPEX.materialize.init");
 
+		// Sidenav
+		var sidenavDirection = materialAPEX.theme.isRTL() ? "right" : "left";
+		$('.sidenav').sidenav({
+			edge: sidenavDirection
+		});
+
 		/* Pushpin */
 		if ($('.apex-rds li').length > 0) {
 			$(".ma-body-column-css-classes").addClass("col s12 m9 l10");
