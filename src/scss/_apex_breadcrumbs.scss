@@ -1,0 +1,17 @@
+nav.nav-extended .nav-breadcrumbs .nav-wrapper {
+	height: 42px;
+	line-height: 42px;
+	min-height: 42px;
+
+	.breadcrumb {
+		color: lighten($color: $navbar-font-color, $amount: 25%);
+
+		&:before {
+			color: lighten($color: $navbar-font-color, $amount: 25%);
+		}
+
+		&:last-child {
+			color: $navbar-font-color;
+		}
+	}
+}

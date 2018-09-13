@@ -36,6 +36,14 @@ var classExists = function (className) {
 	return document.getElementsByClassName(className).length > 0;
 };
 
+// Overwrites apex.theme.defaultStickyTop to help with the region display selector
+apex.theme.defaultStickyTop = function () {
+	var navbarHeight = $('.nav-extended').outerHeight();
+	var extraHeight = 12;
+
+	return navbarHeight + extraHeight;
+};
+
 /**
  * @namespace materialAPEX
  **/
@@ -118,6 +126,45 @@ materialAPEX.messages = {
 materialAPEX.theme = {
 	isRTL: function () {
 		return $("html.u-RTL").length > 0;
+	},
+
+	getHeaderBaseHeight: function () {
+		var baseHeight = $("header .main-nav-wrapper").outerHeight() || 0;
+
+		return baseHeight;
+	},
+
+	getHeaderDynamicHeight: function () {
+		var breadcrumbHeight = $("header .nav-breadcrumbs").outerHeight() || 0;
+		var extendedNavbarHeight = $("header .nav-content").outerHeight() || 0;
+
+		return breadcrumbHeight + extendedNavbarHeight;
+	},
+
+	getHeaderTotalHeight: function () {
+		return materialAPEX.theme.getHeaderBaseHeight() + materialAPEX.theme.getHeaderDynamicHeight();
+	},
+
+	init: function () {
+		$('main').css({
+			'margin-top': materialAPEX.theme.getHeaderDynamicHeight()
+		});
+
+		var navbarScroll = function(scrollClass) {
+			if ($(window).scrollTop() > 150) {
+				$("header nav").addClass("ma-no-transparency " + scrollClass);
+			} else {
+				$("header nav").removeClass("ma-no-transparency " + scrollClass);
+			}
+		};
+
+		navbarScroll('no-scroll');
+
+		if (classExists("ma-page-navbar--transparent")) {
+			$(window).on('scroll', function() {
+				navbarScroll('scroll');
+			});
+		}
 	}
 };
 
@@ -234,6 +281,12 @@ materialAPEX.initial = {
 		$('.card-content, .card-action, span.badge, .ma-button-label').removeEmpty();
 		$('.ma-region-buttons, .ma-region-header').removeEmptySpaces();
 
+		// Support for APEX 5.1 item icons
+		$(".apex-item-icon").each(function(index) {
+			var el = $(this);
+			el.addClass("prefix").prependTo(el.parent());
+		});
+
 		// Fixed Action Button
 		$(".fixed-action-btn").each(function () {
 			var fab = $(this);
@@ -279,6 +332,9 @@ materialAPEX.initial = {
 		});
 
 		$("div.fab-position-absolute").parent().addClass("fab-relative");
+
+		// Extended navbar
+		$("header .nav-extended .nav-content .btn-floating").addClass("halfway-fab");
 
 		// Switches
 		$(".switch").closest('.input-field').addClass('ma-switch-container');
@@ -357,11 +413,6 @@ materialAPEX.initial = {
 				apex.message.showPageSuccess(data.successMessage.text);
 			}
 		});
-
-		// overwrites apex.theme.defaultStickyTop to help with the region display selector
-		apex.theme.defaultStickyTop = function () {
-			return $("header .top-nav").height();
-		};
 
 		// showSpinner
 		if (typeof apex.util.showSpinner === "function") {

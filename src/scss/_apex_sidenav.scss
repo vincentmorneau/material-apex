@@ -1,17 +1,17 @@
 $sidenav-height: 44px;
 
 #sidenav-overlay {
-  	z-index: 999;
+	z-index: 999;
 }
 
 .drag-target {
-  	z-index: 1000;
+	z-index: 1000;
 }
 
 .sidenav {
-    z-index: 1000;
-    height: 100%;
-    width: $sidenav-width;
+	z-index: 1000;
+	height: 100%;
+	width: $sidenav-width;
 
 	// Right Align
 	&.right-aligned {
@@ -19,15 +19,15 @@ $sidenav-height: 44px;
 		left: initial;
 	}
 
-	li > a {
+	li>a {
 		padding: 0 16px;
 	}
 
 	.collapsible {
-        .collapsible-body {
-            background-color: $sidenav-bg-color;
-            padding: 0;
-        }
+		.collapsible-body {
+			background-color: $sidenav-bg-color;
+			padding: 0;
+		}
 	}
 }
 
@@ -35,60 +35,68 @@ $sidenav-height: 44px;
 Sidebar Fixed
 */
 .ma-sidenav-fixed {
-    .sidenav {
-        @extend .sidenav-fixed;
-    }
-
-	@media #{$large-and-up} {
-        #app-sidenav-trigger {
-            display: none!important;
-        }
-
-        .top-nav-wrapper {
-            z-index: 1001;
-        }
-
-		.sidenav {
-            transform: translateX(0)!important;
-            top: $navbar-height;
-            height: calc(100% - #{$navbar-height});
-		}
-
-    	main, footer, nav.nav-breadcrumbs {
-        	padding-left: $sidenav-width;
-      	}
-
-        .container, &.main-container .ma-main-container {
-            width: 85%;
-        }
+	.sidenav {
+		@extend .sidenav-fixed;
 	}
 
-  	@media #{$medium-and-down} {
-        #app-sidenav-trigger {
-            display: block!important;
-        }
+	@media #{$large-and-up} {
+		#app-sidenav-trigger {
+			display: none !important;
+		}
 
-    	main, footer {
-      		padding-left: 0;
-    	}
-  	}
+		.top-nav-wrapper {
+			z-index: 1001;
+		}
+
+		.sidenav {
+			transform: translateX(0) !important;
+			z-index: 1001;
+		}
+
+		main,
+		footer,
+		.main-nav-wrapper,
+		.search-nav-wrapper,
+		.nav-breadcrumbs,
+		.nav-content
+		{
+			padding-left: $sidenav-width;
+		}
+
+		.container,
+		&.main-container .ma-main-container {
+			width: 85%;
+		}
+	}
+
+	@media #{$medium-and-down} {
+		#app-sidenav-trigger {
+			display: block !important;
+		}
+
+		main,
+		footer {
+			padding-left: 0;
+		}
+	}
 }
 
 /* SideNav Header */
 .user-view {
-    @include hide();
+	@include hide();
 
-    a, span {
-        color: $sidenav-header-text-color;
-    }
+	a,
+	span {
+		color: $sidenav-header-text-color;
+	}
 
-    a {
-        padding: 0;
-        line-height: 24px;
-        height: auto;
-    }
+	a {
+		padding: 0;
+		line-height: 24px;
+		height: auto;
+	}
 }
 
 .sidenav .user-view {
-    @include showBlock();
+	@include showBlock();
 }

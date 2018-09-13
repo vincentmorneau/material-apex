@@ -243,10 +243,9 @@ materialAPEX.materialize = {
 			$(".ma-body-column-css-classes").addClass("col s12 m9 l10");
 			$(".apex-rds-container").addClass("col hide-on-small-only m3 l2");
 
-			var pushpinOffset = ($(".nav-breadcrumbs").length === 0 ? 64 : 128);
 			$('.apex-rds').pushpin({
 				top: 0,
-				offset: pushpinOffset
+				offset: materialAPEX.theme.getHeaderTotalHeight()
 			});
 		}
 

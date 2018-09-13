@@ -22,6 +22,7 @@ $(document).ready(function () {
 	materialAPEX.observe.select();
 	materialAPEX.observe.irDialog();
 	materialAPEX.observe.irHeader();
+	materialAPEX.theme.init();
 
 	M.updateTextFields();
 

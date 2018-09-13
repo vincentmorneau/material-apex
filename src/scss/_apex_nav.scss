@@ -1,7 +1,18 @@
+// Search nav
 .nav-wrapper,
 .nav-wrapper form,
 .nav-wrapper form .input-field {
 	height: 100%;
+}
+
+nav .search-nav-wrapper .input-field {
+	height: $navbar-height-mobile;
+}
+
+@media #{$medium-and-up} {
+	nav .search-nav-wrapper .input-field {
+		height: $navbar-height;
+	}
 }
 
 nav .search-nav-wrapper .input-field label.active {
@@ -9,6 +20,7 @@ nav .search-nav-wrapper .input-field label.active {
 	left: 1rem;
 }
 
+// Search nav
 .page-navbar-fixed .top-nav-wrapper {
 	@extend .navbar-fixed;
 }
@@ -22,17 +34,27 @@ nav ul a {
 	display: inline-block;
 }
 
-nav .nav-wrapper i {
-	font-size: ($navbar-font-size * 1.25) !important;
-	height: $navbar-height-mobile;
-	line-height: $navbar-height-mobile;
+nav .nav-wrapper {
+	li, i {
+		height: $navbar-height-mobile;
+		line-height: $navbar-height-mobile;
+	}
+
+	i {
+		font-size: ($navbar-font-size * 1.25) !important;
+	}
 }
 
 @media #{$medium-and-up} {
-	nav .nav-wrapper i {
-		font-size: ($navbar-font-size * 1.75) !important;
-		height: $navbar-height;
-		line-height: $navbar-height;
+	nav .nav-wrapper {
+		li, i {
+			height: $navbar-height;
+			line-height: $navbar-height;
+		}
+
+		i {
+			font-size: ($navbar-font-size * 1.75) !important;
+		}
 	}
 }
 
@@ -44,6 +66,11 @@ nav .nav-wrapper i {
 	.drag-target {
 		top: $navbar-height;
 	}
+}
+
+.page-left-logo nav .brand-logo {
+	left: auto;
+	transform: none;
 }
 
 .page-center-logo nav .brand-logo {
@@ -83,7 +110,7 @@ nav .nav-wrapper i {
 	}
 }
 
-/* Scrollspy */
+// Scrollspy
 .apex-rds {
 	@extend .table-of-contents;
 }
@@ -92,14 +119,76 @@ nav .nav-wrapper i {
 	@include hide;
 }
 
-/* Region Display Selector */
+// Region Display Selector
 .apex-rds-selected a {
 	font-weight: 500;
 	padding-left: 18px;
 	border-left: 2px solid $secondary-color;
 }
 
-/* Button */
+// Button
 nav .button-collapse {
 	margin: 0;
+}
+
+// Transparent navbar
+.ma-page-navbar--transparent {
+	header {
+		position: absolute;
+
+		nav:not(.ma-no-transparency) {
+			background-color: transparent;
+			box-shadow: none;
+			transition: all 0.5s linear;
+
+			a, .brand-logo {
+				color: $navbar-font-color-transparent;
+			}
+		}
+
+		nav.ma-no-transparency {
+			background-color: $navbar-bg-color;
+			@extend .z-depth-1;
+
+			a, .brand-logo {
+				color: $navbar-font-color;
+			}
+		}
+
+		nav.ma-no-transparency.scroll {
+			transition: all 0.5s linear;
+		}
+	}
+}
+
+// Dropdown content
+header .dropdown-content {
+	li {
+		&>a,
+		&>span {
+			color: $dropdown-color;
+		}
+	}
+}
+
+// Tabs
+header .nav-content {
+	.tabs.tabs-transparent .tab a {
+		color: $navbar-font-color;
+	}
+
+	.tabs.tabs-transparent .tab a:hover
+	, .tabs.tabs-transparent .tab a.active {
+		color: $navbar-font-color;
+		border-bottom: 2px solid $navbar-font-color;
+	}
+
+	.indicator {
+		@include hide;
+	}
+}
+
+// Logo
+nav .brand-logo {
+	font-weight: lighter;
 }

@@ -107,7 +107,7 @@
    "group": "Global"
 }
 */
-$background-color: #fff;
+$background-color: #eee;
 /*
 {
     "var": "@primary-color",
@@ -117,7 +117,7 @@ $background-color: #fff;
     "group": "Global"
 }
 */
-$primary-color: #00bcd4;
+$primary-color: #e91e63;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 /*
@@ -129,7 +129,7 @@ $primary-color-dark: darken($primary-color, 15%) !default;
     "group": "Global"
 }
 */
-$secondary-color: #EF5350;
+$secondary-color: #e91e63;
 /*
 {
     "var": "@success-color",
@@ -813,7 +813,7 @@ End Grid
 	"subgroup": "Colors"
 }
 */
-$navbar-bg-color: $primary-color !default;
+$navbar-bg-color: #fff !default;
 /*
 {
 	"var" : "@navbar-font-color",
@@ -823,7 +823,18 @@ $navbar-bg-color: $primary-color !default;
 	"subgroup": "Colors"
 }
 */
-$navbar-font-color: #fff !default;
+$navbar-font-color: #555 !default;
+
+/*
+{
+	"var" : "@navbar-font-color-transparent",
+	"name" : "Text Color (On Transparent Navbar)",
+	"type" : "color",
+	"group": "Top Navigation"
+}
+*/
+$navbar-font-color-transparent: #fff !default;
+
 /*
 {
  "var"  : "@navbar-height",
@@ -1115,7 +1126,7 @@ $footer-font-size: 1.0rem !default;
 "subgroup": "Top"
 }
 */
-$footer-bg-color: $primary-color !default;
+$footer-bg-color: #232323 !default;
 /*
 {
 "var" : "@footer-font-color",

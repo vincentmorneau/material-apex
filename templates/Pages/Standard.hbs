@@ -37,23 +37,28 @@
 <!-- Navbar & Sidenav -->
 <header>
   <div class="top-nav-wrapper">
-    <nav class="top-nav">
+    <nav class="top-nav nav-extended">
       <div class="nav-wrapper main-nav-wrapper m-l-1">
         <a href="#" id="app-sidenav-trigger" class="sidenav-trigger button-collapse show-on-large hide" data-target="app-sidenav" title="#EXPAND_COLLAPSE_NAV_LABEL#">
-					<i class="fa fa-navicon left" aria-hidden="true"></i>
-				</a>
+          <i class="fa fa-navicon left" aria-hidden="true"></i>
+        </a>
         <a href="#HOME_LINK#" class="brand-logo ma-responsive-text">#LOGO#</a>
         #NAVIGATION_BAR#
         #TOP_GLOBAL_NAVIGATION_LIST#
       </div>
       <div class="nav-wrapper search-nav-wrapper hide">
-        <!-- Search Bar -->
+        <!-- Search Bar Start -->
         #REGION_POSITION_05#
+        <!-- Search Bar END -->
+      </div>
+      <!-- Breadcrumbs Start -->
+      #REGION_POSITION_03#
+      <!-- Breadcrumbs End -->
+      <div class="nav-content">
+        #REGION_POSITION_02#
       </div>
     </nav>
   </div>
-  <!-- Breadcrumbs -->
-  #REGION_POSITION_03#
   <!-- Side nav -->
   #SIDE_GLOBAL_NAVIGATION_LIST#
 </header>
@@ -115,7 +120,7 @@
   <div class="t-Alert t-Alert--defaultIcons t-Alert--success t-Alert--horizontal t-Alert--page t-Alert--colorBG" id="t_Alert_Success" role="alert">
     <div class="t-Alert-wrap">
       <div class="t-Alert-icon">
-			<i aria-hidden="true" class="fa fa-check"></i>
+      <i aria-hidden="true" class="fa fa-check"></i>
       </div>
       <div class="t-Alert-content">
         <div class="t-Alert-header">
@@ -134,7 +139,7 @@
   <div class="t-Alert t-Alert--defaultIcons t-Alert--warning t-Alert--horizontal t-Alert--page" id="t_Alert_Success" role="alert">
     <div class="t-Alert-wrap">
       <div class="t-Alert-icon">
-			<i aria-hidden="true" class="fa fa-warning"></i>
+      <i aria-hidden="true" class="fa fa-warning"></i>
       </div>
       <div class="t-Alert-content">
         <div class="t-Alert-header">
@@ -183,7 +188,56 @@ apex.navigation.dialog(#PAGE_URL#,{title:#TITLE#,height:#DIALOG_HEIGHT#,width:#D
 {{#DIALOG_WIDTH}}{{/DIALOG_WIDTH}}
 
 {{#TEMPLATE_OPTION_GROUPS}}
-[]
+[
+  {
+    "NAME": "PAGE_LOGO_ALIGNMENT",
+    "DISPLAY_NAME": "Logo Alignment",
+    "DISPLAY_SEQUENCE": 0,
+    "HELP_TEXT": "The font size of your region title",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+				"NAME": "PAGE_LOGO_ALIGNMENT_LEFT",
+				"DISPLAY_NAME": "Left",
+				"DISPLAY_SEQUENCE": 10,
+				"CSS_CLASSES": "page-left-logo",
+				"HELP_TEXT": ""
+			},
+      {
+				"NAME": "PAGE_LOGO_ALIGNMENT_CENTER",
+				"DISPLAY_NAME": "Center",
+				"DISPLAY_SEQUENCE": 20,
+				"CSS_CLASSES": "page-center-logo",
+				"HELP_TEXT": ""
+			}
+    ]
+  },
+	{
+    "NAME": "PAGE_NAVBAR_STYLE",
+    "DISPLAY_NAME": "Navigation Bar Style",
+    "DISPLAY_SEQUENCE": 20,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+				"NAME": "PAGE_NAVBAR_STYLE_STANDARD",
+				"DISPLAY_NAME": "Standard",
+				"DISPLAY_SEQUENCE": 10,
+				"CSS_CLASSES": "ma-page-navbar--standard",
+				"HELP_TEXT": ""
+			},
+      {
+				"NAME": "PAGE_NAVBAR_STYLE_TRANSPARENT",
+				"DISPLAY_NAME": "Transparent",
+				"DISPLAY_SEQUENCE": 20,
+				"CSS_CLASSES": "ma-page-navbar--transparent",
+				"HELP_TEXT": ""
+			}
+    ]
+  }
+]
 {{/TEMPLATE_OPTION_GROUPS}}
 {{#TEMPLATE_OPTIONS}}
 [
@@ -193,14 +247,6 @@ apex.navigation.dialog(#PAGE_URL#,{title:#TITLE#,height:#DIALOG_HEIGHT#,width:#D
     "DISPLAY_SEQUENCE": 1,
     "CSS_CLASSES": "main-container",
     "HELP_TEXT": "",
-    "IS_ADVANCED": ""
-  },
-  {
-    "NAME": "CENTER_LOGO",
-    "DISPLAY_NAME": "Center Logo",
-    "DISPLAY_SEQUENCE": 2,
-    "CSS_CLASSES": "page-center-logo",
-    "HELP_TEXT": "This will center your application title or logo on a medium or large screen size. Small screen size will always be left aligned.",
     "IS_ADVANCED": ""
   },
   {
@@ -222,6 +268,8 @@ apex.navigation.dialog(#PAGE_URL#,{title:#TITLE#,height:#DIALOG_HEIGHT#,width:#D
 ]
 {{/TEMPLATE_OPTIONS}}
 {{#DEFAULT_TEMPLATE_OPTIONS}}
-main-container:page-center-logo:page-navbar-fixed
+main-container:page-navbar-fixed
 {{/DEFAULT_TEMPLATE_OPTIONS}}
-{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+page-center-logo:ma-page-navbar--standard
+{{/PRESET_TEMPLATE_OPTIONS}}

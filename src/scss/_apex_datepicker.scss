@@ -55,11 +55,16 @@
 			margin: .3rem 0;
 			height: 2.3rem;
 
-			.ui-datepicker-month, .ui-datepicker-year {
+			select.ui-datepicker-month, select.ui-datepicker-year {
 				@extend .browser-default;
 				display: inline-block!important;
 				margin: 0 0.5rem;
 				width: 25%;
+			}
+
+			span.ui-datepicker-month, span.ui-datepicker-year {
+				display: inline-block;
+				margin: 1rem 0;
 			}
 		}
 

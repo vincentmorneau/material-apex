@@ -1,5 +1,20 @@
+.ma-region.container {
+	@extend .container;
+	margin-bottom: $input-margin-bottom; // this is to replace .row margin-bottom: $input-margin-bottom
+}
+
+.ma-region {
+	margin-bottom: $input-margin-bottom; // this is to replace .row margin-bottom: $input-margin-bottom
+
+	.ma-region--no-padding {
+		.card-content {
+			padding: 0;
+		}
+	}
+}
+
 .row {
-	// margin-bottom: 0;
+	margin-bottom: 0;
 
 	.col {
 		min-height: 0;

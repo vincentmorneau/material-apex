@@ -1,9 +1,9 @@
 // makes the dropdown width adapt to its content
 .dropdown-content.select-dropdown {
-    width:auto!important;
-    min-width: 100%;
+	width: auto !important;
+	min-width: 100%;
 
-    li {
-        white-space: nowrap;
-    }
+	li {
+		white-space: nowrap;
+	}
 }

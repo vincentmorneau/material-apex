@@ -7,39 +7,46 @@
 
 .ma-text-size-responsive .display_only {
 	@extend .flow-text;
+	font-weight: 300;
 }
 
 .ma-region.h1 > .ma-flex-content > .ma-region-header .ma-region-title
+, .ma-region.h1 > .card-content > .ma-flex-content > .ma-region-header .ma-region-title
 , .ma-text-size-h1 .display_only {
 	font-size: $h1-fontsize;
 	font-weight: 300;
 }
 
 .ma-region.h2 > .ma-flex-content > .ma-region-header .ma-region-title
+, .ma-region.h2 > .card-content > .ma-flex-content > .ma-region-header .ma-region-title
 , .ma-text-size-h2 .display_only {
 	font-size: $h2-fontsize;
 	font-weight: 300;
 }
 
 .ma-region.h3 > .ma-flex-content > .ma-region-header .ma-region-title
+, .ma-region.h3 > .card-content > .ma-flex-content > .ma-region-header .ma-region-title
 , .ma-text-size-h3 .display_only {
 	font-size: $h3-fontsize;
 	font-weight: 300;
 }
 
 .ma-region.h4 > .ma-flex-content > .ma-region-header .ma-region-title
+, .ma-region.h4 > .card-content > .ma-flex-content > .ma-region-header .ma-region-title
 , .ma-text-size-h4 .display_only {
 	font-size: $h4-fontsize;
 	font-weight: 300;
 }
 
 .ma-region.h5 > .ma-flex-content > .ma-region-header .ma-region-title
+, .ma-region.h5 > .card-content > .ma-flex-content > .ma-region-header .ma-region-title
 , .ma-text-size-h5 .display_only {
 	font-size: $h5-fontsize;
 	font-weight: 300;
 }
 
 .ma-region.h6 > .ma-flex-content > .ma-region-header .ma-region-title
+, .ma-region.h6 > .card-content > .ma-flex-content > .ma-region-header .ma-region-title
 , .ma-text-size-h6 .display_only {
 	font-size: $h6-fontsize;
 	font-weight: 300;

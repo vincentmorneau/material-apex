@@ -12,16 +12,44 @@ $spacers: (
     y:   0
   ),
   1: (
-    x:   $spacer-x,
-    y:   $spacer-y
+    x:   ($spacer-x * 1),
+    y:   ($spacer-y * 1)
   ),
   2: (
-    x:   ($spacer-x * 1.5),
-    y:   ($spacer-y * 1.5)
+    x:   ($spacer-x * 2),
+    y:   ($spacer-y * 2)
   ),
   3: (
-    x:   ($spacer-x * 3),
-    y:   ($spacer-y * 3)
+    x:   ($spacer-x * 4),
+    y:   ($spacer-y * 4)
+  ),
+  4: (
+    x:   ($spacer-x * 7),
+    y:   ($spacer-y * 7)
+  ),
+  5: (
+    x:   ($spacer-x * 10),
+    y:   ($spacer-y * 10)
+  ),
+  1-neg: (
+    x:   ($spacer-x * -1),
+    y:   ($spacer-y * -1)
+  ),
+  2-neg: (
+    x:   ($spacer-x * -2),
+    y:   ($spacer-y * -2)
+  ),
+  3-neg: (
+    x:   ($spacer-x * -4),
+    y:   ($spacer-y * -4)
+  ),
+  4-neg: (
+    x:   ($spacer-x * -7),
+    y:   ($spacer-y * -7)
+  ),
+  5-neg: (
+    x:   ($spacer-x * -10),
+    y:   ($spacer-y * -10)
   )
 ) !default;
 $border-width:               1px !default;

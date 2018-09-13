@@ -49,7 +49,7 @@ Inputs
 
 .checkbox_group,
 .radio_group {
-	margin-bottom: 20px;
+	margin-bottom: $input-margin-bottom;
 
 	.apex-item-option {
 		padding-right: 1rem;
@@ -167,12 +167,20 @@ span.ma-error-message {
 	}
 }
 
+// Icons
+.input-field .prefix {
+	top: 0;
+}
+
 .input-field .prefix ~ label {
 	width: auto;
 }
-/* Display Only */
+
 .input-field .prefix ~ .display_only {
 	margin-left: 3rem;
+	top: 0.5rem;
+	display: block;
+	position: relative;
 }
 
 /* No Label */
