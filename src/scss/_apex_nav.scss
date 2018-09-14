@@ -58,6 +58,14 @@ nav .nav-wrapper {
 	}
 }
 
+nav .nav-wrapper {
+	.btn i {
+		height: $button-height;
+		line-height: $button-height;
+		font-size: $button-icon-font-size !important;
+	}
+}
+
 .drag-target {
 	top: $navbar-height-mobile;
 }
@@ -142,7 +150,9 @@ nav .button-collapse {
 			transition: all 0.5s linear;
 
 			a, .brand-logo {
-				color: $navbar-font-color-transparent;
+				&:not(.btn) {
+					color: $navbar-font-color-transparent;
+				}
 			}
 		}
 
@@ -151,7 +161,9 @@ nav .button-collapse {
 			@extend .z-depth-1;
 
 			a, .brand-logo {
-				color: $navbar-font-color;
+				&:not(.btn) {
+					color: $navbar-font-color;
+				}
 			}
 		}
 
