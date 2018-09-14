@@ -28,4 +28,4 @@ from dual
 ##### Items
 Name | Type | Label | Region | Template
 --- | --- | --- | --- | ---
-P0_SEARCH | Text Field | `<i class="material-icons">search</i>` | {search bar} | Standard
+P0_SEARCH | Text Field | `<i class="fa fa-search" aria-hidden="true"></i>` | {search bar} | Standard
