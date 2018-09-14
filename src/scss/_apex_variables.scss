@@ -260,26 +260,7 @@ $button-padding: 0 2rem !default;
 }
 */
 $button-radius: 2px !default;
-
-/*
-{
-   "var"  : "@button-disabled-background",
-   "name" : "Background",
-   "type" : "color",
-   "group": "Button",
-   "subgroup": "Disabled Button Colors"
-}
-*/
 $button-disabled-background: #DFDFDF !default;
-/*
-{
-   "var"  : "@button-disabled-color",
-   "name" : "Text",
-   "type" : "color",
-   "group": "Button",
-   "subgroup": "Disabled Button Colors"
-}
-*/
 $button-disabled-color: #9F9F9F !default;
 
 // Raised buttons
