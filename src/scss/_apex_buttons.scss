@@ -134,3 +134,12 @@ This is to give space as if there was a label */
 	display: block;
 	width: 100%;
 }
+
+// Outlined
+.btn.btn-outlined {
+	border: 1px solid $button-disabled-color;
+	background-color: transparent;
+	color: $secondary-color;
+	box-shadow: none;
+	line-height: 2.25rem;
+}
