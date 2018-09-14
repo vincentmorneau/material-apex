@@ -1,227 +1,265 @@
-## Changelog
+# Changelog
 
-#### v0.12.2
-- New features
-	- Timepicker support
-	- Demo allows to toggle between theme styles
+## v1.0.0
+
+APEX 18.1 compatible & new default look!
+
+- :boom: Breaking changes
+  - Dropping support of Material Icons in favor of Font APEX. Material Icons haven't been updated in years, and the commitment of Oracle to Font APEX looks bright. You should review ALL icons in your app.
+  - Dropping support of our two alternative theme styles (Skyrocket & Marine). They aren't on par with the default theme style anymore. We might introduce new theme styles in the future.
+- New features :heart:
+  - **New page styles**
+  - Carousel is available as a Report template too
 - Enhancements
-	- Better button layout on mobile
-	- Interactive Report now has the search button back
-	- Rich Text Editor Support
-	- Application title is now responsive, it no longer hides on mobile
-	- Full Width buttons now aligns the icon better
-	- Better support for Interactive Grid Select Lists
+  - Range item plugin now has a "step" attribute, which allows e.g. to change the range input value by steps of 25.
+  - Date and time pickers are now smaller
+  - Wizard template now has a new attribute for mobile text (A01)
+  - Better documentation plugin
+  - More spacer template options
+  - Navigation Bar Buttons
+  - Sidenav badges
+  - New & faster font (System font)
 - Bug fixes
-	- Better Date Pickers
-	- Fixed badge plugin on mobile
-	- Fixed Textarea label
-	- Fixed Popup LOV
-	- Fixed Default Region values on page creation wizard
-	- Disabled plugins now show properly
-	- Interactive Report column alignment is now supported
-	- Calendar Height is now automatic
-	- Fixed Interactive Grid flashing on Windows
+  - Interactive Grid under Tabs
+  - Interactive report with checkbox
+  - Select list automatically closing
+  - Checkbox and radio layout
+
+## v0.12.2
+
+- New features
+  - Timepicker support
+  - Demo allows to toggle between theme styles
+- Enhancements
+  - Better button layout on mobile
+  - Interactive Report now has the search button back
+  - Rich Text Editor Support
+  - Application title is now responsive, it no longer hides on mobile
+  - Full Width buttons now aligns the icon better
+  - Better support for Interactive Grid Select Lists
+- Bug fixes
+  - Better Date Pickers
+  - Fixed badge plugin on mobile
+  - Fixed Textarea label
+  - Fixed Popup LOV
+  - Fixed Default Region values on page creation wizard
+  - Disabled plugins now show properly
+  - Interactive Report column alignment is now supported
+  - Calendar Height is now automatic
+  - Fixed Interactive Grid flashing on Windows
 - More documentation enhancements...
 
 For more info check out https://github.com/vincentmorneau/material-apex/milestone/19
 
-#### v0.12.1
+## v0.12.1
+
 - New features
-	- [**Two new Theme Styles**](https://github.com/vincentmorneau/material-apex/issues/279#issuecomment-341931568)
-		- Skyrocket
-		- Marine
-	- [AnimAPEX](http://animapex.com/) is now bundled with Material APEX
+  - [**Two new Theme Styles**](https://github.com/vincentmorneau/material-apex/issues/279#issuecomment-341931568)
+    - Skyrocket
+    - Marine
+  - [AnimAPEX](http://animapex.com/) is now bundled with Material APEX
 - Enhancements
-	- Better and cleaner theme roller attribute structure
-	- Navbar items now follows the line height of it's container
-	- New "Depth 0" template options to all regions and buttons
+  - Better and cleaner theme roller attribute structure
+  - Navbar items now follows the line height of it's container
+  - New "Depth 0" template options to all regions and buttons
 - Bug fixes
-	- Create a new theme style no longer shows a failed resource loading
-	- Renders iFrames correctly
-	- Renders card padding better
-	- Fixed an issue where page template options were not selectable
+  - Create a new theme style no longer shows a failed resource loading
+  - Renders iFrames correctly
+  - Renders card padding better
+  - Fixed an issue where page template options were not selectable
 - More documentation enhancements...
 
-#### v0.12.0
+## v0.12.0
+
 - Breaking changes
-	- Button standard is now split into 3 different templates like UT (text, icon, text with icon)
+  - Button standard is now split into 3 different templates like UT (text, icon, text with icon)
 - New features
-	- **You can now use Material APEX while being 100% offline**
-	- Collapsible component as a region template
+  - **You can now use Material APEX while being 100% offline**
+  - Collapsible component as a region template
 - Enhancements
-	- The footer now has theme roller support
-	- Tabs component now has "Remember active tab" support
-	- **Interactive report modals should be more stable**
-	- **Interactive grid should be more stable**
+  - The footer now has theme roller support
+  - Tabs component now has "Remember active tab" support
+  - **Interactive report modals should be more stable**
+  - **Interactive grid should be more stable**
 - Bug fixes
-	- Footer positioning in IE
-	- Hamburger menu now hides when there is no menu entry
-	- Quick picks on dropdowns are now working
-	- Select lists validation message is more consistent
-	- Firefox button rendering is fixed
-	- Classic report card now works without button label
+  - Footer positioning in IE
+  - Hamburger menu now hides when there is no menu entry
+  - Quick picks on dropdowns are now working
+  - Select lists validation message is more consistent
+  - Firefox button rendering is fixed
+  - Classic report card now works without button label
 - More documentation enhancements...
 
 
-#### v0.11.1
+## v0.11.1
+
 - Hot fix for the pulse button [(view)](https://apex.oracle.com/pls/apex/f?p=12192:21)
 - Simplifies the release process
 
-#### v0.11.0
-- Breaking changes
-	- Cards are now merged into one template. Please review yours.
-	- IMG substitution string is now IMG_SRC. Please change yours.
-	- Most button positions have changed. Please review yours.
-	- Previously we had 2 region position for the footer (top and bottom). Now only the top is customizable and it's been renamed to "Footer".
-- New features
-	- **Pulse effect for buttons** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:21)
-	- **Feature Discovery** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:38)
-	- Badge List plugin is now supported [(view)](https://apex.oracle.com/pls/apex/f?p=12192:200)
-	- Full width buttons
-- Enhancements
-	- **Modals now have automatic height**
-	- **Modals can be set to full screen**
-	- Date pickers are more accessible now
-	- Lots of calendar fixes
-	- Popup LOV now has a material design look and feel
-- Bug fixes
-	- [Duplicated spinner](https://github.com/vincentmorneau/material-apex/issues/221)
-	- Interactive Report on mobile
-	- More...
+## v0.11.0
 
-#### v0.10.0
+- Breaking changes
+  - Cards are now merged into one template. Please review yours.
+  - IMG substitution string is now IMG_SRC. Please change yours.
+  - Most button positions have changed. Please review yours.
+  - Previously we had 2 region position for the footer (top and bottom). Now only the top is customizable and it's been renamed to "Footer".
 - New features
-	- APEX 5.1 compatible
-	- Interactive Grids [(view)](https://apex.oracle.com/pls/apex/f?p=12192:80)
-	- Data Loading Wizard [(view)](https://apex.oracle.com/pls/apex/f?p=12192:90)
+  - **Pulse effect for buttons** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:21)
+  - **Feature Discovery** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:38)
+  - Badge List plugin is now supported [(view)](https://apex.oracle.com/pls/apex/f?p=12192:200)
+  - Full width buttons
 - Enhancements
-	- Date Pickers
-	- Interactive Report [(view)](https://apex.oracle.com/pls/apex/f?p=12192:62)
+  - **Modals now have automatic height**
+  - **Modals can be set to full screen**
+  - Date pickers are more accessible now
+  - Lots of calendar fixes
+  - Popup LOV now has a material design look and feel
+- Bug fixes
+  - [Duplicated spinner](https://github.com/vincentmorneau/material-apex/issues/221)
+  - Interactive Report on mobile
+  - More...
+
+## v0.10.0
+
+- New features
+  - APEX 5.1 compatible
+  - Interactive Grids [(view)](https://apex.oracle.com/pls/apex/f?p=12192:80)
+  - Data Loading Wizard [(view)](https://apex.oracle.com/pls/apex/f?p=12192:90)
+- Enhancements
+  - Date Pickers
+  - Interactive Report [(view)](https://apex.oracle.com/pls/apex/f?p=12192:62)
 - & more bug fixes
 
-#### v0.9.6
+## v0.9.6
+
 - New features
-	- **Timeline** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:47)
-	- **Wizard** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:72)
-	- **Calendar** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:41)
-	- **Date Pickers** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
-	- **Login Page** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:101)
-	- **Error Page** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:102)
+  - **Timeline** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:47)
+  - **Wizard** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:72)
+  - **Calendar** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:41)
+  - **Date Pickers** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
+  - **Login Page** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:101)
+  - **Error Page** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:102)
 - Enhancements
-	- **Now support for Font-Awesome (as well as Material Design Icons)** [(view)](https://github.com/vincentmorneau/material-apex/issues/173)
-	- **Page 0 no longer requires the hamburger menu, it is now computed** [(view)](https://github.com/vincentmorneau/material-apex/issues/161)
-	- **Fixed side navigation has a better look and feel** [(view)](https://github.com/vincentmorneau/material-apex/issues/144)
-	- Top and bottom region button has better support [(view)](https://github.com/vincentmorneau/material-apex/issues/157)
-	- Standard and card regions can now have buttons alongside the title (left and right) [(view)](https://github.com/vincentmorneau/material-apex/issues/146)
-	- Added icon support for some region templates (Standard, Card) [(view)](https://github.com/vincentmorneau/material-apex/issues/151)
-	- Added spacers template options to regions, buttons and items [(view)](https://github.com/vincentmorneau/material-apex/issues/128)
+  - **Now support for Font-Awesome (as well as Material Design Icons)** [(view)](https://github.com/vincentmorneau/material-apex/issues/173)
+  - **Page 0 no longer requires the hamburger menu, it is now computed** [(view)](https://github.com/vincentmorneau/material-apex/issues/161)
+  - **Fixed side navigation has a better look and feel** [(view)](https://github.com/vincentmorneau/material-apex/issues/144)
+  - Top and bottom region button has better support [(view)](https://github.com/vincentmorneau/material-apex/issues/157)
+  - Standard and card regions can now have buttons alongside the title (left and right) [(view)](https://github.com/vincentmorneau/material-apex/issues/146)
+  - Added icon support for some region templates (Standard, Card) [(view)](https://github.com/vincentmorneau/material-apex/issues/151)
+  - Added spacers template options to regions, buttons and items [(view)](https://github.com/vincentmorneau/material-apex/issues/128)
 - Bug fixes
-	- Checkbox labels now showing with an empty label [(view)](https://github.com/vincentmorneau/material-apex/issues/158)
-	- Responsive text only applies to display only items now [(view)](https://github.com/vincentmorneau/material-apex/issues/159)
-	- Input labels now inherit the region text color [(view)](https://github.com/vincentmorneau/material-apex/issues/156)
-	- Switch has better positioning [(view)](https://github.com/vincentmorneau/material-apex/issues/147)
-	- Horizontal fields has better alignment [(view)](https://github.com/vincentmorneau/material-apex/issues/149)
-	- App logo has better positioning [(view)](https://github.com/vincentmorneau/material-apex/issues/154)
-	- Nested card region has better support [(view)](https://github.com/vincentmorneau/material-apex/issues/152)
-	- Theme Roller computation enhancements (CSS calc) [(view)](https://github.com/vincentmorneau/material-apex/issues/162)
-	- Modal button has better positioning [(view)](https://github.com/vincentmorneau/material-apex/issues/165)
+  - Checkbox labels now showing with an empty label [(view)](https://github.com/vincentmorneau/material-apex/issues/158)
+  - Responsive text only applies to display only items now [(view)](https://github.com/vincentmorneau/material-apex/issues/159)
+  - Input labels now inherit the region text color [(view)](https://github.com/vincentmorneau/material-apex/issues/156)
+  - Switch has better positioning [(view)](https://github.com/vincentmorneau/material-apex/issues/147)
+  - Horizontal fields has better alignment [(view)](https://github.com/vincentmorneau/material-apex/issues/149)
+  - App logo has better positioning [(view)](https://github.com/vincentmorneau/material-apex/issues/154)
+  - Nested card region has better support [(view)](https://github.com/vincentmorneau/material-apex/issues/152)
+  - Theme Roller computation enhancements (CSS calc) [(view)](https://github.com/vincentmorneau/material-apex/issues/162)
+  - Modal button has better positioning [(view)](https://github.com/vincentmorneau/material-apex/issues/165)
 - Others
-	- Changed Theme ID [(view)](https://github.com/vincentmorneau/material-apex/issues/148)
-	- Dropped RTL support [(view)](https://github.com/vincentmorneau/material-apex/issues/153)
-	- Merged a few pages in the demo app
-	- Added documentation for available substitution strings in named reports
+  - Changed Theme ID [(view)](https://github.com/vincentmorneau/material-apex/issues/148)
+  - Dropped RTL support [(view)](https://github.com/vincentmorneau/material-apex/issues/153)
+  - Merged a few pages in the demo app
+  - Added documentation for available substitution strings in named reports
 
 [More here.](https://github.com/vincentmorneau/material-apex/milestone/11)
 
-#### v0.9.5
+## v0.9.5
+
 - New features
-	- **Switch Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
-	- **Range Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
-	- **Loading Indicator Dynamic Action** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:28)
-	- **Over 80 New Theme Roller Attributes**
+  - **Switch Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
+  - **Range Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
+  - **Loading Indicator Dynamic Action** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:28)
+  - **Over 80 New Theme Roller Attributes**
 - Enhancements
-	- Responsive Text Template Options for Display Only Items
-	- JavaScript performance enhancements
-	- Preloader region is now a plugin
-	- Code Region is now a plugin
+  - Responsive Text Template Options for Display Only Items
+  - JavaScript performance enhancements
+  - Preloader region is now a plugin
+  - Code Region is now a plugin
 - Demo Application menu was restructured completely
 
-#### v0.9.4
-- New features
-	- **Horizontal Cards** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:22)
-	- **Carousel Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:45)
-	- Fixed Action Button can now display text on hover
-- Enhancements
-	- **Completely new dynamic documentation**
-	- Autocomplete input greatly enhanced
-	- Slider greatly enhanced
-	- Inputs can now be colored via template options
-	- Card templates are much easier to use (Regions & Reports)
-	- Collection templates are much easier to use (Lists & Reports)
-	- Tabs component is now usable through a Region template instead of a List template
-	- Merged other Region, Report and List templates
-- Bug fixes
-	- Fixed inline validation message on some input fields
+## v0.9.4
 
-#### v0.9.3
 - New features
-	- Supports APEX Region Display Selector
-	- New error page design
-	- New success message rendering
-	- Adds lots of template options
+  - **Horizontal Cards** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:22)
+  - **Carousel Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:45)
+  - Fixed Action Button can now display text on hover
 - Enhancements
-	- Better rendering of read only and display only fields
-	- IR labels are now translated
-	- Navbar has an active state for current pages
-	- Now possible to close success messages
-	- Better sequencing of template options
-	- Footer is no longer hardcoded
+  - **Completely new dynamic documentation**
+  - Autocomplete input greatly enhanced
+  - Slider greatly enhanced
+  - Inputs can now be colored via template options
+  - Card templates are much easier to use (Regions & Reports)
+  - Collection templates are much easier to use (Lists & Reports)
+  - Tabs component is now usable through a Region template instead of a List template
+  - Merged other Region, Report and List templates
 - Bug fixes
-	- Fixed rendering of checkboxes with no labels
-	- Fixed recursive hiding of sub regions
-	- Fixed duplicated date icon
-	- Fixed menu search bar
-	- Fixed icon substitution strings in all list templates
-	- Fixed HOME_LINK
-	- Removed hardcoded favicon
+  - Fixed inline validation message on some input fields
 
-#### v0.9.2
+## v0.9.3
+
+- New features
+  - Supports APEX Region Display Selector
+  - New error page design
+  - New success message rendering
+  - Adds lots of template options
+- Enhancements
+  - Better rendering of read only and display only fields
+  - IR labels are now translated
+  - Navbar has an active state for current pages
+  - Now possible to close success messages
+  - Better sequencing of template options
+  - Footer is no longer hardcoded
+- Bug fixes
+  - Fixed rendering of checkboxes with no labels
+  - Fixed recursive hiding of sub regions
+  - Fixed duplicated date icon
+  - Fixed menu search bar
+  - Fixed icon substitution strings in all list templates
+  - Fixed HOME_LINK
+  - Removed hardcoded favicon
+
+## v0.9.2
+
 - New features:
-	- Global Search in navigation bar [(view)](https://apex.oracle.com/pls/apex/f?p=12192:1)
-	- Support for Popup LOV [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
-	- New download option: Empty application. Contains the theme and page 0.
+  - Global Search in navigation bar [(view)](https://apex.oracle.com/pls/apex/f?p=12192:1)
+  - Support for Popup LOV [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
+  - New download option: Empty application. Contains the theme and page 0.
 - Bug fixes:
-	- Tabular form select fix
-	- Tabular form date pickers fix
-	- Tabular form checkboxes fix
-	- Parallax height is not fixed anymore
-	- Parallax content is now usable
+  - Tabular form select fix
+  - Tabular form date pickers fix
+  - Tabular form checkboxes fix
+  - Parallax height is not fixed anymore
+  - Parallax content is now usable
 
-#### v0.9.1
+## v0.9.1
+
 - Now provides three download options.
 - Better styling for inline validation messages.
 - Using a new engine for building the project.
 - Bug fixes
-	- Collapsible triggers
-	- Usage of APEX popup LOV now works
-	- Tabular Form select list now works
-	- Overflow on large LOV's on modal screens
-	- Notification box position doesn't overflow on Scrollspy anymore
+  - Collapsible triggers
+  - Usage of APEX popup LOV now works
+  - Tabular Form select list now works
+  - Overflow on large LOV's on modal screens
+  - Notification box position doesn't overflow on Scrollspy anymore
 
-#### v0.9.0
+## v0.9.0
+
 - **NEW:** Transitions [(view)](https://apex.oracle.com/pls/apex/f?p=12192:43)
 - **NEW:** Scrollfire [(view)](https://apex.oracle.com/pls/apex/f?p=12192:44)
 - **NEW:** Breadcrumbs [(view)](https://apex.oracle.com/pls/apex/f?p=12192:42)
 - **NEW:** Multi Select [(view)](https://apex.oracle.com/pls/apex/f?p=12192:25)
 - **NEW:** Fixed Action Buttons [(view)](https://apex.oracle.com/pls/apex/f?p=12192:21)
-	- Horizontal FAB
-	- Click to toggle FAB
-	- Within it's container FAB
-	- FAB now has it's own template
+  - Horizontal FAB
+  - Click to toggle FAB
+  - Within it's container FAB
+  - FAB now has it's own template
 - Material APEX now has 3 Dynamic Action Items
-	- Toasts
-	- Staggered List
-	- Fade In Image
+  - Toasts
+  - Staggered List
+  - Fade In Image
 - Tabs are now scrollable
 - Added a wave effect to the Sidenav parent elements
 - Fixed a bug where the IR column headers wouldn't appear under a tab
@@ -236,11 +274,13 @@ For more info check out https://github.com/vincentmorneau/material-apex/mileston
 - `Fixed Action Button` is not a template option anymore. It has it's own button template now.
 - `Float` is not a template option anymore. This can be achieved using the `Region alignment` template option now.
 
-#### v0.8.3
+## v0.8.3
+
 - Fixed modal close
 - Fixed file input layout
 
-#### v0.8.2
+## v0.8.2
+
 - **Removed Bower dependency. Using npm now.**
 - **Added chips.** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:18)
 - **RTL Support** (Right to Left) with a new Theme Style.
@@ -257,7 +297,8 @@ For more info check out https://github.com/vincentmorneau/material-apex/mileston
 - Better responsiveness on the navigation bar.
 - More...
 
-#### v0.8.1
+## v0.8.1
+
 - Content is now offset when sidebar is fixed
 - Fixed navigation bar icons alignment on mobile
 - Select list is now aligned properly with text fields
@@ -267,7 +308,8 @@ For more info check out https://github.com/vincentmorneau/material-apex/mileston
 - Login Screen has a new template called "Page - Clean"
 - Region titles are now aligned according to the specified template option
 
-#### v0.8.0
+## v0.8.0
+
 - **Theme Roller Support**, primary and secondary colors are now choosable from the theme roller!
 - **New easier grid layout system**  [(view)](https://apex.oracle.com/pls/apex/f?p=12192:11)
 - **New Date Picker**. We let go of the "pickadate.js" plugin for better compabilitiby.
@@ -285,26 +327,28 @@ For more info check out https://github.com/vincentmorneau/material-apex/mileston
 - Fixed Sidenav height
 - More...
 
-#### v0.7.5
+## v0.7.5
+
 - **New Interactive Report Support** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:62)
 - **Enhanced Tabular Form Support** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:61)
 - **Reports Responsive Styles**: See Style 2 [(view)](https://apex.oracle.com/pls/apex/f?p=12192:16)
 - Fixed issues with checkboxes and radio buttons
 - Better HTML markup for reports
 
-#### v0.7.0
+## v0.7.0
+
 - **New Modal Style: Bottom Sheet** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:34)
-	- Modals can now be regions as well as pages
+  - Modals can now be regions as well as pages
 - **New Media components in the CSS section** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:13)
-	- Responsive Images
-	- Circular Images
-	- Responsive Video (iframes and HTML5 videos)
+  - Responsive Images
+  - Circular Images
+  - Responsive Video (iframes and HTML5 videos)
 - **New Template Options Helpers across every template** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:12)
-	- Automatic vertical align (using flexbox)
-	- Text alignment
-	- Floats
-	- Responsive content hiding
-	- Truncating text
+  - Automatic vertical align (using flexbox)
+  - Text alignment
+  - Floats
+  - Responsive content hiding
+  - Truncating text
 - **New Javascript Tabs for switching content** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:39)
 - **New Pagination Component** [(view)](https://apex.oracle.com/pls/apex/f?p=12192:29)
 - Important Javascript performance enhancements
@@ -323,15 +367,16 @@ For more info check out https://github.com/vincentmorneau/material-apex/mileston
 - CSS clean-up
 
 
-#### v0.6.0
+## v0.6.0
+
 **This release focuses on stability enhancements, performance and bug fixes.**
 
 - Now uses Lists for navigation bar and navigation menu
 - Removed Navbar and Sidenav regions on page 0
-	- Now uses User Interface settings
+  - Now uses User Interface settings
 - Fixed Bug where the theme couldn't import into other apps
-	- Added empty Breadcrumb Template
-	- Added empty Legacy Calendar Template
+  - Added empty Breadcrumb Template
+  - Added empty Legacy Calendar Template
 - Date Picker enhancements on mobile
 - Removed external dependency jQuery
 - Now uses Google's CDN for jQuery
@@ -343,9 +388,10 @@ For more info check out https://github.com/vincentmorneau/material-apex/mileston
 - Fixed Flow Text issue
 - Removed unnecessary Template Option on page template
 - Reworked documentation for
-	- SideNav
-	- Sidebar
-	- Parallax
+  - SideNav
+  - Sidebar
+  - Parallax
 
-#### v0.5.0
+## v0.5.0
+
 - Initial Beta Release
