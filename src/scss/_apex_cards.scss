@@ -58,6 +58,7 @@
 // Fixing Card margin
 .card .card-content .card-title {
 	margin-bottom: 0;
+	line-height: unset;
 }
 
 .card .ma-region-header ~ .ma-region-body:not(:empty)

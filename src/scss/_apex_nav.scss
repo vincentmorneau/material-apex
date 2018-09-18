@@ -149,10 +149,12 @@ nav .button-collapse {
 			box-shadow: none;
 			transition: all 0.5s linear;
 
-			a, .brand-logo {
-				&:not(.btn) {
-					color: $navbar-font-color-transparent;
-				}
+			a {
+				color: $navbar-font-color-transparent;
+			}
+
+			.btn {
+				color: $button-raised-color;
 			}
 		}
 
@@ -160,10 +162,12 @@ nav .button-collapse {
 			background-color: $navbar-bg-color;
 			@extend .z-depth-1;
 
-			a, .brand-logo {
-				&:not(.btn) {
-					color: $navbar-font-color;
-				}
+			a {
+				color: $navbar-font-color;
+			}
+
+			.btn {
+				color: $button-raised-color;
 			}
 		}
 
