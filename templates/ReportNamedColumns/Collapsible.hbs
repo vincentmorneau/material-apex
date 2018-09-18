@@ -11,16 +11,23 @@
 {{#ROW_TEMPLATE_BEFORE_FIRST}}{{/ROW_TEMPLATE_BEFORE_FIRST}}
 
 {{#ROW_TEMPLATE1}}
-<li>
-    <div class="collapsible-header"><i class="fa #ICON_CSS_CLASSES#" aria-hidden="true"></i>#TITLE#</div>
-    <div class="collapsible-body"><span>#DESCRIPTION#</span></div>
+<li class="active">
+  <div class="collapsible-header"><i class="fa #ICON_CSS_CLASSES#" aria-hidden="true"></i>#TITLE#</div>
+  <div class="collapsible-body"><span>#DESCRIPTION#</span></div>
 </li>
 {{/ROW_TEMPLATE1}}
-{{#ROW_TEMPLATE_CONDITION1}}{{/ROW_TEMPLATE_CONDITION1}}
+{{#ROW_TEMPLATE_CONDITION1}}
+:ACTIVE_YN = 'Y'
+{{/ROW_TEMPLATE_CONDITION1}}
 {{#ROW_TEMPLATE_DISPLAY_COND1}}
-0
+NOT_CONDITIONAL
 {{/ROW_TEMPLATE_DISPLAY_COND1}}
-{{#ROW_TEMPLATE2}}{{/ROW_TEMPLATE2}}
+{{#ROW_TEMPLATE2}}
+<li>
+  <div class="collapsible-header"><i class="fa #ICON_CSS_CLASSES#" aria-hidden="true"></i>#TITLE#</div>
+  <div class="collapsible-body"><span>#DESCRIPTION#</span></div>
+</li>
+{{/ROW_TEMPLATE2}}
 {{#ROW_TEMPLATE_CONDITION2}}{{/ROW_TEMPLATE_CONDITION2}}
 {{#ROW_TEMPLATE_DISPLAY_COND2}}
 0
