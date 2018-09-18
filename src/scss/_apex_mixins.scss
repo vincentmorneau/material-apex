@@ -48,6 +48,48 @@
 	width: 1px!important;
 }
 
+@mixin ma-container-90 {
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 90%;
+
+	@media #{$medium-and-up} {
+		width: 90%;
+	}
+
+	@media #{$large-and-up} {
+		width: 90%;
+	}
+}
+
+@mixin ma-container-80 {
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 90%;
+
+	@media #{$medium-and-up} {
+		width: 85%;
+	}
+
+	@media #{$large-and-up} {
+		width: 80%;
+	}
+}
+
+@mixin ma-container-70 {
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 90%;
+
+	@media #{$medium-and-up} {
+		width: 80%;
+	}
+
+	@media #{$large-and-up} {
+		width: 70%;
+	}
+}
+
 @mixin ma-s1 {
 	width: percentage(1 / 12 * 1);
 }

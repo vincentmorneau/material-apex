@@ -13,6 +13,18 @@
 	}
 }
 
+.ma-container-90 {
+	@include ma-container-90;
+}
+
+.ma-container-80 {
+	@include ma-container-80;
+}
+
+.ma-container-70 {
+	@include ma-container-70;
+}
+
 .row {
 	margin-bottom: 0;
 

@@ -1,6 +1,37 @@
 {{#TEMPLATE_OPTION_GROUPS}}
 [
   {
+    "NAME": "REGION_CONTAINER",
+    "DISPLAY_NAME": "Container",
+    "DISPLAY_SEQUENCE": 0,
+    "HELP_TEXT": "Helps centering and contain content with left and right margins",
+    "NULL_TEXT": "Default (none)",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "REGION_CONTAINER_70",
+        "DISPLAY_NAME": "70%",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "ma-container-70",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "REGION_CONTAINER_80",
+        "DISPLAY_NAME": "80%",
+        "DISPLAY_SEQUENCE": 20,
+        "CSS_CLASSES": "ma-container-80",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "REGION_CONTAINER_90",
+        "DISPLAY_NAME": "90%",
+        "DISPLAY_SEQUENCE": 30,
+        "CSS_CLASSES": "ma-container-90",
+        "HELP_TEXT": ""
+      }
+    ]
+  },
+  {
     "NAME": "TITLE_ALIGNMENT",
     "DISPLAY_NAME": "Alignment - Title",
     "DISPLAY_SEQUENCE": 1,
@@ -1437,14 +1468,5 @@
 ]
 {{/TEMPLATE_OPTION_GROUPS}}
 {{#TEMPLATE_OPTIONS}}
-[
-  {
-    "NAME": "CONTAINER",
-    "DISPLAY_NAME": "Wrap Region in a Container",
-    "DISPLAY_SEQUENCE": 1,
-    "CSS_CLASSES": "container",
-    "HELP_TEXT": "",
-    "IS_ADVANCED": "N"
-  }
-]
+[]
 {{/TEMPLATE_OPTIONS}}
