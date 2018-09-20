@@ -1,7 +1,11 @@
-.collapsible-header i {
-	width: initial;
-}
+.collapsible {
+	margin: 0;
 
-.collapsible-body {
-	background-color: $collapsible-header-color;
+	.collapsible-header i {
+		width: initial;
+	}
+
+	.collapsible-body {
+		background-color: $collapsible-header-color;
+	}
 }
