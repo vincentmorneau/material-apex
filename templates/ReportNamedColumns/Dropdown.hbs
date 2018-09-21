@@ -1,9 +1,9 @@
 {{#ROW_TEMPLATE_BEFORE_ROWS}}
-<a class="btn dropdown-trigger" href="#!" data-target="#REGION_STATIC_ID#-report">
+<a class="btn dropdown-trigger #COMPONENT_CSS_CLASSES#" href="#!" data-target="#REGION_STATIC_ID#-report">
     #REGION_TITLE#
     <i class="fa fa-caret-down right" aria-hidden="true"></i>
 </a>
-<ul id="#REGION_STATIC_ID#-report" class="dropdown-content #COMPONENT_CSS_CLASSES#">
+<ul id="#REGION_STATIC_ID#-report" class="dropdown-content">
 {{/ROW_TEMPLATE_BEFORE_ROWS}}
 
 {{#BEFORE_COLUMN_HEADING}}{{/BEFORE_COLUMN_HEADING}}
@@ -64,10 +64,37 @@ NOT_CONDITIONAL
 {{#PREVIOUS_SET_TEMPLATE}}{{/PREVIOUS_SET_TEMPLATE}}
 
 {{#TEMPLATE_OPTION_GROUPS}}
-[]
+[
+  {
+    "NAME": "DROPDOWN_WIDTH",
+    "DISPLAY_NAME": "Dropdown Width",
+    "DISPLAY_SEQUENCE": 10,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "DROPDOWN_WIDTH_CONSTRAINED",
+        "DISPLAY_NAME": "Same as button (trigger)",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "ma-dropdown--width-constrained",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "DROPDOWN_WIDTH_AUTO",
+        "DISPLAY_NAME": "Auto",
+        "DISPLAY_SEQUENCE": 20,
+        "CSS_CLASSES": "ma-dropdown--width-auto",
+        "HELP_TEXT": ""
+      }
+    ]
+  }
+]
 {{/TEMPLATE_OPTION_GROUPS}}
 {{#TEMPLATE_OPTIONS}}
 []
 {{/TEMPLATE_OPTIONS}}
 {{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
-{{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+ma-dropdown--width-constrained
+{{/PRESET_TEMPLATE_OPTIONS}}

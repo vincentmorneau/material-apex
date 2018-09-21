@@ -14,20 +14,23 @@ Colors
 		box-shadow: inherit!important;
 	}
 }
-/*
-Date Pickers
-*/
-.datepicker,
-.u-TF-item--datepicker {
-	cursor: pointer;
-}
-/*
-Inputs
-*/
+
+// Input
 .input-field {
 	margin-top: 1.5rem;
 }
 
+:focus {
+	outline: none;
+}
+
+// Date Pickers
+.datepicker,
+.u-TF-item--datepicker {
+	cursor: pointer;
+}
+
+// Display image
 .item-image-responsive img {
 	@extend .responsive-img;
 }
@@ -40,13 +43,13 @@ Inputs
 	@extend .fade-in;
 }
 
-.textarea {
-	border: 0;
-	margin: 0;
-	padding: 0;
-	display: block;
+// Textarea
+.apex-item-textarea-counter {
+	float: right;
+	font-size: 12px;
 }
 
+// Checkbox and radio
 .checkbox_group,
 .radio_group {
 	margin-bottom: $input-margin-bottom;
@@ -54,8 +57,6 @@ Inputs
 	.apex-item-option {
 		padding-right: 1rem;
 	}
-
-
 }
 
 [type="checkbox"], [type="radio"] {
@@ -64,12 +65,7 @@ Inputs
 	}
 }
 
-:focus {
-	outline: none;
-}
-/*
-Autocomplete
-*/
+// Autocomplete
 .apex-item-wrapper--auto-complete {
 	label {
 		transform: translateY(-14px) scale(0.8);
@@ -102,7 +98,7 @@ Autocomplete
 	}
 }
 
-/* Popup LOV */
+// Popup LOV
 .apex-item-wrapper--popup-lov {
 	label {
 		transform: translateY(-14px) scale(0.8);
@@ -148,7 +144,8 @@ Autocomplete
 		content: "\e012";
 	}
 }
-/* Validation */
+
+// Validation
 span.ma-error-message {
 	color: $error-color;
 	font-size: 0.8rem;
@@ -169,7 +166,9 @@ span.ma-error-message {
 
 // Icons
 .input-field .prefix {
-	top: 0;
+	font-size: 1.5rem;
+	top: 0.5rem;
+	text-align: center;
 }
 
 .input-field .prefix ~ label {
@@ -183,7 +182,7 @@ span.ma-error-message {
 	position: relative;
 }
 
-/* No Label */
+// No Label
 .item-no-label {
 	// hides regular input labels
 	& > label {
@@ -191,7 +190,7 @@ span.ma-error-message {
 	}
 }
 
-/* Switches */
+// Switches
 .switch label {
 	position: relative;
 }
@@ -206,7 +205,7 @@ span.ma-error-message {
 	}
 }
 
-/* Ranges */
+// Ranges
 .input-field .range-field + label {
 	transform: translateY(-14px) scale(0.8);
 	transform-origin: 0 0;
@@ -215,7 +214,8 @@ span.ma-error-message {
 input[type=range] {
 	border: none;
 }
-/* Text Alignment */
+
+// Text Alignment
 .ma-field-container {
 	position:relative;
 
@@ -229,15 +229,11 @@ input[type=range] {
 	}
 }
 
-/* Labels */
+// Labels
 .label-block {
 	display: block;
 }
-// Textarea
-.character-counter {
-	float: right;
-	font-size: 12px;
-}
+
 // Shuttle
 .shuttle {
 	width: 100%;

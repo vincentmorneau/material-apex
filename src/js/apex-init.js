@@ -233,13 +233,12 @@ materialAPEX.ir = {
  **/
 materialAPEX.textarea = {
 	init: function () {
-		$("[id*='_CHAR_COUNTER']").parent().addClass("character-counter");
-
-		$(".textarea").prepend(function () {
-			return $(this).siblings();
-		});
-
-		$('textarea').addClass('materialize-textarea');
+		$('.apex-item-textarea').addClass('materialize-textarea');
+		$('.apex-item-group--textarea')
+			.addClass('input-field')
+			.append(function () {
+				return $(this).parent().find("label");
+			});
 	}
 };
 

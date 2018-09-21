@@ -291,7 +291,7 @@ materialAPEX.materialize = {
 			}
 		});
 
-		/* Carousels */
+		// Carousels
 		$('.carousel.carousel-slider').carousel({
 			fullWidth: true,
 			indicators: true
@@ -303,6 +303,14 @@ materialAPEX.materialize = {
 		// Collapsible
 		$(".ma-collapsible-accordion").collapsible({accordion: true});
 		$(".ma-collapsible-expandable").collapsible({accordion: false});
+
+		// Dropdowns
+		$('.dropdown-trigger.ma-dropdown--width-constrained').dropdown({
+			constrainWidth: true
+		});
+		$('.dropdown-trigger.ma-dropdown--width-auto').dropdown({
+			constrainWidth: false
+		});
 
 		// Bottom sheets init
 		$(".modal.bottom-sheet").modal();

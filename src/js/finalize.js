@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	var materializePlugins = {
 		Chips: document.body.querySelectorAll('.chips'),
-		Dropdown: document.body.querySelectorAll('.dropdown-trigger'),
+		// Dropdown: document.body.querySelectorAll('.dropdown-trigger'),
 		Materialbox: document.body.querySelectorAll('.materialboxed'),
 		Parallax: document.body.querySelectorAll('.parallax'),
 		Pushpin: document.body.querySelectorAll('.pushpin'),
