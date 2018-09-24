@@ -117,19 +117,13 @@ apex.theme42.initializePage.modalDialog();
 {{/MESSAGE}}
 
 {{#GRID_TEMPLATE}}
-<div class="ma-container">
-	#ROWS#
-</div>
+<div class="ma-container">#ROWS#</div>
 {{/GRID_TEMPLATE}}
 {{#GRID_ROW_TEMPLATE}}
-<div class="row">
-	#COLUMNS#
-</div>
+<div class="row">#COLUMNS#</div>
 {{/GRID_ROW_TEMPLATE}}
 {{#GRID_COLUMN_TEMPLATE}}
-<div class="col s12 m#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>
-	#CONTENT#
-</div>
+<div class="col s12 m#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>#CONTENT#</div>
 {{/GRID_COLUMN_TEMPLATE}}
 
 {{#DIALOG_BROWSER_FRAME}}
