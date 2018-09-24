@@ -1,3 +1,7 @@
+.ma-region.card .row {
+	margin-bottom: 0;
+}
+
 .card .card-title {
 	z-index: 1;
 }
@@ -9,20 +13,21 @@
 
 .ma-card-reveal {
 	.ma-card-reveal-content {
-		@include showBlock();
+		@include showFlex();
 	}
 
 	.ma-card-image-content {
 		@include hide();
 	}
 }
+
 // End
 
 .panel-close {
 	cursor: pointer;
 }
 
-.ma-region-bg-color > .card {
+.ma-region-bg-color>.card {
 	background-color: inherit;
 }
 
@@ -30,6 +35,7 @@
 // Horizontal Cards
 .ma-card-horizontal .card {
 	@extend .horizontal;
+	flex-direction: row !important;
 
 	.ma-card-stacked {
 		@extend .card-stacked;
@@ -38,7 +44,7 @@
 
 // Card Buttons
 .card-action {
-	& > a {
+	&>a {
 		color: $card-link-color;
 		margin-right: $card-padding;
 		transition: color 0.3s ease;
@@ -51,7 +57,7 @@
 }
 
 // Hoverable
-.ma-card-hoverable > .ma-card-col > .card {
+.ma-card-hoverable>.ma-card-col>.card {
 	@extend .hoverable;
 }
 
@@ -61,11 +67,62 @@
 	line-height: unset;
 }
 
-.card .ma-region-header ~ .ma-region-body:not(:empty)
-, .card .card-content .card-title:not(:empty) + p {
+.card .ma-region-header~.ma-region-body:not(:empty),
+.card .card-content .card-title:not(:empty)+p {
 	margin-top: 1rem;
 }
 
 .ma-region-card.hide-title .ma-region-body {
-	margin-top: 0!important;
+	margin-top: 0 !important;
+}
+
+.ma-report--cards {
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-right: (-1 * $gutter-width / 2);
+	margin-left: (-1 * $gutter-width / 2);
+
+	.ma-card-col {
+		display: flex;
+		flex: 0 0 auto;
+		flex-grow: 1;
+		flex-basis: 0;
+		padding-right: $gutter-width / 2;
+		padding-left: $gutter-width / 2;
+
+		.card {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+
+			.card-content,
+			.ma-card-stacked {
+				display: flex;
+				flex-direction: column;
+				flex-grow: 1;
+			}
+		}
+	}
+}
+
+.ma-card-col-1 .ma-card-col {
+	flex-basis: percentage(1 / 1);
+	max-width: percentage(1 / 1);
+}
+
+.ma-card-col-2 .ma-card-col {
+	flex-basis: percentage(1 / 2);
+	max-width: percentage(1 / 2);
+}
+
+.ma-card-col-3 .ma-card-col {
+	flex-basis: percentage(1 / 3);
+	max-width: percentage(1 / 3);
+}
+
+.ma-card-col-4 .ma-card-col {
+	flex-basis: percentage(1 / 4);
+	max-width: percentage(1 / 4);
 }

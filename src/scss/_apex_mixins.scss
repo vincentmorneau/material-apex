@@ -8,6 +8,11 @@
 	visibility:visible!important;
 }
 
+@mixin showFlex() {
+	display:flex!important;
+	visibility:visible!important;
+}
+
 @mixin showInlineBlock() {
 	display:inline-block!important;
 	visibility:visible!important;
