@@ -2,14 +2,17 @@
 
 ## v1.0.0
 
-APEX 18.1 compatible & new default look!
+**APEX 18.1 compatible & new default look!**
 
 - :boom: Breaking changes
   - Dropping support of Material Icons in favor of Font APEX. Material Icons haven't been updated in years, and the commitment of Oracle to Font APEX looks bright. You should review ALL icons in your app.
   - Dropping support of our two alternative theme styles (Skyrocket & Marine). They aren't on par with the default theme style anymore. We might introduce new theme styles in the future.
 - New features :heart:
   - **New page styles**
+  - Cards in a report now share the same height automatically
   - Carousel is available as a Report template too
+  - Sidenav badges
+  - New button style: Outlined
 - Enhancements
   - Range item plugin now has a "step" attribute, which allows e.g. to change the range input value by steps of 25.
   - Date and time pickers are now smaller
@@ -17,8 +20,8 @@ APEX 18.1 compatible & new default look!
   - Better documentation plugin
   - More spacer template options
   - Navigation Bar Buttons
-  - Sidenav badges
   - New & faster font (System font)
+  - Dropdown width is now configurable through template options
 - Bug fixes
   - Interactive Grid under Tabs
   - Interactive report with checkbox
