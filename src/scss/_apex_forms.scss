@@ -1,20 +1,3 @@
-/*
-Colors
-*/
-.ma-colored-field,
-.ma-colored-region {
-	label {
-		// we are enforcing this color so it should overwrite the :focus value
-		color: inherit!important;
-	}
-
-	input {
-		// we are enforcing this color so it should overwrite the :focus value
-		border-color: inherit!important;
-		box-shadow: inherit!important;
-	}
-}
-
 // Input
 .input-field {
 	margin-top: 1.5rem;

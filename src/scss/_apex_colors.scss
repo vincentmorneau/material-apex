@@ -1,0 +1,65 @@
+@each $color_name,
+$color in $colors {
+
+	@each $color_type,
+	$color_value in $color {
+		@if $color_type=="base" {
+
+			.ma-colored-field.#{$color_name}-text,
+			.ma-colored-region.#{$color_name}-text {
+				input {
+					color: $color_value !important;
+					border-color: $color_value !important;
+					box-shadow: none !important;
+
+					&+label {
+						color: $color_value !important;
+					}
+
+					&:focus:not([readonly]) {
+						border-color: $input-focus-color !important;
+						box-shadow: 0 1px 0 0 $input-focus-color !important;
+
+						&+label {
+							color: $input-focus-color !important;
+						}
+					}
+				}
+			}
+
+			.ma-region-title-#{$color_name}-text .ma-region-title {
+				color: $color_value !important;
+			}
+		}
+	}
+}
+
+@each $color_name,
+$color_value in $shades {
+
+	.ma-colored-field.#{$color_name}-text,
+	.ma-colored-region.#{$color_name}-text {
+		input {
+			color: $color_value !important;
+			border-color: $color_value !important;
+			box-shadow: none !important;
+
+			&+label {
+				color: $color_value !important;
+			}
+
+			&:focus:not([readonly]) {
+				border-color: $input-focus-color !important;
+				box-shadow: 0 1px 0 0 $input-focus-color !important;
+
+				&+label {
+					color: $input-focus-color !important;
+				}
+			}
+		}
+	}
+
+	.ma-region-title-#{$color_name}-text .ma-region-title {
+		color: $color_value !important;
+	}
+}
