@@ -1,0 +1,252 @@
+{{#JAVASCRIPT_FILE_URLS}}{{/JAVASCRIPT_FILE_URLS}}
+{{#JAVASCRIPT_CODE}}{{/JAVASCRIPT_CODE}}
+{{#JAVASCRIPT_CODE_ONLOAD}}{{/JAVASCRIPT_CODE_ONLOAD}}
+{{#CSS_FILE_URLS}}{{/CSS_FILE_URLS}}
+{{#INLINE_CSS}}{{/INLINE_CSS}}
+
+{{#HEADER_TEMPLATE}}
+<!DOCTYPE html>
+<html class="no-js #RTL_CLASS# page-&APP_PAGE_ID. app-&APP_ALIAS." lang="&BROWSER_LANGUAGE." #TEXT_DIRECTION#>
+<head>
+  <title>#TITLE#</title>
+
+  <!-- Meta -->
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <meta name="author" content="Vincent Morneau">
+  <meta name="description" content="Material Design Theme for APEX">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  #APEX_CSS#
+  #THEME_CSS#
+  #TEMPLATE_CSS#
+  #THEME_STYLE_CSS#
+  #APPLICATION_CSS#
+  #PAGE_CSS#
+  #FAVICONS#
+  #HEAD#
+</head>
+<body id="#PAGE_STATIC_ID#" class="#PAGE_CSS_CLASSES#" #TEXT_DIRECTION# #ONLOAD#>
+{{/HEADER_TEMPLATE}}
+{{#BOX}}
+#FORM_OPEN#
+
+<!-- Item Container -->
+#REGION_POSITION_01#
+
+<!-- Navbar & Sidenav -->
+<header>
+  <div class="top-nav-wrapper">
+    <nav class="top-nav nav-extended">
+      <div class="nav-wrapper main-nav-wrapper m-l-1">
+        <a href="#" id="app-sidenav-trigger" class="sidenav-trigger button-collapse show-on-large hide" data-target="app-sidenav" title="#EXPAND_COLLAPSE_NAV_LABEL#">
+          <i class="fa fa-navicon left" aria-hidden="true"></i>
+        </a>
+        <a href="#HOME_LINK#" class="brand-logo ma-responsive-text">#LOGO#</a>
+        #NAVIGATION_BAR#
+        #TOP_GLOBAL_NAVIGATION_LIST#
+      </div>
+      <div class="nav-wrapper search-nav-wrapper hide">
+        <!-- Search Bar Start -->
+        #REGION_POSITION_05#
+        <!-- Search Bar END -->
+      </div>
+      <!-- Breadcrumbs Start -->
+      #REGION_POSITION_03#
+      <!-- Breadcrumbs End -->
+      <div class="nav-content">
+        #REGION_POSITION_02#
+      </div>
+    </nav>
+  </div>
+  <!-- Side nav -->
+  #SIDE_GLOBAL_NAVIGATION_LIST#
+</header>
+
+<!-- Content -->
+<main>
+  <div class="ma-main-container">
+    <div class="row">
+      <div class="ma-body-column-css-classes">
+        #BODY#
+      </div>
+
+      <!-- Region Display Selector -->
+      #REGION_POSITION_04#
+    </div>
+  </div>
+</main>
+
+<div id="ma-notification-container">
+#SUCCESS_MESSAGE##NOTIFICATION_MESSAGE##GLOBAL_NOTIFICATION#
+</div>
+
+#FORM_CLOSE#
+{{/BOX}}
+{{#FOOTER_TEMPLATE}}
+#FORM_CLOSE#
+#DEVELOPER_TOOLBAR#
+#APEX_JAVASCRIPT#
+#GENERATED_CSS#
+#THEME_JAVASCRIPT#
+#TEMPLATE_JAVASCRIPT#
+#APPLICATION_JAVASCRIPT#
+#PAGE_JAVASCRIPT#
+#GENERATED_JAVASCRIPT#
+<script type="text/javascript" src="#THEME_IMAGES#js/finalize#MIN#.js"></script>
+</body>
+</html>
+{{/FOOTER_TEMPLATE}}
+
+{{#SUCCESS_MESSAGE}}
+<div class="t-Body-alert">
+  <div class="t-Alert t-Alert--defaultIcons t-Alert--success t-Alert--horizontal t-Alert--page t-Alert--colorBG" id="t_Alert_Success" role="alert">
+    <div class="t-Alert-wrap">
+      <div class="t-Alert-icon">
+      <i aria-hidden="true" class="fa fa-check"></i>
+      </div>
+      <div class="t-Alert-content">
+        <div class="t-Alert-header">
+          <span class="t-Alert-title">#SUCCESS_MESSAGE#</span>
+        </div>
+      </div>
+      <div class="t-Alert-buttons">
+        <button class="t-Button t-Button--noUI t-Button--icon t-Button--closeAlert btn-flat" type="button" title="#CLOSE_NOTIFICATION#"><i aria-hidden="true" class="fa fa-times panel-close"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+{{/SUCCESS_MESSAGE}}
+{{#MESSAGE}}
+<div class="t-Body-alert">
+  <div class="t-Alert t-Alert--defaultIcons t-Alert--warning t-Alert--horizontal t-Alert--page" id="t_Alert_Success" role="alert">
+    <div class="t-Alert-wrap">
+      <div class="t-Alert-icon">
+      <i aria-hidden="true" class="fa fa-warning"></i>
+      </div>
+      <div class="t-Alert-content">
+        <div class="t-Alert-header">
+          <span class="t-Alert-title">#MESSAGE#</span>
+        </div>
+      </div>
+      <div class="t-Alert-buttons">
+        <button class="t-Button t-Button--noUI t-Button--icon t-Button--closeAlert btn-flat" type="button" title="#CLOSE_NOTIFICATION#"><i aria-hidden="true" class="fa fa-times panel-close"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+{{/MESSAGE}}
+
+{{#GRID_TEMPLATE}}
+<div class="ma-container">#ROWS#</div>
+{{/GRID_TEMPLATE}}
+{{#GRID_ROW_TEMPLATE}}
+<div class="row">#COLUMNS#</div>
+{{/GRID_ROW_TEMPLATE}}
+{{#GRID_COLUMN_TEMPLATE}}
+<div class="col s12 m#COLUMN_SPAN_NUMBER# #CSS_CLASSES#" #ATTRIBUTES#>#CONTENT#</div>
+{{/GRID_COLUMN_TEMPLATE}}
+
+{{#DIALOG_BROWSER_FRAME}}
+MODAL
+{{/DIALOG_BROWSER_FRAME}}
+{{#DIALOG_CSS_CLASSES}}{{/DIALOG_CSS_CLASSES}}
+{{#DIALOG_HEIGHT}}{{/DIALOG_HEIGHT}}
+{{#DIALOG_JS_CANCEL_CODE}}
+apex.navigation.dialog.cancel(#IS_MODAL#);
+{{/DIALOG_JS_CANCEL_CODE}}
+{{#DIALOG_JS_CLOSE_CODE}}
+apex.navigation.dialog.close(#IS_MODAL#,#TARGET#);
+{{/DIALOG_JS_CLOSE_CODE}}
+{{#DIALOG_JS_INIT_CODE}}
+apex.navigation.dialog(#PAGE_URL#,{title:#TITLE#,height:#DIALOG_HEIGHT#,width:#DIALOG_WIDTH#,maxWidth:#DIALOG_MAX_WIDTH#,modal:#IS_MODAL#,dialog:#DIALOG#,#DIALOG_ATTRIBUTES#},#DIALOG_CSS_CLASSES#,#TRIGGERING_ELEMENT#);
+{{/DIALOG_JS_INIT_CODE}}
+{{#DIALOG_MAX_WIDTH}}{{/DIALOG_MAX_WIDTH}}
+{{#DIALOG_WIDTH}}{{/DIALOG_WIDTH}}
+
+{{#TEMPLATE_OPTION_GROUPS}}
+[
+  {
+    "NAME": "PAGE_LOGO_ALIGNMENT",
+    "DISPLAY_NAME": "Logo Alignment",
+    "DISPLAY_SEQUENCE": 0,
+    "HELP_TEXT": "The font size of your region title",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+				"NAME": "PAGE_LOGO_ALIGNMENT_LEFT",
+				"DISPLAY_NAME": "Left",
+				"DISPLAY_SEQUENCE": 10,
+				"CSS_CLASSES": "page-left-logo",
+				"HELP_TEXT": ""
+			},
+      {
+				"NAME": "PAGE_LOGO_ALIGNMENT_CENTER",
+				"DISPLAY_NAME": "Center",
+				"DISPLAY_SEQUENCE": 20,
+				"CSS_CLASSES": "page-center-logo",
+				"HELP_TEXT": ""
+			}
+    ]
+  },
+	{
+    "NAME": "PAGE_NAVBAR_STYLE",
+    "DISPLAY_NAME": "Navigation Bar Style",
+    "DISPLAY_SEQUENCE": 20,
+    "HELP_TEXT": "",
+    "NULL_TEXT": "",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+				"NAME": "PAGE_NAVBAR_STYLE_STANDARD",
+				"DISPLAY_NAME": "Standard",
+				"DISPLAY_SEQUENCE": 10,
+				"CSS_CLASSES": "ma-page-navbar--standard",
+				"HELP_TEXT": ""
+			},
+      {
+				"NAME": "PAGE_NAVBAR_STYLE_TRANSPARENT",
+				"DISPLAY_NAME": "Transparent",
+				"DISPLAY_SEQUENCE": 20,
+				"CSS_CLASSES": "ma-page-navbar--transparent",
+				"HELP_TEXT": ""
+			}
+    ]
+  }
+]
+{{/TEMPLATE_OPTION_GROUPS}}
+{{#TEMPLATE_OPTIONS}}
+[
+  {
+    "NAME": "CONTAINER",
+    "DISPLAY_NAME": "Wrap Page in a Container",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "main-container",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  },
+  {
+    "NAME": "NAVIGATION_BAR_FIXED",
+    "DISPLAY_NAME": "Navigation Bar Fixed",
+    "DISPLAY_SEQUENCE": 3,
+    "CSS_CLASSES": "page-navbar-fixed",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  },
+  {
+    "NAME": "SIDE_NAVIGATION_FIXED",
+    "DISPLAY_NAME": "Side Navigation Fixed",
+    "DISPLAY_SEQUENCE": 4,
+    "CSS_CLASSES": "ma-sidenav-fixed",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  }
+]
+{{/TEMPLATE_OPTIONS}}
+{{#DEFAULT_TEMPLATE_OPTIONS}}
+main-container:page-navbar-fixed
+{{/DEFAULT_TEMPLATE_OPTIONS}}
+{{#PRESET_TEMPLATE_OPTIONS}}
+page-center-logo:ma-page-navbar--standard
+{{/PRESET_TEMPLATE_OPTIONS}}

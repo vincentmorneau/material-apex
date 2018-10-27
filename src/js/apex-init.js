@@ -276,9 +276,14 @@ materialAPEX.initial = {
 		// Grid - Handling s12 default override
 		$(".s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10,.s11").removeClass("s12");
 
+		// Tabs region icons
+		$(".ma-subregion-tab").each(function(){
+			$(this).find(".ma-region-title .fa:first").prependTo($("[data-subregion-id='" + $(this).attr('id') + "']"));
+		});
+
 		// Deletes empty html tags
 		$('.card-content, .card-action, span.badge, .ma-button-label').removeEmpty();
-		$('.ma-region-buttons, .ma-region-header').removeEmptySpaces();
+		$('.ma-region-buttons, .ma-region-header, .tabs .tab a span').removeEmptySpaces();
 
 		// Support for APEX 5.1 item icons
 		$(".apex-item-icon").each(function(index) {

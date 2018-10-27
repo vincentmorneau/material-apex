@@ -4,7 +4,7 @@
 {{#INLINE_CSS}}{{/INLINE_CSS}}
 
 {{#LIST_TEMPLATE_BEFORE_ROWS}}
-<ul class="tabs tabs-transparent #COMPONENT_CSS_CLASSES#">
+<ul class="tabs #COMPONENT_CSS_CLASSES#">
 {{/LIST_TEMPLATE_BEFORE_ROWS}}
 {{#LIST_TEMPLATE_CURRENT}}
 <li class="tab">
@@ -58,10 +58,44 @@
 {{#A20_LABEL}}{{/A20_LABEL}}
 
 {{#TEMPLATE_OPTION_GROUPS}}
-[]
+[
+  {
+    "NAME": "TABS_POSITION",
+    "DISPLAY_NAME": "Position",
+    "DISPLAY_SEQUENCE": 0,
+    "HELP_TEXT": "The position of your tabs",
+    "NULL_TEXT": "Default",
+    "IS_ADVANCED": "N",
+    "TEMPLATE_OPTIONS": [
+      {
+        "NAME": "TABS_POSITION_BOTTOM",
+        "DISPLAY_NAME": "Fixed Bottom - Always",
+        "DISPLAY_SEQUENCE": 10,
+        "CSS_CLASSES": "ma-tabs-position-bottom",
+        "HELP_TEXT": ""
+      },
+      {
+        "NAME": "TABS_POSITION_BOTTOM_MOBILE",
+        "DISPLAY_NAME": "Fixed Bottom - Mobile Only",
+        "DISPLAY_SEQUENCE": 20,
+        "CSS_CLASSES": "ma-tabs-position-bottom-mobile",
+        "HELP_TEXT": ""
+      }
+    ]
+  }
+]
 {{/TEMPLATE_OPTION_GROUPS}}
 {{#TEMPLATE_OPTIONS}}
-[]
+[
+  {
+    "NAME": "TABS_TRANSPARENT",
+    "DISPLAY_NAME": "Tabs Transparent",
+    "DISPLAY_SEQUENCE": 1,
+    "CSS_CLASSES": "tabs-transparent",
+    "HELP_TEXT": "",
+    "IS_ADVANCED": ""
+  }
+]
 {{/TEMPLATE_OPTIONS}}
 {{#DEFAULT_TEMPLATE_OPTIONS}}{{/DEFAULT_TEMPLATE_OPTIONS}}
 {{#PRESET_TEMPLATE_OPTIONS}}{{/PRESET_TEMPLATE_OPTIONS}}
