@@ -49,6 +49,46 @@
 	}
 }
 
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:after {
+  background-color: $radio-fill-color;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:before,
+[type="radio"].with-gap:checked + label:after {
+  border: $radio-border;
+}
+
+[type="checkbox"]:checked {
+  + label:not(.lever):before {
+    border-right: $radio-border;
+    border-bottom: $radio-border;
+  }
+}
+
+[type="checkbox"]:indeterminate {
+  + label:not(.lever):before {
+    border-right: $radio-border;
+  }
+}
+
+// Filled in Style
+[type="checkbox"].filled-in {
+  // Checked style
+  &:checked {
+    + label:not(.lever):after {
+      border: $radio-border;
+      background-color: $radio-fill-color;
+    }
+  }
+
+  &.tabbed:checked:focus + label:not(.lever):after {
+    background-color: $radio-fill-color;
+    border-color: $radio-fill-color;
+  }
+}
+
 // Autocomplete
 .apex-item-wrapper--auto-complete {
 	label {
