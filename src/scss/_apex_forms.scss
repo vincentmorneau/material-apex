@@ -42,7 +42,8 @@
 	}
 }
 
-[type="checkbox"], [type="radio"] {
+[type="checkbox"],
+[type="radio"] {
 	&+label {
 		@extend span;
 	}
@@ -91,8 +92,8 @@
 
 .ma-popuplov-modal {
 	margin: 0;
-	max-width:100%;
-	width:100%;
+	max-width: 100%;
+	width: 100%;
 
 	#SEARCH {
 		width: 50%;
@@ -154,11 +155,11 @@ span.ma-error-message {
 	text-align: center;
 }
 
-.input-field .prefix ~ label {
+.input-field .prefix~label {
 	width: auto;
 }
 
-.input-field .prefix ~ .display_only {
+.input-field .prefix~.display_only {
 	margin-left: 3rem;
 	top: 0.5rem;
 	display: block;
@@ -167,8 +168,9 @@ span.ma-error-message {
 
 // No Label
 .item-no-label {
+
 	// hides regular input labels
-	& > label {
+	&>label {
 		@include hide;
 	}
 }
@@ -181,7 +183,7 @@ span.ma-error-message {
 .ma-switch-container {
 	margin-top: 1.5rem;
 
-	& > label {
+	&>label {
 		transform: translateY(-22px);
 		transform-origin: 0 0;
 		position: absolute;
@@ -189,7 +191,7 @@ span.ma-error-message {
 }
 
 // Ranges
-.input-field .range-field + label {
+.input-field .range-field+label {
 	transform: translateY(-14px) scale(0.8);
 	transform-origin: 0 0;
 }
@@ -200,11 +202,12 @@ input[type=range] {
 
 // Text Alignment
 .ma-field-container {
-	position:relative;
+	position: relative;
 
 	&.center-align,
 	&.left-align,
 	&.right-align {
+
 		input:not(.select-dropdown),
 		textarea {
 			text-align: inherit;
@@ -259,7 +262,8 @@ input[type=range] {
 	@include browserDefaultInput();
 }
 
-.apex-item-select.browser-default {
+.apex-item-select.browser-default,
+.a-GV-columnItem select {
 	@include browserDefaultInput();
 	@include browserDefaultSelect();
 }

@@ -143,7 +143,7 @@ materialAPEX.ig = {
  * @module select
  **/
 materialAPEX.select = {
-	noInit: '.disabled, .shuttle_left, .shuttle_right, .datepicker-select, .a-GV-columnItem select',
+	noInit: '.disabled, .shuttle_left, .shuttle_right, .datepicker-select, .a-GV-columnItem select, .a-Property-field--select, .a-IRR-dialogTable select, .utr select, .a-IGDialog-region select',
 
 	init: function () {
 		materialAPEX.debug.time("materialAPEX.select.init");
@@ -160,14 +160,13 @@ materialAPEX.select = {
 
 	refresh: function (selector) {
 		materialAPEX.debug.time("materialAPEX.select.refresh");
-		var exclude = ".a-Property-field--select, .a-IRR-dialogTable select, .utr select";
 		// reset focus on select elements
 		setTimeout(function () {
-			$(selector).not(exclude).formSelect("destroy");
-			$(selector).not(exclude).formSelect();
-			$(selector).not(exclude).change(function () {
-				$(selector).not(exclude).formSelect("destroy");
-				$(selector).not(exclude).formSelect();
+			$(selector).not(materialAPEX.select.noInit).formSelect("destroy");
+			$(selector).not(materialAPEX.select.noInit).formSelect();
+			$(selector).not(materialAPEX.select.noInit).change(function () {
+				$(selector).not(materialAPEX.select.noInit).formSelect("destroy");
+				$(selector).not(materialAPEX.select.noInit).formSelect();
 			});
 		}, 250);
 		materialAPEX.debug.timeEnd("materialAPEX.select.refresh");

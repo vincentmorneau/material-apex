@@ -235,11 +235,6 @@ body .ui-dialog.ui-widget {
 		font-size: 16px;
 	}
 
-	// select list fix
-	select.selectlist {
-		@include hide();
-	}
-
 	.u-Form-inputContainer {
 		overflow: visible;
 
