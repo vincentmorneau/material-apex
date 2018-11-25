@@ -18,7 +18,7 @@ materialAPEX.observe = {
 		var selector = ".a-Toolbar-group select";
 
 		var observer = new MutationObserver(function (mutations) {
-			$(selector).formSelect();
+			$(selector).not(materialAPEX.select.noInit).formSelect();
 			materialAPEX.ig.init();
 		});
 
@@ -40,7 +40,7 @@ materialAPEX.observe = {
 		var observer = new MutationObserver(function (mutations) {
 			mutations.forEach(function (mutation) {
 				if (mutation.addedNodes.length > 0) {
-					$(mutation.target).find("select").formSelect();
+					$(mutation.target).find("select").not(materialAPEX.select.noInit).formSelect();
 				}
 			});
 		});

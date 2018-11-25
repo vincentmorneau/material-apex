@@ -302,8 +302,7 @@ input[type=range] {
 	@include browserDefaultInput();
 }
 
-.apex-item-select.browser-default,
-.a-GV-columnItem select {
+.apex-item-select.browser-default {
 	@include browserDefaultInput();
 	@include browserDefaultSelect();
 }

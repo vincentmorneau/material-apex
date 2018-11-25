@@ -71,6 +71,7 @@
 			"CHANGE_ME_PATH/material-apex/src/scss/_apex_forms.scss",
 			"CHANGE_ME_PATH/material-apex/src/scss/_apex_grid.scss",
 			"CHANGE_ME_PATH/material-apex/src/scss/_apex_icons.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_ig.scss",
 			"CHANGE_ME_PATH/material-apex/src/scss/_apex_ir.scss",
 			"CHANGE_ME_PATH/material-apex/src/scss/_apex_materialbox.scss",
 			"CHANGE_ME_PATH/material-apex/src/scss/_apex_media.scss",
@@ -84,6 +85,7 @@
 			"CHANGE_ME_PATH/material-apex/src/scss/_apex_tabs.scss",
 			"CHANGE_ME_PATH/material-apex/src/scss/_apex_themeroller.scss",
 			"CHANGE_ME_PATH/material-apex/src/scss/_apex_toasts.scss",
+			"CHANGE_ME_PATH/material-apex/src/scss/_apex_toolbar.scss",
 			"CHANGE_ME_PATH/material-apex/src/scss/_apex_typography.scss",
 			"CHANGE_ME_PATH/material-apex/src/scss/_apex_footer.scss"
 		]
