@@ -75,3 +75,7 @@ ul.tabs ~ div.row, .hide-tab-scrollbar ~ div.row {
 		}
 	}
 }
+
+.tabs .tab a {
+	color: $tabs-text-color;
+}
