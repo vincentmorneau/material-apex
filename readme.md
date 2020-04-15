@@ -6,7 +6,7 @@
 
 ## Demo
 
-[https://materialapex.com](https://materialapex.com)
+[https://apex.oracle.com/pls/apex/f?p=12192](https://apex.oracle.com/pls/apex/f?p=12192)
 
 ## Install
 
@@ -18,9 +18,9 @@ Import **empty-app.sql** or **demo-app.sql** from the [latest release](https://g
 
 ## Compatibility
 
-APEX 18.1 | APEX 5.1 | APEX 5.0 | APEX 4.2
----------|----------|--------- |---------
- [v1.0.0](https://github.com/vincentmorneau/material-apex/releases/tag/v1.0.0) | [v0.12.2](https://github.com/vincentmorneau/material-apex/releases/tag/v0.12.2) | [v0.9.6.1](https://github.com/vincentmorneau/material-apex/releases/tag/v0.9.6.1) | Not available
+| APEX 18.1                                                                     | APEX 5.1                                                                        | APEX 5.0                                                                          | APEX 4.2      |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------- |
+| [v1.0.0](https://github.com/vincentmorneau/material-apex/releases/tag/v1.0.0) | [v0.12.2](https://github.com/vincentmorneau/material-apex/releases/tag/v0.12.2) | [v0.9.6.1](https://github.com/vincentmorneau/material-apex/releases/tag/v0.9.6.1) | Not available |
 
 ## Contribute
 
