@@ -1,3 +1,5 @@
+Important: This project is no longer maintained. I am open to reviewing and accepting pull requests but I will not push any new updates going forward. Thanks for using Material APEX!
+
 # Material APEX
 
 [![npm](https://img.shields.io/npm/v/material-apex.svg)](https://www.npmjs.com/package/material-apex) [![Build Status](https://travis-ci.org/vincentmorneau/material-apex.svg?branch=master)](https://travis-ci.org/vincentmorneau/material-apex) [![Dependency Status](https://david-dm.org/vincentmorneau/material-apex.svg)](https://david-dm.org/vincentmorneau/material-apex) [![APEX Theme](https://cdn.rawgit.com/Dani3lSun/apex-github-badges/b7e95341/badges/apex-theme-badge.svg)](https://cdn.rawgit.com/Dani3lSun/apex-github-badges)
